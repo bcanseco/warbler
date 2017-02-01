@@ -1,0 +1,39 @@
+Front-end (cshtml): @Html.AntiForgeryToken()
+Back-end (controllers): [ValidateAntiForgeryToken]
+
+protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            var httpCookie = Request.Cookies["__RequestVerificationToken_Lw__"];
+            if (httpCookie != null)
+            {
+                string cookieRVT = httpCookie.Value;
+                string rvt = Request.Form["__RequestVerificationToken"];
+                if (!string.IsNullOrEmpty(rvt))
+                {
+                    if (this.HttpContext.Session["cookieRVT"] != null && this.HttpContext.Session["rvt"] != null)
+                    {
+                        string temp1 = (string) this.HttpContext.Session["cookieRVT"];
+                        string temp2 = (string)this.HttpContext.Session["rvt"];
+                        if (cookieRVT == temp1 && rvt == temp2)
+                            filterContext.Result = new RedirectResult("/Node/page");
+                    }
+                }
+            }
+        }
+
+          protected override void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            var httpCookie = Request.Cookies["__RequestVerificationToken_Lw__"];
+            if (httpCookie != null)
+            {
+                 string cookieRVT = httpCookie.Value;
+                string rvt = Request.Form["__RequestVerificationToken"];
+                if (!string.IsNullOrEmpty(rvt) && !string.IsNullOrEmpty(cookieRVT))
+                {
+                    this.HttpContext.Session["cookieRVT"] = cookieRVT;
+                    this.HttpContext.Session["rvt"] = rvt;
+                }
+
+            }       
+
+         }

@@ -1,0 +1,35 @@
+{
+  "name": "Warbler",
+  "version": "0.1.0",
+  "description": "Auto-generated, geolocation based chatrooms for universities.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "prepublish-deps": "npm install",
+    "prepublish-gulp": "gulp"
+  },
+  "keywords": [
+    "warbler",
+    "university",
+    "chat"
+  ],
+  "contributors": [
+    "Borja Canseco",
+    "Billy Harris",
+    "Waylon Hudson",
+    "Winter Yang"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.1.1",
+    "tether": "^1.4.0"
+  },
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-uglify": "^1.2.0",
+    "rimraf": "^2.2.8"
+  }
+}

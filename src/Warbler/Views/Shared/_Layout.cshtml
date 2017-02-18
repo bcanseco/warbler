@@ -26,16 +26,16 @@
                     <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://docs.google.com/a/my.fit.edu/document/d/1sI30sI7Tc-dDLjSPRpoyZ8TNHKps2WMq-_Ms8px5IW0/edit?usp=sharing">Plan</a>
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Proposal">Proposal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Slides">Slides</a>
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Sandbox">Sandbox</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="container body-content">
+<div class="container">
     @RenderBody()
     <hr/>
     <footer>

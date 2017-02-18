@@ -9,14 +9,12 @@ namespace Warbler.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Proposal()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Slides()
+        public IActionResult Sandbox()
         {
             return View();
         }

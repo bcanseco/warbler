@@ -3,10 +3,9 @@
 
 # Added by us
 desktop.ini
-src/Warbler/wwwroot/lib/
 node_modules
-npm-debug.log
-debug.log
+*.log
+wwwroot
 
 # User-specific files
 *.suo

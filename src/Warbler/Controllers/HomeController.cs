@@ -14,11 +14,6 @@ namespace Warbler.Controllers
             return View();
         }
 
-        public IActionResult Sandbox()
-        {
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View();

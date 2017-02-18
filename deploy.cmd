@@ -71,7 +71,7 @@ call :ExecuteCmd nuget.exe restore -packagesavemode nuspec "%DEPLOYMENT_SOURCE%\
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 1.5 Install npm packages and run gulp (http://stackoverflow.com/a/39517403/6609109)
-pushd "%DEPLOYMENT_SOURCE%\[Your website folder]"
+pushd "%DEPLOYMENT_SOURCE%\src\Warbler"
 call :ExecuteCmd npm install
 IF !ERRORLEVEL! NEQ 0 goto error
 call :ExecuteCmd npm run gulp

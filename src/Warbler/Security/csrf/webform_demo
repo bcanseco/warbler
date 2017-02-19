@@ -1,3 +1,7 @@
+Method:
+Load Idunno.AntiCsrf.dll.
+
+Code:
 <?xml version="1.0"?> 
 <configuration>  
 <configSections>    
@@ -13,3 +17,6 @@
 </modules>   
 </system.web> 
 </configuration> </xml>
+
+Note: 
+This is one defend method for csrf on webform. Changes will be found in warbler/src/Warbler/web.config.

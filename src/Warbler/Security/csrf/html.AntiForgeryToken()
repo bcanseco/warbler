@@ -1,0 +1,24 @@
+For notice part:
+**************************************************************
+@using (Html.BeginForm("Text","Home",FormMethod.Post))
+{
+@Html.AntiForgeryToken()
+    @:Notice:<input type="text" name="Notice" id="Notice" />
+<input type="submit" value="Submit" />
+}
+*************************************************************
+For action part:
+*************************************************************
+[HttpPost]
+[ValidateAntiForgeryToken]
+public ActionResult Text()
+{
+ViewBag.Notice = Request.Form["Notice"].ToString();
+return View();
+}
+*************************************************************
+Link:
+http://www.devcurry.com/2013/01/what-is-antiforgerytoken-and-why-do-i.html
+
+Note:
+May improve later.

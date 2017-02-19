@@ -1,6 +1,6 @@
 {
   "name": "Warbler",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Auto-generated, geolocation based chatrooms for universities.",
   "private": true,
   "main": "index.js",
@@ -22,6 +22,8 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^3.1.1",
+    "knockout": "^3.4.1",
+    "signalr": "^2.2.1",
     "tether": "^1.4.0"
   },
   "devDependencies": {

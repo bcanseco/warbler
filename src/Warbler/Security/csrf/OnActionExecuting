@@ -1,0 +1,58 @@
+Executing Code Before and After an Action from Within a Controller.
+Link:https://msdn.microsoft.com/en-us/library/dd381609(v=vs.98).aspx
+
+[HandleError]
+public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        ViewData["Message"] = "Welcome to ASP.NET MVC!";
+
+        if (TempData.ContainsKey("Clicked"))
+        {
+            ViewData["Clicked"] = true;
+        }
+        else ViewData["Clicked"] = false;
+
+        if ((Boolean)ViewData["Clicked"] == true)
+        {
+            ViewData["ClickMessage"] = "You clicked this button.";
+            ViewData["Clicked"] = false;
+        }
+
+        return View();
+    }
+
+    public ActionResult About()
+    {
+        ViewData["Title"] = "About Page";
+
+        return View();
+    }
+
+     public ActionResult ClickMe()
+    {
+        TempData["Clicked"] = true;
+
+        return RedirectToAction("Index");
+    }
+
+    [NonAction]
+    protected override void OnActionExecuting(ActionExecutingContext filterContext)
+    {
+        filterContext.HttpContext.Trace.Write("(Controller)Action Executing: " +
+            filterContext.ActionDescriptor.ActionName);
+
+        base.OnActionExecuting(filterContext);
+    }
+
+    [NonAction]
+    protected override void OnActionExecuted(ActionExecutedContext filterContext)
+    {
+        if (filterContext.Exception != null)
+            filterContext.HttpContext.Trace.Write("(Controller)Exception thrown");
+
+        base.OnActionExecuted(filterContext);
+    }
+}
+

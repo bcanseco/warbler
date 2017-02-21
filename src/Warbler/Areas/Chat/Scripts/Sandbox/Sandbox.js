@@ -33,6 +33,7 @@ Sandbox.ChatViewModel = function () {
 
     this.send = function () {
         Sandbox.server.hub.server.sendMessage(self.composedMessage());
+        self.composedMessage(null);
     }
 }
 
@@ -42,12 +43,11 @@ Sandbox.Server = function() {
     this.hub = $.connection.sandboxHub; // SandboxHub.cs
 
     this.hub.client.updatedClientCount = function (clients) {
-        console.log(clients);
         Sandbox.viewModel.chatData().connectedClients(clients);
     };
 
     this.hub.client.messageReceived = function (message) {
-        Sandbox.viewModel.chatData().messages.push(message);
+        Sandbox.viewModel.chatData().messages.push(message); // TODO: Scroll to bottom of div
     };
 
     $.connection.hub.logging = true;

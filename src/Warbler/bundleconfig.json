@@ -1,0 +1,20 @@
+﻿[
+  {
+    "outputFileName": "Styles/site.min.css",
+    "inputFiles": [
+      "Styles/site.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site.min.js",
+    "inputFiles": [
+      "Scripts/site.js"
+    ]
+  },
+  {
+    "outputFileName": "Areas/Chat/Scripts/Sandbox/Sandbox.min.js",
+    "inputFiles": [
+      "Areas/Chat/Scripts/Sandbox/Sandbox.js"
+    ]
+  }
+]

@@ -54,7 +54,10 @@
 
   "publishOptions": {
     "include": [
-      "Areas/**/*.cshtml",
+      "Areas",
+      "Graphics",
+      "Scripts",
+      "Styles",
       "wwwroot",
       "**/*.cshtml",
       "appsettings.json",

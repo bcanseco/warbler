@@ -62,9 +62,8 @@ namespace Warbler
                 .Concat(Directory.GetDirectories(".", "Styles", SearchOption.AllDirectories))
                 .Where(f => !f.Contains("node_modules"))
                 .Select(f => f.Substring(1, f.Length - 1).Replace(@"\", "/")).ToList();
-
             
-            // folders.Add("/Graphics"); // Winter's logos
+            folders.Add("/Graphics"); // Winter's logos
 
             foreach (var folder in folders)
             {

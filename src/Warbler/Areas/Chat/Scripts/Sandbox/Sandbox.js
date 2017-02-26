@@ -1,5 +1,4 @@
-﻿"use strict";
-var Sandbox = Sandbox || {};
+﻿var Sandbox = Sandbox || {};
 
 $(function() {
     Sandbox.server = new Sandbox.Server();
@@ -38,8 +37,6 @@ Sandbox.ChatViewModel = function() {
 };
 
 Sandbox.Server = function() {
-    var self = this;
-
     this.hub = $.connection.sandboxHub; // SandboxHub.cs
 
     this.hub.client.updatedClientCount = function(clients) {

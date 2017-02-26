@@ -3,6 +3,8 @@
 
 var gulp = require("gulp"),
     rimraf = require("rimraf"),
+    fs = require("fs"),
+    pack = JSON.parse(fs.readFileSync("./package.json")),
     lib = "./wwwroot/lib";
 
 /**
@@ -13,17 +15,14 @@ gulp.task("clean:lib", function (cb) {
 });
 
 /**
- * Moves node_modules dependencies to ./wwwroot/libs
+ * Moves npm dependencies to ./wwwroot/libs
  */
-gulp.task("move:lib", function() {
-    return gulp.src([
-            "node_modules/jquery/**/*.*",
-            "node_modules/signalr/**/*.*",
-            "node_modules/tether/**/*.*",
-            "node_modules/bootstrap/**/*.*",
-            "node_modules/knockout/**/*.*"
-            /* Add npm dependencies here as needed. */
-        ], { base: "./node_modules" })
+gulp.task("move:lib", function () {
+    var libs = Object.keys(pack.dependencies).map(function(dep) {
+        return "node_modules/" + dep + "/**/*.*";
+    });
+
+    return gulp.src(libs, { base: "./node_modules" })
         .pipe(gulp.dest(lib));
 });
 

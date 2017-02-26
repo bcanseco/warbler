@@ -64,7 +64,7 @@ namespace Warbler
                 .Select(f => f.Substring(1, f.Length - 1).Replace(@"\", "/")).ToList();
 
             
-            folders.Add("/Graphics"); // Winter's logos
+            // folders.Add("/Graphics"); // Winter's logos
 
             foreach (var folder in folders)
             {

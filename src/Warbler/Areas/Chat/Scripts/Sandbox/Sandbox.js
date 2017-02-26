@@ -22,31 +22,31 @@ $(function() {
 
 Sandbox.ViewModel = function() {
     this.chatData = ko.observable(new Sandbox.ChatViewModel());
-}
+};
 
-Sandbox.ChatViewModel = function () {
+Sandbox.ChatViewModel = function() {
     var self = this;
 
     this.connectedClients = ko.observable(0);
     this.composedMessage = ko.observable();
     this.messages = ko.observableArray();
 
-    this.send = function () {
+    this.send = function() {
         Sandbox.server.hub.server.sendMessage(self.composedMessage());
         self.composedMessage(null);
-    }
-}
+    };
+};
 
 Sandbox.Server = function() {
     var self = this;
 
     this.hub = $.connection.sandboxHub; // SandboxHub.cs
 
-    this.hub.client.updatedClientCount = function (clients) {
+    this.hub.client.updatedClientCount = function(clients) {
         Sandbox.viewModel.chatData().connectedClients(clients);
     };
 
-    this.hub.client.messageReceived = function (message) {
+    this.hub.client.messageReceived = function(message) {
         Sandbox.viewModel.chatData().messages.push(message); // TODO: Scroll to bottom of div
     };
 
@@ -54,11 +54,11 @@ Sandbox.Server = function() {
 
     $.connection.hub.start()
         .done(/* do nothing for now */)
-        .fail(function () {
+        .fail(function() {
             console.error("Error connecting to SignalR hub. Please refresh the page to try again.");
         });
 
-    $.connection.hub.disconnected(function () {
+    $.connection.hub.disconnected(function() {
         console.error("Lost connection to server. Please refresh the page.");
     });
-}
+};

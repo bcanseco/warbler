@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.SignalR.Infrastructure;
+using Microsoft.Extensions.FileProviders;
 
 namespace Warbler
 {
@@ -51,7 +56,32 @@ namespace Warbler
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseStaticFiles(); // wwwroot (node_modules)
+
+            var folders = Directory.GetDirectories(".", "Scripts", SearchOption.AllDirectories)
+                .Concat(Directory.GetDirectories(".", "Styles", SearchOption.AllDirectories))
+                .Where(f => !f.Contains("node_modules"))
+                .Select(f => f.Substring(1, f.Length - 1).Replace(@"\", "/")).ToList();
+
+            try
+            {
+                folders.Add("/Graphics"); // Winter's logos
+
+                foreach (var folder in folders)
+                {
+                    app.UseStaticFiles(new StaticFileOptions
+                    {
+                        FileProvider = new PhysicalFileProvider(
+                            $"{Directory.GetCurrentDirectory()}{folder}"),
+                        RequestPath = new PathString(folder)
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error serving static files: {ex.Message}");
+            }
+
             app.UseWebSockets();
             app.UseSignalR();
 

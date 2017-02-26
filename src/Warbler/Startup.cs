@@ -63,23 +63,17 @@ namespace Warbler
                 .Where(f => !f.Contains("node_modules"))
                 .Select(f => f.Substring(1, f.Length - 1).Replace(@"\", "/")).ToList();
 
-            try
-            {
-                folders.Add("/Graphics"); // Winter's logos
+            
+            folders.Add("/Graphics"); // Winter's logos
 
-                foreach (var folder in folders)
-                {
-                    app.UseStaticFiles(new StaticFileOptions
-                    {
-                        FileProvider = new PhysicalFileProvider(
-                            $"{Directory.GetCurrentDirectory()}{folder}"),
-                        RequestPath = new PathString(folder)
-                    });
-                }
-            }
-            catch (Exception ex)
+            foreach (var folder in folders)
             {
-                Debug.WriteLine($"Error serving static files: {ex.Message}");
+                app.UseStaticFiles(new StaticFileOptions
+                {
+                    FileProvider = new PhysicalFileProvider(
+                        $"{Directory.GetCurrentDirectory()}{folder}"),
+                    RequestPath = new PathString(folder)
+                });
             }
 
             app.UseWebSockets();

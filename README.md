@@ -9,7 +9,7 @@
 ## Dependencies
 * **Git:** Available [here](https://git-scm.com/downloads) if you don't already have it.
 * **Visual Studio 2015 with .NET Core**: Click [here](https://www.microsoft.com/net/core) and follow the instructions.
-* **npm**: Click [here](https://www.npmjs.com/) to download node.js, which comes with npm.  
+* **npm**: Click [here](https://nodejs.org/) to download node.js, which comes with npm.  
 
 npm is our client-side package manager.
 * It stores any third-party packages in a `node_modules` folder inside [src/Warbler](https://github.com/bcanseco/warbler/tree/master/src/Warbler).
@@ -28,16 +28,18 @@ npm is our client-side package manager.
 2. `git clone https://github.com/bcanseco/warbler.git Warbler`
 3. `cd Warbler/src/Warbler`
 4. `npm install`
+5. Double-click [Warbler.sln](https://github.com/bcanseco/warbler/blob/master/Warbler.sln) to open the project in Visual Studio.
 
 ## Running
 To build, hit <kbd>F5</kbd> in Visual Studio.
-* This will trigger an automatic task that moves folders in `node_modules` to `wwwroot/libs`.
+
+1. This will trigger an automatic task that moves folders in `node_modules` to `wwwroot/libs`.
  * ASP.NET doesn't serve files from the `node_modules` folder, so it's necessary to move them to `wwwroot`.
  * This is why you see references to `~/lib/` in the code - that simply refers to the `wwwroot/lib` folder.
    * Any `npm` dependencies should be referenced there.
     * e.g. `<script src="~/lib/example/script.js">` instead of `<script src="node_modules/example/script.js">`
  * You can do this manually at any time by hitting <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Backspace</kbd> and running the default gulp task.
-* Visual Studio will then build the project.
-* The webserver then (usually) runs on `http://localhost:59294/` with Chrome.  
+2. Visual Studio will then build the project.
+3. The webserver then (usually) runs on [http://localhost:59294/](http://localhost:59294/) with Chrome.  
 
 You can set breakpoints in the backend code to debug as needed.

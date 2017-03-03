@@ -9,7 +9,7 @@ namespace Warbler.Controllers
             return View();
         }
 
-        public IActionResult Proposal()
+        public IActionResult Documents()
         {
             return View();
         }

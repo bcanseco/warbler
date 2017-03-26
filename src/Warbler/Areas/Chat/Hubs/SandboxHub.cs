@@ -17,12 +17,12 @@ namespace Warbler.Areas.Chat.Hubs
             this(SandboxResource.Instance)
         { }
 
-        public override Task OnConnected()
+        public override async Task OnConnected()
         {
-            SandboxResource.OnConnected(Context.ConnectionId,
+            await SandboxResource.OnConnected(Context.ConnectionId,
                 Context.User.Identity.IsAuthenticated ? Context.User.Identity.Name : null);
 
-            return base.OnConnected();
+            await base.OnConnected();
         }
 
         public override Task OnDisconnected(bool stopCalled)

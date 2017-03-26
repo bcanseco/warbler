@@ -8,7 +8,7 @@ namespace Warbler.Infrastructure.Chat.Models
     /// </summary>
     public abstract class WarblerEntity : IEquatable<WarblerEntity>
     {
-        protected int Id { get; }
+        public int Id { get; }
 
         /// <summary>
         ///   Constructs an entity instance with a unique id.
@@ -26,7 +26,7 @@ namespace Warbler.Infrastructure.Chat.Models
             => Id == other.Id;
 
         public static bool operator ==(WarblerEntity a, WarblerEntity b)
-            => a.Id == b.Id;
+            => a?.Id == b?.Id;
 
         public static bool operator !=(WarblerEntity a, WarblerEntity b)
             => !(a == b);

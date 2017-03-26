@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Warbler.Areas.Chat.Hubs;
 using Warbler.Infrastructure.Chat.Services;
@@ -16,7 +17,7 @@ namespace Warbler.Areas.Chat.HubResources
 
         private static ConcurrentDictionary<string, string> ConnectedClients { get; set; }
         private IHubContext Context { get; }
-        private SandboxService SandboxService { get; set; }
+        private SandboxService SandboxService { get; }
 
         private SandboxResource(IHubContext context, SandboxService sandboxService)
         {
@@ -32,10 +33,12 @@ namespace Warbler.Areas.Chat.HubResources
         /// </summary>
         /// <param name="connectionId">The client's uuid.</param>
         /// <param name="userName">The client's username, or null if not logged in</param>
-        public void OnConnected(string connectionId, string userName)
+        public async Task OnConnected(string connectionId, string userName)
         {
             ConnectedClients.GetOrAdd(connectionId, userName);
             Context.Clients.All.updatedClientCount(ConnectedClients.Count);
+
+            await SandboxService.GetUniversities(); // TODO: Testing; remove
         }
 
         /// <summary>
@@ -44,8 +47,7 @@ namespace Warbler.Areas.Chat.HubResources
         /// <param name="connectionId">The client's uuid.</param>
         public void OnDisconnected(string connectionId)
         {
-            string removedUser;
-            ConnectedClients.TryRemove(connectionId, out removedUser);
+            ConnectedClients.TryRemove(connectionId, out string removedUser);
             Context.Clients.All.updatedClientCount(ConnectedClients.Count);
         }
 

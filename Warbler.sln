@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A80EBC5-5F37-4049-A6E3-49B8B751D2AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06AFC114-2ED6-4C07-BD56-0004D754A962}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warbler", "src\Warbler\Warbler.csproj", "{8A29317B-E1C2-4B15-BF49-6D48A80AD8A5}"
 EndProject

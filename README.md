@@ -8,7 +8,7 @@
 
 ## Dependencies
 * **Git:** Available [here](https://git-scm.com/downloads) if you don't already have it.
-* **Visual Studio 2015 with .NET Core**: Click [here](https://www.microsoft.com/net/core) and follow the instructions.
+* **Visual Studio 2017**: Click [here](https://www.microsoft.com/net/core) and follow the instructions.
 * **npm**: Click [here](https://nodejs.org/) to download node.js, which comes with npm.  
 
 npm is our client-side package manager.

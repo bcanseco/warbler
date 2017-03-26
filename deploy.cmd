@@ -83,7 +83,7 @@ call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\Warbler.sln" /nologo /ver
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 3. Publish
-call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\src\Warbler\Warbler.xproj" /nologo /verbosity:m /t:GatherAllFilesToPublish /p:AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release;UseSharedCompilation=false;PublishOutputPathNoTrailingSlash="%DEPLOYMENT_TEMP%" %SCM_BUILD_ARGS%
+call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\src\Warbler\Warbler.csproj" /nologo /verbosity:m /t:GatherAllFilesToPublish /p:AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release;UseSharedCompilation=false;PublishOutputPathNoTrailingSlash="%DEPLOYMENT_TEMP%" %SCM_BUILD_ARGS%
 IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 4. KuduSync

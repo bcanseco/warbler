@@ -1,12 +1,8 @@
 ﻿@{
-    ViewData["Title"] = "Documents";
+    ViewData["Title"] = "First Semester Documents";
 }
 
-<div class="row" style="margin-top: 15px; margin-bottom: 5px;">
-    <div class="col-md-12">
-        <h3>First Semester @ViewData["Title"]</h3>
-    </div>
-</div>
+@await Html.PartialAsync("_HeadingPartial", ViewData)
 
 <div class="row" style="margin-top: 5px; margin-bottom: 5px;">
     <div class="col-sm-12">

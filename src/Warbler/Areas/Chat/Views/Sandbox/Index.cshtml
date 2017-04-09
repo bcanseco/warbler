@@ -3,11 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row" style="margin-top: 15px; margin-bottom: 5px;">
-    <div class="col-md-12">
-        <h3>@ViewData["Title"]</h3>
-    </div>
-</div>
+@await Html.PartialAsync("_HeadingPartial", ViewData)
 
 <div class="row" data-bind="with: chatData">
     <div class="col-md-3">

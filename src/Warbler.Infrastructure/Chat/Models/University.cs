@@ -1,22 +1,13 @@
-﻿using System.Diagnostics;
-
-namespace Warbler.Infrastructure.Chat.Models
+﻿namespace Warbler.Infrastructure.Chat.Models
 {
-    [DebuggerDisplay("{Id}: {Name} ({Lat}, {Lng})")]
-    public class University : WarblerEntity
+    public class University
     {
-        public string Name { get; }
-        public float Lat { get; }
-        public float Lng { get; }
-        public Server Server { get; }
+        public int Id { get; set; }
+        public int ServerId { get; set; }
+        public string Name { get; set; }
+        public float Lat { get; set;  }
+        public float Lng { get; set; }
 
-        public University(int id, string name, float lat, float lng, Server server)
-            : base(id)
-        {
-            Name = name;
-            Lat = lat;
-            Lng = lng;
-            Server = server;
-        }
+        public Server Server { get; set; }
     }
 }

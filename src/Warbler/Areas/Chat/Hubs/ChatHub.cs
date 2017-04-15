@@ -4,22 +4,22 @@ using Warbler.Areas.Chat.HubResources;
 
 namespace Warbler.Areas.Chat.Hubs
 {
-    public class SandboxHub : Hub
+    public class ChatHub : Hub
     {
-        private SandboxResource SandboxResource { get; }
+        private ChatResource ChatResource { get; }
 
-        private SandboxHub(SandboxResource sandboxResource)
+        private ChatHub(ChatResource chatResource)
         {
-            SandboxResource = sandboxResource;
+            ChatResource = chatResource;
         }
 
-        public SandboxHub() :
-            this(SandboxResource.Instance)
+        public ChatHub()
+            : this(ChatResource.Instance)
         { }
 
         public override async Task OnConnected()
         {
-            await SandboxResource.OnConnected(Context.ConnectionId,
+            await ChatResource.OnConnected(Context.ConnectionId,
                 Context.User.Identity.IsAuthenticated ? Context.User.Identity.Name : null);
 
             await base.OnConnected();
@@ -27,12 +27,12 @@ namespace Warbler.Areas.Chat.Hubs
 
         public override Task OnDisconnected(bool stopCalled)
         {
-            SandboxResource.OnDisconnected(Context.ConnectionId);
+            ChatResource.OnDisconnected(Context.ConnectionId);
 
             return base.OnDisconnected(stopCalled);
         }
 
         public void SendMessage(string message)
-            => SandboxResource.OnMessageReceived(message);
+            => ChatResource.OnMessageReceived(message);
     }
 }

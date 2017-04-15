@@ -1,14 +1,16 @@
-﻿namespace Warbler.Infrastructure.Chat.Models
-{
-    public class Server : WarblerEntity
-    {
-        public bool IsAuthEnabled { get; set; }
-        public ServerType Type { get; set; }
+﻿using System.Collections.Generic;
+using Warbler.Infrastructure.Chat.Models.Enums;
 
-        public Server(int id, bool auth, int type) : base(id)
-        {
-            IsAuthEnabled = auth;
-            Type = (ServerType) type;
-        }
+namespace Warbler.Infrastructure.Chat.Models
+{
+    public class Server
+    {
+        public int Id { get; set; }
+        public bool? IsAuthEnabled { get; set; }
+        public ServerType Type { get; set; }
+        public int UniversityId { get; set; }
+
+        public University University { get; set; }
+        public ICollection<Channel> Channels { get; set; }
     }
 }

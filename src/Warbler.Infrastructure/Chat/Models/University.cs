@@ -1,5 +1,8 @@
-﻿namespace Warbler.Infrastructure.Chat.Models
+﻿using System.Diagnostics;
+
+namespace Warbler.Infrastructure.Chat.Models
 {
+    [DebuggerDisplay("Uni #{Id}: {Name, nq}")]
     public class University
     {
         public int Id { get; set; }

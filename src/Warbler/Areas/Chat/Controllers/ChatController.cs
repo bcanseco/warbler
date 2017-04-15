@@ -10,13 +10,20 @@ namespace Warbler.Areas.Chat.Controllers
     {
         private readonly ChatContext _context;
 
-        private ChatController(ChatContext context)
+        public ChatController(ChatContext context)
         {
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            // TODO: Debug-only, remove
+            var firstServer = await _context.Servers
+                .Include(s => s.University)
+                .Include(s => s.Channels)
+                .ThenInclude(c => c.Memberships)
+                .FirstAsync();
+
             return View();
         }
 

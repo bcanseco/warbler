@@ -1,7 +1,9 @@
 using System;
+using System.Diagnostics;
 
 namespace Warbler.Infrastructure.Chat.Models
 {
+    [DebuggerDisplay("Msg #{Id}: {Text}")]
     public class Message
     {
         public int Id { get; set; }

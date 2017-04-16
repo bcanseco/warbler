@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Warbler.Areas.Chat.Models.Enums;
 
 namespace Warbler.Areas.Chat.Models
@@ -19,5 +20,12 @@ namespace Warbler.Areas.Chat.Models
         public Server Server { get; set; }
         public ICollection<Membership> Memberships { get; set; }
         public ICollection<Message> Messages { get; set; }
+
+        private List<User> _users;
+
+        public List<User> Users
+        {
+            get { return _users ?? (_users = Memberships?.Select(m => m.User).ToList()); }
+        }
     }
 }

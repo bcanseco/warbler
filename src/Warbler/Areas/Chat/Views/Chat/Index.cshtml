@@ -3,9 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section styles {
+    <link rel="stylesheet" href="~/Areas/Chat/Styles/Chat.css" />
+}
+
 @await Html.PartialAsync("_HeadingPartial", ViewData)
 
-<div class="row" data-bind="with: chatData">
+@* Old Sandbox Code *@
+@*<div class="row">
     <div class="col-md-3">
         <p>Connected clients:</p>
         <h1 style="text-align: center; font-size: 8rem" data-bind="text: connectedClients"></h1>
@@ -23,10 +28,26 @@
             </span>
         </div>
     </div>
+</div>*@
+
+<div class="row">
+    <div class="col-md-12 serverBrowser">
+        server browser
+    </div>
+    <div class="col-md-3 channelBrowser">
+        channel browser
+    </div>
+    <div class="col-md-7 channelContent">
+        channel content
+    </div>
+    <div class="col-md-2 userBrowser">
+        user browser
+    </div>
 </div>
 
 @section scripts {
     <script src="~/lib/signalr/jquery.signalR.min.js"></script>
     <script src="~/signalr/hubs"></script>
-    <script src="~/Areas/Chat/Scripts/Chat/Chat.js" asp-append-version="true"></script>
+    @*<script src="~/Areas/Chat/Scripts/NewChat.js" asp-append-version="true"></script>*@
 }
+

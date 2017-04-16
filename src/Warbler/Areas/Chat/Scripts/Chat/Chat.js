@@ -37,7 +37,7 @@ Sandbox.ChatViewModel = function() {
 };
 
 Sandbox.Server = function() {
-    this.hub = $.connection.sandboxHub; // SandboxHub.cs
+    this.hub = $.connection.chatHub; // SandboxHub.cs
 
     this.hub.client.updatedClientCount = function(clients) {
         Sandbox.viewModel.chatData().connectedClients(clients);

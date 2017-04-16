@@ -2,5 +2,9 @@
   {
     "outputFile": "Styles/site.css",
     "inputFile": "Styles/site.less"
+  },
+  {
+    "outputFile": "Areas/Chat/Styles/Chat.css",
+    "inputFile": "Areas/Chat/Styles/Chat.less"
   }
 ]

@@ -22,7 +22,8 @@ gulp.task("move:lib", function () {
         return "node_modules/" + dep + "/**/*.*";
     });
 
-    return gulp.src(libs, { base: "./node_modules" })
+    return gulp
+        .src(libs, { base: "./node_modules" })
         .pipe(gulp.dest(lib));
 });
 

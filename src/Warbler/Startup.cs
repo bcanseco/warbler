@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.SignalR.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Warbler.Areas.Chat.Data;
 using Warbler.Identity.Data;
 using Warbler.Identity.Models;
 using Warbler.Identity.Services;
@@ -43,10 +44,13 @@ namespace Warbler
                 options.Hubs.EnableDetailedErrors = true;
             });
 
-            // Add framework services.
+            // Add Entity Framework databases.
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
+            services.AddDbContext<ChatContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("WarblerDevelopment")));
 
+            // Set up authentication.
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
@@ -78,7 +82,7 @@ namespace Warbler
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider, ChatContext context)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -129,6 +133,8 @@ namespace Warbler
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            DbInitializer.Initialize(context);
         }
     }
 }

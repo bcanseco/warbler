@@ -30,9 +30,11 @@ else
 <script type="text/javascript">
     // hack to allow using an <a> tag as an asp.net form button
     // otherwise the button styling in the nav is ugly
-    document
-        .getElementById("logout-submit-link")
-        .addEventListener("click", function() {
+    var logout = document
+        .getElementById("logout-submit-link");
+    if (logout) {
+        logout.addEventListener("click", function() {
             document.forms.item(0).submit();
         });
+    }
 </script>

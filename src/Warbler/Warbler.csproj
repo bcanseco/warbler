@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Areas\**\*;Identity\**\*;Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
+    <None Update="Areas\**\*;Identity\**\*;Migrations\**\*;Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </None>
   </ItemGroup>
@@ -49,6 +49,7 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.2.301" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

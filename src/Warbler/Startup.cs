@@ -48,7 +48,7 @@ namespace Warbler
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
             services.AddDbContext<ChatContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("WarblerDevelopment")));
+                options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
 
             // Set up authentication.
             services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -134,7 +134,8 @@ namespace Warbler
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            DbInitializer.Initialize(context);
+            if (env.IsDevelopment())
+                DbInitializer.Initialize(context);
         }
     }
 }

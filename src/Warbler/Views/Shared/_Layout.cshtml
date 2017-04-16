@@ -10,10 +10,9 @@
     <environment names="Development,Staging,Production">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="~/lib/daemonite-material/css/material.css"/>
-        <link rel="stylesheet" href="~/Styles/site.css"/>
+        <link rel="stylesheet" href="~/Styles/site.css" asp-append-version="true"/>
 
         @RenderSection("styles", required: false)
-
     </environment>
 </head>
 <body>

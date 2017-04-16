@@ -1,61 +1,136 @@
-﻿var Sandbox = Sandbox || {};
+﻿/* global ko */
+var Chat = Chat || {};                       
 
-$(function() {
-    Sandbox.server = new Sandbox.Server();
-    Sandbox.viewModel = new Sandbox.ViewModel();
-    
-    ko.bindingHandlers.returnAction = {
-        init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
-            // Detect enter press in input fields - from http://stackoverflow.com/a/14293100
-            var value = ko.utils.unwrapObservable(valueAccessor());
-            $(element).keydown(function (e) {
-                if (e.which === 13) {
-                    value(viewModel);
-                }
-            });
-        }
-    };
+$(function () {
+    Chat.server = new Chat.Server();
+    Chat.data = ko.observable();                                    //Holds all the actual data that the viewmodel references
+    Chat.viewModel = new Chat.ViewModel();
+    ko.applyBindings(Chat.viewModel);
+    ko.applyBindings(Chat.data);
+})
 
-    ko.applyBindings(Sandbox.viewModel);
-});
-
-Sandbox.ViewModel = function() {
-    this.chatData = ko.observable(new Sandbox.ChatViewModel());
-};
-
-Sandbox.ChatViewModel = function() {
+Chat.Server = function () {
     var self = this;
 
-    this.connectedClients = ko.observable(0);
-    this.composedMessage = ko.observable();
-    this.messages = ko.observableArray();
+    self.hub = $.connection.chatHub;
 
-    this.send = function() {
-        Sandbox.server.hub.server.sendMessage(self.composedMessage());
-        self.composedMessage(null);
-    };
-};
+    self.hub.client.onConnection = function (universities) {
+        var temp = [];
 
-Sandbox.Server = function() {
-    this.hub = $.connection.chatHub; // SandboxHub.cs
+        //Server
+        universities.forEach(function (uni) {
 
-    this.hub.client.updatedClientCount = function(clients) {
-        Sandbox.viewModel.chatData().connectedClients(clients);
-    };
+            var _server = new ServerModel(uni.ServerId, uni.ServerName);
 
-    this.hub.client.messageReceived = function(message) {
-        Sandbox.viewModel.chatData().messages.push(message); // TODO: Scroll to bottom of div
-    };
+            //Channel
+            uni.Server.Channels.forEach(function (channel) {
 
-    $.connection.hub.logging = true;
+                var _channel = new ChannelModel(channel.Id, channel.Name, channel.Description, channel.State);
 
-    $.connection.hub.start()
-        .done(/* do nothing for now */)
-        .fail(function() {
-            console.error("Error connecting to SignalR hub. Please refresh the page to try again.");
+                //Message
+                channel.Messages.forEach(function (message) {
+
+                    var _message = new MessageModel(message.Id, message.UserId, message.SendDate, message.Text);
+
+                    _channel.channelMessages.push(_message);
+
+                })
+
+                _server.serverChannels.push(_channel);
+
+            })
+
+            temp.push(_server);
+
+        })
+
+        Chat.data(temp);
+    }
+
+    self.hub.client.messageReceived = function (messageObject) {
+
+        var server = Chat.data().find(function (server) {
+            return server.serverId() === messageObject.ServerId;
         });
 
-    $.connection.hub.disconnected(function() {
+        if (!server) {/*fuck shit up*/}                             //TODO: Make a errorHandler utility function
+        
+        var channel = server.serverChannels().find(function (channel) {
+            return channel.channelId() = message.ChannelId;
+        });
+
+        if (!channel) {/*fuck shit up*/}
+
+        channel.channelMessages.push(new MessageModel(messageObject.MessageId, messageObject.UserId, messageObject.SendDate, messageObject.Text));
+
+    }
+
+    self.hub.client.channelStateUpdate = function () {              //TODO: Fill in method
+
+    }
+
+    $.connection.hub.start()
+        .done(/* literally NOTHING xdxdxd */)                       //TODO: Maybe use this to replace onConnection()
+        .fail(function () {
+            console.error("Error connecting to server. Please refresh the page and try again.");
+        });
+
+    $.connection.hub.disconnected(function () {
         console.error("Lost connection to server. Please refresh the page.");
     });
-};
+}
+
+Chat.ViewModel = function () {
+    var self = this;
+
+    self.visibleServers = ko.observable(Chat.data());               //What servers the user has joined and can see
+    self.currentServer = ko.observable();
+    self.currentChannel = ko.observable();
+
+    self.composedMessage = ko.observable();
+
+    self.visibleChannels = ko.computed(function () {                //The channels that are a part of current server
+        return self.currentServer().serverChannels();
+    });
+    
+    self.visibleMessages = ko.computed(function () {
+        return self.currentChannel().channelMessages();
+    });
+
+    self.setServer = function (item) {                              //Called on click of a server icon
+        self.currentServer(item);
+    }
+
+    self.setChannel = function (item) {                             //Called on click of a channel
+        self.currentChannel(item);
+    }
+
+    self.sendMessage = function (item) {
+        Chat.server.hub.server.sendMessage(self.composedMessage());
+        self.composedMessage(null);
+    }
+}
+
+var ServerModel = function (id, name) {
+    var serverId = id;
+    var serverName = name;
+
+    var serverChannels = ko.observableArray([]);
+}
+
+var ChannelModel = function (id, name, desc, state) {
+    var channelId = id;
+    var channelName = name;
+    var channelDesc = desc;
+    var channelState = state;
+
+    var channelUsers = ko.obserableArray([]);
+    var channelMessages = ko.observableArray([]);
+}
+
+var MessageModel = function (id, user, time, content) {
+    var messageId = id;
+    var userId = user;
+    var timeSent = time;
+    var messageContent = content;
+}

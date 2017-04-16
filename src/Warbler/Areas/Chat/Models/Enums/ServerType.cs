@@ -1,4 +1,4 @@
-namespace Warbler.Infrastructure.Chat.Models.Enums
+namespace Warbler.Areas.Chat.Models.Enums
 {
     public enum ServerType
     {

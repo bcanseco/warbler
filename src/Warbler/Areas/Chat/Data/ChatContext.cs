@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Warbler.Infrastructure.Chat.Models;
+using Warbler.Areas.Chat.Models;
 
 namespace Warbler.Areas.Chat.Data
 {
@@ -27,6 +27,7 @@ namespace Warbler.Areas.Chat.Data
                 .WithOne(s => s.University)
                 .HasForeignKey<Server>(s => s.UniversityId);
 
+            // Use singular table names (otherwise EF will use prop names, e.g. User[s])
             modelBuilder.Entity<Server>().ToTable(nameof(Server));
             modelBuilder.Entity<Channel>().ToTable(nameof(Channel));
             modelBuilder.Entity<User>().ToTable(nameof(User));

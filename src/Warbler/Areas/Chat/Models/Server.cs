@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
-using Warbler.Infrastructure.Chat.Models.Enums;
+using Warbler.Areas.Chat.Models.Enums;
 
-namespace Warbler.Infrastructure.Chat.Models
+namespace Warbler.Areas.Chat.Models
 {
     [DebuggerDisplay("Server #{Id}: {Type}")]
     public class Server

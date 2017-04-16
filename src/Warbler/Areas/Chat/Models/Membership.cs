@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace Warbler.Infrastructure.Chat.Models
+namespace Warbler.Areas.Chat.Models
 {
     /// <summary>
     ///   Intermediate class linking the many-to-many relationship between users and channels.

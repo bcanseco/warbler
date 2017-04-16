@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Warbler.Infrastructure.Chat.Models;
-using Warbler.Infrastructure.Chat.Models.Enums;
+using Warbler.Areas.Chat.Models;
+using Warbler.Areas.Chat.Models.Enums;
 
 namespace Warbler.Areas.Chat.Data
 {

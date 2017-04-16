@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Warbler.Infrastructure.Chat.Models
+namespace Warbler.Areas.Chat.Models
 {
     [DebuggerDisplay("User #{Id}: {Name, nq}")]
     public class User

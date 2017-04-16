@@ -21,7 +21,7 @@ namespace Warbler.Areas.Chat.Controllers
             var firstServer = await _context.Servers
                 .Include(s => s.University)
                 .Include(s => s.Channels)
-                .ThenInclude(c => c.Memberships)
+                    .ThenInclude(c => c.Memberships)
                 .FirstAsync();
 
             return View();

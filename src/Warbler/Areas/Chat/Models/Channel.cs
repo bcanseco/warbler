@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Warbler.Infrastructure.Chat.Models.Enums;
+using Warbler.Areas.Chat.Models.Enums;
 
-namespace Warbler.Infrastructure.Chat.Models
+namespace Warbler.Areas.Chat.Models
 {
     [DebuggerDisplay("Channel #{Id}: {Name, nq} ({State, nq}, {Type, nq})")]
     public class Channel

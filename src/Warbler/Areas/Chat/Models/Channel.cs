@@ -18,5 +18,6 @@ namespace Warbler.Areas.Chat.Models
 
         public Server Server { get; set; }
         public ICollection<Membership> Memberships { get; set; }
+        public ICollection<Message> Messages { get; set; }
     }
 }

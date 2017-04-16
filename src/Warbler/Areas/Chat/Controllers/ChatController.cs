@@ -22,6 +22,8 @@ namespace Warbler.Areas.Chat.Controllers
                 .Include(s => s.University)
                 .Include(s => s.Channels)
                     .ThenInclude(c => c.Memberships)
+                .Include(s => s.Channels)
+                    .ThenInclude(c => c.Messages)
                 .FirstAsync();
 
             return View();

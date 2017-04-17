@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Warbler.Areas.Chat.Models.Enums;
 
 namespace Warbler.Areas.Chat.Models
 {
-    [DebuggerDisplay("User #{Id}: {Name, nq}")]
-    public class User
+    [DebuggerDisplay("User #{Id}: {UserName, nq}")]
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
         public int AvatarId { get; set; }
-        public string Name { get; set; }
+        public UserFlag Flag { get; set; }
 
         public ICollection<Membership> Memberships { get; set; }
 

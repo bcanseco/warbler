@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
-using Warbler.Areas.Chat.Data;
 using Warbler.Areas.Chat.Interfaces;
 using Warbler.Areas.Chat.Models;
 using Warbler.Areas.Chat.Models.Enums;
+using Warbler.Identity.Data;
 
 namespace Warbler.Areas.Chat.Repositories
 {
@@ -16,9 +16,9 @@ namespace Warbler.Areas.Chat.Repositories
     /// </summary>
     public class AzureUniversityRepository : IUniversityRepository
     {
-        private ChatContext Database { get; }
+        private WarblerDbContext Database { get; }
 
-        public AzureUniversityRepository(ChatContext context)
+        public AzureUniversityRepository(WarblerDbContext context)
         {
             Database = context;
         }

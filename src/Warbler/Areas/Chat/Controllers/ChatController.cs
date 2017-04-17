@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Warbler.Areas.Chat.Data;
+using Warbler.Identity.Data;
 
 namespace Warbler.Areas.Chat.Controllers
 {
     [Area("Chat")]
     public class ChatController : Controller
     {
-        private ChatContext Context { get; }
+        private WarblerDbContext Context { get; }
 
-        public ChatController(ChatContext context)
+        public ChatController(WarblerDbContext context)
         {
             Context = context;
         }

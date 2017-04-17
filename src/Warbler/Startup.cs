@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.SignalR.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using Warbler.Areas.Chat.Data;
+using Warbler.Areas.Chat.Models;
 using Warbler.Identity.Data;
 using Warbler.Identity.Models;
 using Warbler.Identity.Services;
@@ -45,14 +45,12 @@ namespace Warbler
             });
 
             // Add Entity Framework databases.
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
-            services.AddDbContext<ChatContext>(options =>
+            services.AddDbContext<WarblerDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
 
             // Set up authentication.
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<WarblerDbContext>()
                 .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>
@@ -82,7 +80,7 @@ namespace Warbler
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider, ChatContext context)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider, WarblerDbContext context)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();

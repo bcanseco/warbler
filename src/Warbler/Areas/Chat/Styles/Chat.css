@@ -1,3 +1,66 @@
-﻿.serverBrowser {
+﻿.serverBrowserDiv {
+  padding: 5px;
+}
+.serverBrowserCard {
+  height: 15vh;
+  margin: auto;
+  text-align: center;
+}
+.serverList {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.serverIcon {
+  width: 90px;
+  height: 90px;
   border: 1px solid grey;
+  background-color: lightgray;
+}
+.serverButton {
+  height: 100px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.channelBrowserDiv {
+  padding: 5px;
+}
+.channelBrowserCard {
+  height: 70vh;
+  margin: auto;
+  text-align: center;
+}
+.channelContentDiv {
+  padding: 5px;
+}
+.channelContentCard {
+  height: 70vh;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+.textInput {
+  position: absolute;
+  bottom: 5px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.userBrowserDiv {
+  padding: 5px;
+}
+.userBrowserCard {
+  height: 70vh;
+  margin: auto;
+  text-align: center;
+}
+.userList {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.userImage {
+  width: 60px;
+  height: 60px;
 }

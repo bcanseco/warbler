@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/Areas/Chat/Styles/Chat.css" />
 }
 
-@await Html.PartialAsync("_HeadingPartial", ViewData)
+@*@await Html.PartialAsync("_HeadingPartial", ViewData)*@
 
 @* Old Sandbox Code *@
 @*<div class="row">
@@ -30,20 +30,117 @@
     </div>
 </div>*@
 
-<div class="row">
-    <div class="col-md-12 serverBrowser">
-        server browser
+<div class="row" style="width: 90%; margin: auto">
+    <div class="col-md-12 serverBrowserDiv">
+        <div class="card serverBrowserCard">
+            <div class="card-block">
+                <ul class="serverList">
+                    <li class="serverButton">
+                        <div class="serverIcon">
+                            <img style="width:100%" src="https://i.gyazo.com/46b9331c382bed410e3bfbb0a23d876d.png" />
+                        </div>
+                        <p>Server 01</p>
+                    </li>
+                    <li class="serverButton">
+                        <div class="serverIcon">
+                            <img style="width:100%" src="https://i.gyazo.com/46b9331c382bed410e3bfbb0a23d876d.png" />
+                        </div>
+                        <p>Server 02</p>
+                    </li>
+                    <li class="serverButton">
+                        <div class="serverIcon">
+                            <img style="width:100%" src="https://i.gyazo.com/46b9331c382bed410e3bfbb0a23d876d.png" />
+                        </div>
+                        <p>Server 03</p>
+                    </li>
+                    <li class="serverButton">
+                        <div class="serverIcon">
+                            <img style="width:100%" src="https://i.gyazo.com/46b9331c382bed410e3bfbb0a23d876d.png" />
+                        </div>
+                        <p>Server 04</p>
+                    </li>
+                    <li class="serverButton">
+                        <div class="serverIcon">
+                            <img style="width:100%" src="https://i.gyazo.com/46b9331c382bed410e3bfbb0a23d876d.png" />
+                        </div>
+                        <p>Server 05</p>
+                    </li>
+                    <li class="serverButton">
+                        <div class="serverIcon">
+                            <img style="width:90%; margin-top: 5%" src="https://img.clipartfest.com/add8f0249c3cca51cc142fcda33c49ed_addition-plus-sign-clip-art-at-clipart-plus_588-594.png" />
+                        </div>
+                        <p>Add Server</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-3 channelBrowser">
-        channel browser
+<div class="row" style="width: 90%; margin: auto">
+    <div class="col-md-3 channelBrowserDiv">
+        <div class="card channelBrowserCard">
+            <div class="card-block">
+                <h4 class="card-title">Channels</h4>
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action">Test Channel 01</button>
+                    <button type="button" class="list-group-item list-group-item-action">Test Channel 02</button>
+                    <button type="button" class="list-group-item list-group-item-action">Test Channel 03</button>
+                    <button type="button" class="list-group-item list-group-item-action">Test Channel 04</button>
+                    <button type="button" class="list-group-item list-group-item-action">Test Channel 05</button>
+                    <button type="button" class="list-group-item list-group-item-action">Test Channel 06</button>
+                    <button type="button" class="list-group-item list-group-item-action">Test Channel 07</button>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-7 channelContent">
-        channel content
+    <div class="col-md-7 channelContentDiv">
+        <div class="card channelContentCard">
+            <div class="card-block">
+                <div style="margin-bottom: 20px; max-height: 600px; overflow: auto;">
+                    <ul class="list-group" data-bind="foreach: messages">
+                        <li class="list-group-item" data-bind="text: $data"></li>
+                    </ul>
+                </div>
+                <div class="input-group textInput">
+                    <input type="text" class="form-control" placeholder="Enter a message" data-bind="textInput: composedMessage, returnAction: send">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button" data-bind="click: send">Send</button>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-2 userBrowser">
-        user browser
+    <div class="col-md-2 userBrowserDiv">
+        <div class="card userBrowserCard">
+            <div class="card-block">
+                <h4 class="card-title">Current Users</h4>
+
+                <ul class="list-group">
+                    <li class="list-group-item userButton">
+                        <img class="userImage" src="http://santetotal.com/wp-content/uploads/2014/05/default-user.png" />
+                        <p>User01</p>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="userImage" src="http://santetotal.com/wp-content/uploads/2014/05/default-user.png" />
+                        <p>User02</p>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="userImage" src="http://santetotal.com/wp-content/uploads/2014/05/default-user.png" />
+                        <p>User03</p>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="userImage" src="http://santetotal.com/wp-content/uploads/2014/05/default-user.png" />
+                        <p>User04</p>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="userImage" src="http://santetotal.com/wp-content/uploads/2014/05/default-user.png" />
+                        <p>User05</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
     </div>
 </div>
 

@@ -65,7 +65,7 @@ body{font:12px/180% Arial, Helvetica, sans-serif, "Arial";background:#ddd;}
 $(document).ready(function(){
 
 	$("#leftsead a").hover(function(){
-		if($(this).prop("className")=="youhui"){
+		if($(this).prop("className")=="promotion"){
 			$(this).children("img.hides").show();
 		}else{
 			$(this).children("img.hides").show();
@@ -73,7 +73,7 @@ $(document).ready(function(){
 			$(this).children("img.hides").animate({marginRight:'0px'},'slow'); 
 		}
 	},function(){ 
-		if($(this).prop("className")=="youhui"){
+		if($(this).prop("className")=="promotion"){
 			$(this).children("img.hides").hide('slow');
 		}else{
 			$(this).children("img.hides").animate({marginRight:'-143px'},'slow',function(){$(this).hide();$(this).next("img.shows").show();});

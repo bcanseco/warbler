@@ -1,54 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Chat";
+    ViewData["Title"] = "Select a university";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-@section styles {
-    <link rel="stylesheet" href="~/Areas/Chat/Styles/Chat.css" />
 }
 
 @await Html.PartialAsync("_HeadingPartial", ViewData)
 
-@* Old Sandbox Code *@
-@*<div class="row">
-    <div class="col-md-3">
-        <p>Connected clients:</p>
-        <h1 style="text-align: center; font-size: 8rem" data-bind="text: connectedClients"></h1>
-    </div>
-    <div class="col-md-9">
-        <div style="margin-bottom: 20px; max-height: 600px; overflow: auto;">
-            <ul class="list-group" data-bind="foreach: messages">
-                <li class="list-group-item" data-bind="text: $data"></li>
-            </ul>
-        </div>
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Enter a message" data-bind="textInput: composedMessage, returnAction: send">
-            <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button" data-bind="click: send">Send</button>
-            </span>
-        </div>
-    </div>
-</div>*@
-
 <div class="row">
-    <div class="col-md-12 serverBrowser">
-        server browser
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-3 channelBrowser">
-        channel browser
-    </div>
-    <div class="col-md-7 channelContent">
-        channel content
-    </div>
-    <div class="col-md-2 userBrowser">
-        user browser
+    <div class="col-md-12" >
+        <div class="list-group" data-bind="foreach: universities">
+            <a href="#" 
+               class="list-group-item list-group-item-action flex-column align-items-start active"
+               data-bind="click: $parent.onSelection.bind($data)">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1" data-bind="text: name"></h5>
+                </div>
+                <small data-bind="text: vicinity"></small>
+            </a>
+        </div>
     </div>
 </div>
 
 @section scripts {
     <script src="~/lib/signalr/jquery.signalR.min.js"></script>
     <script src="~/signalr/hubs"></script>
-    @*<script src="~/Areas/Chat/Scripts/Chat/Chat.js" asp-append-version="true"></script>*@
+    <script src="~/Areas/Chat/Scripts/Chat/Proximity.js" asp-append-version="true"></script>
 }

@@ -22,9 +22,9 @@ namespace Warbler.Identity.Data
 
             var universities = new[]
             {
-                new University{ServerId=1,Name="Florida Institute of Technology",Lat=250.43f,Lng=-60.90f},
-                new University{ServerId=2,Name="Georgia Institute of Technology",Lat=1337.5f,Lng=9001f},
-                new University{ServerId=3,Name="California Institute of Technology",Lat=-42f,Lng=66.66f},
+                new University{Name="Florida Institute of Technology",Lat=250.43f,Lng=-60.90f},
+                new University{Name="Georgia Institute of Technology",Lat=1337.5f,Lng=9001f},
+                new University{Name="California Institute of Technology",Lat=-42f,Lng=66.66f},
             };
             foreach (var u in universities)
             {

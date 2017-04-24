@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace Warbler.Areas.Chat.Models
 {
@@ -12,7 +13,9 @@ namespace Warbler.Areas.Chat.Models
         public string Text { get; set; }
         public DateTime SendDate { get; set; }
 
+        [JsonIgnore]
         public Channel Channel { get; set; }
+        [JsonIgnore]
         public User Sender { get; set; }
     }
 }

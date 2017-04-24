@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace Warbler.Areas.Chat.Models
 {
@@ -15,6 +16,7 @@ namespace Warbler.Areas.Chat.Models
         public User User { get; set; }
 
         public int ChannelId { get; set; }
+        [JsonIgnore]
         public Channel Channel { get; set; }
     }
 }

@@ -27,7 +27,6 @@ namespace Warbler.Identity.Data
                 .WithOne(s => s.University)
                 .HasForeignKey<Server>(s => s.UniversityId);
 
-            // Use singular table names (otherwise EF will use prop names, e.g. Server[s])
             modelBuilder.Entity<Server>().ToTable(nameof(Server));
             modelBuilder.Entity<Channel>().ToTable(nameof(Channel));
             modelBuilder.Entity<Message>().ToTable(nameof(Message));

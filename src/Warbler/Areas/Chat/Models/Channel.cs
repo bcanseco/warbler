@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Newtonsoft.Json;
 using Warbler.Areas.Chat.Models.Enums;
 
 namespace Warbler.Areas.Chat.Models
@@ -17,6 +18,7 @@ namespace Warbler.Areas.Chat.Models
         public ChannelType Type { get; set; }
         public DateTime LastUsed { get; set; }
 
+        [JsonIgnore]
         public Server Server { get; set; }
         public ICollection<Membership> Memberships { get; set; }
         public ICollection<Message> Messages { get; set; }

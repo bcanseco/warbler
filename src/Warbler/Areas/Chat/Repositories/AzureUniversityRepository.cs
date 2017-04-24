@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoogleApi.Entities.Places.Search.NearBy.Response;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Warbler.Areas.Chat.Interfaces;
@@ -34,6 +35,43 @@ namespace Warbler.Areas.Chat.Repositories
                 case QueryDepth.Message:    return await GetUniversitiesAtMessageLevel().ToListAsync();
                 default: throw new ArgumentException($"Unknown depth: {depth}.");
             }
+        }
+
+        public async Task CreateUniversity(NearByResult uni)
+        {
+            var university = new University
+            {
+                Name = uni.Name,
+                PlaceId = uni.PlaceId,
+                Address = uni.Vicinity,
+                Lat = (float) uni.Geometry.Location.Latitude,
+                Lng = (float) uni.Geometry.Location.Longitude,
+                Server = new Server
+                {
+                    IsAuthEnabled = false,
+                    Type = ServerType.Public,
+                    Channels = new List<Channel>
+                    {
+                        new Channel
+                        {
+                            Name = "general",
+                            Description = "Talk about anything.",
+                            State = ChannelState.Active,
+                            Type = ChannelType.Normal
+                        },
+                        new Channel
+                        {
+                            Name = "politics",
+                            Description = "Talk about the election.",
+                            State = ChannelState.Active,
+                            Type = ChannelType.Normal
+                        }
+                    }
+                }
+            };
+
+            await Database.Universities.AddAsync(university);
+            await Database.SaveChangesAsync();
         }
 
         private IQueryable<University> GetUniversitiesAtRootLevel()

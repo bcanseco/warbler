@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Warbler.Identity.Data;
 
 namespace Warbler.Areas.Chat.Controllers
 {
     [Area("Chat")]
+    // [Authorize]
     public class ChatController : Controller
     {
         private WarblerDbContext Context { get; }
@@ -12,8 +14,13 @@ namespace Warbler.Areas.Chat.Controllers
         {
             Context = context;
         }
-
+        
         public IActionResult Index()
+        {
+            return View();
+        }
+        
+        public IActionResult Chat()
         {
             return View();
         }

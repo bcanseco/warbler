@@ -8,3 +8,7 @@ tbody ul {
   margin-bottom: 0;
   height: 90vh;
 }
+.titleCard {
+  background-color: whitesmoke;
+  color: dimgrey;
+}

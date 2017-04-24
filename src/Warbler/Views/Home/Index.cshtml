@@ -2,7 +2,11 @@
     ViewData["Title"] = "Warbler";
 }
 
-<div class="jumbotron jumbotron-fluid" style="padding-top: 2rem; padding-bottom: 2rem;">
+@section styles {
+    <link rel="stylesheet" href="~/Styles/site.css" />
+}
+
+<div class="jumbotron jumbotron-fluid titleCard" style="padding-top: 2rem; padding-bottom: 2rem;">
     <div class="container" style="padding-left: 30px">
         <img src="~/Graphics/logo.png" alt="Warbler" style="width: 400px; max-width: 100%;"/>
         <p class="lead">Auto-generated, geolocation based chatrooms for universities.</p>

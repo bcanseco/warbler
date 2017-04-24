@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7 channelContentDiv">
+        <div class="col-md-7 channelContentDiv" data-bind="with: chatData">
             <div class="card channelContentCard">
                 <div class="card-block">
                     <div style="margin-bottom: 20px; max-height: 600px; overflow: auto;">
@@ -115,8 +115,7 @@
         <div class="col-md-2 userBrowserDiv">
             <div class="card userBrowserCard">
                 <div class="card-block">
-                    <h4 class="card-title">Current Users</h4>
-
+                    <h4 class="card-title">Users</h4>
                     <ul class="list-group">
                         <li class="list-group-item userButton">
                             <img class="userImage" src="http://santetotal.com/wp-content/uploads/2014/05/default-user.png" />
@@ -149,5 +148,5 @@
 @section scripts {
     <script src="~/lib/signalr/jquery.signalR.min.js"></script>
     <script src="~/signalr/hubs"></script>
-    @*<script src="~/Areas/Chat/Scripts/Chat/Chat.js" asp-append-version="true"></script>*@
+    <script src="~/Areas/Chat/Scripts/Chat/OldChat.js" asp-append-version="true"></script>
 }

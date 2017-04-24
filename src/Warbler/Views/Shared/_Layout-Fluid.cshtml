@@ -22,7 +22,7 @@
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <span class="navbar-brand" href="#" style="pointer-events: none">Warbler (demo)</span>
+        <span class="navbar-brand" href="#" style="pointer-events: none">Warbler</span>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -33,10 +33,7 @@
                     <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Documents">Documents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="Chat" asp-controller="Chat" asp-action="Index">Proximity</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="Chat" asp-controller="Chat" asp-action="Chatroom">Chat</a>
+                    <a class="nav-link" asp-area="Chat" asp-controller="Chat" asp-action="Index">Chat</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" asp-area="Dev" asp-controller="Dev" asp-action="Index">Admin</a>
@@ -46,10 +43,10 @@
         </div>
     </div>
 </nav>
-<div class="container">
+<div class="mainbody container-fluid">
     @RenderBody()
     <hr/>
-    <footer>
+    <footer id="#footer">
         <p>&copy; 2017 - Warbler</p>
     </footer>
 </div>

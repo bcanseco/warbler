@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warbler", "src\Warbler\Warb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warbler.Tests", "src\Warbler.Tests\Warbler.Tests.csproj", "{3626385E-04A0-44F4-BE0C-EA5352C96BF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warbler.CLI", "src\Warbler.CLI\Warbler.CLI.csproj", "{173311F0-07D0-4644-97B3-3F9E8C2BFA42}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +29,6 @@ Global
 		{3626385E-04A0-44F4-BE0C-EA5352C96BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3626385E-04A0-44F4-BE0C-EA5352C96BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3626385E-04A0-44F4-BE0C-EA5352C96BF6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{173311F0-07D0-4644-97B3-3F9E8C2BFA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{173311F0-07D0-4644-97B3-3F9E8C2BFA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{173311F0-07D0-4644-97B3-3F9E8C2BFA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{173311F0-07D0-4644-97B3-3F9E8C2BFA42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +36,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8A29317B-E1C2-4B15-BF49-6D48A80AD8A5} = {5A80EBC5-5F37-4049-A6E3-49B8B751D2AC}
 		{3626385E-04A0-44F4-BE0C-EA5352C96BF6} = {5A80EBC5-5F37-4049-A6E3-49B8B751D2AC}
-		{173311F0-07D0-4644-97B3-3F9E8C2BFA42} = {5A80EBC5-5F37-4049-A6E3-49B8B751D2AC}
 	EndGlobalSection
 EndGlobal

@@ -22,7 +22,8 @@
 
         this.onSelection = function(university) {
             console.info("onSelection()", university);
-            self.hub.server.selectUniversity(university.place_id);
+
+            // self.hub.server.selectUniversity(university.place_id);
         }
 
         function getLocationAsync() {

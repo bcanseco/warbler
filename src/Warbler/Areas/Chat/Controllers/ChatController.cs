@@ -20,7 +20,7 @@ namespace Warbler.Areas.Chat.Controllers
             return View();
         }
         
-        public IActionResult Chat()
+        public IActionResult Chatroom()
         {
             return View();
         }

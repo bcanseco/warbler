@@ -11,6 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\lib\**" />
+    <Content Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="wwwroot\lib\**" />
+    <None Remove="wwwroot\lib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Areas\**\*;Identity\**\*;Migrations\**\*;Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </None>
@@ -41,7 +48,7 @@
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="1.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.1.0" />
     <PackageReference Include="System.ValueTuple" Version="4.3.0" />
-    <!--Commented out due to an Azure issue with resolving the BrowserLink package, will revisit later-->
+    <!--Commented out due to an Azure issue with resolving the BrowserLink package; TODO: revisit later-->
     <!--<PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />-->
   </ItemGroup>
 
@@ -52,6 +59,10 @@
   <ItemGroup>
     <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.2.301" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

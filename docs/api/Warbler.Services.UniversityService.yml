@@ -1,0 +1,673 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Services.UniversityService
+  commentId: T:Warbler.Services.UniversityService
+  id: UniversityService
+  parent: Warbler.Services
+  children:
+  - Warbler.Services.UniversityService.#ctor(IUniversityRepository)
+  - Warbler.Services.UniversityService.GetAllAsync
+  - Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
+  - Warbler.Services.UniversityService.JoinAsync(User,University)
+  langs:
+  - csharp
+  - vb
+  name: UniversityService
+  nameWithType: UniversityService
+  fullName: Warbler.Services.UniversityService
+  type: Class
+  source:
+    id: UniversityService
+    path: ''
+    startLine: 2297
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nThe business logic layer for manipulation of university data.\n"
+  example: []
+  syntax:
+    content: public class UniversityService
+    content.vb: Public Class UniversityService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Services.UniversityService.#ctor(IUniversityRepository)
+  commentId: M:Warbler.Services.UniversityService.#ctor(IUniversityRepository)
+  id: '#ctor(IUniversityRepository)'
+  parent: Warbler.Services.UniversityService
+  langs:
+  - csharp
+  - vb
+  name: UniversityService(IUniversityRepository)
+  nameWithType: UniversityService.UniversityService(IUniversityRepository)
+  fullName: Warbler.Services.UniversityService.UniversityService(IUniversityRepository)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2301
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public UniversityService(IUniversityRepository repository)
+    parameters:
+    - id: repository
+      type: IUniversityRepository
+    content.vb: Public Sub New(repository As IUniversityRepository)
+  overload: Warbler.Services.UniversityService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
+  commentId: M:Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
+  id: GetOrCreateAsync(NearByResult)
+  parent: Warbler.Services.UniversityService
+  langs:
+  - csharp
+  - vb
+  name: GetOrCreateAsync(NearByResult)
+  nameWithType: UniversityService.GetOrCreateAsync(NearByResult)
+  fullName: Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
+  type: Method
+  source:
+    id: GetOrCreateAsync
+    path: ''
+    startLine: 2312
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nGets the university associated with the given\nGoogle Places result or creates it if nonexistent.\n"
+  example: []
+  syntax:
+    content: public Task<University> GetOrCreateAsync(NearByResult uni)
+    parameters:
+    - id: uni
+      type: NearByResult
+      description: The Google Places search result to use.
+    return:
+      type: Task{University}
+      description: The related University object.
+    content.vb: Public Function GetOrCreateAsync(uni As NearByResult) As Task(Of University)
+  overload: Warbler.Services.UniversityService.GetOrCreateAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UniversityService.JoinAsync(User,University)
+  commentId: M:Warbler.Services.UniversityService.JoinAsync(User,University)
+  id: JoinAsync(User,University)
+  parent: Warbler.Services.UniversityService
+  langs:
+  - csharp
+  - vb
+  name: JoinAsync(User, University)
+  nameWithType: UniversityService.JoinAsync(User, University)
+  fullName: Warbler.Services.UniversityService.JoinAsync(User, University)
+  type: Method
+  source:
+    id: JoinAsync
+    path: ''
+    startLine: 2334
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nAdds a user as a member to every channel in a university.\n"
+  remarks: "\nThis will create new rows in the Membership table (User x Channel).\n"
+  example: []
+  syntax:
+    content: public Task JoinAsync(User user, University university)
+    parameters:
+    - id: user
+      type: User
+      description: The user to add.
+    - id: university
+      type: University
+      description: The university whose channels will be added to.
+    return:
+      type: Task
+    content.vb: Public Function JoinAsync(user As User, university As University) As Task
+  overload: Warbler.Services.UniversityService.JoinAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UniversityService.GetAllAsync
+  commentId: M:Warbler.Services.UniversityService.GetAllAsync
+  id: GetAllAsync
+  parent: Warbler.Services.UniversityService
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: UniversityService.GetAllAsync()
+  fullName: Warbler.Services.UniversityService.GetAllAsync()
+  type: Method
+  source:
+    id: GetAllAsync
+    path: ''
+    startLine: 2348
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nGets a list of all universities and\ntheir properties down to the message level.\n"
+  example: []
+  syntax:
+    content: public Task<List<University>> GetAllAsync()
+    return:
+      type: Task{List{University}}
+    content.vb: Public Function GetAllAsync As Task(Of List(Of University))
+  overload: Warbler.Services.UniversityService.GetAllAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
+  isExternal: false
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Services.UniversityService.#ctor*
+  commentId: Overload:Warbler.Services.UniversityService.#ctor
+  isExternal: false
+  name: UniversityService
+  nameWithType: UniversityService.UniversityService
+  fullName: Warbler.Services.UniversityService.UniversityService
+- uid: IUniversityRepository
+  commentId: '!:IUniversityRepository'
+  isExternal: true
+  name: IUniversityRepository
+  nameWithType: IUniversityRepository
+  fullName: IUniversityRepository
+- uid: Warbler.Services.UniversityService.GetOrCreateAsync*
+  commentId: Overload:Warbler.Services.UniversityService.GetOrCreateAsync
+  isExternal: false
+  name: GetOrCreateAsync
+  nameWithType: UniversityService.GetOrCreateAsync
+  fullName: Warbler.Services.UniversityService.GetOrCreateAsync
+- uid: NearByResult
+  isExternal: true
+  name: NearByResult
+  nameWithType: NearByResult
+  fullName: NearByResult
+- uid: Task{University}
+  commentId: '!:Task{University}'
+  definition: Task`1
+  name: Task<University>
+  nameWithType: Task<University>
+  fullName: Task<University>
+  nameWithType.vb: Task(Of University)
+  fullName.vb: Task(Of University)
+  name.vb: Task(Of University)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Services.UniversityService.JoinAsync*
+  commentId: Overload:Warbler.Services.UniversityService.JoinAsync
+  isExternal: false
+  name: JoinAsync
+  nameWithType: UniversityService.JoinAsync
+  fullName: Warbler.Services.UniversityService.JoinAsync
+- uid: User
+  isExternal: true
+  name: User
+  nameWithType: User
+  fullName: User
+- uid: University
+  isExternal: true
+  name: University
+  nameWithType: University
+  fullName: University
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Services.UniversityService.GetAllAsync*
+  commentId: Overload:Warbler.Services.UniversityService.GetAllAsync
+  isExternal: false
+  name: GetAllAsync
+  nameWithType: UniversityService.GetAllAsync
+  fullName: Warbler.Services.UniversityService.GetAllAsync
+- uid: Task{List{University}}
+  commentId: '!:Task{List{University}}'
+  definition: Task`1
+  name: Task<List<University>>
+  nameWithType: Task<List<University>>
+  fullName: Task<List<University>>
+  nameWithType.vb: Task(Of List(Of University))
+  fullName.vb: Task(Of List(Of University))
+  name.vb: Task(Of List(Of University))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

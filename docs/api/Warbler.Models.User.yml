@@ -1,0 +1,423 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  id: User
+  parent: Warbler.Models
+  children:
+  - Warbler.Models.User.AvatarId
+  - Warbler.Models.User.Channels
+  - Warbler.Models.User.ConnectionId
+  - Warbler.Models.User.Flag
+  - Warbler.Models.User.Memberships
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+  type: Class
+  source:
+    id: User
+    path: ''
+    startLine: 1532
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: 'public class User : IdentityUser'
+    content.vb: >-
+      Public Class User
+
+          Inherits IdentityUser
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.User.AvatarId
+  commentId: P:Warbler.Models.User.AvatarId
+  id: AvatarId
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: AvatarId
+  nameWithType: User.AvatarId
+  fullName: Warbler.Models.User.AvatarId
+  type: Property
+  source:
+    id: AvatarId
+    path: ''
+    startLine: 1535
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public int AvatarId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property AvatarId As Integer
+  overload: Warbler.Models.User.AvatarId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.User.Flag
+  commentId: P:Warbler.Models.User.Flag
+  id: Flag
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Flag
+  nameWithType: User.Flag
+  fullName: Warbler.Models.User.Flag
+  type: Property
+  source:
+    id: Flag
+    path: ''
+    startLine: 1536
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public UserFlag Flag { get; set; }
+    parameters: []
+    return:
+      type: UserFlag
+    content.vb: Public Property Flag As UserFlag
+  overload: Warbler.Models.User.Flag*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.User.ConnectionId
+  commentId: P:Warbler.Models.User.ConnectionId
+  id: ConnectionId
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: ConnectionId
+  nameWithType: User.ConnectionId
+  fullName: Warbler.Models.User.ConnectionId
+  type: Property
+  source:
+    id: ConnectionId
+    path: ''
+    startLine: 1538
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string ConnectionId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ConnectionId As String
+  overload: Warbler.Models.User.ConnectionId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.User.Memberships
+  commentId: P:Warbler.Models.User.Memberships
+  id: Memberships
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Memberships
+  nameWithType: User.Memberships
+  fullName: Warbler.Models.User.Memberships
+  type: Property
+  source:
+    id: Memberships
+    path: ''
+    startLine: 1541
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public ICollection<Membership> Memberships { get; set; }
+    parameters: []
+    return:
+      type: ICollection{Warbler.Models.Membership}
+    content.vb: Public Property Memberships As ICollection(Of Membership)
+  overload: Warbler.Models.User.Memberships*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.User.Channels
+  commentId: P:Warbler.Models.User.Channels
+  id: Channels
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Channels
+  nameWithType: User.Channels
+  fullName: Warbler.Models.User.Channels
+  type: Property
+  source:
+    id: Channels
+    path: ''
+    startLine: 1546
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public List<Channel> Channels { get; }
+    parameters: []
+    return:
+      type: List{Warbler.Models.Channel}
+    content.vb: Public ReadOnly Property Channels As List(Of Channel)
+  overload: Warbler.Models.User.Channels*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.User.AvatarId*
+  commentId: Overload:Warbler.Models.User.AvatarId
+  isExternal: false
+  name: AvatarId
+  nameWithType: User.AvatarId
+  fullName: Warbler.Models.User.AvatarId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Warbler.Models.User.Flag*
+  commentId: Overload:Warbler.Models.User.Flag
+  isExternal: false
+  name: Flag
+  nameWithType: User.Flag
+  fullName: Warbler.Models.User.Flag
+- uid: UserFlag
+  commentId: '!:UserFlag'
+  isExternal: true
+  name: UserFlag
+  nameWithType: UserFlag
+  fullName: UserFlag
+- uid: Warbler.Models.User.ConnectionId*
+  commentId: Overload:Warbler.Models.User.ConnectionId
+  isExternal: false
+  name: ConnectionId
+  nameWithType: User.ConnectionId
+  fullName: Warbler.Models.User.ConnectionId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.User.Memberships*
+  commentId: Overload:Warbler.Models.User.Memberships
+  isExternal: false
+  name: Memberships
+  nameWithType: User.Memberships
+  fullName: Warbler.Models.User.Memberships
+- uid: ICollection{Warbler.Models.Membership}
+  commentId: '!:ICollection{Warbler.Models.Membership}'
+  definition: ICollection`1
+  name: ICollection<Membership>
+  nameWithType: ICollection<Membership>
+  fullName: ICollection<Warbler.Models.Membership>
+  nameWithType.vb: ICollection(Of Membership)
+  fullName.vb: ICollection(Of Warbler.Models.Membership)
+  name.vb: ICollection(Of Membership)
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.Membership
+    name: Membership
+    nameWithType: Membership
+    fullName: Warbler.Models.Membership
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.Membership
+    name: Membership
+    nameWithType: Membership
+    fullName: Warbler.Models.Membership
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ICollection`1
+  isExternal: true
+  name: ICollection<>
+  nameWithType: ICollection<>
+  fullName: ICollection<>
+  nameWithType.vb: ICollection(Of )
+  fullName.vb: ICollection(Of )
+  name.vb: ICollection(Of )
+  spec.csharp:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.User.Channels*
+  commentId: Overload:Warbler.Models.User.Channels
+  isExternal: false
+  name: Channels
+  nameWithType: User.Channels
+  fullName: Warbler.Models.User.Channels
+- uid: List{Warbler.Models.Channel}
+  commentId: '!:List{Warbler.Models.Channel}'
+  definition: List`1
+  name: List<Channel>
+  nameWithType: List<Channel>
+  fullName: List<Warbler.Models.Channel>
+  nameWithType.vb: List(Of Channel)
+  fullName.vb: List(Of Warbler.Models.Channel)
+  name.vb: List(Of Channel)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.AccountViewModels
+  commentId: N:Warbler.Models.AccountViewModels
+  id: Warbler.Models.AccountViewModels
+  children:
+  - Warbler.Models.AccountViewModels.ExternalLoginConfirmationViewModel
+  - Warbler.Models.AccountViewModels.ForgotPasswordViewModel
+  - Warbler.Models.AccountViewModels.LoginViewModel
+  - Warbler.Models.AccountViewModels.RegisterViewModel
+  - Warbler.Models.AccountViewModels.ResetPasswordViewModel
+  - Warbler.Models.AccountViewModels.SendCodeViewModel
+  - Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Models.AccountViewModels
+  nameWithType: Warbler.Models.AccountViewModels
+  fullName: Warbler.Models.AccountViewModels
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Models.AccountViewModels.ExternalLoginConfirmationViewModel
+  commentId: T:Warbler.Models.AccountViewModels.ExternalLoginConfirmationViewModel
+  isExternal: false
+  name: ExternalLoginConfirmationViewModel
+  nameWithType: ExternalLoginConfirmationViewModel
+  fullName: Warbler.Models.AccountViewModels.ExternalLoginConfirmationViewModel
+- uid: Warbler.Models.AccountViewModels.ForgotPasswordViewModel
+  commentId: T:Warbler.Models.AccountViewModels.ForgotPasswordViewModel
+  isExternal: false
+  name: ForgotPasswordViewModel
+  nameWithType: ForgotPasswordViewModel
+  fullName: Warbler.Models.AccountViewModels.ForgotPasswordViewModel
+- uid: Warbler.Models.AccountViewModels.LoginViewModel
+  commentId: T:Warbler.Models.AccountViewModels.LoginViewModel
+  isExternal: false
+  name: LoginViewModel
+  nameWithType: LoginViewModel
+  fullName: Warbler.Models.AccountViewModels.LoginViewModel
+- uid: Warbler.Models.AccountViewModels.RegisterViewModel
+  commentId: T:Warbler.Models.AccountViewModels.RegisterViewModel
+  isExternal: false
+  name: RegisterViewModel
+  nameWithType: RegisterViewModel
+  fullName: Warbler.Models.AccountViewModels.RegisterViewModel
+- uid: Warbler.Models.AccountViewModels.ResetPasswordViewModel
+  commentId: T:Warbler.Models.AccountViewModels.ResetPasswordViewModel
+  isExternal: false
+  name: ResetPasswordViewModel
+  nameWithType: ResetPasswordViewModel
+  fullName: Warbler.Models.AccountViewModels.ResetPasswordViewModel
+- uid: Warbler.Models.AccountViewModels.SendCodeViewModel
+  commentId: T:Warbler.Models.AccountViewModels.SendCodeViewModel
+  isExternal: false
+  name: SendCodeViewModel
+  nameWithType: SendCodeViewModel
+  fullName: Warbler.Models.AccountViewModels.SendCodeViewModel
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  commentId: T:Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  isExternal: false
+  name: VerifyCodeViewModel
+  nameWithType: VerifyCodeViewModel
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel

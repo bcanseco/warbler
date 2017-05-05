@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  id: Warbler.Misc
+  children:
+  - Warbler.Misc.HubResource`1
+  - Warbler.Misc.WarblerDbContext
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Misc.HubResource`1
+  commentId: T:Warbler.Misc.HubResource`1
+  isExternal: false
+  name: HubResource<TService>
+  nameWithType: HubResource<TService>
+  fullName: Warbler.Misc.HubResource<TService>
+  nameWithType.vb: HubResource(Of TService)
+  fullName.vb: Warbler.Misc.HubResource(Of TService)
+  name.vb: HubResource(Of TService)
+  spec.csharp:
+  - uid: Warbler.Misc.HubResource`1
+    name: HubResource
+    nameWithType: HubResource
+    fullName: Warbler.Misc.HubResource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Warbler.Misc.HubResource`1
+    name: HubResource
+    nameWithType: HubResource
+    fullName: Warbler.Misc.HubResource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  isExternal: false
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext

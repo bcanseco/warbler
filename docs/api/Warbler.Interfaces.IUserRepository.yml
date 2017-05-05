@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IUserRepository
+  commentId: T:Warbler.Interfaces.IUserRepository
+  id: IUserRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IUserRepository.IsNewAsync(User)
+  langs:
+  - csharp
+  - vb
+  name: IUserRepository
+  nameWithType: IUserRepository
+  fullName: Warbler.Interfaces.IUserRepository
+  type: Interface
+  source:
+    id: IUserRepository
+    path: ''
+    startLine: 1333
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for user-based queries against a repository.\n"
+  example: []
+  syntax:
+    content: public interface IUserRepository
+    content.vb: Public Interface IUserRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IUserRepository.IsNewAsync(User)
+  commentId: M:Warbler.Interfaces.IUserRepository.IsNewAsync(User)
+  id: IsNewAsync(User)
+  parent: Warbler.Interfaces.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: IsNewAsync(User)
+  nameWithType: IUserRepository.IsNewAsync(User)
+  fullName: Warbler.Interfaces.IUserRepository.IsNewAsync(User)
+  type: Method
+  source:
+    id: IsNewAsync
+    path: ''
+    startLine: 1340
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nReturns <xref uid=\"langword_csharp_true\" name=\"true\" href=\"\"></xref> if no memberships exist with\nthe id of the given user, <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref> otherwise.\n"
+  example: []
+  syntax:
+    content: Task<bool> IsNewAsync(User user)
+    parameters:
+    - id: user
+      type: User
+      description: The user whose ID will be matched against.
+    return:
+      type: Task{System.Boolean}
+    content.vb: Function IsNewAsync(user As User) As Task(Of Boolean)
+  overload: Warbler.Interfaces.IUserRepository.IsNewAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IUserRepository.IsNewAsync*
+  commentId: Overload:Warbler.Interfaces.IUserRepository.IsNewAsync
+  isExternal: false
+  name: IsNewAsync
+  nameWithType: IUserRepository.IsNewAsync
+  fullName: Warbler.Interfaces.IUserRepository.IsNewAsync
+- uid: User
+  isExternal: true
+  name: User
+  nameWithType: User
+  fullName: User
+- uid: Task{System.Boolean}
+  commentId: '!:Task{System.Boolean}'
+  definition: Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

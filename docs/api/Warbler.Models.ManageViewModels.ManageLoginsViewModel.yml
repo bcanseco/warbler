@@ -1,0 +1,539 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.ManageViewModels.ManageLoginsViewModel
+  commentId: T:Warbler.Models.ManageViewModels.ManageLoginsViewModel
+  id: ManageLoginsViewModel
+  parent: Warbler.Models.ManageViewModels
+  children:
+  - Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins
+  - Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
+  langs:
+  - csharp
+  - vb
+  name: ManageLoginsViewModel
+  nameWithType: ManageLoginsViewModel
+  fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel
+  type: Class
+  source:
+    id: ManageLoginsViewModel
+    path: ''
+    startLine: 1814
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public class ManageLoginsViewModel
+    content.vb: Public Class ManageLoginsViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins
+  commentId: P:Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins
+  id: CurrentLogins
+  parent: Warbler.Models.ManageViewModels.ManageLoginsViewModel
+  langs:
+  - csharp
+  - vb
+  name: CurrentLogins
+  nameWithType: ManageLoginsViewModel.CurrentLogins
+  fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins
+  type: Property
+  source:
+    id: CurrentLogins
+    path: ''
+    startLine: 1816
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public IList<UserLoginInfo> CurrentLogins { get; set; }
+    parameters: []
+    return:
+      type: IList{UserLoginInfo}
+    content.vb: Public Property CurrentLogins As IList(Of UserLoginInfo)
+  overload: Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
+  commentId: P:Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
+  id: OtherLogins
+  parent: Warbler.Models.ManageViewModels.ManageLoginsViewModel
+  langs:
+  - csharp
+  - vb
+  name: OtherLogins
+  nameWithType: ManageLoginsViewModel.OtherLogins
+  fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
+  type: Property
+  source:
+    id: OtherLogins
+    path: ''
+    startLine: 1818
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public IList<AuthenticationDescription> OtherLogins { get; set; }
+    parameters: []
+    return:
+      type: IList{AuthenticationDescription}
+    content.vb: Public Property OtherLogins As IList(Of AuthenticationDescription)
+  overload: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Models.ManageViewModels
+  commentId: N:Warbler.Models.ManageViewModels
+  isExternal: false
+  name: Warbler.Models.ManageViewModels
+  nameWithType: Warbler.Models.ManageViewModels
+  fullName: Warbler.Models.ManageViewModels
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins*
+  commentId: Overload:Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins
+  isExternal: false
+  name: CurrentLogins
+  nameWithType: ManageLoginsViewModel.CurrentLogins
+  fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins
+- uid: IList{UserLoginInfo}
+  commentId: '!:IList{UserLoginInfo}'
+  definition: IList`1
+  name: IList<UserLoginInfo>
+  nameWithType: IList<UserLoginInfo>
+  fullName: IList<UserLoginInfo>
+  nameWithType.vb: IList(Of UserLoginInfo)
+  fullName.vb: IList(Of UserLoginInfo)
+  name.vb: IList(Of UserLoginInfo)
+  spec.csharp:
+  - uid: IList`1
+    name: IList
+    nameWithType: IList
+    fullName: IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: UserLoginInfo
+    name: UserLoginInfo
+    nameWithType: UserLoginInfo
+    fullName: UserLoginInfo
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IList`1
+    name: IList
+    nameWithType: IList
+    fullName: IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: UserLoginInfo
+    name: UserLoginInfo
+    nameWithType: UserLoginInfo
+    fullName: UserLoginInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IList`1
+  isExternal: true
+  name: IList<>
+  nameWithType: IList<>
+  fullName: IList<>
+  nameWithType.vb: IList(Of )
+  fullName.vb: IList(Of )
+  name.vb: IList(Of )
+  spec.csharp:
+  - uid: IList`1
+    name: IList
+    nameWithType: IList
+    fullName: IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IList`1
+    name: IList
+    nameWithType: IList
+    fullName: IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins*
+  commentId: Overload:Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
+  isExternal: false
+  name: OtherLogins
+  nameWithType: ManageLoginsViewModel.OtherLogins
+  fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
+- uid: IList{AuthenticationDescription}
+  commentId: '!:IList{AuthenticationDescription}'
+  definition: IList`1
+  name: IList<AuthenticationDescription>
+  nameWithType: IList<AuthenticationDescription>
+  fullName: IList<AuthenticationDescription>
+  nameWithType.vb: IList(Of AuthenticationDescription)
+  fullName.vb: IList(Of AuthenticationDescription)
+  name.vb: IList(Of AuthenticationDescription)
+  spec.csharp:
+  - uid: IList`1
+    name: IList
+    nameWithType: IList
+    fullName: IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AuthenticationDescription
+    name: AuthenticationDescription
+    nameWithType: AuthenticationDescription
+    fullName: AuthenticationDescription
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IList`1
+    name: IList
+    nameWithType: IList
+    fullName: IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AuthenticationDescription
+    name: AuthenticationDescription
+    nameWithType: AuthenticationDescription
+    fullName: AuthenticationDescription
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

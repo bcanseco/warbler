@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.Enums.ServerType
+  commentId: T:Warbler.Models.Enums.ServerType
+  id: ServerType
+  parent: Warbler.Models.Enums
+  children:
+  - Warbler.Models.Enums.ServerType.Private
+  - Warbler.Models.Enums.ServerType.Public
+  langs:
+  - csharp
+  - vb
+  name: ServerType
+  nameWithType: ServerType
+  fullName: Warbler.Models.Enums.ServerType
+  type: Enum
+  source:
+    id: ServerType
+    path: ''
+    startLine: 1718
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: public enum ServerType
+    content.vb: Public Enum ServerType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Warbler.Models.Enums.ServerType.Public
+  commentId: F:Warbler.Models.Enums.ServerType.Public
+  id: Public
+  parent: Warbler.Models.Enums.ServerType
+  langs:
+  - csharp
+  - vb
+  name: Public
+  nameWithType: ServerType.Public
+  fullName: Warbler.Models.Enums.ServerType.Public
+  type: Field
+  source:
+    id: Public
+    path: ''
+    startLine: 1720
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Public = 1
+    return:
+      type: Warbler.Models.Enums.ServerType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Models.Enums.ServerType.Private
+  commentId: F:Warbler.Models.Enums.ServerType.Private
+  id: Private
+  parent: Warbler.Models.Enums.ServerType
+  langs:
+  - csharp
+  - vb
+  name: Private
+  nameWithType: ServerType.Private
+  fullName: Warbler.Models.Enums.ServerType.Private
+  type: Field
+  source:
+    id: Private
+    path: ''
+    startLine: 1721
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Private = 2
+    return:
+      type: Warbler.Models.Enums.ServerType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Warbler.Models.Enums
+  commentId: N:Warbler.Models.Enums
+  isExternal: false
+  name: Warbler.Models.Enums
+  nameWithType: Warbler.Models.Enums
+  fullName: Warbler.Models.Enums
+- uid: Warbler.Models.Enums.ServerType
+  commentId: T:Warbler.Models.Enums.ServerType
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: ServerType
+  nameWithType: ServerType
+  fullName: Warbler.Models.Enums.ServerType

@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.Enums
+  commentId: N:Warbler.Models.Enums
+  id: Warbler.Models.Enums
+  children:
+  - Warbler.Models.Enums.ChannelState
+  - Warbler.Models.Enums.ChannelType
+  - Warbler.Models.Enums.QueryDepth
+  - Warbler.Models.Enums.ServerType
+  - Warbler.Models.Enums.UserFlag
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Models.Enums
+  nameWithType: Warbler.Models.Enums
+  fullName: Warbler.Models.Enums
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Models.Enums.ChannelState
+  commentId: T:Warbler.Models.Enums.ChannelState
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: ChannelState
+  nameWithType: ChannelState
+  fullName: Warbler.Models.Enums.ChannelState
+- uid: Warbler.Models.Enums.ChannelType
+  commentId: T:Warbler.Models.Enums.ChannelType
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: ChannelType
+  nameWithType: ChannelType
+  fullName: Warbler.Models.Enums.ChannelType
+- uid: Warbler.Models.Enums.QueryDepth
+  commentId: T:Warbler.Models.Enums.QueryDepth
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: QueryDepth
+  nameWithType: QueryDepth
+  fullName: Warbler.Models.Enums.QueryDepth
+- uid: Warbler.Models.Enums.ServerType
+  commentId: T:Warbler.Models.Enums.ServerType
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: ServerType
+  nameWithType: ServerType
+  fullName: Warbler.Models.Enums.ServerType
+- uid: Warbler.Models.Enums.UserFlag
+  commentId: T:Warbler.Models.Enums.UserFlag
+  isExternal: false
+  name: UserFlag
+  nameWithType: UserFlag
+  fullName: Warbler.Models.Enums.UserFlag
+- uid: Warbler.Models.Enums
+  commentId: N:Warbler.Models.Enums
+  isExternal: false
+  name: Warbler.Models.Enums
+  nameWithType: Warbler.Models.Enums
+  fullName: Warbler.Models.Enums

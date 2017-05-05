@@ -1,0 +1,452 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Extensions.NearbyResultExtensions
+  commentId: T:Warbler.Extensions.NearbyResultExtensions
+  id: NearbyResultExtensions
+  parent: Warbler.Extensions
+  children:
+  - Warbler.Extensions.NearbyResultExtensions.Is(NearByResult,PlaceLocationType)
+  - Warbler.Extensions.NearbyResultExtensions.IsDepartment(NearByResult)
+  langs:
+  - csharp
+  - vb
+  name: NearbyResultExtensions
+  nameWithType: NearbyResultExtensions
+  fullName: Warbler.Extensions.NearbyResultExtensions
+  type: Class
+  source:
+    id: NearbyResultExtensions
+    path: ''
+    startLine: 1109
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Extensions
+  syntax:
+    content: public static class NearbyResultExtensions
+    content.vb: Public Module NearbyResultExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Warbler.Extensions.NearbyResultExtensions.Is(NearByResult,PlaceLocationType)
+  commentId: M:Warbler.Extensions.NearbyResultExtensions.Is(NearByResult,PlaceLocationType)
+  id: Is(NearByResult,PlaceLocationType)
+  isExtensionMethod: true
+  parent: Warbler.Extensions.NearbyResultExtensions
+  langs:
+  - csharp
+  - vb
+  name: Is(NearByResult, PlaceLocationType)
+  nameWithType: NearbyResultExtensions.Is(NearByResult, PlaceLocationType)
+  fullName: Warbler.Extensions.NearbyResultExtensions.Is(NearByResult, PlaceLocationType)
+  type: Method
+  source:
+    id: Is
+    path: ''
+    startLine: 1115
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Extensions
+  summary: "\nReturns true if the <span class=\"paramref\">result</span>'s Types \ncollection includes the provided <span class=\"paramref\">type</span>.\n"
+  example: []
+  syntax:
+    content: public static bool Is(this NearByResult result, PlaceLocationType type)
+    parameters:
+    - id: result
+      type: NearByResult
+    - id: type
+      type: PlaceLocationType
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Is(result As NearByResult, type As PlaceLocationType) As Boolean
+  overload: Warbler.Extensions.NearbyResultExtensions.Is*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Extensions.NearbyResultExtensions.IsDepartment(NearByResult)
+  commentId: M:Warbler.Extensions.NearbyResultExtensions.IsDepartment(NearByResult)
+  id: IsDepartment(NearByResult)
+  isExtensionMethod: true
+  parent: Warbler.Extensions.NearbyResultExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDepartment(NearByResult)
+  nameWithType: NearbyResultExtensions.IsDepartment(NearByResult)
+  fullName: Warbler.Extensions.NearbyResultExtensions.IsDepartment(NearByResult)
+  type: Method
+  source:
+    id: IsDepartment
+    path: ''
+    startLine: 1122
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Extensions
+  summary: "\nUses heuristics to determine if the given <span class=\"paramref\">result</span>\nmay refer to a university building or other subsidiary.\n"
+  example: []
+  syntax:
+    content: public static bool IsDepartment(this NearByResult result)
+    parameters:
+    - id: result
+      type: NearByResult
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsDepartment(result As NearByResult) As Boolean
+  overload: Warbler.Extensions.NearbyResultExtensions.IsDepartment*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Warbler.Extensions
+  commentId: N:Warbler.Extensions
+  isExternal: false
+  name: Warbler.Extensions
+  nameWithType: Warbler.Extensions
+  fullName: Warbler.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Extensions.NearbyResultExtensions.Is*
+  commentId: Overload:Warbler.Extensions.NearbyResultExtensions.Is
+  isExternal: false
+  name: Is
+  nameWithType: NearbyResultExtensions.Is
+  fullName: Warbler.Extensions.NearbyResultExtensions.Is
+- uid: NearByResult
+  isExternal: true
+  name: NearByResult
+  nameWithType: NearByResult
+  fullName: NearByResult
+- uid: PlaceLocationType
+  commentId: '!:PlaceLocationType'
+  isExternal: true
+  name: PlaceLocationType
+  nameWithType: PlaceLocationType
+  fullName: PlaceLocationType
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Warbler.Extensions.NearbyResultExtensions.IsDepartment*
+  commentId: Overload:Warbler.Extensions.NearbyResultExtensions.IsDepartment
+  isExternal: false
+  name: IsDepartment
+  nameWithType: NearbyResultExtensions.IsDepartment
+  fullName: Warbler.Extensions.NearbyResultExtensions.IsDepartment

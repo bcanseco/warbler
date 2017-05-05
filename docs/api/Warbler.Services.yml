@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
+  id: Warbler.Services
+  children:
+  - Warbler.Services.AuthMessageSender
+  - Warbler.Services.ChatService
+  - Warbler.Services.ProximityService
+  - Warbler.Services.UniversityService
+  - Warbler.Services.UserService
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Services.AuthMessageSender
+  commentId: T:Warbler.Services.AuthMessageSender
+  isExternal: false
+  name: AuthMessageSender
+  nameWithType: AuthMessageSender
+  fullName: Warbler.Services.AuthMessageSender
+- uid: Warbler.Services.ChatService
+  commentId: T:Warbler.Services.ChatService
+  isExternal: false
+  name: ChatService
+  nameWithType: ChatService
+  fullName: Warbler.Services.ChatService
+- uid: Warbler.Services.ProximityService
+  commentId: T:Warbler.Services.ProximityService
+  parent: Warbler.Services
+  isExternal: false
+  name: ProximityService
+  nameWithType: ProximityService
+  fullName: Warbler.Services.ProximityService
+- uid: Warbler.Services.UniversityService
+  commentId: T:Warbler.Services.UniversityService
+  isExternal: false
+  name: UniversityService
+  nameWithType: UniversityService
+  fullName: Warbler.Services.UniversityService
+- uid: Warbler.Services.UserService
+  commentId: T:Warbler.Services.UserService
+  isExternal: false
+  name: UserService
+  nameWithType: UserService
+  fullName: Warbler.Services.UserService
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
+  isExternal: false
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services

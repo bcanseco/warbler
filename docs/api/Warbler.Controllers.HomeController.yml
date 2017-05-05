@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers.HomeController
+  commentId: T:Warbler.Controllers.HomeController
+  id: HomeController
+  parent: Warbler.Controllers
+  children:
+  - Warbler.Controllers.HomeController.Documents
+  - Warbler.Controllers.HomeController.Error
+  - Warbler.Controllers.HomeController.Index
+  langs:
+  - csharp
+  - vb
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Warbler.Controllers.HomeController
+  type: Class
+  source:
+    id: HomeController
+    path: ''
+    startLine: 715
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: 'public class HomeController : Controller'
+    content.vb: >-
+      Public Class HomeController
+
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Controllers.HomeController.Index
+  commentId: M:Warbler.Controllers.HomeController.Index
+  id: Index
+  parent: Warbler.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: HomeController.Index()
+  fullName: Warbler.Controllers.HomeController.Index()
+  type: Method
+  source:
+    id: Index
+    path: ''
+    startLine: 717
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Index()
+    return:
+      type: IActionResult
+    content.vb: Public Function Index As IActionResult
+  overload: Warbler.Controllers.HomeController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.HomeController.Documents
+  commentId: M:Warbler.Controllers.HomeController.Documents
+  id: Documents
+  parent: Warbler.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Documents()
+  nameWithType: HomeController.Documents()
+  fullName: Warbler.Controllers.HomeController.Documents()
+  type: Method
+  source:
+    id: Documents
+    path: ''
+    startLine: 722
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Documents()
+    return:
+      type: IActionResult
+    content.vb: Public Function Documents As IActionResult
+  overload: Warbler.Controllers.HomeController.Documents*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.HomeController.Error
+  commentId: M:Warbler.Controllers.HomeController.Error
+  id: Error
+  parent: Warbler.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Error()
+  nameWithType: HomeController.Error()
+  fullName: Warbler.Controllers.HomeController.Error()
+  type: Method
+  source:
+    id: Error
+    path: ''
+    startLine: 727
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Error()
+    return:
+      type: IActionResult
+    content.vb: Public Function Error As IActionResult
+  overload: Warbler.Controllers.HomeController.Error*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Controllers.HomeController.Index*
+  commentId: Overload:Warbler.Controllers.HomeController.Index
+  isExternal: false
+  name: Index
+  nameWithType: HomeController.Index
+  fullName: Warbler.Controllers.HomeController.Index
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult
+- uid: Warbler.Controllers.HomeController.Documents*
+  commentId: Overload:Warbler.Controllers.HomeController.Documents
+  isExternal: false
+  name: Documents
+  nameWithType: HomeController.Documents
+  fullName: Warbler.Controllers.HomeController.Documents
+- uid: Warbler.Controllers.HomeController.Error*
+  commentId: Overload:Warbler.Controllers.HomeController.Error
+  isExternal: false
+  name: Error
+  nameWithType: HomeController.Error
+  fullName: Warbler.Controllers.HomeController.Error

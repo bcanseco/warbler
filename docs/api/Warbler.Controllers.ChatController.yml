@@ -1,0 +1,377 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers.ChatController
+  commentId: T:Warbler.Controllers.ChatController
+  id: ChatController
+  parent: Warbler.Controllers
+  children:
+  - Warbler.Controllers.ChatController.#ctor(UserManager{User},WarblerDbContext)
+  - Warbler.Controllers.ChatController.Chatroom
+  - Warbler.Controllers.ChatController.Error
+  - Warbler.Controllers.ChatController.Index
+  langs:
+  - csharp
+  - vb
+  name: ChatController
+  nameWithType: ChatController
+  fullName: Warbler.Controllers.ChatController
+  type: Class
+  source:
+    id: ChatController
+    path: ''
+    startLine: 632
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: 'public class ChatController : Controller'
+    content.vb: >-
+      Public Class ChatController
+
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Controllers.ChatController.#ctor(UserManager{User},WarblerDbContext)
+  commentId: M:Warbler.Controllers.ChatController.#ctor(UserManager{User},WarblerDbContext)
+  id: '#ctor(UserManager{User},WarblerDbContext)'
+  parent: Warbler.Controllers.ChatController
+  langs:
+  - csharp
+  - vb
+  name: ChatController(UserManager<User>, WarblerDbContext)
+  nameWithType: ChatController.ChatController(UserManager<User>, WarblerDbContext)
+  fullName: Warbler.Controllers.ChatController.ChatController(UserManager<User>, WarblerDbContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 638
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public ChatController(UserManager<User> userManager, WarblerDbContext context)
+    parameters:
+    - id: userManager
+      type: UserManager{User}
+    - id: context
+      type: WarblerDbContext
+    content.vb: Public Sub New(userManager As UserManager(Of User), context As WarblerDbContext)
+  overload: Warbler.Controllers.ChatController.#ctor*
+  nameWithType.vb: ChatController.ChatController(UserManager(Of User), WarblerDbContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Warbler.Controllers.ChatController.ChatController(UserManager(Of User), WarblerDbContext)
+  name.vb: ChatController(UserManager(Of User), WarblerDbContext)
+- uid: Warbler.Controllers.ChatController.Index
+  commentId: M:Warbler.Controllers.ChatController.Index
+  id: Index
+  parent: Warbler.Controllers.ChatController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: ChatController.Index()
+  fullName: Warbler.Controllers.ChatController.Index()
+  type: Method
+  source:
+    id: Index
+    path: ''
+    startLine: 648
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  summary: "\nResolves the Index view if the user isn't a member of any\nuniversities, otherwises redirects to <xref href=\"Warbler.Controllers.ChatController.Chatroom\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Task<IActionResult> Index()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function Index As Task(Of IActionResult)
+  overload: Warbler.Controllers.ChatController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ChatController.Chatroom
+  commentId: M:Warbler.Controllers.ChatController.Chatroom
+  id: Chatroom
+  parent: Warbler.Controllers.ChatController
+  langs:
+  - csharp
+  - vb
+  name: Chatroom()
+  nameWithType: ChatController.Chatroom()
+  fullName: Warbler.Controllers.ChatController.Chatroom()
+  type: Method
+  source:
+    id: Chatroom
+    path: ''
+    startLine: 657
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Chatroom()
+    return:
+      type: IActionResult
+    content.vb: Public Function Chatroom As IActionResult
+  overload: Warbler.Controllers.ChatController.Chatroom*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ChatController.Error
+  commentId: M:Warbler.Controllers.ChatController.Error
+  id: Error
+  parent: Warbler.Controllers.ChatController
+  langs:
+  - csharp
+  - vb
+  name: Error()
+  nameWithType: ChatController.Error()
+  fullName: Warbler.Controllers.ChatController.Error()
+  type: Method
+  source:
+    id: Error
+    path: ''
+    startLine: 662
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Error()
+    return:
+      type: IActionResult
+    content.vb: Public Function Error As IActionResult
+  overload: Warbler.Controllers.ChatController.Error*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Controllers.ChatController.#ctor*
+  commentId: Overload:Warbler.Controllers.ChatController.#ctor
+  isExternal: false
+  name: ChatController
+  nameWithType: ChatController.ChatController
+  fullName: Warbler.Controllers.ChatController.ChatController
+- uid: UserManager{User}
+  commentId: '!:UserManager{User}'
+  definition: UserManager`1
+  name: UserManager<User>
+  nameWithType: UserManager<User>
+  fullName: UserManager<User>
+  nameWithType.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of User)
+  name.vb: UserManager(Of User)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WarblerDbContext
+  isExternal: true
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: WarblerDbContext
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Controllers.ChatController.Chatroom
+  commentId: M:Warbler.Controllers.ChatController.Chatroom
+- uid: Warbler.Controllers.ChatController.Index*
+  commentId: Overload:Warbler.Controllers.ChatController.Index
+  isExternal: false
+  name: Index
+  nameWithType: ChatController.Index
+  fullName: Warbler.Controllers.ChatController.Index
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Controllers.ChatController.Chatroom*
+  commentId: Overload:Warbler.Controllers.ChatController.Chatroom
+  isExternal: false
+  name: Chatroom
+  nameWithType: ChatController.Chatroom
+  fullName: Warbler.Controllers.ChatController.Chatroom
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult
+- uid: Warbler.Controllers.ChatController.Error*
+  commentId: Overload:Warbler.Controllers.ChatController.Error
+  isExternal: false
+  name: Error
+  nameWithType: ChatController.Error
+  fullName: Warbler.Controllers.ChatController.Error

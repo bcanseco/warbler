@@ -1,0 +1,638 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.Message
+  commentId: T:Warbler.Models.Message
+  id: Message
+  parent: Warbler.Models
+  children:
+  - Warbler.Models.Message.Channel
+  - Warbler.Models.Message.ChannelId
+  - Warbler.Models.Message.Id
+  - Warbler.Models.Message.SendDate
+  - Warbler.Models.Message.Sender
+  - Warbler.Models.Message.Text
+  - Warbler.Models.Message.UserId
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: Message
+  fullName: Warbler.Models.Message
+  type: Class
+  source:
+    id: Message
+    path: ''
+    startLine: 1467
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public class Message
+    content.vb: Public Class Message
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.Message.Id
+  commentId: P:Warbler.Models.Message.Id
+  id: Id
+  parent: Warbler.Models.Message
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Message.Id
+  fullName: Warbler.Models.Message.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 1470
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Warbler.Models.Message.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Message.ChannelId
+  commentId: P:Warbler.Models.Message.ChannelId
+  id: ChannelId
+  parent: Warbler.Models.Message
+  langs:
+  - csharp
+  - vb
+  name: ChannelId
+  nameWithType: Message.ChannelId
+  fullName: Warbler.Models.Message.ChannelId
+  type: Property
+  source:
+    id: ChannelId
+    path: ''
+    startLine: 1471
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public int ChannelId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ChannelId As Integer
+  overload: Warbler.Models.Message.ChannelId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Message.UserId
+  commentId: P:Warbler.Models.Message.UserId
+  id: UserId
+  parent: Warbler.Models.Message
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: Message.UserId
+  fullName: Warbler.Models.Message.UserId
+  type: Property
+  source:
+    id: UserId
+    path: ''
+    startLine: 1472
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string UserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserId As String
+  overload: Warbler.Models.Message.UserId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Message.Text
+  commentId: P:Warbler.Models.Message.Text
+  id: Text
+  parent: Warbler.Models.Message
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: Message.Text
+  fullName: Warbler.Models.Message.Text
+  type: Property
+  source:
+    id: Text
+    path: ''
+    startLine: 1473
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string Text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Text As String
+  overload: Warbler.Models.Message.Text*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Message.SendDate
+  commentId: P:Warbler.Models.Message.SendDate
+  id: SendDate
+  parent: Warbler.Models.Message
+  langs:
+  - csharp
+  - vb
+  name: SendDate
+  nameWithType: Message.SendDate
+  fullName: Warbler.Models.Message.SendDate
+  type: Property
+  source:
+    id: SendDate
+    path: ''
+    startLine: 1474
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public DateTime SendDate { get; set; }
+    parameters: []
+    return:
+      type: DateTime
+    content.vb: Public Property SendDate As DateTime
+  overload: Warbler.Models.Message.SendDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Message.Channel
+  commentId: P:Warbler.Models.Message.Channel
+  id: Channel
+  parent: Warbler.Models.Message
+  langs:
+  - csharp
+  - vb
+  name: Channel
+  nameWithType: Message.Channel
+  fullName: Warbler.Models.Message.Channel
+  type: Property
+  source:
+    id: Channel
+    path: ''
+    startLine: 1476
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public Channel Channel { get; set; }
+    parameters: []
+    return:
+      type: Warbler.Models.Channel
+    content.vb: Public Property Channel As Channel
+  overload: Warbler.Models.Message.Channel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Message.Sender
+  commentId: P:Warbler.Models.Message.Sender
+  id: Sender
+  parent: Warbler.Models.Message
+  langs:
+  - csharp
+  - vb
+  name: Sender
+  nameWithType: Message.Sender
+  fullName: Warbler.Models.Message.Sender
+  type: Property
+  source:
+    id: Sender
+    path: ''
+    startLine: 1478
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public User Sender { get; set; }
+    parameters: []
+    return:
+      type: Warbler.Models.User
+    content.vb: Public Property Sender As User
+  overload: Warbler.Models.Message.Sender*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.Message.Id*
+  commentId: Overload:Warbler.Models.Message.Id
+  isExternal: false
+  name: Id
+  nameWithType: Message.Id
+  fullName: Warbler.Models.Message.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Warbler.Models.Message.ChannelId*
+  commentId: Overload:Warbler.Models.Message.ChannelId
+  isExternal: false
+  name: ChannelId
+  nameWithType: Message.ChannelId
+  fullName: Warbler.Models.Message.ChannelId
+- uid: Warbler.Models.Message.UserId*
+  commentId: Overload:Warbler.Models.Message.UserId
+  isExternal: false
+  name: UserId
+  nameWithType: Message.UserId
+  fullName: Warbler.Models.Message.UserId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.Message.Text*
+  commentId: Overload:Warbler.Models.Message.Text
+  isExternal: false
+  name: Text
+  nameWithType: Message.Text
+  fullName: Warbler.Models.Message.Text
+- uid: Warbler.Models.Message.SendDate*
+  commentId: Overload:Warbler.Models.Message.SendDate
+  isExternal: false
+  name: SendDate
+  nameWithType: Message.SendDate
+  fullName: Warbler.Models.Message.SendDate
+- uid: DateTime
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: DateTime
+- uid: Warbler.Models.Message.Channel*
+  commentId: Overload:Warbler.Models.Message.Channel
+  isExternal: false
+  name: Channel
+  nameWithType: Message.Channel
+  fullName: Warbler.Models.Message.Channel
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel
+- uid: Warbler.Models.Message.Sender*
+  commentId: Overload:Warbler.Models.Message.Sender
+  isExternal: false
+  name: Sender
+  nameWithType: Message.Sender
+  fullName: Warbler.Models.Message.Sender
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User

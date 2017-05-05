@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Repositories.SqlUserRepository
+  commentId: T:Warbler.Repositories.SqlUserRepository
+  id: SqlUserRepository
+  parent: Warbler.Repositories
+  children:
+  - Warbler.Repositories.SqlUserRepository.#ctor(WarblerDbContext)
+  - Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
+  langs:
+  - csharp
+  - vb
+  name: SqlUserRepository
+  nameWithType: SqlUserRepository
+  fullName: Warbler.Repositories.SqlUserRepository
+  type: Class
+  source:
+    id: SqlUserRepository
+    path: ''
+    startLine: 2076
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  summary: "\nRuns queries against the SQL database using Entity Framework.\nLook at <see cref=\"!:IUserRepository\"></see> for docs.\n"
+  example: []
+  syntax:
+    content: 'public class SqlUserRepository : IUserRepository'
+    content.vb: >-
+      Public Class SqlUserRepository
+
+          Inherits IUserRepository
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Repositories.SqlUserRepository.#ctor(WarblerDbContext)
+  commentId: M:Warbler.Repositories.SqlUserRepository.#ctor(WarblerDbContext)
+  id: '#ctor(WarblerDbContext)'
+  parent: Warbler.Repositories.SqlUserRepository
+  langs:
+  - csharp
+  - vb
+  name: SqlUserRepository(WarblerDbContext)
+  nameWithType: SqlUserRepository.SqlUserRepository(WarblerDbContext)
+  fullName: Warbler.Repositories.SqlUserRepository.SqlUserRepository(WarblerDbContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2080
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public SqlUserRepository(WarblerDbContext context)
+    parameters:
+    - id: context
+      type: WarblerDbContext
+    content.vb: Public Sub New(context As WarblerDbContext)
+  overload: Warbler.Repositories.SqlUserRepository.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
+  commentId: M:Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
+  id: IsNewAsync(User)
+  parent: Warbler.Repositories.SqlUserRepository
+  langs:
+  - csharp
+  - vb
+  name: IsNewAsync(User)
+  nameWithType: SqlUserRepository.IsNewAsync(User)
+  fullName: Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
+  type: Method
+  source:
+    id: IsNewAsync
+    path: ''
+    startLine: 2085
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task<bool> IsNewAsync(User user)
+    parameters:
+    - id: user
+      type: User
+    return:
+      type: Task{System.Boolean}
+    content.vb: Public Function IsNewAsync(user As User) As Task(Of Boolean)
+  overload: Warbler.Repositories.SqlUserRepository.IsNewAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Repositories
+  commentId: N:Warbler.Repositories
+  isExternal: false
+  name: Warbler.Repositories
+  nameWithType: Warbler.Repositories
+  fullName: Warbler.Repositories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Repositories.SqlUserRepository.#ctor*
+  commentId: Overload:Warbler.Repositories.SqlUserRepository.#ctor
+  isExternal: false
+  name: SqlUserRepository
+  nameWithType: SqlUserRepository.SqlUserRepository
+  fullName: Warbler.Repositories.SqlUserRepository.SqlUserRepository
+- uid: WarblerDbContext
+  isExternal: true
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: WarblerDbContext
+- uid: Warbler.Repositories.SqlUserRepository.IsNewAsync*
+  commentId: Overload:Warbler.Repositories.SqlUserRepository.IsNewAsync
+  isExternal: false
+  name: IsNewAsync
+  nameWithType: SqlUserRepository.IsNewAsync
+  fullName: Warbler.Repositories.SqlUserRepository.IsNewAsync
+- uid: User
+  isExternal: true
+  name: User
+  nameWithType: User
+  fullName: User
+- uid: Task{System.Boolean}
+  commentId: '!:Task{System.Boolean}'
+  definition: Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

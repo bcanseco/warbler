@@ -1,0 +1,371 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Services.ProximityService
+  commentId: T:Warbler.Services.ProximityService
+  id: ProximityService
+  parent: Warbler.Services
+  children:
+  - Warbler.Services.ProximityService.OnDisconnected(System.String)
+  - Warbler.Services.ProximityService.ProximitySearchAsync(User,Location)
+  - Warbler.Services.ProximityService.SelectUniversityAsync(System.String,System.String)
+  - Warbler.Services.ProximityService.With(WarblerDbContext)
+  langs:
+  - csharp
+  - vb
+  name: ProximityService
+  nameWithType: ProximityService
+  fullName: Warbler.Services.ProximityService
+  type: Class
+  source:
+    id: ProximityService
+    path: ''
+    startLine: 2175
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nUsed by the <xref href=\"Warbler.Hubs.ProximityHub\" data-throw-if-not-resolved=\"false\"></xref> for business logic.\n"
+  example: []
+  syntax:
+    content: 'public class ProximityService : HubResource<ProximityService>'
+    content.vb: >-
+      Public Class ProximityService
+
+          Inherits HubResource(Of ProximityService)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Services.ProximityService.With(WarblerDbContext)
+  commentId: M:Warbler.Services.ProximityService.With(WarblerDbContext)
+  id: With(WarblerDbContext)
+  parent: Warbler.Services.ProximityService
+  langs:
+  - csharp
+  - vb
+  name: With(WarblerDbContext)
+  nameWithType: ProximityService.With(WarblerDbContext)
+  fullName: Warbler.Services.ProximityService.With(WarblerDbContext)
+  type: Method
+  source:
+    id: With
+    path: ''
+    startLine: 2189
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nAllows the hub to attach a database context to this service instance.\n"
+  example: []
+  syntax:
+    content: public ProximityService With(WarblerDbContext context)
+    parameters:
+    - id: context
+      type: WarblerDbContext
+    return:
+      type: Warbler.Services.ProximityService
+    content.vb: Public Function With(context As WarblerDbContext) As ProximityService
+  overload: Warbler.Services.ProximityService.With*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.ProximityService.OnDisconnected(System.String)
+  commentId: M:Warbler.Services.ProximityService.OnDisconnected(System.String)
+  id: OnDisconnected(System.String)
+  parent: Warbler.Services.ProximityService
+  langs:
+  - csharp
+  - vb
+  name: OnDisconnected(String)
+  nameWithType: ProximityService.OnDisconnected(String)
+  fullName: Warbler.Services.ProximityService.OnDisconnected(System.String)
+  type: Method
+  source:
+    id: OnDisconnected
+    path: ''
+    startLine: 2201
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nInvoked from the hub on each disconnected client. Removes the\nclient's choice list from <xref href=\"Warbler.Services.ProximityService.UserChoices\" data-throw-if-not-resolved=\"false\"></xref> if it exists.\n"
+  example: []
+  syntax:
+    content: public void OnDisconnected(string connectionId)
+    parameters:
+    - id: connectionId
+      type: System.String
+    content.vb: Public Sub OnDisconnected(connectionId As String)
+  overload: Warbler.Services.ProximityService.OnDisconnected*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.ProximityService.ProximitySearchAsync(User,Location)
+  commentId: M:Warbler.Services.ProximityService.ProximitySearchAsync(User,Location)
+  id: ProximitySearchAsync(User,Location)
+  parent: Warbler.Services.ProximityService
+  langs:
+  - csharp
+  - vb
+  name: ProximitySearchAsync(User, Location)
+  nameWithType: ProximityService.ProximitySearchAsync(User, Location)
+  fullName: Warbler.Services.ProximityService.ProximitySearchAsync(User, Location)
+  type: Method
+  source:
+    id: ProximitySearchAsync
+    path: ''
+    startLine: 2215
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nConducts a proximity search and returns the filtered results.\n"
+  example: []
+  syntax:
+    content: public Task<List<NearByResult>> ProximitySearchAsync(User user, Location coordinates)
+    parameters:
+    - id: user
+      type: User
+      description: The user to associate the results with.
+    - id: coordinates
+      type: Location
+      description: The location to search near.
+    return:
+      type: Task{List{NearByResult}}
+    content.vb: Public Function ProximitySearchAsync(user As User, coordinates As Location) As Task(Of List(Of NearByResult))
+  overload: Warbler.Services.ProximityService.ProximitySearchAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.ProximityService.SelectUniversityAsync(System.String,System.String)
+  commentId: M:Warbler.Services.ProximityService.SelectUniversityAsync(System.String,System.String)
+  id: SelectUniversityAsync(System.String,System.String)
+  parent: Warbler.Services.ProximityService
+  langs:
+  - csharp
+  - vb
+  name: SelectUniversityAsync(String, String)
+  nameWithType: ProximityService.SelectUniversityAsync(String, String)
+  fullName: Warbler.Services.ProximityService.SelectUniversityAsync(System.String, System.String)
+  type: Method
+  source:
+    id: SelectUniversityAsync
+    path: ''
+    startLine: 2236
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nValidates the user's university selection and lets them join if successful.\n"
+  example: []
+  syntax:
+    content: public Task SelectUniversityAsync(string userName, string placeId)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The user's handle.
+    - id: placeId
+      type: System.String
+      description: The Google Place ID of the selected university.
+    return:
+      type: Task
+    content.vb: Public Function SelectUniversityAsync(userName As String, placeId As String) As Task
+  overload: Warbler.Services.ProximityService.SelectUniversityAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Hubs.ProximityHub
+  commentId: T:Warbler.Hubs.ProximityHub
+  isExternal: false
+  name: ProximityHub
+  nameWithType: ProximityHub
+  fullName: Warbler.Hubs.ProximityHub
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
+  isExternal: false
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Services.ProximityService.With*
+  commentId: Overload:Warbler.Services.ProximityService.With
+  isExternal: false
+  name: With
+  nameWithType: ProximityService.With
+  fullName: Warbler.Services.ProximityService.With
+- uid: WarblerDbContext
+  isExternal: true
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: WarblerDbContext
+- uid: Warbler.Services.ProximityService
+  commentId: T:Warbler.Services.ProximityService
+  parent: Warbler.Services
+  isExternal: false
+  name: ProximityService
+  nameWithType: ProximityService
+  fullName: Warbler.Services.ProximityService
+- uid: Warbler.Services.ProximityService.UserChoices
+  commentId: P:Warbler.Services.ProximityService.UserChoices
+- uid: Warbler.Services.ProximityService.OnDisconnected*
+  commentId: Overload:Warbler.Services.ProximityService.OnDisconnected
+  isExternal: false
+  name: OnDisconnected
+  nameWithType: ProximityService.OnDisconnected
+  fullName: Warbler.Services.ProximityService.OnDisconnected
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Services.ProximityService.ProximitySearchAsync*
+  commentId: Overload:Warbler.Services.ProximityService.ProximitySearchAsync
+  isExternal: false
+  name: ProximitySearchAsync
+  nameWithType: ProximityService.ProximitySearchAsync
+  fullName: Warbler.Services.ProximityService.ProximitySearchAsync
+- uid: User
+  isExternal: true
+  name: User
+  nameWithType: User
+  fullName: User
+- uid: Location
+  commentId: '!:Location'
+  isExternal: true
+  name: Location
+  nameWithType: Location
+  fullName: Location
+- uid: Task{List{NearByResult}}
+  commentId: '!:Task{List{NearByResult}}'
+  definition: Task`1
+  name: Task<List<NearByResult>>
+  nameWithType: Task<List<NearByResult>>
+  fullName: Task<List<NearByResult>>
+  nameWithType.vb: Task(Of List(Of NearByResult))
+  fullName.vb: Task(Of List(Of NearByResult))
+  name.vb: Task(Of List(Of NearByResult))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NearByResult
+    name: NearByResult
+    nameWithType: NearByResult
+    fullName: NearByResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NearByResult
+    name: NearByResult
+    nameWithType: NearByResult
+    fullName: NearByResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Services.ProximityService.ProximitySearchAsync(User,Location)
+  commentId: M:Warbler.Services.ProximityService.ProximitySearchAsync(User,Location)
+- uid: Warbler.Services.ProximityService.SelectUniversityAsync*
+  commentId: Overload:Warbler.Services.ProximityService.SelectUniversityAsync
+  isExternal: false
+  name: SelectUniversityAsync
+  nameWithType: ProximityService.SelectUniversityAsync
+  fullName: Warbler.Services.ProximityService.SelectUniversityAsync
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

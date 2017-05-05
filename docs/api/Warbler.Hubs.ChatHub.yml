@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Hubs.ChatHub
+  commentId: T:Warbler.Hubs.ChatHub
+  id: ChatHub
+  parent: Warbler.Hubs
+  children:
+  - Warbler.Hubs.ChatHub.#ctor
+  - Warbler.Hubs.ChatHub.OnConnected
+  - Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
+  - Warbler.Hubs.ChatHub.SendMessage(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ChatHub
+  nameWithType: ChatHub
+  fullName: Warbler.Hubs.ChatHub
+  type: Class
+  source:
+    id: ChatHub
+    path: ''
+    startLine: 1162
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  summary: "\nCoordinates websocket communication between clients and server.\n"
+  example: []
+  syntax:
+    content: 'public class ChatHub : Hub'
+    content.vb: >-
+      Public Class ChatHub
+
+          Inherits Hub
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Hubs.ChatHub.#ctor
+  commentId: M:Warbler.Hubs.ChatHub.#ctor
+  id: '#ctor'
+  parent: Warbler.Hubs.ChatHub
+  langs:
+  - csharp
+  - vb
+  name: ChatHub()
+  nameWithType: ChatHub.ChatHub()
+  fullName: Warbler.Hubs.ChatHub.ChatHub()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1169
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  summary: "\nAutomatically called each time SignalR receives a packet from a client.\n"
+  example: []
+  syntax:
+    content: public ChatHub()
+    content.vb: Public Sub New
+  overload: Warbler.Hubs.ChatHub.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Hubs.ChatHub.OnConnected
+  commentId: M:Warbler.Hubs.ChatHub.OnConnected
+  id: OnConnected
+  parent: Warbler.Hubs.ChatHub
+  langs:
+  - csharp
+  - vb
+  name: OnConnected()
+  nameWithType: ChatHub.OnConnected()
+  fullName: Warbler.Hubs.ChatHub.OnConnected()
+  type: Method
+  source:
+    id: OnConnected
+    path: ''
+    startLine: 1174
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  syntax:
+    content: public override Task OnConnected()
+    return:
+      type: Task
+    content.vb: Public Overrides Function OnConnected As Task
+  overload: Warbler.Hubs.ChatHub.OnConnected*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
+  commentId: M:Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
+  id: OnDisconnected(System.Boolean)
+  parent: Warbler.Hubs.ChatHub
+  langs:
+  - csharp
+  - vb
+  name: OnDisconnected(Boolean)
+  nameWithType: ChatHub.OnDisconnected(Boolean)
+  fullName: Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
+  type: Method
+  source:
+    id: OnDisconnected
+    path: ''
+    startLine: 1180
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  syntax:
+    content: public override Task OnDisconnected(bool stopCalled)
+    parameters:
+    - id: stopCalled
+      type: System.Boolean
+    return:
+      type: Task
+    content.vb: Public Overrides Function OnDisconnected(stopCalled As Boolean) As Task
+  overload: Warbler.Hubs.ChatHub.OnDisconnected*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Hubs.ChatHub.SendMessage(System.String)
+  commentId: M:Warbler.Hubs.ChatHub.SendMessage(System.String)
+  id: SendMessage(System.String)
+  parent: Warbler.Hubs.ChatHub
+  langs:
+  - csharp
+  - vb
+  name: SendMessage(String)
+  nameWithType: ChatHub.SendMessage(String)
+  fullName: Warbler.Hubs.ChatHub.SendMessage(System.String)
+  type: Method
+  source:
+    id: SendMessage
+    path: ''
+    startLine: 1189
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  summary: "\nCalled via SignalR when the user hits the Send button.\n"
+  example: []
+  syntax:
+    content: public Task SendMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function SendMessage(message As String) As Task
+  overload: Warbler.Hubs.ChatHub.SendMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Hubs
+  commentId: N:Warbler.Hubs
+  isExternal: false
+  name: Warbler.Hubs
+  nameWithType: Warbler.Hubs
+  fullName: Warbler.Hubs
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Hubs.ChatHub.#ctor*
+  commentId: Overload:Warbler.Hubs.ChatHub.#ctor
+  isExternal: false
+  name: ChatHub
+  nameWithType: ChatHub.ChatHub
+  fullName: Warbler.Hubs.ChatHub.ChatHub
+- uid: Warbler.Hubs.ChatHub.OnConnected*
+  commentId: Overload:Warbler.Hubs.ChatHub.OnConnected
+  isExternal: false
+  name: OnConnected
+  nameWithType: ChatHub.OnConnected
+  fullName: Warbler.Hubs.ChatHub.OnConnected
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Hubs.ChatHub.OnDisconnected*
+  commentId: Overload:Warbler.Hubs.ChatHub.OnDisconnected
+  isExternal: false
+  name: OnDisconnected
+  nameWithType: ChatHub.OnDisconnected
+  fullName: Warbler.Hubs.ChatHub.OnDisconnected
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Warbler.Hubs.ChatHub.SendMessage*
+  commentId: Overload:Warbler.Hubs.ChatHub.SendMessage
+  isExternal: false
+  name: SendMessage
+  nameWithType: ChatHub.SendMessage
+  fullName: Warbler.Hubs.ChatHub.SendMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IEmailSender
+  commentId: T:Warbler.Interfaces.IEmailSender
+  id: IEmailSender
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: Warbler.Interfaces.IEmailSender
+  type: Interface
+  source:
+    id: IEmailSender
+    path: ''
+    startLine: 1262
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  syntax:
+    content: public interface IEmailSender
+    content.vb: Public Interface IEmailSender
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  commentId: M:Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  id: SendEmailAsync(System.String,System.String,System.String)
+  parent: Warbler.Interfaces.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(String, String, String)
+  nameWithType: IEmailSender.SendEmailAsync(String, String, String)
+  fullName: Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: SendEmailAsync
+    path: ''
+    startLine: 1264
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  syntax:
+    content: Task SendEmailAsync(string email, string subject, string message)
+    parameters:
+    - id: email
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: message
+      type: System.String
+    return:
+      type: Task
+    content.vb: Function SendEmailAsync(email As String, subject As String, message As String) As Task
+  overload: Warbler.Interfaces.IEmailSender.SendEmailAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IEmailSender.SendEmailAsync*
+  commentId: Overload:Warbler.Interfaces.IEmailSender.SendEmailAsync
+  isExternal: false
+  name: SendEmailAsync
+  nameWithType: IEmailSender.SendEmailAsync
+  fullName: Warbler.Interfaces.IEmailSender.SendEmailAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

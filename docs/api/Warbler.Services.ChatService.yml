@@ -1,0 +1,157 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Services.ChatService
+  commentId: T:Warbler.Services.ChatService
+  id: ChatService
+  parent: Warbler.Services
+  children:
+  - Warbler.Services.ChatService.OnConnected(System.String,System.String)
+  - Warbler.Services.ChatService.OnDisconnected(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ChatService
+  nameWithType: ChatService
+  fullName: Warbler.Services.ChatService
+  type: Class
+  source:
+    id: ChatService
+    path: ''
+    startLine: 2128
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nUsed by the <xref href=\"Warbler.Hubs.ChatHub\" data-throw-if-not-resolved=\"false\"></xref> for business logic.\n"
+  example: []
+  syntax:
+    content: 'public class ChatService : HubResource<ChatService>'
+    content.vb: >-
+      Public Class ChatService
+
+          Inherits HubResource(Of ChatService)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Services.ChatService.OnConnected(System.String,System.String)
+  commentId: M:Warbler.Services.ChatService.OnConnected(System.String,System.String)
+  id: OnConnected(System.String,System.String)
+  parent: Warbler.Services.ChatService
+  langs:
+  - csharp
+  - vb
+  name: OnConnected(String, String)
+  nameWithType: ChatService.OnConnected(String, String)
+  fullName: Warbler.Services.ChatService.OnConnected(System.String, System.String)
+  type: Method
+  source:
+    id: OnConnected
+    path: ''
+    startLine: 2136
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nInvoked from the hub on each connected client.\n"
+  example: []
+  syntax:
+    content: public Task OnConnected(string connectionId, string userName)
+    parameters:
+    - id: connectionId
+      type: System.String
+    - id: userName
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function OnConnected(connectionId As String, userName As String) As Task
+  overload: Warbler.Services.ChatService.OnConnected*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.ChatService.OnDisconnected(System.String)
+  commentId: M:Warbler.Services.ChatService.OnDisconnected(System.String)
+  id: OnDisconnected(System.String)
+  parent: Warbler.Services.ChatService
+  langs:
+  - csharp
+  - vb
+  name: OnDisconnected(String)
+  nameWithType: ChatService.OnDisconnected(String)
+  fullName: Warbler.Services.ChatService.OnDisconnected(System.String)
+  type: Method
+  source:
+    id: OnDisconnected
+    path: ''
+    startLine: 2145
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nInvoked from the hub on each disconnected client.\n"
+  example: []
+  syntax:
+    content: public Task OnDisconnected(string connectionId)
+    parameters:
+    - id: connectionId
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function OnDisconnected(connectionId As String) As Task
+  overload: Warbler.Services.ChatService.OnDisconnected*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Hubs.ChatHub
+  commentId: T:Warbler.Hubs.ChatHub
+  isExternal: false
+  name: ChatHub
+  nameWithType: ChatHub
+  fullName: Warbler.Hubs.ChatHub
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
+  isExternal: false
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Services.ChatService.OnConnected*
+  commentId: Overload:Warbler.Services.ChatService.OnConnected
+  isExternal: false
+  name: OnConnected
+  nameWithType: ChatService.OnConnected
+  fullName: Warbler.Services.ChatService.OnConnected
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Services.ChatService.OnDisconnected*
+  commentId: Overload:Warbler.Services.ChatService.OnDisconnected
+  isExternal: false
+  name: OnDisconnected
+  nameWithType: ChatService.OnDisconnected
+  fullName: Warbler.Services.ChatService.OnDisconnected

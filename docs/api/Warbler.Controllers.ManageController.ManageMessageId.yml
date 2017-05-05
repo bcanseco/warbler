@@ -1,0 +1,276 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers.ManageController.ManageMessageId
+  commentId: T:Warbler.Controllers.ManageController.ManageMessageId
+  id: ManageController.ManageMessageId
+  parent: Warbler.Controllers
+  children:
+  - Warbler.Controllers.ManageController.ManageMessageId.AddLoginSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.AddPhoneSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.ChangePasswordSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.Error
+  - Warbler.Controllers.ManageController.ManageMessageId.RemoveLoginSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.RemovePhoneSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.SetPasswordSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.SetTwoFactorSuccess
+  langs:
+  - csharp
+  - vb
+  name: ManageController.ManageMessageId
+  nameWithType: ManageController.ManageMessageId
+  fullName: Warbler.Controllers.ManageController.ManageMessageId
+  type: Enum
+  source:
+    id: ManageMessageId
+    path: ''
+    startLine: 1070
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public enum ManageMessageId
+    content.vb: Public Enum ManageMessageId
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Warbler.Controllers.ManageController.ManageMessageId.AddPhoneSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.AddPhoneSuccess
+  id: AddPhoneSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: AddPhoneSuccess
+  nameWithType: ManageController.ManageMessageId.AddPhoneSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.AddPhoneSuccess
+  type: Field
+  source:
+    id: AddPhoneSuccess
+    path: ''
+    startLine: 1072
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: AddPhoneSuccess = 0
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.AddLoginSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.AddLoginSuccess
+  id: AddLoginSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: AddLoginSuccess
+  nameWithType: ManageController.ManageMessageId.AddLoginSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.AddLoginSuccess
+  type: Field
+  source:
+    id: AddLoginSuccess
+    path: ''
+    startLine: 1073
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: AddLoginSuccess = 1
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.ChangePasswordSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.ChangePasswordSuccess
+  id: ChangePasswordSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: ChangePasswordSuccess
+  nameWithType: ManageController.ManageMessageId.ChangePasswordSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.ChangePasswordSuccess
+  type: Field
+  source:
+    id: ChangePasswordSuccess
+    path: ''
+    startLine: 1074
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: ChangePasswordSuccess = 2
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.SetTwoFactorSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.SetTwoFactorSuccess
+  id: SetTwoFactorSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: SetTwoFactorSuccess
+  nameWithType: ManageController.ManageMessageId.SetTwoFactorSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.SetTwoFactorSuccess
+  type: Field
+  source:
+    id: SetTwoFactorSuccess
+    path: ''
+    startLine: 1075
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: SetTwoFactorSuccess = 3
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.SetPasswordSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.SetPasswordSuccess
+  id: SetPasswordSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: SetPasswordSuccess
+  nameWithType: ManageController.ManageMessageId.SetPasswordSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.SetPasswordSuccess
+  type: Field
+  source:
+    id: SetPasswordSuccess
+    path: ''
+    startLine: 1076
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: SetPasswordSuccess = 4
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.RemoveLoginSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.RemoveLoginSuccess
+  id: RemoveLoginSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: RemoveLoginSuccess
+  nameWithType: ManageController.ManageMessageId.RemoveLoginSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.RemoveLoginSuccess
+  type: Field
+  source:
+    id: RemoveLoginSuccess
+    path: ''
+    startLine: 1077
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: RemoveLoginSuccess = 5
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.RemovePhoneSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.RemovePhoneSuccess
+  id: RemovePhoneSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: RemovePhoneSuccess
+  nameWithType: ManageController.ManageMessageId.RemovePhoneSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.RemovePhoneSuccess
+  type: Field
+  source:
+    id: RemovePhoneSuccess
+    path: ''
+    startLine: 1078
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: RemovePhoneSuccess = 6
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.Error
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.Error
+  id: Error
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: ManageController.ManageMessageId.Error
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.Error
+  type: Field
+  source:
+    id: Error
+    path: ''
+    startLine: 1079
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: Error = 7
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+- uid: Warbler.Controllers.ManageController.ManageMessageId
+  commentId: T:Warbler.Controllers.ManageController.ManageMessageId
+  parent: Warbler.Controllers
+  isExternal: false
+  name: ManageController.ManageMessageId
+  nameWithType: ManageController.ManageMessageId
+  fullName: Warbler.Controllers.ManageController.ManageMessageId

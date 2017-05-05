@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Hubs.ProximityHub
+  commentId: T:Warbler.Hubs.ProximityHub
+  id: ProximityHub
+  parent: Warbler.Hubs
+  children:
+  - Warbler.Hubs.ProximityHub.#ctor(WarblerDbContext,UserManager{User})
+  - Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
+  - Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
+  - Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ProximityHub
+  nameWithType: ProximityHub
+  fullName: Warbler.Hubs.ProximityHub
+  type: Class
+  source:
+    id: ProximityHub
+    path: ''
+    startLine: 1209
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  summary: "\nCoordinates websocket communication between clients and server.\n"
+  example: []
+  syntax:
+    content: 'public class ProximityHub : Hub'
+    content.vb: >-
+      Public Class ProximityHub
+
+          Inherits Hub
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Hubs.ProximityHub.#ctor(WarblerDbContext,UserManager{User})
+  commentId: M:Warbler.Hubs.ProximityHub.#ctor(WarblerDbContext,UserManager{User})
+  id: '#ctor(WarblerDbContext,UserManager{User})'
+  parent: Warbler.Hubs.ProximityHub
+  langs:
+  - csharp
+  - vb
+  name: ProximityHub(WarblerDbContext, UserManager<User>)
+  nameWithType: ProximityHub.ProximityHub(WarblerDbContext, UserManager<User>)
+  fullName: Warbler.Hubs.ProximityHub.ProximityHub(WarblerDbContext, UserManager<User>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1218
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  summary: "\nAutomatically called each time SignalR receives a packet from a client.\nBoth parameters are injected automatically by ASP.NET DI.\n"
+  example: []
+  syntax:
+    content: public ProximityHub(WarblerDbContext context, UserManager<User> userManager)
+    parameters:
+    - id: context
+      type: WarblerDbContext
+    - id: userManager
+      type: UserManager{User}
+    content.vb: Public Sub New(context As WarblerDbContext, userManager As UserManager(Of User))
+  overload: Warbler.Hubs.ProximityHub.#ctor*
+  nameWithType.vb: ProximityHub.ProximityHub(WarblerDbContext, UserManager(Of User))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Warbler.Hubs.ProximityHub.ProximityHub(WarblerDbContext, UserManager(Of User))
+  name.vb: ProximityHub(WarblerDbContext, UserManager(Of User))
+- uid: Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
+  commentId: M:Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
+  id: OnDisconnected(System.Boolean)
+  parent: Warbler.Hubs.ProximityHub
+  langs:
+  - csharp
+  - vb
+  name: OnDisconnected(Boolean)
+  nameWithType: ProximityHub.OnDisconnected(Boolean)
+  fullName: Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
+  type: Method
+  source:
+    id: OnDisconnected
+    path: ''
+    startLine: 1224
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  syntax:
+    content: public override Task OnDisconnected(bool stopCalled)
+    parameters:
+    - id: stopCalled
+      type: System.Boolean
+    return:
+      type: Task
+    content.vb: Public Overrides Function OnDisconnected(stopCalled As Boolean) As Task
+  overload: Warbler.Hubs.ProximityHub.OnDisconnected*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
+  commentId: M:Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
+  id: GetNearbyUniversitiesAsync(System.String)
+  parent: Warbler.Hubs.ProximityHub
+  langs:
+  - csharp
+  - vb
+  name: GetNearbyUniversitiesAsync(String)
+  nameWithType: ProximityHub.GetNearbyUniversitiesAsync(String)
+  fullName: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
+  type: Method
+  source:
+    id: GetNearbyUniversitiesAsync
+    path: ''
+    startLine: 1234
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  summary: "\nCalled via SignalR when the user enters the Chat view\nwithout being a member of any universities.\n"
+  example: []
+  syntax:
+    content: public Task GetNearbyUniversitiesAsync(string serializedLatLng)
+    parameters:
+    - id: serializedLatLng
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function GetNearbyUniversitiesAsync(serializedLatLng As String) As Task
+  overload: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
+  commentId: M:Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
+  id: SelectUniversityAsync(System.String)
+  parent: Warbler.Hubs.ProximityHub
+  langs:
+  - csharp
+  - vb
+  name: SelectUniversityAsync(String)
+  nameWithType: ProximityHub.SelectUniversityAsync(String)
+  fullName: Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
+  type: Method
+  source:
+    id: SelectUniversityAsync
+    path: ''
+    startLine: 1252
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  summary: "\nCalled via SignalR when the user clicks on a university to connect to.\n"
+  example: []
+  syntax:
+    content: public Task SelectUniversityAsync(string placeId)
+    parameters:
+    - id: placeId
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function SelectUniversityAsync(placeId As String) As Task
+  overload: Warbler.Hubs.ProximityHub.SelectUniversityAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Hubs
+  commentId: N:Warbler.Hubs
+  isExternal: false
+  name: Warbler.Hubs
+  nameWithType: Warbler.Hubs
+  fullName: Warbler.Hubs
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Hubs.ProximityHub.#ctor*
+  commentId: Overload:Warbler.Hubs.ProximityHub.#ctor
+  isExternal: false
+  name: ProximityHub
+  nameWithType: ProximityHub.ProximityHub
+  fullName: Warbler.Hubs.ProximityHub.ProximityHub
+- uid: WarblerDbContext
+  isExternal: true
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: WarblerDbContext
+- uid: UserManager{User}
+  commentId: '!:UserManager{User}'
+  definition: UserManager`1
+  name: UserManager<User>
+  nameWithType: UserManager<User>
+  fullName: UserManager<User>
+  nameWithType.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of User)
+  name.vb: UserManager(Of User)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Hubs.ProximityHub.OnDisconnected*
+  commentId: Overload:Warbler.Hubs.ProximityHub.OnDisconnected
+  isExternal: false
+  name: OnDisconnected
+  nameWithType: ProximityHub.OnDisconnected
+  fullName: Warbler.Hubs.ProximityHub.OnDisconnected
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync*
+  commentId: Overload:Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync
+  isExternal: false
+  name: GetNearbyUniversitiesAsync
+  nameWithType: ProximityHub.GetNearbyUniversitiesAsync
+  fullName: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Hubs.ProximityHub.SelectUniversityAsync*
+  commentId: Overload:Warbler.Hubs.ProximityHub.SelectUniversityAsync
+  isExternal: false
+  name: SelectUniversityAsync
+  nameWithType: ProximityHub.SelectUniversityAsync
+  fullName: Warbler.Hubs.ProximityHub.SelectUniversityAsync

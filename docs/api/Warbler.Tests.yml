@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests
+  commentId: N:Warbler.Tests
+  id: Warbler.Tests
+  children:
+  - Warbler.Tests.Test
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Tests
+  nameWithType: Warbler.Tests
+  fullName: Warbler.Tests
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Tests.Test
+  commentId: T:Warbler.Tests.Test
+  isExternal: false
+  name: Test
+  nameWithType: Test
+  fullName: Warbler.Tests.Test

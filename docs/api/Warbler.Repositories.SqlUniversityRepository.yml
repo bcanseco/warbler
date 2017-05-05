@@ -1,0 +1,423 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Repositories.SqlUniversityRepository
+  commentId: T:Warbler.Repositories.SqlUniversityRepository
+  id: SqlUniversityRepository
+  parent: Warbler.Repositories
+  children:
+  - Warbler.Repositories.SqlUniversityRepository.#ctor(WarblerDbContext)
+  - Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
+  - Warbler.Repositories.SqlUniversityRepository.GetAllAsync(QueryDepth)
+  - Warbler.Repositories.SqlUniversityRepository.LookupAsync(System.String)
+  - Warbler.Repositories.SqlUniversityRepository.UpdateAsync(University)
+  langs:
+  - csharp
+  - vb
+  name: SqlUniversityRepository
+  nameWithType: SqlUniversityRepository
+  fullName: Warbler.Repositories.SqlUniversityRepository
+  type: Class
+  source:
+    id: SqlUniversityRepository
+    path: ''
+    startLine: 1958
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  summary: "\nRuns queries against the SQL database using Entity Framework.\nLook at <see cref=\"!:IUniversityRepository\"></see> for docs.\n"
+  example: []
+  syntax:
+    content: 'public class SqlUniversityRepository : IUniversityRepository'
+    content.vb: >-
+      Public Class SqlUniversityRepository
+
+          Inherits IUniversityRepository
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Repositories.SqlUniversityRepository.#ctor(WarblerDbContext)
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.#ctor(WarblerDbContext)
+  id: '#ctor(WarblerDbContext)'
+  parent: Warbler.Repositories.SqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: SqlUniversityRepository(WarblerDbContext)
+  nameWithType: SqlUniversityRepository.SqlUniversityRepository(WarblerDbContext)
+  fullName: Warbler.Repositories.SqlUniversityRepository.SqlUniversityRepository(WarblerDbContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1962
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public SqlUniversityRepository(WarblerDbContext context)
+    parameters:
+    - id: context
+      type: WarblerDbContext
+    content.vb: Public Sub New(context As WarblerDbContext)
+  overload: Warbler.Repositories.SqlUniversityRepository.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
+  id: CreateAsync(NearByResult)
+  parent: Warbler.Repositories.SqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(NearByResult)
+  nameWithType: SqlUniversityRepository.CreateAsync(NearByResult)
+  fullName: Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
+  type: Method
+  source:
+    id: CreateAsync
+    path: ''
+    startLine: 1967
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task<University> CreateAsync(NearByResult uni)
+    parameters:
+    - id: uni
+      type: NearByResult
+    return:
+      type: Task{University}
+    content.vb: Public Function CreateAsync(uni As NearByResult) As Task(Of University)
+  overload: Warbler.Repositories.SqlUniversityRepository.CreateAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUniversityRepository.UpdateAsync(University)
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.UpdateAsync(University)
+  id: UpdateAsync(University)
+  parent: Warbler.Repositories.SqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(University)
+  nameWithType: SqlUniversityRepository.UpdateAsync(University)
+  fullName: Warbler.Repositories.SqlUniversityRepository.UpdateAsync(University)
+  type: Method
+  source:
+    id: UpdateAsync
+    path: ''
+    startLine: 2007
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task UpdateAsync(University university)
+    parameters:
+    - id: university
+      type: University
+    return:
+      type: Task
+    content.vb: Public Function UpdateAsync(university As University) As Task
+  overload: Warbler.Repositories.SqlUniversityRepository.UpdateAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUniversityRepository.LookupAsync(System.String)
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.LookupAsync(System.String)
+  id: LookupAsync(System.String)
+  parent: Warbler.Repositories.SqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: LookupAsync(String)
+  nameWithType: SqlUniversityRepository.LookupAsync(String)
+  fullName: Warbler.Repositories.SqlUniversityRepository.LookupAsync(System.String)
+  type: Method
+  source:
+    id: LookupAsync
+    path: ''
+    startLine: 2013
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task<University> LookupAsync(string placeId)
+    parameters:
+    - id: placeId
+      type: System.String
+    return:
+      type: Task{University}
+    content.vb: Public Function LookupAsync(placeId As String) As Task(Of University)
+  overload: Warbler.Repositories.SqlUniversityRepository.LookupAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUniversityRepository.GetAllAsync(QueryDepth)
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.GetAllAsync(QueryDepth)
+  id: GetAllAsync(QueryDepth)
+  parent: Warbler.Repositories.SqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync(QueryDepth)
+  nameWithType: SqlUniversityRepository.GetAllAsync(QueryDepth)
+  fullName: Warbler.Repositories.SqlUniversityRepository.GetAllAsync(QueryDepth)
+  type: Method
+  source:
+    id: GetAllAsync
+    path: ''
+    startLine: 2027
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task<List<University>> GetAllAsync(QueryDepth depth)
+    parameters:
+    - id: depth
+      type: QueryDepth
+    return:
+      type: Task{List{University}}
+    content.vb: Public Function GetAllAsync(depth As QueryDepth) As Task(Of List(Of University))
+  overload: Warbler.Repositories.SqlUniversityRepository.GetAllAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Repositories
+  commentId: N:Warbler.Repositories
+  isExternal: false
+  name: Warbler.Repositories
+  nameWithType: Warbler.Repositories
+  fullName: Warbler.Repositories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Repositories.SqlUniversityRepository.#ctor*
+  commentId: Overload:Warbler.Repositories.SqlUniversityRepository.#ctor
+  isExternal: false
+  name: SqlUniversityRepository
+  nameWithType: SqlUniversityRepository.SqlUniversityRepository
+  fullName: Warbler.Repositories.SqlUniversityRepository.SqlUniversityRepository
+- uid: WarblerDbContext
+  isExternal: true
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: WarblerDbContext
+- uid: Warbler.Repositories.SqlUniversityRepository.CreateAsync*
+  commentId: Overload:Warbler.Repositories.SqlUniversityRepository.CreateAsync
+  isExternal: false
+  name: CreateAsync
+  nameWithType: SqlUniversityRepository.CreateAsync
+  fullName: Warbler.Repositories.SqlUniversityRepository.CreateAsync
+- uid: NearByResult
+  isExternal: true
+  name: NearByResult
+  nameWithType: NearByResult
+  fullName: NearByResult
+- uid: Task{University}
+  commentId: '!:Task{University}'
+  definition: Task`1
+  name: Task<University>
+  nameWithType: Task<University>
+  fullName: Task<University>
+  nameWithType.vb: Task(Of University)
+  fullName.vb: Task(Of University)
+  name.vb: Task(Of University)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Repositories.SqlUniversityRepository.UpdateAsync*
+  commentId: Overload:Warbler.Repositories.SqlUniversityRepository.UpdateAsync
+  isExternal: false
+  name: UpdateAsync
+  nameWithType: SqlUniversityRepository.UpdateAsync
+  fullName: Warbler.Repositories.SqlUniversityRepository.UpdateAsync
+- uid: University
+  isExternal: true
+  name: University
+  nameWithType: University
+  fullName: University
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Repositories.SqlUniversityRepository.LookupAsync*
+  commentId: Overload:Warbler.Repositories.SqlUniversityRepository.LookupAsync
+  isExternal: false
+  name: LookupAsync
+  nameWithType: SqlUniversityRepository.LookupAsync
+  fullName: Warbler.Repositories.SqlUniversityRepository.LookupAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Repositories.SqlUniversityRepository.GetAllAsync*
+  commentId: Overload:Warbler.Repositories.SqlUniversityRepository.GetAllAsync
+  isExternal: false
+  name: GetAllAsync
+  nameWithType: SqlUniversityRepository.GetAllAsync
+  fullName: Warbler.Repositories.SqlUniversityRepository.GetAllAsync
+- uid: QueryDepth
+  isExternal: true
+  name: QueryDepth
+  nameWithType: QueryDepth
+  fullName: QueryDepth
+- uid: Task{List{University}}
+  commentId: '!:Task{List{University}}'
+  definition: Task`1
+  name: Task<List<University>>
+  nameWithType: Task<List<University>>
+  fullName: Task<List<University>>
+  nameWithType.vb: Task(Of List(Of University))
+  fullName.vb: Task(Of List(Of University))
+  name.vb: Task(Of List(Of University))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

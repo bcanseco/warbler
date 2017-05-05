@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Services.AuthMessageSender
+  commentId: T:Warbler.Services.AuthMessageSender
+  id: AuthMessageSender
+  parent: Warbler.Services
+  children:
+  - Warbler.Services.AuthMessageSender.SendEmailAsync(System.String,System.String,System.String)
+  - Warbler.Services.AuthMessageSender.SendSmsAsync(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AuthMessageSender
+  nameWithType: AuthMessageSender
+  fullName: Warbler.Services.AuthMessageSender
+  type: Class
+  source:
+    id: AuthMessageSender
+    path: ''
+    startLine: 2103
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: 'public class AuthMessageSender : IEmailSender, ISmsSender'
+    content.vb: >-
+      Public Class AuthMessageSender
+
+          Inherits IEmailSender
+
+          Implements ISmsSender
+  inheritance:
+  - System.Object
+  implements:
+  - ISmsSender
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Services.AuthMessageSender.SendEmailAsync(System.String,System.String,System.String)
+  commentId: M:Warbler.Services.AuthMessageSender.SendEmailAsync(System.String,System.String,System.String)
+  id: SendEmailAsync(System.String,System.String,System.String)
+  parent: Warbler.Services.AuthMessageSender
+  langs:
+  - csharp
+  - vb
+  name: SendEmailAsync(String, String, String)
+  nameWithType: AuthMessageSender.SendEmailAsync(String, String, String)
+  fullName: Warbler.Services.AuthMessageSender.SendEmailAsync(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: SendEmailAsync
+    path: ''
+    startLine: 2105
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task SendEmailAsync(string email, string subject, string message)
+    parameters:
+    - id: email
+      type: System.String
+    - id: subject
+      type: System.String
+    - id: message
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function SendEmailAsync(email As String, subject As String, message As String) As Task
+  overload: Warbler.Services.AuthMessageSender.SendEmailAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.AuthMessageSender.SendSmsAsync(System.String,System.String)
+  commentId: M:Warbler.Services.AuthMessageSender.SendSmsAsync(System.String,System.String)
+  id: SendSmsAsync(System.String,System.String)
+  parent: Warbler.Services.AuthMessageSender
+  langs:
+  - csharp
+  - vb
+  name: SendSmsAsync(String, String)
+  nameWithType: AuthMessageSender.SendSmsAsync(String, String)
+  fullName: Warbler.Services.AuthMessageSender.SendSmsAsync(System.String, System.String)
+  type: Method
+  source:
+    id: SendSmsAsync
+    path: ''
+    startLine: 2111
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task SendSmsAsync(string number, string message)
+    parameters:
+    - id: number
+      type: System.String
+    - id: message
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function SendSmsAsync(number As String, message As String) As Task
+  overload: Warbler.Services.AuthMessageSender.SendSmsAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
+  isExternal: false
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ISmsSender
+  isExternal: true
+  name: ISmsSender
+  nameWithType: ISmsSender
+  fullName: ISmsSender
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Services.AuthMessageSender.SendEmailAsync*
+  commentId: Overload:Warbler.Services.AuthMessageSender.SendEmailAsync
+  isExternal: false
+  name: SendEmailAsync
+  nameWithType: AuthMessageSender.SendEmailAsync
+  fullName: Warbler.Services.AuthMessageSender.SendEmailAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Services.AuthMessageSender.SendSmsAsync*
+  commentId: Overload:Warbler.Services.AuthMessageSender.SendSmsAsync
+  isExternal: false
+  name: SendSmsAsync
+  nameWithType: AuthMessageSender.SendSmsAsync
+  fullName: Warbler.Services.AuthMessageSender.SendSmsAsync

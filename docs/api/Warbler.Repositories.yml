@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Repositories
+  commentId: N:Warbler.Repositories
+  id: Warbler.Repositories
+  children:
+  - Warbler.Repositories.SqlSampleRepository
+  - Warbler.Repositories.SqlUniversityRepository
+  - Warbler.Repositories.SqlUserRepository
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Repositories
+  nameWithType: Warbler.Repositories
+  fullName: Warbler.Repositories
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Repositories.SqlSampleRepository
+  commentId: T:Warbler.Repositories.SqlSampleRepository
+  isExternal: false
+  name: SqlSampleRepository
+  nameWithType: SqlSampleRepository
+  fullName: Warbler.Repositories.SqlSampleRepository
+- uid: Warbler.Repositories.SqlUniversityRepository
+  commentId: T:Warbler.Repositories.SqlUniversityRepository
+  isExternal: false
+  name: SqlUniversityRepository
+  nameWithType: SqlUniversityRepository
+  fullName: Warbler.Repositories.SqlUniversityRepository
+- uid: Warbler.Repositories.SqlUserRepository
+  commentId: T:Warbler.Repositories.SqlUserRepository
+  isExternal: false
+  name: SqlUserRepository
+  nameWithType: SqlUserRepository
+  fullName: Warbler.Repositories.SqlUserRepository

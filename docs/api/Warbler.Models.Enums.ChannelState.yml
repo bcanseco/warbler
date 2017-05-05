@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.Enums.ChannelState
+  commentId: T:Warbler.Models.Enums.ChannelState
+  id: ChannelState
+  parent: Warbler.Models.Enums
+  children:
+  - Warbler.Models.Enums.ChannelState.Active
+  - Warbler.Models.Enums.ChannelState.Archive
+  langs:
+  - csharp
+  - vb
+  name: ChannelState
+  nameWithType: ChannelState
+  fullName: Warbler.Models.Enums.ChannelState
+  type: Enum
+  source:
+    id: ChannelState
+    path: ''
+    startLine: 1688
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: public enum ChannelState
+    content.vb: Public Enum ChannelState
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Warbler.Models.Enums.ChannelState.Active
+  commentId: F:Warbler.Models.Enums.ChannelState.Active
+  id: Active
+  parent: Warbler.Models.Enums.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: Active
+  nameWithType: ChannelState.Active
+  fullName: Warbler.Models.Enums.ChannelState.Active
+  type: Field
+  source:
+    id: Active
+    path: ''
+    startLine: 1690
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Active = 1
+    return:
+      type: Warbler.Models.Enums.ChannelState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Models.Enums.ChannelState.Archive
+  commentId: F:Warbler.Models.Enums.ChannelState.Archive
+  id: Archive
+  parent: Warbler.Models.Enums.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: Archive
+  nameWithType: ChannelState.Archive
+  fullName: Warbler.Models.Enums.ChannelState.Archive
+  type: Field
+  source:
+    id: Archive
+    path: ''
+    startLine: 1691
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Archive = 2
+    return:
+      type: Warbler.Models.Enums.ChannelState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Warbler.Models.Enums
+  commentId: N:Warbler.Models.Enums
+  isExternal: false
+  name: Warbler.Models.Enums
+  nameWithType: Warbler.Models.Enums
+  fullName: Warbler.Models.Enums
+- uid: Warbler.Models.Enums.ChannelState
+  commentId: T:Warbler.Models.Enums.ChannelState
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: ChannelState
+  nameWithType: ChannelState
+  fullName: Warbler.Models.Enums.ChannelState

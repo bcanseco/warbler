@@ -1,0 +1,154 @@
+### YamlMime:TableOfContent
+- uid: Warbler
+  name: Warbler
+  items:
+  - uid: Warbler.Program
+    name: Program
+  - uid: Warbler.Startup
+    name: Startup
+- uid: Warbler.Controllers
+  name: Warbler.Controllers
+  items:
+  - uid: Warbler.Controllers.AccountController
+    name: AccountController
+  - uid: Warbler.Controllers.ChatController
+    name: ChatController
+  - uid: Warbler.Controllers.DevController
+    name: DevController
+  - uid: Warbler.Controllers.HomeController
+    name: HomeController
+  - uid: Warbler.Controllers.ManageController
+    name: ManageController
+  - uid: Warbler.Controllers.ManageController.ManageMessageId
+    name: ManageController.ManageMessageId
+- uid: Warbler.Exceptions
+  name: Warbler.Exceptions
+  items:
+  - uid: Warbler.Exceptions.UniversityNotFoundException
+    name: UniversityNotFoundException
+- uid: Warbler.Extensions
+  name: Warbler.Extensions
+  items:
+  - uid: Warbler.Extensions.NearbyResultExtensions
+    name: NearbyResultExtensions
+  - uid: Warbler.Extensions.UserManagerExtensions
+    name: UserManagerExtensions
+- uid: Warbler.Hubs
+  name: Warbler.Hubs
+  items:
+  - uid: Warbler.Hubs.ChatHub
+    name: ChatHub
+  - uid: Warbler.Hubs.ProximityHub
+    name: ProximityHub
+- uid: Warbler.Interfaces
+  name: Warbler.Interfaces
+  items:
+  - uid: Warbler.Interfaces.IEmailSender
+    name: IEmailSender
+  - uid: Warbler.Interfaces.ISmsSender
+    name: ISmsSender
+  - uid: Warbler.Interfaces.IUniversityRepository
+    name: IUniversityRepository
+  - uid: Warbler.Interfaces.IUserRepository
+    name: IUserRepository
+- uid: Warbler.Misc
+  name: Warbler.Misc
+  items:
+  - uid: Warbler.Misc.HubResource`1
+    name: HubResource<TService>
+    name.vb: HubResource(Of TService)
+  - uid: Warbler.Misc.WarblerDbContext
+    name: WarblerDbContext
+- uid: Warbler.Models
+  name: Warbler.Models
+  items:
+  - uid: Warbler.Models.Channel
+    name: Channel
+  - uid: Warbler.Models.Membership
+    name: Membership
+  - uid: Warbler.Models.Message
+    name: Message
+  - uid: Warbler.Models.Server
+    name: Server
+  - uid: Warbler.Models.University
+    name: University
+  - uid: Warbler.Models.User
+    name: User
+- uid: Warbler.Models.AccountViewModels
+  name: Warbler.Models.AccountViewModels
+  items:
+  - uid: Warbler.Models.AccountViewModels.ExternalLoginConfirmationViewModel
+    name: ExternalLoginConfirmationViewModel
+  - uid: Warbler.Models.AccountViewModels.ForgotPasswordViewModel
+    name: ForgotPasswordViewModel
+  - uid: Warbler.Models.AccountViewModels.LoginViewModel
+    name: LoginViewModel
+  - uid: Warbler.Models.AccountViewModels.RegisterViewModel
+    name: RegisterViewModel
+  - uid: Warbler.Models.AccountViewModels.ResetPasswordViewModel
+    name: ResetPasswordViewModel
+  - uid: Warbler.Models.AccountViewModels.SendCodeViewModel
+    name: SendCodeViewModel
+  - uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+    name: VerifyCodeViewModel
+- uid: Warbler.Models.Enums
+  name: Warbler.Models.Enums
+  items:
+  - uid: Warbler.Models.Enums.ChannelState
+    name: ChannelState
+  - uid: Warbler.Models.Enums.ChannelType
+    name: ChannelType
+  - uid: Warbler.Models.Enums.QueryDepth
+    name: QueryDepth
+  - uid: Warbler.Models.Enums.ServerType
+    name: ServerType
+  - uid: Warbler.Models.Enums.UserFlag
+    name: UserFlag
+- uid: Warbler.Models.ManageViewModels
+  name: Warbler.Models.ManageViewModels
+  items:
+  - uid: Warbler.Models.ManageViewModels.AddPhoneNumberViewModel
+    name: AddPhoneNumberViewModel
+  - uid: Warbler.Models.ManageViewModels.ChangePasswordViewModel
+    name: ChangePasswordViewModel
+  - uid: Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel
+    name: ConfigureTwoFactorViewModel
+  - uid: Warbler.Models.ManageViewModels.FactorViewModel
+    name: FactorViewModel
+  - uid: Warbler.Models.ManageViewModels.IndexViewModel
+    name: IndexViewModel
+  - uid: Warbler.Models.ManageViewModels.ManageLoginsViewModel
+    name: ManageLoginsViewModel
+  - uid: Warbler.Models.ManageViewModels.RemoveLoginViewModel
+    name: RemoveLoginViewModel
+  - uid: Warbler.Models.ManageViewModels.SetPasswordViewModel
+    name: SetPasswordViewModel
+  - uid: Warbler.Models.ManageViewModels.VerifyPhoneNumberViewModel
+    name: VerifyPhoneNumberViewModel
+- uid: Warbler.Repositories
+  name: Warbler.Repositories
+  items:
+  - uid: Warbler.Repositories.SqlSampleRepository
+    name: SqlSampleRepository
+  - uid: Warbler.Repositories.SqlUniversityRepository
+    name: SqlUniversityRepository
+  - uid: Warbler.Repositories.SqlUserRepository
+    name: SqlUserRepository
+- uid: Warbler.Services
+  name: Warbler.Services
+  items:
+  - uid: Warbler.Services.AuthMessageSender
+    name: AuthMessageSender
+  - uid: Warbler.Services.ChatService
+    name: ChatService
+  - uid: Warbler.Services.ProximityService
+    name: ProximityService
+  - uid: Warbler.Services.UniversityService
+    name: UniversityService
+  - uid: Warbler.Services.UserService
+    name: UserService
+- uid: Warbler.Tests
+  name: Warbler.Tests
+  items:
+  - uid: Warbler.Tests.Test
+    name: Test

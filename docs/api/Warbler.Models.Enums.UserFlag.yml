@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.Enums.UserFlag
+  commentId: T:Warbler.Models.Enums.UserFlag
+  id: UserFlag
+  parent: Warbler.Models.Enums
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: UserFlag
+  nameWithType: UserFlag
+  fullName: Warbler.Models.Enums.UserFlag
+  type: Enum
+  source:
+    id: UserFlag
+    path: ''
+    startLine: 1727
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: public enum UserFlag
+    content.vb: Public Enum UserFlag
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+references:
+- uid: Warbler.Models.Enums
+  commentId: N:Warbler.Models.Enums
+  isExternal: false
+  name: Warbler.Models.Enums
+  nameWithType: Warbler.Models.Enums
+  fullName: Warbler.Models.Enums

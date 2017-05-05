@@ -1,0 +1,378 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IUniversityRepository
+  commentId: T:Warbler.Interfaces.IUniversityRepository
+  id: IUniversityRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  - Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
+  - Warbler.Interfaces.IUniversityRepository.LookupAsync(System.String)
+  - Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
+  langs:
+  - csharp
+  - vb
+  name: IUniversityRepository
+  nameWithType: IUniversityRepository
+  fullName: Warbler.Interfaces.IUniversityRepository
+  type: Interface
+  source:
+    id: IUniversityRepository
+    path: ''
+    startLine: 1289
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for university-based queries against a repository.\n"
+  example: []
+  syntax:
+    content: public interface IUniversityRepository
+    content.vb: Public Interface IUniversityRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  commentId: M:Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  id: CreateAsync(NearByResult)
+  parent: Warbler.Interfaces.IUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(NearByResult)
+  nameWithType: IUniversityRepository.CreateAsync(NearByResult)
+  fullName: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  type: Method
+  source:
+    id: CreateAsync
+    path: ''
+    startLine: 1296
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nAdds a new university based on a Google Places Search result.\n"
+  example: []
+  syntax:
+    content: Task<University> CreateAsync(NearByResult uni)
+    parameters:
+    - id: uni
+      type: NearByResult
+      description: The result whose properties will be used for creation.
+    return:
+      type: Task{University}
+      description: The created university.
+    content.vb: Function CreateAsync(uni As NearByResult) As Task(Of University)
+  overload: Warbler.Interfaces.IUniversityRepository.CreateAsync*
+- uid: Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
+  commentId: M:Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
+  id: UpdateAsync(University)
+  parent: Warbler.Interfaces.IUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(University)
+  nameWithType: IUniversityRepository.UpdateAsync(University)
+  fullName: Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
+  type: Method
+  source:
+    id: UpdateAsync
+    path: ''
+    startLine: 1302
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nUpdates the properties of the university object in the database.\n"
+  example: []
+  syntax:
+    content: Task UpdateAsync(University university)
+    parameters:
+    - id: university
+      type: University
+      description: The university to update.
+    return:
+      type: Task
+    content.vb: Function UpdateAsync(university As University) As Task
+  overload: Warbler.Interfaces.IUniversityRepository.UpdateAsync*
+- uid: Warbler.Interfaces.IUniversityRepository.LookupAsync(System.String)
+  commentId: M:Warbler.Interfaces.IUniversityRepository.LookupAsync(System.String)
+  id: LookupAsync(System.String)
+  parent: Warbler.Interfaces.IUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: LookupAsync(String)
+  nameWithType: IUniversityRepository.LookupAsync(String)
+  fullName: Warbler.Interfaces.IUniversityRepository.LookupAsync(System.String)
+  type: Method
+  source:
+    id: LookupAsync
+    path: ''
+    startLine: 1310
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nChecks to see if a university for a given Google Place ID exists.\n"
+  example: []
+  syntax:
+    content: Task<University> LookupAsync(string placeId)
+    parameters:
+    - id: placeId
+      type: System.String
+      description: The place ID to use for lookup. These are unique.
+    return:
+      type: Task{University}
+      description: The university (at user level) if it exists.
+    content.vb: Function LookupAsync(placeId As String) As Task(Of University)
+  overload: Warbler.Interfaces.IUniversityRepository.LookupAsync*
+  exceptions:
+  - type: Warbler.Exceptions.UniversityNotFoundException
+    commentId: T:Warbler.Exceptions.UniversityNotFoundException
+- uid: Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
+  commentId: M:Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
+  id: GetAllAsync(QueryDepth)
+  parent: Warbler.Interfaces.IUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync(QueryDepth)
+  nameWithType: IUniversityRepository.GetAllAsync(QueryDepth)
+  fullName: Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
+  type: Method
+  source:
+    id: GetAllAsync
+    path: ''
+    startLine: 1321
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nGets a list of all universities in the database.\n"
+  example:
+  - "\nUsing a query depth of <see cref=\"!:Server\"></see> will make all <see cref=\"!:University\"></see>\nobjects have a non-null Server property. However, those servers will have a null\n<see cref=\"!:ICollection&lt;Channel&gt;\"></see> property.\n"
+  syntax:
+    content: Task<List<University>> GetAllAsync(QueryDepth depth = null)
+    parameters:
+    - id: depth
+      type: QueryDepth
+      description: At what level navigation properties should be retrieved.
+    return:
+      type: Task{List{University}}
+    content.vb: Function GetAllAsync(depth As QueryDepth = Nothing) As Task(Of List(Of University))
+  overload: Warbler.Interfaces.IUniversityRepository.GetAllAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IUniversityRepository.CreateAsync*
+  commentId: Overload:Warbler.Interfaces.IUniversityRepository.CreateAsync
+  isExternal: false
+  name: CreateAsync
+  nameWithType: IUniversityRepository.CreateAsync
+  fullName: Warbler.Interfaces.IUniversityRepository.CreateAsync
+- uid: NearByResult
+  isExternal: true
+  name: NearByResult
+  nameWithType: NearByResult
+  fullName: NearByResult
+- uid: Task{University}
+  commentId: '!:Task{University}'
+  definition: Task`1
+  name: Task<University>
+  nameWithType: Task<University>
+  fullName: Task<University>
+  nameWithType.vb: Task(Of University)
+  fullName.vb: Task(Of University)
+  name.vb: Task(Of University)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Interfaces.IUniversityRepository.UpdateAsync*
+  commentId: Overload:Warbler.Interfaces.IUniversityRepository.UpdateAsync
+  isExternal: false
+  name: UpdateAsync
+  nameWithType: IUniversityRepository.UpdateAsync
+  fullName: Warbler.Interfaces.IUniversityRepository.UpdateAsync
+- uid: University
+  isExternal: true
+  name: University
+  nameWithType: University
+  fullName: University
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Interfaces.IUniversityRepository.LookupAsync*
+  commentId: Overload:Warbler.Interfaces.IUniversityRepository.LookupAsync
+  isExternal: false
+  name: LookupAsync
+  nameWithType: IUniversityRepository.LookupAsync
+  fullName: Warbler.Interfaces.IUniversityRepository.LookupAsync
+- uid: Warbler.Exceptions.UniversityNotFoundException
+  commentId: T:Warbler.Exceptions.UniversityNotFoundException
+  isExternal: false
+  name: UniversityNotFoundException
+  nameWithType: UniversityNotFoundException
+  fullName: Warbler.Exceptions.UniversityNotFoundException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Interfaces.IUniversityRepository.GetAllAsync*
+  commentId: Overload:Warbler.Interfaces.IUniversityRepository.GetAllAsync
+  isExternal: false
+  name: GetAllAsync
+  nameWithType: IUniversityRepository.GetAllAsync
+  fullName: Warbler.Interfaces.IUniversityRepository.GetAllAsync
+- uid: QueryDepth
+  isExternal: true
+  name: QueryDepth
+  nameWithType: QueryDepth
+  fullName: QueryDepth
+- uid: Task{List{University}}
+  commentId: '!:Task{List{University}}'
+  definition: Task`1
+  name: Task<List<University>>
+  nameWithType: Task<List<University>>
+  fullName: Task<List<University>>
+  nameWithType.vb: Task(Of List(Of University))
+  fullName.vb: Task(Of List(Of University))
+  name.vb: Task(Of List(Of University))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: University
+    name: University
+    nameWithType: University
+    fullName: University
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

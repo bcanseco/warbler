@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Extensions
+  commentId: N:Warbler.Extensions
+  id: Warbler.Extensions
+  children:
+  - Warbler.Extensions.NearbyResultExtensions
+  - Warbler.Extensions.UserManagerExtensions
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Extensions
+  nameWithType: Warbler.Extensions
+  fullName: Warbler.Extensions
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Extensions.NearbyResultExtensions
+  commentId: T:Warbler.Extensions.NearbyResultExtensions
+  isExternal: false
+  name: NearbyResultExtensions
+  nameWithType: NearbyResultExtensions
+  fullName: Warbler.Extensions.NearbyResultExtensions
+- uid: Warbler.Extensions.UserManagerExtensions
+  commentId: T:Warbler.Extensions.UserManagerExtensions
+  isExternal: false
+  name: UserManagerExtensions
+  nameWithType: UserManagerExtensions
+  fullName: Warbler.Extensions.UserManagerExtensions

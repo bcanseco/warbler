@@ -1,0 +1,57 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Exceptions.UniversityNotFoundException
+  commentId: T:Warbler.Exceptions.UniversityNotFoundException
+  id: UniversityNotFoundException
+  parent: Warbler.Exceptions
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: UniversityNotFoundException
+  nameWithType: UniversityNotFoundException
+  fullName: Warbler.Exceptions.UniversityNotFoundException
+  type: Class
+  source:
+    id: UniversityNotFoundException
+    path: ''
+    startLine: 1098
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Exceptions
+  summary: "\nIndicates that a university search yielded zero results.\n"
+  example: []
+  syntax:
+    content: 'public class UniversityNotFoundException : Exception'
+    content.vb: >-
+      Public Class UniversityNotFoundException
+
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Warbler.Exceptions
+  commentId: N:Warbler.Exceptions
+  isExternal: false
+  name: Warbler.Exceptions
+  nameWithType: Warbler.Exceptions
+  fullName: Warbler.Exceptions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

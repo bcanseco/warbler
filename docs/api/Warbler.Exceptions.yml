@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Exceptions
+  commentId: N:Warbler.Exceptions
+  id: Warbler.Exceptions
+  children:
+  - Warbler.Exceptions.UniversityNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Exceptions
+  nameWithType: Warbler.Exceptions
+  fullName: Warbler.Exceptions
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Exceptions.UniversityNotFoundException
+  commentId: T:Warbler.Exceptions.UniversityNotFoundException
+  isExternal: false
+  name: UniversityNotFoundException
+  nameWithType: UniversityNotFoundException
+  fullName: Warbler.Exceptions.UniversityNotFoundException

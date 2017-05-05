@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Hubs
+  commentId: N:Warbler.Hubs
+  id: Warbler.Hubs
+  children:
+  - Warbler.Hubs.ChatHub
+  - Warbler.Hubs.ProximityHub
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Hubs
+  nameWithType: Warbler.Hubs
+  fullName: Warbler.Hubs
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Hubs.ChatHub
+  commentId: T:Warbler.Hubs.ChatHub
+  isExternal: false
+  name: ChatHub
+  nameWithType: ChatHub
+  fullName: Warbler.Hubs.ChatHub
+- uid: Warbler.Hubs.ProximityHub
+  commentId: T:Warbler.Hubs.ProximityHub
+  isExternal: false
+  name: ProximityHub
+  nameWithType: ProximityHub
+  fullName: Warbler.Hubs.ProximityHub

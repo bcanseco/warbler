@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.Enums.QueryDepth
+  commentId: T:Warbler.Models.Enums.QueryDepth
+  id: QueryDepth
+  parent: Warbler.Models.Enums
+  children:
+  - Warbler.Models.Enums.QueryDepth.Channel
+  - Warbler.Models.Enums.QueryDepth.Message
+  - Warbler.Models.Enums.QueryDepth.Server
+  - Warbler.Models.Enums.QueryDepth.University
+  - Warbler.Models.Enums.QueryDepth.User
+  langs:
+  - csharp
+  - vb
+  name: QueryDepth
+  nameWithType: QueryDepth
+  fullName: Warbler.Models.Enums.QueryDepth
+  type: Enum
+  source:
+    id: QueryDepth
+    path: ''
+    startLine: 1706
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: public enum QueryDepth
+    content.vb: Public Enum QueryDepth
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Warbler.Models.Enums.QueryDepth.University
+  commentId: F:Warbler.Models.Enums.QueryDepth.University
+  id: University
+  parent: Warbler.Models.Enums.QueryDepth
+  langs:
+  - csharp
+  - vb
+  name: University
+  nameWithType: QueryDepth.University
+  fullName: Warbler.Models.Enums.QueryDepth.University
+  type: Field
+  source:
+    id: University
+    path: ''
+    startLine: 1708
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: University = 0
+    return:
+      type: Warbler.Models.Enums.QueryDepth
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Models.Enums.QueryDepth.Server
+  commentId: F:Warbler.Models.Enums.QueryDepth.Server
+  id: Server
+  parent: Warbler.Models.Enums.QueryDepth
+  langs:
+  - csharp
+  - vb
+  name: Server
+  nameWithType: QueryDepth.Server
+  fullName: Warbler.Models.Enums.QueryDepth.Server
+  type: Field
+  source:
+    id: Server
+    path: ''
+    startLine: 1709
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Server = 1
+    return:
+      type: Warbler.Models.Enums.QueryDepth
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Models.Enums.QueryDepth.Channel
+  commentId: F:Warbler.Models.Enums.QueryDepth.Channel
+  id: Channel
+  parent: Warbler.Models.Enums.QueryDepth
+  langs:
+  - csharp
+  - vb
+  name: Channel
+  nameWithType: QueryDepth.Channel
+  fullName: Warbler.Models.Enums.QueryDepth.Channel
+  type: Field
+  source:
+    id: Channel
+    path: ''
+    startLine: 1710
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Channel = 2
+    return:
+      type: Warbler.Models.Enums.QueryDepth
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Models.Enums.QueryDepth.User
+  commentId: F:Warbler.Models.Enums.QueryDepth.User
+  id: User
+  parent: Warbler.Models.Enums.QueryDepth
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: QueryDepth.User
+  fullName: Warbler.Models.Enums.QueryDepth.User
+  type: Field
+  source:
+    id: User
+    path: ''
+    startLine: 1711
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: User = 3
+    return:
+      type: Warbler.Models.Enums.QueryDepth
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Models.Enums.QueryDepth.Message
+  commentId: F:Warbler.Models.Enums.QueryDepth.Message
+  id: Message
+  parent: Warbler.Models.Enums.QueryDepth
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: QueryDepth.Message
+  fullName: Warbler.Models.Enums.QueryDepth.Message
+  type: Field
+  source:
+    id: Message
+    path: ''
+    startLine: 1712
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Message = 4
+    return:
+      type: Warbler.Models.Enums.QueryDepth
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Warbler.Models.Enums
+  commentId: N:Warbler.Models.Enums
+  isExternal: false
+  name: Warbler.Models.Enums
+  nameWithType: Warbler.Models.Enums
+  fullName: Warbler.Models.Enums
+- uid: Warbler.Models.Enums.QueryDepth
+  commentId: T:Warbler.Models.Enums.QueryDepth
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: QueryDepth
+  nameWithType: QueryDepth
+  fullName: Warbler.Models.Enums.QueryDepth

@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  id: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IEmailSender
+  - Warbler.Interfaces.ISmsSender
+  - Warbler.Interfaces.IUniversityRepository
+  - Warbler.Interfaces.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Interfaces.IEmailSender
+  commentId: T:Warbler.Interfaces.IEmailSender
+  isExternal: false
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: Warbler.Interfaces.IEmailSender
+- uid: Warbler.Interfaces.ISmsSender
+  commentId: T:Warbler.Interfaces.ISmsSender
+  isExternal: false
+  name: ISmsSender
+  nameWithType: ISmsSender
+  fullName: Warbler.Interfaces.ISmsSender
+- uid: Warbler.Interfaces.IUniversityRepository
+  commentId: T:Warbler.Interfaces.IUniversityRepository
+  isExternal: false
+  name: IUniversityRepository
+  nameWithType: IUniversityRepository
+  fullName: Warbler.Interfaces.IUniversityRepository
+- uid: Warbler.Interfaces.IUserRepository
+  commentId: T:Warbler.Interfaces.IUserRepository
+  isExternal: false
+  name: IUserRepository
+  nameWithType: IUserRepository
+  fullName: Warbler.Interfaces.IUserRepository

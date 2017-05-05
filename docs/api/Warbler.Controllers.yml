@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  id: Warbler.Controllers
+  children:
+  - Warbler.Controllers.AccountController
+  - Warbler.Controllers.ChatController
+  - Warbler.Controllers.DevController
+  - Warbler.Controllers.HomeController
+  - Warbler.Controllers.ManageController
+  - Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Controllers.AccountController
+  commentId: T:Warbler.Controllers.AccountController
+  isExternal: false
+  name: AccountController
+  nameWithType: AccountController
+  fullName: Warbler.Controllers.AccountController
+- uid: Warbler.Controllers.ChatController
+  commentId: T:Warbler.Controllers.ChatController
+  isExternal: false
+  name: ChatController
+  nameWithType: ChatController
+  fullName: Warbler.Controllers.ChatController
+- uid: Warbler.Controllers.DevController
+  commentId: T:Warbler.Controllers.DevController
+  isExternal: false
+  name: DevController
+  nameWithType: DevController
+  fullName: Warbler.Controllers.DevController
+- uid: Warbler.Controllers.HomeController
+  commentId: T:Warbler.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Warbler.Controllers.HomeController
+- uid: Warbler.Controllers.ManageController
+  commentId: T:Warbler.Controllers.ManageController
+  isExternal: false
+  name: ManageController
+  nameWithType: ManageController
+  fullName: Warbler.Controllers.ManageController
+- uid: Warbler.Controllers.ManageController.ManageMessageId
+  commentId: T:Warbler.Controllers.ManageController.ManageMessageId
+  parent: Warbler.Controllers
+  isExternal: false
+  name: ManageController.ManageMessageId
+  nameWithType: ManageController.ManageMessageId
+  fullName: Warbler.Controllers.ManageController.ManageMessageId
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers

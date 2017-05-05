@@ -1,0 +1,91 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.ISmsSender
+  commentId: T:Warbler.Interfaces.ISmsSender
+  id: ISmsSender
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ISmsSender
+  nameWithType: ISmsSender
+  fullName: Warbler.Interfaces.ISmsSender
+  type: Interface
+  source:
+    id: ISmsSender
+    path: ''
+    startLine: 1272
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  syntax:
+    content: public interface ISmsSender
+    content.vb: Public Interface ISmsSender
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
+  commentId: M:Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
+  id: SendSmsAsync(System.String,System.String)
+  parent: Warbler.Interfaces.ISmsSender
+  langs:
+  - csharp
+  - vb
+  name: SendSmsAsync(String, String)
+  nameWithType: ISmsSender.SendSmsAsync(String, String)
+  fullName: Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String, System.String)
+  type: Method
+  source:
+    id: SendSmsAsync
+    path: ''
+    startLine: 1274
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  syntax:
+    content: Task SendSmsAsync(string number, string message)
+    parameters:
+    - id: number
+      type: System.String
+    - id: message
+      type: System.String
+    return:
+      type: Task
+    content.vb: Function SendSmsAsync(number As String, message As String) As Task
+  overload: Warbler.Interfaces.ISmsSender.SendSmsAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.ISmsSender.SendSmsAsync*
+  commentId: Overload:Warbler.Interfaces.ISmsSender.SendSmsAsync
+  isExternal: false
+  name: SendSmsAsync
+  nameWithType: ISmsSender.SendSmsAsync
+  fullName: Warbler.Interfaces.ISmsSender.SendSmsAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

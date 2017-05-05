@@ -1,0 +1,1178 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers.ManageController
+  commentId: T:Warbler.Controllers.ManageController
+  id: ManageController
+  parent: Warbler.Controllers
+  children:
+  - Warbler.Controllers.ManageController.#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)
+  - Warbler.Controllers.ManageController.AddPhoneNumber
+  - Warbler.Controllers.ManageController.AddPhoneNumber(AddPhoneNumberViewModel)
+  - Warbler.Controllers.ManageController.ChangePassword
+  - Warbler.Controllers.ManageController.ChangePassword(ChangePasswordViewModel)
+  - Warbler.Controllers.ManageController.DisableTwoFactorAuthentication
+  - Warbler.Controllers.ManageController.EnableTwoFactorAuthentication
+  - Warbler.Controllers.ManageController.Index(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  - Warbler.Controllers.ManageController.LinkLogin(System.String)
+  - Warbler.Controllers.ManageController.LinkLoginCallback
+  - Warbler.Controllers.ManageController.ManageLogins(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  - Warbler.Controllers.ManageController.RemoveLogin(RemoveLoginViewModel)
+  - Warbler.Controllers.ManageController.RemovePhoneNumber
+  - Warbler.Controllers.ManageController.SetPassword
+  - Warbler.Controllers.ManageController.SetPassword(SetPasswordViewModel)
+  - Warbler.Controllers.ManageController.VerifyPhoneNumber(System.String)
+  - Warbler.Controllers.ManageController.VerifyPhoneNumber(VerifyPhoneNumberViewModel)
+  langs:
+  - csharp
+  - vb
+  name: ManageController
+  nameWithType: ManageController
+  fullName: Warbler.Controllers.ManageController
+  type: Class
+  source:
+    id: ManageController
+    path: ''
+    startLine: 747
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: 'public class ManageController : Controller'
+    content.vb: >-
+      Public Class ManageController
+
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Controllers.ManageController.#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)
+  commentId: M:Warbler.Controllers.ManageController.#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)
+  id: '#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)'
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: ManageController(UserManager<User>, SignInManager<User>, IOptions<IdentityCookieOptions>, IEmailSender, ISmsSender, ILoggerFactory)
+  nameWithType: ManageController.ManageController(UserManager<User>, SignInManager<User>, IOptions<IdentityCookieOptions>, IEmailSender, ISmsSender, ILoggerFactory)
+  fullName: Warbler.Controllers.ManageController.ManageController(UserManager<User>, SignInManager<User>, IOptions<IdentityCookieOptions>, IEmailSender, ISmsSender, ILoggerFactory)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 757
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public ManageController(UserManager<User> userManager, SignInManager<User> signInManager, IOptions<IdentityCookieOptions> identityCookieOptions, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory)
+    parameters:
+    - id: userManager
+      type: UserManager{User}
+    - id: signInManager
+      type: SignInManager{User}
+    - id: identityCookieOptions
+      type: IOptions{IdentityCookieOptions}
+    - id: emailSender
+      type: IEmailSender
+    - id: smsSender
+      type: ISmsSender
+    - id: loggerFactory
+      type: ILoggerFactory
+    content.vb: Public Sub New(userManager As UserManager(Of User), signInManager As SignInManager(Of User), identityCookieOptions As IOptions(Of IdentityCookieOptions), emailSender As IEmailSender, smsSender As ISmsSender, loggerFactory As ILoggerFactory)
+  overload: Warbler.Controllers.ManageController.#ctor*
+  nameWithType.vb: ManageController.ManageController(UserManager(Of User), SignInManager(Of User), IOptions(Of IdentityCookieOptions), IEmailSender, ISmsSender, ILoggerFactory)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Warbler.Controllers.ManageController.ManageController(UserManager(Of User), SignInManager(Of User), IOptions(Of IdentityCookieOptions), IEmailSender, ISmsSender, ILoggerFactory)
+  name.vb: ManageController(UserManager(Of User), SignInManager(Of User), IOptions(Of IdentityCookieOptions), IEmailSender, ISmsSender, ILoggerFactory)
+- uid: Warbler.Controllers.ManageController.Index(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  commentId: M:Warbler.Controllers.ManageController.Index(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  id: Index(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: Index(Nullable<ManageController.ManageMessageId>)
+  nameWithType: ManageController.Index(Nullable<ManageController.ManageMessageId>)
+  fullName: Warbler.Controllers.ManageController.Index(System.Nullable<Warbler.Controllers.ManageController.ManageMessageId>)
+  type: Method
+  source:
+    id: Index
+    path: ''
+    startLine: 774
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> Index(ManageController.ManageMessageId? message = null)
+    parameters:
+    - id: message
+      type: System.Nullable{Warbler.Controllers.ManageController.ManageMessageId}
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function Index(message As ManageController.ManageMessageId? = Nothing) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.Index*
+  nameWithType.vb: ManageController.Index(Nullable(Of ManageController.ManageMessageId))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Warbler.Controllers.ManageController.Index(System.Nullable(Of Warbler.Controllers.ManageController.ManageMessageId))
+  name.vb: Index(Nullable(Of ManageController.ManageMessageId))
+- uid: Warbler.Controllers.ManageController.RemoveLogin(RemoveLoginViewModel)
+  commentId: M:Warbler.Controllers.ManageController.RemoveLogin(RemoveLoginViewModel)
+  id: RemoveLogin(RemoveLoginViewModel)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: RemoveLogin(RemoveLoginViewModel)
+  nameWithType: ManageController.RemoveLogin(RemoveLoginViewModel)
+  fullName: Warbler.Controllers.ManageController.RemoveLogin(RemoveLoginViewModel)
+  type: Method
+  source:
+    id: RemoveLogin
+    path: ''
+    startLine: 803
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> RemoveLogin(RemoveLoginViewModel account)
+    parameters:
+    - id: account
+      type: RemoveLoginViewModel
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function RemoveLogin(account As RemoveLoginViewModel) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.RemoveLogin*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.AddPhoneNumber
+  commentId: M:Warbler.Controllers.ManageController.AddPhoneNumber
+  id: AddPhoneNumber
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: AddPhoneNumber()
+  nameWithType: ManageController.AddPhoneNumber()
+  fullName: Warbler.Controllers.ManageController.AddPhoneNumber()
+  type: Method
+  source:
+    id: AddPhoneNumber
+    path: ''
+    startLine: 822
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult AddPhoneNumber()
+    return:
+      type: IActionResult
+    content.vb: Public Function AddPhoneNumber As IActionResult
+  overload: Warbler.Controllers.ManageController.AddPhoneNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.AddPhoneNumber(AddPhoneNumberViewModel)
+  commentId: M:Warbler.Controllers.ManageController.AddPhoneNumber(AddPhoneNumberViewModel)
+  id: AddPhoneNumber(AddPhoneNumberViewModel)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: AddPhoneNumber(AddPhoneNumberViewModel)
+  nameWithType: ManageController.AddPhoneNumber(AddPhoneNumberViewModel)
+  fullName: Warbler.Controllers.ManageController.AddPhoneNumber(AddPhoneNumberViewModel)
+  type: Method
+  source:
+    id: AddPhoneNumber
+    path: ''
+    startLine: 828
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> AddPhoneNumber(AddPhoneNumberViewModel model)
+    parameters:
+    - id: model
+      type: AddPhoneNumberViewModel
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function AddPhoneNumber(model As AddPhoneNumberViewModel) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.AddPhoneNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.EnableTwoFactorAuthentication
+  commentId: M:Warbler.Controllers.ManageController.EnableTwoFactorAuthentication
+  id: EnableTwoFactorAuthentication
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: EnableTwoFactorAuthentication()
+  nameWithType: ManageController.EnableTwoFactorAuthentication()
+  fullName: Warbler.Controllers.ManageController.EnableTwoFactorAuthentication()
+  type: Method
+  source:
+    id: EnableTwoFactorAuthentication
+    path: ''
+    startLine: 848
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> EnableTwoFactorAuthentication()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function EnableTwoFactorAuthentication As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.EnableTwoFactorAuthentication*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.DisableTwoFactorAuthentication
+  commentId: M:Warbler.Controllers.ManageController.DisableTwoFactorAuthentication
+  id: DisableTwoFactorAuthentication
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: DisableTwoFactorAuthentication()
+  nameWithType: ManageController.DisableTwoFactorAuthentication()
+  fullName: Warbler.Controllers.ManageController.DisableTwoFactorAuthentication()
+  type: Method
+  source:
+    id: DisableTwoFactorAuthentication
+    path: ''
+    startLine: 863
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> DisableTwoFactorAuthentication()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function DisableTwoFactorAuthentication As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.DisableTwoFactorAuthentication*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.VerifyPhoneNumber(System.String)
+  commentId: M:Warbler.Controllers.ManageController.VerifyPhoneNumber(System.String)
+  id: VerifyPhoneNumber(System.String)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: VerifyPhoneNumber(String)
+  nameWithType: ManageController.VerifyPhoneNumber(String)
+  fullName: Warbler.Controllers.ManageController.VerifyPhoneNumber(System.String)
+  type: Method
+  source:
+    id: VerifyPhoneNumber
+    path: ''
+    startLine: 878
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> VerifyPhoneNumber(string phoneNumber)
+    parameters:
+    - id: phoneNumber
+      type: System.String
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function VerifyPhoneNumber(phoneNumber As String) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.VerifyPhoneNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.VerifyPhoneNumber(VerifyPhoneNumberViewModel)
+  commentId: M:Warbler.Controllers.ManageController.VerifyPhoneNumber(VerifyPhoneNumberViewModel)
+  id: VerifyPhoneNumber(VerifyPhoneNumberViewModel)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: VerifyPhoneNumber(VerifyPhoneNumberViewModel)
+  nameWithType: ManageController.VerifyPhoneNumber(VerifyPhoneNumberViewModel)
+  fullName: Warbler.Controllers.ManageController.VerifyPhoneNumber(VerifyPhoneNumberViewModel)
+  type: Method
+  source:
+    id: VerifyPhoneNumber
+    path: ''
+    startLine: 892
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> VerifyPhoneNumber(VerifyPhoneNumberViewModel model)
+    parameters:
+    - id: model
+      type: VerifyPhoneNumberViewModel
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function VerifyPhoneNumber(model As VerifyPhoneNumberViewModel) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.VerifyPhoneNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.RemovePhoneNumber
+  commentId: M:Warbler.Controllers.ManageController.RemovePhoneNumber
+  id: RemovePhoneNumber
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: RemovePhoneNumber()
+  nameWithType: ManageController.RemovePhoneNumber()
+  fullName: Warbler.Controllers.ManageController.RemovePhoneNumber()
+  type: Method
+  source:
+    id: RemovePhoneNumber
+    path: ''
+    startLine: 916
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> RemovePhoneNumber()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function RemovePhoneNumber As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.RemovePhoneNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.ChangePassword
+  commentId: M:Warbler.Controllers.ManageController.ChangePassword
+  id: ChangePassword
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: ChangePassword()
+  nameWithType: ManageController.ChangePassword()
+  fullName: Warbler.Controllers.ManageController.ChangePassword()
+  type: Method
+  source:
+    id: ChangePassword
+    path: ''
+    startLine: 934
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult ChangePassword()
+    return:
+      type: IActionResult
+    content.vb: Public Function ChangePassword As IActionResult
+  overload: Warbler.Controllers.ManageController.ChangePassword*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.ChangePassword(ChangePasswordViewModel)
+  commentId: M:Warbler.Controllers.ManageController.ChangePassword(ChangePasswordViewModel)
+  id: ChangePassword(ChangePasswordViewModel)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: ChangePassword(ChangePasswordViewModel)
+  nameWithType: ManageController.ChangePassword(ChangePasswordViewModel)
+  fullName: Warbler.Controllers.ManageController.ChangePassword(ChangePasswordViewModel)
+  type: Method
+  source:
+    id: ChangePassword
+    path: ''
+    startLine: 941
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+    parameters:
+    - id: model
+      type: ChangePasswordViewModel
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function ChangePassword(model As ChangePasswordViewModel) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.ChangePassword*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.SetPassword
+  commentId: M:Warbler.Controllers.ManageController.SetPassword
+  id: SetPassword
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: SetPassword()
+  nameWithType: ManageController.SetPassword()
+  fullName: Warbler.Controllers.ManageController.SetPassword()
+  type: Method
+  source:
+    id: SetPassword
+    path: ''
+    startLine: 966
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult SetPassword()
+    return:
+      type: IActionResult
+    content.vb: Public Function SetPassword As IActionResult
+  overload: Warbler.Controllers.ManageController.SetPassword*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.SetPassword(SetPasswordViewModel)
+  commentId: M:Warbler.Controllers.ManageController.SetPassword(SetPasswordViewModel)
+  id: SetPassword(SetPasswordViewModel)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: SetPassword(SetPasswordViewModel)
+  nameWithType: ManageController.SetPassword(SetPasswordViewModel)
+  fullName: Warbler.Controllers.ManageController.SetPassword(SetPasswordViewModel)
+  type: Method
+  source:
+    id: SetPassword
+    path: ''
+    startLine: 973
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> SetPassword(SetPasswordViewModel model)
+    parameters:
+    - id: model
+      type: SetPasswordViewModel
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function SetPassword(model As SetPasswordViewModel) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.SetPassword*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.ManageLogins(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  commentId: M:Warbler.Controllers.ManageController.ManageLogins(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  id: ManageLogins(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: ManageLogins(Nullable<ManageController.ManageMessageId>)
+  nameWithType: ManageController.ManageLogins(Nullable<ManageController.ManageMessageId>)
+  fullName: Warbler.Controllers.ManageController.ManageLogins(System.Nullable<Warbler.Controllers.ManageController.ManageMessageId>)
+  type: Method
+  source:
+    id: ManageLogins
+    path: ''
+    startLine: 998
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> ManageLogins(ManageController.ManageMessageId? message = null)
+    parameters:
+    - id: message
+      type: System.Nullable{Warbler.Controllers.ManageController.ManageMessageId}
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function ManageLogins(message As ManageController.ManageMessageId? = Nothing) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.ManageLogins*
+  nameWithType.vb: ManageController.ManageLogins(Nullable(Of ManageController.ManageMessageId))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Warbler.Controllers.ManageController.ManageLogins(System.Nullable(Of Warbler.Controllers.ManageController.ManageMessageId))
+  name.vb: ManageLogins(Nullable(Of ManageController.ManageMessageId))
+- uid: Warbler.Controllers.ManageController.LinkLogin(System.String)
+  commentId: M:Warbler.Controllers.ManageController.LinkLogin(System.String)
+  id: LinkLogin(System.String)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: LinkLogin(String)
+  nameWithType: ManageController.LinkLogin(String)
+  fullName: Warbler.Controllers.ManageController.LinkLogin(System.String)
+  type: Method
+  source:
+    id: LinkLogin
+    path: ''
+    startLine: 1022
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> LinkLogin(string provider)
+    parameters:
+    - id: provider
+      type: System.String
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function LinkLogin(provider As String) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.LinkLogin*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.LinkLoginCallback
+  commentId: M:Warbler.Controllers.ManageController.LinkLoginCallback
+  id: LinkLoginCallback
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: LinkLoginCallback()
+  nameWithType: ManageController.LinkLoginCallback()
+  fullName: Warbler.Controllers.ManageController.LinkLoginCallback()
+  type: Method
+  source:
+    id: LinkLoginCallback
+    path: ''
+    startLine: 1036
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<ActionResult> LinkLoginCallback()
+    return:
+      type: Task{ActionResult}
+    content.vb: Public Function LinkLoginCallback As Task(Of ActionResult)
+  overload: Warbler.Controllers.ManageController.LinkLoginCallback*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Controllers.ManageController.#ctor*
+  commentId: Overload:Warbler.Controllers.ManageController.#ctor
+  isExternal: false
+  name: ManageController
+  nameWithType: ManageController.ManageController
+  fullName: Warbler.Controllers.ManageController.ManageController
+- uid: UserManager{User}
+  commentId: '!:UserManager{User}'
+  definition: UserManager`1
+  name: UserManager<User>
+  nameWithType: UserManager<User>
+  fullName: UserManager<User>
+  nameWithType.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of User)
+  name.vb: UserManager(Of User)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SignInManager{User}
+  commentId: '!:SignInManager{User}'
+  definition: SignInManager`1
+  name: SignInManager<User>
+  nameWithType: SignInManager<User>
+  fullName: SignInManager<User>
+  nameWithType.vb: SignInManager(Of User)
+  fullName.vb: SignInManager(Of User)
+  name.vb: SignInManager(Of User)
+  spec.csharp:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: User
+    name: User
+    nameWithType: User
+    fullName: User
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IOptions{IdentityCookieOptions}
+  commentId: '!:IOptions{IdentityCookieOptions}'
+  definition: IOptions`1
+  name: IOptions<IdentityCookieOptions>
+  nameWithType: IOptions<IdentityCookieOptions>
+  fullName: IOptions<IdentityCookieOptions>
+  nameWithType.vb: IOptions(Of IdentityCookieOptions)
+  fullName.vb: IOptions(Of IdentityCookieOptions)
+  name.vb: IOptions(Of IdentityCookieOptions)
+  spec.csharp:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityCookieOptions
+    name: IdentityCookieOptions
+    nameWithType: IdentityCookieOptions
+    fullName: IdentityCookieOptions
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityCookieOptions
+    name: IdentityCookieOptions
+    nameWithType: IdentityCookieOptions
+    fullName: IdentityCookieOptions
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEmailSender
+  isExternal: true
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: IEmailSender
+- uid: ISmsSender
+  isExternal: true
+  name: ISmsSender
+  nameWithType: ISmsSender
+  fullName: ISmsSender
+- uid: ILoggerFactory
+  isExternal: true
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: ILoggerFactory
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SignInManager`1
+  isExternal: true
+  name: SignInManager<>
+  nameWithType: SignInManager<>
+  fullName: SignInManager<>
+  nameWithType.vb: SignInManager(Of )
+  fullName.vb: SignInManager(Of )
+  name.vb: SignInManager(Of )
+  spec.csharp:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IOptions`1
+  isExternal: true
+  name: IOptions<>
+  nameWithType: IOptions<>
+  fullName: IOptions<>
+  nameWithType.vb: IOptions(Of )
+  fullName.vb: IOptions(Of )
+  name.vb: IOptions(Of )
+  spec.csharp:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Controllers.ManageController.Index*
+  commentId: Overload:Warbler.Controllers.ManageController.Index
+  isExternal: false
+  name: Index
+  nameWithType: ManageController.Index
+  fullName: Warbler.Controllers.ManageController.Index
+- uid: System.Nullable{Warbler.Controllers.ManageController.ManageMessageId}
+  commentId: T:System.Nullable{Warbler.Controllers.ManageController.ManageMessageId}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<ManageController.ManageMessageId>
+  nameWithType: Nullable<ManageController.ManageMessageId>
+  fullName: System.Nullable<Warbler.Controllers.ManageController.ManageMessageId>
+  nameWithType.vb: Nullable(Of ManageController.ManageMessageId)
+  fullName.vb: System.Nullable(Of Warbler.Controllers.ManageController.ManageMessageId)
+  name.vb: Nullable(Of ManageController.ManageMessageId)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Controllers.ManageController.ManageMessageId
+    name: ManageController.ManageMessageId
+    nameWithType: ManageController.ManageMessageId
+    fullName: Warbler.Controllers.ManageController.ManageMessageId
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Controllers.ManageController.ManageMessageId
+    name: ManageController.ManageMessageId
+    nameWithType: ManageController.ManageMessageId
+    fullName: Warbler.Controllers.ManageController.ManageMessageId
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Controllers.ManageController.RemoveLogin*
+  commentId: Overload:Warbler.Controllers.ManageController.RemoveLogin
+  isExternal: false
+  name: RemoveLogin
+  nameWithType: ManageController.RemoveLogin
+  fullName: Warbler.Controllers.ManageController.RemoveLogin
+- uid: RemoveLoginViewModel
+  commentId: '!:RemoveLoginViewModel'
+  isExternal: true
+  name: RemoveLoginViewModel
+  nameWithType: RemoveLoginViewModel
+  fullName: RemoveLoginViewModel
+- uid: Warbler.Controllers.ManageController.AddPhoneNumber*
+  commentId: Overload:Warbler.Controllers.ManageController.AddPhoneNumber
+  isExternal: false
+  name: AddPhoneNumber
+  nameWithType: ManageController.AddPhoneNumber
+  fullName: Warbler.Controllers.ManageController.AddPhoneNumber
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult
+- uid: AddPhoneNumberViewModel
+  commentId: '!:AddPhoneNumberViewModel'
+  isExternal: true
+  name: AddPhoneNumberViewModel
+  nameWithType: AddPhoneNumberViewModel
+  fullName: AddPhoneNumberViewModel
+- uid: Warbler.Controllers.ManageController.EnableTwoFactorAuthentication*
+  commentId: Overload:Warbler.Controllers.ManageController.EnableTwoFactorAuthentication
+  isExternal: false
+  name: EnableTwoFactorAuthentication
+  nameWithType: ManageController.EnableTwoFactorAuthentication
+  fullName: Warbler.Controllers.ManageController.EnableTwoFactorAuthentication
+- uid: Warbler.Controllers.ManageController.DisableTwoFactorAuthentication*
+  commentId: Overload:Warbler.Controllers.ManageController.DisableTwoFactorAuthentication
+  isExternal: false
+  name: DisableTwoFactorAuthentication
+  nameWithType: ManageController.DisableTwoFactorAuthentication
+  fullName: Warbler.Controllers.ManageController.DisableTwoFactorAuthentication
+- uid: Warbler.Controllers.ManageController.VerifyPhoneNumber*
+  commentId: Overload:Warbler.Controllers.ManageController.VerifyPhoneNumber
+  isExternal: false
+  name: VerifyPhoneNumber
+  nameWithType: ManageController.VerifyPhoneNumber
+  fullName: Warbler.Controllers.ManageController.VerifyPhoneNumber
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VerifyPhoneNumberViewModel
+  commentId: '!:VerifyPhoneNumberViewModel'
+  isExternal: true
+  name: VerifyPhoneNumberViewModel
+  nameWithType: VerifyPhoneNumberViewModel
+  fullName: VerifyPhoneNumberViewModel
+- uid: Warbler.Controllers.ManageController.RemovePhoneNumber*
+  commentId: Overload:Warbler.Controllers.ManageController.RemovePhoneNumber
+  isExternal: false
+  name: RemovePhoneNumber
+  nameWithType: ManageController.RemovePhoneNumber
+  fullName: Warbler.Controllers.ManageController.RemovePhoneNumber
+- uid: Warbler.Controllers.ManageController.ChangePassword*
+  commentId: Overload:Warbler.Controllers.ManageController.ChangePassword
+  isExternal: false
+  name: ChangePassword
+  nameWithType: ManageController.ChangePassword
+  fullName: Warbler.Controllers.ManageController.ChangePassword
+- uid: ChangePasswordViewModel
+  commentId: '!:ChangePasswordViewModel'
+  isExternal: true
+  name: ChangePasswordViewModel
+  nameWithType: ChangePasswordViewModel
+  fullName: ChangePasswordViewModel
+- uid: Warbler.Controllers.ManageController.SetPassword*
+  commentId: Overload:Warbler.Controllers.ManageController.SetPassword
+  isExternal: false
+  name: SetPassword
+  nameWithType: ManageController.SetPassword
+  fullName: Warbler.Controllers.ManageController.SetPassword
+- uid: SetPasswordViewModel
+  commentId: '!:SetPasswordViewModel'
+  isExternal: true
+  name: SetPasswordViewModel
+  nameWithType: SetPasswordViewModel
+  fullName: SetPasswordViewModel
+- uid: Warbler.Controllers.ManageController.ManageLogins*
+  commentId: Overload:Warbler.Controllers.ManageController.ManageLogins
+  isExternal: false
+  name: ManageLogins
+  nameWithType: ManageController.ManageLogins
+  fullName: Warbler.Controllers.ManageController.ManageLogins
+- uid: Warbler.Controllers.ManageController.LinkLogin*
+  commentId: Overload:Warbler.Controllers.ManageController.LinkLogin
+  isExternal: false
+  name: LinkLogin
+  nameWithType: ManageController.LinkLogin
+  fullName: Warbler.Controllers.ManageController.LinkLogin
+- uid: Warbler.Controllers.ManageController.LinkLoginCallback*
+  commentId: Overload:Warbler.Controllers.ManageController.LinkLoginCallback
+  isExternal: false
+  name: LinkLoginCallback
+  nameWithType: ManageController.LinkLoginCallback
+  fullName: Warbler.Controllers.ManageController.LinkLoginCallback
+- uid: Task{ActionResult}
+  commentId: '!:Task{ActionResult}'
+  definition: Task`1
+  name: Task<ActionResult>
+  nameWithType: Task<ActionResult>
+  fullName: Task<ActionResult>
+  nameWithType.vb: Task(Of ActionResult)
+  fullName.vb: Task(Of ActionResult)
+  name.vb: Task(Of ActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: ActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: ActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

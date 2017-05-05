@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.Enums.ChannelType
+  commentId: T:Warbler.Models.Enums.ChannelType
+  id: ChannelType
+  parent: Warbler.Models.Enums
+  children:
+  - Warbler.Models.Enums.ChannelType.Normal
+  - Warbler.Models.Enums.ChannelType.PrivateMessaging
+  langs:
+  - csharp
+  - vb
+  name: ChannelType
+  nameWithType: ChannelType
+  fullName: Warbler.Models.Enums.ChannelType
+  type: Enum
+  source:
+    id: ChannelType
+    path: ''
+    startLine: 1697
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: public enum ChannelType
+    content.vb: Public Enum ChannelType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Warbler.Models.Enums.ChannelType.Normal
+  commentId: F:Warbler.Models.Enums.ChannelType.Normal
+  id: Normal
+  parent: Warbler.Models.Enums.ChannelType
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: ChannelType.Normal
+  fullName: Warbler.Models.Enums.ChannelType.Normal
+  type: Field
+  source:
+    id: Normal
+    path: ''
+    startLine: 1699
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: Normal = 1
+    return:
+      type: Warbler.Models.Enums.ChannelType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Models.Enums.ChannelType.PrivateMessaging
+  commentId: F:Warbler.Models.Enums.ChannelType.PrivateMessaging
+  id: PrivateMessaging
+  parent: Warbler.Models.Enums.ChannelType
+  langs:
+  - csharp
+  - vb
+  name: PrivateMessaging
+  nameWithType: ChannelType.PrivateMessaging
+  fullName: Warbler.Models.Enums.ChannelType.PrivateMessaging
+  type: Field
+  source:
+    id: PrivateMessaging
+    path: ''
+    startLine: 1700
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.Enums
+  syntax:
+    content: PrivateMessaging = 2
+    return:
+      type: Warbler.Models.Enums.ChannelType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Warbler.Models.Enums
+  commentId: N:Warbler.Models.Enums
+  isExternal: false
+  name: Warbler.Models.Enums
+  nameWithType: Warbler.Models.Enums
+  fullName: Warbler.Models.Enums
+- uid: Warbler.Models.Enums.ChannelType
+  commentId: T:Warbler.Models.Enums.ChannelType
+  parent: Warbler.Models.Enums
+  isExternal: false
+  name: ChannelType
+  nameWithType: ChannelType
+  fullName: Warbler.Models.Enums.ChannelType

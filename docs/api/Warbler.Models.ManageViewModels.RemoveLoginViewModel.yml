@@ -1,0 +1,422 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.ManageViewModels.RemoveLoginViewModel
+  commentId: T:Warbler.Models.ManageViewModels.RemoveLoginViewModel
+  id: RemoveLoginViewModel
+  parent: Warbler.Models.ManageViewModels
+  children:
+  - Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  - Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  langs:
+  - csharp
+  - vb
+  name: RemoveLoginViewModel
+  nameWithType: RemoveLoginViewModel
+  fullName: Warbler.Models.ManageViewModels.RemoveLoginViewModel
+  type: Class
+  source:
+    id: RemoveLoginViewModel
+    path: ''
+    startLine: 1824
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public class RemoveLoginViewModel
+    content.vb: Public Class RemoveLoginViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  commentId: P:Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  id: LoginProvider
+  parent: Warbler.Models.ManageViewModels.RemoveLoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: LoginProvider
+  nameWithType: RemoveLoginViewModel.LoginProvider
+  fullName: Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  type: Property
+  source:
+    id: LoginProvider
+    path: ''
+    startLine: 1826
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string LoginProvider { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LoginProvider As String
+  overload: Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  commentId: P:Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  id: ProviderKey
+  parent: Warbler.Models.ManageViewModels.RemoveLoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: ProviderKey
+  nameWithType: RemoveLoginViewModel.ProviderKey
+  fullName: Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  type: Property
+  source:
+    id: ProviderKey
+    path: ''
+    startLine: 1827
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string ProviderKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ProviderKey As String
+  overload: Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Models.ManageViewModels
+  commentId: N:Warbler.Models.ManageViewModels
+  isExternal: false
+  name: Warbler.Models.ManageViewModels
+  nameWithType: Warbler.Models.ManageViewModels
+  fullName: Warbler.Models.ManageViewModels
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider*
+  commentId: Overload:Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  isExternal: false
+  name: LoginProvider
+  nameWithType: RemoveLoginViewModel.LoginProvider
+  fullName: Warbler.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey*
+  commentId: Overload:Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  isExternal: false
+  name: ProviderKey
+  nameWithType: RemoveLoginViewModel.ProviderKey
+  fullName: Warbler.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey

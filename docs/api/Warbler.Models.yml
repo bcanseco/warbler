@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  id: Warbler.Models
+  children:
+  - Warbler.Models.Channel
+  - Warbler.Models.Membership
+  - Warbler.Models.Message
+  - Warbler.Models.Server
+  - Warbler.Models.University
+  - Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel
+- uid: Warbler.Models.Membership
+  commentId: T:Warbler.Models.Membership
+  isExternal: false
+  name: Membership
+  nameWithType: Membership
+  fullName: Warbler.Models.Membership
+- uid: Warbler.Models.Message
+  commentId: T:Warbler.Models.Message
+  isExternal: false
+  name: Message
+  nameWithType: Message
+  fullName: Warbler.Models.Message
+- uid: Warbler.Models.Server
+  commentId: T:Warbler.Models.Server
+  parent: Warbler.Models
+  isExternal: false
+  name: Server
+  nameWithType: Server
+  fullName: Warbler.Models.Server
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models

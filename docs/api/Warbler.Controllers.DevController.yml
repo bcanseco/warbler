@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers.DevController
+  commentId: T:Warbler.Controllers.DevController
+  id: DevController
+  parent: Warbler.Controllers
+  children:
+  - Warbler.Controllers.DevController.#ctor(WarblerDbContext)
+  - Warbler.Controllers.DevController.Error
+  - Warbler.Controllers.DevController.Index
+  - Warbler.Controllers.DevController.Universities
+  langs:
+  - csharp
+  - vb
+  name: DevController
+  nameWithType: DevController
+  fullName: Warbler.Controllers.DevController
+  type: Class
+  source:
+    id: DevController
+    path: ''
+    startLine: 679
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: 'public class DevController : Controller'
+    content.vb: >-
+      Public Class DevController
+
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Controllers.DevController.#ctor(WarblerDbContext)
+  commentId: M:Warbler.Controllers.DevController.#ctor(WarblerDbContext)
+  id: '#ctor(WarblerDbContext)'
+  parent: Warbler.Controllers.DevController
+  langs:
+  - csharp
+  - vb
+  name: DevController(WarblerDbContext)
+  nameWithType: DevController.DevController(WarblerDbContext)
+  fullName: Warbler.Controllers.DevController.DevController(WarblerDbContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 684
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public DevController(WarblerDbContext context)
+    parameters:
+    - id: context
+      type: WarblerDbContext
+    content.vb: Public Sub New(context As WarblerDbContext)
+  overload: Warbler.Controllers.DevController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.DevController.Index
+  commentId: M:Warbler.Controllers.DevController.Index
+  id: Index
+  parent: Warbler.Controllers.DevController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: DevController.Index()
+  fullName: Warbler.Controllers.DevController.Index()
+  type: Method
+  source:
+    id: Index
+    path: ''
+    startLine: 689
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Index()
+    return:
+      type: IActionResult
+    content.vb: Public Function Index As IActionResult
+  overload: Warbler.Controllers.DevController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.DevController.Error
+  commentId: M:Warbler.Controllers.DevController.Error
+  id: Error
+  parent: Warbler.Controllers.DevController
+  langs:
+  - csharp
+  - vb
+  name: Error()
+  nameWithType: DevController.Error()
+  fullName: Warbler.Controllers.DevController.Error()
+  type: Method
+  source:
+    id: Error
+    path: ''
+    startLine: 694
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Error()
+    return:
+      type: IActionResult
+    content.vb: Public Function Error As IActionResult
+  overload: Warbler.Controllers.DevController.Error*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.DevController.Universities
+  commentId: M:Warbler.Controllers.DevController.Universities
+  id: Universities
+  parent: Warbler.Controllers.DevController
+  langs:
+  - csharp
+  - vb
+  name: Universities()
+  nameWithType: DevController.Universities()
+  fullName: Warbler.Controllers.DevController.Universities()
+  type: Method
+  source:
+    id: Universities
+    path: ''
+    startLine: 702
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  summary: "\nReturns a JSON string with all university info down to the message level.\n"
+  example: []
+  syntax:
+    content: public Task<string> Universities()
+    return:
+      type: Task{System.String}
+    content.vb: Public Function Universities As Task(Of String)
+  overload: Warbler.Controllers.DevController.Universities*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Controllers.DevController.#ctor*
+  commentId: Overload:Warbler.Controllers.DevController.#ctor
+  isExternal: false
+  name: DevController
+  nameWithType: DevController.DevController
+  fullName: Warbler.Controllers.DevController.DevController
+- uid: WarblerDbContext
+  isExternal: true
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: WarblerDbContext
+- uid: Warbler.Controllers.DevController.Index*
+  commentId: Overload:Warbler.Controllers.DevController.Index
+  isExternal: false
+  name: Index
+  nameWithType: DevController.Index
+  fullName: Warbler.Controllers.DevController.Index
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult
+- uid: Warbler.Controllers.DevController.Error*
+  commentId: Overload:Warbler.Controllers.DevController.Error
+  isExternal: false
+  name: Error
+  nameWithType: DevController.Error
+  fullName: Warbler.Controllers.DevController.Error
+- uid: Warbler.Controllers.DevController.Universities*
+  commentId: Overload:Warbler.Controllers.DevController.Universities
+  isExternal: false
+  name: Universities
+  nameWithType: DevController.Universities
+  fullName: Warbler.Controllers.DevController.Universities
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
+  definition: Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

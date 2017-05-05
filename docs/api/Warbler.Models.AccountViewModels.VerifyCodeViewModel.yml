@@ -1,0 +1,543 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  commentId: T:Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  id: VerifyCodeViewModel
+  parent: Warbler.Models.AccountViewModels
+  children:
+  - Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code
+  - Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider
+  - Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser
+  - Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe
+  - Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl
+  langs:
+  - csharp
+  - vb
+  name: VerifyCodeViewModel
+  nameWithType: VerifyCodeViewModel
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  type: Class
+  source:
+    id: VerifyCodeViewModel
+    path: ''
+    startLine: 1668
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.AccountViewModels
+  syntax:
+    content: public class VerifyCodeViewModel
+    content.vb: Public Class VerifyCodeViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider
+  commentId: P:Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider
+  id: Provider
+  parent: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  langs:
+  - csharp
+  - vb
+  name: Provider
+  nameWithType: VerifyCodeViewModel.Provider
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider
+  type: Property
+  source:
+    id: Provider
+    path: ''
+    startLine: 1670
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.AccountViewModels
+  syntax:
+    content: public string Provider { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Provider As String
+  overload: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code
+  commentId: P:Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code
+  id: Code
+  parent: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: VerifyCodeViewModel.Code
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code
+  type: Property
+  source:
+    id: Code
+    path: ''
+    startLine: 1673
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.AccountViewModels
+  syntax:
+    content: public string Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Code As String
+  overload: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl
+  commentId: P:Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl
+  id: ReturnUrl
+  parent: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  langs:
+  - csharp
+  - vb
+  name: ReturnUrl
+  nameWithType: VerifyCodeViewModel.ReturnUrl
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl
+  type: Property
+  source:
+    id: ReturnUrl
+    path: ''
+    startLine: 1676
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.AccountViewModels
+  syntax:
+    content: public string ReturnUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ReturnUrl As String
+  overload: Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser
+  commentId: P:Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser
+  id: RememberBrowser
+  parent: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  langs:
+  - csharp
+  - vb
+  name: RememberBrowser
+  nameWithType: VerifyCodeViewModel.RememberBrowser
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser
+  type: Property
+  source:
+    id: RememberBrowser
+    path: ''
+    startLine: 1678
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.AccountViewModels
+  syntax:
+    content: public bool RememberBrowser { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RememberBrowser As Boolean
+  overload: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe
+  commentId: P:Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe
+  id: RememberMe
+  parent: Warbler.Models.AccountViewModels.VerifyCodeViewModel
+  langs:
+  - csharp
+  - vb
+  name: RememberMe
+  nameWithType: VerifyCodeViewModel.RememberMe
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe
+  type: Property
+  source:
+    id: RememberMe
+    path: ''
+    startLine: 1681
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.AccountViewModels
+  syntax:
+    content: public bool RememberMe { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RememberMe As Boolean
+  overload: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Models.AccountViewModels
+  commentId: N:Warbler.Models.AccountViewModels
+  isExternal: false
+  name: Warbler.Models.AccountViewModels
+  nameWithType: Warbler.Models.AccountViewModels
+  fullName: Warbler.Models.AccountViewModels
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider*
+  commentId: Overload:Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider
+  isExternal: false
+  name: Provider
+  nameWithType: VerifyCodeViewModel.Provider
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Provider
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code*
+  commentId: Overload:Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code
+  isExternal: false
+  name: Code
+  nameWithType: VerifyCodeViewModel.Code
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.Code
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl*
+  commentId: Overload:Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl
+  isExternal: false
+  name: ReturnUrl
+  nameWithType: VerifyCodeViewModel.ReturnUrl
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.ReturnUrl
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser*
+  commentId: Overload:Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser
+  isExternal: false
+  name: RememberBrowser
+  nameWithType: VerifyCodeViewModel.RememberBrowser
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberBrowser
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe*
+  commentId: Overload:Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe
+  isExternal: false
+  name: RememberMe
+  nameWithType: VerifyCodeViewModel.RememberMe
+  fullName: Warbler.Models.AccountViewModels.VerifyCodeViewModel.RememberMe

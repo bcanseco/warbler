@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Areas\**\*;Identity\**\*;Migrations\**\*;Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
+    <None Update="Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </None>
   </ItemGroup>

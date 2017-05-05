@@ -4,7 +4,7 @@
     "inputFile": "Styles/site.less"
   },
   {
-    "outputFile": "Areas/Chat/Styles/Chat.css",
-    "inputFile": "Areas/Chat/Styles/Chat.less"
+    "outputFile": "Styles/Chat.css",
+    "inputFile": "Styles/Chat.less"
   }
 ]

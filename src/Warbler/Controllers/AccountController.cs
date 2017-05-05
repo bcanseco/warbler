@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Warbler.Areas.Chat.Models;
-using Warbler.Identity.Models.AccountViewModels;
-using Warbler.Identity.Services;
+using Warbler.Interfaces;
+using Warbler.Models;
+using Warbler.Models.AccountViewModels;
 
 namespace Warbler.Controllers
 {

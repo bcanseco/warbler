@@ -11,10 +11,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.SignalR.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using Warbler.Areas.Chat.Models;
-using Warbler.Identity.Data;
-using Warbler.Identity.Models;
-using Warbler.Identity.Services;
+using Warbler.Models;
+using Warbler.Misc;
+using Warbler.Interfaces;
+using Warbler.Services;
 
 namespace Warbler
 {
@@ -135,7 +135,7 @@ namespace Warbler
             });
 
             if (env.IsDevelopment())
-                DbInitializer.Initialize(context);
+                context.Database.EnsureCreated();
         }
     }
 }

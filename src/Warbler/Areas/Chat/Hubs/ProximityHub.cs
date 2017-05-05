@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using GoogleApi.Entities.Common;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
 using Warbler.Areas.Chat.Models;

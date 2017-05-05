@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using GoogleApi;
+using GoogleApi.Entities.Common;
 using GoogleApi.Entities.Places.Common.Enums;
 using GoogleApi.Entities.Places.Search.NearBy.Request;
 using GoogleApi.Entities.Places.Search.NearBy.Response;
@@ -61,7 +62,7 @@ namespace Warbler.Areas.Chat.Services
         /// <param name="coordinates">The location to search near.</param>
         public async Task<List<NearByResult>> ProximitySearchAsync(User user, Location coordinates)
         {
-            var nearbyUniversities = await SearchUniversitiesAsync(coordinates.Lat, coordinates.Lng);
+            var nearbyUniversities = await SearchUniversitiesAsync(coordinates);
 
             // Keep track of the search results for later validation
             UserChoices.TryAdd(user, nearbyUniversities);
@@ -103,14 +104,13 @@ namespace Warbler.Areas.Chat.Services
         ///   Returns a list of Google Places result objects
         ///   that are geographically close to a given location.
         /// </summary>
-        /// <param name="lat">The latitude to use for the location search.</param>
-        /// <param name="lng">The longitude to use for the location search.</param>
-        private static async Task<List<NearByResult>> SearchUniversitiesAsync(float lat, float lng)
+        /// <param name="location">Contains lat/lng used for the location search.</param>
+        private static async Task<List<NearByResult>> SearchUniversitiesAsync(Location location)
         {
             var request = new PlacesNearBySearchRequest
             {
                 Keyword = "university",
-                Location = new GoogleApi.Entities.Common.Location(lat, lng),
+                Location = location,
                 Radius = 25000,
                 Key = GoogleApiKey
             };

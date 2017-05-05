@@ -24,6 +24,7 @@
             console.info("onSelection()", university);
 
             self.hub.server.selectUniversityAsync(university.place_id);
+            location.href = $("#RedirectTo").val();
         };
 
         function getLocationAsync() {

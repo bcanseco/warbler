@@ -14,8 +14,8 @@
 @await Html.PartialAsync("_HeadingPartial", ViewData)
 
 <div class="row">
-    <div class="col-md-12" >
-        <div class="list-group" data-bind="foreach: universities">
+    <div class="col-md-12">
+        <div class="list-group" style="display: none" data-bind="foreach: universities, visible: true">
             <a href="#"
                class="list-group-item list-group-item-action flex-column align-items-start active"
                data-bind="click: $parent.onSelection.bind($data)">
@@ -27,6 +27,8 @@
         </div>
     </div>
 </div>
+
+@Html.Hidden("RedirectTo", Url.Action("Chatroom", "Chat"))
 
 @section scripts {
     <script src="~/lib/signalr/jquery.signalR.min.js"></script>

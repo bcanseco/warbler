@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Warbler.Areas.Chat.Repositories;
 using Warbler.Areas.Chat.Services;
 using Warbler.Identity.Data;
 
@@ -15,7 +16,7 @@ namespace Warbler.Areas.Dev.Controllers
 
         public DevController(WarblerDbContext context)
         {
-            UniversityService = new UniversityService(context);
+            UniversityService = new UniversityService(new SqlUniversityRepository(context));
         }
 
         public IActionResult Index()
@@ -28,11 +29,14 @@ namespace Warbler.Areas.Dev.Controllers
             return View();
         }
 
+        /// <summary>
+        ///   Returns a JSON string with all university info down to the message level.
+        /// </summary>
         [HttpGet]
-        public async Task<string> GetEverything()
+        public async Task<string> Universities()
         {
-            return JsonConvert
-                .SerializeObject(await UniversityService.GetUniversities(), Formatting.Indented);
+            var universityList = await UniversityService.GetAllAsync();
+            return JsonConvert.SerializeObject(universityList, Formatting.Indented);
         }
     }
 }

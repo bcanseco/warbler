@@ -23,8 +23,8 @@
         this.onSelection = function(university) {
             console.info("onSelection()", university);
 
-            // self.hub.server.selectUniversity(university.place_id);
-        }
+            self.hub.server.selectUniversityAsync(university.place_id);
+        };
 
         function getLocationAsync() {
             var options = {
@@ -62,7 +62,7 @@
             connection.start()
                 .done(function() {
                     console.info("Successfully connected to SignalR hub.");
-                    self.hub.server.getNearbyUniversities(json.stringify(userLocation));
+                    self.hub.server.getNearbyUniversitiesAsync(json.stringify(userLocation));
                 })
                 .fail(function () {
                     console.error("Error connecting to SignalR hub. Please refresh the page to try again.");

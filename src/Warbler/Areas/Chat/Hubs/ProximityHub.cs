@@ -1,60 +1,62 @@
 ﻿using System.Threading.Tasks;
-using GoogleApi.Entities.Places.Search.NearBy.Response;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
-using Warbler.Areas.Chat.HubResources;
 using Warbler.Areas.Chat.Models;
 using Warbler.Identity.Data;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Warbler.Areas.Chat.Extensions;
+using Warbler.Areas.Chat.Services;
 
 namespace Warbler.Areas.Chat.Hubs
 {
+    /// <summary>
+    ///   Coordinates websocket communication between clients and server.
+    /// </summary>
     public class ProximityHub : Hub
     {
-        private ProximityResource UniversitiesResource { get; }
+        private ProximityService ProximityService { get; }
+        private UserManager<User> UserManager { get; }
 
-        private ProximityHub(ProximityResource universitiesResource, WarblerDbContext context)
+        /// <summary>
+        ///   Automatically called each time SignalR receives a packet from a client.
+        ///   Both parameters are injected automatically by ASP.NET DI.
+        /// </summary>
+        public ProximityHub(WarblerDbContext context, UserManager<User> userManager)
         {
-            UniversitiesResource = universitiesResource;
-            UniversitiesResource.Attach(context);
-        }
-
-        public ProximityHub(WarblerDbContext context)
-            : this(ProximityResource.Instance, context)
-        { }
-
-        public override async Task OnConnected()
-        {
-            await UniversitiesResource
-                .OnConnected(Context.User.Identity.IsAuthenticated
-                    ? Context.User.Identity.Name
-                    : Context.ConnectionId);
-
-            await base.OnConnected();
+            ProximityService = ProximityService.Instance.With(context);
+            UserManager = userManager;
         }
 
         public override Task OnDisconnected(bool stopCalled)
         {
-            UniversitiesResource.OnDisconnected(Context.ConnectionId);
-
+            ProximityService.OnDisconnected(Context.ConnectionId);
             return base.OnDisconnected(stopCalled);
         }
+        
+        /// <summary>
+        ///   Called via SignalR when the user enters the Chat view
+        ///   without being a member of any universities.
+        /// </summary>
+        public async Task GetNearbyUniversitiesAsync(string serializedLatLng)
+        { 
+            var currentUser = await UserManager.FindWithHubAsync(Context);
 
-        public async Task GetNearbyUniversities(string serializedLatLng)
-        {
             var coordinates = JsonConvert
                 .DeserializeObject<Location>(serializedLatLng);
 
-            await UniversitiesResource
-                .GetNearbyUniversities(Context.ConnectionId, coordinates);
+            var nearbyUniversities = await ProximityService
+                .ProximitySearchAsync(currentUser, coordinates);
+
+            // Broadcast the list to the client for selection
+            Clients.Client(currentUser.ConnectionId)
+                .receiveNearbyUniversities(nearbyUniversities);
         }
 
-        public async Task SelectUniversity(string placeId)
-        {
-            await UniversitiesResource
-                .SelectUniversity(Context.ConnectionId, placeId);
-        }
+        /// <summary>
+        ///   Called via SignalR when the user clicks on a university to connect to.
+        /// </summary>
+        public async Task SelectUniversityAsync(string placeId)
+            => await ProximityService
+                .SelectUniversityAsync(Context.User.Identity.Name, placeId);
     }
 }

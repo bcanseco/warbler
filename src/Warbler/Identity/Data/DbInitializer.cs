@@ -14,7 +14,12 @@ namespace Warbler.Identity.Data
         public static void Initialize(WarblerDbContext context)
         {
             context.Database.EnsureCreated();
+            // AddSampleData(context);
+        }
 
+        [Obsolete("This method is out-of-date with the current schema.")]
+        public static void AddSampleData(WarblerDbContext context)
+        {
             if (!context.Users.Any() || context.Universities.Any())
             {
                 return; // DB has been seeded, or it hasn't and can't be seeded without a user

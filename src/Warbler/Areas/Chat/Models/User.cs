@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -13,11 +14,15 @@ namespace Warbler.Areas.Chat.Models
         public int AvatarId { get; set; }
         public UserFlag Flag { get; set; }
 
+        [NotMapped]
+        public string ConnectionId { get; set; }
+
         [JsonIgnore]
         public ICollection<Membership> Memberships { get; set; }
 
         private List<Channel> _channels;
 
+        [JsonIgnore]
         public List<Channel> Channels
         {
             get { return _channels ?? (_channels = Memberships?.Select(m => m.Channel).ToList()); }

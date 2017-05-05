@@ -25,8 +25,7 @@ Sandbox.ViewModel = function () {
 
 Sandbox.ChatViewModel = function () {
     var self = this;
-
-    this.connectedClients = ko.observable(0);
+    
     this.composedMessage = ko.observable();
     this.messages = ko.observableArray();
 
@@ -39,11 +38,7 @@ Sandbox.ChatViewModel = function () {
 Sandbox.Server = function () {
     this.hub = $.connection.chatHub; // SandboxHub.cs
 
-    this.hub.client.updatedClientCount = function (clients) {
-        Sandbox.viewModel.chatData().connectedClients(clients);
-    };
-
-    this.hub.client.messageReceived = function (message) {
+    this.hub.client.receiveMessage = function (message) {
         Sandbox.viewModel.chatData().messages.push(message); // TODO: Scroll to bottom of div
     };
 

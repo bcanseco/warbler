@@ -1,38 +1,41 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
-using Warbler.Areas.Chat.HubResources;
+using Warbler.Areas.Chat.Services;
 
 namespace Warbler.Areas.Chat.Hubs
 {
+    /// <summary>
+    ///   Coordinates websocket communication between clients and server.
+    /// </summary>
     public class ChatHub : Hub
     {
-        private ChatResource ChatResource { get; }
+        private ChatService ChatService { get; }
 
-        private ChatHub(ChatResource chatResource)
-        {
-            ChatResource = chatResource;
-        }
-
+        /// <summary>
+        ///   Automatically called each time SignalR receives a packet from a client.
+        /// </summary>
         public ChatHub()
-            : this(ChatResource.Instance)
-        { }
+        {
+            ChatService = ChatService.Instance;
+        }
 
         public override async Task OnConnected()
         {
-            await ChatResource.OnConnected(Context.ConnectionId,
-                Context.User.Identity.IsAuthenticated ? Context.User.Identity.Name : null);
-
+            await ChatService.OnConnected(Context.ConnectionId, null);
             await base.OnConnected();
         }
 
-        public override Task OnDisconnected(bool stopCalled)
+        public override async Task OnDisconnected(bool stopCalled)
         {
-            ChatResource.OnDisconnected(Context.ConnectionId);
-
-            return base.OnDisconnected(stopCalled);
+            await ChatService.OnDisconnected(Context.ConnectionId);
+            await base.OnDisconnected(stopCalled);
         }
 
-        public void SendMessage(string message)
-            => ChatResource.OnMessageReceived(message);
+        /// <summary>
+        ///   Called via SignalR when the user hits the Send button.
+        /// </summary>
+        public Task SendMessage(string message)
+            => Clients.All.receiveMessage($"[{DateTime.Now}] {message}");
     }
 }

@@ -20,6 +20,7 @@ namespace Warbler.Areas.Chat.Models
 
         [JsonIgnore]
         public Server Server { get; set; }
+        [JsonIgnore]
         public ICollection<Membership> Memberships { get; set; }
         public ICollection<Message> Messages { get; set; }
 

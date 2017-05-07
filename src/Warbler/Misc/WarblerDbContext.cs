@@ -34,5 +34,11 @@ namespace Warbler.Misc
             modelBuilder.Entity<Message>().ToTable(nameof(Message));
             modelBuilder.Entity<Membership>().ToTable(nameof(Membership));
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
     }
 }

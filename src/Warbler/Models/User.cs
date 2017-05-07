@@ -1,31 +1,43 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Serialization;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Newtonsoft.Json;
 using Warbler.Models.Enums;
 
 namespace Warbler.Models
 {
     [DebuggerDisplay("User #{Id}: {UserName, nq}")]
-    public class User : IdentityUser
+    [DataContract]
+    public class User : IdentityUser, IEquatable<User>
     {
+        /// <remarks>
+        ///   Overriden to explicitly show in JSON.NET serialization.
+        /// </remarks>
+        [DataMember]
+        public override string UserName
+        {
+            get => base.UserName;
+            set => base.UserName = value;
+        }
+
+        [DataMember]
         public int AvatarId { get; set; }
+        [DataMember]
         public UserFlag Flag { get; set; }
-
-        [NotMapped]
-        public string ConnectionId { get; set; }
-
-        [JsonIgnore]
+        
         public ICollection<Membership> Memberships { get; set; }
 
-        private List<Channel> _channels;
+        [NotMapped]
+        [DataMember]
+        public bool IsOnline { get; set; }
+        
+        [NotMapped]
+        public IEnumerable<Channel> Channels => Memberships?.Select(m => m.Channel).ToList();
 
-        [JsonIgnore]
-        public List<Channel> Channels
-        {
-            get { return _channels ?? (_channels = Memberships?.Select(m => m.Channel).ToList()); }
-        }
+        public bool Equals(User other)
+            => Id == other?.Id;
     }
 }

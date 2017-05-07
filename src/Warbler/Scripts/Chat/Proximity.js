@@ -11,7 +11,7 @@
     function ProximityViewModel() {
         var self = this;
         
-        this.position = ko.observable();
+        this.gracefulExit = false;
         this.universities = ko.observableArray();
         this.hub = $.connection.proximityHub; // ProximityHub.cs
 
@@ -20,11 +20,16 @@
             self.universities(universities);
         };
 
-        this.onSelection = function(university) {
-            console.info("onSelection()", university);
+        this.hub.client.onSuccessfulJoin = function () {
+            console.info("onSuccessfulJoin()");
+            self.gracefulExit = true; // don't show error for disconnection
+            self.hub.connection.stop();
+            location.href = $("#RedirectTo").val(); // Go to chatroom view
+        };
 
+        this.onSelection = function (university) {
+            console.info("onSelection()", university);
             self.hub.server.selectUniversityAsync(university.place_id);
-            location.href = $("#RedirectTo").val();
         };
 
         function getLocationAsync() {
@@ -70,7 +75,9 @@
                 });
 
             connection.disconnected(function () {
-                console.error("Lost connection to server. Please refresh the page.");
+                if (!self.gracefulExit) {
+                    console.error("Lost connection to server. Please refresh the page.");
+                }
             });
         }
 

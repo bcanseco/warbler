@@ -1,5 +1,4 @@
 ﻿/// <binding BeforeBuild='default' />
-"use strict";
 
 var gulp = require("gulp"),
     rimraf = require("rimraf"),

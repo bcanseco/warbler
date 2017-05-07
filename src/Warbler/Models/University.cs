@@ -1,9 +1,10 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace Warbler.Models
 {
     [DebuggerDisplay("Uni #{Id}: {Name, nq}")]
-    public class University
+    public class University : IEquatable<University>
     {
         public int Id { get; set; }
         public string PlaceId { get; set; }
@@ -13,5 +14,8 @@ namespace Warbler.Models
         public float Lng { get; set; }
         
         public Server Server { get; set; }
+
+        public bool Equals(University other)
+            => Id == other?.Id;
     }
 }

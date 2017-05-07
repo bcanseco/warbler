@@ -38,6 +38,20 @@ Sandbox.ChatViewModel = function () {
 Sandbox.Server = function () {
     this.hub = $.connection.chatHub; // SandboxHub.cs
 
+    this.hub.client.receiveInitialPayload = function(payload) {
+        console.info("Initial payload", payload);
+    };
+
+    this.hub.client.onJoin = function(user, channel, server, university) {
+        console.info(user.UserName + " joined #"
+            + channel.Name + " in " + university.Name);
+    };
+
+    this.hub.client.onLeave = function (user, channel, server, university) {
+        console.info(user.UserName + " left #"
+            + channel.Name + " in " + university.Name);
+    };
+
     this.hub.client.receiveMessage = function (message) {
         Sandbox.viewModel.chatData().messages.push(message); // TODO: Scroll to bottom of div
     };

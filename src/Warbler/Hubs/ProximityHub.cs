@@ -5,13 +5,13 @@ using Newtonsoft.Json;
 using Warbler.Models;
 using Warbler.Misc;
 using Microsoft.AspNetCore.Identity;
-using Warbler.Extensions;
 using Warbler.Services;
 
 namespace Warbler.Hubs
 {
     /// <summary>
-    ///   Coordinates websocket communication between clients and server.
+    ///   Coordinates websocket communication between
+    ///   clients and server on the chat index view.
     /// </summary>
     public class ProximityHub : Hub
     {
@@ -28,36 +28,35 @@ namespace Warbler.Hubs
             UserManager = userManager;
         }
 
-        public override Task OnDisconnected(bool stopCalled)
+        public override async Task OnDisconnected(bool stopCalled)
         {
-            ProximityService.OnDisconnected(Context.ConnectionId);
-            return base.OnDisconnected(stopCalled);
+            var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
+            await ProximityService.OnDisconnected(user);
+            await base.OnDisconnected(stopCalled);
         }
         
         /// <summary>
         ///   Called via SignalR when the user enters the Chat view
         ///   without being a member of any universities.
         /// </summary>
-        public async Task GetNearbyUniversitiesAsync(string serializedLatLng)
+        /// <param name="locationSer">The serialized location (lat/lng).</param>
+        public async Task GetNearbyUniversitiesAsync(string locationSer)
         { 
-            var currentUser = await UserManager.FindWithHubAsync(Context);
+            var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
+            var coordinates = JsonConvert.DeserializeObject<Location>(locationSer);
 
-            var coordinates = JsonConvert
-                .DeserializeObject<Location>(serializedLatLng);
-
-            var nearbyUniversities = await ProximityService
-                .ProximitySearchAsync(currentUser, coordinates);
-
-            // Broadcast the list to the client for selection
-            Clients.Client(currentUser.ConnectionId)
-                .receiveNearbyUniversities(nearbyUniversities);
+            await ProximityService
+                .ProximitySearchAsync(user, Context.ConnectionId, coordinates);
         }
 
         /// <summary>
         ///   Called via SignalR when the user clicks on a university to connect to.
         /// </summary>
+        /// <param name="placeId">The Google Place ID of the clicked university.</param>
         public async Task SelectUniversityAsync(string placeId)
-            => await ProximityService
-                .SelectUniversityAsync(Context.User.Identity.Name, placeId);
+        {
+            var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
+            await ProximityService.SelectUniversityAsync(user, Context.ConnectionId, placeId);
+        }
     }
 }

@@ -1,17 +1,28 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Warbler.Misc;
 using Warbler.Models;
 using Warbler.Models.Enums;
 
 namespace Warbler.Repositories
 {
+    /// <summary>
+    ///   Fills database with example data for development purposes.
+    /// </summary>
     public class SqlSampleRepository
     {
-        [Obsolete("This method is out-of-date with the current schema.")]
-        public static void AddTestData(WarblerDbContext context)
+        private WarblerDbContext Context { get; }
+
+        public SqlSampleRepository(WarblerDbContext context)
         {
-            if (!context.Users.Any() || context.Universities.Any())
+            Context = context;
+        }
+
+        [Obsolete("This method is out-of-date with the current schema.")]
+        public async Task AddTestData()
+        {
+            if (!Context.Users.Any() || Context.Universities.Any())
             {
                 return; // DB has been seeded, or it hasn't and can't be seeded without a user
             }
@@ -24,9 +35,9 @@ namespace Warbler.Repositories
             };
             foreach (var u in universities)
             {
-                context.Universities.Add(u);
+                await Context.Universities.AddAsync(u);
             }
-            context.SaveChanges();
+            await Context.SaveChangesAsync();
 
             var servers = new[]
             {
@@ -36,9 +47,9 @@ namespace Warbler.Repositories
             };
             foreach (var s in servers)
             {
-                context.Servers.Add(s);
+                await Context.Servers.AddAsync(s);
             }
-            context.SaveChanges();
+            await Context.SaveChangesAsync();
 
             var channels = new[]
             {
@@ -48,14 +59,14 @@ namespace Warbler.Repositories
             };
             foreach (var c in channels)
             {
-                context.Channels.Add(c);
+                await Context.Channels.AddAsync(c);
             }
-            context.SaveChanges();
+            await Context.SaveChangesAsync();
 
-            var user = context.Users.First();
+            var user = Context.Users.First();
             
-            context.Memberships.Add(new Membership { UserId = user.Id, ChannelId = 1 });
-            context.SaveChanges();
+            await Context.Memberships.AddAsync(new Membership { UserId = user.Id, ChannelId = 1 });
+            await Context.SaveChangesAsync();
 
             var messages = new[]
             {
@@ -64,9 +75,9 @@ namespace Warbler.Repositories
             };
             foreach (var m in messages)
             {
-                context.Messages.Add(m);
+                await Context.Messages.AddAsync(m);
             }
-            context.SaveChanges();
+            await Context.SaveChangesAsync();
         }
     }
 }

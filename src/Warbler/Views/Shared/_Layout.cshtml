@@ -11,7 +11,7 @@
     <environment names="Development,Staging,Production">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="~/lib/daemonite-material/css/material.css"/>
-        <link rel="stylesheet" href="~/Styles/site.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/Styles/site.css?@DateTime.Now.Ticks"/>
 
         @RenderSection("styles", required: false)
     </environment>
@@ -58,7 +58,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/lib/daemonite-material/js/material.js"></script>
     <script src="~/lib/knockout/build/output/knockout-latest.js"></script>
-    <script src="~/Scripts/site.js" asp-append-version="true"></script>
+    <script src="~/Scripts/site.js?@DateTime.Now.Ticks"></script>
 
     @RenderSection("scripts", required: false)
 

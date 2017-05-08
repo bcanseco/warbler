@@ -32,6 +32,7 @@ namespace Warbler.Hubs
         {
             var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
             await ProximityService.OnDisconnected(user);
+
             await base.OnDisconnected(stopCalled);
         }
         

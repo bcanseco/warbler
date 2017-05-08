@@ -38,9 +38,9 @@ namespace Warbler.Misc
         /// </summary>
         /// <param name="user">The user to add or update.</param>
         /// <param name="connectionId">The connection ID to associate.</param>
-        /// <remarks>
+        /// <returns>
         ///   True if only one connection ID is now associated with the user, false otherwise.
-        /// </remarks>
+        /// </returns>
         /// <remarks>Call this at the beginning of overriden child OnConnected().</remarks>
         protected async Task<bool> OnConnected(User user, string connectionId)
             => await UserConnections.Add(user, connectionId);

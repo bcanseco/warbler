@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using GoogleApi.Entities.Places.Search.NearBy.Response;
+using Microsoft.EntityFrameworkCore;
 using Warbler.Exceptions;
 using Warbler.Interfaces;
 using Warbler.Models;
@@ -28,20 +29,18 @@ namespace Warbler.Services
         /// <returns>The related University object.</returns>
         public async Task<University> GetOrCreateAsync(NearByResult uni)
         {
-            University university;
             try
             {
-                university = await Repository.LookupAsync(uni.PlaceId);
+                return await Repository.LookupAsync(uni.PlaceId);
             }
             catch (UniversityNotFoundException)
             {
-                university = await Repository.CreateAsync(uni);
+                return await Repository.CreateAsync(uni);
             }
-            return university;
         }
 
         /// <summary>
-        ///   Adds a user as a member to every channel in a university.
+        ///   Adds a user as a member to every channel in a university's server.
         /// </summary>
         /// <param name="user">The user to add.</param>
         /// <param name="university">The university whose channels will be added to.</param>
@@ -59,10 +58,12 @@ namespace Warbler.Services
         }
 
         /// <summary>
-        ///   Gets a list of all universities and
-        ///   their properties down to the message level.
+        ///   Gets a list of all universities and their properties
+        ///   down to the message level. Results are untracked.
         /// </summary>
         public async Task<List<University>> GetAllAsync()
-            => await Repository.GetAllAsync(QueryDepth.Message);
+            => await Repository.AllQueryable(QueryDepth.Message)
+                .AsNoTracking()
+                .ToListAsync();
     }
 }

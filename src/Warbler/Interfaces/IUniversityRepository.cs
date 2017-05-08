@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using GoogleApi.Entities.Places.Search.NearBy.Response;
 using Warbler.Models;
@@ -28,19 +28,22 @@ namespace Warbler.Interfaces
         ///   Checks to see if a university for a given Google Place ID exists.
         /// </summary>
         /// <param name="placeId">The place ID to use for lookup. These are unique.</param>
-        /// <returns>The university (at user level) if it exists.</returns>
+        /// <returns>The university (at user level) if it exists. This will be untracked.</returns>
         /// <exception cref="Exceptions.UniversityNotFoundException"></exception>
         Task<University> LookupAsync(string placeId);
 
         /// <summary>
-        ///   Gets a list of all universities in the database.
+        ///   Gets an executable query for all universities in the database.
         /// </summary>
         /// <param name="depth">At what level navigation properties should be retrieved.</param>
         /// <example>
-        ///   Using a query depth of <see cref="Server"/> will make all <see cref="University"/>
-        ///   objects have a non-null Server property. However, those servers will have a null
-        ///   <see cref="ICollection{Channel}"/> property.
+        ///   Using a query depth of <see cref="Server"/> will make each <see cref="University"/>
+        ///   object in the query's result have a filled-in Server property. However, those 
+        ///   Server objects will each have a null <see cref="Channel"/> collection property.
         /// </example>
-        Task<List<University>> GetAllAsync(QueryDepth depth = QueryDepth.University);
+        /// <exception cref="System.ArgumentException">
+        ///   Thrown when <paramref name="depth"/>'s value is unknown.
+        /// </exception>
+        IQueryable<University> AllQueryable(QueryDepth depth = QueryDepth.University);
     }
 }

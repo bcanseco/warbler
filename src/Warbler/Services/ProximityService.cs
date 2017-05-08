@@ -27,16 +27,19 @@ namespace Warbler.Services
         /// </summary>
         private const string GoogleApiKey = "AIzaSyCo9UePsjcg75Y2ZtJVsM33xJaWM6D1Qno";
 
-        private UniversityService UniversityService { get; set; }
+        /// <summary> Stores proximity search results for each user. </summary>
         private ConcurrentDictionary<User, List<NearByResult>> UserChoices { get; }
             = new ConcurrentDictionary<User, List<NearByResult>>();
+
+        private UniversityService UniversityService { get; set; }
 
         /// <summary>
         ///   Allows the hub to attach a database context to this service instance.
         /// </summary>
         public ProximityService With(WarblerDbContext context)
         {
-            UniversityService = new UniversityService(new SqlUniversityRepository(context));
+            UniversityService = UniversityService
+                ?? new UniversityService(new SqlUniversityRepository(context));
 
             return this;
         }

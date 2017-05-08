@@ -77,6 +77,7 @@ namespace Warbler.Repositories
             try
             {
                 return await AtUserLevel()
+                    .AsNoTracking()
                     .FirstAsync(u => u.PlaceId == placeId);
             }
             catch (InvalidOperationException)
@@ -86,15 +87,15 @@ namespace Warbler.Repositories
             }
         }
 
-        public async Task<List<University>> GetAllAsync(QueryDepth depth)
+        public IQueryable<University> AllQueryable(QueryDepth depth)
         {
             switch (depth)
             {
-                case QueryDepth.University: return await AtRootLevel().ToListAsync();
-                case QueryDepth.Server:     return await AtServerLevel().ToListAsync();
-                case QueryDepth.Channel:    return await AtChannelLevel().ToListAsync();
-                case QueryDepth.User:       return await AtUserLevel().ToListAsync();
-                case QueryDepth.Message:    return await AtMessageLevel().ToListAsync();
+                case QueryDepth.University: return AtRootLevel();
+                case QueryDepth.Server:     return AtServerLevel();
+                case QueryDepth.Channel:    return AtChannelLevel();
+                case QueryDepth.User:       return AtUserLevel();
+                case QueryDepth.Message:    return AtMessageLevel();
                 default: throw new ArgumentException($"Unknown depth: {depth}.");
             }
         }

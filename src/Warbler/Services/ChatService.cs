@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Warbler.Hubs;
@@ -45,21 +46,21 @@ namespace Warbler.Services
         /// </summary>
         public new async Task OnConnected(User user, string connectionId)
         {
-            var firstDevice = await base.OnConnected(user, connectionId);
+            var onFirstDevice = await base.OnConnected(user, connectionId);
             var userChannels = await MembershipService.AllChannelsForAsync(user);
-
+            
             /* This is what the client is sent on connection; will contain all
-               info necessary for the UI to initially populate the chat view. */
+             * info necessary for the UI to initially populate the chat view. */
             var initialPayload = new List<University>();
 
             /* Iterate through channel objects (no Messages loaded on each,
-               but Memberships, Server, and University info are up-to-date). */
+             * but Memberships, Server, and University info are up-to-date). */
             foreach (var channel in userChannels)
             {
                 // Add the user to the SignalR group for this channel.
                 await HubContext.Groups.Add(connectionId, $"{channel.Id}");
 
-                if (firstDevice)
+                if (onFirstDevice)
                 {
                     // Notify all other clients that the user has joined.
                     HubContext.Clients.Group($"{channel.Id}", connectionId)
@@ -68,9 +69,10 @@ namespace Warbler.Services
 
                 if (ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
                 {
-                    // This channel is already being watched, but users may be out-of-date
-                    var updatedMembers = await MembershipService.AllForAsync(watchedChannel);
-                    watchedChannel.Memberships = updatedMembers;
+                    /* This channel is already being watched. Entity Framework automatically
+                     * updated the watchedChannel object's Memberships collection when we
+                     * queried for the same channel at the beginning of this method. */
+                    Debug.Assert(watchedChannel.Users.Contains(user));
                 }
                 else
                 {

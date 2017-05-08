@@ -13,7 +13,6 @@ namespace Warbler.Services
 {
     /// <summary>
     ///   Used by the <see cref="ChatHub"/> for business logic.
-    ///   TODO: Refactor/optimize to use events and event listeners.
     /// </summary>
     public class ChatService : HubResource<ChatService, ChatHub>
     {
@@ -77,6 +76,7 @@ namespace Warbler.Services
                 else
                 {
                     // This channel is not being watched; we must fetch its messages
+                    // TODO: Switch to Task => .Entry().Collection().LoadAsync()
                     channel.Messages = await MessageService.LatestIn(channel);
 
                     // Start watching the channel
@@ -105,9 +105,10 @@ namespace Warbler.Services
             // The user is no longer connected on any device, remove from all channels
             if (lastConnection)
             {
-                var userChannels = await MembershipService.AllChannelsForAsync(user);
+                // Since user was being tracked, EF autofilled Memberships property
+                Debug.Assert(user.Channels?.Any() ?? false);
 
-                foreach (var channel in userChannels)
+                foreach (var channel in user.Channels)
                 {
                     if (!ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
                         throw new Exception($"{channel.Name} was not being watched!");
@@ -123,6 +124,7 @@ namespace Warbler.Services
                     else
                     {
                         // Nobody is online; save messages and stop watching
+                        // TODO: Verify if this is right (Context(.Channels?).Update)?
                         await ChannelService.UpdateAsync(watchedChannel);
                         ChannelStatus.TryRemove(watchedChannel.Id, out _);
                     }

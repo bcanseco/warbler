@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
-using Warbler.Extensions;
 using Warbler.Misc;
 using Warbler.Models;
 using Warbler.Services;

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Warbler.Hubs;
@@ -17,7 +16,7 @@ namespace Warbler.Services
     /// </summary>
     public class ChatService : HubResource<ChatService, ChatHub>
     {
-        /// <summary> Tracks all channels with online users. (int : Channel.Id) </summary>
+        /// <summary> Watches all channels with online users. (int : Channel.Id) </summary>
         private ConcurrentDictionary<int, Channel> ChannelStatus { get; }
             = new ConcurrentDictionary<int, Channel>();
 
@@ -30,6 +29,7 @@ namespace Warbler.Services
         /// </summary>
         public ChatService With(WarblerDbContext context)
         {
+            // Each service shares the same context to take advantage of EF caching
             ChannelService = ChannelService
                 ?? new ChannelService(new SqlChannelRepository(context));
             MessageService = MessageService
@@ -65,25 +65,25 @@ namespace Warbler.Services
                         .onJoin(user, channel, channel.Server, channel.Server.University);
                 }
 
-                if (!ChannelStatus.TryGetValue(channel.Id, out Channel trackedChannel))
+                if (!ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
                 {
                     // This channel is not being watched, we must fetch messages
                     channel.Messages = await MessageService.LatestIn(channel);
 
                     // Start watching the channel
-                    ChannelStatus.TryAdd(channel.Id, trackedChannel = channel);
+                    ChannelStatus.TryAdd(channel.Id, watchedChannel = channel);
                 }
 
                 /* Regardless of the channel already being watched or not, we
                    must retrieve its memberships due to the newly joined member */
-                trackedChannel.Memberships = await MembershipService
-                    .AllForAsync(trackedChannel);
+                watchedChannel.Memberships = await MembershipService
+                    .AllForAsync(watchedChannel);
                 
-                trackedChannel.Users
+                watchedChannel.Users
                     .Single(u => u.Id == user.Id)
                     .IsOnline = true;
 
-                initialPayload.Add(trackedChannel.Server.University);
+                initialPayload.Add(watchedChannel.Server.University);
             }
 
             HubContext.Clients.Client(connectionId)
@@ -108,22 +108,22 @@ namespace Warbler.Services
 
                 foreach (var channel in userChannels)
                 {
-                    if (!ChannelStatus.TryGetValue(channel.Id, out Channel trackedChannel))
-                        throw new Exception($"{channel.Name} was not being tracked!");
+                    if (!ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
+                        throw new Exception($"{channel.Name} was not being watched!");
 
-                    trackedChannel.Users.Single(u => u.Id == user.Id).IsOnline = false;
+                    watchedChannel.Users.Single(u => u.Id == user.Id).IsOnline = false;
                     
-                    if (trackedChannel.Users.Any(u => u.IsOnline))
+                    if (watchedChannel.Users.Any(u => u.IsOnline))
                     {
                         // Notify other online channel users that a user left
-                        HubContext.Clients.Group($"{trackedChannel.Id}")
+                        HubContext.Clients.Group($"{watchedChannel.Id}")
                             .onLeave(user, channel, channel.Server, channel.Server.University);
                     }
                     else
                     {
                         // Nobody is online; save messages and stop watching
-                        await ChannelService.UpdateAsync(trackedChannel);
-                        ChannelStatus.TryRemove(trackedChannel.Id, out _);
+                        await ChannelService.UpdateAsync(watchedChannel);
+                        ChannelStatus.TryRemove(watchedChannel.Id, out _);
                     }
                 }
             }

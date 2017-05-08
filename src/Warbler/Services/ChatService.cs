@@ -52,7 +52,8 @@ namespace Warbler.Services
                info necessary for the UI to initially populate the chat view. */
             var initialPayload = new List<University>();
 
-            // Iterate through basic channel objects (only server/uni info)
+            /* Iterate through channel objects (no Messages loaded on each,
+               but Memberships, Server, and University info are up-to-date). */
             foreach (var channel in userChannels)
             {
                 // Add the user to the SignalR group for this channel.
@@ -65,26 +66,22 @@ namespace Warbler.Services
                         .onJoin(user, channel, channel.Server, channel.Server.University);
                 }
 
-                if (!ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
+                if (ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
                 {
-                    // This channel is not being watched, we must fetch messages
+                    // This channel is already being watched, but users may be out-of-date
+                    var updatedMembers = await MembershipService.AllForAsync(watchedChannel);
+                    watchedChannel.Memberships = updatedMembers;
+                }
+                else
+                {
+                    // This channel is not being watched; we must fetch its messages
                     channel.Messages = await MessageService.LatestIn(channel);
 
                     // Start watching the channel
                     ChannelStatus.TryAdd(channel.Id, watchedChannel = channel);
                 }
-
-                /* Regardless of the channel already being watched or not, we
-                   must retrieve its memberships due to either:
-                   1) Already watched channel not having new member in memory
-                   2) Newly watched channel not having any members in memory */
-                watchedChannel.Memberships = await MembershipService
-                    .AllForAsync(watchedChannel);
                 
-                watchedChannel.Users
-                    .Single(u => u.Id == user.Id)
-                    .IsOnline = true;
-
+                watchedChannel.Users.Single(u => u.Id == user.Id).IsOnline = true;
                 initialPayload.Add(watchedChannel.Server.University);
             }
 

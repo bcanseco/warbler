@@ -18,7 +18,7 @@ namespace Warbler.Interfaces
         IAsyncEnumerable<Membership> AllFor(User user);
 
         /// <summary>
-        ///   Retrieves a list of memberships that he given channel contains.
+        ///   Retrieves a list of memberships that the given channel contains.
         /// </summary>
         /// <param name="channel">The channel to retrieve memberships for.</param>
         /// <returns>

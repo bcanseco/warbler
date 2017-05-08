@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Warbler.Interfaces;
 using Warbler.Misc;
 using Warbler.Models;
@@ -21,21 +22,20 @@ namespace Warbler.Repositories
         }
 
         public IAsyncEnumerable<Membership> AllFor(User user)
-            => Context.Memberships
-                .Include(m => m.User)
-                .Include(m => m.Channel)
-                    .ThenInclude(ch => ch.Server)
-                        .ThenInclude(srv => srv.University)
+            => BaseQuery()
                 .Where(m => m.User.Equals(user))
                 .ToAsyncEnumerable();
 
         public IAsyncEnumerable<Membership> AllFor(Channel channel)
+            => BaseQuery()
+                .Where(m => m.Channel.Equals(channel))
+                .ToAsyncEnumerable();
+
+        private IIncludableQueryable<Membership, University> BaseQuery()
             => Context.Memberships
                 .Include(m => m.User)
                 .Include(m => m.Channel)
                     .ThenInclude(ch => ch.Server)
-                        .ThenInclude(srv => srv.University)
-                .Where(m => m.Channel.Equals(channel))
-                .ToAsyncEnumerable();
+                        .ThenInclude(srv => srv.University);
     }
 }

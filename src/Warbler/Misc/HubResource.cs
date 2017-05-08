@@ -24,7 +24,7 @@ namespace Warbler.Misc
         /// <summary> Allows hub services to access the hub's clients/groups. </summary>
         protected IHubContext HubContext { get; }
 
-        /// <summary> Tracks all online users on all of their devices. </summary>
+        /// <summary> Keeps track of all online users on all of their devices. </summary>
         private ConnectionMapping UserConnections { get; } = new ConnectionMapping();
 
         protected HubResource()

@@ -19,19 +19,19 @@ namespace Warbler.Services
         }
 
         /// <summary>
-        ///   Returns a list of memberships that the channel contains.
+        ///   Returns a collection of memberships that the channel contains.
+        ///   Channels include filled-in server and university props.
         /// </summary>
         /// <param name="channel">The channel to fetch for.</param>
-        /// <returns></returns>
         public async Task<ICollection<Membership>> AllForAsync(Channel channel)
             => await Repository.AllFor(channel).ToList();
 
         /// <summary>
-        ///   Returns a list of channels that the user is a member of.
+        ///   Returns a collection of channels that the user is a member of.
         ///   Channels include filled-in server and university props.
         /// </summary>
         /// <param name="user">The user to match against.</param>
-        public async Task<List<Channel>> AllChannelsForAsync(User user)
+        public async Task<ICollection<Channel>> AllChannelsForAsync(User user)
             => await Repository.AllFor(user)
                 .Select(m => m.Channel)
                 .ToList();

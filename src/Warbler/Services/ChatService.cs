@@ -75,7 +75,9 @@ namespace Warbler.Services
                 }
 
                 /* Regardless of the channel already being watched or not, we
-                   must retrieve its memberships due to the newly joined member */
+                   must retrieve its memberships due to either:
+                   1) Already watched channel not having new member in memory
+                   2) Newly watched channel not having any members in memory */
                 watchedChannel.Memberships = await MembershipService
                     .AllForAsync(watchedChannel);
                 

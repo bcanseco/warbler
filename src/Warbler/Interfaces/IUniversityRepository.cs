@@ -19,16 +19,16 @@ namespace Warbler.Interfaces
         Task<University> CreateAsync(NearByResult uni);
 
         /// <summary>
-        ///   Updates the properties of the university object in the database.
+        ///   Updates the properties of any universities in the database
+        ///   that have been queried for and subsequently changed.
         /// </summary>
-        /// <param name="university">The university to update.</param>
-        Task UpdateAsync(University university);
+        Task SaveAsync();
 
         /// <summary>
         ///   Checks to see if a university for a given Google Place ID exists.
         /// </summary>
         /// <param name="placeId">The place ID to use for lookup. These are unique.</param>
-        /// <returns>The university (at user level) if it exists. This will be untracked.</returns>
+        /// <returns>The university (at user level) if it exists.</returns>
         /// <exception cref="Exceptions.UniversityNotFoundException"></exception>
         Task<University> LookupAsync(string placeId);
 

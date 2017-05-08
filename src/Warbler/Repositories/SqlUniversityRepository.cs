@@ -66,9 +66,8 @@ namespace Warbler.Repositories
             return university;
         }
 
-        public async Task UpdateAsync(University university)
+        public async Task SaveAsync()
         {
-            Context.Universities.Update(university);
             await Context.SaveChangesAsync();
         }
 
@@ -76,9 +75,7 @@ namespace Warbler.Repositories
         {
             try
             {
-                return await AtUserLevel()
-                    .AsNoTracking()
-                    .FirstAsync(u => u.PlaceId == placeId);
+                return await AtUserLevel().FirstAsync(u => u.PlaceId == placeId);
             }
             catch (InvalidOperationException)
             {

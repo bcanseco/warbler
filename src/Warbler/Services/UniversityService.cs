@@ -54,7 +54,7 @@ namespace Warbler.Services
             foreach (var channel in channels)
                 channel.Memberships.Add(new Membership {User = user});
 
-            await Repository.UpdateAsync(university);
+            await Repository.SaveAsync();
         }
 
         /// <summary>

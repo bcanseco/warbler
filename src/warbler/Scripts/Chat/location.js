@@ -1,7 +1,10 @@
 (function (ko, $, json, geolocation) {
     var map;
     var infoWindow;
-
+    this.hub = $.connection.proximityHub;
+    function mapsAPIReady() {
+        initMap;
+    }
     function initMap() {
         if (geolocation) {
             geolocation.getCurrentPosition(function(position) {
@@ -12,7 +15,7 @@
                 };
 		        var mapOptions = {
 		            center: pos,
-                    zoom: 12
+                    zoom: 10
 		        }
                 infoWindow = new google.maps.InfoWindow();
 		
@@ -22,7 +25,7 @@
                 location: pos,
                 radius: 24141,
                 type: ['university']
-            }, callback);
+            }, markerCreator);
 		
             }, function() {
                 handleLocationError(true, infoWindow, map.getCenter());
@@ -61,10 +64,10 @@
         }
       }*/
 	  
-    function callback(results, status) {
+    function markerCreator(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
+                createMarker(results[i]);
             }
         }
     }
@@ -76,20 +79,28 @@
             position: place.geometry.location
         });
 
-        google.maps.event.addListener(marker, 'click', function() {
+        google.maps.event.addListener(marker, 'mouseover', function() {
             infoWindow.setContent(place.name);
             infoWindow.open(map, this);
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+            console.info("onSelection()", place);
+            self.hub.server.selectUniversityAsync(place.place_id);
         });
     }
 
     function loadScript() {
 	    var script = document.createElement('script');
     	script.type = 'text/javascript';
-        script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCo9UePsjcg75Y2ZtJVsM33xJaWM6D1Qno&libraries=places&callback=initMap"
+        script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCo9UePsjcg75Y2ZtJVsM33xJaWM6D1Qno&libraries=places";
         
-	    document.body.appendChild(script);
+        document.body.appendChild(script);
+        initMap();
 	    //script.src = "C:/Users/William/Downloads/v3-utility-library-master/v3-utility-library-master/markerclusterer/src/markerclusterer.js"
     }
+
+    
 
     if (ko && $) {
         ko.applyBindings(new loadScript(), document.getElementById("map-canvas"));

@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -32,10 +32,10 @@ namespace Warbler
             Configuration = builder.Build();
         }
 
-        public IConfigurationRoot Configuration { get; }
+        private IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddRouting(options => options.LowercaseUrls = true);
 
@@ -68,21 +68,27 @@ namespace Warbler
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
                 options.Lockout.MaxFailedAccessAttempts = 10;
 
-                // Cookie settings
-                options.Cookies.ApplicationCookie.ExpireTimeSpan = TimeSpan.FromDays(150);
-                options.Cookies.ApplicationCookie.LoginPath = "/Account/Login";
-
                 // User settings
                 options.User.RequireUniqueEmail = true;
             });
+            
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/LogIn";
+                options.ExpireTimeSpan = TimeSpan.FromDays(150);
+            });
+
+            services.AddAuthentication();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            return services.BuildServiceProvider();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider, WarblerDbContext context)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -117,7 +123,7 @@ namespace Warbler
                 });
             }
 
-            app.UseIdentity();
+            app.UseAuthentication();
             app.UseWebSockets();
             app.UseSignalR();
 
@@ -133,9 +139,12 @@ namespace Warbler
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
+            
             if (env.IsDevelopment())
+            {
+                var context = serviceProvider.GetService<WarblerDbContext>();
                 context.Database.EnsureCreated();
+            }
         }
     }
 }

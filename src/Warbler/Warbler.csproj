@@ -10,20 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\lib\**" />
-    <Content Remove="wwwroot\lib\**" />
-    <EmbeddedResource Remove="wwwroot\lib\**" />
-    <None Remove="wwwroot\lib\**" />
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="GoogleApi" Version="3.0.3" />
     <PackageReference Include="Gray.Microsoft.AspNetCore.SignalR.Server" Version="0.2.0-alpha1" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
@@ -34,6 +20,12 @@
     <Exec Command="dotnet bundle" />
   </Target>
 
+  <ItemGroup>		
+    <None Update="Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">		
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>		
+    </None>		
+  </ItemGroup>
+    
   <ItemGroup>
     <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.2.301" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />

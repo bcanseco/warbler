@@ -86,7 +86,7 @@
     }
 
     if (ko && $) {
-        ko.applyBindings(new ProximityViewModel());
+        ko.applyBindings(new ProximityViewModel(), document.getElementById("university-list"));
     } else {
         throw new Error("KnockoutJS and jQuery are required.");
     }

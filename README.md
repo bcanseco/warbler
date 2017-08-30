@@ -43,3 +43,16 @@ To build, hit <kbd>F5</kbd> in Visual Studio.
 3. The webserver then (usually) runs on [http://localhost:59294/](http://localhost:59294/) with Chrome.  
 
 You can set breakpoints in the backend code to debug as needed.
+
+## Front-End Development
+We use [Less](http://lesscss.org/) for CSS styling. Since Less is a superset of CSS, you can just write normal CSS if you don't want to take advantage of Less's features. All you have to do is make sure you're editing a `.less` file. **Do not** edit any `.css` files directly, as they are overwritten on compilation.
+
+You will need to download the [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler) extension for working with Less files. The workflow is as follows:
+1. You build and launch the webapp.
+2. You navigate to a page you want to change styling on.
+3. You switch to Visual Studio and open a `.less` file.
+4. You make a change to the CSS inside the file.
+5. You save the file.
+6. Web Compiler instantly compiles to CSS, which is linked to the view and immediately re-rendered by Chrome.
+
+Verify this workflow on your own to make sure Web Compiler was properly installed.

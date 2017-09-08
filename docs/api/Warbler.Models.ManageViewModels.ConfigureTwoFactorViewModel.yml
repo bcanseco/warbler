@@ -17,7 +17,7 @@ items:
   source:
     id: ConfigureTwoFactorViewModel
     path: ''
-    startLine: 1773
+    startLine: 1933
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -54,7 +54,7 @@ items:
   source:
     id: SelectedProvider
     path: ''
-    startLine: 1775
+    startLine: 1935
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -85,7 +85,7 @@ items:
   source:
     id: Providers
     path: ''
-    startLine: 1777
+    startLine: 1937
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels

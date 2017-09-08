@@ -9,6 +9,7 @@ items:
   - Warbler.Misc.WarblerDbContext.Channels
   - Warbler.Misc.WarblerDbContext.Memberships
   - Warbler.Misc.WarblerDbContext.Messages
+  - Warbler.Misc.WarblerDbContext.OnConfiguring(DbContextOptionsBuilder)
   - Warbler.Misc.WarblerDbContext.OnModelCreating(ModelBuilder)
   - Warbler.Misc.WarblerDbContext.Servers
   - Warbler.Misc.WarblerDbContext.Universities
@@ -22,7 +23,7 @@ items:
   source:
     id: WarblerDbContext
     path: ''
-    startLine: 1371
+    startLine: 1509
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -30,7 +31,6 @@ items:
     content: 'public class WarblerDbContext : IdentityDbContext<User>'
     content.vb: >-
       Public Class WarblerDbContext
-
           Inherits IdentityDbContext(Of User)
   inheritance:
   - System.Object
@@ -54,7 +54,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1373
+    startLine: 1511
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -86,7 +86,7 @@ items:
   source:
     id: Universities
     path: ''
-    startLine: 1379
+    startLine: 1517
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -94,7 +94,7 @@ items:
     content: public DbSet<University> Universities { get; set; }
     parameters: []
     return:
-      type: DbSet{University}
+      type: DbSet{Warbler.Models.University}
     content.vb: Public Property Universities As DbSet(Of University)
   overload: Warbler.Misc.WarblerDbContext.Universities*
   modifiers.csharp:
@@ -117,7 +117,7 @@ items:
   source:
     id: Servers
     path: ''
-    startLine: 1380
+    startLine: 1518
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -125,7 +125,7 @@ items:
     content: public DbSet<Server> Servers { get; set; }
     parameters: []
     return:
-      type: DbSet{Server}
+      type: DbSet{Warbler.Models.Server}
     content.vb: Public Property Servers As DbSet(Of Server)
   overload: Warbler.Misc.WarblerDbContext.Servers*
   modifiers.csharp:
@@ -148,7 +148,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1381
+    startLine: 1519
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -156,7 +156,7 @@ items:
     content: public DbSet<Channel> Channels { get; set; }
     parameters: []
     return:
-      type: DbSet{Channel}
+      type: DbSet{Warbler.Models.Channel}
     content.vb: Public Property Channels As DbSet(Of Channel)
   overload: Warbler.Misc.WarblerDbContext.Channels*
   modifiers.csharp:
@@ -179,7 +179,7 @@ items:
   source:
     id: Messages
     path: ''
-    startLine: 1382
+    startLine: 1520
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -187,7 +187,7 @@ items:
     content: public DbSet<Message> Messages { get; set; }
     parameters: []
     return:
-      type: DbSet{Message}
+      type: DbSet{Warbler.Models.Message}
     content.vb: Public Property Messages As DbSet(Of Message)
   overload: Warbler.Misc.WarblerDbContext.Messages*
   modifiers.csharp:
@@ -210,7 +210,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1383
+    startLine: 1521
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -218,7 +218,7 @@ items:
     content: public DbSet<Membership> Memberships { get; set; }
     parameters: []
     return:
-      type: DbSet{Membership}
+      type: DbSet{Warbler.Models.Membership}
     content.vb: Public Property Memberships As DbSet(Of Membership)
   overload: Warbler.Misc.WarblerDbContext.Memberships*
   modifiers.csharp:
@@ -241,7 +241,7 @@ items:
   source:
     id: OnModelCreating
     path: ''
-    startLine: 1385
+    startLine: 1523
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -252,6 +252,37 @@ items:
       type: ModelBuilder
     content.vb: Protected Overrides Sub OnModelCreating(modelBuilder As ModelBuilder)
   overload: Warbler.Misc.WarblerDbContext.OnModelCreating*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Warbler.Misc.WarblerDbContext.OnConfiguring(DbContextOptionsBuilder)
+  commentId: M:Warbler.Misc.WarblerDbContext.OnConfiguring(DbContextOptionsBuilder)
+  id: OnConfiguring(DbContextOptionsBuilder)
+  parent: Warbler.Misc.WarblerDbContext
+  langs:
+  - csharp
+  - vb
+  name: OnConfiguring(DbContextOptionsBuilder)
+  nameWithType: WarblerDbContext.OnConfiguring(DbContextOptionsBuilder)
+  fullName: Warbler.Misc.WarblerDbContext.OnConfiguring(DbContextOptionsBuilder)
+  type: Method
+  source:
+    id: OnConfiguring
+    path: ''
+    startLine: 1539
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  syntax:
+    content: protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    parameters:
+    - id: optionsBuilder
+      type: DbContextOptionsBuilder
+    content.vb: Protected Overrides Sub OnConfiguring(optionsBuilder As DbContextOptionsBuilder)
+  overload: Warbler.Misc.WarblerDbContext.OnConfiguring*
   modifiers.csharp:
   - protected
   - override
@@ -370,14 +401,14 @@ references:
   name: Universities
   nameWithType: WarblerDbContext.Universities
   fullName: Warbler.Misc.WarblerDbContext.Universities
-- uid: DbSet{University}
-  commentId: '!:DbSet{University}'
+- uid: DbSet{Warbler.Models.University}
+  commentId: '!:DbSet{Warbler.Models.University}'
   definition: DbSet`1
   name: DbSet<University>
   nameWithType: DbSet<University>
-  fullName: DbSet<University>
+  fullName: DbSet<Warbler.Models.University>
   nameWithType.vb: DbSet(Of University)
-  fullName.vb: DbSet(Of University)
+  fullName.vb: DbSet(Of Warbler.Models.University)
   name.vb: DbSet(Of University)
   spec.csharp:
   - uid: DbSet`1
@@ -388,11 +419,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -405,11 +435,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: )
     nameWithType: )
     fullName: )
@@ -457,14 +486,14 @@ references:
   name: Servers
   nameWithType: WarblerDbContext.Servers
   fullName: Warbler.Misc.WarblerDbContext.Servers
-- uid: DbSet{Server}
-  commentId: '!:DbSet{Server}'
+- uid: DbSet{Warbler.Models.Server}
+  commentId: '!:DbSet{Warbler.Models.Server}'
   definition: DbSet`1
   name: DbSet<Server>
   nameWithType: DbSet<Server>
-  fullName: DbSet<Server>
+  fullName: DbSet<Warbler.Models.Server>
   nameWithType.vb: DbSet(Of Server)
-  fullName.vb: DbSet(Of Server)
+  fullName.vb: DbSet(Of Warbler.Models.Server)
   name.vb: DbSet(Of Server)
   spec.csharp:
   - uid: DbSet`1
@@ -475,11 +504,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Server
+  - uid: Warbler.Models.Server
     name: Server
     nameWithType: Server
-    fullName: Server
-    isExternal: true
+    fullName: Warbler.Models.Server
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -492,11 +520,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Server
+  - uid: Warbler.Models.Server
     name: Server
     nameWithType: Server
-    fullName: Server
-    isExternal: true
+    fullName: Warbler.Models.Server
   - name: )
     nameWithType: )
     fullName: )
@@ -506,14 +533,14 @@ references:
   name: Channels
   nameWithType: WarblerDbContext.Channels
   fullName: Warbler.Misc.WarblerDbContext.Channels
-- uid: DbSet{Channel}
-  commentId: '!:DbSet{Channel}'
+- uid: DbSet{Warbler.Models.Channel}
+  commentId: '!:DbSet{Warbler.Models.Channel}'
   definition: DbSet`1
   name: DbSet<Channel>
   nameWithType: DbSet<Channel>
-  fullName: DbSet<Channel>
+  fullName: DbSet<Warbler.Models.Channel>
   nameWithType.vb: DbSet(Of Channel)
-  fullName.vb: DbSet(Of Channel)
+  fullName.vb: DbSet(Of Warbler.Models.Channel)
   name.vb: DbSet(Of Channel)
   spec.csharp:
   - uid: DbSet`1
@@ -524,11 +551,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Channel
+  - uid: Warbler.Models.Channel
     name: Channel
     nameWithType: Channel
-    fullName: Channel
-    isExternal: true
+    fullName: Warbler.Models.Channel
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -541,11 +567,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Channel
+  - uid: Warbler.Models.Channel
     name: Channel
     nameWithType: Channel
-    fullName: Channel
-    isExternal: true
+    fullName: Warbler.Models.Channel
   - name: )
     nameWithType: )
     fullName: )
@@ -555,14 +580,14 @@ references:
   name: Messages
   nameWithType: WarblerDbContext.Messages
   fullName: Warbler.Misc.WarblerDbContext.Messages
-- uid: DbSet{Message}
-  commentId: '!:DbSet{Message}'
+- uid: DbSet{Warbler.Models.Message}
+  commentId: '!:DbSet{Warbler.Models.Message}'
   definition: DbSet`1
   name: DbSet<Message>
   nameWithType: DbSet<Message>
-  fullName: DbSet<Message>
+  fullName: DbSet<Warbler.Models.Message>
   nameWithType.vb: DbSet(Of Message)
-  fullName.vb: DbSet(Of Message)
+  fullName.vb: DbSet(Of Warbler.Models.Message)
   name.vb: DbSet(Of Message)
   spec.csharp:
   - uid: DbSet`1
@@ -573,11 +598,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Message
+  - uid: Warbler.Models.Message
     name: Message
     nameWithType: Message
-    fullName: Message
-    isExternal: true
+    fullName: Warbler.Models.Message
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -590,11 +614,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Message
+  - uid: Warbler.Models.Message
     name: Message
     nameWithType: Message
-    fullName: Message
-    isExternal: true
+    fullName: Warbler.Models.Message
   - name: )
     nameWithType: )
     fullName: )
@@ -604,14 +627,14 @@ references:
   name: Memberships
   nameWithType: WarblerDbContext.Memberships
   fullName: Warbler.Misc.WarblerDbContext.Memberships
-- uid: DbSet{Membership}
-  commentId: '!:DbSet{Membership}'
+- uid: DbSet{Warbler.Models.Membership}
+  commentId: '!:DbSet{Warbler.Models.Membership}'
   definition: DbSet`1
   name: DbSet<Membership>
   nameWithType: DbSet<Membership>
-  fullName: DbSet<Membership>
+  fullName: DbSet<Warbler.Models.Membership>
   nameWithType.vb: DbSet(Of Membership)
-  fullName.vb: DbSet(Of Membership)
+  fullName.vb: DbSet(Of Warbler.Models.Membership)
   name.vb: DbSet(Of Membership)
   spec.csharp:
   - uid: DbSet`1
@@ -622,11 +645,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Membership
+  - uid: Warbler.Models.Membership
     name: Membership
     nameWithType: Membership
-    fullName: Membership
-    isExternal: true
+    fullName: Warbler.Models.Membership
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -639,11 +661,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Membership
+  - uid: Warbler.Models.Membership
     name: Membership
     nameWithType: Membership
-    fullName: Membership
-    isExternal: true
+    fullName: Warbler.Models.Membership
   - name: )
     nameWithType: )
     fullName: )
@@ -659,3 +680,15 @@ references:
   name: ModelBuilder
   nameWithType: ModelBuilder
   fullName: ModelBuilder
+- uid: Warbler.Misc.WarblerDbContext.OnConfiguring*
+  commentId: Overload:Warbler.Misc.WarblerDbContext.OnConfiguring
+  isExternal: false
+  name: OnConfiguring
+  nameWithType: WarblerDbContext.OnConfiguring
+  fullName: Warbler.Misc.WarblerDbContext.OnConfiguring
+- uid: DbContextOptionsBuilder
+  commentId: '!:DbContextOptionsBuilder'
+  isExternal: true
+  name: DbContextOptionsBuilder
+  nameWithType: DbContextOptionsBuilder
+  fullName: DbContextOptionsBuilder

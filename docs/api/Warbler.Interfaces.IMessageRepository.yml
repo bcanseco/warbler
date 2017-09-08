@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IMessageRepository
+  commentId: T:Warbler.Interfaces.IMessageRepository
+  id: IMessageRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IMessageRepository.LatestIn(Warbler.Models.Channel)
+  langs:
+  - csharp
+  - vb
+  name: IMessageRepository
+  nameWithType: IMessageRepository
+  fullName: Warbler.Interfaces.IMessageRepository
+  type: Interface
+  source:
+    id: IMessageRepository
+    path: ''
+    startLine: 1300
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for message-based queries against a repository.\n"
+  example: []
+  syntax:
+    content: public interface IMessageRepository
+    content.vb: Public Interface IMessageRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IMessageRepository.LatestIn(Warbler.Models.Channel)
+  commentId: M:Warbler.Interfaces.IMessageRepository.LatestIn(Warbler.Models.Channel)
+  id: LatestIn(Warbler.Models.Channel)
+  parent: Warbler.Interfaces.IMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: LatestIn(Channel)
+  nameWithType: IMessageRepository.LatestIn(Channel)
+  fullName: Warbler.Interfaces.IMessageRepository.LatestIn(Warbler.Models.Channel)
+  type: Method
+  source:
+    id: LatestIn
+    path: ''
+    startLine: 1307
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nGets the 25 latest saved Message objects for a Channel.\n"
+  example: []
+  syntax:
+    content: IAsyncEnumerable<Message> LatestIn(Channel channel)
+    parameters:
+    - id: channel
+      type: Warbler.Models.Channel
+      description: The channel to fetch messages from.
+    return:
+      type: IAsyncEnumerable{Warbler.Models.Message}
+      description: Up to 25 stored Message objects.
+    content.vb: Function LatestIn(channel As Channel) As IAsyncEnumerable(Of Message)
+  overload: Warbler.Interfaces.IMessageRepository.LatestIn*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IMessageRepository.LatestIn*
+  commentId: Overload:Warbler.Interfaces.IMessageRepository.LatestIn
+  isExternal: false
+  name: LatestIn
+  nameWithType: IMessageRepository.LatestIn
+  fullName: Warbler.Interfaces.IMessageRepository.LatestIn
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel
+- uid: IAsyncEnumerable{Warbler.Models.Message}
+  commentId: '!:IAsyncEnumerable{Warbler.Models.Message}'
+  definition: IAsyncEnumerable`1
+  name: IAsyncEnumerable<Message>
+  nameWithType: IAsyncEnumerable<Message>
+  fullName: IAsyncEnumerable<Warbler.Models.Message>
+  nameWithType.vb: IAsyncEnumerable(Of Message)
+  fullName.vb: IAsyncEnumerable(Of Warbler.Models.Message)
+  name.vb: IAsyncEnumerable(Of Message)
+  spec.csharp:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.Message
+    name: Message
+    nameWithType: Message
+    fullName: Warbler.Models.Message
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.Message
+    name: Message
+    nameWithType: Message
+    fullName: Warbler.Models.Message
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: IAsyncEnumerable`1
+  isExternal: true
+  name: IAsyncEnumerable<>
+  nameWithType: IAsyncEnumerable<>
+  fullName: IAsyncEnumerable<>
+  nameWithType.vb: IAsyncEnumerable(Of )
+  fullName.vb: IAsyncEnumerable(Of )
+  name.vb: IAsyncEnumerable(Of )
+  spec.csharp:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

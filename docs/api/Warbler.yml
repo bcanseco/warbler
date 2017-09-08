@@ -4,7 +4,6 @@ items:
   commentId: N:Warbler
   id: Warbler
   children:
-  - Warbler.Program
   - Warbler.Startup
   langs:
   - csharp
@@ -16,12 +15,6 @@ items:
   assemblies:
   - cs.temp.dll
 references:
-- uid: Warbler.Program
-  commentId: T:Warbler.Program
-  isExternal: false
-  name: Program
-  nameWithType: Program
-  fullName: Warbler.Program
 - uid: Warbler.Startup
   commentId: T:Warbler.Startup
   isExternal: false

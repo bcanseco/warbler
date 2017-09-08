@@ -5,7 +5,10 @@ items:
   id: Warbler.Services
   children:
   - Warbler.Services.AuthMessageSender
+  - Warbler.Services.ChannelService
   - Warbler.Services.ChatService
+  - Warbler.Services.MembershipService
+  - Warbler.Services.MessageService
   - Warbler.Services.ProximityService
   - Warbler.Services.UniversityService
   - Warbler.Services.UserService
@@ -25,12 +28,31 @@ references:
   name: AuthMessageSender
   nameWithType: AuthMessageSender
   fullName: Warbler.Services.AuthMessageSender
+- uid: Warbler.Services.ChannelService
+  commentId: T:Warbler.Services.ChannelService
+  isExternal: false
+  name: ChannelService
+  nameWithType: ChannelService
+  fullName: Warbler.Services.ChannelService
 - uid: Warbler.Services.ChatService
   commentId: T:Warbler.Services.ChatService
+  parent: Warbler.Services
   isExternal: false
   name: ChatService
   nameWithType: ChatService
   fullName: Warbler.Services.ChatService
+- uid: Warbler.Services.MembershipService
+  commentId: T:Warbler.Services.MembershipService
+  isExternal: false
+  name: MembershipService
+  nameWithType: MembershipService
+  fullName: Warbler.Services.MembershipService
+- uid: Warbler.Services.MessageService
+  commentId: T:Warbler.Services.MessageService
+  isExternal: false
+  name: MessageService
+  nameWithType: MessageService
+  fullName: Warbler.Services.MessageService
 - uid: Warbler.Services.ProximityService
   commentId: T:Warbler.Services.ProximityService
   parent: Warbler.Services

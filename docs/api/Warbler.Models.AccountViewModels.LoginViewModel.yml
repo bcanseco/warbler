@@ -18,7 +18,7 @@ items:
   source:
     id: LoginViewModel
     path: ''
-    startLine: 1582
+    startLine: 1742
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -55,7 +55,7 @@ items:
   source:
     id: Username
     path: ''
-    startLine: 1584
+    startLine: 1744
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -86,7 +86,7 @@ items:
   source:
     id: Password
     path: ''
-    startLine: 1587
+    startLine: 1747
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -117,7 +117,7 @@ items:
   source:
     id: RememberMe
     path: ''
-    startLine: 1591
+    startLine: 1751
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels

@@ -5,7 +5,7 @@ items:
   id: DevController
   parent: Warbler.Controllers
   children:
-  - Warbler.Controllers.DevController.#ctor(WarblerDbContext)
+  - Warbler.Controllers.DevController.#ctor(Warbler.Misc.WarblerDbContext)
   - Warbler.Controllers.DevController.Error
   - Warbler.Controllers.DevController.Index
   - Warbler.Controllers.DevController.Universities
@@ -19,7 +19,7 @@ items:
   source:
     id: DevController
     path: ''
-    startLine: 679
+    startLine: 676
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -27,7 +27,6 @@ items:
     content: 'public class DevController : Controller'
     content.vb: >-
       Public Class DevController
-
           Inherits Controller
   inheritance:
   - System.Object
@@ -37,21 +36,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Controllers.DevController.#ctor(WarblerDbContext)
-  commentId: M:Warbler.Controllers.DevController.#ctor(WarblerDbContext)
-  id: '#ctor(WarblerDbContext)'
+- uid: Warbler.Controllers.DevController.#ctor(Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Controllers.DevController.#ctor(Warbler.Misc.WarblerDbContext)
+  id: '#ctor(Warbler.Misc.WarblerDbContext)'
   parent: Warbler.Controllers.DevController
   langs:
   - csharp
   - vb
   name: DevController(WarblerDbContext)
   nameWithType: DevController.DevController(WarblerDbContext)
-  fullName: Warbler.Controllers.DevController.DevController(WarblerDbContext)
+  fullName: Warbler.Controllers.DevController.DevController(Warbler.Misc.WarblerDbContext)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 684
+    startLine: 681
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -59,7 +58,7 @@ items:
     content: public DevController(WarblerDbContext context)
     parameters:
     - id: context
-      type: WarblerDbContext
+      type: Warbler.Misc.WarblerDbContext
     content.vb: Public Sub New(context As WarblerDbContext)
   overload: Warbler.Controllers.DevController.#ctor*
   modifiers.csharp:
@@ -80,7 +79,7 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 689
+    startLine: 686
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -108,7 +107,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 694
+    startLine: 691
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -136,7 +135,7 @@ items:
   source:
     id: Universities
     path: ''
-    startLine: 702
+    startLine: 699
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -178,11 +177,19 @@ references:
   name: DevController
   nameWithType: DevController.DevController
   fullName: Warbler.Controllers.DevController.DevController
-- uid: WarblerDbContext
-  isExternal: true
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
   name: WarblerDbContext
   nameWithType: WarblerDbContext
-  fullName: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
 - uid: Warbler.Controllers.DevController.Index*
   commentId: Overload:Warbler.Controllers.DevController.Index
   isExternal: false

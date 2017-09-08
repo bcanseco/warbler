@@ -90,12 +90,12 @@
   
   
   <a id="Warbler_Controllers_AccountController__ctor_" data-uid="Warbler.Controllers.AccountController.#ctor*"></a>
-  <h4 id="Warbler_Controllers_AccountController__ctor_UserManager_User__SignInManager_User__IOptions_IdentityCookieOptions__IEmailSender_ISmsSender_ILoggerFactory_" data-uid="Warbler.Controllers.AccountController.#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)">AccountController(UserManager&lt;User&gt;, SignInManager&lt;User&gt;, IOptions&lt;IdentityCookieOptions&gt;, IEmailSender, ISmsSender, ILoggerFactory)</h4>
+  <h4 id="Warbler_Controllers_AccountController__ctor_UserManager_Warbler_Models_User__SignInManager_Warbler_Models_User__Warbler_Interfaces_IEmailSender_Warbler_Interfaces_ISmsSender_ILoggerFactory_" data-uid="Warbler.Controllers.AccountController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)">AccountController(UserManager&lt;User&gt;, SignInManager&lt;User&gt;, IEmailSender, ISmsSender, ILoggerFactory)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccountController(UserManager&lt;User&gt; userManager, SignInManager&lt;User&gt; signInManager, IOptions&lt;IdentityCookieOptions&gt; identityCookieOptions, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory)</code></pre>
+    <pre><code class="lang-csharp hljs">public AccountController(UserManager&lt;User&gt; userManager, SignInManager&lt;User&gt; signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,27 +108,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UserManager</span>&lt;<span class="xref">User</span>&gt;</td>
+        <td><span class="xref">UserManager</span>&lt;<a class="xref" href="Warbler.Models.User.html">User</a>&gt;</td>
         <td><span class="parametername">userManager</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">SignInManager</span>&lt;<span class="xref">User</span>&gt;</td>
+        <td><span class="xref">SignInManager</span>&lt;<a class="xref" href="Warbler.Models.User.html">User</a>&gt;</td>
         <td><span class="parametername">signInManager</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IOptions</span>&lt;<span class="xref">IdentityCookieOptions</span>&gt;</td>
-        <td><span class="parametername">identityCookieOptions</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">IEmailSender</span></td>
+        <td><a class="xref" href="Warbler.Interfaces.IEmailSender.html">IEmailSender</a></td>
         <td><span class="parametername">emailSender</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ISmsSender</span></td>
+        <td><a class="xref" href="Warbler.Interfaces.ISmsSender.html">ISmsSender</a></td>
         <td><span class="parametername">smsSender</span></td>
         <td></td>
       </tr>

@@ -5,7 +5,7 @@ items:
   id: ProximityHub
   parent: Warbler.Hubs
   children:
-  - Warbler.Hubs.ProximityHub.#ctor(WarblerDbContext,UserManager{User})
+  - Warbler.Hubs.ProximityHub.#ctor(Warbler.Misc.WarblerDbContext,UserManager{Warbler.Models.User})
   - Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
   - Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
   - Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
@@ -19,17 +19,16 @@ items:
   source:
     id: ProximityHub
     path: ''
-    startLine: 1209
+    startLine: 1184
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
-  summary: "\nCoordinates websocket communication between clients and server.\n"
+  summary: "\nCoordinates websocket communication between\nclients and server on the chat index view.\n"
   example: []
   syntax:
     content: 'public class ProximityHub : Hub'
     content.vb: >-
       Public Class ProximityHub
-
           Inherits Hub
   inheritance:
   - System.Object
@@ -39,21 +38,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Hubs.ProximityHub.#ctor(WarblerDbContext,UserManager{User})
-  commentId: M:Warbler.Hubs.ProximityHub.#ctor(WarblerDbContext,UserManager{User})
-  id: '#ctor(WarblerDbContext,UserManager{User})'
+- uid: Warbler.Hubs.ProximityHub.#ctor(Warbler.Misc.WarblerDbContext,UserManager{Warbler.Models.User})
+  commentId: M:Warbler.Hubs.ProximityHub.#ctor(Warbler.Misc.WarblerDbContext,UserManager{Warbler.Models.User})
+  id: '#ctor(Warbler.Misc.WarblerDbContext,UserManager{Warbler.Models.User})'
   parent: Warbler.Hubs.ProximityHub
   langs:
   - csharp
   - vb
   name: ProximityHub(WarblerDbContext, UserManager<User>)
   nameWithType: ProximityHub.ProximityHub(WarblerDbContext, UserManager<User>)
-  fullName: Warbler.Hubs.ProximityHub.ProximityHub(WarblerDbContext, UserManager<User>)
+  fullName: Warbler.Hubs.ProximityHub.ProximityHub(Warbler.Misc.WarblerDbContext, UserManager<Warbler.Models.User>)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 1218
+    startLine: 1193
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -63,9 +62,9 @@ items:
     content: public ProximityHub(WarblerDbContext context, UserManager<User> userManager)
     parameters:
     - id: context
-      type: WarblerDbContext
+      type: Warbler.Misc.WarblerDbContext
     - id: userManager
-      type: UserManager{User}
+      type: UserManager{Warbler.Models.User}
     content.vb: Public Sub New(context As WarblerDbContext, userManager As UserManager(Of User))
   overload: Warbler.Hubs.ProximityHub.#ctor*
   nameWithType.vb: ProximityHub.ProximityHub(WarblerDbContext, UserManager(Of User))
@@ -73,7 +72,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Warbler.Hubs.ProximityHub.ProximityHub(WarblerDbContext, UserManager(Of User))
+  fullName.vb: Warbler.Hubs.ProximityHub.ProximityHub(Warbler.Misc.WarblerDbContext, UserManager(Of Warbler.Models.User))
   name.vb: ProximityHub(WarblerDbContext, UserManager(Of User))
 - uid: Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
   commentId: M:Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
@@ -89,7 +88,7 @@ items:
   source:
     id: OnDisconnected
     path: ''
-    startLine: 1224
+    startLine: 1199
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -122,20 +121,21 @@ items:
   source:
     id: GetNearbyUniversitiesAsync
     path: ''
-    startLine: 1234
+    startLine: 1212
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
   summary: "\nCalled via SignalR when the user enters the Chat view\nwithout being a member of any universities.\n"
   example: []
   syntax:
-    content: public Task GetNearbyUniversitiesAsync(string serializedLatLng)
+    content: public Task GetNearbyUniversitiesAsync(string locationSer)
     parameters:
-    - id: serializedLatLng
+    - id: locationSer
       type: System.String
+      description: The serialized location (lat/lng).
     return:
       type: Task
-    content.vb: Public Function GetNearbyUniversitiesAsync(serializedLatLng As String) As Task
+    content.vb: Public Function GetNearbyUniversitiesAsync(locationSer As String) As Task
   overload: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync*
   modifiers.csharp:
   - public
@@ -155,7 +155,7 @@ items:
   source:
     id: SelectUniversityAsync
     path: ''
-    startLine: 1252
+    startLine: 1225
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -166,6 +166,7 @@ items:
     parameters:
     - id: placeId
       type: System.String
+      description: The Google Place ID of the clicked university.
     return:
       type: Task
     content.vb: Public Function SelectUniversityAsync(placeId As String) As Task
@@ -200,19 +201,21 @@ references:
   name: ProximityHub
   nameWithType: ProximityHub.ProximityHub
   fullName: Warbler.Hubs.ProximityHub.ProximityHub
-- uid: WarblerDbContext
-  isExternal: true
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
   name: WarblerDbContext
   nameWithType: WarblerDbContext
-  fullName: WarblerDbContext
-- uid: UserManager{User}
-  commentId: '!:UserManager{User}'
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: UserManager{Warbler.Models.User}
+  commentId: '!:UserManager{Warbler.Models.User}'
   definition: UserManager`1
   name: UserManager<User>
   nameWithType: UserManager<User>
-  fullName: UserManager<User>
+  fullName: UserManager<Warbler.Models.User>
   nameWithType.vb: UserManager(Of User)
-  fullName.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of Warbler.Models.User)
   name.vb: UserManager(Of User)
   spec.csharp:
   - uid: UserManager`1
@@ -223,11 +226,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -240,14 +242,19 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
 - uid: UserManager`1
   isExternal: true
   name: UserManager<>

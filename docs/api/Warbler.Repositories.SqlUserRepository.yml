@@ -5,8 +5,8 @@ items:
   id: SqlUserRepository
   parent: Warbler.Repositories
   children:
-  - Warbler.Repositories.SqlUserRepository.#ctor(WarblerDbContext)
-  - Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
+  - Warbler.Repositories.SqlUserRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  - Warbler.Repositories.SqlUserRepository.IsNewAsync(Warbler.Models.User)
   langs:
   - csharp
   - vb
@@ -17,41 +17,50 @@ items:
   source:
     id: SqlUserRepository
     path: ''
-    startLine: 2076
+    startLine: 2347
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
-  summary: "\nRuns queries against the SQL database using Entity Framework.\nLook at <see cref=\"!:IUserRepository\"></see> for docs.\n"
+  summary: "\nRuns queries against the SQL database using Entity Framework.\nLook at <xref href=\"Warbler.Interfaces.IUserRepository\" data-throw-if-not-resolved=\"false\"></xref> for docs.\n"
   example: []
   syntax:
     content: 'public class SqlUserRepository : IUserRepository'
     content.vb: >-
       Public Class SqlUserRepository
-
-          Inherits IUserRepository
+          Implements IUserRepository
   inheritance:
   - System.Object
+  implements:
+  - Warbler.Interfaces.IUserRepository
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Repositories.SqlUserRepository.#ctor(WarblerDbContext)
-  commentId: M:Warbler.Repositories.SqlUserRepository.#ctor(WarblerDbContext)
-  id: '#ctor(WarblerDbContext)'
+- uid: Warbler.Repositories.SqlUserRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Repositories.SqlUserRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  id: '#ctor(Warbler.Misc.WarblerDbContext)'
   parent: Warbler.Repositories.SqlUserRepository
   langs:
   - csharp
   - vb
   name: SqlUserRepository(WarblerDbContext)
   nameWithType: SqlUserRepository.SqlUserRepository(WarblerDbContext)
-  fullName: Warbler.Repositories.SqlUserRepository.SqlUserRepository(WarblerDbContext)
+  fullName: Warbler.Repositories.SqlUserRepository.SqlUserRepository(Warbler.Misc.WarblerDbContext)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 2080
+    startLine: 2351
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -59,28 +68,28 @@ items:
     content: public SqlUserRepository(WarblerDbContext context)
     parameters:
     - id: context
-      type: WarblerDbContext
+      type: Warbler.Misc.WarblerDbContext
     content.vb: Public Sub New(context As WarblerDbContext)
   overload: Warbler.Repositories.SqlUserRepository.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
-  commentId: M:Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
-  id: IsNewAsync(User)
+- uid: Warbler.Repositories.SqlUserRepository.IsNewAsync(Warbler.Models.User)
+  commentId: M:Warbler.Repositories.SqlUserRepository.IsNewAsync(Warbler.Models.User)
+  id: IsNewAsync(Warbler.Models.User)
   parent: Warbler.Repositories.SqlUserRepository
   langs:
   - csharp
   - vb
   name: IsNewAsync(User)
   nameWithType: SqlUserRepository.IsNewAsync(User)
-  fullName: Warbler.Repositories.SqlUserRepository.IsNewAsync(User)
+  fullName: Warbler.Repositories.SqlUserRepository.IsNewAsync(Warbler.Models.User)
   type: Method
   source:
     id: IsNewAsync
     path: ''
-    startLine: 2085
+    startLine: 2356
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -88,16 +97,25 @@ items:
     content: public Task<bool> IsNewAsync(User user)
     parameters:
     - id: user
-      type: User
+      type: Warbler.Models.User
     return:
       type: Task{System.Boolean}
     content.vb: Public Function IsNewAsync(user As User) As Task(Of Boolean)
   overload: Warbler.Repositories.SqlUserRepository.IsNewAsync*
+  implements:
+  - Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
+- uid: Warbler.Interfaces.IUserRepository
+  commentId: T:Warbler.Interfaces.IUserRepository
+  parent: Warbler.Interfaces
+  isExternal: false
+  name: IUserRepository
+  nameWithType: IUserRepository
+  fullName: Warbler.Interfaces.IUserRepository
 - uid: Warbler.Repositories
   commentId: N:Warbler.Repositories
   isExternal: false
@@ -111,6 +129,291 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
 - uid: System
   commentId: N:System
   isExternal: false
@@ -123,22 +426,69 @@ references:
   name: SqlUserRepository
   nameWithType: SqlUserRepository.SqlUserRepository
   fullName: Warbler.Repositories.SqlUserRepository.SqlUserRepository
-- uid: WarblerDbContext
-  isExternal: true
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
   name: WarblerDbContext
   nameWithType: WarblerDbContext
-  fullName: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
 - uid: Warbler.Repositories.SqlUserRepository.IsNewAsync*
   commentId: Overload:Warbler.Repositories.SqlUserRepository.IsNewAsync
   isExternal: false
   name: IsNewAsync
   nameWithType: SqlUserRepository.IsNewAsync
   fullName: Warbler.Repositories.SqlUserRepository.IsNewAsync
-- uid: User
-  isExternal: true
+- uid: Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+  commentId: M:Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+  parent: Warbler.Interfaces.IUserRepository
+  isExternal: false
+  name: IsNewAsync(User)
+  nameWithType: IUserRepository.IsNewAsync(User)
+  fullName: Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+    name: IsNewAsync
+    nameWithType: IUserRepository.IsNewAsync
+    fullName: Warbler.Interfaces.IUserRepository.IsNewAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+    name: IsNewAsync
+    nameWithType: IUserRepository.IsNewAsync
+    fullName: Warbler.Interfaces.IUserRepository.IsNewAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
   name: User
   nameWithType: User
-  fullName: User
+  fullName: Warbler.Models.User
 - uid: Task{System.Boolean}
   commentId: '!:Task{System.Boolean}'
   definition: Task`1
@@ -182,6 +532,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
 - uid: Task`1
   isExternal: true
   name: Task<>

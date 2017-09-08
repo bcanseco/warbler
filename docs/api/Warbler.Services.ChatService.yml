@@ -5,8 +5,9 @@ items:
   id: ChatService
   parent: Warbler.Services
   children:
-  - Warbler.Services.ChatService.OnConnected(System.String,System.String)
-  - Warbler.Services.ChatService.OnDisconnected(System.String)
+  - Warbler.Services.ChatService.OnConnected(Warbler.Models.User,System.String)
+  - Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User,System.String)
+  - Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)
   langs:
   - csharp
   - vb
@@ -17,101 +18,143 @@ items:
   source:
     id: ChatService
     path: ''
-    startLine: 2128
+    startLine: 2433
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
-  summary: "\nUsed by the <xref href=\"Warbler.Hubs.ChatHub\" data-throw-if-not-resolved=\"false\"></xref> for business logic.\n"
+  summary: "\nUsed by the <see cref=\"!:ChatHub\"></see> for business logic.\n"
   example: []
   syntax:
-    content: 'public class ChatService : HubResource<ChatService>'
+    content: 'public class ChatService : HubResource<ChatService, ChatHub>'
     content.vb: >-
       Public Class ChatService
-
-          Inherits HubResource(Of ChatService)
+          Inherits HubResource(Of ChatService, ChatHub)
   inheritance:
   - System.Object
+  - Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}
+  inheritedMembers:
+  - Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.Instance
+  - Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.HubContext
+  - Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.OnConnected(Warbler.Models.User,System.String)
+  - Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.OnDisconnected(Warbler.Models.User,System.String)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Services.ChatService.OnConnected(System.String,System.String)
-  commentId: M:Warbler.Services.ChatService.OnConnected(System.String,System.String)
-  id: OnConnected(System.String,System.String)
+- uid: Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)
+  id: With(Warbler.Misc.WarblerDbContext)
   parent: Warbler.Services.ChatService
   langs:
   - csharp
   - vb
-  name: OnConnected(String, String)
-  nameWithType: ChatService.OnConnected(String, String)
-  fullName: Warbler.Services.ChatService.OnConnected(System.String, System.String)
+  name: With(WarblerDbContext)
+  nameWithType: ChatService.With(WarblerDbContext)
+  fullName: Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)
+  type: Method
+  source:
+    id: With
+    path: ''
+    startLine: 2446
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nAllows the hub to attach a database context to this service instance.\n"
+  example: []
+  syntax:
+    content: public ChatService With(WarblerDbContext context)
+    parameters:
+    - id: context
+      type: Warbler.Misc.WarblerDbContext
+    return:
+      type: Warbler.Services.ChatService
+    content.vb: Public Function With(context As WarblerDbContext) As ChatService
+  overload: Warbler.Services.ChatService.With*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.ChatService.OnConnected(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Services.ChatService.OnConnected(Warbler.Models.User,System.String)
+  id: OnConnected(Warbler.Models.User,System.String)
+  parent: Warbler.Services.ChatService
+  langs:
+  - csharp
+  - vb
+  name: OnConnected(User, String)
+  nameWithType: ChatService.OnConnected(User, String)
+  fullName: Warbler.Services.ChatService.OnConnected(Warbler.Models.User, System.String)
   type: Method
   source:
     id: OnConnected
     path: ''
-    startLine: 2136
+    startLine: 2462
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
   summary: "\nInvoked from the hub on each connected client.\n"
   example: []
   syntax:
-    content: public Task OnConnected(string connectionId, string userName)
+    content: public Task OnConnected(User user, string connectionId)
     parameters:
+    - id: user
+      type: Warbler.Models.User
     - id: connectionId
-      type: System.String
-    - id: userName
       type: System.String
     return:
       type: Task
-    content.vb: Public Function OnConnected(connectionId As String, userName As String) As Task
+    content.vb: Public Function OnConnected(user As User, connectionId As String) As Task
   overload: Warbler.Services.ChatService.OnConnected*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Services.ChatService.OnDisconnected(System.String)
-  commentId: M:Warbler.Services.ChatService.OnDisconnected(System.String)
-  id: OnDisconnected(System.String)
+- uid: Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User,System.String)
+  id: OnDisconnected(Warbler.Models.User,System.String)
   parent: Warbler.Services.ChatService
   langs:
   - csharp
   - vb
-  name: OnDisconnected(String)
-  nameWithType: ChatService.OnDisconnected(String)
-  fullName: Warbler.Services.ChatService.OnDisconnected(System.String)
+  name: OnDisconnected(User, String)
+  nameWithType: ChatService.OnDisconnected(User, String)
+  fullName: Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User, System.String)
   type: Method
   source:
     id: OnDisconnected
     path: ''
-    startLine: 2145
+    startLine: 2517
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
   summary: "\nInvoked from the hub on each disconnected client.\n"
+  remarks: "\nWe don't have to remove the connection ID from its \nHubContext group because SignalR does this automatically.\n"
   example: []
   syntax:
-    content: public Task OnDisconnected(string connectionId)
+    content: public Task OnDisconnected(User user, string connectionId)
     parameters:
+    - id: user
+      type: Warbler.Models.User
     - id: connectionId
       type: System.String
     return:
       type: Task
-    content.vb: Public Function OnDisconnected(connectionId As String) As Task
+    content.vb: Public Function OnDisconnected(user As User, connectionId As String) As Task
   overload: Warbler.Services.ChatService.OnDisconnected*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Warbler.Hubs.ChatHub
-  commentId: T:Warbler.Hubs.ChatHub
-  isExternal: false
-  name: ChatHub
-  nameWithType: ChatHub
-  fullName: Warbler.Hubs.ChatHub
 - uid: Warbler.Services
   commentId: N:Warbler.Services
   isExternal: false
@@ -125,18 +168,687 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}
+  commentId: T:Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}
+  parent: Warbler.Misc
+  definition: Warbler.Misc.HubResource`2
+  name: HubResource<ChatService, ChatHub>
+  nameWithType: HubResource<ChatService, ChatHub>
+  fullName: Warbler.Misc.HubResource<Warbler.Services.ChatService, ChatHub>
+  nameWithType.vb: HubResource(Of ChatService, ChatHub)
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ChatService, ChatHub)
+  name.vb: HubResource(Of ChatService, ChatHub)
+  spec.csharp:
+  - uid: Warbler.Misc.HubResource`2
+    name: HubResource
+    nameWithType: HubResource
+    fullName: Warbler.Misc.HubResource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Services.ChatService
+    name: ChatService
+    nameWithType: ChatService
+    fullName: Warbler.Services.ChatService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ChatHub
+    name: ChatHub
+    nameWithType: ChatHub
+    fullName: ChatHub
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Warbler.Misc.HubResource`2
+    name: HubResource
+    nameWithType: HubResource
+    fullName: Warbler.Misc.HubResource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Services.ChatService
+    name: ChatService
+    nameWithType: ChatService
+    fullName: Warbler.Services.ChatService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ChatHub
+    name: ChatHub
+    nameWithType: ChatHub
+    fullName: ChatHub
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.Instance
+  commentId: P:Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.Instance
+  parent: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}
+  definition: Warbler.Misc.HubResource`2.Instance
+  name: Instance
+  nameWithType: HubResource<ChatService, ChatHub>.Instance
+  fullName: Warbler.Misc.HubResource<Warbler.Services.ChatService, ChatHub>.Instance
+  nameWithType.vb: HubResource(Of ChatService, ChatHub).Instance
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ChatService, ChatHub).Instance
+- uid: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.HubContext
+  commentId: P:Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.HubContext
+  parent: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}
+  definition: Warbler.Misc.HubResource`2.HubContext
+  name: HubContext
+  nameWithType: HubResource<ChatService, ChatHub>.HubContext
+  fullName: Warbler.Misc.HubResource<Warbler.Services.ChatService, ChatHub>.HubContext
+  nameWithType.vb: HubResource(Of ChatService, ChatHub).HubContext
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ChatService, ChatHub).HubContext
+- uid: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.OnConnected(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.OnConnected(Warbler.Models.User,System.String)
+  parent: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}
+  definition: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+  name: OnConnected(User, String)
+  nameWithType: HubResource<ChatService, ChatHub>.OnConnected(User, String)
+  fullName: Warbler.Misc.HubResource<Warbler.Services.ChatService, ChatHub>.OnConnected(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of ChatService, ChatHub).OnConnected(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ChatService, ChatHub).OnConnected(Warbler.Models.User, System.String)
+  spec.csharp:
+  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+    name: OnConnected
+    nameWithType: HubResource<ChatService, ChatHub>.OnConnected
+    fullName: Warbler.Misc.HubResource<Warbler.Services.ChatService, ChatHub>.OnConnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+    name: OnConnected
+    nameWithType: HubResource(Of ChatService, ChatHub).OnConnected
+    fullName: Warbler.Misc.HubResource(Of Warbler.Services.ChatService, ChatHub).OnConnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.OnDisconnected(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}.OnDisconnected(Warbler.Models.User,System.String)
+  parent: Warbler.Misc.HubResource{Warbler.Services.ChatService,ChatHub}
+  definition: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+  name: OnDisconnected(User, String)
+  nameWithType: HubResource<ChatService, ChatHub>.OnDisconnected(User, String)
+  fullName: Warbler.Misc.HubResource<Warbler.Services.ChatService, ChatHub>.OnDisconnected(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of ChatService, ChatHub).OnDisconnected(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ChatService, ChatHub).OnDisconnected(Warbler.Models.User, System.String)
+  spec.csharp:
+  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+    name: OnDisconnected
+    nameWithType: HubResource<ChatService, ChatHub>.OnDisconnected
+    fullName: Warbler.Misc.HubResource<Warbler.Services.ChatService, ChatHub>.OnDisconnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+    name: OnDisconnected
+    nameWithType: HubResource(Of ChatService, ChatHub).OnDisconnected
+    fullName: Warbler.Misc.HubResource(Of Warbler.Services.ChatService, ChatHub).OnDisconnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
+- uid: Warbler.Misc.HubResource`2
+  commentId: T:Warbler.Misc.HubResource`2
+  isExternal: false
+  name: HubResource<TService, THub>
+  nameWithType: HubResource<TService, THub>
+  fullName: Warbler.Misc.HubResource<TService, THub>
+  nameWithType.vb: HubResource(Of TService, THub)
+  fullName.vb: Warbler.Misc.HubResource(Of TService, THub)
+  name.vb: HubResource(Of TService, THub)
+  spec.csharp:
+  - uid: Warbler.Misc.HubResource`2
+    name: HubResource
+    nameWithType: HubResource
+    fullName: Warbler.Misc.HubResource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: THub
+    nameWithType: THub
+    fullName: THub
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Warbler.Misc.HubResource`2
+    name: HubResource
+    nameWithType: HubResource
+    fullName: Warbler.Misc.HubResource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: THub
+    nameWithType: THub
+    fullName: THub
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
+- uid: Warbler.Misc.HubResource`2.Instance
+  commentId: P:Warbler.Misc.HubResource`2.Instance
+  isExternal: false
+  name: Instance
+  nameWithType: HubResource<TService, THub>.Instance
+  fullName: Warbler.Misc.HubResource<TService, THub>.Instance
+  nameWithType.vb: HubResource(Of TService, THub).Instance
+  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).Instance
+- uid: Warbler.Misc.HubResource`2.HubContext
+  commentId: P:Warbler.Misc.HubResource`2.HubContext
+  isExternal: false
+  name: HubContext
+  nameWithType: HubResource<TService, THub>.HubContext
+  fullName: Warbler.Misc.HubResource<TService, THub>.HubContext
+  nameWithType.vb: HubResource(Of TService, THub).HubContext
+  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).HubContext
+- uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+  isExternal: true
+  name: OnConnected(User, String)
+  nameWithType: HubResource<TService, THub>.OnConnected(User, String)
+  fullName: Warbler.Misc.HubResource<TService, THub>.OnConnected(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of TService, THub).OnConnected(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).OnConnected(Warbler.Models.User, System.String)
+  spec.csharp:
+  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+    name: OnConnected
+    nameWithType: HubResource<TService, THub>.OnConnected
+    fullName: Warbler.Misc.HubResource<TService, THub>.OnConnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+    name: OnConnected
+    nameWithType: HubResource(Of TService, THub).OnConnected
+    fullName: Warbler.Misc.HubResource(Of TService, THub).OnConnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+  isExternal: true
+  name: OnDisconnected(User, String)
+  nameWithType: HubResource<TService, THub>.OnDisconnected(User, String)
+  fullName: Warbler.Misc.HubResource<TService, THub>.OnDisconnected(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of TService, THub).OnDisconnected(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).OnDisconnected(Warbler.Models.User, System.String)
+  spec.csharp:
+  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+    name: OnDisconnected
+    nameWithType: HubResource<TService, THub>.OnDisconnected
+    fullName: Warbler.Misc.HubResource<TService, THub>.OnDisconnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+    name: OnDisconnected
+    nameWithType: HubResource(Of TService, THub).OnDisconnected
+    fullName: Warbler.Misc.HubResource(Of TService, THub).OnDisconnected
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Services.ChatService.With*
+  commentId: Overload:Warbler.Services.ChatService.With
+  isExternal: false
+  name: With
+  nameWithType: ChatService.With
+  fullName: Warbler.Services.ChatService.With
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: Warbler.Services.ChatService
+  commentId: T:Warbler.Services.ChatService
+  parent: Warbler.Services
+  isExternal: false
+  name: ChatService
+  nameWithType: ChatService
+  fullName: Warbler.Services.ChatService
 - uid: Warbler.Services.ChatService.OnConnected*
   commentId: Overload:Warbler.Services.ChatService.OnConnected
   isExternal: false
   name: OnConnected
   nameWithType: ChatService.OnConnected
   fullName: Warbler.Services.ChatService.OnConnected
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -149,6 +861,12 @@ references:
   name: Task
   nameWithType: Task
   fullName: Task
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
 - uid: Warbler.Services.ChatService.OnDisconnected*
   commentId: Overload:Warbler.Services.ChatService.OnDisconnected
   isExternal: false

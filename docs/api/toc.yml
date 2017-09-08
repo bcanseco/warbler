@@ -2,8 +2,6 @@
 - uid: Warbler
   name: Warbler
   items:
-  - uid: Warbler.Program
-    name: Program
   - uid: Warbler.Startup
     name: Startup
 - uid: Warbler.Controllers
@@ -31,8 +29,6 @@
   items:
   - uid: Warbler.Extensions.NearbyResultExtensions
     name: NearbyResultExtensions
-  - uid: Warbler.Extensions.UserManagerExtensions
-    name: UserManagerExtensions
 - uid: Warbler.Hubs
   name: Warbler.Hubs
   items:
@@ -43,8 +39,14 @@
 - uid: Warbler.Interfaces
   name: Warbler.Interfaces
   items:
+  - uid: Warbler.Interfaces.IChannelRepository
+    name: IChannelRepository
   - uid: Warbler.Interfaces.IEmailSender
     name: IEmailSender
+  - uid: Warbler.Interfaces.IMembershipRepository
+    name: IMembershipRepository
+  - uid: Warbler.Interfaces.IMessageRepository
+    name: IMessageRepository
   - uid: Warbler.Interfaces.ISmsSender
     name: ISmsSender
   - uid: Warbler.Interfaces.IUniversityRepository
@@ -54,9 +56,11 @@
 - uid: Warbler.Misc
   name: Warbler.Misc
   items:
-  - uid: Warbler.Misc.HubResource`1
-    name: HubResource<TService>
-    name.vb: HubResource(Of TService)
+  - uid: Warbler.Misc.ConnectionMapping
+    name: ConnectionMapping
+  - uid: Warbler.Misc.HubResource`2
+    name: HubResource<TService, THub>
+    name.vb: HubResource(Of TService, THub)
   - uid: Warbler.Misc.WarblerDbContext
     name: WarblerDbContext
 - uid: Warbler.Models
@@ -128,6 +132,12 @@
 - uid: Warbler.Repositories
   name: Warbler.Repositories
   items:
+  - uid: Warbler.Repositories.SqlChannelRepository
+    name: SqlChannelRepository
+  - uid: Warbler.Repositories.SqlMembershipRepository
+    name: SqlMembershipRepository
+  - uid: Warbler.Repositories.SqlMessageRepository
+    name: SqlMessageRepository
   - uid: Warbler.Repositories.SqlSampleRepository
     name: SqlSampleRepository
   - uid: Warbler.Repositories.SqlUniversityRepository
@@ -139,16 +149,22 @@
   items:
   - uid: Warbler.Services.AuthMessageSender
     name: AuthMessageSender
+  - uid: Warbler.Services.ChannelService
+    name: ChannelService
   - uid: Warbler.Services.ChatService
     name: ChatService
+  - uid: Warbler.Services.MembershipService
+    name: MembershipService
+  - uid: Warbler.Services.MessageService
+    name: MessageService
   - uid: Warbler.Services.ProximityService
     name: ProximityService
   - uid: Warbler.Services.UniversityService
     name: UniversityService
   - uid: Warbler.Services.UserService
     name: UserService
-- uid: Warbler.Tests
-  name: Warbler.Tests
+- uid: Warbler.Tests.Repositories
+  name: Warbler.Tests.Repositories
   items:
-  - uid: Warbler.Tests.Test
-    name: Test
+  - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository
+    name: TestSqlUniversityRepository

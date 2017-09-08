@@ -5,10 +5,10 @@ items:
   id: IUniversityRepository
   parent: Warbler.Interfaces
   children:
+  - Warbler.Interfaces.IUniversityRepository.AllQueryable(QueryDepth)
   - Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
-  - Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
   - Warbler.Interfaces.IUniversityRepository.LookupAsync(System.String)
-  - Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
+  - Warbler.Interfaces.IUniversityRepository.SaveAsync
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   source:
     id: IUniversityRepository
     path: ''
-    startLine: 1289
+    startLine: 1332
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -48,7 +48,7 @@ items:
   source:
     id: CreateAsync
     path: ''
-    startLine: 1296
+    startLine: 1339
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -61,40 +61,36 @@ items:
       type: NearByResult
       description: The result whose properties will be used for creation.
     return:
-      type: Task{University}
+      type: Task{Warbler.Models.University}
       description: The created university.
     content.vb: Function CreateAsync(uni As NearByResult) As Task(Of University)
   overload: Warbler.Interfaces.IUniversityRepository.CreateAsync*
-- uid: Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
-  commentId: M:Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
-  id: UpdateAsync(University)
+- uid: Warbler.Interfaces.IUniversityRepository.SaveAsync
+  commentId: M:Warbler.Interfaces.IUniversityRepository.SaveAsync
+  id: SaveAsync
   parent: Warbler.Interfaces.IUniversityRepository
   langs:
   - csharp
   - vb
-  name: UpdateAsync(University)
-  nameWithType: IUniversityRepository.UpdateAsync(University)
-  fullName: Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)
+  name: SaveAsync()
+  nameWithType: IUniversityRepository.SaveAsync()
+  fullName: Warbler.Interfaces.IUniversityRepository.SaveAsync()
   type: Method
   source:
-    id: UpdateAsync
+    id: SaveAsync
     path: ''
-    startLine: 1302
+    startLine: 1345
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
-  summary: "\nUpdates the properties of the university object in the database.\n"
+  summary: "\nUpdates the properties of any universities in the database\nthat have been queried for and subsequently changed.\n"
   example: []
   syntax:
-    content: Task UpdateAsync(University university)
-    parameters:
-    - id: university
-      type: University
-      description: The university to update.
+    content: Task SaveAsync()
     return:
       type: Task
-    content.vb: Function UpdateAsync(university As University) As Task
-  overload: Warbler.Interfaces.IUniversityRepository.UpdateAsync*
+    content.vb: Function SaveAsync As Task
+  overload: Warbler.Interfaces.IUniversityRepository.SaveAsync*
 - uid: Warbler.Interfaces.IUniversityRepository.LookupAsync(System.String)
   commentId: M:Warbler.Interfaces.IUniversityRepository.LookupAsync(System.String)
   id: LookupAsync(System.String)
@@ -109,7 +105,7 @@ items:
   source:
     id: LookupAsync
     path: ''
-    startLine: 1310
+    startLine: 1353
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -122,44 +118,48 @@ items:
       type: System.String
       description: The place ID to use for lookup. These are unique.
     return:
-      type: Task{University}
+      type: Task{Warbler.Models.University}
       description: The university (at user level) if it exists.
     content.vb: Function LookupAsync(placeId As String) As Task(Of University)
   overload: Warbler.Interfaces.IUniversityRepository.LookupAsync*
   exceptions:
   - type: Warbler.Exceptions.UniversityNotFoundException
     commentId: T:Warbler.Exceptions.UniversityNotFoundException
-- uid: Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
-  commentId: M:Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
-  id: GetAllAsync(QueryDepth)
+- uid: Warbler.Interfaces.IUniversityRepository.AllQueryable(QueryDepth)
+  commentId: M:Warbler.Interfaces.IUniversityRepository.AllQueryable(QueryDepth)
+  id: AllQueryable(QueryDepth)
   parent: Warbler.Interfaces.IUniversityRepository
   langs:
   - csharp
   - vb
-  name: GetAllAsync(QueryDepth)
-  nameWithType: IUniversityRepository.GetAllAsync(QueryDepth)
-  fullName: Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)
+  name: AllQueryable(QueryDepth)
+  nameWithType: IUniversityRepository.AllQueryable(QueryDepth)
+  fullName: Warbler.Interfaces.IUniversityRepository.AllQueryable(QueryDepth)
   type: Method
   source:
-    id: GetAllAsync
+    id: AllQueryable
     path: ''
-    startLine: 1321
+    startLine: 1367
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
-  summary: "\nGets a list of all universities in the database.\n"
+  summary: "\nGets an executable query for all universities in the database.\n"
   example:
-  - "\nUsing a query depth of <see cref=\"!:Server\"></see> will make all <see cref=\"!:University\"></see>\nobjects have a non-null Server property. However, those servers will have a null\n<see cref=\"!:ICollection&lt;Channel&gt;\"></see> property.\n"
+  - "\nUsing a query depth of <xref href=\"Warbler.Models.Server\" data-throw-if-not-resolved=\"false\"></xref> will make each <xref href=\"Warbler.Models.University\" data-throw-if-not-resolved=\"false\"></xref>\nobject in the query's result have a filled-in Server property. However, those \nServer objects will each have a null <xref href=\"Warbler.Models.Channel\" data-throw-if-not-resolved=\"false\"></xref> collection property.\n"
   syntax:
-    content: Task<List<University>> GetAllAsync(QueryDepth depth = null)
+    content: IQueryable<University> AllQueryable(QueryDepth depth = null)
     parameters:
     - id: depth
       type: QueryDepth
       description: At what level navigation properties should be retrieved.
     return:
-      type: Task{List{University}}
-    content.vb: Function GetAllAsync(depth As QueryDepth = Nothing) As Task(Of List(Of University))
-  overload: Warbler.Interfaces.IUniversityRepository.GetAllAsync*
+      type: IQueryable{Warbler.Models.University}
+    content.vb: Function AllQueryable(depth As QueryDepth = Nothing) As IQueryable(Of University)
+  overload: Warbler.Interfaces.IUniversityRepository.AllQueryable*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: "\nThrown when <span class=\"paramref\">depth</span>'s value is unknown.\n"
 references:
 - uid: Warbler.Interfaces
   commentId: N:Warbler.Interfaces
@@ -178,14 +178,14 @@ references:
   name: NearByResult
   nameWithType: NearByResult
   fullName: NearByResult
-- uid: Task{University}
-  commentId: '!:Task{University}'
+- uid: Task{Warbler.Models.University}
+  commentId: '!:Task{Warbler.Models.University}'
   definition: Task`1
   name: Task<University>
   nameWithType: Task<University>
-  fullName: Task<University>
+  fullName: Task<Warbler.Models.University>
   nameWithType.vb: Task(Of University)
-  fullName.vb: Task(Of University)
+  fullName.vb: Task(Of Warbler.Models.University)
   name.vb: Task(Of University)
   spec.csharp:
   - uid: Task`1
@@ -196,11 +196,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -213,11 +212,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: )
     nameWithType: )
     fullName: )
@@ -259,17 +257,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Warbler.Interfaces.IUniversityRepository.UpdateAsync*
-  commentId: Overload:Warbler.Interfaces.IUniversityRepository.UpdateAsync
+- uid: Warbler.Interfaces.IUniversityRepository.SaveAsync*
+  commentId: Overload:Warbler.Interfaces.IUniversityRepository.SaveAsync
   isExternal: false
-  name: UpdateAsync
-  nameWithType: IUniversityRepository.UpdateAsync
-  fullName: Warbler.Interfaces.IUniversityRepository.UpdateAsync
-- uid: University
-  isExternal: true
-  name: University
-  nameWithType: University
-  fullName: University
+  name: SaveAsync
+  nameWithType: IUniversityRepository.SaveAsync
+  fullName: Warbler.Interfaces.IUniversityRepository.SaveAsync
 - uid: Task
   isExternal: true
   name: Task
@@ -300,79 +293,122 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Warbler.Interfaces.IUniversityRepository.GetAllAsync*
-  commentId: Overload:Warbler.Interfaces.IUniversityRepository.GetAllAsync
+- uid: Warbler.Models.Server
+  commentId: T:Warbler.Models.Server
+  parent: Warbler.Models
   isExternal: false
-  name: GetAllAsync
-  nameWithType: IUniversityRepository.GetAllAsync
-  fullName: Warbler.Interfaces.IUniversityRepository.GetAllAsync
+  name: Server
+  nameWithType: Server
+  fullName: Warbler.Models.Server
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel
+- uid: Warbler.Interfaces.IUniversityRepository.AllQueryable*
+  commentId: Overload:Warbler.Interfaces.IUniversityRepository.AllQueryable
+  isExternal: false
+  name: AllQueryable
+  nameWithType: IUniversityRepository.AllQueryable
+  fullName: Warbler.Interfaces.IUniversityRepository.AllQueryable
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
 - uid: QueryDepth
   isExternal: true
   name: QueryDepth
   nameWithType: QueryDepth
   fullName: QueryDepth
-- uid: Task{List{University}}
-  commentId: '!:Task{List{University}}'
-  definition: Task`1
-  name: Task<List<University>>
-  nameWithType: Task<List<University>>
-  fullName: Task<List<University>>
-  nameWithType.vb: Task(Of List(Of University))
-  fullName.vb: Task(Of List(Of University))
-  name.vb: Task(Of List(Of University))
+- uid: IQueryable{Warbler.Models.University}
+  commentId: '!:IQueryable{Warbler.Models.University}'
+  definition: IQueryable`1
+  name: IQueryable<University>
+  nameWithType: IQueryable<University>
+  fullName: IQueryable<Warbler.Models.University>
+  nameWithType.vb: IQueryable(Of University)
+  fullName.vb: IQueryable(Of Warbler.Models.University)
+  name.vb: IQueryable(Of University)
   spec.csharp:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: IQueryable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
+    fullName: Warbler.Models.University
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: IQueryable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: IQueryable`1
+  isExternal: true
+  name: IQueryable<>
+  nameWithType: IQueryable<>
+  fullName: IQueryable<>
+  nameWithType.vb: IQueryable(Of )
+  fullName.vb: IQueryable(Of )
+  name.vb: IQueryable(Of )
+  spec.csharp:
+  - uid: IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: IQueryable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: IQueryable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )

@@ -5,8 +5,8 @@ items:
   id: UserService
   parent: Warbler.Services
   children:
-  - Warbler.Services.UserService.#ctor(IUserRepository)
-  - Warbler.Services.UserService.IsNewAsync(User)
+  - Warbler.Services.UserService.#ctor(Warbler.Interfaces.IUserRepository)
+  - Warbler.Services.UserService.IsNewAsync(Warbler.Models.User)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     id: UserService
     path: ''
-    startLine: 2362
+    startLine: 2827
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -42,21 +42,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Services.UserService.#ctor(IUserRepository)
-  commentId: M:Warbler.Services.UserService.#ctor(IUserRepository)
-  id: '#ctor(IUserRepository)'
+- uid: Warbler.Services.UserService.#ctor(Warbler.Interfaces.IUserRepository)
+  commentId: M:Warbler.Services.UserService.#ctor(Warbler.Interfaces.IUserRepository)
+  id: '#ctor(Warbler.Interfaces.IUserRepository)'
   parent: Warbler.Services.UserService
   langs:
   - csharp
   - vb
   name: UserService(IUserRepository)
   nameWithType: UserService.UserService(IUserRepository)
-  fullName: Warbler.Services.UserService.UserService(IUserRepository)
+  fullName: Warbler.Services.UserService.UserService(Warbler.Interfaces.IUserRepository)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 2366
+    startLine: 2831
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -64,28 +64,28 @@ items:
     content: public UserService(IUserRepository repository)
     parameters:
     - id: repository
-      type: IUserRepository
+      type: Warbler.Interfaces.IUserRepository
     content.vb: Public Sub New(repository As IUserRepository)
   overload: Warbler.Services.UserService.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Services.UserService.IsNewAsync(User)
-  commentId: M:Warbler.Services.UserService.IsNewAsync(User)
-  id: IsNewAsync(User)
+- uid: Warbler.Services.UserService.IsNewAsync(Warbler.Models.User)
+  commentId: M:Warbler.Services.UserService.IsNewAsync(Warbler.Models.User)
+  id: IsNewAsync(Warbler.Models.User)
   parent: Warbler.Services.UserService
   langs:
   - csharp
   - vb
   name: IsNewAsync(User)
   nameWithType: UserService.IsNewAsync(User)
-  fullName: Warbler.Services.UserService.IsNewAsync(User)
+  fullName: Warbler.Services.UserService.IsNewAsync(Warbler.Models.User)
   type: Method
   source:
     id: IsNewAsync
     path: ''
-    startLine: 2376
+    startLine: 2841
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -95,7 +95,7 @@ items:
     content: public Task<bool> IsNewAsync(User user)
     parameters:
     - id: user
-      type: User
+      type: Warbler.Models.User
       description: The user to check.
     return:
       type: Task{System.Boolean}
@@ -410,23 +410,32 @@ references:
   name: UserService
   nameWithType: UserService.UserService
   fullName: Warbler.Services.UserService.UserService
-- uid: IUserRepository
-  commentId: '!:IUserRepository'
-  isExternal: true
+- uid: Warbler.Interfaces.IUserRepository
+  commentId: T:Warbler.Interfaces.IUserRepository
+  parent: Warbler.Interfaces
+  isExternal: false
   name: IUserRepository
   nameWithType: IUserRepository
-  fullName: IUserRepository
+  fullName: Warbler.Interfaces.IUserRepository
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
 - uid: Warbler.Services.UserService.IsNewAsync*
   commentId: Overload:Warbler.Services.UserService.IsNewAsync
   isExternal: false
   name: IsNewAsync
   nameWithType: UserService.IsNewAsync
   fullName: Warbler.Services.UserService.IsNewAsync
-- uid: User
-  isExternal: true
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
   name: User
   nameWithType: User
-  fullName: User
+  fullName: Warbler.Models.User
 - uid: Task{System.Boolean}
   commentId: '!:Task{System.Boolean}'
   definition: Task`1
@@ -470,6 +479,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
 - uid: Task`1
   isExternal: true
   name: Task<>

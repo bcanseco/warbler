@@ -73,13 +73,37 @@
   <h1 id="Warbler_Repositories_SqlUniversityRepository" data-uid="Warbler.Repositories.SqlUniversityRepository">Class SqlUniversityRepository
   </h1>
   <div class="markdown level0 summary"><p>Runs queries against the SQL database using Entity Framework.
-Look at <see cref="!:IUniversityRepository"></see> for docs.</p>
+Look at <a class="xref" href="Warbler.Interfaces.IUniversityRepository.html">IUniversityRepository</a> for docs.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
       <div class="level0"><span class="xref">System.Object</span></div>
       <div class="level"><span class="xref"></span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>:Warbler.Repositories</h6>
   <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
@@ -92,7 +116,7 @@ Look at <see cref="!:IUniversityRepository"></see> for docs.</p>
   
   
   <a id="Warbler_Repositories_SqlUniversityRepository__ctor_" data-uid="Warbler.Repositories.SqlUniversityRepository.#ctor*"></a>
-  <h4 id="Warbler_Repositories_SqlUniversityRepository__ctor_WarblerDbContext_" data-uid="Warbler.Repositories.SqlUniversityRepository.#ctor(WarblerDbContext)">SqlUniversityRepository(WarblerDbContext)</h4>
+  <h4 id="Warbler_Repositories_SqlUniversityRepository__ctor_Warbler_Misc_WarblerDbContext_" data-uid="Warbler.Repositories.SqlUniversityRepository.#ctor(Warbler.Misc.WarblerDbContext)">SqlUniversityRepository(WarblerDbContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -110,7 +134,7 @@ Look at <see cref="!:IUniversityRepository"></see> for docs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">WarblerDbContext</span></td>
+        <td><a class="xref" href="Warbler.Misc.WarblerDbContext.html">WarblerDbContext</a></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
@@ -118,6 +142,50 @@ Look at <see cref="!:IUniversityRepository"></see> for docs.</p>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Warbler_Repositories_SqlUniversityRepository_AllQueryable_" data-uid="Warbler.Repositories.SqlUniversityRepository.AllQueryable*"></a>
+  <h4 id="Warbler_Repositories_SqlUniversityRepository_AllQueryable_QueryDepth_" data-uid="Warbler.Repositories.SqlUniversityRepository.AllQueryable(QueryDepth)">AllQueryable(QueryDepth)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;University&gt; AllQueryable(QueryDepth depth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">QueryDepth</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IQueryable</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_AllQueryable_QueryDepth_">IUniversityRepository.AllQueryable(QueryDepth)</a></div>
   
   
   <a id="Warbler_Repositories_SqlUniversityRepository_CreateAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.CreateAsync*"></a>
@@ -155,53 +223,13 @@ Look at <see cref="!:IUniversityRepository"></see> for docs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">University</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Warbler_Repositories_SqlUniversityRepository_GetAllAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.GetAllAsync*"></a>
-  <h4 id="Warbler_Repositories_SqlUniversityRepository_GetAllAsync_QueryDepth_" data-uid="Warbler.Repositories.SqlUniversityRepository.GetAllAsync(QueryDepth)">GetAllAsync(QueryDepth)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;University&gt;&gt; GetAllAsync(QueryDepth depth)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">QueryDepth</span></td>
-        <td><span class="parametername">depth</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<span class="xref">University</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_CreateAsync_NearByResult_">IUniversityRepository.CreateAsync(NearByResult)</a></div>
   
   
   <a id="Warbler_Repositories_SqlUniversityRepository_LookupAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.LookupAsync*"></a>
@@ -239,38 +267,23 @@ Look at <see cref="!:IUniversityRepository"></see> for docs.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">University</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_LookupAsync_System_String_">IUniversityRepository.LookupAsync(String)</a></div>
   
   
-  <a id="Warbler_Repositories_SqlUniversityRepository_UpdateAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.UpdateAsync*"></a>
-  <h4 id="Warbler_Repositories_SqlUniversityRepository_UpdateAsync_University_" data-uid="Warbler.Repositories.SqlUniversityRepository.UpdateAsync(University)">UpdateAsync(University)</h4>
+  <a id="Warbler_Repositories_SqlUniversityRepository_SaveAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.SaveAsync*"></a>
+  <h4 id="Warbler_Repositories_SqlUniversityRepository_SaveAsync" data-uid="Warbler.Repositories.SqlUniversityRepository.SaveAsync">SaveAsync()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task UpdateAsync(University university)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task SaveAsync()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">University</span></td>
-        <td><span class="parametername">university</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -286,6 +299,8 @@ Look at <see cref="!:IUniversityRepository"></see> for docs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_SaveAsync">IUniversityRepository.SaveAsync()</a></div>
 </article>
           </div>
           

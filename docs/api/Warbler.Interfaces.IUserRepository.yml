@@ -5,7 +5,7 @@ items:
   id: IUserRepository
   parent: Warbler.Interfaces
   children:
-  - Warbler.Interfaces.IUserRepository.IsNewAsync(User)
+  - Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     id: IUserRepository
     path: ''
-    startLine: 1333
+    startLine: 1380
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -31,21 +31,21 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: Warbler.Interfaces.IUserRepository.IsNewAsync(User)
-  commentId: M:Warbler.Interfaces.IUserRepository.IsNewAsync(User)
-  id: IsNewAsync(User)
+- uid: Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+  commentId: M:Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+  id: IsNewAsync(Warbler.Models.User)
   parent: Warbler.Interfaces.IUserRepository
   langs:
   - csharp
   - vb
   name: IsNewAsync(User)
   nameWithType: IUserRepository.IsNewAsync(User)
-  fullName: Warbler.Interfaces.IUserRepository.IsNewAsync(User)
+  fullName: Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
   type: Method
   source:
     id: IsNewAsync
     path: ''
-    startLine: 1340
+    startLine: 1387
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -55,7 +55,7 @@ items:
     content: Task<bool> IsNewAsync(User user)
     parameters:
     - id: user
-      type: User
+      type: Warbler.Models.User
       description: The user whose ID will be matched against.
     return:
       type: Task{System.Boolean}
@@ -74,11 +74,13 @@ references:
   name: IsNewAsync
   nameWithType: IUserRepository.IsNewAsync
   fullName: Warbler.Interfaces.IUserRepository.IsNewAsync
-- uid: User
-  isExternal: true
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
   name: User
   nameWithType: User
-  fullName: User
+  fullName: Warbler.Models.User
 - uid: Task{System.Boolean}
   commentId: '!:Task{System.Boolean}'
   definition: Task`1
@@ -122,6 +124,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
 - uid: Task`1
   isExternal: true
   name: Task<>

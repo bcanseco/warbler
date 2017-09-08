@@ -5,7 +5,8 @@ items:
   id: SqlSampleRepository
   parent: Warbler.Repositories
   children:
-  - Warbler.Repositories.SqlSampleRepository.AddTestData(WarblerDbContext)
+  - Warbler.Repositories.SqlSampleRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  - Warbler.Repositories.SqlSampleRepository.AddTestData
   langs:
   - csharp
   - vb
@@ -16,10 +17,12 @@ items:
   source:
     id: SqlSampleRepository
     path: ''
-    startLine: 1874
+    startLine: 2140
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
+  summary: "\nFills database with example data for development purposes.\n"
+  example: []
   syntax:
     content: public class SqlSampleRepository
     content.vb: Public Class SqlSampleRepository
@@ -39,37 +42,75 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Repositories.SqlSampleRepository.AddTestData(WarblerDbContext)
-  commentId: M:Warbler.Repositories.SqlSampleRepository.AddTestData(WarblerDbContext)
-  id: AddTestData(WarblerDbContext)
+- uid: Warbler.Repositories.SqlSampleRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Repositories.SqlSampleRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  id: '#ctor(Warbler.Misc.WarblerDbContext)'
   parent: Warbler.Repositories.SqlSampleRepository
   langs:
   - csharp
   - vb
-  name: AddTestData(WarblerDbContext)
-  nameWithType: SqlSampleRepository.AddTestData(WarblerDbContext)
-  fullName: Warbler.Repositories.SqlSampleRepository.AddTestData(WarblerDbContext)
-  type: Method
+  name: SqlSampleRepository(WarblerDbContext)
+  nameWithType: SqlSampleRepository.SqlSampleRepository(WarblerDbContext)
+  fullName: Warbler.Repositories.SqlSampleRepository.SqlSampleRepository(Warbler.Misc.WarblerDbContext)
+  type: Constructor
   source:
-    id: AddTestData
+    id: .ctor
     path: ''
-    startLine: 1876
+    startLine: 2144
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
   syntax:
-    content: public static void AddTestData(WarblerDbContext context)
+    content: public SqlSampleRepository(WarblerDbContext context)
     parameters:
     - id: context
-      type: WarblerDbContext
-    content.vb: Public Shared Sub AddTestData(context As WarblerDbContext)
-  overload: Warbler.Repositories.SqlSampleRepository.AddTestData*
+      type: Warbler.Misc.WarblerDbContext
+    content.vb: Public Sub New(context As WarblerDbContext)
+  overload: Warbler.Repositories.SqlSampleRepository.#ctor*
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
+- uid: Warbler.Repositories.SqlSampleRepository.AddTestData
+  commentId: M:Warbler.Repositories.SqlSampleRepository.AddTestData
+  id: AddTestData
+  parent: Warbler.Repositories.SqlSampleRepository
+  langs:
+  - csharp
+  - vb
+  name: AddTestData()
+  nameWithType: SqlSampleRepository.AddTestData()
+  fullName: Warbler.Repositories.SqlSampleRepository.AddTestData()
+  type: Method
+  source:
+    id: AddTestData
+    path: ''
+    startLine: 2149
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: >-
+      [Obsolete("This method is out-of-date with the current schema.")]
+
+      public Task AddTestData()
+    return:
+      type: Task
+    content.vb: >-
+      <Obsolete("This method is out-of-date with the current schema.")>
+
+      Public Function AddTestData As Task
+  overload: Warbler.Repositories.SqlSampleRepository.AddTestData*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method is out-of-date with the current schema.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Warbler.Repositories
   commentId: N:Warbler.Repositories
@@ -369,14 +410,33 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Warbler.Repositories.SqlSampleRepository.#ctor*
+  commentId: Overload:Warbler.Repositories.SqlSampleRepository.#ctor
+  isExternal: false
+  name: SqlSampleRepository
+  nameWithType: SqlSampleRepository.SqlSampleRepository
+  fullName: Warbler.Repositories.SqlSampleRepository.SqlSampleRepository
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
 - uid: Warbler.Repositories.SqlSampleRepository.AddTestData*
   commentId: Overload:Warbler.Repositories.SqlSampleRepository.AddTestData
   isExternal: false
   name: AddTestData
   nameWithType: SqlSampleRepository.AddTestData
   fullName: Warbler.Repositories.SqlSampleRepository.AddTestData
-- uid: WarblerDbContext
+- uid: Task
   isExternal: true
-  name: WarblerDbContext
-  nameWithType: WarblerDbContext
-  fullName: WarblerDbContext
+  name: Task
+  nameWithType: Task
+  fullName: Task

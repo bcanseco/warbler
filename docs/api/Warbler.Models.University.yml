@@ -6,6 +6,7 @@ items:
   parent: Warbler.Models
   children:
   - Warbler.Models.University.Address
+  - Warbler.Models.University.Equals(Warbler.Models.University)
   - Warbler.Models.University.Id
   - Warbler.Models.University.Lat
   - Warbler.Models.University.Lng
@@ -22,15 +23,19 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1508
+    startLine: 1653
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
   syntax:
-    content: public class University
-    content.vb: Public Class University
+    content: 'public class University : IEquatable<University>'
+    content.vb: >-
+      Public Class University
+          Implements IEquatable(Of University)
   inheritance:
   - System.Object
+  implements:
+  - System.IEquatable{Warbler.Models.University}
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -59,7 +64,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1511
+    startLine: 1656
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -90,7 +95,7 @@ items:
   source:
     id: PlaceId
     path: ''
-    startLine: 1512
+    startLine: 1657
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -121,7 +126,7 @@ items:
   source:
     id: Address
     path: ''
-    startLine: 1513
+    startLine: 1658
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -152,7 +157,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1514
+    startLine: 1659
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -183,7 +188,7 @@ items:
   source:
     id: Lat
     path: ''
-    startLine: 1515
+    startLine: 1660
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -214,7 +219,7 @@ items:
   source:
     id: Lng
     path: ''
-    startLine: 1516
+    startLine: 1661
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -245,7 +250,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1518
+    startLine: 1663
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -262,6 +267,39 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: Warbler.Models.University.Equals(Warbler.Models.University)
+  commentId: M:Warbler.Models.University.Equals(Warbler.Models.University)
+  id: Equals(Warbler.Models.University)
+  parent: Warbler.Models.University
+  langs:
+  - csharp
+  - vb
+  name: Equals(University)
+  nameWithType: University.Equals(University)
+  fullName: Warbler.Models.University.Equals(Warbler.Models.University)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 1665
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public bool Equals(University other)
+    parameters:
+    - id: other
+      type: Warbler.Models.University
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As University) As Boolean
+  overload: Warbler.Models.University.Equals*
+  implements:
+  - System.IEquatable{Warbler.Models.University}.Equals(Warbler.Models.University)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Warbler.Models
   commentId: N:Warbler.Models
@@ -276,6 +314,48 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.IEquatable{Warbler.Models.University}
+  commentId: T:System.IEquatable{Warbler.Models.University}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<University>
+  nameWithType: IEquatable<University>
+  fullName: System.IEquatable<Warbler.Models.University>
+  nameWithType.vb: IEquatable(Of University)
+  fullName.vb: System.IEquatable(Of Warbler.Models.University)
+  name.vb: IEquatable(Of University)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -561,6 +641,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Warbler.Models.University.Id*
   commentId: Overload:Warbler.Models.University.Id
   isExternal: false
@@ -631,3 +750,102 @@ references:
   name: Server
   nameWithType: Server
   fullName: Warbler.Models.Server
+- uid: Warbler.Models.University.Equals*
+  commentId: Overload:Warbler.Models.University.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: University.Equals
+  fullName: Warbler.Models.University.Equals
+- uid: System.IEquatable{Warbler.Models.University}.Equals(Warbler.Models.University)
+  commentId: M:System.IEquatable{Warbler.Models.University}.Equals(Warbler.Models.University)
+  parent: System.IEquatable{Warbler.Models.University}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(University)
+  nameWithType: IEquatable<University>.Equals(University)
+  fullName: System.IEquatable<Warbler.Models.University>.Equals(Warbler.Models.University)
+  nameWithType.vb: IEquatable(Of University).Equals(University)
+  fullName.vb: System.IEquatable(Of Warbler.Models.University).Equals(Warbler.Models.University)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<University>.Equals
+    fullName: System.IEquatable<Warbler.Models.University>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of University).Equals
+    fullName: System.IEquatable(Of Warbler.Models.University).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

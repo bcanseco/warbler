@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Repositories
+  commentId: N:Warbler.Tests.Repositories
+  id: Warbler.Tests.Repositories
+  children:
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Tests.Repositories
+  nameWithType: Warbler.Tests.Repositories
+  fullName: Warbler.Tests.Repositories
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  commentId: T:Warbler.Tests.Repositories.TestSqlUniversityRepository
+  isExternal: false
+  name: TestSqlUniversityRepository
+  nameWithType: TestSqlUniversityRepository
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository

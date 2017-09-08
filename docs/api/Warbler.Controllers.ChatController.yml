@@ -5,7 +5,7 @@ items:
   id: ChatController
   parent: Warbler.Controllers
   children:
-  - Warbler.Controllers.ChatController.#ctor(UserManager{User},WarblerDbContext)
+  - Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
   - Warbler.Controllers.ChatController.Chatroom
   - Warbler.Controllers.ChatController.Error
   - Warbler.Controllers.ChatController.Index
@@ -19,7 +19,7 @@ items:
   source:
     id: ChatController
     path: ''
-    startLine: 632
+    startLine: 629
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -27,7 +27,6 @@ items:
     content: 'public class ChatController : Controller'
     content.vb: >-
       Public Class ChatController
-
           Inherits Controller
   inheritance:
   - System.Object
@@ -37,21 +36,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Controllers.ChatController.#ctor(UserManager{User},WarblerDbContext)
-  commentId: M:Warbler.Controllers.ChatController.#ctor(UserManager{User},WarblerDbContext)
-  id: '#ctor(UserManager{User},WarblerDbContext)'
+- uid: Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
+  id: '#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)'
   parent: Warbler.Controllers.ChatController
   langs:
   - csharp
   - vb
   name: ChatController(UserManager<User>, WarblerDbContext)
   nameWithType: ChatController.ChatController(UserManager<User>, WarblerDbContext)
-  fullName: Warbler.Controllers.ChatController.ChatController(UserManager<User>, WarblerDbContext)
+  fullName: Warbler.Controllers.ChatController.ChatController(UserManager<Warbler.Models.User>, Warbler.Misc.WarblerDbContext)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 638
+    startLine: 635
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -59,9 +58,9 @@ items:
     content: public ChatController(UserManager<User> userManager, WarblerDbContext context)
     parameters:
     - id: userManager
-      type: UserManager{User}
+      type: UserManager{Warbler.Models.User}
     - id: context
-      type: WarblerDbContext
+      type: Warbler.Misc.WarblerDbContext
     content.vb: Public Sub New(userManager As UserManager(Of User), context As WarblerDbContext)
   overload: Warbler.Controllers.ChatController.#ctor*
   nameWithType.vb: ChatController.ChatController(UserManager(Of User), WarblerDbContext)
@@ -69,7 +68,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Warbler.Controllers.ChatController.ChatController(UserManager(Of User), WarblerDbContext)
+  fullName.vb: Warbler.Controllers.ChatController.ChatController(UserManager(Of Warbler.Models.User), Warbler.Misc.WarblerDbContext)
   name.vb: ChatController(UserManager(Of User), WarblerDbContext)
 - uid: Warbler.Controllers.ChatController.Index
   commentId: M:Warbler.Controllers.ChatController.Index
@@ -85,7 +84,7 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 648
+    startLine: 645
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -115,7 +114,7 @@ items:
   source:
     id: Chatroom
     path: ''
-    startLine: 657
+    startLine: 654
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -143,7 +142,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 662
+    startLine: 659
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -183,14 +182,14 @@ references:
   name: ChatController
   nameWithType: ChatController.ChatController
   fullName: Warbler.Controllers.ChatController.ChatController
-- uid: UserManager{User}
-  commentId: '!:UserManager{User}'
+- uid: UserManager{Warbler.Models.User}
+  commentId: '!:UserManager{Warbler.Models.User}'
   definition: UserManager`1
   name: UserManager<User>
   nameWithType: UserManager<User>
-  fullName: UserManager<User>
+  fullName: UserManager<Warbler.Models.User>
   nameWithType.vb: UserManager(Of User)
-  fullName.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of Warbler.Models.User)
   name.vb: UserManager(Of User)
   spec.csharp:
   - uid: UserManager`1
@@ -201,11 +200,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -218,19 +216,20 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: )
     nameWithType: )
     fullName: )
-- uid: WarblerDbContext
-  isExternal: true
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
   name: WarblerDbContext
   nameWithType: WarblerDbContext
-  fullName: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
 - uid: UserManager`1
   isExternal: true
   name: UserManager<>
@@ -269,6 +268,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
 - uid: Warbler.Controllers.ChatController.Chatroom
   commentId: M:Warbler.Controllers.ChatController.Chatroom
 - uid: Warbler.Controllers.ChatController.Index*

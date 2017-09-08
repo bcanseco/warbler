@@ -85,6 +85,71 @@
   </h3>
   
   
+  <a id="Warbler_Interfaces_IUniversityRepository_AllQueryable_" data-uid="Warbler.Interfaces.IUniversityRepository.AllQueryable*"></a>
+  <h4 id="Warbler_Interfaces_IUniversityRepository_AllQueryable_QueryDepth_" data-uid="Warbler.Interfaces.IUniversityRepository.AllQueryable(QueryDepth)">AllQueryable(QueryDepth)</h4>
+  <div class="markdown level1 summary"><p>Gets an executable query for all universities in the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryable&lt;University&gt; AllQueryable(QueryDepth depth = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">QueryDepth</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>At what level navigation properties should be retrieved.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IQueryable</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Warbler_Interfaces_IUniversityRepository_AllQueryable_QueryDepth__examples">Examples</h5>
+  <p>Using a query depth of <a class="xref" href="Warbler.Models.Server.html">Server</a> will make each <a class="xref" href="Warbler.Models.University.html">University</a>
+object in the query&#39;s result have a filled-in Server property. However, those 
+Server objects will each have a null <a class="xref" href="Warbler.Models.Channel.html">Channel</a> collection property.</p>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>Thrown when <span class="paramref">depth</span>&#39;s value is unknown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Warbler_Interfaces_IUniversityRepository_CreateAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.CreateAsync*"></a>
   <h4 id="Warbler_Interfaces_IUniversityRepository_CreateAsync_NearByResult_" data-uid="Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)">CreateAsync(NearByResult)</h4>
   <div class="markdown level1 summary"><p>Adds a new university based on a Google Places Search result.</p>
@@ -122,61 +187,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">University</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
         <td><p>The created university.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Warbler_Interfaces_IUniversityRepository_GetAllAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.GetAllAsync*"></a>
-  <h4 id="Warbler_Interfaces_IUniversityRepository_GetAllAsync_QueryDepth_" data-uid="Warbler.Interfaces.IUniversityRepository.GetAllAsync(QueryDepth)">GetAllAsync(QueryDepth)</h4>
-  <div class="markdown level1 summary"><p>Gets a list of all universities in the database.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;List&lt;University&gt;&gt; GetAllAsync(QueryDepth depth = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">QueryDepth</span></td>
-        <td><span class="parametername">depth</span></td>
-        <td><p>At what level navigation properties should be retrieved.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<span class="xref">University</span>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Warbler_Interfaces_IUniversityRepository_GetAllAsync_QueryDepth__examples">Examples</h5>
-  <p>Using a query depth of <see cref="!:Server"></see> will make all <see cref="!:University"></see>
-objects have a non-null Server property. However, those servers will have a null
-<see cref="!:ICollection&lt;Channel&gt;"></see> property.</p>
-
   
   
   <a id="Warbler_Interfaces_IUniversityRepository_LookupAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.LookupAsync*"></a>
@@ -216,7 +232,7 @@ objects have a non-null Server property. However, those servers will have a null
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">University</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
         <td><p>The university (at user level) if it exists.</p>
 </td>
       </tr>
@@ -239,33 +255,16 @@ objects have a non-null Server property. However, those servers will have a null
   </table>
   
   
-  <a id="Warbler_Interfaces_IUniversityRepository_UpdateAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.UpdateAsync*"></a>
-  <h4 id="Warbler_Interfaces_IUniversityRepository_UpdateAsync_University_" data-uid="Warbler.Interfaces.IUniversityRepository.UpdateAsync(University)">UpdateAsync(University)</h4>
-  <div class="markdown level1 summary"><p>Updates the properties of the university object in the database.</p>
+  <a id="Warbler_Interfaces_IUniversityRepository_SaveAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.SaveAsync*"></a>
+  <h4 id="Warbler_Interfaces_IUniversityRepository_SaveAsync" data-uid="Warbler.Interfaces.IUniversityRepository.SaveAsync">SaveAsync()</h4>
+  <div class="markdown level1 summary"><p>Updates the properties of any universities in the database
+that have been queried for and subsequently changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task UpdateAsync(University university)</code></pre>
+    <pre><code class="lang-csharp hljs">Task SaveAsync()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">University</span></td>
-        <td><span class="parametername">university</span></td>
-        <td><p>The university to update.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>

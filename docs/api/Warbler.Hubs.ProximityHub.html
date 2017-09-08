@@ -72,7 +72,8 @@
   
   <h1 id="Warbler_Hubs_ProximityHub" data-uid="Warbler.Hubs.ProximityHub">Class ProximityHub
   </h1>
-  <div class="markdown level0 summary"><p>Coordinates websocket communication between clients and server.</p>
+  <div class="markdown level0 summary"><p>Coordinates websocket communication between
+clients and server on the chat index view.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -91,7 +92,7 @@
   
   
   <a id="Warbler_Hubs_ProximityHub__ctor_" data-uid="Warbler.Hubs.ProximityHub.#ctor*"></a>
-  <h4 id="Warbler_Hubs_ProximityHub__ctor_WarblerDbContext_UserManager_User__" data-uid="Warbler.Hubs.ProximityHub.#ctor(WarblerDbContext,UserManager{User})">ProximityHub(WarblerDbContext, UserManager&lt;User&gt;)</h4>
+  <h4 id="Warbler_Hubs_ProximityHub__ctor_Warbler_Misc_WarblerDbContext_UserManager_Warbler_Models_User__" data-uid="Warbler.Hubs.ProximityHub.#ctor(Warbler.Misc.WarblerDbContext,UserManager{Warbler.Models.User})">ProximityHub(WarblerDbContext, UserManager&lt;User&gt;)</h4>
   <div class="markdown level1 summary"><p>Automatically called each time SignalR receives a packet from a client.
 Both parameters are injected automatically by ASP.NET DI.</p>
 </div>
@@ -111,12 +112,12 @@ Both parameters are injected automatically by ASP.NET DI.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">WarblerDbContext</span></td>
+        <td><a class="xref" href="Warbler.Misc.WarblerDbContext.html">WarblerDbContext</a></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">UserManager</span>&lt;<span class="xref">User</span>&gt;</td>
+        <td><span class="xref">UserManager</span>&lt;<a class="xref" href="Warbler.Models.User.html">User</a>&gt;</td>
         <td><span class="parametername">userManager</span></td>
         <td></td>
       </tr>
@@ -134,7 +135,7 @@ without being a member of any universities.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task GetNearbyUniversitiesAsync(string serializedLatLng)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task GetNearbyUniversitiesAsync(string locationSer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,8 +149,9 @@ without being a member of any universities.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">serializedLatLng</span></td>
-        <td></td>
+        <td><span class="parametername">locationSer</span></td>
+        <td><p>The serialized location (lat/lng).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -234,7 +236,8 @@ without being a member of any universities.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">placeId</span></td>
-        <td></td>
+        <td><p>The Google Place ID of the clicked university.</p>
+</td>
       </tr>
     </tbody>
   </table>

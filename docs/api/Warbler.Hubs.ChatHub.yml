@@ -5,10 +5,9 @@ items:
   id: ChatHub
   parent: Warbler.Hubs
   children:
-  - Warbler.Hubs.ChatHub.#ctor
+  - Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
   - Warbler.Hubs.ChatHub.OnConnected
   - Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
-  - Warbler.Hubs.ChatHub.SendMessage(System.String)
   langs:
   - csharp
   - vb
@@ -19,17 +18,16 @@ items:
   source:
     id: ChatHub
     path: ''
-    startLine: 1162
+    startLine: 1137
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
-  summary: "\nCoordinates websocket communication between clients and server.\n"
+  summary: "\nCoordinates websocket communication between\nclients and server on the Chat view.\n"
   example: []
   syntax:
     content: 'public class ChatHub : Hub'
     content.vb: >-
       Public Class ChatHub
-
           Inherits Hub
   inheritance:
   - System.Object
@@ -39,34 +37,42 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Hubs.ChatHub.#ctor
-  commentId: M:Warbler.Hubs.ChatHub.#ctor
-  id: '#ctor'
+- uid: Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
+  id: '#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)'
   parent: Warbler.Hubs.ChatHub
   langs:
   - csharp
   - vb
-  name: ChatHub()
-  nameWithType: ChatHub.ChatHub()
-  fullName: Warbler.Hubs.ChatHub.ChatHub()
+  name: ChatHub(UserManager<User>, WarblerDbContext)
+  nameWithType: ChatHub.ChatHub(UserManager<User>, WarblerDbContext)
+  fullName: Warbler.Hubs.ChatHub.ChatHub(UserManager<Warbler.Models.User>, Warbler.Misc.WarblerDbContext)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 1169
+    startLine: 1145
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
   summary: "\nAutomatically called each time SignalR receives a packet from a client.\n"
   example: []
   syntax:
-    content: public ChatHub()
-    content.vb: Public Sub New
+    content: public ChatHub(UserManager<User> userManager, WarblerDbContext dbContext)
+    parameters:
+    - id: userManager
+      type: UserManager{Warbler.Models.User}
+    - id: dbContext
+      type: Warbler.Misc.WarblerDbContext
+    content.vb: Public Sub New(userManager As UserManager(Of User), dbContext As WarblerDbContext)
   overload: Warbler.Hubs.ChatHub.#ctor*
+  nameWithType.vb: ChatHub.ChatHub(UserManager(Of User), WarblerDbContext)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+  fullName.vb: Warbler.Hubs.ChatHub.ChatHub(UserManager(Of Warbler.Models.User), Warbler.Misc.WarblerDbContext)
+  name.vb: ChatHub(UserManager(Of User), WarblerDbContext)
 - uid: Warbler.Hubs.ChatHub.OnConnected
   commentId: M:Warbler.Hubs.ChatHub.OnConnected
   id: OnConnected
@@ -81,7 +87,7 @@ items:
   source:
     id: OnConnected
     path: ''
-    startLine: 1174
+    startLine: 1151
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -111,7 +117,7 @@ items:
   source:
     id: OnDisconnected
     path: ''
-    startLine: 1180
+    startLine: 1159
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -130,39 +136,6 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: Warbler.Hubs.ChatHub.SendMessage(System.String)
-  commentId: M:Warbler.Hubs.ChatHub.SendMessage(System.String)
-  id: SendMessage(System.String)
-  parent: Warbler.Hubs.ChatHub
-  langs:
-  - csharp
-  - vb
-  name: SendMessage(String)
-  nameWithType: ChatHub.SendMessage(String)
-  fullName: Warbler.Hubs.ChatHub.SendMessage(System.String)
-  type: Method
-  source:
-    id: SendMessage
-    path: ''
-    startLine: 1189
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Hubs
-  summary: "\nCalled via SignalR when the user hits the Send button.\n"
-  example: []
-  syntax:
-    content: public Task SendMessage(string message)
-    parameters:
-    - id: message
-      type: System.String
-    return:
-      type: Task
-    content.vb: Public Function SendMessage(message As String) As Task
-  overload: Warbler.Hubs.ChatHub.SendMessage*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 references:
 - uid: Warbler.Hubs
   commentId: N:Warbler.Hubs
@@ -189,6 +162,98 @@ references:
   name: ChatHub
   nameWithType: ChatHub.ChatHub
   fullName: Warbler.Hubs.ChatHub.ChatHub
+- uid: UserManager{Warbler.Models.User}
+  commentId: '!:UserManager{Warbler.Models.User}'
+  definition: UserManager`1
+  name: UserManager<User>
+  nameWithType: UserManager<User>
+  fullName: UserManager<Warbler.Models.User>
+  nameWithType.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of Warbler.Models.User)
+  name.vb: UserManager(Of User)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
 - uid: Warbler.Hubs.ChatHub.OnConnected*
   commentId: Overload:Warbler.Hubs.ChatHub.OnConnected
   isExternal: false
@@ -213,16 +278,3 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: Warbler.Hubs.ChatHub.SendMessage*
-  commentId: Overload:Warbler.Hubs.ChatHub.SendMessage
-  isExternal: false
-  name: SendMessage
-  nameWithType: ChatHub.SendMessage
-  fullName: Warbler.Hubs.ChatHub.SendMessage
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String

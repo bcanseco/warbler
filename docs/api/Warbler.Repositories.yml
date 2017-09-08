@@ -4,6 +4,9 @@ items:
   commentId: N:Warbler.Repositories
   id: Warbler.Repositories
   children:
+  - Warbler.Repositories.SqlChannelRepository
+  - Warbler.Repositories.SqlMembershipRepository
+  - Warbler.Repositories.SqlMessageRepository
   - Warbler.Repositories.SqlSampleRepository
   - Warbler.Repositories.SqlUniversityRepository
   - Warbler.Repositories.SqlUserRepository
@@ -17,6 +20,24 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Repositories.SqlChannelRepository
+  commentId: T:Warbler.Repositories.SqlChannelRepository
+  isExternal: false
+  name: SqlChannelRepository
+  nameWithType: SqlChannelRepository
+  fullName: Warbler.Repositories.SqlChannelRepository
+- uid: Warbler.Repositories.SqlMembershipRepository
+  commentId: T:Warbler.Repositories.SqlMembershipRepository
+  isExternal: false
+  name: SqlMembershipRepository
+  nameWithType: SqlMembershipRepository
+  fullName: Warbler.Repositories.SqlMembershipRepository
+- uid: Warbler.Repositories.SqlMessageRepository
+  commentId: T:Warbler.Repositories.SqlMessageRepository
+  isExternal: false
+  name: SqlMessageRepository
+  nameWithType: SqlMessageRepository
+  fullName: Warbler.Repositories.SqlMessageRepository
 - uid: Warbler.Repositories.SqlSampleRepository
   commentId: T:Warbler.Repositories.SqlSampleRepository
   isExternal: false

@@ -5,7 +5,7 @@ items:
   id: AccountController
   parent: Warbler.Controllers
   children:
-  - Warbler.Controllers.AccountController.#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)
+  - Warbler.Controllers.AccountController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)
   - Warbler.Controllers.AccountController.AccessDenied
   - Warbler.Controllers.AccountController.ConfirmEmail(System.String,System.String)
   - Warbler.Controllers.AccountController.ExternalLogin(System.String,System.String)
@@ -44,7 +44,6 @@ items:
     content: 'public class AccountController : Controller'
     content.vb: >-
       Public Class AccountController
-
           Inherits Controller
   inheritance:
   - System.Object
@@ -54,48 +53,46 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Controllers.AccountController.#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)
-  commentId: M:Warbler.Controllers.AccountController.#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)
-  id: '#ctor(UserManager{User},SignInManager{User},IOptions{IdentityCookieOptions},IEmailSender,ISmsSender,ILoggerFactory)'
+- uid: Warbler.Controllers.AccountController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)
+  commentId: M:Warbler.Controllers.AccountController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)
+  id: '#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)'
   parent: Warbler.Controllers.AccountController
   langs:
   - csharp
   - vb
-  name: AccountController(UserManager<User>, SignInManager<User>, IOptions<IdentityCookieOptions>, IEmailSender, ISmsSender, ILoggerFactory)
-  nameWithType: AccountController.AccountController(UserManager<User>, SignInManager<User>, IOptions<IdentityCookieOptions>, IEmailSender, ISmsSender, ILoggerFactory)
-  fullName: Warbler.Controllers.AccountController.AccountController(UserManager<User>, SignInManager<User>, IOptions<IdentityCookieOptions>, IEmailSender, ISmsSender, ILoggerFactory)
+  name: AccountController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory)
+  nameWithType: AccountController.AccountController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory)
+  fullName: Warbler.Controllers.AccountController.AccountController(UserManager<Warbler.Models.User>, SignInManager<Warbler.Models.User>, Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 188
+    startLine: 187
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
   syntax:
-    content: public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IOptions<IdentityCookieOptions> identityCookieOptions, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory)
+    content: public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory)
     parameters:
     - id: userManager
-      type: UserManager{User}
+      type: UserManager{Warbler.Models.User}
     - id: signInManager
-      type: SignInManager{User}
-    - id: identityCookieOptions
-      type: IOptions{IdentityCookieOptions}
+      type: SignInManager{Warbler.Models.User}
     - id: emailSender
-      type: IEmailSender
+      type: Warbler.Interfaces.IEmailSender
     - id: smsSender
-      type: ISmsSender
+      type: Warbler.Interfaces.ISmsSender
     - id: loggerFactory
       type: ILoggerFactory
-    content.vb: Public Sub New(userManager As UserManager(Of User), signInManager As SignInManager(Of User), identityCookieOptions As IOptions(Of IdentityCookieOptions), emailSender As IEmailSender, smsSender As ISmsSender, loggerFactory As ILoggerFactory)
+    content.vb: Public Sub New(userManager As UserManager(Of User), signInManager As SignInManager(Of User), emailSender As IEmailSender, smsSender As ISmsSender, loggerFactory As ILoggerFactory)
   overload: Warbler.Controllers.AccountController.#ctor*
-  nameWithType.vb: AccountController.AccountController(UserManager(Of User), SignInManager(Of User), IOptions(Of IdentityCookieOptions), IEmailSender, ISmsSender, ILoggerFactory)
+  nameWithType.vb: AccountController.AccountController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Warbler.Controllers.AccountController.AccountController(UserManager(Of User), SignInManager(Of User), IOptions(Of IdentityCookieOptions), IEmailSender, ISmsSender, ILoggerFactory)
-  name.vb: AccountController(UserManager(Of User), SignInManager(Of User), IOptions(Of IdentityCookieOptions), IEmailSender, ISmsSender, ILoggerFactory)
+  fullName.vb: Warbler.Controllers.AccountController.AccountController(UserManager(Of Warbler.Models.User), SignInManager(Of Warbler.Models.User), Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory)
+  name.vb: AccountController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory)
 - uid: Warbler.Controllers.AccountController.Login(System.String)
   commentId: M:Warbler.Controllers.AccountController.Login(System.String)
   id: Login(System.String)
@@ -110,7 +107,7 @@ items:
   source:
     id: Login
     path: ''
-    startLine: 205
+    startLine: 202
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -141,7 +138,7 @@ items:
   source:
     id: Login
     path: ''
-    startLine: 217
+    startLine: 214
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -174,7 +171,7 @@ items:
   source:
     id: Register
     path: ''
-    startLine: 254
+    startLine: 251
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -205,7 +202,7 @@ items:
   source:
     id: Register
     path: ''
-    startLine: 263
+    startLine: 260
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -238,7 +235,7 @@ items:
   source:
     id: Logout
     path: ''
-    startLine: 293
+    startLine: 290
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -266,7 +263,7 @@ items:
   source:
     id: ExternalLogin
     path: ''
-    startLine: 303
+    startLine: 300
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -299,7 +296,7 @@ items:
   source:
     id: ExternalLoginCallback
     path: ''
-    startLine: 315
+    startLine: 312
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -332,7 +329,7 @@ items:
   source:
     id: ExternalLoginConfirmation
     path: ''
-    startLine: 356
+    startLine: 353
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -365,7 +362,7 @@ items:
   source:
     id: ConfirmEmail
     path: ''
-    startLine: 389
+    startLine: 386
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -398,7 +395,7 @@ items:
   source:
     id: ForgotPassword
     path: ''
-    startLine: 407
+    startLine: 404
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -426,7 +423,7 @@ items:
   source:
     id: ForgotPassword
     path: ''
-    startLine: 415
+    startLine: 412
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -457,7 +454,7 @@ items:
   source:
     id: ForgotPasswordConfirmation
     path: ''
-    startLine: 443
+    startLine: 440
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -485,7 +482,7 @@ items:
   source:
     id: ResetPassword
     path: ''
-    startLine: 451
+    startLine: 448
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -516,7 +513,7 @@ items:
   source:
     id: ResetPassword
     path: ''
-    startLine: 459
+    startLine: 456
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -547,7 +544,7 @@ items:
   source:
     id: ResetPasswordConfirmation
     path: ''
-    startLine: 484
+    startLine: 481
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -575,7 +572,7 @@ items:
   source:
     id: SendCode
     path: ''
-    startLine: 492
+    startLine: 489
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -608,7 +605,7 @@ items:
   source:
     id: SendCode
     path: ''
-    startLine: 507
+    startLine: 504
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -639,7 +636,7 @@ items:
   source:
     id: VerifyCode
     path: ''
-    startLine: 544
+    startLine: 541
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -674,7 +671,7 @@ items:
   source:
     id: VerifyCode
     path: ''
-    startLine: 558
+    startLine: 555
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -705,7 +702,7 @@ items:
   source:
     id: AccessDenied
     path: ''
-    startLine: 589
+    startLine: 586
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -745,14 +742,14 @@ references:
   name: AccountController
   nameWithType: AccountController.AccountController
   fullName: Warbler.Controllers.AccountController.AccountController
-- uid: UserManager{User}
-  commentId: '!:UserManager{User}'
+- uid: UserManager{Warbler.Models.User}
+  commentId: '!:UserManager{Warbler.Models.User}'
   definition: UserManager`1
   name: UserManager<User>
   nameWithType: UserManager<User>
-  fullName: UserManager<User>
+  fullName: UserManager<Warbler.Models.User>
   nameWithType.vb: UserManager(Of User)
-  fullName.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of Warbler.Models.User)
   name.vb: UserManager(Of User)
   spec.csharp:
   - uid: UserManager`1
@@ -763,11 +760,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -780,22 +776,21 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: )
     nameWithType: )
     fullName: )
-- uid: SignInManager{User}
-  commentId: '!:SignInManager{User}'
+- uid: SignInManager{Warbler.Models.User}
+  commentId: '!:SignInManager{Warbler.Models.User}'
   definition: SignInManager`1
   name: SignInManager<User>
   nameWithType: SignInManager<User>
-  fullName: SignInManager<User>
+  fullName: SignInManager<Warbler.Models.User>
   nameWithType.vb: SignInManager(Of User)
-  fullName.vb: SignInManager(Of User)
+  fullName.vb: SignInManager(Of Warbler.Models.User)
   name.vb: SignInManager(Of User)
   spec.csharp:
   - uid: SignInManager`1
@@ -806,11 +801,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -823,67 +817,27 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: User
+  - uid: Warbler.Models.User
     name: User
     nameWithType: User
-    fullName: User
-    isExternal: true
+    fullName: Warbler.Models.User
   - name: )
     nameWithType: )
     fullName: )
-- uid: IOptions{IdentityCookieOptions}
-  commentId: '!:IOptions{IdentityCookieOptions}'
-  definition: IOptions`1
-  name: IOptions<IdentityCookieOptions>
-  nameWithType: IOptions<IdentityCookieOptions>
-  fullName: IOptions<IdentityCookieOptions>
-  nameWithType.vb: IOptions(Of IdentityCookieOptions)
-  fullName.vb: IOptions(Of IdentityCookieOptions)
-  name.vb: IOptions(Of IdentityCookieOptions)
-  spec.csharp:
-  - uid: IOptions`1
-    name: IOptions
-    nameWithType: IOptions
-    fullName: IOptions
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: IdentityCookieOptions
-    name: IdentityCookieOptions
-    nameWithType: IdentityCookieOptions
-    fullName: IdentityCookieOptions
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IOptions`1
-    name: IOptions
-    nameWithType: IOptions
-    fullName: IOptions
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: IdentityCookieOptions
-    name: IdentityCookieOptions
-    nameWithType: IdentityCookieOptions
-    fullName: IdentityCookieOptions
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: IEmailSender
-  isExternal: true
+- uid: Warbler.Interfaces.IEmailSender
+  commentId: T:Warbler.Interfaces.IEmailSender
+  parent: Warbler.Interfaces
+  isExternal: false
   name: IEmailSender
   nameWithType: IEmailSender
-  fullName: IEmailSender
-- uid: ISmsSender
-  isExternal: true
+  fullName: Warbler.Interfaces.IEmailSender
+- uid: Warbler.Interfaces.ISmsSender
+  commentId: T:Warbler.Interfaces.ISmsSender
+  parent: Warbler.Interfaces
+  isExternal: false
   name: ISmsSender
   nameWithType: ISmsSender
-  fullName: ISmsSender
+  fullName: Warbler.Interfaces.ISmsSender
 - uid: ILoggerFactory
   isExternal: true
   name: ILoggerFactory
@@ -965,44 +919,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IOptions`1
-  isExternal: true
-  name: IOptions<>
-  nameWithType: IOptions<>
-  fullName: IOptions<>
-  nameWithType.vb: IOptions(Of )
-  fullName.vb: IOptions(Of )
-  name.vb: IOptions(Of )
-  spec.csharp:
-  - uid: IOptions`1
-    name: IOptions
-    nameWithType: IOptions
-    fullName: IOptions
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: IOptions`1
-    name: IOptions
-    nameWithType: IOptions
-    fullName: IOptions
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
 - uid: Warbler.Controllers.AccountController.Login*
   commentId: Overload:Warbler.Controllers.AccountController.Login
   isExternal: false

@@ -83,7 +83,7 @@
   <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
   <h5 id="Warbler_Models_User_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class User : IdentityUser</code></pre>
+    <pre><code class="lang-csharp hljs">public class User : IdentityUser, IEquatable&lt;User&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -120,7 +120,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;Channel&gt; Channels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Channel&gt; Channels { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,32 +132,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="Warbler.Models.Channel.html">Channel</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Warbler_Models_User_ConnectionId_" data-uid="Warbler.Models.User.ConnectionId*"></a>
-  <h4 id="Warbler_Models_User_ConnectionId" data-uid="Warbler.Models.User.ConnectionId">ConnectionId</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ConnectionId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Warbler.Models.Channel.html">Channel</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -189,6 +164,31 @@
   </table>
   
   
+  <a id="Warbler_Models_User_IsOnline_" data-uid="Warbler.Models.User.IsOnline*"></a>
+  <h4 id="Warbler_Models_User_IsOnline" data-uid="Warbler.Models.User.IsOnline">IsOnline</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOnline { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Warbler_Models_User_Memberships_" data-uid="Warbler.Models.User.Memberships*"></a>
   <h4 id="Warbler_Models_User_Memberships" data-uid="Warbler.Models.User.Memberships">Memberships</h4>
   <div class="markdown level1 summary"></div>
@@ -212,6 +212,80 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Warbler_Models_User_UserName_" data-uid="Warbler.Models.User.UserName*"></a>
+  <h4 id="Warbler_Models_User_UserName" data-uid="Warbler.Models.User.UserName">UserName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string UserName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Warbler_Models_User_UserName_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Overriden to explicitly show in JSON.NET serialization.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Warbler_Models_User_Equals_" data-uid="Warbler.Models.User.Equals*"></a>
+  <h4 id="Warbler_Models_User_Equals_Warbler_Models_User_" data-uid="Warbler.Models.User.Equals(Warbler.Models.User)">Equals(User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(User other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IEquatable&lt;T&gt;.Equals(T)</span></div>
 </article>
           </div>
           

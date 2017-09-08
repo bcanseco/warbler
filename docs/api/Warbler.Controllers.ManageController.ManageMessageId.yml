@@ -23,7 +23,7 @@ items:
   source:
     id: ManageMessageId
     path: ''
-    startLine: 1070
+    startLine: 1066
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -50,7 +50,7 @@ items:
   source:
     id: AddPhoneSuccess
     path: ''
-    startLine: 1072
+    startLine: 1068
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -78,7 +78,7 @@ items:
   source:
     id: AddLoginSuccess
     path: ''
-    startLine: 1073
+    startLine: 1069
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -106,7 +106,7 @@ items:
   source:
     id: ChangePasswordSuccess
     path: ''
-    startLine: 1074
+    startLine: 1070
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -134,7 +134,7 @@ items:
   source:
     id: SetTwoFactorSuccess
     path: ''
-    startLine: 1075
+    startLine: 1071
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -162,7 +162,7 @@ items:
   source:
     id: SetPasswordSuccess
     path: ''
-    startLine: 1076
+    startLine: 1072
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -190,7 +190,7 @@ items:
   source:
     id: RemoveLoginSuccess
     path: ''
-    startLine: 1077
+    startLine: 1073
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -218,7 +218,7 @@ items:
   source:
     id: RemovePhoneSuccess
     path: ''
-    startLine: 1078
+    startLine: 1074
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -246,7 +246,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 1079
+    startLine: 1075
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers

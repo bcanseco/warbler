@@ -6,6 +6,7 @@ items:
   parent: Warbler.Models
   children:
   - Warbler.Models.Channel.Description
+  - Warbler.Models.Channel.Equals(Warbler.Models.Channel)
   - Warbler.Models.Channel.Id
   - Warbler.Models.Channel.LastUsed
   - Warbler.Models.Channel.Memberships
@@ -26,15 +27,19 @@ items:
   source:
     id: Channel
     path: ''
-    startLine: 1412
+    startLine: 1557
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
   syntax:
-    content: public class Channel
-    content.vb: Public Class Channel
+    content: 'public class Channel : IEquatable<Channel>'
+    content.vb: >-
+      Public Class Channel
+          Implements IEquatable(Of Channel)
   inheritance:
   - System.Object
+  implements:
+  - System.IEquatable{Warbler.Models.Channel}
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -63,7 +68,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1415
+    startLine: 1560
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -94,7 +99,7 @@ items:
   source:
     id: ServerId
     path: ''
-    startLine: 1416
+    startLine: 1561
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -125,7 +130,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1417
+    startLine: 1562
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -156,7 +161,7 @@ items:
   source:
     id: Description
     path: ''
-    startLine: 1418
+    startLine: 1563
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -187,7 +192,7 @@ items:
   source:
     id: State
     path: ''
-    startLine: 1419
+    startLine: 1564
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -218,7 +223,7 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 1420
+    startLine: 1565
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -249,7 +254,7 @@ items:
   source:
     id: LastUsed
     path: ''
-    startLine: 1421
+    startLine: 1566
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -257,8 +262,8 @@ items:
     content: public DateTime LastUsed { get; set; }
     parameters: []
     return:
-      type: DateTime
-    content.vb: Public Property LastUsed As DateTime
+      type: System.DateTime
+    content.vb: Public Property LastUsed As Date
   overload: Warbler.Models.Channel.LastUsed*
   modifiers.csharp:
   - public
@@ -280,7 +285,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1423
+    startLine: 1568
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -311,7 +316,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1425
+    startLine: 1570
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -342,7 +347,7 @@ items:
   source:
     id: Messages
     path: ''
-    startLine: 1427
+    startLine: 1572
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -373,16 +378,16 @@ items:
   source:
     id: Users
     path: ''
-    startLine: 1431
+    startLine: 1574
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
   syntax:
-    content: public List<User> Users { get; }
+    content: public IEnumerable<User> Users { get; }
     parameters: []
     return:
-      type: List{Warbler.Models.User}
-    content.vb: Public ReadOnly Property Users As List(Of User)
+      type: IEnumerable{Warbler.Models.User}
+    content.vb: Public ReadOnly Property Users As IEnumerable(Of User)
   overload: Warbler.Models.Channel.Users*
   modifiers.csharp:
   - public
@@ -390,6 +395,39 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: Warbler.Models.Channel.Equals(Warbler.Models.Channel)
+  commentId: M:Warbler.Models.Channel.Equals(Warbler.Models.Channel)
+  id: Equals(Warbler.Models.Channel)
+  parent: Warbler.Models.Channel
+  langs:
+  - csharp
+  - vb
+  name: Equals(Channel)
+  nameWithType: Channel.Equals(Channel)
+  fullName: Warbler.Models.Channel.Equals(Warbler.Models.Channel)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 1577
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public bool Equals(Channel other)
+    parameters:
+    - id: other
+      type: Warbler.Models.Channel
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Channel) As Boolean
+  overload: Warbler.Models.Channel.Equals*
+  implements:
+  - System.IEquatable{Warbler.Models.Channel}.Equals(Warbler.Models.Channel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Warbler.Models
   commentId: N:Warbler.Models
@@ -404,6 +442,48 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.IEquatable{Warbler.Models.Channel}
+  commentId: T:System.IEquatable{Warbler.Models.Channel}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Channel>
+  nameWithType: IEquatable<Channel>
+  fullName: System.IEquatable<Warbler.Models.Channel>
+  nameWithType.vb: IEquatable(Of Channel)
+  fullName.vb: System.IEquatable(Of Warbler.Models.Channel)
+  name.vb: IEquatable(Of Channel)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -689,6 +769,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Warbler.Models.Channel.Id*
   commentId: Overload:Warbler.Models.Channel.Id
   isExternal: false
@@ -757,11 +876,13 @@ references:
   name: LastUsed
   nameWithType: Channel.LastUsed
   fullName: Warbler.Models.Channel.LastUsed
-- uid: DateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
   isExternal: true
   name: DateTime
   nameWithType: DateTime
-  fullName: DateTime
+  fullName: System.DateTime
 - uid: Warbler.Models.Channel.Server*
   commentId: Overload:Warbler.Models.Channel.Server
   isExternal: false
@@ -913,20 +1034,20 @@ references:
   name: Users
   nameWithType: Channel.Users
   fullName: Warbler.Models.Channel.Users
-- uid: List{Warbler.Models.User}
-  commentId: '!:List{Warbler.Models.User}'
-  definition: List`1
-  name: List<User>
-  nameWithType: List<User>
-  fullName: List<Warbler.Models.User>
-  nameWithType.vb: List(Of User)
-  fullName.vb: List(Of Warbler.Models.User)
-  name.vb: List(Of User)
+- uid: IEnumerable{Warbler.Models.User}
+  commentId: '!:IEnumerable{Warbler.Models.User}'
+  definition: IEnumerable`1
+  name: IEnumerable<User>
+  nameWithType: IEnumerable<User>
+  fullName: IEnumerable<Warbler.Models.User>
+  nameWithType.vb: IEnumerable(Of User)
+  fullName.vb: IEnumerable(Of Warbler.Models.User)
+  name.vb: IEnumerable(Of User)
   spec.csharp:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -939,10 +1060,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -954,19 +1075,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: List`1
+- uid: IEnumerable`1
   isExternal: true
-  name: List<>
-  nameWithType: List<>
-  fullName: List<>
-  nameWithType.vb: List(Of )
-  fullName.vb: List(Of )
-  name.vb: List(Of )
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
   spec.csharp:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -978,10 +1099,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -989,6 +1110,105 @@ references:
   - name: ''
     nameWithType: ''
     fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.Channel.Equals*
+  commentId: Overload:Warbler.Models.Channel.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: Channel.Equals
+  fullName: Warbler.Models.Channel.Equals
+- uid: System.IEquatable{Warbler.Models.Channel}.Equals(Warbler.Models.Channel)
+  commentId: M:System.IEquatable{Warbler.Models.Channel}.Equals(Warbler.Models.Channel)
+  parent: System.IEquatable{Warbler.Models.Channel}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Channel)
+  nameWithType: IEquatable<Channel>.Equals(Channel)
+  fullName: System.IEquatable<Warbler.Models.Channel>.Equals(Warbler.Models.Channel)
+  nameWithType.vb: IEquatable(Of Channel).Equals(Channel)
+  fullName.vb: System.IEquatable(Of Warbler.Models.Channel).Equals(Warbler.Models.Channel)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Channel>.Equals
+    fullName: System.IEquatable<Warbler.Models.Channel>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Channel).Equals
+    fullName: System.IEquatable(Of Warbler.Models.Channel).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )

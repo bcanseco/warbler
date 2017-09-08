@@ -22,7 +22,7 @@ items:
   source:
     id: Message
     path: ''
-    startLine: 1467
+    startLine: 1611
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -59,7 +59,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1470
+    startLine: 1614
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -90,7 +90,7 @@ items:
   source:
     id: ChannelId
     path: ''
-    startLine: 1471
+    startLine: 1615
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -121,7 +121,7 @@ items:
   source:
     id: UserId
     path: ''
-    startLine: 1472
+    startLine: 1616
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -152,7 +152,7 @@ items:
   source:
     id: Text
     path: ''
-    startLine: 1473
+    startLine: 1617
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -183,7 +183,7 @@ items:
   source:
     id: SendDate
     path: ''
-    startLine: 1474
+    startLine: 1618
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -191,8 +191,8 @@ items:
     content: public DateTime SendDate { get; set; }
     parameters: []
     return:
-      type: DateTime
-    content.vb: Public Property SendDate As DateTime
+      type: System.DateTime
+    content.vb: Public Property SendDate As Date
   overload: Warbler.Models.Message.SendDate*
   modifiers.csharp:
   - public
@@ -214,7 +214,7 @@ items:
   source:
     id: Channel
     path: ''
-    startLine: 1476
+    startLine: 1620
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -245,7 +245,7 @@ items:
   source:
     id: Sender
     path: ''
-    startLine: 1478
+    startLine: 1622
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -605,11 +605,13 @@ references:
   name: SendDate
   nameWithType: Message.SendDate
   fullName: Warbler.Models.Message.SendDate
-- uid: DateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
   isExternal: true
   name: DateTime
   nameWithType: DateTime
-  fullName: DateTime
+  fullName: System.DateTime
 - uid: Warbler.Models.Message.Channel*
   commentId: Overload:Warbler.Models.Message.Channel
   isExternal: false

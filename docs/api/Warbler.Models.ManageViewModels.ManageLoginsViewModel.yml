@@ -17,7 +17,7 @@ items:
   source:
     id: ManageLoginsViewModel
     path: ''
-    startLine: 1814
+    startLine: 1974
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -54,7 +54,7 @@ items:
   source:
     id: CurrentLogins
     path: ''
-    startLine: 1816
+    startLine: 1976
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -85,16 +85,16 @@ items:
   source:
     id: OtherLogins
     path: ''
-    startLine: 1818
+    startLine: 1978
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
   syntax:
-    content: public IList<AuthenticationDescription> OtherLogins { get; set; }
+    content: public IList<AuthenticationScheme> OtherLogins { get; set; }
     parameters: []
     return:
-      type: IList{AuthenticationDescription}
-    content.vb: Public Property OtherLogins As IList(Of AuthenticationDescription)
+      type: IList{AuthenticationScheme}
+    content.vb: Public Property OtherLogins As IList(Of AuthenticationScheme)
   overload: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins*
   modifiers.csharp:
   - public
@@ -494,15 +494,15 @@ references:
   name: OtherLogins
   nameWithType: ManageLoginsViewModel.OtherLogins
   fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
-- uid: IList{AuthenticationDescription}
-  commentId: '!:IList{AuthenticationDescription}'
+- uid: IList{AuthenticationScheme}
+  commentId: '!:IList{AuthenticationScheme}'
   definition: IList`1
-  name: IList<AuthenticationDescription>
-  nameWithType: IList<AuthenticationDescription>
-  fullName: IList<AuthenticationDescription>
-  nameWithType.vb: IList(Of AuthenticationDescription)
-  fullName.vb: IList(Of AuthenticationDescription)
-  name.vb: IList(Of AuthenticationDescription)
+  name: IList<AuthenticationScheme>
+  nameWithType: IList<AuthenticationScheme>
+  fullName: IList<AuthenticationScheme>
+  nameWithType.vb: IList(Of AuthenticationScheme)
+  fullName.vb: IList(Of AuthenticationScheme)
+  name.vb: IList(Of AuthenticationScheme)
   spec.csharp:
   - uid: IList`1
     name: IList
@@ -512,10 +512,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: AuthenticationDescription
-    name: AuthenticationDescription
-    nameWithType: AuthenticationDescription
-    fullName: AuthenticationDescription
+  - uid: AuthenticationScheme
+    name: AuthenticationScheme
+    nameWithType: AuthenticationScheme
+    fullName: AuthenticationScheme
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -529,10 +529,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: AuthenticationDescription
-    name: AuthenticationDescription
-    nameWithType: AuthenticationDescription
-    fullName: AuthenticationDescription
+  - uid: AuthenticationScheme
+    name: AuthenticationScheme
+    nameWithType: AuthenticationScheme
+    fullName: AuthenticationScheme
     isExternal: true
   - name: )
     nameWithType: )

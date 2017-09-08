@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IChannelRepository
+  commentId: T:Warbler.Interfaces.IChannelRepository
+  id: IChannelRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IChannelRepository.UpdateAsync(Warbler.Models.Channel)
+  langs:
+  - csharp
+  - vb
+  name: IChannelRepository
+  nameWithType: IChannelRepository
+  fullName: Warbler.Interfaces.IChannelRepository
+  type: Interface
+  source:
+    id: IChannelRepository
+    path: ''
+    startLine: 1241
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for message-based queries against a repository.\n"
+  example: []
+  syntax:
+    content: public interface IChannelRepository
+    content.vb: Public Interface IChannelRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IChannelRepository.UpdateAsync(Warbler.Models.Channel)
+  commentId: M:Warbler.Interfaces.IChannelRepository.UpdateAsync(Warbler.Models.Channel)
+  id: UpdateAsync(Warbler.Models.Channel)
+  parent: Warbler.Interfaces.IChannelRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(Channel)
+  nameWithType: IChannelRepository.UpdateAsync(Channel)
+  fullName: Warbler.Interfaces.IChannelRepository.UpdateAsync(Warbler.Models.Channel)
+  type: Method
+  source:
+    id: UpdateAsync
+    path: ''
+    startLine: 1247
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nUpdates the properties of a channel in the database.\n"
+  example: []
+  syntax:
+    content: Task UpdateAsync(Channel channel)
+    parameters:
+    - id: channel
+      type: Warbler.Models.Channel
+      description: The channel to update.
+    return:
+      type: Task
+    content.vb: Function UpdateAsync(channel As Channel) As Task
+  overload: Warbler.Interfaces.IChannelRepository.UpdateAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IChannelRepository.UpdateAsync*
+  commentId: Overload:Warbler.Interfaces.IChannelRepository.UpdateAsync
+  isExternal: false
+  name: UpdateAsync
+  nameWithType: IChannelRepository.UpdateAsync
+  fullName: Warbler.Interfaces.IChannelRepository.UpdateAsync
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models

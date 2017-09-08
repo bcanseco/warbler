@@ -5,7 +5,6 @@ items:
   id: Warbler.Extensions
   children:
   - Warbler.Extensions.NearbyResultExtensions
-  - Warbler.Extensions.UserManagerExtensions
   langs:
   - csharp
   - vb
@@ -22,9 +21,3 @@ references:
   name: NearbyResultExtensions
   nameWithType: NearbyResultExtensions
   fullName: Warbler.Extensions.NearbyResultExtensions
-- uid: Warbler.Extensions.UserManagerExtensions
-  commentId: T:Warbler.Extensions.UserManagerExtensions
-  isExternal: false
-  name: UserManagerExtensions
-  nameWithType: UserManagerExtensions
-  fullName: Warbler.Extensions.UserManagerExtensions

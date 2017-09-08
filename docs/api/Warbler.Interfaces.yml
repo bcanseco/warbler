@@ -4,7 +4,10 @@ items:
   commentId: N:Warbler.Interfaces
   id: Warbler.Interfaces
   children:
+  - Warbler.Interfaces.IChannelRepository
   - Warbler.Interfaces.IEmailSender
+  - Warbler.Interfaces.IMembershipRepository
+  - Warbler.Interfaces.IMessageRepository
   - Warbler.Interfaces.ISmsSender
   - Warbler.Interfaces.IUniversityRepository
   - Warbler.Interfaces.IUserRepository
@@ -18,27 +21,58 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Interfaces.IChannelRepository
+  commentId: T:Warbler.Interfaces.IChannelRepository
+  parent: Warbler.Interfaces
+  isExternal: false
+  name: IChannelRepository
+  nameWithType: IChannelRepository
+  fullName: Warbler.Interfaces.IChannelRepository
 - uid: Warbler.Interfaces.IEmailSender
   commentId: T:Warbler.Interfaces.IEmailSender
+  parent: Warbler.Interfaces
   isExternal: false
   name: IEmailSender
   nameWithType: IEmailSender
   fullName: Warbler.Interfaces.IEmailSender
+- uid: Warbler.Interfaces.IMembershipRepository
+  commentId: T:Warbler.Interfaces.IMembershipRepository
+  parent: Warbler.Interfaces
+  isExternal: false
+  name: IMembershipRepository
+  nameWithType: IMembershipRepository
+  fullName: Warbler.Interfaces.IMembershipRepository
+- uid: Warbler.Interfaces.IMessageRepository
+  commentId: T:Warbler.Interfaces.IMessageRepository
+  parent: Warbler.Interfaces
+  isExternal: false
+  name: IMessageRepository
+  nameWithType: IMessageRepository
+  fullName: Warbler.Interfaces.IMessageRepository
 - uid: Warbler.Interfaces.ISmsSender
   commentId: T:Warbler.Interfaces.ISmsSender
+  parent: Warbler.Interfaces
   isExternal: false
   name: ISmsSender
   nameWithType: ISmsSender
   fullName: Warbler.Interfaces.ISmsSender
 - uid: Warbler.Interfaces.IUniversityRepository
   commentId: T:Warbler.Interfaces.IUniversityRepository
+  parent: Warbler.Interfaces
   isExternal: false
   name: IUniversityRepository
   nameWithType: IUniversityRepository
   fullName: Warbler.Interfaces.IUniversityRepository
 - uid: Warbler.Interfaces.IUserRepository
   commentId: T:Warbler.Interfaces.IUserRepository
+  parent: Warbler.Interfaces
   isExternal: false
   name: IUserRepository
   nameWithType: IUserRepository
   fullName: Warbler.Interfaces.IUserRepository
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces

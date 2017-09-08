@@ -17,7 +17,7 @@ items:
   source:
     id: AuthMessageSender
     path: ''
-    startLine: 2103
+    startLine: 2374
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -25,14 +25,20 @@ items:
     content: 'public class AuthMessageSender : IEmailSender, ISmsSender'
     content.vb: >-
       Public Class AuthMessageSender
-
-          Inherits IEmailSender
-
-          Implements ISmsSender
+          Implements IEmailSender, ISmsSender
   inheritance:
   - System.Object
   implements:
-  - ISmsSender
+  - Warbler.Interfaces.IEmailSender
+  - Warbler.Interfaces.ISmsSender
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -53,7 +59,7 @@ items:
   source:
     id: SendEmailAsync
     path: ''
-    startLine: 2105
+    startLine: 2376
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -70,6 +76,8 @@ items:
       type: Task
     content.vb: Public Function SendEmailAsync(email As String, subject As String, message As String) As Task
   overload: Warbler.Services.AuthMessageSender.SendEmailAsync*
+  implements:
+  - Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -88,7 +96,7 @@ items:
   source:
     id: SendSmsAsync
     path: ''
-    startLine: 2111
+    startLine: 2382
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -103,6 +111,8 @@ items:
       type: Task
     content.vb: Public Function SendSmsAsync(number As String, message As String) As Task
   overload: Warbler.Services.AuthMessageSender.SendSmsAsync*
+  implements:
+  - Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -121,23 +131,388 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: ISmsSender
-  isExternal: true
+- uid: Warbler.Interfaces.IEmailSender
+  commentId: T:Warbler.Interfaces.IEmailSender
+  parent: Warbler.Interfaces
+  isExternal: false
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: Warbler.Interfaces.IEmailSender
+- uid: Warbler.Interfaces.ISmsSender
+  commentId: T:Warbler.Interfaces.ISmsSender
+  parent: Warbler.Interfaces
+  isExternal: false
   name: ISmsSender
   nameWithType: ISmsSender
-  fullName: ISmsSender
+  fullName: Warbler.Interfaces.ISmsSender
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
 - uid: Warbler.Services.AuthMessageSender.SendEmailAsync*
   commentId: Overload:Warbler.Services.AuthMessageSender.SendEmailAsync
   isExternal: false
   name: SendEmailAsync
   nameWithType: AuthMessageSender.SendEmailAsync
   fullName: Warbler.Services.AuthMessageSender.SendEmailAsync
+- uid: Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  commentId: M:Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+  parent: Warbler.Interfaces.IEmailSender
+  isExternal: true
+  name: SendEmailAsync(String, String, String)
+  nameWithType: IEmailSender.SendEmailAsync(String, String, String)
+  fullName: Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+    name: SendEmailAsync
+    nameWithType: IEmailSender.SendEmailAsync
+    fullName: Warbler.Interfaces.IEmailSender.SendEmailAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IEmailSender.SendEmailAsync(System.String,System.String,System.String)
+    name: SendEmailAsync
+    nameWithType: IEmailSender.SendEmailAsync
+    fullName: Warbler.Interfaces.IEmailSender.SendEmailAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -156,3 +531,58 @@ references:
   name: SendSmsAsync
   nameWithType: AuthMessageSender.SendSmsAsync
   fullName: Warbler.Services.AuthMessageSender.SendSmsAsync
+- uid: Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
+  commentId: M:Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
+  parent: Warbler.Interfaces.ISmsSender
+  isExternal: true
+  name: SendSmsAsync(String, String)
+  nameWithType: ISmsSender.SendSmsAsync(String, String)
+  fullName: Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String, System.String)
+  spec.csharp:
+  - uid: Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
+    name: SendSmsAsync
+    nameWithType: ISmsSender.SendSmsAsync
+    fullName: Warbler.Interfaces.ISmsSender.SendSmsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.ISmsSender.SendSmsAsync(System.String,System.String)
+    name: SendSmsAsync
+    nameWithType: ISmsSender.SendSmsAsync
+    fullName: Warbler.Interfaces.ISmsSender.SendSmsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

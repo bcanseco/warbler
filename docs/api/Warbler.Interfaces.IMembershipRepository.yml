@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IMembershipRepository
+  commentId: T:Warbler.Interfaces.IMembershipRepository
+  id: IMembershipRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.Channel)
+  - Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.User)
+  langs:
+  - csharp
+  - vb
+  name: IMembershipRepository
+  nameWithType: IMembershipRepository
+  fullName: Warbler.Interfaces.IMembershipRepository
+  type: Interface
+  source:
+    id: IMembershipRepository
+    path: ''
+    startLine: 1269
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for membership-based queries against a repository.\n"
+  example: []
+  syntax:
+    content: public interface IMembershipRepository
+    content.vb: Public Interface IMembershipRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.User)
+  commentId: M:Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.User)
+  id: AllFor(Warbler.Models.User)
+  parent: Warbler.Interfaces.IMembershipRepository
+  langs:
+  - csharp
+  - vb
+  name: AllFor(User)
+  nameWithType: IMembershipRepository.AllFor(User)
+  fullName: Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.User)
+  type: Method
+  source:
+    id: AllFor
+    path: ''
+    startLine: 1278
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nRetrieves a list of memberships that the given user is part of.\n"
+  example: []
+  syntax:
+    content: IAsyncEnumerable<Membership> AllFor(User user)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+      description: The user to retrieve memberships for.
+    return:
+      type: IAsyncEnumerable{Warbler.Models.Membership}
+      description: "\nA list of Membership objects filled-in up to the university level.\n"
+    content.vb: Function AllFor(user As User) As IAsyncEnumerable(Of Membership)
+  overload: Warbler.Interfaces.IMembershipRepository.AllFor*
+- uid: Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.Channel)
+  commentId: M:Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.Channel)
+  id: AllFor(Warbler.Models.Channel)
+  parent: Warbler.Interfaces.IMembershipRepository
+  langs:
+  - csharp
+  - vb
+  name: AllFor(Channel)
+  nameWithType: IMembershipRepository.AllFor(Channel)
+  fullName: Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.Channel)
+  type: Method
+  source:
+    id: AllFor
+    path: ''
+    startLine: 1287
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nRetrieves a list of memberships that the given channel contains.\n"
+  example: []
+  syntax:
+    content: IAsyncEnumerable<Membership> AllFor(Channel channel)
+    parameters:
+    - id: channel
+      type: Warbler.Models.Channel
+      description: The channel to retrieve memberships for.
+    return:
+      type: IAsyncEnumerable{Warbler.Models.Membership}
+      description: "\nA list of Membership objects filled-in up to the university level.\n"
+    content.vb: Function AllFor(channel As Channel) As IAsyncEnumerable(Of Membership)
+  overload: Warbler.Interfaces.IMembershipRepository.AllFor*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IMembershipRepository.AllFor*
+  commentId: Overload:Warbler.Interfaces.IMembershipRepository.AllFor
+  isExternal: false
+  name: AllFor
+  nameWithType: IMembershipRepository.AllFor
+  fullName: Warbler.Interfaces.IMembershipRepository.AllFor
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+- uid: IAsyncEnumerable{Warbler.Models.Membership}
+  commentId: '!:IAsyncEnumerable{Warbler.Models.Membership}'
+  definition: IAsyncEnumerable`1
+  name: IAsyncEnumerable<Membership>
+  nameWithType: IAsyncEnumerable<Membership>
+  fullName: IAsyncEnumerable<Warbler.Models.Membership>
+  nameWithType.vb: IAsyncEnumerable(Of Membership)
+  fullName.vb: IAsyncEnumerable(Of Warbler.Models.Membership)
+  name.vb: IAsyncEnumerable(Of Membership)
+  spec.csharp:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.Membership
+    name: Membership
+    nameWithType: Membership
+    fullName: Warbler.Models.Membership
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.Membership
+    name: Membership
+    nameWithType: Membership
+    fullName: Warbler.Models.Membership
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: IAsyncEnumerable`1
+  isExternal: true
+  name: IAsyncEnumerable<>
+  nameWithType: IAsyncEnumerable<>
+  fullName: IAsyncEnumerable<>
+  nameWithType.vb: IAsyncEnumerable(Of )
+  fullName.vb: IAsyncEnumerable(Of )
+  name.vb: IAsyncEnumerable(Of )
+  spec.csharp:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel

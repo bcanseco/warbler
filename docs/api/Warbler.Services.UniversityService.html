@@ -115,7 +115,7 @@
   
   
   <a id="Warbler_Services_UniversityService__ctor_" data-uid="Warbler.Services.UniversityService.#ctor*"></a>
-  <h4 id="Warbler_Services_UniversityService__ctor_IUniversityRepository_" data-uid="Warbler.Services.UniversityService.#ctor(IUniversityRepository)">UniversityService(IUniversityRepository)</h4>
+  <h4 id="Warbler_Services_UniversityService__ctor_Warbler_Interfaces_IUniversityRepository_" data-uid="Warbler.Services.UniversityService.#ctor(Warbler.Interfaces.IUniversityRepository)">UniversityService(IUniversityRepository)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -133,7 +133,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IUniversityRepository</span></td>
+        <td><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html">IUniversityRepository</a></td>
         <td><span class="parametername">repository</span></td>
         <td></td>
       </tr>
@@ -145,8 +145,8 @@
   
   <a id="Warbler_Services_UniversityService_GetAllAsync_" data-uid="Warbler.Services.UniversityService.GetAllAsync*"></a>
   <h4 id="Warbler_Services_UniversityService_GetAllAsync" data-uid="Warbler.Services.UniversityService.GetAllAsync">GetAllAsync()</h4>
-  <div class="markdown level1 summary"><p>Gets a list of all universities and
-their properties down to the message level.</p>
+  <div class="markdown level1 summary"><p>Gets a list of all universities and their properties
+down to the message level. Results are untracked.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -163,7 +163,7 @@ their properties down to the message level.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<span class="xref">University</span>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -208,7 +208,7 @@ Google Places result or creates it if nonexistent.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">University</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
         <td><p>The related University object.</p>
 </td>
       </tr>
@@ -217,8 +217,8 @@ Google Places result or creates it if nonexistent.</p>
   
   
   <a id="Warbler_Services_UniversityService_JoinAsync_" data-uid="Warbler.Services.UniversityService.JoinAsync*"></a>
-  <h4 id="Warbler_Services_UniversityService_JoinAsync_User_University_" data-uid="Warbler.Services.UniversityService.JoinAsync(User,University)">JoinAsync(User, University)</h4>
-  <div class="markdown level1 summary"><p>Adds a user as a member to every channel in a university.</p>
+  <h4 id="Warbler_Services_UniversityService_JoinAsync_Warbler_Models_User_Warbler_Models_University_" data-uid="Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University)">JoinAsync(User, University)</h4>
+  <div class="markdown level1 summary"><p>Adds a user as a member to every channel in a university&#39;s server.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -236,13 +236,13 @@ Google Places result or creates it if nonexistent.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">User</span></td>
+        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
         <td><p>The user to add.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">University</span></td>
+        <td><a class="xref" href="Warbler.Models.University.html">University</a></td>
         <td><span class="parametername">university</span></td>
         <td><p>The university whose channels will be added to.</p>
 </td>
@@ -264,7 +264,7 @@ Google Places result or creates it if nonexistent.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Warbler_Services_UniversityService_JoinAsync_User_University__remarks">Remarks</h5>
+  <h5 id="Warbler_Services_UniversityService_JoinAsync_Warbler_Models_User_Warbler_Models_University__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This will create new rows in the Membership table (User x Channel).</p>
 </div>
 </article>

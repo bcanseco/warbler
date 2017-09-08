@@ -5,10 +5,10 @@ items:
   id: UniversityService
   parent: Warbler.Services
   children:
-  - Warbler.Services.UniversityService.#ctor(IUniversityRepository)
+  - Warbler.Services.UniversityService.#ctor(Warbler.Interfaces.IUniversityRepository)
   - Warbler.Services.UniversityService.GetAllAsync
   - Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
-  - Warbler.Services.UniversityService.JoinAsync(User,University)
+  - Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   source:
     id: UniversityService
     path: ''
-    startLine: 2297
+    startLine: 2762
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -44,21 +44,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Services.UniversityService.#ctor(IUniversityRepository)
-  commentId: M:Warbler.Services.UniversityService.#ctor(IUniversityRepository)
-  id: '#ctor(IUniversityRepository)'
+- uid: Warbler.Services.UniversityService.#ctor(Warbler.Interfaces.IUniversityRepository)
+  commentId: M:Warbler.Services.UniversityService.#ctor(Warbler.Interfaces.IUniversityRepository)
+  id: '#ctor(Warbler.Interfaces.IUniversityRepository)'
   parent: Warbler.Services.UniversityService
   langs:
   - csharp
   - vb
   name: UniversityService(IUniversityRepository)
   nameWithType: UniversityService.UniversityService(IUniversityRepository)
-  fullName: Warbler.Services.UniversityService.UniversityService(IUniversityRepository)
+  fullName: Warbler.Services.UniversityService.UniversityService(Warbler.Interfaces.IUniversityRepository)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 2301
+    startLine: 2766
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -66,7 +66,7 @@ items:
     content: public UniversityService(IUniversityRepository repository)
     parameters:
     - id: repository
-      type: IUniversityRepository
+      type: Warbler.Interfaces.IUniversityRepository
     content.vb: Public Sub New(repository As IUniversityRepository)
   overload: Warbler.Services.UniversityService.#ctor*
   modifiers.csharp:
@@ -87,7 +87,7 @@ items:
   source:
     id: GetOrCreateAsync
     path: ''
-    startLine: 2312
+    startLine: 2777
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -100,7 +100,7 @@ items:
       type: NearByResult
       description: The Google Places search result to use.
     return:
-      type: Task{University}
+      type: Task{Warbler.Models.University}
       description: The related University object.
     content.vb: Public Function GetOrCreateAsync(uni As NearByResult) As Task(Of University)
   overload: Warbler.Services.UniversityService.GetOrCreateAsync*
@@ -108,35 +108,35 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Services.UniversityService.JoinAsync(User,University)
-  commentId: M:Warbler.Services.UniversityService.JoinAsync(User,University)
-  id: JoinAsync(User,University)
+- uid: Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University)
+  commentId: M:Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University)
+  id: JoinAsync(Warbler.Models.User,Warbler.Models.University)
   parent: Warbler.Services.UniversityService
   langs:
   - csharp
   - vb
   name: JoinAsync(User, University)
   nameWithType: UniversityService.JoinAsync(User, University)
-  fullName: Warbler.Services.UniversityService.JoinAsync(User, University)
+  fullName: Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User, Warbler.Models.University)
   type: Method
   source:
     id: JoinAsync
     path: ''
-    startLine: 2334
+    startLine: 2797
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
-  summary: "\nAdds a user as a member to every channel in a university.\n"
+  summary: "\nAdds a user as a member to every channel in a university's server.\n"
   remarks: "\nThis will create new rows in the Membership table (User x Channel).\n"
   example: []
   syntax:
     content: public Task JoinAsync(User user, University university)
     parameters:
     - id: user
-      type: User
+      type: Warbler.Models.User
       description: The user to add.
     - id: university
-      type: University
+      type: Warbler.Models.University
       description: The university whose channels will be added to.
     return:
       type: Task
@@ -160,16 +160,16 @@ items:
   source:
     id: GetAllAsync
     path: ''
-    startLine: 2348
+    startLine: 2811
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
-  summary: "\nGets a list of all universities and\ntheir properties down to the message level.\n"
+  summary: "\nGets a list of all universities and their properties\ndown to the message level. Results are untracked.\n"
   example: []
   syntax:
     content: public Task<List<University>> GetAllAsync()
     return:
-      type: Task{List{University}}
+      type: Task{List{Warbler.Models.University}}
     content.vb: Public Function GetAllAsync As Task(Of List(Of University))
   overload: Warbler.Services.UniversityService.GetAllAsync*
   modifiers.csharp:
@@ -481,12 +481,19 @@ references:
   name: UniversityService
   nameWithType: UniversityService.UniversityService
   fullName: Warbler.Services.UniversityService.UniversityService
-- uid: IUniversityRepository
-  commentId: '!:IUniversityRepository'
-  isExternal: true
+- uid: Warbler.Interfaces.IUniversityRepository
+  commentId: T:Warbler.Interfaces.IUniversityRepository
+  parent: Warbler.Interfaces
+  isExternal: false
   name: IUniversityRepository
   nameWithType: IUniversityRepository
-  fullName: IUniversityRepository
+  fullName: Warbler.Interfaces.IUniversityRepository
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
 - uid: Warbler.Services.UniversityService.GetOrCreateAsync*
   commentId: Overload:Warbler.Services.UniversityService.GetOrCreateAsync
   isExternal: false
@@ -498,14 +505,14 @@ references:
   name: NearByResult
   nameWithType: NearByResult
   fullName: NearByResult
-- uid: Task{University}
-  commentId: '!:Task{University}'
+- uid: Task{Warbler.Models.University}
+  commentId: '!:Task{Warbler.Models.University}'
   definition: Task`1
   name: Task<University>
   nameWithType: Task<University>
-  fullName: Task<University>
+  fullName: Task<Warbler.Models.University>
   nameWithType.vb: Task(Of University)
-  fullName.vb: Task(Of University)
+  fullName.vb: Task(Of Warbler.Models.University)
   name.vb: Task(Of University)
   spec.csharp:
   - uid: Task`1
@@ -516,11 +523,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -533,11 +539,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: )
     nameWithType: )
     fullName: )
@@ -585,35 +590,45 @@ references:
   name: JoinAsync
   nameWithType: UniversityService.JoinAsync
   fullName: Warbler.Services.UniversityService.JoinAsync
-- uid: User
-  isExternal: true
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
   name: User
   nameWithType: User
-  fullName: User
-- uid: University
-  isExternal: true
+  fullName: Warbler.Models.User
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
   name: University
   nameWithType: University
-  fullName: University
+  fullName: Warbler.Models.University
 - uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
   fullName: Task
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
 - uid: Warbler.Services.UniversityService.GetAllAsync*
   commentId: Overload:Warbler.Services.UniversityService.GetAllAsync
   isExternal: false
   name: GetAllAsync
   nameWithType: UniversityService.GetAllAsync
   fullName: Warbler.Services.UniversityService.GetAllAsync
-- uid: Task{List{University}}
-  commentId: '!:Task{List{University}}'
+- uid: Task{List{Warbler.Models.University}}
+  commentId: '!:Task{List{Warbler.Models.University}}'
   definition: Task`1
   name: Task<List<University>>
   nameWithType: Task<List<University>>
-  fullName: Task<List<University>>
+  fullName: Task<List<Warbler.Models.University>>
   nameWithType.vb: Task(Of List(Of University))
-  fullName.vb: Task(Of List(Of University))
+  fullName.vb: Task(Of List(Of Warbler.Models.University))
   name.vb: Task(Of List(Of University))
   spec.csharp:
   - uid: Task`1
@@ -632,11 +647,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -660,11 +674,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: University
+  - uid: Warbler.Models.University
     name: University
     nameWithType: University
-    fullName: University
-    isExternal: true
+    fullName: Warbler.Models.University
   - name: )
     nameWithType: )
     fullName: )

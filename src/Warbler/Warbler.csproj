@@ -15,10 +15,6 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="System.ValueTuple" Version="4.4.0" />
   </ItemGroup>
-  
-  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
-    <Exec Command="dotnet bundle" />
-  </Target>
 
   <ItemGroup>
     <None Update="Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
@@ -27,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.5.357" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
 

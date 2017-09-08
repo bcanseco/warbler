@@ -56,3 +56,53 @@ You will need to download the [Web Compiler](https://marketplace.visualstudio.co
 6. Web Compiler instantly compiles to CSS, which is linked to the view and immediately re-rendered by Chrome.
 
 Verify this workflow on your own to make sure Web Compiler was properly installed.
+
+## Testing
+All tests should be in the [Warbler.Tests](src/Warbler.Tests) project.
+* Try to match the folder structure from Warbler
+   * e.g. If you're testing classes in [Warbler/Misc](src/Warbler/Misc), your tests should be in Warbler.Tests/Misc.
+   * This applies for subfolders too.
+* Match the name of the class you're testing, but prepend "Test".
+   * e.g. If you're testing [University.cs](src/Warbler/Models/University.cs), your test class would be called "TestUniversity.cs".
+* Use the naming convention `MethodName_ExpectedBehavior`.
+   * When testing that the `CreateAsync()` method works in its expected (successful) scenario, you might use `CreateAsync_Should_Create_A_New_University()`.
+   * When testing that the `CreateAsync()` method fails in an expected yet unsuccessful scenario, you might use `CreateAsync_Fails_When_University_Name_Is_Null()`.
+* We are using MSTest as our unit testing framework. You can read docs for it [here](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest#adding-more-features). Key points:
+   * Test classes should have a `[TestClass]` [attribute](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/attributes).
+   * Test methods should have a `[TestMethod]` attribute.
+   * You set up your own variables and test using the `Assert` class.
+     * Type `Assert.` in Visual Studio to see available methods, e.g. `AreEqual()` and `IsFalse()`.
+* We have also imported a third party library called [Moq](https://github.com/Moq/moq4/wiki/Quickstart). This library is useful for mocking a complicated part of the program when you only really want to test a small part of it.
+   1. As a practical example, we'll use Moq with this method from SqlUniversityRepository:
+      ```csharp
+      public async Task SaveAsync()
+      {
+          // we want to test if this method gets called.
+          await Context.SaveChangesAsync();
+      }
+      ```
+   2. `SaveChangesAsync()` is a method of the `Context` property of the repository. Since we just want a test to ensure it gets called from `SaveAsync()`, here's how we can mock it:
+      ```csharp
+      [TestMethod]
+      public async Task SaveASync_Should_Save_Changes_On_Context()
+      {
+          var saveChangesCalled = false;
+
+          // Create a fake WarblerDbContext
+          var mockContext = new Mock<WarblerDbContext>(Options);
+
+          // Watch its SaveChangesAsync() method to see if it gets called by the repo
+          mockContext.Setup(x => x.SaveChangesAsync(default(CancellationToken)))
+              .Callback(() => saveChangesCalled = true)
+              .ReturnsAsync(0);
+
+          // Attach it to the repo and call SaveAsync()
+          var repo = new SqlUniversityRepository(mockContext.Object);
+          await repo.SaveAsync();
+
+          Assert.IsTrue(saveChangesCalled);
+      }
+      ```
+   3. You can view the full test class for this example [here](src/Warbler.Tests/Repositories/TestSqlUniversityRepository.cs).
+* You can run tests in Visual Studio by clicking on **Test > Windows > Test Explorer**.
+   * You can also run tests from a terminal using `dotnet test`.

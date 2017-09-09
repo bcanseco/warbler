@@ -35,10 +35,7 @@ namespace Warbler
 
         private IConfigurationRoot Configuration { get; }
 
-        public static void Main(string[] args)
-        {
-            BuildWebHost(args).Run();
-        }
+        public static void Main(string[] args) => BuildWebHost(args).Run();
 
         private static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)

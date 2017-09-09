@@ -1,13 +1,7 @@
 ﻿using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
-using GoogleApi.Entities.Common;
-using GoogleApi.Entities.Places.Common;
-using GoogleApi.Entities.Places.Search.NearBy.Response;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using Warbler.Exceptions;
 using Warbler.Misc;
 using Warbler.Repositories;
 using Warbler.Models;
@@ -17,12 +11,12 @@ using System.Collections.Generic;
 namespace Warbler.Tests.Repositories
 {
     [TestClass]
-    public class TestSQLChannelRepository
+    public class TestSqlChannelRepository
     {
         private DbContextOptions<WarblerDbContext> Options { get; }
-               = new DbContextOptionsBuilder<WarblerDbContext>()
-                   .UseInMemoryDatabase(nameof(TestSqlUniversityRepository))
-                   .Options;
+            = new DbContextOptionsBuilder<WarblerDbContext>()
+                .UseInMemoryDatabase(nameof(TestSqlChannelRepository))
+                .Options;
 
         [TestMethod]
         public async Task UpdateAsync_Should_Update_Channel()
@@ -31,10 +25,10 @@ namespace Warbler.Tests.Repositories
             {
                 var repo = new SqlChannelRepository(context);
 
-                Channel testChannel = new Channel
+                var testChannel = new Channel
                 {
                     Name = "general",
-                    Description = "",
+                    Description = string.Empty,
                     State = ChannelState.Active,
                     Type = ChannelType.Normal,
                     Memberships = new List<Membership>()
@@ -47,9 +41,8 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 Assert.AreEqual(1, context.Channels.Count());
-                Assert.AreEqual("", context.Channels
-                                         .Where(c => c.Name == "general")
-                                         .FirstOrDefault().Description);
+                Assert.AreEqual(string.Empty, context.Channels
+                    .FirstOrDefault(c => c.Name == "general").Description);
             }
         }
     }

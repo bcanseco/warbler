@@ -56,7 +56,7 @@ namespace Warbler
 
             // Add Entity Framework databases.
             services.AddDbContext<WarblerDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
+                options.UseSqlServer(Configuration.GetConnectionString("WarblerDevelopment")));
 
             // Set up authentication.
             services.AddIdentity<User, IdentityRole>()

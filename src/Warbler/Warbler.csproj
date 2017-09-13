@@ -7,6 +7,7 @@
     <OutputType>Exe</OutputType>
     <PackageId>Warbler</PackageId>
     <AssetTargetFallback>dotnet5.6;portable-net45+win8</AssetTargetFallback>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

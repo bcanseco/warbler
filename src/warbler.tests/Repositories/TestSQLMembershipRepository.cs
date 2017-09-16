@@ -8,8 +8,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Warbler.Misc;
 using Warbler.Repositories;
 using Warbler.Models;
-using Warbler.Models.Enums;
-using System.Collections.Generic;
 
 namespace Warbler.Tests.Repositories
 {
@@ -18,8 +16,11 @@ namespace Warbler.Tests.Repositories
     {
         private DbContextOptions<WarblerDbContext> Options { get; }
             = new DbContextOptionsBuilder<WarblerDbContext>()
-                .UseInMemoryDatabase(nameof(TestSqlUniversityRepository))
+                .UseInMemoryDatabase(nameof(TestSqlMembershipRepository))
                 .Options;
+
+        private User Bob { get; set; }
+        private Channel General { get; set; }
 
         [TestInitialize]
         public async Task CreateUniversity()
@@ -33,55 +34,46 @@ namespace Warbler.Tests.Repositories
                     Geometry = new Geometry { Location = new Location(0.0, 0.0) }
                 };
 
-                await repo.CreateAsync(nearbyResult);
+                // Create a test university with default channels
+                var testUniversity = await repo.CreateAsync(nearbyResult);
+
+                // Save a reference to one of the default channels and a new user
+                General = testUniversity.Server.Channels.Single(ch => ch.Name == "general");
+                Bob = new User {UserName = "Bob"};
+
+                // Add a test user to it
+                General.Memberships.Add(new Membership {User = Bob});
+
+                // Save it to the in-memory database for use in tests
+                await repo.SaveAsync();
             }
         }
 
         [TestMethod]
-        public async Task AllFor_Should_Return_List_Of_Channels_User_Is_Subscribed()
+        public async Task AllForUser_Should_Return_Channels_Where_User_Is_Member()
         {
             using (var context = new WarblerDbContext(Options))
             {
-                var user = new User
-                {
-                    UserName = "Bob"
-                };
-
-                var channels = context.Channels.Include(ch => ch.Memberships);
-
-                channels.FirstOrDefault(c => c.Name == "general").Memberships.Add(new Membership { User = user });
-            }
-
-            using (var context = new WarblerDbContext(Options))
-            {
                 var repo = new SqlMembershipRepository(context);
-                Assert.AreEqual(1, context.Memberships.Count());
-                Assert.AreEqual(context.Memberships.ToList(), await repo.AllFor(context.Channels
-                                                .FirstOrDefault(c => c.Name == "general")).ToList());
-                                        
+                var bobMemberships = await repo.AllFor(Bob).ToList();
+
+                // Bob was only added to one channel (#general)
+                Assert.AreEqual(1, bobMemberships.Count);
+                Assert.IsTrue(bobMemberships.Single().Channel.Name == "general");
             }
         }
 
         [TestMethod]
-        public void AllFor_Should_Return_List_Of_Users_Subscribed_To_Channel()
+        public async Task AllForChannel_Should_Return_Users_That_Are_Members()
         {
             using (var context = new WarblerDbContext(Options))
             {
-                var user = new User
-                {
-                    UserName = "Bob"
-                };
-
-                var channels = context.Channels.Include(ch => ch.Memberships);
-
-                channels.FirstOrDefault(c => c.Name == "general").Memberships.Add(new Membership { User = user });
-            }
-
-            using (var context = new WarblerDbContext(Options))
-            {
                 var repo = new SqlMembershipRepository(context);
-                Assert.AreEqual(context.Memberships.FirstOrDefault(u => u.User.UserName == "Bob").Channel.Name, repo.AllFor(new User { UserName = "Bob"}));
+                var generalMemberships = await repo.AllFor(General).ToList();
 
+                // General only had one member added (Bob)
+                Assert.AreEqual(1, generalMemberships.Count);
+                Assert.IsTrue(generalMemberships.Single().User.UserName == "Bob");
             }
         }
     }

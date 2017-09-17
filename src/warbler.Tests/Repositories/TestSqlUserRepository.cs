@@ -18,6 +18,7 @@ namespace Warbler.Tests.Repositories
             = new DbContextOptionsBuilder<WarblerDbContext>()
                 .UseInMemoryDatabase(nameof(TestSqlUserRepository))
                 .Options;
+
         private User Bob { get; set; }
         private Channel General { get; set; }
 
@@ -49,24 +50,24 @@ namespace Warbler.Tests.Repositories
         }
 
         [TestMethod]
-        public async Task IsNewAsync_should_return_false_if_user_already_existed()
+        public async Task IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
         {
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUserRepository(context);
                 Assert.AreEqual(1, context.Memberships.Count());
-                Assert.IsTrue(!(await repo.IsNewAsync(Bob)));
+                Assert.IsFalse(await repo.IsNewAsync(Bob));
             }
         }
 
         [TestMethod]
-        public async Task IsNewAsync_should_return_True_If_User_Was_Recently_Created()
+        public async Task IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
         {
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUserRepository(context);
-                User Jimmy = new User { UserName = "Jimmy" };
-                Assert.IsTrue(await repo.IsNewAsync(Jimmy));
+                var jimmy = new User { UserName = "Jimmy" };
+                Assert.IsTrue(await repo.IsNewAsync(jimmy));
             }
         }
     }

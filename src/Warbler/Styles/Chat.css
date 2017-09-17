@@ -26,7 +26,7 @@
   padding: 5px;
 }
 .channelBrowserCard {
-  height: 70vh;
+  height: 100%;
   margin: auto;
   text-align: center;
 }
@@ -34,7 +34,7 @@
   padding: 5px;
 }
 .channelContentCard {
-  height: 70vh;
+  height: 100%;
   margin: auto;
   text-align: center;
   position: relative;
@@ -50,7 +50,7 @@
   padding: 5px;
 }
 .userBrowserCard {
-  height: 70vh;
+  height: 100%;
   margin: auto;
   text-align: center;
 }
@@ -60,5 +60,6 @@
   padding: 0px;
 }
 .userImage {
-  width: 50%;
+  width: 25%;
+  padding-right: 20px;
 }

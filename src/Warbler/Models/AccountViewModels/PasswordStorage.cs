@@ -1,6 +1,6 @@
 ﻿//Password Hash:
 //1.Input the password with the salt value.
-//2.Use PBKDF2 produce the derived key.
+//2.Use PBKDF2 to produce the derived key.
 
 using System;
 using System.Text;
@@ -17,6 +17,8 @@ namespace PasswordSecurity
             : base(message, inner) { }
     }
 
+    //Throw when it's not safe to create the hash.
+    //e.g. Invalid random number.
     class CannotPerformOperationException : Exception
     {
         public CannotPerformOperationException() { }
@@ -28,12 +30,18 @@ namespace PasswordSecurity
 
     class PasswordStorage
     {
-        // These constants may be changed without breaking existing hashes.
+        //These constants may be changed without breaking existing hashes.
+        //The number of bytes of salt.
+        //Default is 24.
         public const int SALT_BYTES = 24;
+        //The number of PBKDF2 output bytes.
+        //Default is 18.
         public const int HASH_BYTES = 18;
+        //The number of PBKDF2 iterations.
+        //Default is 32,000.
         public const int PBKDF2_ITERATIONS = 64000;
 
-        // These constants define the encoding and may not be changed.
+        //These constants define the encoding and may not be changed.
         public const int HASH_SECTIONS = 5;
         public const int HASH_ALGORITHM_INDEX = 0;
         public const int ITERATION_INDEX = 1;
@@ -43,7 +51,7 @@ namespace PasswordSecurity
 
         public static string CreateHash(string password)
         {
-            // Generate a random salt
+            //Generate a random salt.
             byte[] salt = new byte[SALT_BYTES];
             try
             {
@@ -69,7 +77,7 @@ namespace PasswordSecurity
 
             byte[] hash = PBKDF2(password, salt, PBKDF2_ITERATIONS, HASH_BYTES);
 
-            // format: algorithm:iterations:hashSize:salt:hash
+            //format: algorithm:iterations:hashSize:salt:hash
             String parts = "sha1:" +
                 PBKDF2_ITERATIONS +
                 ":" +
@@ -232,4 +240,3 @@ namespace PasswordSecurity
         }
     }
 }
-

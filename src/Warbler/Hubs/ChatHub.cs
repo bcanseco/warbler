@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
 using Warbler.Misc;
@@ -27,10 +28,18 @@ namespace Warbler.Hubs
 
         public override async Task OnConnected()
         {
-            var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
-            await ChatService.OnConnected(user, Context.ConnectionId);
+            try
+            {
+                var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
+                await ChatService.OnConnected(user, Context.ConnectionId);
 
-            await base.OnConnected();
+                await base.OnConnected();
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException(
+                    "Weird SignalR bug that happens sometimes. Fixing soon ~BC", ex);
+            }
         }
 
         public override async Task OnDisconnected(bool stopCalled)

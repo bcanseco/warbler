@@ -54,9 +54,14 @@ namespace Warbler
                 options.Hubs.EnableDetailedErrors = true;
             });
 
+#if DEBUG
+            var dbConnection = Configuration.GetConnectionString("WarblerDevelopment");
+#else
+            var dbConnection = Configuration.GetConnectionString("WarblerProduction");
+#endif
+
             // Add Entity Framework databases.
-            services.AddDbContext<WarblerDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
+            services.AddDbContext<WarblerDbContext>(options => options.UseSqlServer(dbConnection));
 
             // Set up authentication.
             services.AddIdentity<User, IdentityRole>()

@@ -20,20 +20,20 @@ namespace Warbler.Hubs
         /// <summary>
         ///   Automatically called each time SignalR receives a packet from a client.
         /// </summary>
-        public ChatHub(UserManager<User> userManager, WarblerDbContext dbContext)
+        public ChatHub(UserManager<User> userManager, WarblerDbContext context, ChatService service)
         {
-            ChatService = ChatService.Instance.With(dbContext);
+            ChatService = service.With(context);
             UserManager = userManager;
         }
 
-        public override async Task OnConnected()
+        public override async Task OnConnectedAsync()
         {
             try
             {
                 var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
-                await ChatService.OnConnected(user, Context.ConnectionId);
+                await ChatService.OnConnectedAsync(user, Context.ConnectionId);
 
-                await base.OnConnected();
+                await base.OnConnectedAsync();
             }
             catch (Exception ex)
             {
@@ -42,12 +42,12 @@ namespace Warbler.Hubs
             }
         }
 
-        public override async Task OnDisconnected(bool stopCalled)
+        public override async Task OnDisconnectedAsync(Exception exception)
         {
             var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
-            await ChatService.OnDisconnected(user, Context.ConnectionId);
+            await ChatService.OnDisconnectedAsync(user, Context.ConnectionId);
 
-            await base.OnDisconnected(stopCalled);
+            await base.OnDisconnectedAsync(exception);
         }
     }
 }

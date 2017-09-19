@@ -1,10 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using GoogleApi.Entities.Common;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
 using Warbler.Models;
-using Warbler.Misc;
 using Microsoft.AspNetCore.Identity;
+using Warbler.Misc;
 using Warbler.Services;
 
 namespace Warbler.Hubs
@@ -22,18 +23,16 @@ namespace Warbler.Hubs
         ///   Automatically called each time SignalR receives a packet from a client.
         ///   Both parameters are injected automatically by ASP.NET DI.
         /// </summary>
-        public ProximityHub(WarblerDbContext context, UserManager<User> userManager)
+        public ProximityHub(ProximityService service, WarblerDbContext context, UserManager<User> userManager)
         {
-            ProximityService = ProximityService.Instance.With(context);
+            ProximityService = service.With(context);
             UserManager = userManager;
         }
 
-        public override async Task OnDisconnected(bool stopCalled)
+        public override async Task OnDisconnectedAsync(Exception exception)
         {
-            var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
-            await ProximityService.OnDisconnected(user);
-
-            await base.OnDisconnected(stopCalled);
+            await ProximityService.OnDisconnectedAsync(Context.User.Identity.Name);
+            await base.OnDisconnectedAsync(exception);
         }
         
         /// <summary>
@@ -46,8 +45,7 @@ namespace Warbler.Hubs
             var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
             var coordinates = JsonConvert.DeserializeObject<Location>(locationSer);
 
-            await ProximityService
-                .ProximitySearchAsync(user, Context.ConnectionId, coordinates);
+            await ProximityService.ProximitySearchAsync(user, Context.ConnectionId, coordinates);
         }
 
         /// <summary>

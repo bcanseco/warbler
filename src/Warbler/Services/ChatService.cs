@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 using Warbler.Hubs;
 using Warbler.Misc;
 using Warbler.Models;
@@ -14,8 +16,12 @@ namespace Warbler.Services
     /// <summary>
     ///   Used by the <see cref="ChatHub"/> for business logic.
     /// </summary>
-    public class ChatService : HubResource<ChatService, ChatHub>
+    public class ChatService : HubResource<ChatHub>
     {
+        public ChatService(IHubContext<ChatHub> hubContext, ILogger<ChatService> logger)
+            : base(hubContext, logger)
+        { }
+
         /// <summary> Watches all channels with online users. (int : Channel.Id) </summary>
         private ConcurrentDictionary<int, Channel> ChannelStatus { get; }
             = new ConcurrentDictionary<int, Channel>();
@@ -24,28 +30,20 @@ namespace Warbler.Services
         private MessageService MessageService { get; set; }
         private MembershipService MembershipService { get; set; }
 
-        /// <summary>
-        ///   Allows the hub to attach a database context to this service instance.
-        /// </summary>
         public ChatService With(WarblerDbContext context)
         {
-            // Each service shares the same context to take advantage of EF caching
-            ChannelService = ChannelService
-                ?? new ChannelService(new SqlChannelRepository(context));
-            MessageService = MessageService
-                ?? new MessageService(new SqlMessageRepository(context));
-            MembershipService = MembershipService
-                ?? new MembershipService(new SqlMembershipRepository(context));
-
+            ChannelService = new ChannelService(new SqlChannelRepository(context));
+            MessageService = new MessageService(new SqlMessageRepository(context));
+            MembershipService = new MembershipService(new SqlMembershipRepository(context));
             return this;
         }
 
         /// <summary>
         ///   Invoked from the hub on each connected client.
         /// </summary>
-        public new async Task OnConnected(User user, string connectionId)
+        public new async Task OnConnectedAsync(User user, string connectionId)
         {
-            var onFirstDevice = await base.OnConnected(user, connectionId);
+            var onFirstDevice = await base.OnConnectedAsync(user, connectionId);
             var userChannels = await MembershipService.AllChannelsForAsync(user);
             
             /* This is what the client is sent on connection; will contain all
@@ -56,17 +54,17 @@ namespace Warbler.Services
              * but Memberships, Server, and University info are up-to-date). */
             foreach (var channel in userChannels)
             {
-                // Add the user to the SignalR group for this channel.
-                await HubContext.Groups.Add(connectionId, $"{channel.Id}");
-
                 if (onFirstDevice)
                 {
-                    // Notify all other clients that the user has joined.
-                    HubContext.Clients.Group($"{channel.Id}", connectionId)
-                        .onJoin(user, channel, channel.Server, channel.Server.University);
+                    // Notify all other clients that a new user is joining.
+                    await HubContext.Clients.Group($"{channel.Id}")
+                        .InvokeAsync("onJoin", user, channel, channel.Server, channel.Server.University);
                 }
 
-                if (ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
+                // Add the user to the SignalR group for this channel.
+                await HubContext.Groups.AddAsync(connectionId, $"{channel.Id}");
+
+                if (ChannelStatus.TryGetValue(channel.Id, out var watchedChannel))
                 {
                     /* This channel is already being watched. Entity Framework automatically
                      * updated the watchedChannel object's Memberships collection when we
@@ -87,8 +85,8 @@ namespace Warbler.Services
                 initialPayload.Add(watchedChannel.Server.University);
             }
 
-            HubContext.Clients.Client(connectionId)
-                .receiveInitialPayload(initialPayload.Distinct());
+            await HubContext.Clients.Client(connectionId)
+                .InvokeAsync("receiveInitialPayload", initialPayload.Distinct());
         }
 
         /// <summary>
@@ -98,9 +96,9 @@ namespace Warbler.Services
         ///   We don't have to remove the connection ID from its 
         ///   HubContext group because SignalR does this automatically.
         /// </remarks>
-        public new async Task OnDisconnected(User user, string connectionId)
+        public new async Task OnDisconnectedAsync(User user, string connectionId)
         {
-            var lastConnection = await base.OnDisconnected(user, connectionId);
+            var lastConnection = await base.OnDisconnectedAsync(user, connectionId);
 
             // The user is no longer connected on any device, remove from all channels
             if (lastConnection)
@@ -110,7 +108,7 @@ namespace Warbler.Services
 
                 foreach (var channel in user.Channels)
                 {
-                    if (!ChannelStatus.TryGetValue(channel.Id, out Channel watchedChannel))
+                    if (!ChannelStatus.TryGetValue(channel.Id, out var watchedChannel))
                         throw new Exception($"{channel.Name} was not being watched!");
 
                     watchedChannel.Users.Single(u => u.Id == user.Id).IsOnline = false;
@@ -118,8 +116,8 @@ namespace Warbler.Services
                     if (watchedChannel.Users.Any(u => u.IsOnline))
                     {
                         // Notify other online channel users that a user left
-                        HubContext.Clients.Group($"{watchedChannel.Id}")
-                            .onLeave(user, channel, channel.Server, channel.Server.University);
+                        await HubContext.Clients.Group($"{watchedChannel.Id}")
+                            .InvokeAsync("onLeave", user, channel, channel.Server, channel.Server.University);
                     }
                     else
                     {

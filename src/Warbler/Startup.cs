@@ -8,10 +8,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.SignalR.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Warbler.Hubs;
 using Warbler.Models;
 using Warbler.Misc;
 using Warbler.Interfaces;
@@ -21,8 +22,6 @@ namespace Warbler
 {
     public class Startup
     {
-        public static IConnectionManager ConnectionManager;
-
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -46,12 +45,19 @@ namespace Warbler
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddRouting(options => options.LowercaseUrls = true);
-
-            // Add framework services.
             services.AddMvc();
+
+            services.Configure<ApiKeys>(Configuration.GetSection(nameof(ApiKeys)));
+
+            services.AddSingleton<ProximityService>();
+            services.AddSingleton<ChatService>();
+
             services.AddSignalR(options =>
             {
-                options.Hubs.EnableDetailedErrors = true;
+                options.JsonSerializerSettings = new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                };
             });
 
 #if DEBUG
@@ -72,7 +78,7 @@ namespace Warbler
             {
                 // Password settings
                 options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 7;
+                options.Password.RequiredLength = 1;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
@@ -84,7 +90,7 @@ namespace Warbler
                 // User settings
                 options.User.RequireUniqueEmail = true;
             });
-            
+
             services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Account/LogIn";
@@ -101,11 +107,8 @@ namespace Warbler
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -138,9 +141,11 @@ namespace Warbler
 
             app.UseAuthentication();
             app.UseWebSockets();
-            app.UseSignalR();
-
-            ConnectionManager = serviceProvider.GetService<IConnectionManager>();
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ProximityHub>(nameof(ProximityHub));
+                routes.MapHub<ChatHub>(nameof(ChatHub));
+            });
 
             app.UseMvc(routes =>
             {

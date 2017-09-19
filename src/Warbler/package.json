@@ -20,6 +20,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@aspnet/signalr-client": "^1.0.0-alpha1-final",
     "bootstrap": "4.0.0-alpha.6",
     "daemonite-material": "4.0.0-alpha.6",
     "jquery": "^3.1.1",
@@ -27,7 +28,6 @@
     "jquery-validation-unobtrusive": "^3.2.6",
     "knockout": "^3.4.1",
     "popper.js": "^1.12.3",
-    "signalr": "^2.2.1",
     "tether": "^1.4.0"
   },
   "devDependencies": {

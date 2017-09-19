@@ -1,5 +1,4 @@
-﻿@using System
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -54,24 +53,35 @@
 </div>
 
 <environment names="Development,Staging,Production">
+    <!-- TODO: Populate this programmatically using package.json:main -->
+
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/tether/dist/js/tether.min.js"></script>
     <script src="~/lib/popper.js/dist/umd/popper.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/lib/daemonite-material/js/material.js"></script>
+    <script src="~/lib/@@aspnet/signalr-client/dist/browser/signalr-client-1.0.0-alpha1-final.js"></script>
     <script src="~/lib/knockout/build/output/knockout-latest.js"></script>
     <script src="~/Scripts/site.js?@DateTime.Now.Ticks"></script>
 
     @RenderSection("scripts", required: false)
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] ||
+                function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-92277807-1', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-92277807-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </environment>
 

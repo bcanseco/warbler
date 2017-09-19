@@ -38,8 +38,6 @@
 @Html.Hidden("RedirectTo", Url.Action("Chatroom", "Chat"))
 
 @section scripts {
-    <script src="~/lib/signalr/jquery.signalR.min.js"></script>
-    <script src="~/signalr/hubs"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCo9UePsjcg75Y2ZtJVsM33xJaWM6D1Qno"></script>
     <script src="~/Scripts/Chat/Proximity.js?@DateTime.Now.Ticks"></script>
 }

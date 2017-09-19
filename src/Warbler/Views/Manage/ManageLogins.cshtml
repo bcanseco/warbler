@@ -19,6 +19,7 @@
                     @if ((bool)ViewData["ShowRemoveButton"])
                     {
                         <form asp-controller="Manage" asp-action="RemoveLogin" method="post" class="form-horizontal">
+                            @Html.AntiForgeryToken()
                             <div>
                                 <input asp-for="@userLoginInfo.LoginProvider" name="LoginProvider" type="hidden" />
                                 <input asp-for="@userLoginInfo.ProviderKey" name="ProviderKey" type="hidden" />

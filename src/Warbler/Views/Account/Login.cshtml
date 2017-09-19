@@ -12,6 +12,7 @@
     <div class="col-sm-12 col-md-7">
         <section>
             <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+                @Html.AntiForgeryToken()
                 <aside>Use a Warbler account to log in. <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">Need an account?</a></aside>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>

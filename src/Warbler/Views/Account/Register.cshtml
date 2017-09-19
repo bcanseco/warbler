@@ -8,6 +8,7 @@
 <div class="row" style="margin-top: 5px; margin-bottom: 5px;">
     <div class="col-sm-12">
         <form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+            @Html.AntiForgeryToken()
             <aside>Create a new account.</aside>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>

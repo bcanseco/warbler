@@ -2,14 +2,11 @@
 var Chat = Chat || {};
 
 $(function() {
-  $('#bodyContainer').removeClass('container');
-  $('#bodyContainer').addClass('container-fluid');
   Chat.connection = new signalR.HubConnection("/ChatHub");
   Chat.dataModel = ko.observable({}); // Holds all the actual data that the viewmodel references
   Chat.server = new Chat.Server(); // Handles interaction with SignalR
   Chat.viewModel = new Chat.ViewModel(); // Handles UI and user called functions
   ko.applyBindings(Chat.viewModel);
-  // ko.applyBindings(Chat.dataModel);
 });
 
 Chat.Server = function() {
@@ -20,11 +17,6 @@ Chat.Server = function() {
     console.info("Initial payload", JSON.parse(JSON.stringify(payload)));
     // TODO: Error check payload
     // TODO: Maybe use predefined classes :thinking:
-    /* Probably going to need to change all of the initial payload code below to break it into functions that handle
-       the creation of new servers/channels/etc but im still not sure how I want to handle that since it would end up
-       with functions in loops calling functions inside deeper loops up to like 4 levels deep which just doesnt seem
-       right to me */
-
     payload
       .map(uni => {
         Object.assign(uni, uni.server); // merge uni with its server for convenience
@@ -47,6 +39,7 @@ Chat.Server = function() {
       });
 
     Chat.dataModel().servers = ko.observableArray(payload);
+    console.log("ayy2");
     Chat.viewModel.initializeView();
   });
 
@@ -76,6 +69,39 @@ Chat.Server = function() {
     });
   });
 
+  //Called on connection of another user
+  Chat.connection.on("onJoin", (user, channel) => {
+    Chat.dataModel()
+      .servers()
+      .find((server) => server.id == channel.serverId)
+      .channels()
+      .find((chan) => chan.id == channel.id)
+      .users.push((u => {
+        console.log(u);
+        u.isOnline = ko.observable(u.isOnline);
+        return u;
+      })(user));
+
+    console.log(Chat.dataModel().servers()[0].channels()[0].users());
+  });
+
+  //Called on disconnection of another user
+  //TODO: MODIFY BELOW TO REMOVE USER INSTEAD OF ADD
+  //Chat.connection.on("onLeave", (user, channel) => {
+  //  Chat.dataModel()
+  //    .servers()
+  //    .find((server) => server.id == channel.serverId)
+  //    .channels()
+  //    .find((chan) => chan.id == channel.id)
+  //    .users.push((u => {
+  //      console.log(u);
+  //      u.isOnline = ko.observable(u.isOnline);
+  //      return u;
+  //    })(user));
+
+  //  console.log(Chat.dataModel().servers()[0].channels()[0].users());
+  //});
+
   Chat.connection.start()
     .then(() => console.log("connected"))
     .catch(() => console.error("Error connecting to server. Please refresh the page and try again."));
@@ -104,12 +130,14 @@ Chat.ViewModel = function () {
     if (self.visibleChannels().length < 1) return;
 
     self.currentChannel(self.visibleChannels()[0]);
+    console.log("ayy");
   };
 
   self.setServer = function(item) { // Called on click of a server icon
   };
 
-  self.setChannel = function(item) { // Called on click of a channel
+  self.setChannel = function (item) { // Called on click of a channel
+    self.currentChannel(item);
   };
 
   self.composedMessage = ko.observable();
@@ -122,27 +150,3 @@ Chat.ViewModel = function () {
 
   // TODO: MAKE SEND BUTTON DISABLED WHEN COMPOSED MESSAGE IS EMPTY
 };
-
-//var ServerModel = function (id, name) {
-//    var serverId = id;
-//    var serverName = name;
-
-//    var serverChannels = ko.observableArray([]);
-//}
-
-//var ChannelModel = function (id, name, desc, state) {
-//    var channelId = id;
-//    var channelName = name;
-//    var channelDesc = desc;
-//    var channelState = state;
-
-//    var channelUsers = ko.obserableArray([]);
-//    var channelMessages = ko.observableArray([]);
-//}
-
-//var MessageModel = function (id, user, time, content) {
-//    var messageId = id;
-//    var userId = user;
-//    var timeSent = time;
-//    var messageContent = content;
-//}

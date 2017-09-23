@@ -27,7 +27,7 @@ items:
   source:
     id: Channel
     path: ''
-    startLine: 1557
+    startLine: 1617
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -68,7 +68,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1560
+    startLine: 1620
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -99,7 +99,7 @@ items:
   source:
     id: ServerId
     path: ''
-    startLine: 1561
+    startLine: 1621
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -130,7 +130,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1562
+    startLine: 1622
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -161,7 +161,7 @@ items:
   source:
     id: Description
     path: ''
-    startLine: 1563
+    startLine: 1623
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -192,7 +192,7 @@ items:
   source:
     id: State
     path: ''
-    startLine: 1564
+    startLine: 1624
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -223,7 +223,7 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 1565
+    startLine: 1625
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -254,7 +254,7 @@ items:
   source:
     id: LastUsed
     path: ''
-    startLine: 1566
+    startLine: 1626
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -285,7 +285,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1568
+    startLine: 1628
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -316,7 +316,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1570
+    startLine: 1630
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -347,7 +347,7 @@ items:
   source:
     id: Messages
     path: ''
-    startLine: 1572
+    startLine: 1632
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -378,7 +378,7 @@ items:
   source:
     id: Users
     path: ''
-    startLine: 1574
+    startLine: 1634
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -409,7 +409,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1577
+    startLine: 1637
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models

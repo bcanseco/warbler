@@ -9,11 +9,6 @@ namespace Warbler.Controllers
             return View();
         }
 
-        public IActionResult Documents()
-        {
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View();

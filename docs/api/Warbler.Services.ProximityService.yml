@@ -5,7 +5,8 @@ items:
   id: ProximityService
   parent: Warbler.Services
   children:
-  - Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)
+  - Warbler.Services.ProximityService.#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})
+  - Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
   - Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)
   - Warbler.Services.ProximityService.SelectUniversityAsync(Warbler.Models.User,System.String,System.String)
   - Warbler.Services.ProximityService.With(Warbler.Misc.WarblerDbContext)
@@ -19,25 +20,24 @@ items:
   source:
     id: ProximityService
     path: ''
-    startLine: 2637
+    startLine: 2877
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
-  summary: "\nUsed by the <see cref=\"!:ProximityHub\"></see> for business logic.\n"
+  summary: "\nUsed by the <xref href=\"Warbler.Hubs.ProximityHub\" data-throw-if-not-resolved=\"false\"></xref> for business logic.\n"
   example: []
   syntax:
-    content: 'public class ProximityService : HubResource<ProximityService, ProximityHub>'
+    content: 'public class ProximityService : HubResource<ProximityHub>'
     content.vb: >-
       Public Class ProximityService
-          Inherits HubResource(Of ProximityService, ProximityHub)
+          Inherits HubResource(Of ProximityHub)
   inheritance:
   - System.Object
-  - Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}
+  - Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}
   inheritedMembers:
-  - Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.Instance
-  - Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.HubContext
-  - Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.OnConnected(Warbler.Models.User,System.String)
-  - Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.OnDisconnected(Warbler.Models.User,System.String)
+  - Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.HubContext
+  - Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.OnConnectedAsync(Warbler.Models.User,System.String)
+  - Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.OnDisconnectedAsync(Warbler.Models.User,System.String)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -51,6 +51,42 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Warbler.Services.ProximityService.#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})
+  commentId: M:Warbler.Services.ProximityService.#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})
+  id: '#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})'
+  parent: Warbler.Services.ProximityService
+  langs:
+  - csharp
+  - vb
+  name: ProximityService(IHubContext<ProximityHub>, IOptions<ApiKeys>, ILogger<ProximityService>)
+  nameWithType: ProximityService.ProximityService(IHubContext<ProximityHub>, IOptions<ApiKeys>, ILogger<ProximityService>)
+  fullName: Warbler.Services.ProximityService.ProximityService(IHubContext<Warbler.Hubs.ProximityHub>, IOptions<Warbler.Misc.ApiKeys>, ILogger<Warbler.Services.ProximityService>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2884
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public ProximityService(IHubContext<ProximityHub> hubContext, IOptions<ApiKeys> apiKeys, ILogger<ProximityService> logger)
+    parameters:
+    - id: hubContext
+      type: IHubContext{Warbler.Hubs.ProximityHub}
+    - id: apiKeys
+      type: IOptions{Warbler.Misc.ApiKeys}
+    - id: logger
+      type: ILogger{Warbler.Services.ProximityService}
+    content.vb: Public Sub New(hubContext As IHubContext(Of ProximityHub), apiKeys As IOptions(Of ApiKeys), logger As ILogger(Of ProximityService))
+  overload: Warbler.Services.ProximityService.#ctor*
+  nameWithType.vb: ProximityService.ProximityService(IHubContext(Of ProximityHub), IOptions(Of ApiKeys), ILogger(Of ProximityService))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Warbler.Services.ProximityService.ProximityService(IHubContext(Of Warbler.Hubs.ProximityHub), IOptions(Of Warbler.Misc.ApiKeys), ILogger(Of Warbler.Services.ProximityService))
+  name.vb: ProximityService(IHubContext(Of ProximityHub), IOptions(Of ApiKeys), ILogger(Of ProximityService))
 - uid: Warbler.Services.ProximityService.With(Warbler.Misc.WarblerDbContext)
   commentId: M:Warbler.Services.ProximityService.With(Warbler.Misc.WarblerDbContext)
   id: With(Warbler.Misc.WarblerDbContext)
@@ -65,12 +101,10 @@ items:
   source:
     id: With
     path: ''
-    startLine: 2653
+    startLine: 2901
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
-  summary: "\nAllows the hub to attach a database context to this service instance.\n"
-  example: []
   syntax:
     content: public ProximityService With(WarblerDbContext context)
     parameters:
@@ -84,35 +118,35 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)
-  commentId: M:Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)
-  id: OnDisconnected(Warbler.Models.User)
+- uid: Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
+  commentId: M:Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
+  id: OnDisconnectedAsync(System.String)
   parent: Warbler.Services.ProximityService
   langs:
   - csharp
   - vb
-  name: OnDisconnected(User)
-  nameWithType: ProximityService.OnDisconnected(User)
-  fullName: Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)
+  name: OnDisconnectedAsync(String)
+  nameWithType: ProximityService.OnDisconnectedAsync(String)
+  fullName: Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
   type: Method
   source:
-    id: OnDisconnected
+    id: OnDisconnectedAsync
     path: ''
-    startLine: 2665
+    startLine: 2911
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
   summary: "\nInvoked from the hub on each disconnected client. Removes the\nclient's choice list from <xref href=\"Warbler.Services.ProximityService.UserChoices\" data-throw-if-not-resolved=\"false\"></xref> if it exists.\n"
   example: []
   syntax:
-    content: public Task OnDisconnected(User user)
+    content: public Task OnDisconnectedAsync(string userName)
     parameters:
-    - id: user
-      type: Warbler.Models.User
+    - id: userName
+      type: System.String
     return:
       type: Task
-    content.vb: Public Function OnDisconnected(user As User) As Task
-  overload: Warbler.Services.ProximityService.OnDisconnected*
+    content.vb: Public Function OnDisconnectedAsync(userName As String) As Task
+  overload: Warbler.Services.ProximityService.OnDisconnectedAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -131,7 +165,7 @@ items:
   source:
     id: ProximitySearchAsync
     path: ''
-    startLine: 2677
+    startLine: 2924
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -171,7 +205,7 @@ items:
   source:
     id: SelectUniversityAsync
     path: ''
-    startLine: 2702
+    startLine: 2952
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -202,6 +236,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: Warbler.Hubs.ProximityHub
+  commentId: T:Warbler.Hubs.ProximityHub
+  isExternal: false
+  name: ProximityHub
+  nameWithType: ProximityHub
+  fullName: Warbler.Hubs.ProximityHub
 - uid: Warbler.Services
   commentId: N:Warbler.Services
   isExternal: false
@@ -215,94 +255,69 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}
-  commentId: T:Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}
+- uid: Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}
+  commentId: T:Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}
   parent: Warbler.Misc
-  definition: Warbler.Misc.HubResource`2
-  name: HubResource<ProximityService, ProximityHub>
-  nameWithType: HubResource<ProximityService, ProximityHub>
-  fullName: Warbler.Misc.HubResource<Warbler.Services.ProximityService, ProximityHub>
-  nameWithType.vb: HubResource(Of ProximityService, ProximityHub)
-  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ProximityService, ProximityHub)
-  name.vb: HubResource(Of ProximityService, ProximityHub)
+  definition: Warbler.Misc.HubResource`1
+  name: HubResource<ProximityHub>
+  nameWithType: HubResource<ProximityHub>
+  fullName: Warbler.Misc.HubResource<Warbler.Hubs.ProximityHub>
+  nameWithType.vb: HubResource(Of ProximityHub)
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Hubs.ProximityHub)
+  name.vb: HubResource(Of ProximityHub)
   spec.csharp:
-  - uid: Warbler.Misc.HubResource`2
+  - uid: Warbler.Misc.HubResource`1
     name: HubResource
     nameWithType: HubResource
     fullName: Warbler.Misc.HubResource
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Warbler.Services.ProximityService
-    name: ProximityService
-    nameWithType: ProximityService
-    fullName: Warbler.Services.ProximityService
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: ProximityHub
+  - uid: Warbler.Hubs.ProximityHub
     name: ProximityHub
     nameWithType: ProximityHub
-    fullName: ProximityHub
-    isExternal: true
+    fullName: Warbler.Hubs.ProximityHub
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Warbler.Misc.HubResource`2
+  - uid: Warbler.Misc.HubResource`1
     name: HubResource
     nameWithType: HubResource
     fullName: Warbler.Misc.HubResource
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Warbler.Services.ProximityService
-    name: ProximityService
-    nameWithType: ProximityService
-    fullName: Warbler.Services.ProximityService
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: ProximityHub
+  - uid: Warbler.Hubs.ProximityHub
     name: ProximityHub
     nameWithType: ProximityHub
-    fullName: ProximityHub
-    isExternal: true
+    fullName: Warbler.Hubs.ProximityHub
   - name: )
     nameWithType: )
     fullName: )
-- uid: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.Instance
-  commentId: P:Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.Instance
-  parent: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}
-  definition: Warbler.Misc.HubResource`2.Instance
-  name: Instance
-  nameWithType: HubResource<ProximityService, ProximityHub>.Instance
-  fullName: Warbler.Misc.HubResource<Warbler.Services.ProximityService, ProximityHub>.Instance
-  nameWithType.vb: HubResource(Of ProximityService, ProximityHub).Instance
-  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ProximityService, ProximityHub).Instance
-- uid: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.HubContext
-  commentId: P:Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.HubContext
-  parent: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}
-  definition: Warbler.Misc.HubResource`2.HubContext
+- uid: Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.HubContext
+  commentId: P:Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.HubContext
+  parent: Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}
+  definition: Warbler.Misc.HubResource`1.HubContext
   name: HubContext
-  nameWithType: HubResource<ProximityService, ProximityHub>.HubContext
-  fullName: Warbler.Misc.HubResource<Warbler.Services.ProximityService, ProximityHub>.HubContext
-  nameWithType.vb: HubResource(Of ProximityService, ProximityHub).HubContext
-  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ProximityService, ProximityHub).HubContext
-- uid: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.OnConnected(Warbler.Models.User,System.String)
-  commentId: M:Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.OnConnected(Warbler.Models.User,System.String)
-  parent: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}
-  definition: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
-  name: OnConnected(User, String)
-  nameWithType: HubResource<ProximityService, ProximityHub>.OnConnected(User, String)
-  fullName: Warbler.Misc.HubResource<Warbler.Services.ProximityService, ProximityHub>.OnConnected(Warbler.Models.User, System.String)
-  nameWithType.vb: HubResource(Of ProximityService, ProximityHub).OnConnected(User, String)
-  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ProximityService, ProximityHub).OnConnected(Warbler.Models.User, System.String)
+  nameWithType: HubResource<ProximityHub>.HubContext
+  fullName: Warbler.Misc.HubResource<Warbler.Hubs.ProximityHub>.HubContext
+  nameWithType.vb: HubResource(Of ProximityHub).HubContext
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Hubs.ProximityHub).HubContext
+- uid: Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.OnConnectedAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.OnConnectedAsync(Warbler.Models.User,System.String)
+  parent: Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}
+  definition: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+  name: OnConnectedAsync(User, String)
+  nameWithType: HubResource<ProximityHub>.OnConnectedAsync(User, String)
+  fullName: Warbler.Misc.HubResource<Warbler.Hubs.ProximityHub>.OnConnectedAsync(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of ProximityHub).OnConnectedAsync(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Hubs.ProximityHub).OnConnectedAsync(Warbler.Models.User, System.String)
   spec.csharp:
-  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
-    name: OnConnected
-    nameWithType: HubResource<ProximityService, ProximityHub>.OnConnected
-    fullName: Warbler.Misc.HubResource<Warbler.Services.ProximityService, ProximityHub>.OnConnected
+  - uid: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+    name: OnConnectedAsync
+    nameWithType: HubResource<ProximityHub>.OnConnectedAsync
+    fullName: Warbler.Misc.HubResource<Warbler.Hubs.ProximityHub>.OnConnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -322,10 +337,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
-    name: OnConnected
-    nameWithType: HubResource(Of ProximityService, ProximityHub).OnConnected
-    fullName: Warbler.Misc.HubResource(Of Warbler.Services.ProximityService, ProximityHub).OnConnected
+  - uid: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+    name: OnConnectedAsync
+    nameWithType: HubResource(Of ProximityHub).OnConnectedAsync
+    fullName: Warbler.Misc.HubResource(Of Warbler.Hubs.ProximityHub).OnConnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -344,20 +359,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.OnDisconnected(Warbler.Models.User,System.String)
-  commentId: M:Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}.OnDisconnected(Warbler.Models.User,System.String)
-  parent: Warbler.Misc.HubResource{Warbler.Services.ProximityService,ProximityHub}
-  definition: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
-  name: OnDisconnected(User, String)
-  nameWithType: HubResource<ProximityService, ProximityHub>.OnDisconnected(User, String)
-  fullName: Warbler.Misc.HubResource<Warbler.Services.ProximityService, ProximityHub>.OnDisconnected(Warbler.Models.User, System.String)
-  nameWithType.vb: HubResource(Of ProximityService, ProximityHub).OnDisconnected(User, String)
-  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Services.ProximityService, ProximityHub).OnDisconnected(Warbler.Models.User, System.String)
+- uid: Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  parent: Warbler.Misc.HubResource{Warbler.Hubs.ProximityHub}
+  definition: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  name: OnDisconnectedAsync(User, String)
+  nameWithType: HubResource<ProximityHub>.OnDisconnectedAsync(User, String)
+  fullName: Warbler.Misc.HubResource<Warbler.Hubs.ProximityHub>.OnDisconnectedAsync(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of ProximityHub).OnDisconnectedAsync(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of Warbler.Hubs.ProximityHub).OnDisconnectedAsync(Warbler.Models.User, System.String)
   spec.csharp:
-  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
-    name: OnDisconnected
-    nameWithType: HubResource<ProximityService, ProximityHub>.OnDisconnected
-    fullName: Warbler.Misc.HubResource<Warbler.Services.ProximityService, ProximityHub>.OnDisconnected
+  - uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+    name: OnDisconnectedAsync
+    nameWithType: HubResource<ProximityHub>.OnDisconnectedAsync
+    fullName: Warbler.Misc.HubResource<Warbler.Hubs.ProximityHub>.OnDisconnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -377,10 +392,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
-    name: OnDisconnected
-    nameWithType: HubResource(Of ProximityService, ProximityHub).OnDisconnected
-    fullName: Warbler.Misc.HubResource(Of Warbler.Services.ProximityService, ProximityHub).OnDisconnected
+  - uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+    name: OnDisconnectedAsync
+    nameWithType: HubResource(Of ProximityHub).OnDisconnectedAsync
+    fullName: Warbler.Misc.HubResource(Of Warbler.Hubs.ProximityHub).OnDisconnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -684,29 +699,23 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Warbler.Misc.HubResource`2
-  commentId: T:Warbler.Misc.HubResource`2
+- uid: Warbler.Misc.HubResource`1
+  commentId: T:Warbler.Misc.HubResource`1
   isExternal: false
-  name: HubResource<TService, THub>
-  nameWithType: HubResource<TService, THub>
-  fullName: Warbler.Misc.HubResource<TService, THub>
-  nameWithType.vb: HubResource(Of TService, THub)
-  fullName.vb: Warbler.Misc.HubResource(Of TService, THub)
-  name.vb: HubResource(Of TService, THub)
+  name: HubResource<THub>
+  nameWithType: HubResource<THub>
+  fullName: Warbler.Misc.HubResource<THub>
+  nameWithType.vb: HubResource(Of THub)
+  fullName.vb: Warbler.Misc.HubResource(Of THub)
+  name.vb: HubResource(Of THub)
   spec.csharp:
-  - uid: Warbler.Misc.HubResource`2
+  - uid: Warbler.Misc.HubResource`1
     name: HubResource
     nameWithType: HubResource
     fullName: Warbler.Misc.HubResource
   - name: <
     nameWithType: <
     fullName: <
-  - name: TService
-    nameWithType: TService
-    fullName: TService
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
   - name: THub
     nameWithType: THub
     fullName: THub
@@ -714,19 +723,13 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Warbler.Misc.HubResource`2
+  - uid: Warbler.Misc.HubResource`1
     name: HubResource
     nameWithType: HubResource
     fullName: Warbler.Misc.HubResource
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TService
-    nameWithType: TService
-    fullName: TService
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
   - name: THub
     nameWithType: THub
     fullName: THub
@@ -739,35 +742,27 @@ references:
   name: Warbler.Misc
   nameWithType: Warbler.Misc
   fullName: Warbler.Misc
-- uid: Warbler.Misc.HubResource`2.Instance
-  commentId: P:Warbler.Misc.HubResource`2.Instance
-  isExternal: false
-  name: Instance
-  nameWithType: HubResource<TService, THub>.Instance
-  fullName: Warbler.Misc.HubResource<TService, THub>.Instance
-  nameWithType.vb: HubResource(Of TService, THub).Instance
-  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).Instance
-- uid: Warbler.Misc.HubResource`2.HubContext
-  commentId: P:Warbler.Misc.HubResource`2.HubContext
+- uid: Warbler.Misc.HubResource`1.HubContext
+  commentId: P:Warbler.Misc.HubResource`1.HubContext
   isExternal: false
   name: HubContext
-  nameWithType: HubResource<TService, THub>.HubContext
-  fullName: Warbler.Misc.HubResource<TService, THub>.HubContext
-  nameWithType.vb: HubResource(Of TService, THub).HubContext
-  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).HubContext
-- uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
-  commentId: M:Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
+  nameWithType: HubResource<THub>.HubContext
+  fullName: Warbler.Misc.HubResource<THub>.HubContext
+  nameWithType.vb: HubResource(Of THub).HubContext
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubContext
+- uid: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
   isExternal: true
-  name: OnConnected(User, String)
-  nameWithType: HubResource<TService, THub>.OnConnected(User, String)
-  fullName: Warbler.Misc.HubResource<TService, THub>.OnConnected(Warbler.Models.User, System.String)
-  nameWithType.vb: HubResource(Of TService, THub).OnConnected(User, String)
-  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).OnConnected(Warbler.Models.User, System.String)
+  name: OnConnectedAsync(User, String)
+  nameWithType: HubResource<THub>.OnConnectedAsync(User, String)
+  fullName: Warbler.Misc.HubResource<THub>.OnConnectedAsync(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of THub).OnConnectedAsync(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnConnectedAsync(Warbler.Models.User, System.String)
   spec.csharp:
-  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
-    name: OnConnected
-    nameWithType: HubResource<TService, THub>.OnConnected
-    fullName: Warbler.Misc.HubResource<TService, THub>.OnConnected
+  - uid: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+    name: OnConnectedAsync
+    nameWithType: HubResource<THub>.OnConnectedAsync
+    fullName: Warbler.Misc.HubResource<THub>.OnConnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -787,10 +782,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Warbler.Misc.HubResource`2.OnConnected(Warbler.Models.User,System.String)
-    name: OnConnected
-    nameWithType: HubResource(Of TService, THub).OnConnected
-    fullName: Warbler.Misc.HubResource(Of TService, THub).OnConnected
+  - uid: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+    name: OnConnectedAsync
+    nameWithType: HubResource(Of THub).OnConnectedAsync
+    fullName: Warbler.Misc.HubResource(Of THub).OnConnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -809,19 +804,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
-  commentId: M:Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
+- uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
   isExternal: true
-  name: OnDisconnected(User, String)
-  nameWithType: HubResource<TService, THub>.OnDisconnected(User, String)
-  fullName: Warbler.Misc.HubResource<TService, THub>.OnDisconnected(Warbler.Models.User, System.String)
-  nameWithType.vb: HubResource(Of TService, THub).OnDisconnected(User, String)
-  fullName.vb: Warbler.Misc.HubResource(Of TService, THub).OnDisconnected(Warbler.Models.User, System.String)
+  name: OnDisconnectedAsync(User, String)
+  nameWithType: HubResource<THub>.OnDisconnectedAsync(User, String)
+  fullName: Warbler.Misc.HubResource<THub>.OnDisconnectedAsync(Warbler.Models.User, System.String)
+  nameWithType.vb: HubResource(Of THub).OnDisconnectedAsync(User, String)
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnDisconnectedAsync(Warbler.Models.User, System.String)
   spec.csharp:
-  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
-    name: OnDisconnected
-    nameWithType: HubResource<TService, THub>.OnDisconnected
-    fullName: Warbler.Misc.HubResource<TService, THub>.OnDisconnected
+  - uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+    name: OnDisconnectedAsync
+    nameWithType: HubResource<THub>.OnDisconnectedAsync
+    fullName: Warbler.Misc.HubResource<THub>.OnDisconnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -841,10 +836,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Warbler.Misc.HubResource`2.OnDisconnected(Warbler.Models.User,System.String)
-    name: OnDisconnected
-    nameWithType: HubResource(Of TService, THub).OnDisconnected
-    fullName: Warbler.Misc.HubResource(Of TService, THub).OnDisconnected
+  - uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+    name: OnDisconnectedAsync
+    nameWithType: HubResource(Of THub).OnDisconnectedAsync
+    fullName: Warbler.Misc.HubResource(Of THub).OnDisconnectedAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -860,6 +855,250 @@ references:
     nameWithType: String
     fullName: System.String
     isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Services.ProximityService.#ctor*
+  commentId: Overload:Warbler.Services.ProximityService.#ctor
+  isExternal: false
+  name: ProximityService
+  nameWithType: ProximityService.ProximityService
+  fullName: Warbler.Services.ProximityService.ProximityService
+- uid: IHubContext{Warbler.Hubs.ProximityHub}
+  commentId: '!:IHubContext{Warbler.Hubs.ProximityHub}'
+  definition: IHubContext`1
+  name: IHubContext<ProximityHub>
+  nameWithType: IHubContext<ProximityHub>
+  fullName: IHubContext<Warbler.Hubs.ProximityHub>
+  nameWithType.vb: IHubContext(Of ProximityHub)
+  fullName.vb: IHubContext(Of Warbler.Hubs.ProximityHub)
+  name.vb: IHubContext(Of ProximityHub)
+  spec.csharp:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Hubs.ProximityHub
+    name: ProximityHub
+    nameWithType: ProximityHub
+    fullName: Warbler.Hubs.ProximityHub
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Hubs.ProximityHub
+    name: ProximityHub
+    nameWithType: ProximityHub
+    fullName: Warbler.Hubs.ProximityHub
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IOptions{Warbler.Misc.ApiKeys}
+  commentId: '!:IOptions{Warbler.Misc.ApiKeys}'
+  definition: IOptions`1
+  name: IOptions<ApiKeys>
+  nameWithType: IOptions<ApiKeys>
+  fullName: IOptions<Warbler.Misc.ApiKeys>
+  nameWithType.vb: IOptions(Of ApiKeys)
+  fullName.vb: IOptions(Of Warbler.Misc.ApiKeys)
+  name.vb: IOptions(Of ApiKeys)
+  spec.csharp:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Misc.ApiKeys
+    name: ApiKeys
+    nameWithType: ApiKeys
+    fullName: Warbler.Misc.ApiKeys
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Misc.ApiKeys
+    name: ApiKeys
+    nameWithType: ApiKeys
+    fullName: Warbler.Misc.ApiKeys
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger{Warbler.Services.ProximityService}
+  commentId: '!:ILogger{Warbler.Services.ProximityService}'
+  definition: ILogger`1
+  name: ILogger<ProximityService>
+  nameWithType: ILogger<ProximityService>
+  fullName: ILogger<Warbler.Services.ProximityService>
+  nameWithType.vb: ILogger(Of ProximityService)
+  fullName.vb: ILogger(Of Warbler.Services.ProximityService)
+  name.vb: ILogger(Of ProximityService)
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Services.ProximityService
+    name: ProximityService
+    nameWithType: ProximityService
+    fullName: Warbler.Services.ProximityService
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Services.ProximityService
+    name: ProximityService
+    nameWithType: ProximityService
+    fullName: Warbler.Services.ProximityService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IHubContext`1
+  isExternal: true
+  name: IHubContext<>
+  nameWithType: IHubContext<>
+  fullName: IHubContext<>
+  nameWithType.vb: IHubContext(Of )
+  fullName.vb: IHubContext(Of )
+  name.vb: IHubContext(Of )
+  spec.csharp:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IOptions`1
+  commentId: '!:IOptions`1'
+  isExternal: true
+  name: IOptions<>
+  nameWithType: IOptions<>
+  fullName: IOptions<>
+  nameWithType.vb: IOptions(Of )
+  fullName.vb: IOptions(Of )
+  name.vb: IOptions(Of )
+  spec.csharp:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
@@ -885,36 +1124,12 @@ references:
   fullName: Warbler.Services.ProximityService
 - uid: Warbler.Services.ProximityService.UserChoices
   commentId: P:Warbler.Services.ProximityService.UserChoices
-- uid: Warbler.Services.ProximityService.OnDisconnected*
-  commentId: Overload:Warbler.Services.ProximityService.OnDisconnected
+- uid: Warbler.Services.ProximityService.OnDisconnectedAsync*
+  commentId: Overload:Warbler.Services.ProximityService.OnDisconnectedAsync
   isExternal: false
-  name: OnDisconnected
-  nameWithType: ProximityService.OnDisconnected
-  fullName: Warbler.Services.ProximityService.OnDisconnected
-- uid: Warbler.Models.User
-  commentId: T:Warbler.Models.User
-  parent: Warbler.Models
-  isExternal: false
-  name: User
-  nameWithType: User
-  fullName: Warbler.Models.User
-- uid: Task
-  isExternal: true
-  name: Task
-  nameWithType: Task
-  fullName: Task
-- uid: Warbler.Models
-  commentId: N:Warbler.Models
-  isExternal: false
-  name: Warbler.Models
-  nameWithType: Warbler.Models
-  fullName: Warbler.Models
-- uid: Warbler.Services.ProximityService.ProximitySearchAsync*
-  commentId: Overload:Warbler.Services.ProximityService.ProximitySearchAsync
-  isExternal: false
-  name: ProximitySearchAsync
-  nameWithType: ProximityService.ProximitySearchAsync
-  fullName: Warbler.Services.ProximityService.ProximitySearchAsync
+  name: OnDisconnectedAsync
+  nameWithType: ProximityService.OnDisconnectedAsync
+  fullName: Warbler.Services.ProximityService.OnDisconnectedAsync
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -922,12 +1137,36 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Services.ProximityService.ProximitySearchAsync*
+  commentId: Overload:Warbler.Services.ProximityService.ProximitySearchAsync
+  isExternal: false
+  name: ProximitySearchAsync
+  nameWithType: ProximityService.ProximitySearchAsync
+  fullName: Warbler.Services.ProximityService.ProximitySearchAsync
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
 - uid: Location
   commentId: '!:Location'
   isExternal: true
   name: Location
   nameWithType: Location
   fullName: Location
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
 - uid: Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)
   commentId: M:Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)
 - uid: Warbler.Services.ProximityService.SelectUniversityAsync*

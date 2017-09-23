@@ -21,22 +21,24 @@ namespace Warbler.Controllers
             UserService = new UserService(new SqlUserRepository(context));
         }
 
-        /// <summary>
-        ///   Resolves the Index view if the user isn't a member of any
-        ///   universities, otherwises redirects to <see cref="Chatroom"/>.
-        /// </summary>
         public async Task<IActionResult> Index()
         {
             var user = await UserManager.GetUserAsync(User);
-            var noMemberships = await UserService.IsNewAsync(user);
+            if (user == null) return RedirectToAction("Login", "Account");
 
-            if (noMemberships) return View();
-            return RedirectToAction(nameof(Chatroom));
-        }
-        
-        public IActionResult Chatroom()
-        {
-            return View();
+            if (await UserService.IsNewAsync(user))
+            {
+                ViewData["Title"] = "Select a university";
+                ViewData["Heading"] = true;
+                ViewData["Component"] = "Proximity"; // Components/Proximity
+            }
+            else
+            {
+                ViewData["Component"] = ViewData["Title"] = "Chatroom";
+                ViewData["Fluid"] = true;
+            }
+            
+            return View("ReactComponent", ViewData);
         }
 
         public IActionResult Error()

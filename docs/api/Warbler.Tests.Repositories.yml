@@ -4,7 +4,10 @@ items:
   commentId: N:Warbler.Tests.Repositories
   id: Warbler.Tests.Repositories
   children:
+  - Warbler.Tests.Repositories.TestSqlChannelRepository
+  - Warbler.Tests.Repositories.TestSqlMembershipRepository
   - Warbler.Tests.Repositories.TestSqlUniversityRepository
+  - Warbler.Tests.Repositories.TestSqlUserRepository
   langs:
   - csharp
   - vb
@@ -15,9 +18,27 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Tests.Repositories.TestSqlChannelRepository
+  commentId: T:Warbler.Tests.Repositories.TestSqlChannelRepository
+  isExternal: false
+  name: TestSqlChannelRepository
+  nameWithType: TestSqlChannelRepository
+  fullName: Warbler.Tests.Repositories.TestSqlChannelRepository
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  commentId: T:Warbler.Tests.Repositories.TestSqlMembershipRepository
+  isExternal: false
+  name: TestSqlMembershipRepository
+  nameWithType: TestSqlMembershipRepository
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository
 - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository
   commentId: T:Warbler.Tests.Repositories.TestSqlUniversityRepository
   isExternal: false
   name: TestSqlUniversityRepository
   nameWithType: TestSqlUniversityRepository
   fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository
+  commentId: T:Warbler.Tests.Repositories.TestSqlUserRepository
+  isExternal: false
+  name: TestSqlUserRepository
+  nameWithType: TestSqlUserRepository
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository

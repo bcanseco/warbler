@@ -105,7 +105,7 @@ namespace Warbler.Services
 
             // Verify that the given place ID is among those list of universities
             var userChoice =
-                validChoices.SingleOrDefault(u => u.PlaceId == placeId)
+                validChoices?.SingleOrDefault(u => u.PlaceId == placeId)
                 ?? throw new InvalidDataException("Invalid choice; user may have injected JS.");
 
             var university = await UniversityService.GetOrCreateAsync(userChoice);

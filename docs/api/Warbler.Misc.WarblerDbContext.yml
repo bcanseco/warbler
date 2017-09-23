@@ -23,7 +23,7 @@ items:
   source:
     id: WarblerDbContext
     path: ''
-    startLine: 1509
+    startLine: 1569
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -54,7 +54,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1511
+    startLine: 1571
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -86,7 +86,7 @@ items:
   source:
     id: Universities
     path: ''
-    startLine: 1517
+    startLine: 1577
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -117,7 +117,7 @@ items:
   source:
     id: Servers
     path: ''
-    startLine: 1518
+    startLine: 1578
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -148,7 +148,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1519
+    startLine: 1579
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -179,7 +179,7 @@ items:
   source:
     id: Messages
     path: ''
-    startLine: 1520
+    startLine: 1580
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -210,7 +210,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1521
+    startLine: 1581
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -241,7 +241,7 @@ items:
   source:
     id: OnModelCreating
     path: ''
-    startLine: 1523
+    startLine: 1583
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -272,7 +272,7 @@ items:
   source:
     id: OnConfiguring
     path: ''
-    startLine: 1539
+    startLine: 1599
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc

@@ -32,7 +32,7 @@ items:
   source:
     id: ManageController
     path: ''
-    startLine: 745
+    startLine: 753
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -63,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 754
+    startLine: 762
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -103,7 +103,7 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 769
+    startLine: 777
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -137,7 +137,7 @@ items:
   source:
     id: RemoveLogin
     path: ''
-    startLine: 798
+    startLine: 806
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -168,7 +168,7 @@ items:
   source:
     id: AddPhoneNumber
     path: ''
-    startLine: 817
+    startLine: 825
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -196,7 +196,7 @@ items:
   source:
     id: AddPhoneNumber
     path: ''
-    startLine: 823
+    startLine: 831
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -227,7 +227,7 @@ items:
   source:
     id: EnableTwoFactorAuthentication
     path: ''
-    startLine: 843
+    startLine: 851
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -255,7 +255,7 @@ items:
   source:
     id: DisableTwoFactorAuthentication
     path: ''
-    startLine: 858
+    startLine: 866
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -283,7 +283,7 @@ items:
   source:
     id: VerifyPhoneNumber
     path: ''
-    startLine: 873
+    startLine: 881
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -314,7 +314,7 @@ items:
   source:
     id: VerifyPhoneNumber
     path: ''
-    startLine: 887
+    startLine: 895
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -345,7 +345,7 @@ items:
   source:
     id: RemovePhoneNumber
     path: ''
-    startLine: 911
+    startLine: 919
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -373,7 +373,7 @@ items:
   source:
     id: ChangePassword
     path: ''
-    startLine: 929
+    startLine: 937
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -401,7 +401,7 @@ items:
   source:
     id: ChangePassword
     path: ''
-    startLine: 936
+    startLine: 944
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -432,7 +432,7 @@ items:
   source:
     id: SetPassword
     path: ''
-    startLine: 961
+    startLine: 969
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -460,7 +460,7 @@ items:
   source:
     id: SetPassword
     path: ''
-    startLine: 968
+    startLine: 976
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -491,7 +491,7 @@ items:
   source:
     id: ManageLogins
     path: ''
-    startLine: 993
+    startLine: 1001
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -525,7 +525,7 @@ items:
   source:
     id: LinkLogin
     path: ''
-    startLine: 1018
+    startLine: 1026
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -556,7 +556,7 @@ items:
   source:
     id: LinkLoginCallback
     path: ''
-    startLine: 1032
+    startLine: 1040
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers

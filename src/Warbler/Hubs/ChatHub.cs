@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
 using Warbler.Misc;
-using Warbler.Models;
+using Warbler.Repositories;
 using Warbler.Services;
 
 namespace Warbler.Hubs
@@ -15,36 +14,28 @@ namespace Warbler.Hubs
     public class ChatHub : Hub
     {
         private ChatService ChatService { get; }
-        private UserManager<User> UserManager { get; }
+        private UserService UserService { get; }
 
         /// <summary>
         ///   Automatically called each time SignalR receives a packet from a client.
         /// </summary>
-        public ChatHub(UserManager<User> userManager, WarblerDbContext context, ChatService service)
+        public ChatHub(WarblerDbContext context, ChatService service)
         {
             ChatService = service.With(context);
-            UserManager = userManager;
+            UserService = new UserService(new SqlUserRepository(context));
         }
 
         public override async Task OnConnectedAsync()
         {
-            try
-            {
-                var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
-                await ChatService.OnConnectedAsync(user, Context.ConnectionId);
+            var user = await UserService.FindByNameAsync(Context.User.Identity.Name);
+            await ChatService.OnConnectedAsync(user, Context.ConnectionId);
 
-                await base.OnConnectedAsync();
-            }
-            catch (Exception ex)
-            {
-                throw new NotImplementedException(
-                    "Weird SignalR bug that happens sometimes. Fixing soon ~BC", ex);
-            }
+            await base.OnConnectedAsync();
         }
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
-            var user = await UserManager.FindByNameAsync(Context.User.Identity.Name);
+            var user = await UserService.FindByNameAsync(Context.User.Identity.Name);
             await ChatService.OnDisconnectedAsync(user, Context.ConnectionId);
 
             await base.OnDisconnectedAsync(exception);

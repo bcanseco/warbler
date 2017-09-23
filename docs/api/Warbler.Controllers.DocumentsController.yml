@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers.DocumentsController
+  commentId: T:Warbler.Controllers.DocumentsController
+  id: DocumentsController
+  parent: Warbler.Controllers
+  children:
+  - Warbler.Controllers.DocumentsController.Error
+  - Warbler.Controllers.DocumentsController.Index
+  langs:
+  - csharp
+  - vb
+  name: DocumentsController
+  nameWithType: DocumentsController
+  fullName: Warbler.Controllers.DocumentsController
+  type: Class
+  source:
+    id: DocumentsController
+    path: ''
+    startLine: 708
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: 'public class DocumentsController : Controller'
+    content.vb: >-
+      Public Class DocumentsController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Controllers.DocumentsController.Index
+  commentId: M:Warbler.Controllers.DocumentsController.Index
+  id: Index
+  parent: Warbler.Controllers.DocumentsController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: DocumentsController.Index()
+  fullName: Warbler.Controllers.DocumentsController.Index()
+  type: Method
+  source:
+    id: Index
+    path: ''
+    startLine: 710
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Index()
+    return:
+      type: IActionResult
+    content.vb: Public Function Index As IActionResult
+  overload: Warbler.Controllers.DocumentsController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.DocumentsController.Error
+  commentId: M:Warbler.Controllers.DocumentsController.Error
+  id: Error
+  parent: Warbler.Controllers.DocumentsController
+  langs:
+  - csharp
+  - vb
+  name: Error()
+  nameWithType: DocumentsController.Error()
+  fullName: Warbler.Controllers.DocumentsController.Error()
+  type: Method
+  source:
+    id: Error
+    path: ''
+    startLine: 715
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Error()
+    return:
+      type: IActionResult
+    content.vb: Public Function Error As IActionResult
+  overload: Warbler.Controllers.DocumentsController.Error*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Controllers.DocumentsController.Index*
+  commentId: Overload:Warbler.Controllers.DocumentsController.Index
+  isExternal: false
+  name: Index
+  nameWithType: DocumentsController.Index
+  fullName: Warbler.Controllers.DocumentsController.Index
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult
+- uid: Warbler.Controllers.DocumentsController.Error*
+  commentId: Overload:Warbler.Controllers.DocumentsController.Error
+  isExternal: false
+  name: Error
+  nameWithType: DocumentsController.Error
+  fullName: Warbler.Controllers.DocumentsController.Error

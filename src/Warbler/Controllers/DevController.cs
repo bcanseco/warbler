@@ -8,7 +8,6 @@ using Warbler.Misc;
 
 namespace Warbler.Controllers
 {
-    [Authorize]
     public class DevController : Controller
     {
         private UniversityService UniversityService { get; }
@@ -18,9 +17,14 @@ namespace Warbler.Controllers
             UniversityService = new UniversityService(new SqlUniversityRepository(context));
         }
 
+        [Authorize]
         public IActionResult Index()
         {
-            return View();
+            ViewData["Title"] = "Developer Panel";
+            ViewData["Heading"] = true;
+            ViewData["Component"] = "Dev"; // Components/Dev
+
+            return View("ReactComponent", ViewData);
         }
 
         public IActionResult Error()

@@ -22,13 +22,17 @@ namespace Warbler.Misc
 
             if (!UserConnections.TryGetValue(user, out var connections))
             {
-                Logger.LogInformation($"Adding {user.UserName} ({connectionId}) with no previous connections.");
+                Logger.LogInformation($"Creating a hashset for {user.UserName} and adding their first connectionId.");
                 connections = new HashSet<string>();
                 UserConnections.TryAdd(user, connections);
                 retVal = true;
             }
+            else
+            {
+                Logger.LogInformation($"Adding a new connectionId to {user.UserName}'s hashset");
+            }
             connections.Add(connectionId);
-            Logger.LogInformation($"{user.UserName} ({connectionId}) was added to the hub [{connections.Count}].");
+            Logger.LogInformation($"{user.UserName} is now connected with {connections.Count} devices.");
             return Task.FromResult(retVal);
         }
 
@@ -49,7 +53,7 @@ namespace Warbler.Misc
                 Logger.LogInformation($"Removing {user.UserName} with no further connections.");
                 return Task.FromResult(true);
             }
-            Logger.LogInformation($"{user.UserName} was removed from the hub [{connections?.Count}].");
+            Logger.LogInformation($"{user.UserName} was removed but is still using {connections?.Count} devices.");
             return Task.FromResult(false);
         }
     }

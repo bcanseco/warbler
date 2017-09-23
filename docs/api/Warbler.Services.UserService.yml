@@ -6,7 +6,9 @@ items:
   parent: Warbler.Services
   children:
   - Warbler.Services.UserService.#ctor(Warbler.Interfaces.IUserRepository)
+  - Warbler.Services.UserService.FindByNameAsync(System.String)
   - Warbler.Services.UserService.IsNewAsync(Warbler.Models.User)
+  - Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User,System.Boolean)
   langs:
   - csharp
   - vb
@@ -17,7 +19,7 @@ items:
   source:
     id: UserService
     path: ''
-    startLine: 2827
+    startLine: 3079
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -56,7 +58,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2831
+    startLine: 3083
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -85,7 +87,7 @@ items:
   source:
     id: IsNewAsync
     path: ''
-    startLine: 2841
+    startLine: 3093
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -101,6 +103,76 @@ items:
       type: Task{System.Boolean}
     content.vb: Public Function IsNewAsync(user As User) As Task(Of Boolean)
   overload: Warbler.Services.UserService.IsNewAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UserService.FindByNameAsync(System.String)
+  commentId: M:Warbler.Services.UserService.FindByNameAsync(System.String)
+  id: FindByNameAsync(System.String)
+  parent: Warbler.Services.UserService
+  langs:
+  - csharp
+  - vb
+  name: FindByNameAsync(String)
+  nameWithType: UserService.FindByNameAsync(String)
+  fullName: Warbler.Services.UserService.FindByNameAsync(System.String)
+  type: Method
+  source:
+    id: FindByNameAsync
+    path: ''
+    startLine: 3100
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  remarks: "\nUsed instead of UserManager's method intentionally due to weird\ntask cancellation errors (probably a Kestrel thing).\n"
+  example: []
+  syntax:
+    content: public Task<User> FindByNameAsync(string username)
+    parameters:
+    - id: username
+      type: System.String
+    return:
+      type: Task{Warbler.Models.User}
+    content.vb: Public Function FindByNameAsync(username As String) As Task(Of User)
+  overload: Warbler.Services.UserService.FindByNameAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  commentId: M:Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  id: SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  parent: Warbler.Services.UserService
+  langs:
+  - csharp
+  - vb
+  name: SetOnlineAsync(User, Boolean)
+  nameWithType: UserService.SetOnlineAsync(User, Boolean)
+  fullName: Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User, System.Boolean)
+  type: Method
+  source:
+    id: SetOnlineAsync
+    path: ''
+    startLine: 3108
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nSets a user's isOnline property.\n"
+  example: []
+  syntax:
+    content: public Task SetOnlineAsync(User user, bool isOnline = true)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+      description: The user to edit.
+    - id: isOnline
+      type: System.Boolean
+      description: True to set online, false to set offline.
+    return:
+      type: Task
+    content.vb: Public Function SetOnlineAsync(user As User, isOnline As Boolean = True) As Task
+  overload: Warbler.Services.UserService.SetOnlineAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -523,3 +595,75 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Services.UserService.FindByNameAsync*
+  commentId: Overload:Warbler.Services.UserService.FindByNameAsync
+  isExternal: false
+  name: FindByNameAsync
+  nameWithType: UserService.FindByNameAsync
+  fullName: Warbler.Services.UserService.FindByNameAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task{Warbler.Models.User}
+  commentId: '!:Task{Warbler.Models.User}'
+  definition: Task`1
+  name: Task<User>
+  nameWithType: Task<User>
+  fullName: Task<Warbler.Models.User>
+  nameWithType.vb: Task(Of User)
+  fullName.vb: Task(Of Warbler.Models.User)
+  name.vb: Task(Of User)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Services.UserService.SetOnlineAsync*
+  commentId: Overload:Warbler.Services.UserService.SetOnlineAsync
+  isExternal: false
+  name: SetOnlineAsync
+  nameWithType: UserService.SetOnlineAsync
+  fullName: Warbler.Services.UserService.SetOnlineAsync
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

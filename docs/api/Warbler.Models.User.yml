@@ -7,10 +7,14 @@ items:
   children:
   - Warbler.Models.User.AvatarId
   - Warbler.Models.User.Channels
+  - Warbler.Models.User.Equals(System.Object)
   - Warbler.Models.User.Equals(Warbler.Models.User)
   - Warbler.Models.User.Flag
+  - Warbler.Models.User.GetHashCode
   - Warbler.Models.User.IsOnline
   - Warbler.Models.User.Memberships
+  - Warbler.Models.User.op_Equality(Warbler.Models.User,Warbler.Models.User)
+  - Warbler.Models.User.op_Inequality(Warbler.Models.User,Warbler.Models.User)
   - Warbler.Models.User.UserName
   langs:
   - csharp
@@ -22,7 +26,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 1681
+    startLine: 1741
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -56,7 +60,7 @@ items:
   source:
     id: UserName
     path: ''
-    startLine: 1688
+    startLine: 1748
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -91,7 +95,7 @@ items:
   source:
     id: AvatarId
     path: ''
-    startLine: 1695
+    startLine: 1755
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -122,7 +126,7 @@ items:
   source:
     id: Flag
     path: ''
-    startLine: 1697
+    startLine: 1757
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -153,7 +157,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1700
+    startLine: 1760
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -184,7 +188,7 @@ items:
   source:
     id: IsOnline
     path: ''
-    startLine: 1702
+    startLine: 1762
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -215,7 +219,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1706
+    startLine: 1765
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -246,7 +250,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1709
+    startLine: 1768
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -265,6 +269,139 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Warbler.Models.User.Equals(System.Object)
+  commentId: M:Warbler.Models.User.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: User.Equals(Object)
+  fullName: Warbler.Models.User.Equals(System.Object)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 1770
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overload: Warbler.Models.User.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.User.GetHashCode
+  commentId: M:Warbler.Models.User.GetHashCode
+  id: GetHashCode
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: User.GetHashCode()
+  fullName: Warbler.Models.User.GetHashCode()
+  type: Method
+  source:
+    id: GetHashCode
+    path: ''
+    startLine: 1777
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overload: Warbler.Models.User.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.User.op_Equality(Warbler.Models.User,Warbler.Models.User)
+  commentId: M:Warbler.Models.User.op_Equality(Warbler.Models.User,Warbler.Models.User)
+  id: op_Equality(Warbler.Models.User,Warbler.Models.User)
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Equality(User, User)
+  nameWithType: User.Equality(User, User)
+  fullName: Warbler.Models.User.Equality(Warbler.Models.User, Warbler.Models.User)
+  type: Operator
+  source:
+    id: op_Equality
+    path: ''
+    startLine: 1779
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator ==(User left, User right)
+    parameters:
+    - id: left
+      type: Warbler.Models.User
+    - id: right
+      type: Warbler.Models.User
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As User, right As User) As Boolean
+  overload: Warbler.Models.User.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Models.User.op_Inequality(Warbler.Models.User,Warbler.Models.User)
+  commentId: M:Warbler.Models.User.op_Inequality(Warbler.Models.User,Warbler.Models.User)
+  id: op_Inequality(Warbler.Models.User,Warbler.Models.User)
+  parent: Warbler.Models.User
+  langs:
+  - csharp
+  - vb
+  name: Inequality(User, User)
+  nameWithType: User.Inequality(User, User)
+  fullName: Warbler.Models.User.Inequality(Warbler.Models.User, Warbler.Models.User)
+  type: Operator
+  source:
+    id: op_Inequality
+    path: ''
+    startLine: 1780
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator !=(User left, User right)
+    parameters:
+    - id: left
+      type: Warbler.Models.User
+    - id: right
+      type: Warbler.Models.User
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As User, right As User) As Boolean
+  overload: Warbler.Models.User.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: Warbler.Models
   commentId: N:Warbler.Models
@@ -679,3 +816,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Models.User.GetHashCode*
+  commentId: Overload:Warbler.Models.User.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: User.GetHashCode
+  fullName: Warbler.Models.User.GetHashCode
+- uid: Warbler.Models.User.op_Equality*
+  commentId: Overload:Warbler.Models.User.op_Equality
+  isExternal: false
+  name: Equality
+  nameWithType: User.Equality
+  fullName: Warbler.Models.User.Equality
+- uid: Warbler.Models.User.op_Inequality*
+  commentId: Overload:Warbler.Models.User.op_Inequality
+  isExternal: false
+  name: Inequality
+  nameWithType: User.Inequality
+  fullName: Warbler.Models.User.Inequality

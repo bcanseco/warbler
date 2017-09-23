@@ -7,7 +7,6 @@ items:
   - Warbler.Repositories.SqlChannelRepository
   - Warbler.Repositories.SqlMembershipRepository
   - Warbler.Repositories.SqlMessageRepository
-  - Warbler.Repositories.SqlSampleRepository
   - Warbler.Repositories.SqlUniversityRepository
   - Warbler.Repositories.SqlUserRepository
   langs:
@@ -38,12 +37,6 @@ references:
   name: SqlMessageRepository
   nameWithType: SqlMessageRepository
   fullName: Warbler.Repositories.SqlMessageRepository
-- uid: Warbler.Repositories.SqlSampleRepository
-  commentId: T:Warbler.Repositories.SqlSampleRepository
-  isExternal: false
-  name: SqlSampleRepository
-  nameWithType: SqlSampleRepository
-  fullName: Warbler.Repositories.SqlSampleRepository
 - uid: Warbler.Repositories.SqlUniversityRepository
   commentId: T:Warbler.Repositories.SqlUniversityRepository
   isExternal: false

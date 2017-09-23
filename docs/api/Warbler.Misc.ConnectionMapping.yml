@@ -5,9 +5,10 @@ items:
   id: ConnectionMapping
   parent: Warbler.Misc
   children:
-  - Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User,System.String)
+  - Warbler.Misc.ConnectionMapping.#ctor(ILogger)
+  - Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User,System.String)
   - Warbler.Misc.ConnectionMapping.GetConnections(Warbler.Models.User)
-  - Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User,System.String)
+  - Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User,System.String)
   langs:
   - csharp
   - vb
@@ -18,7 +19,7 @@ items:
   source:
     id: ConnectionMapping
     path: ''
-    startLine: 1400
+    startLine: 1459
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -41,26 +42,55 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User,System.String)
-  commentId: M:Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User,System.String)
-  id: Add(Warbler.Models.User,System.String)
+- uid: Warbler.Misc.ConnectionMapping.#ctor(ILogger)
+  commentId: M:Warbler.Misc.ConnectionMapping.#ctor(ILogger)
+  id: '#ctor(ILogger)'
   parent: Warbler.Misc.ConnectionMapping
   langs:
   - csharp
   - vb
-  name: Add(User, String)
-  nameWithType: ConnectionMapping.Add(User, String)
-  fullName: Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User, System.String)
-  type: Method
+  name: ConnectionMapping(ILogger)
+  nameWithType: ConnectionMapping.ConnectionMapping(ILogger)
+  fullName: Warbler.Misc.ConnectionMapping.ConnectionMapping(ILogger)
+  type: Constructor
   source:
-    id: Add
+    id: .ctor
     path: ''
-    startLine: 1405
+    startLine: 1461
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
   syntax:
-    content: public Task<bool> Add(User user, string connectionId)
+    content: public ConnectionMapping(ILogger logger)
+    parameters:
+    - id: logger
+      type: ILogger
+    content.vb: Public Sub New(logger As ILogger)
+  overload: Warbler.Misc.ConnectionMapping.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User,System.String)
+  id: AddAsync(Warbler.Models.User,System.String)
+  parent: Warbler.Misc.ConnectionMapping
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(User, String)
+  nameWithType: ConnectionMapping.AddAsync(User, String)
+  fullName: Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User, System.String)
+  type: Method
+  source:
+    id: AddAsync
+    path: ''
+    startLine: 1468
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  syntax:
+    content: public Task<bool> AddAsync(User user, string connectionId)
     parameters:
     - id: user
       type: Warbler.Models.User
@@ -68,8 +98,8 @@ items:
       type: System.String
     return:
       type: Task{System.Boolean}
-    content.vb: Public Function Add(user As User, connectionId As String) As Task(Of Boolean)
-  overload: Warbler.Misc.ConnectionMapping.Add*
+    content.vb: Public Function AddAsync(user As User, connectionId As String) As Task(Of Boolean)
+  overload: Warbler.Misc.ConnectionMapping.AddAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -88,7 +118,7 @@ items:
   source:
     id: GetConnections
     path: ''
-    startLine: 1418
+    startLine: 1488
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -105,26 +135,26 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User,System.String)
-  commentId: M:Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User,System.String)
-  id: Remove(Warbler.Models.User,System.String)
+- uid: Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User,System.String)
+  id: RemoveAsync(Warbler.Models.User,System.String)
   parent: Warbler.Misc.ConnectionMapping
   langs:
   - csharp
   - vb
-  name: Remove(User, String)
-  nameWithType: ConnectionMapping.Remove(User, String)
-  fullName: Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User, System.String)
+  name: RemoveAsync(User, String)
+  nameWithType: ConnectionMapping.RemoveAsync(User, String)
+  fullName: Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User, System.String)
   type: Method
   source:
-    id: Remove
+    id: RemoveAsync
     path: ''
-    startLine: 1424
+    startLine: 1494
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
   syntax:
-    content: public Task<bool> Remove(User user, string connectionId)
+    content: public Task<bool> RemoveAsync(User user, string connectionId)
     parameters:
     - id: user
       type: Warbler.Models.User
@@ -132,8 +162,8 @@ items:
       type: System.String
     return:
       type: Task{System.Boolean}
-    content.vb: Public Function Remove(user As User, connectionId As String) As Task(Of Boolean)
-  overload: Warbler.Misc.ConnectionMapping.Remove*
+    content.vb: Public Function RemoveAsync(user As User, connectionId As String) As Task(Of Boolean)
+  overload: Warbler.Misc.ConnectionMapping.RemoveAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -437,12 +467,23 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Warbler.Misc.ConnectionMapping.Add*
-  commentId: Overload:Warbler.Misc.ConnectionMapping.Add
+- uid: Warbler.Misc.ConnectionMapping.#ctor*
+  commentId: Overload:Warbler.Misc.ConnectionMapping.#ctor
   isExternal: false
-  name: Add
-  nameWithType: ConnectionMapping.Add
-  fullName: Warbler.Misc.ConnectionMapping.Add
+  name: ConnectionMapping
+  nameWithType: ConnectionMapping.ConnectionMapping
+  fullName: Warbler.Misc.ConnectionMapping.ConnectionMapping
+- uid: ILogger
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: ILogger
+- uid: Warbler.Misc.ConnectionMapping.AddAsync*
+  commentId: Overload:Warbler.Misc.ConnectionMapping.AddAsync
+  isExternal: false
+  name: AddAsync
+  nameWithType: ConnectionMapping.AddAsync
+  fullName: Warbler.Misc.ConnectionMapping.AddAsync
 - uid: Warbler.Models.User
   commentId: T:Warbler.Models.User
   parent: Warbler.Models
@@ -631,9 +672,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Warbler.Misc.ConnectionMapping.Remove*
-  commentId: Overload:Warbler.Misc.ConnectionMapping.Remove
+- uid: Warbler.Misc.ConnectionMapping.RemoveAsync*
+  commentId: Overload:Warbler.Misc.ConnectionMapping.RemoveAsync
   isExternal: false
-  name: Remove
-  nameWithType: ConnectionMapping.Remove
-  fullName: Warbler.Misc.ConnectionMapping.Remove
+  name: RemoveAsync
+  nameWithType: ConnectionMapping.RemoveAsync
+  fullName: Warbler.Misc.ConnectionMapping.RemoveAsync

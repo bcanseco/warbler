@@ -17,7 +17,7 @@ items:
   source:
     id: NearbyResultExtensions
     path: ''
-    startLine: 1105
+    startLine: 1146
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Extensions
@@ -56,7 +56,7 @@ items:
   source:
     id: Is
     path: ''
-    startLine: 1111
+    startLine: 1152
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Extensions
@@ -97,7 +97,7 @@ items:
   source:
     id: IsDepartment
     path: ''
-    startLine: 1118
+    startLine: 1159
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Extensions

@@ -4,6 +4,7 @@ items:
   commentId: N:Warbler.Extensions
   id: Warbler.Extensions
   children:
+  - Warbler.Extensions.HtmlHelperExtensions
   - Warbler.Extensions.NearbyResultExtensions
   langs:
   - csharp
@@ -15,6 +16,12 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Extensions.HtmlHelperExtensions
+  commentId: T:Warbler.Extensions.HtmlHelperExtensions
+  isExternal: false
+  name: HtmlHelperExtensions
+  nameWithType: HtmlHelperExtensions
+  fullName: Warbler.Extensions.HtmlHelperExtensions
 - uid: Warbler.Extensions.NearbyResultExtensions
   commentId: T:Warbler.Extensions.NearbyResultExtensions
   isExternal: false

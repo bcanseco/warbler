@@ -27,5 +27,12 @@ namespace Warbler.Services
             => await Repository.AllFor(user)
                 .Select(m => m.Channel)
                 .ToList();
+
+        /// <summary>
+        ///   Returns a collection of memberships belonging to a channel.
+        /// </summary>
+        /// <param name="channel">The channel to fetch memberships for.</param>
+        public async Task<ICollection<Membership>> AllMembershipsForAsync(Channel channel)
+            => await Repository.AllFor(channel).ToList();
     }
 }

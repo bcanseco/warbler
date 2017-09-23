@@ -143,6 +143,52 @@
   </h3>
   
   
+  <a id="Warbler_Services_UserService_FindByNameAsync_" data-uid="Warbler.Services.UserService.FindByNameAsync*"></a>
+  <h4 id="Warbler_Services_UserService_FindByNameAsync_System_String_" data-uid="Warbler.Services.UserService.FindByNameAsync(System.String)">FindByNameAsync(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;User&gt; FindByNameAsync(string username)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">username</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.User.html">User</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Warbler_Services_UserService_FindByNameAsync_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Used instead of UserManager&#39;s method intentionally due to weird
+task cancellation errors (probably a Kestrel thing).</p>
+</div>
+  
+  
   <a id="Warbler_Services_UserService_IsNewAsync_" data-uid="Warbler.Services.UserService.IsNewAsync*"></a>
   <h4 id="Warbler_Services_UserService_IsNewAsync_Warbler_Models_User_" data-uid="Warbler.Services.UserService.IsNewAsync(Warbler.Models.User)">IsNewAsync(User)</h4>
   <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if the user is not a
@@ -182,6 +228,56 @@ member of any channel, <span class="xref">false</span> otherwise.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Services_UserService_SetOnlineAsync_" data-uid="Warbler.Services.UserService.SetOnlineAsync*"></a>
+  <h4 id="Warbler_Services_UserService_SetOnlineAsync_Warbler_Models_User_System_Boolean_" data-uid="Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User,System.Boolean)">SetOnlineAsync(User, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets a user&#39;s isOnline property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SetOnlineAsync(User user, bool isOnline = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user to edit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isOnline</span></td>
+        <td><p>True to set online, false to set offline.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>

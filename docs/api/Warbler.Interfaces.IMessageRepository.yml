@@ -16,7 +16,7 @@ items:
   source:
     id: IMessageRepository
     path: ''
-    startLine: 1300
+    startLine: 1338
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -45,7 +45,7 @@ items:
   source:
     id: LatestIn
     path: ''
-    startLine: 1307
+    startLine: 1345
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces

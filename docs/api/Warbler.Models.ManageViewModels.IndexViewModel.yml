@@ -20,7 +20,7 @@ items:
   source:
     id: IndexViewModel
     path: ''
-    startLine: 1954
+    startLine: 2267
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -57,7 +57,7 @@ items:
   source:
     id: HasPassword
     path: ''
-    startLine: 1956
+    startLine: 2269
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -88,7 +88,7 @@ items:
   source:
     id: Logins
     path: ''
-    startLine: 1958
+    startLine: 2271
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -119,7 +119,7 @@ items:
   source:
     id: PhoneNumber
     path: ''
-    startLine: 1960
+    startLine: 2273
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -150,7 +150,7 @@ items:
   source:
     id: TwoFactor
     path: ''
-    startLine: 1962
+    startLine: 2275
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -181,7 +181,7 @@ items:
   source:
     id: BrowserRemembered
     path: ''
-    startLine: 1964
+    startLine: 2277
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels

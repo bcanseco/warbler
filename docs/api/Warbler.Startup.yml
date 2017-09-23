@@ -6,9 +6,8 @@ items:
   parent: Warbler
   children:
   - Warbler.Startup.#ctor(IHostingEnvironment)
-  - Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory,System.IServiceProvider)
+  - Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
   - Warbler.Startup.ConfigureServices(IServiceCollection)
-  - Warbler.Startup.ConnectionManager
   - Warbler.Startup.Main(System.String[])
   langs:
   - csharp
@@ -20,7 +19,7 @@ items:
   source:
     id: Startup
     path: ''
-    startLine: 21
+    startLine: 19
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -43,35 +42,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Startup.ConnectionManager
-  commentId: F:Warbler.Startup.ConnectionManager
-  id: ConnectionManager
-  parent: Warbler.Startup
-  langs:
-  - csharp
-  - vb
-  name: ConnectionManager
-  nameWithType: Startup.ConnectionManager
-  fullName: Warbler.Startup.ConnectionManager
-  type: Field
-  source:
-    id: ConnectionManager
-    path: ''
-    startLine: 23
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler
-  syntax:
-    content: public static IConnectionManager ConnectionManager
-    return:
-      type: IConnectionManager
-    content.vb: Public Shared ConnectionManager As IConnectionManager
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 - uid: Warbler.Startup.#ctor(IHostingEnvironment)
   commentId: M:Warbler.Startup.#ctor(IHostingEnvironment)
   id: '#ctor(IHostingEnvironment)'
@@ -86,7 +56,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 25
+    startLine: 21
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -115,7 +85,7 @@ items:
   source:
     id: Main
     path: ''
-    startLine: 37
+    startLine: 33
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -149,7 +119,7 @@ items:
   source:
     id: ConfigureServices
     path: ''
-    startLine: 48
+    startLine: 42
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -166,36 +136,34 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory,System.IServiceProvider)
-  commentId: M:Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory,System.IServiceProvider)
-  id: Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory,System.IServiceProvider)
+- uid: Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
+  commentId: M:Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
+  id: Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
   parent: Warbler.Startup
   langs:
   - csharp
   - vb
-  name: Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory, IServiceProvider)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory, IServiceProvider)
-  fullName: Warbler.Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory, System.IServiceProvider)
+  name: Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
+  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
+  fullName: Warbler.Startup.Configure(IApplicationBuilder, IHostingEnvironment, System.IServiceProvider)
   type: Method
   source:
     id: Configure
     path: ''
-    startLine: 101
+    startLine: 109
   assemblies:
   - cs.temp.dll
   namespace: Warbler
   syntax:
-    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
+    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
     parameters:
     - id: app
       type: IApplicationBuilder
     - id: env
       type: IHostingEnvironment
-    - id: loggerFactory
-      type: ILoggerFactory
     - id: serviceProvider
       type: System.IServiceProvider
-    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment, loggerFactory As ILoggerFactory, serviceProvider As IServiceProvider)
+    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment, serviceProvider As IServiceProvider)
   overload: Warbler.Startup.Configure*
   modifiers.csharp:
   - public
@@ -500,12 +468,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: IConnectionManager
-  commentId: '!:IConnectionManager'
-  isExternal: true
-  name: IConnectionManager
-  nameWithType: IConnectionManager
-  fullName: IConnectionManager
 - uid: Warbler.Startup.#ctor*
   commentId: Overload:Warbler.Startup.#ctor
   isExternal: false
@@ -579,8 +541,3 @@ references:
   name: IApplicationBuilder
   nameWithType: IApplicationBuilder
   fullName: IApplicationBuilder
-- uid: ILoggerFactory
-  isExternal: true
-  name: ILoggerFactory
-  nameWithType: ILoggerFactory
-  fullName: ILoggerFactory

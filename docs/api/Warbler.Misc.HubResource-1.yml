@@ -5,34 +5,39 @@ items:
   id: HubResource`1
   parent: Warbler.Misc
   children:
-  - Warbler.Misc.HubResource`1.Instance
+  - Warbler.Misc.HubResource`1.#ctor(IHubContext{`0},ILogger)
+  - Warbler.Misc.HubResource`1.HubContext
+  - Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+  - Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
   langs:
   - csharp
   - vb
-  name: HubResource<TService>
-  nameWithType: HubResource<TService>
-  fullName: Warbler.Misc.HubResource<TService>
+  name: HubResource<THub>
+  nameWithType: HubResource<THub>
+  fullName: Warbler.Misc.HubResource<THub>
   type: Class
   source:
     id: HubResource
     path: ''
-    startLine: 1353
+    startLine: 1522
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
-  summary: "\nParent class for services that directly interoperate with hubs.\nProvides lazy-loading support (convention-friendly singleton).\n"
+  summary: "\nParent class for services that directly interoperate with hubs.\n"
   example: []
   syntax:
     content: >-
-      public abstract class HubResource<TService>
-
-          where TService : new ()
+      public abstract class HubResource<THub>
+          where THub : Hub
     typeParameters:
-    - id: TService
-      description: The service subclass.
-    content.vb: Public MustInherit Class HubResource(Of TService As New)
+    - id: THub
+      description: The hub being serviced.
+    content.vb: Public MustInherit Class HubResource(Of THub As Hub)
   inheritance:
   - System.Object
+  derivedClasses:
+  - Warbler.Services.ChatService
+  - Warbler.Services.ProximityService
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -41,7 +46,7 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  nameWithType.vb: HubResource(Of TService)
+  nameWithType.vb: HubResource(Of THub)
   modifiers.csharp:
   - public
   - abstract
@@ -50,45 +55,159 @@ items:
   - Public
   - MustInherit
   - Class
-  fullName.vb: Warbler.Misc.HubResource(Of TService)
-  name.vb: HubResource(Of TService)
-- uid: Warbler.Misc.HubResource`1.Instance
-  commentId: P:Warbler.Misc.HubResource`1.Instance
-  id: Instance
+  fullName.vb: Warbler.Misc.HubResource(Of THub)
+  name.vb: HubResource(Of THub)
+- uid: Warbler.Misc.HubResource`1.HubContext
+  commentId: P:Warbler.Misc.HubResource`1.HubContext
+  id: HubContext
   parent: Warbler.Misc.HubResource`1
   langs:
   - csharp
   - vb
-  name: Instance
-  nameWithType: HubResource<TService>.Instance
-  fullName: Warbler.Misc.HubResource<TService>.Instance
+  name: HubContext
+  nameWithType: HubResource<THub>.HubContext
+  fullName: Warbler.Misc.HubResource<THub>.HubContext
   type: Property
   source:
-    id: Instance
+    id: HubContext
     path: ''
-    startLine: 1360
+    startLine: 1526
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
-  summary: 'Gets the singleton instance of the service. '
+  summary: "Allows hub services to access the hub's clients/groups. "
   example: []
   syntax:
-    content: public static TService Instance { get; }
+    content: protected IHubContext<THub> HubContext { get; }
     parameters: []
     return:
-      type: '{TService}'
-    content.vb: Public Shared ReadOnly Property Instance As TService
-  overload: Warbler.Misc.HubResource`1.Instance*
-  nameWithType.vb: HubResource(Of TService).Instance
+      type: IHubContext{{THub}}
+    content.vb: Protected ReadOnly Property HubContext As IHubContext(Of THub)
+  overload: Warbler.Misc.HubResource`1.HubContext*
+  nameWithType.vb: HubResource(Of THub).HubContext
   modifiers.csharp:
-  - public
-  - static
+  - protected
   - get
   modifiers.vb:
-  - Public
-  - Shared
+  - Protected
   - ReadOnly
-  fullName.vb: Warbler.Misc.HubResource(Of TService).Instance
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubContext
+- uid: Warbler.Misc.HubResource`1.#ctor(IHubContext{`0},ILogger)
+  commentId: M:Warbler.Misc.HubResource`1.#ctor(IHubContext{`0},ILogger)
+  id: '#ctor(IHubContext{`0},ILogger)'
+  parent: Warbler.Misc.HubResource`1
+  langs:
+  - csharp
+  - vb
+  name: HubResource(IHubContext<THub>, ILogger)
+  nameWithType: HubResource<THub>.HubResource(IHubContext<THub>, ILogger)
+  fullName: Warbler.Misc.HubResource<THub>.HubResource(IHubContext<THub>, ILogger)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1531
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  syntax:
+    content: protected HubResource(IHubContext<THub> hubContext, ILogger logger)
+    parameters:
+    - id: hubContext
+      type: IHubContext{{THub}}
+    - id: logger
+      type: ILogger
+    content.vb: Protected Sub New(hubContext As IHubContext(Of THub), logger As ILogger)
+  overload: Warbler.Misc.HubResource`1.#ctor*
+  nameWithType.vb: HubResource(Of THub).HubResource(IHubContext(Of THub), ILogger)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubResource(IHubContext(Of THub), ILogger)
+  name.vb: HubResource(IHubContext(Of THub), ILogger)
+- uid: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+  id: OnConnectedAsync(Warbler.Models.User,System.String)
+  parent: Warbler.Misc.HubResource`1
+  langs:
+  - csharp
+  - vb
+  name: OnConnectedAsync(User, String)
+  nameWithType: HubResource<THub>.OnConnectedAsync(User, String)
+  fullName: Warbler.Misc.HubResource<THub>.OnConnectedAsync(Warbler.Models.User, System.String)
+  type: Method
+  source:
+    id: OnConnectedAsync
+    path: ''
+    startLine: 1544
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  summary: "\nAssociates the user with the connection ID. Returns <xref uid=\"langword_csharp_true\" name=\"true\" href=\"\"></xref>\nif the user wasn't previously connected to the hub on any device.\n"
+  remarks: Call this at the beginning of overriden child OnConnected().
+  example: []
+  syntax:
+    content: protected Task<bool> OnConnectedAsync(User user, string connectionId)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+      description: The user to add or update.
+    - id: connectionId
+      type: System.String
+      description: The connection ID to associate.
+    return:
+      type: Task{System.Boolean}
+      description: "\nTrue if only one connection ID is now associated with the user, false otherwise.\n"
+    content.vb: Protected Function OnConnectedAsync(user As User, connectionId As String) As Task(Of Boolean)
+  overload: Warbler.Misc.HubResource`1.OnConnectedAsync*
+  nameWithType.vb: HubResource(Of THub).OnConnectedAsync(User, String)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnConnectedAsync(Warbler.Models.User, System.String)
+- uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  commentId: M:Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  id: OnDisconnectedAsync(Warbler.Models.User,System.String)
+  parent: Warbler.Misc.HubResource`1
+  langs:
+  - csharp
+  - vb
+  name: OnDisconnectedAsync(User, String)
+  nameWithType: HubResource<THub>.OnDisconnectedAsync(User, String)
+  fullName: Warbler.Misc.HubResource<THub>.OnDisconnectedAsync(Warbler.Models.User, System.String)
+  type: Method
+  source:
+    id: OnDisconnectedAsync
+    path: ''
+    startLine: 1557
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  summary: "\nDisassociates the user with the connection ID. Returns <xref uid=\"langword_csharp_true\" name=\"true\" href=\"\"></xref>\nif the user is no longer connected to the hub on any device.\n"
+  remarks: Call this at the beginning of overriden child OnDisconnected().
+  example: []
+  syntax:
+    content: protected Task<bool> OnDisconnectedAsync(User user, string connectionId)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+      description: The user to remove or update.
+    - id: connectionId
+      type: System.String
+      description: The connection ID to disassociate.
+    return:
+      type: Task{System.Boolean}
+      description: "\nTrue if no other connection IDs are associated with the user, false otherwise.\n"
+    content.vb: Protected Function OnDisconnectedAsync(user As User, connectionId As String) As Task(Of Boolean)
+  overload: Warbler.Misc.HubResource`1.OnDisconnectedAsync*
+  nameWithType.vb: HubResource(Of THub).OnDisconnectedAsync(User, String)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnDisconnectedAsync(Warbler.Models.User, System.String)
 references:
 - uid: Warbler.Misc
   commentId: N:Warbler.Misc
@@ -388,23 +507,218 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Warbler.Misc.HubResource`1.Instance*
-  commentId: Overload:Warbler.Misc.HubResource`1.Instance
+- uid: Warbler.Misc.HubResource`1.HubContext*
+  commentId: Overload:Warbler.Misc.HubResource`1.HubContext
   isExternal: false
-  name: Instance
-  nameWithType: HubResource<TService>.Instance
-  fullName: Warbler.Misc.HubResource<TService>.Instance
-  nameWithType.vb: HubResource(Of TService).Instance
-  fullName.vb: Warbler.Misc.HubResource(Of TService).Instance
-- uid: '{TService}'
-  commentId: '!:TService'
-  definition: TService
-  name: TService
-  nameWithType: TService
-  fullName: TService
-- uid: TService
-  commentId: '!:TService'
+  name: HubContext
+  nameWithType: HubResource<THub>.HubContext
+  fullName: Warbler.Misc.HubResource<THub>.HubContext
+  nameWithType.vb: HubResource(Of THub).HubContext
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubContext
+- uid: IHubContext{{THub}}
+  commentId: '!:IHubContext{`0}'
+  definition: IHubContext`1
+  name: IHubContext<THub>
+  nameWithType: IHubContext<THub>
+  fullName: IHubContext<THub>
+  nameWithType.vb: IHubContext(Of THub)
+  fullName.vb: IHubContext(Of THub)
+  name.vb: IHubContext(Of THub)
+  spec.csharp:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: THub
+    nameWithType: THub
+    fullName: THub
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: THub
+    nameWithType: THub
+    fullName: THub
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IHubContext`1
+  isExternal: true
+  name: IHubContext<>
+  nameWithType: IHubContext<>
+  fullName: IHubContext<>
+  nameWithType.vb: IHubContext(Of )
+  fullName.vb: IHubContext(Of )
+  name.vb: IHubContext(Of )
+  spec.csharp:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IHubContext`1
+    name: IHubContext
+    nameWithType: IHubContext
+    fullName: IHubContext
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.HubResource`1.#ctor*
+  commentId: Overload:Warbler.Misc.HubResource`1.#ctor
   isExternal: false
-  name: TService
-  nameWithType: TService
-  fullName: TService
+  name: HubResource
+  nameWithType: HubResource<THub>.HubResource
+  fullName: Warbler.Misc.HubResource<THub>.HubResource
+  nameWithType.vb: HubResource(Of THub).HubResource
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubResource
+- uid: ILogger
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: ILogger
+- uid: Warbler.Misc.HubResource`1.OnConnectedAsync*
+  commentId: Overload:Warbler.Misc.HubResource`1.OnConnectedAsync
+  isExternal: false
+  name: OnConnectedAsync
+  nameWithType: HubResource<THub>.OnConnectedAsync
+  fullName: Warbler.Misc.HubResource<THub>.OnConnectedAsync
+  nameWithType.vb: HubResource(Of THub).OnConnectedAsync
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnConnectedAsync
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task{System.Boolean}
+  commentId: '!:Task{System.Boolean}'
+  definition: Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync*
+  commentId: Overload:Warbler.Misc.HubResource`1.OnDisconnectedAsync
+  isExternal: false
+  name: OnDisconnectedAsync
+  nameWithType: HubResource<THub>.OnDisconnectedAsync
+  fullName: Warbler.Misc.HubResource<THub>.OnDisconnectedAsync
+  nameWithType.vb: HubResource(Of THub).OnDisconnectedAsync
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnDisconnectedAsync

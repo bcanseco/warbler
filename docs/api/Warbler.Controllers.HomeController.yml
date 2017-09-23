@@ -5,7 +5,6 @@ items:
   id: HomeController
   parent: Warbler.Controllers
   children:
-  - Warbler.Controllers.HomeController.Documents
   - Warbler.Controllers.HomeController.Error
   - Warbler.Controllers.HomeController.Index
   langs:
@@ -18,7 +17,7 @@ items:
   source:
     id: HomeController
     path: ''
-    startLine: 712
+    startLine: 726
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -49,7 +48,7 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 714
+    startLine: 728
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -59,34 +58,6 @@ items:
       type: IActionResult
     content.vb: Public Function Index As IActionResult
   overload: Warbler.Controllers.HomeController.Index*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Warbler.Controllers.HomeController.Documents
-  commentId: M:Warbler.Controllers.HomeController.Documents
-  id: Documents
-  parent: Warbler.Controllers.HomeController
-  langs:
-  - csharp
-  - vb
-  name: Documents()
-  nameWithType: HomeController.Documents()
-  fullName: Warbler.Controllers.HomeController.Documents()
-  type: Method
-  source:
-    id: Documents
-    path: ''
-    startLine: 719
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Controllers
-  syntax:
-    content: public IActionResult Documents()
-    return:
-      type: IActionResult
-    content.vb: Public Function Documents As IActionResult
-  overload: Warbler.Controllers.HomeController.Documents*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -105,7 +76,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 724
+    startLine: 733
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -150,12 +121,6 @@ references:
   name: IActionResult
   nameWithType: IActionResult
   fullName: IActionResult
-- uid: Warbler.Controllers.HomeController.Documents*
-  commentId: Overload:Warbler.Controllers.HomeController.Documents
-  isExternal: false
-  name: Documents
-  nameWithType: HomeController.Documents
-  fullName: Warbler.Controllers.HomeController.Documents
 - uid: Warbler.Controllers.HomeController.Error*
   commentId: Overload:Warbler.Controllers.HomeController.Error
   isExternal: false

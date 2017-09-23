@@ -4,8 +4,9 @@ items:
   commentId: N:Warbler.Misc
   id: Warbler.Misc
   children:
+  - Warbler.Misc.ApiKeys
   - Warbler.Misc.ConnectionMapping
-  - Warbler.Misc.HubResource`2
+  - Warbler.Misc.HubResource`1
   - Warbler.Misc.WarblerDbContext
   langs:
   - csharp
@@ -17,35 +18,35 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Misc.ApiKeys
+  commentId: T:Warbler.Misc.ApiKeys
+  isExternal: false
+  name: ApiKeys
+  nameWithType: ApiKeys
+  fullName: Warbler.Misc.ApiKeys
 - uid: Warbler.Misc.ConnectionMapping
   commentId: T:Warbler.Misc.ConnectionMapping
   isExternal: false
   name: ConnectionMapping
   nameWithType: ConnectionMapping
   fullName: Warbler.Misc.ConnectionMapping
-- uid: Warbler.Misc.HubResource`2
-  commentId: T:Warbler.Misc.HubResource`2
+- uid: Warbler.Misc.HubResource`1
+  commentId: T:Warbler.Misc.HubResource`1
   isExternal: false
-  name: HubResource<TService, THub>
-  nameWithType: HubResource<TService, THub>
-  fullName: Warbler.Misc.HubResource<TService, THub>
-  nameWithType.vb: HubResource(Of TService, THub)
-  fullName.vb: Warbler.Misc.HubResource(Of TService, THub)
-  name.vb: HubResource(Of TService, THub)
+  name: HubResource<THub>
+  nameWithType: HubResource<THub>
+  fullName: Warbler.Misc.HubResource<THub>
+  nameWithType.vb: HubResource(Of THub)
+  fullName.vb: Warbler.Misc.HubResource(Of THub)
+  name.vb: HubResource(Of THub)
   spec.csharp:
-  - uid: Warbler.Misc.HubResource`2
+  - uid: Warbler.Misc.HubResource`1
     name: HubResource
     nameWithType: HubResource
     fullName: Warbler.Misc.HubResource
   - name: <
     nameWithType: <
     fullName: <
-  - name: TService
-    nameWithType: TService
-    fullName: TService
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
   - name: THub
     nameWithType: THub
     fullName: THub
@@ -53,19 +54,13 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Warbler.Misc.HubResource`2
+  - uid: Warbler.Misc.HubResource`1
     name: HubResource
     nameWithType: HubResource
     fullName: Warbler.Misc.HubResource
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TService
-    nameWithType: TService
-    fullName: TService
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
   - name: THub
     nameWithType: THub
     fullName: THub

@@ -4,7 +4,11 @@ items:
   commentId: T:Warbler.Exceptions.UniversityNotFoundException
   id: UniversityNotFoundException
   parent: Warbler.Exceptions
-  children: []
+  children:
+  - Warbler.Exceptions.UniversityNotFoundException.#ctor
+  - Warbler.Exceptions.UniversityNotFoundException.#ctor(SerializationInfo,StreamingContext)
+  - Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String)
+  - Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String,System.Exception)
   langs:
   - csharp
   - vb
@@ -15,7 +19,7 @@ items:
   source:
     id: UniversityNotFoundException
     path: ''
-    startLine: 1094
+    startLine: 1103
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Exceptions
@@ -58,6 +62,123 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor
+  id: '#ctor'
+  parent: Warbler.Exceptions.UniversityNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: UniversityNotFoundException()
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException()
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1105
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Exceptions
+  syntax:
+    content: public UniversityNotFoundException()
+    content.vb: Public Sub New
+  overload: Warbler.Exceptions.UniversityNotFoundException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String)
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Warbler.Exceptions.UniversityNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: UniversityNotFoundException(String)
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException(String)
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException(System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1108
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Exceptions
+  syntax:
+    content: public UniversityNotFoundException(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub New(message As String)
+  overload: Warbler.Exceptions.UniversityNotFoundException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String,System.Exception)
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Warbler.Exceptions.UniversityNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: UniversityNotFoundException(String, Exception)
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException(String, Exception)
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException(System.String, System.Exception)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1112
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Exceptions
+  syntax:
+    content: public UniversityNotFoundException(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+    - id: innerException
+      type: System.Exception
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: Warbler.Exceptions.UniversityNotFoundException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor(SerializationInfo,StreamingContext)
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor(SerializationInfo,StreamingContext)
+  id: '#ctor(SerializationInfo,StreamingContext)'
+  parent: Warbler.Exceptions.UniversityNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: UniversityNotFoundException(SerializationInfo, StreamingContext)
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException(SerializationInfo, StreamingContext)
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException(SerializationInfo, StreamingContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1116
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Exceptions
+  syntax:
+    content: protected UniversityNotFoundException(SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: info
+      type: SerializationInfo
+    - id: context
+      type: StreamingContext
+    content.vb: Protected Sub New(info As SerializationInfo, context As StreamingContext)
+  overload: Warbler.Exceptions.UniversityNotFoundException.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: Warbler.Exceptions
   commentId: N:Warbler.Exceptions
@@ -541,3 +662,28 @@ references:
   name: System.Runtime.InteropServices
   nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor*
+  commentId: Overload:Warbler.Exceptions.UniversityNotFoundException.#ctor
+  isExternal: false
+  name: UniversityNotFoundException
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SerializationInfo
+  commentId: '!:SerializationInfo'
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: SerializationInfo
+- uid: StreamingContext
+  commentId: '!:StreamingContext'
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: StreamingContext

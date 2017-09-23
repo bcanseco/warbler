@@ -18,13 +18,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Graphics\**\*;Scripts\**\*;Styles\**\*;wwwroot\**\*">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </None>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
 
+  <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project." />
+
+    <Message Importance="high" Text="Performing first-run Webpack build..." />
+    <Exec Command="npm run webpack:vendor" />
+    <Exec Command="npm run webpack" />
+  </Target>
+
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

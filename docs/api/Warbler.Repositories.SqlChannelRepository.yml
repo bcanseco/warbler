@@ -17,7 +17,7 @@ items:
   source:
     id: SqlChannelRepository
     path: ''
-    startLine: 2037
+    startLine: 2350
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -60,7 +60,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2041
+    startLine: 2354
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -89,7 +89,7 @@ items:
   source:
     id: UpdateAsync
     path: ''
-    startLine: 2046
+    startLine: 2359
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories

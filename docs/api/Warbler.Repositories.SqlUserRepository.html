@@ -144,6 +144,50 @@ Look at <a class="xref" href="Warbler.Interfaces.IUserRepository.html">IUserRepo
   </h3>
   
   
+  <a id="Warbler_Repositories_SqlUserRepository_FindByNameAsync_" data-uid="Warbler.Repositories.SqlUserRepository.FindByNameAsync*"></a>
+  <h4 id="Warbler_Repositories_SqlUserRepository_FindByNameAsync_System_String_" data-uid="Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)">FindByNameAsync(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;User&gt; FindByNameAsync(string userName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.User.html">User</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_FindByNameAsync_System_String_">IUserRepository.FindByNameAsync(String)</a></div>
+  
+  
   <a id="Warbler_Repositories_SqlUserRepository_IsNewAsync_" data-uid="Warbler.Repositories.SqlUserRepository.IsNewAsync*"></a>
   <h4 id="Warbler_Repositories_SqlUserRepository_IsNewAsync_Warbler_Models_User_" data-uid="Warbler.Repositories.SqlUserRepository.IsNewAsync(Warbler.Models.User)">IsNewAsync(User)</h4>
   <div class="markdown level1 summary"></div>
@@ -186,6 +230,55 @@ Look at <a class="xref" href="Warbler.Interfaces.IUserRepository.html">IUserRepo
   </table>
   <h5 class="implements">Implements</h5>
       <div><a class="xref" href="Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_IsNewAsync_Warbler_Models_User_">IUserRepository.IsNewAsync(User)</a></div>
+  
+  
+  <a id="Warbler_Repositories_SqlUserRepository_SetOnlineAsync_" data-uid="Warbler.Repositories.SqlUserRepository.SetOnlineAsync*"></a>
+  <h4 id="Warbler_Repositories_SqlUserRepository_SetOnlineAsync_Warbler_Models_User_System_Boolean_" data-uid="Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)">SetOnlineAsync(User, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SetOnlineAsync(User user, bool isOnline)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isOnline</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_SetOnlineAsync_Warbler_Models_User_System_Boolean_">IUserRepository.SetOnlineAsync(User, Boolean)</a></div>
 </article>
           </div>
           

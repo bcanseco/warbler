@@ -6,7 +6,6 @@ items:
   parent: Warbler.Controllers
   children:
   - Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  - Warbler.Controllers.ChatController.Chatroom
   - Warbler.Controllers.ChatController.Error
   - Warbler.Controllers.ChatController.Index
   langs:
@@ -19,7 +18,7 @@ items:
   source:
     id: ChatController
     path: ''
-    startLine: 629
+    startLine: 619
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -50,7 +49,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 635
+    startLine: 625
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -84,46 +83,16 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 645
+    startLine: 631
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
-  summary: "\nResolves the Index view if the user isn't a member of any\nuniversities, otherwises redirects to <xref href=\"Warbler.Controllers.ChatController.Chatroom\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public Task<IActionResult> Index()
     return:
       type: Task{IActionResult}
     content.vb: Public Function Index As Task(Of IActionResult)
   overload: Warbler.Controllers.ChatController.Index*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Warbler.Controllers.ChatController.Chatroom
-  commentId: M:Warbler.Controllers.ChatController.Chatroom
-  id: Chatroom
-  parent: Warbler.Controllers.ChatController
-  langs:
-  - csharp
-  - vb
-  name: Chatroom()
-  nameWithType: ChatController.Chatroom()
-  fullName: Warbler.Controllers.ChatController.Chatroom()
-  type: Method
-  source:
-    id: Chatroom
-    path: ''
-    startLine: 654
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Controllers
-  syntax:
-    content: public IActionResult Chatroom()
-    return:
-      type: IActionResult
-    content.vb: Public Function Chatroom As IActionResult
-  overload: Warbler.Controllers.ChatController.Chatroom*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -142,7 +111,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 659
+    startLine: 651
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -274,8 +243,6 @@ references:
   name: Warbler.Misc
   nameWithType: Warbler.Misc
   fullName: Warbler.Misc
-- uid: Warbler.Controllers.ChatController.Chatroom
-  commentId: M:Warbler.Controllers.ChatController.Chatroom
 - uid: Warbler.Controllers.ChatController.Index*
   commentId: Overload:Warbler.Controllers.ChatController.Index
   isExternal: false
@@ -363,20 +330,14 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Warbler.Controllers.ChatController.Chatroom*
-  commentId: Overload:Warbler.Controllers.ChatController.Chatroom
-  isExternal: false
-  name: Chatroom
-  nameWithType: ChatController.Chatroom
-  fullName: Warbler.Controllers.ChatController.Chatroom
-- uid: IActionResult
-  isExternal: true
-  name: IActionResult
-  nameWithType: IActionResult
-  fullName: IActionResult
 - uid: Warbler.Controllers.ChatController.Error*
   commentId: Overload:Warbler.Controllers.ChatController.Error
   isExternal: false
   name: Error
   nameWithType: ChatController.Error
   fullName: Warbler.Controllers.ChatController.Error
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult

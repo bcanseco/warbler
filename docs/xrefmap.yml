@@ -259,18 +259,6 @@ references:
   commentId: Overload:Warbler.Controllers.ChatController.#ctor
   fullName: Warbler.Controllers.ChatController.ChatController
   nameWithType: ChatController.ChatController
-- uid: Warbler.Controllers.ChatController.Chatroom
-  name: Chatroom()
-  href: api/Warbler.Controllers.ChatController.html#Warbler_Controllers_ChatController_Chatroom
-  commentId: M:Warbler.Controllers.ChatController.Chatroom
-  fullName: Warbler.Controllers.ChatController.Chatroom()
-  nameWithType: ChatController.Chatroom()
-- uid: Warbler.Controllers.ChatController.Chatroom*
-  name: Chatroom
-  href: api/Warbler.Controllers.ChatController.html#Warbler_Controllers_ChatController_Chatroom_
-  commentId: Overload:Warbler.Controllers.ChatController.Chatroom
-  fullName: Warbler.Controllers.ChatController.Chatroom
-  nameWithType: ChatController.Chatroom
 - uid: Warbler.Controllers.ChatController.Error
   name: Error()
   href: api/Warbler.Controllers.ChatController.html#Warbler_Controllers_ChatController_Error
@@ -349,24 +337,42 @@ references:
   commentId: Overload:Warbler.Controllers.DevController.Universities
   fullName: Warbler.Controllers.DevController.Universities
   nameWithType: DevController.Universities
+- uid: Warbler.Controllers.DocumentsController
+  name: DocumentsController
+  href: api/Warbler.Controllers.DocumentsController.html
+  commentId: T:Warbler.Controllers.DocumentsController
+  fullName: Warbler.Controllers.DocumentsController
+  nameWithType: DocumentsController
+- uid: Warbler.Controllers.DocumentsController.Error
+  name: Error()
+  href: api/Warbler.Controllers.DocumentsController.html#Warbler_Controllers_DocumentsController_Error
+  commentId: M:Warbler.Controllers.DocumentsController.Error
+  fullName: Warbler.Controllers.DocumentsController.Error()
+  nameWithType: DocumentsController.Error()
+- uid: Warbler.Controllers.DocumentsController.Error*
+  name: Error
+  href: api/Warbler.Controllers.DocumentsController.html#Warbler_Controllers_DocumentsController_Error_
+  commentId: Overload:Warbler.Controllers.DocumentsController.Error
+  fullName: Warbler.Controllers.DocumentsController.Error
+  nameWithType: DocumentsController.Error
+- uid: Warbler.Controllers.DocumentsController.Index
+  name: Index()
+  href: api/Warbler.Controllers.DocumentsController.html#Warbler_Controllers_DocumentsController_Index
+  commentId: M:Warbler.Controllers.DocumentsController.Index
+  fullName: Warbler.Controllers.DocumentsController.Index()
+  nameWithType: DocumentsController.Index()
+- uid: Warbler.Controllers.DocumentsController.Index*
+  name: Index
+  href: api/Warbler.Controllers.DocumentsController.html#Warbler_Controllers_DocumentsController_Index_
+  commentId: Overload:Warbler.Controllers.DocumentsController.Index
+  fullName: Warbler.Controllers.DocumentsController.Index
+  nameWithType: DocumentsController.Index
 - uid: Warbler.Controllers.HomeController
   name: HomeController
   href: api/Warbler.Controllers.HomeController.html
   commentId: T:Warbler.Controllers.HomeController
   fullName: Warbler.Controllers.HomeController
   nameWithType: HomeController
-- uid: Warbler.Controllers.HomeController.Documents
-  name: Documents()
-  href: api/Warbler.Controllers.HomeController.html#Warbler_Controllers_HomeController_Documents
-  commentId: M:Warbler.Controllers.HomeController.Documents
-  fullName: Warbler.Controllers.HomeController.Documents()
-  nameWithType: HomeController.Documents()
-- uid: Warbler.Controllers.HomeController.Documents*
-  name: Documents
-  href: api/Warbler.Controllers.HomeController.html#Warbler_Controllers_HomeController_Documents_
-  commentId: Overload:Warbler.Controllers.HomeController.Documents
-  fullName: Warbler.Controllers.HomeController.Documents
-  nameWithType: HomeController.Documents
 - uid: Warbler.Controllers.HomeController.Error
   name: Error()
   href: api/Warbler.Controllers.HomeController.html#Warbler_Controllers_HomeController_Error
@@ -652,12 +658,60 @@ references:
   commentId: T:Warbler.Exceptions.UniversityNotFoundException
   fullName: Warbler.Exceptions.UniversityNotFoundException
   nameWithType: UniversityNotFoundException
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor
+  name: UniversityNotFoundException()
+  href: api/Warbler.Exceptions.UniversityNotFoundException.html#Warbler_Exceptions_UniversityNotFoundException__ctor
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException()
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException()
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor(SerializationInfo,StreamingContext)
+  name: UniversityNotFoundException(SerializationInfo, StreamingContext)
+  href: api/Warbler.Exceptions.UniversityNotFoundException.html#Warbler_Exceptions_UniversityNotFoundException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException(SerializationInfo, StreamingContext)
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException(SerializationInfo, StreamingContext)
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String)
+  name: UniversityNotFoundException(String)
+  href: api/Warbler.Exceptions.UniversityNotFoundException.html#Warbler_Exceptions_UniversityNotFoundException__ctor_System_String_
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String)
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException(System.String)
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException(String)
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String,System.Exception)
+  name: UniversityNotFoundException(String, Exception)
+  href: api/Warbler.Exceptions.UniversityNotFoundException.html#Warbler_Exceptions_UniversityNotFoundException__ctor_System_String_System_Exception_
+  commentId: M:Warbler.Exceptions.UniversityNotFoundException.#ctor(System.String,System.Exception)
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException(System.String, System.Exception)
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException(String, Exception)
+- uid: Warbler.Exceptions.UniversityNotFoundException.#ctor*
+  name: UniversityNotFoundException
+  href: api/Warbler.Exceptions.UniversityNotFoundException.html#Warbler_Exceptions_UniversityNotFoundException__ctor_
+  commentId: Overload:Warbler.Exceptions.UniversityNotFoundException.#ctor
+  fullName: Warbler.Exceptions.UniversityNotFoundException.UniversityNotFoundException
+  nameWithType: UniversityNotFoundException.UniversityNotFoundException
 - uid: Warbler.Extensions
   name: Warbler.Extensions
   href: api/Warbler.Extensions.html
   commentId: N:Warbler.Extensions
   fullName: Warbler.Extensions
   nameWithType: Warbler.Extensions
+- uid: Warbler.Extensions.HtmlHelperExtensions
+  name: HtmlHelperExtensions
+  href: api/Warbler.Extensions.HtmlHelperExtensions.html
+  commentId: T:Warbler.Extensions.HtmlHelperExtensions
+  fullName: Warbler.Extensions.HtmlHelperExtensions
+  nameWithType: HtmlHelperExtensions
+- uid: Warbler.Extensions.HtmlHelperExtensions.IsDebug(IHtmlHelper)
+  name: IsDebug(IHtmlHelper)
+  href: api/Warbler.Extensions.HtmlHelperExtensions.html#Warbler_Extensions_HtmlHelperExtensions_IsDebug_IHtmlHelper_
+  commentId: M:Warbler.Extensions.HtmlHelperExtensions.IsDebug(IHtmlHelper)
+  fullName: Warbler.Extensions.HtmlHelperExtensions.IsDebug(IHtmlHelper)
+  nameWithType: HtmlHelperExtensions.IsDebug(IHtmlHelper)
+- uid: Warbler.Extensions.HtmlHelperExtensions.IsDebug*
+  name: IsDebug
+  href: api/Warbler.Extensions.HtmlHelperExtensions.html#Warbler_Extensions_HtmlHelperExtensions_IsDebug_
+  commentId: Overload:Warbler.Extensions.HtmlHelperExtensions.IsDebug
+  fullName: Warbler.Extensions.HtmlHelperExtensions.IsDebug
+  nameWithType: HtmlHelperExtensions.IsDebug
 - uid: Warbler.Extensions.NearbyResultExtensions
   name: NearbyResultExtensions
   href: api/Warbler.Extensions.NearbyResultExtensions.html
@@ -721,60 +775,54 @@ references:
   commentId: T:Warbler.Hubs.ChatHub
   fullName: Warbler.Hubs.ChatHub
   nameWithType: ChatHub
-- uid: Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  name: ChatHub(UserManager<User>, WarblerDbContext)
-  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub__ctor_UserManager_Warbler_Models_User__Warbler_Misc_WarblerDbContext_
-  commentId: M:Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  name.vb: ChatHub(UserManager(Of User), WarblerDbContext)
-  fullName: Warbler.Hubs.ChatHub.ChatHub(UserManager<Warbler.Models.User>, Warbler.Misc.WarblerDbContext)
-  fullName.vb: Warbler.Hubs.ChatHub.ChatHub(UserManager(Of Warbler.Models.User), Warbler.Misc.WarblerDbContext)
-  nameWithType: ChatHub.ChatHub(UserManager<User>, WarblerDbContext)
-  nameWithType.vb: ChatHub.ChatHub(UserManager(Of User), WarblerDbContext)
+- uid: Warbler.Hubs.ChatHub.#ctor(Warbler.Misc.WarblerDbContext,Warbler.Services.ChatService)
+  name: ChatHub(WarblerDbContext, ChatService)
+  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub__ctor_Warbler_Misc_WarblerDbContext_Warbler_Services_ChatService_
+  commentId: M:Warbler.Hubs.ChatHub.#ctor(Warbler.Misc.WarblerDbContext,Warbler.Services.ChatService)
+  fullName: Warbler.Hubs.ChatHub.ChatHub(Warbler.Misc.WarblerDbContext, Warbler.Services.ChatService)
+  nameWithType: ChatHub.ChatHub(WarblerDbContext, ChatService)
 - uid: Warbler.Hubs.ChatHub.#ctor*
   name: ChatHub
   href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub__ctor_
   commentId: Overload:Warbler.Hubs.ChatHub.#ctor
   fullName: Warbler.Hubs.ChatHub.ChatHub
   nameWithType: ChatHub.ChatHub
-- uid: Warbler.Hubs.ChatHub.OnConnected
-  name: OnConnected()
-  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnConnected
-  commentId: M:Warbler.Hubs.ChatHub.OnConnected
-  fullName: Warbler.Hubs.ChatHub.OnConnected()
-  nameWithType: ChatHub.OnConnected()
-- uid: Warbler.Hubs.ChatHub.OnConnected*
-  name: OnConnected
-  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnConnected_
-  commentId: Overload:Warbler.Hubs.ChatHub.OnConnected
-  fullName: Warbler.Hubs.ChatHub.OnConnected
-  nameWithType: ChatHub.OnConnected
-- uid: Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
-  name: OnDisconnected(Boolean)
-  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnDisconnected_System_Boolean_
-  commentId: M:Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
-  fullName: Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
-  nameWithType: ChatHub.OnDisconnected(Boolean)
-- uid: Warbler.Hubs.ChatHub.OnDisconnected*
-  name: OnDisconnected
-  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnDisconnected_
-  commentId: Overload:Warbler.Hubs.ChatHub.OnDisconnected
-  fullName: Warbler.Hubs.ChatHub.OnDisconnected
-  nameWithType: ChatHub.OnDisconnected
+- uid: Warbler.Hubs.ChatHub.OnConnectedAsync
+  name: OnConnectedAsync()
+  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnConnectedAsync
+  commentId: M:Warbler.Hubs.ChatHub.OnConnectedAsync
+  fullName: Warbler.Hubs.ChatHub.OnConnectedAsync()
+  nameWithType: ChatHub.OnConnectedAsync()
+- uid: Warbler.Hubs.ChatHub.OnConnectedAsync*
+  name: OnConnectedAsync
+  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnConnectedAsync_
+  commentId: Overload:Warbler.Hubs.ChatHub.OnConnectedAsync
+  fullName: Warbler.Hubs.ChatHub.OnConnectedAsync
+  nameWithType: ChatHub.OnConnectedAsync
+- uid: Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
+  name: OnDisconnectedAsync(Exception)
+  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnDisconnectedAsync_System_Exception_
+  commentId: M:Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
+  fullName: Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
+  nameWithType: ChatHub.OnDisconnectedAsync(Exception)
+- uid: Warbler.Hubs.ChatHub.OnDisconnectedAsync*
+  name: OnDisconnectedAsync
+  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_OnDisconnectedAsync_
+  commentId: Overload:Warbler.Hubs.ChatHub.OnDisconnectedAsync
+  fullName: Warbler.Hubs.ChatHub.OnDisconnectedAsync
+  nameWithType: ChatHub.OnDisconnectedAsync
 - uid: Warbler.Hubs.ProximityHub
   name: ProximityHub
   href: api/Warbler.Hubs.ProximityHub.html
   commentId: T:Warbler.Hubs.ProximityHub
   fullName: Warbler.Hubs.ProximityHub
   nameWithType: ProximityHub
-- uid: Warbler.Hubs.ProximityHub.#ctor(Warbler.Misc.WarblerDbContext,UserManager{Warbler.Models.User})
-  name: ProximityHub(WarblerDbContext, UserManager<User>)
-  href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub__ctor_Warbler_Misc_WarblerDbContext_UserManager_Warbler_Models_User__
-  commentId: M:Warbler.Hubs.ProximityHub.#ctor(Warbler.Misc.WarblerDbContext,UserManager{Warbler.Models.User})
-  name.vb: ProximityHub(WarblerDbContext, UserManager(Of User))
-  fullName: Warbler.Hubs.ProximityHub.ProximityHub(Warbler.Misc.WarblerDbContext, UserManager<Warbler.Models.User>)
-  fullName.vb: Warbler.Hubs.ProximityHub.ProximityHub(Warbler.Misc.WarblerDbContext, UserManager(Of Warbler.Models.User))
-  nameWithType: ProximityHub.ProximityHub(WarblerDbContext, UserManager<User>)
-  nameWithType.vb: ProximityHub.ProximityHub(WarblerDbContext, UserManager(Of User))
+- uid: Warbler.Hubs.ProximityHub.#ctor(Warbler.Services.ProximityService,Warbler.Misc.WarblerDbContext)
+  name: ProximityHub(ProximityService, WarblerDbContext)
+  href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub__ctor_Warbler_Services_ProximityService_Warbler_Misc_WarblerDbContext_
+  commentId: M:Warbler.Hubs.ProximityHub.#ctor(Warbler.Services.ProximityService,Warbler.Misc.WarblerDbContext)
+  fullName: Warbler.Hubs.ProximityHub.ProximityHub(Warbler.Services.ProximityService, Warbler.Misc.WarblerDbContext)
+  nameWithType: ProximityHub.ProximityHub(ProximityService, WarblerDbContext)
 - uid: Warbler.Hubs.ProximityHub.#ctor*
   name: ProximityHub
   href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub__ctor_
@@ -793,18 +841,18 @@ references:
   commentId: Overload:Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync
   fullName: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync
   nameWithType: ProximityHub.GetNearbyUniversitiesAsync
-- uid: Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
-  name: OnDisconnected(Boolean)
-  href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub_OnDisconnected_System_Boolean_
-  commentId: M:Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
-  fullName: Warbler.Hubs.ProximityHub.OnDisconnected(System.Boolean)
-  nameWithType: ProximityHub.OnDisconnected(Boolean)
-- uid: Warbler.Hubs.ProximityHub.OnDisconnected*
-  name: OnDisconnected
-  href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub_OnDisconnected_
-  commentId: Overload:Warbler.Hubs.ProximityHub.OnDisconnected
-  fullName: Warbler.Hubs.ProximityHub.OnDisconnected
-  nameWithType: ProximityHub.OnDisconnected
+- uid: Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)
+  name: OnDisconnectedAsync(Exception)
+  href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub_OnDisconnectedAsync_System_Exception_
+  commentId: M:Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)
+  fullName: Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)
+  nameWithType: ProximityHub.OnDisconnectedAsync(Exception)
+- uid: Warbler.Hubs.ProximityHub.OnDisconnectedAsync*
+  name: OnDisconnectedAsync
+  href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub_OnDisconnectedAsync_
+  commentId: Overload:Warbler.Hubs.ProximityHub.OnDisconnectedAsync
+  fullName: Warbler.Hubs.ProximityHub.OnDisconnectedAsync
+  nameWithType: ProximityHub.OnDisconnectedAsync
 - uid: Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
   name: SelectUniversityAsync(String)
   href: api/Warbler.Hubs.ProximityHub.html#Warbler_Hubs_ProximityHub_SelectUniversityAsync_System_String_
@@ -979,6 +1027,18 @@ references:
   commentId: T:Warbler.Interfaces.IUserRepository
   fullName: Warbler.Interfaces.IUserRepository
   nameWithType: IUserRepository
+- uid: Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+  name: FindByNameAsync(String)
+  href: api/Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_FindByNameAsync_System_String_
+  commentId: M:Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+  fullName: Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+  nameWithType: IUserRepository.FindByNameAsync(String)
+- uid: Warbler.Interfaces.IUserRepository.FindByNameAsync*
+  name: FindByNameAsync
+  href: api/Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_FindByNameAsync_
+  commentId: Overload:Warbler.Interfaces.IUserRepository.FindByNameAsync
+  fullName: Warbler.Interfaces.IUserRepository.FindByNameAsync
+  nameWithType: IUserRepository.FindByNameAsync
 - uid: Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
   name: IsNewAsync(User)
   href: api/Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_IsNewAsync_Warbler_Models_User_
@@ -991,30 +1051,72 @@ references:
   commentId: Overload:Warbler.Interfaces.IUserRepository.IsNewAsync
   fullName: Warbler.Interfaces.IUserRepository.IsNewAsync
   nameWithType: IUserRepository.IsNewAsync
+- uid: Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  name: SetOnlineAsync(User, Boolean)
+  href: api/Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_SetOnlineAsync_Warbler_Models_User_System_Boolean_
+  commentId: M:Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  fullName: Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User, System.Boolean)
+  nameWithType: IUserRepository.SetOnlineAsync(User, Boolean)
+- uid: Warbler.Interfaces.IUserRepository.SetOnlineAsync*
+  name: SetOnlineAsync
+  href: api/Warbler.Interfaces.IUserRepository.html#Warbler_Interfaces_IUserRepository_SetOnlineAsync_
+  commentId: Overload:Warbler.Interfaces.IUserRepository.SetOnlineAsync
+  fullName: Warbler.Interfaces.IUserRepository.SetOnlineAsync
+  nameWithType: IUserRepository.SetOnlineAsync
 - uid: Warbler.Misc
   name: Warbler.Misc
   href: api/Warbler.Misc.html
   commentId: N:Warbler.Misc
   fullName: Warbler.Misc
   nameWithType: Warbler.Misc
+- uid: Warbler.Misc.ApiKeys
+  name: ApiKeys
+  href: api/Warbler.Misc.ApiKeys.html
+  commentId: T:Warbler.Misc.ApiKeys
+  fullName: Warbler.Misc.ApiKeys
+  nameWithType: ApiKeys
+- uid: Warbler.Misc.ApiKeys.GooglePlaces
+  name: GooglePlaces
+  href: api/Warbler.Misc.ApiKeys.html#Warbler_Misc_ApiKeys_GooglePlaces
+  commentId: P:Warbler.Misc.ApiKeys.GooglePlaces
+  fullName: Warbler.Misc.ApiKeys.GooglePlaces
+  nameWithType: ApiKeys.GooglePlaces
+- uid: Warbler.Misc.ApiKeys.GooglePlaces*
+  name: GooglePlaces
+  href: api/Warbler.Misc.ApiKeys.html#Warbler_Misc_ApiKeys_GooglePlaces_
+  commentId: Overload:Warbler.Misc.ApiKeys.GooglePlaces
+  fullName: Warbler.Misc.ApiKeys.GooglePlaces
+  nameWithType: ApiKeys.GooglePlaces
 - uid: Warbler.Misc.ConnectionMapping
   name: ConnectionMapping
   href: api/Warbler.Misc.ConnectionMapping.html
   commentId: T:Warbler.Misc.ConnectionMapping
   fullName: Warbler.Misc.ConnectionMapping
   nameWithType: ConnectionMapping
-- uid: Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User,System.String)
-  name: Add(User, String)
-  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_Add_Warbler_Models_User_System_String_
-  commentId: M:Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User,System.String)
-  fullName: Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User, System.String)
-  nameWithType: ConnectionMapping.Add(User, String)
-- uid: Warbler.Misc.ConnectionMapping.Add*
-  name: Add
-  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_Add_
-  commentId: Overload:Warbler.Misc.ConnectionMapping.Add
-  fullName: Warbler.Misc.ConnectionMapping.Add
-  nameWithType: ConnectionMapping.Add
+- uid: Warbler.Misc.ConnectionMapping.#ctor(ILogger)
+  name: ConnectionMapping(ILogger)
+  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping__ctor_ILogger_
+  commentId: M:Warbler.Misc.ConnectionMapping.#ctor(ILogger)
+  fullName: Warbler.Misc.ConnectionMapping.ConnectionMapping(ILogger)
+  nameWithType: ConnectionMapping.ConnectionMapping(ILogger)
+- uid: Warbler.Misc.ConnectionMapping.#ctor*
+  name: ConnectionMapping
+  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping__ctor_
+  commentId: Overload:Warbler.Misc.ConnectionMapping.#ctor
+  fullName: Warbler.Misc.ConnectionMapping.ConnectionMapping
+  nameWithType: ConnectionMapping.ConnectionMapping
+- uid: Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User,System.String)
+  name: AddAsync(User, String)
+  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_AddAsync_Warbler_Models_User_System_String_
+  commentId: M:Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User,System.String)
+  fullName: Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User, System.String)
+  nameWithType: ConnectionMapping.AddAsync(User, String)
+- uid: Warbler.Misc.ConnectionMapping.AddAsync*
+  name: AddAsync
+  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_AddAsync_
+  commentId: Overload:Warbler.Misc.ConnectionMapping.AddAsync
+  fullName: Warbler.Misc.ConnectionMapping.AddAsync
+  nameWithType: ConnectionMapping.AddAsync
 - uid: Warbler.Misc.ConnectionMapping.GetConnections(Warbler.Models.User)
   name: GetConnections(User)
   href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_GetConnections_Warbler_Models_User_
@@ -1027,43 +1129,92 @@ references:
   commentId: Overload:Warbler.Misc.ConnectionMapping.GetConnections
   fullName: Warbler.Misc.ConnectionMapping.GetConnections
   nameWithType: ConnectionMapping.GetConnections
-- uid: Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User,System.String)
-  name: Remove(User, String)
-  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_Remove_Warbler_Models_User_System_String_
-  commentId: M:Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User,System.String)
-  fullName: Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User, System.String)
-  nameWithType: ConnectionMapping.Remove(User, String)
-- uid: Warbler.Misc.ConnectionMapping.Remove*
-  name: Remove
-  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_Remove_
-  commentId: Overload:Warbler.Misc.ConnectionMapping.Remove
-  fullName: Warbler.Misc.ConnectionMapping.Remove
-  nameWithType: ConnectionMapping.Remove
+- uid: Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User,System.String)
+  name: RemoveAsync(User, String)
+  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_RemoveAsync_Warbler_Models_User_System_String_
+  commentId: M:Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User,System.String)
+  fullName: Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User, System.String)
+  nameWithType: ConnectionMapping.RemoveAsync(User, String)
+- uid: Warbler.Misc.ConnectionMapping.RemoveAsync*
+  name: RemoveAsync
+  href: api/Warbler.Misc.ConnectionMapping.html#Warbler_Misc_ConnectionMapping_RemoveAsync_
+  commentId: Overload:Warbler.Misc.ConnectionMapping.RemoveAsync
+  fullName: Warbler.Misc.ConnectionMapping.RemoveAsync
+  nameWithType: ConnectionMapping.RemoveAsync
 - uid: Warbler.Misc.HubResource`1
-  name: HubResource<TService>
+  name: HubResource<THub>
   href: api/Warbler.Misc.HubResource-1.html
   commentId: T:Warbler.Misc.HubResource`1
-  name.vb: HubResource(Of TService)
-  fullName: Warbler.Misc.HubResource<TService>
-  fullName.vb: Warbler.Misc.HubResource(Of TService)
-  nameWithType: HubResource<TService>
-  nameWithType.vb: HubResource(Of TService)
-- uid: Warbler.Misc.HubResource`1.Instance
-  name: Instance
-  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_Instance
-  commentId: P:Warbler.Misc.HubResource`1.Instance
-  fullName: Warbler.Misc.HubResource<TService>.Instance
-  fullName.vb: Warbler.Misc.HubResource(Of TService).Instance
-  nameWithType: HubResource<TService>.Instance
-  nameWithType.vb: HubResource(Of TService).Instance
-- uid: Warbler.Misc.HubResource`1.Instance*
-  name: Instance
-  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_Instance_
-  commentId: Overload:Warbler.Misc.HubResource`1.Instance
-  fullName: Warbler.Misc.HubResource<TService>.Instance
-  fullName.vb: Warbler.Misc.HubResource(Of TService).Instance
-  nameWithType: HubResource<TService>.Instance
-  nameWithType.vb: HubResource(Of TService).Instance
+  name.vb: HubResource(Of THub)
+  fullName: Warbler.Misc.HubResource<THub>
+  fullName.vb: Warbler.Misc.HubResource(Of THub)
+  nameWithType: HubResource<THub>
+  nameWithType.vb: HubResource(Of THub)
+- uid: Warbler.Misc.HubResource`1.#ctor(IHubContext{`0},ILogger)
+  name: HubResource(IHubContext<THub>, ILogger)
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1__ctor_IHubContext__0__ILogger_
+  commentId: M:Warbler.Misc.HubResource`1.#ctor(IHubContext{`0},ILogger)
+  name.vb: HubResource(IHubContext(Of THub), ILogger)
+  fullName: Warbler.Misc.HubResource<THub>.HubResource(IHubContext<THub>, ILogger)
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubResource(IHubContext(Of THub), ILogger)
+  nameWithType: HubResource<THub>.HubResource(IHubContext<THub>, ILogger)
+  nameWithType.vb: HubResource(Of THub).HubResource(IHubContext(Of THub), ILogger)
+- uid: Warbler.Misc.HubResource`1.#ctor*
+  name: HubResource
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1__ctor_
+  commentId: Overload:Warbler.Misc.HubResource`1.#ctor
+  fullName: Warbler.Misc.HubResource<THub>.HubResource
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubResource
+  nameWithType: HubResource<THub>.HubResource
+  nameWithType.vb: HubResource(Of THub).HubResource
+- uid: Warbler.Misc.HubResource`1.HubContext
+  name: HubContext
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_HubContext
+  commentId: P:Warbler.Misc.HubResource`1.HubContext
+  fullName: Warbler.Misc.HubResource<THub>.HubContext
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubContext
+  nameWithType: HubResource<THub>.HubContext
+  nameWithType.vb: HubResource(Of THub).HubContext
+- uid: Warbler.Misc.HubResource`1.HubContext*
+  name: HubContext
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_HubContext_
+  commentId: Overload:Warbler.Misc.HubResource`1.HubContext
+  fullName: Warbler.Misc.HubResource<THub>.HubContext
+  fullName.vb: Warbler.Misc.HubResource(Of THub).HubContext
+  nameWithType: HubResource<THub>.HubContext
+  nameWithType.vb: HubResource(Of THub).HubContext
+- uid: Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+  name: OnConnectedAsync(User, String)
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_OnConnectedAsync_Warbler_Models_User_System_String_
+  commentId: M:Warbler.Misc.HubResource`1.OnConnectedAsync(Warbler.Models.User,System.String)
+  fullName: Warbler.Misc.HubResource<THub>.OnConnectedAsync(Warbler.Models.User, System.String)
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnConnectedAsync(Warbler.Models.User, System.String)
+  nameWithType: HubResource<THub>.OnConnectedAsync(User, String)
+  nameWithType.vb: HubResource(Of THub).OnConnectedAsync(User, String)
+- uid: Warbler.Misc.HubResource`1.OnConnectedAsync*
+  name: OnConnectedAsync
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_OnConnectedAsync_
+  commentId: Overload:Warbler.Misc.HubResource`1.OnConnectedAsync
+  fullName: Warbler.Misc.HubResource<THub>.OnConnectedAsync
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnConnectedAsync
+  nameWithType: HubResource<THub>.OnConnectedAsync
+  nameWithType.vb: HubResource(Of THub).OnConnectedAsync
+- uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  name: OnDisconnectedAsync(User, String)
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_OnDisconnectedAsync_Warbler_Models_User_System_String_
+  commentId: M:Warbler.Misc.HubResource`1.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  fullName: Warbler.Misc.HubResource<THub>.OnDisconnectedAsync(Warbler.Models.User, System.String)
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnDisconnectedAsync(Warbler.Models.User, System.String)
+  nameWithType: HubResource<THub>.OnDisconnectedAsync(User, String)
+  nameWithType.vb: HubResource(Of THub).OnDisconnectedAsync(User, String)
+- uid: Warbler.Misc.HubResource`1.OnDisconnectedAsync*
+  name: OnDisconnectedAsync
+  href: api/Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_OnDisconnectedAsync_
+  commentId: Overload:Warbler.Misc.HubResource`1.OnDisconnectedAsync
+  fullName: Warbler.Misc.HubResource<THub>.OnDisconnectedAsync
+  fullName.vb: Warbler.Misc.HubResource(Of THub).OnDisconnectedAsync
+  nameWithType: HubResource<THub>.OnDisconnectedAsync
+  nameWithType.vb: HubResource(Of THub).OnDisconnectedAsync
 - uid: Warbler.Misc.HubResource`2
   name: HubResource<TService, THub>
   href: api/Warbler.Misc.HubResource-2.html
@@ -2494,6 +2645,12 @@ references:
   commentId: Overload:Warbler.Models.User.Channels
   fullName: Warbler.Models.User.Channels
   nameWithType: User.Channels
+- uid: Warbler.Models.User.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Warbler.Models.User.html#Warbler_Models_User_Equals_System_Object_
+  commentId: M:Warbler.Models.User.Equals(System.Object)
+  fullName: Warbler.Models.User.Equals(System.Object)
+  nameWithType: User.Equals(Object)
 - uid: Warbler.Models.User.Equals(Warbler.Models.User)
   name: Equals(User)
   href: api/Warbler.Models.User.html#Warbler_Models_User_Equals_Warbler_Models_User_
@@ -2518,6 +2675,18 @@ references:
   commentId: Overload:Warbler.Models.User.Flag
   fullName: Warbler.Models.User.Flag
   nameWithType: User.Flag
+- uid: Warbler.Models.User.GetHashCode
+  name: GetHashCode()
+  href: api/Warbler.Models.User.html#Warbler_Models_User_GetHashCode
+  commentId: M:Warbler.Models.User.GetHashCode
+  fullName: Warbler.Models.User.GetHashCode()
+  nameWithType: User.GetHashCode()
+- uid: Warbler.Models.User.GetHashCode*
+  name: GetHashCode
+  href: api/Warbler.Models.User.html#Warbler_Models_User_GetHashCode_
+  commentId: Overload:Warbler.Models.User.GetHashCode
+  fullName: Warbler.Models.User.GetHashCode
+  nameWithType: User.GetHashCode
 - uid: Warbler.Models.User.IsOnline
   name: IsOnline
   href: api/Warbler.Models.User.html#Warbler_Models_User_IsOnline
@@ -2542,6 +2711,30 @@ references:
   commentId: Overload:Warbler.Models.User.Memberships
   fullName: Warbler.Models.User.Memberships
   nameWithType: User.Memberships
+- uid: Warbler.Models.User.op_Equality(Warbler.Models.User,Warbler.Models.User)
+  name: Equality(User, User)
+  href: api/Warbler.Models.User.html#Warbler_Models_User_op_Equality_Warbler_Models_User_Warbler_Models_User_
+  commentId: M:Warbler.Models.User.op_Equality(Warbler.Models.User,Warbler.Models.User)
+  fullName: Warbler.Models.User.Equality(Warbler.Models.User, Warbler.Models.User)
+  nameWithType: User.Equality(User, User)
+- uid: Warbler.Models.User.op_Equality*
+  name: Equality
+  href: api/Warbler.Models.User.html#Warbler_Models_User_op_Equality_
+  commentId: Overload:Warbler.Models.User.op_Equality
+  fullName: Warbler.Models.User.Equality
+  nameWithType: User.Equality
+- uid: Warbler.Models.User.op_Inequality(Warbler.Models.User,Warbler.Models.User)
+  name: Inequality(User, User)
+  href: api/Warbler.Models.User.html#Warbler_Models_User_op_Inequality_Warbler_Models_User_Warbler_Models_User_
+  commentId: M:Warbler.Models.User.op_Inequality(Warbler.Models.User,Warbler.Models.User)
+  fullName: Warbler.Models.User.Inequality(Warbler.Models.User, Warbler.Models.User)
+  nameWithType: User.Inequality(User, User)
+- uid: Warbler.Models.User.op_Inequality*
+  name: Inequality
+  href: api/Warbler.Models.User.html#Warbler_Models_User_op_Inequality_
+  commentId: Overload:Warbler.Models.User.op_Inequality
+  fullName: Warbler.Models.User.Inequality
+  nameWithType: User.Inequality
 - uid: Warbler.Models.User.UserName
   name: UserName
   href: api/Warbler.Models.User.html#Warbler_Models_User_UserName
@@ -2788,6 +2981,18 @@ references:
   commentId: Overload:Warbler.Repositories.SqlUserRepository.#ctor
   fullName: Warbler.Repositories.SqlUserRepository.SqlUserRepository
   nameWithType: SqlUserRepository.SqlUserRepository
+- uid: Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)
+  name: FindByNameAsync(String)
+  href: api/Warbler.Repositories.SqlUserRepository.html#Warbler_Repositories_SqlUserRepository_FindByNameAsync_System_String_
+  commentId: M:Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)
+  fullName: Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)
+  nameWithType: SqlUserRepository.FindByNameAsync(String)
+- uid: Warbler.Repositories.SqlUserRepository.FindByNameAsync*
+  name: FindByNameAsync
+  href: api/Warbler.Repositories.SqlUserRepository.html#Warbler_Repositories_SqlUserRepository_FindByNameAsync_
+  commentId: Overload:Warbler.Repositories.SqlUserRepository.FindByNameAsync
+  fullName: Warbler.Repositories.SqlUserRepository.FindByNameAsync
+  nameWithType: SqlUserRepository.FindByNameAsync
 - uid: Warbler.Repositories.SqlUserRepository.IsNewAsync(Warbler.Models.User)
   name: IsNewAsync(User)
   href: api/Warbler.Repositories.SqlUserRepository.html#Warbler_Repositories_SqlUserRepository_IsNewAsync_Warbler_Models_User_
@@ -2800,6 +3005,18 @@ references:
   commentId: Overload:Warbler.Repositories.SqlUserRepository.IsNewAsync
   fullName: Warbler.Repositories.SqlUserRepository.IsNewAsync
   nameWithType: SqlUserRepository.IsNewAsync
+- uid: Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  name: SetOnlineAsync(User, Boolean)
+  href: api/Warbler.Repositories.SqlUserRepository.html#Warbler_Repositories_SqlUserRepository_SetOnlineAsync_Warbler_Models_User_System_Boolean_
+  commentId: M:Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  fullName: Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User, System.Boolean)
+  nameWithType: SqlUserRepository.SetOnlineAsync(User, Boolean)
+- uid: Warbler.Repositories.SqlUserRepository.SetOnlineAsync*
+  name: SetOnlineAsync
+  href: api/Warbler.Repositories.SqlUserRepository.html#Warbler_Repositories_SqlUserRepository_SetOnlineAsync_
+  commentId: Overload:Warbler.Repositories.SqlUserRepository.SetOnlineAsync
+  fullName: Warbler.Repositories.SqlUserRepository.SetOnlineAsync
+  nameWithType: SqlUserRepository.SetOnlineAsync
 - uid: Warbler.Services
   name: Warbler.Services
   href: api/Warbler.Services.html
@@ -2872,30 +3089,45 @@ references:
   commentId: T:Warbler.Services.ChatService
   fullName: Warbler.Services.ChatService
   nameWithType: ChatService
-- uid: Warbler.Services.ChatService.OnConnected(Warbler.Models.User,System.String)
-  name: OnConnected(User, String)
-  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnConnected_Warbler_Models_User_System_String_
-  commentId: M:Warbler.Services.ChatService.OnConnected(Warbler.Models.User,System.String)
-  fullName: Warbler.Services.ChatService.OnConnected(Warbler.Models.User, System.String)
-  nameWithType: ChatService.OnConnected(User, String)
-- uid: Warbler.Services.ChatService.OnConnected*
-  name: OnConnected
-  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnConnected_
-  commentId: Overload:Warbler.Services.ChatService.OnConnected
-  fullName: Warbler.Services.ChatService.OnConnected
-  nameWithType: ChatService.OnConnected
-- uid: Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User,System.String)
-  name: OnDisconnected(User, String)
-  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnDisconnected_Warbler_Models_User_System_String_
-  commentId: M:Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User,System.String)
-  fullName: Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User, System.String)
-  nameWithType: ChatService.OnDisconnected(User, String)
-- uid: Warbler.Services.ChatService.OnDisconnected*
-  name: OnDisconnected
-  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnDisconnected_
-  commentId: Overload:Warbler.Services.ChatService.OnDisconnected
-  fullName: Warbler.Services.ChatService.OnDisconnected
-  nameWithType: ChatService.OnDisconnected
+- uid: Warbler.Services.ChatService.#ctor(IHubContext{Warbler.Hubs.ChatHub},ILogger{Warbler.Services.ChatService})
+  name: ChatService(IHubContext<ChatHub>, ILogger<ChatService>)
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService__ctor_IHubContext_Warbler_Hubs_ChatHub__ILogger_Warbler_Services_ChatService__
+  commentId: M:Warbler.Services.ChatService.#ctor(IHubContext{Warbler.Hubs.ChatHub},ILogger{Warbler.Services.ChatService})
+  name.vb: ChatService(IHubContext(Of ChatHub), ILogger(Of ChatService))
+  fullName: Warbler.Services.ChatService.ChatService(IHubContext<Warbler.Hubs.ChatHub>, ILogger<Warbler.Services.ChatService>)
+  fullName.vb: Warbler.Services.ChatService.ChatService(IHubContext(Of Warbler.Hubs.ChatHub), ILogger(Of Warbler.Services.ChatService))
+  nameWithType: ChatService.ChatService(IHubContext<ChatHub>, ILogger<ChatService>)
+  nameWithType.vb: ChatService.ChatService(IHubContext(Of ChatHub), ILogger(Of ChatService))
+- uid: Warbler.Services.ChatService.#ctor*
+  name: ChatService
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService__ctor_
+  commentId: Overload:Warbler.Services.ChatService.#ctor
+  fullName: Warbler.Services.ChatService.ChatService
+  nameWithType: ChatService.ChatService
+- uid: Warbler.Services.ChatService.OnConnectedAsync(Warbler.Models.User,System.String)
+  name: OnConnectedAsync(User, String)
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnConnectedAsync_Warbler_Models_User_System_String_
+  commentId: M:Warbler.Services.ChatService.OnConnectedAsync(Warbler.Models.User,System.String)
+  fullName: Warbler.Services.ChatService.OnConnectedAsync(Warbler.Models.User, System.String)
+  nameWithType: ChatService.OnConnectedAsync(User, String)
+- uid: Warbler.Services.ChatService.OnConnectedAsync*
+  name: OnConnectedAsync
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnConnectedAsync_
+  commentId: Overload:Warbler.Services.ChatService.OnConnectedAsync
+  fullName: Warbler.Services.ChatService.OnConnectedAsync
+  nameWithType: ChatService.OnConnectedAsync
+- uid: Warbler.Services.ChatService.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  name: OnDisconnectedAsync(User, String)
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnDisconnectedAsync_Warbler_Models_User_System_String_
+  commentId: M:Warbler.Services.ChatService.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  fullName: Warbler.Services.ChatService.OnDisconnectedAsync(Warbler.Models.User, System.String)
+  nameWithType: ChatService.OnDisconnectedAsync(User, String)
+- uid: Warbler.Services.ChatService.OnDisconnectedAsync*
+  name: OnDisconnectedAsync
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnDisconnectedAsync_
+  commentId: Overload:Warbler.Services.ChatService.OnDisconnectedAsync
+  fullName: Warbler.Services.ChatService.OnDisconnectedAsync
+  nameWithType: ChatService.OnDisconnectedAsync
 - uid: Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)
   name: With(WarblerDbContext)
   href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_With_Warbler_Misc_WarblerDbContext_
@@ -2938,6 +3170,18 @@ references:
   commentId: Overload:Warbler.Services.MembershipService.AllChannelsForAsync
   fullName: Warbler.Services.MembershipService.AllChannelsForAsync
   nameWithType: MembershipService.AllChannelsForAsync
+- uid: Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.Channel)
+  name: AllMembershipsForAsync(Channel)
+  href: api/Warbler.Services.MembershipService.html#Warbler_Services_MembershipService_AllMembershipsForAsync_Warbler_Models_Channel_
+  commentId: M:Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.Channel)
+  fullName: Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.Channel)
+  nameWithType: MembershipService.AllMembershipsForAsync(Channel)
+- uid: Warbler.Services.MembershipService.AllMembershipsForAsync*
+  name: AllMembershipsForAsync
+  href: api/Warbler.Services.MembershipService.html#Warbler_Services_MembershipService_AllMembershipsForAsync_
+  commentId: Overload:Warbler.Services.MembershipService.AllMembershipsForAsync
+  fullName: Warbler.Services.MembershipService.AllMembershipsForAsync
+  nameWithType: MembershipService.AllMembershipsForAsync
 - uid: Warbler.Services.MessageService
   name: MessageService
   href: api/Warbler.Services.MessageService.html
@@ -2974,18 +3218,33 @@ references:
   commentId: T:Warbler.Services.ProximityService
   fullName: Warbler.Services.ProximityService
   nameWithType: ProximityService
-- uid: Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)
-  name: OnDisconnected(User)
-  href: api/Warbler.Services.ProximityService.html#Warbler_Services_ProximityService_OnDisconnected_Warbler_Models_User_
-  commentId: M:Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)
-  fullName: Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)
-  nameWithType: ProximityService.OnDisconnected(User)
-- uid: Warbler.Services.ProximityService.OnDisconnected*
-  name: OnDisconnected
-  href: api/Warbler.Services.ProximityService.html#Warbler_Services_ProximityService_OnDisconnected_
-  commentId: Overload:Warbler.Services.ProximityService.OnDisconnected
-  fullName: Warbler.Services.ProximityService.OnDisconnected
-  nameWithType: ProximityService.OnDisconnected
+- uid: Warbler.Services.ProximityService.#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})
+  name: ProximityService(IHubContext<ProximityHub>, IOptions<ApiKeys>, ILogger<ProximityService>)
+  href: api/Warbler.Services.ProximityService.html#Warbler_Services_ProximityService__ctor_IHubContext_Warbler_Hubs_ProximityHub__IOptions_Warbler_Misc_ApiKeys__ILogger_Warbler_Services_ProximityService__
+  commentId: M:Warbler.Services.ProximityService.#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})
+  name.vb: ProximityService(IHubContext(Of ProximityHub), IOptions(Of ApiKeys), ILogger(Of ProximityService))
+  fullName: Warbler.Services.ProximityService.ProximityService(IHubContext<Warbler.Hubs.ProximityHub>, IOptions<Warbler.Misc.ApiKeys>, ILogger<Warbler.Services.ProximityService>)
+  fullName.vb: Warbler.Services.ProximityService.ProximityService(IHubContext(Of Warbler.Hubs.ProximityHub), IOptions(Of Warbler.Misc.ApiKeys), ILogger(Of Warbler.Services.ProximityService))
+  nameWithType: ProximityService.ProximityService(IHubContext<ProximityHub>, IOptions<ApiKeys>, ILogger<ProximityService>)
+  nameWithType.vb: ProximityService.ProximityService(IHubContext(Of ProximityHub), IOptions(Of ApiKeys), ILogger(Of ProximityService))
+- uid: Warbler.Services.ProximityService.#ctor*
+  name: ProximityService
+  href: api/Warbler.Services.ProximityService.html#Warbler_Services_ProximityService__ctor_
+  commentId: Overload:Warbler.Services.ProximityService.#ctor
+  fullName: Warbler.Services.ProximityService.ProximityService
+  nameWithType: ProximityService.ProximityService
+- uid: Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
+  name: OnDisconnectedAsync(String)
+  href: api/Warbler.Services.ProximityService.html#Warbler_Services_ProximityService_OnDisconnectedAsync_System_String_
+  commentId: M:Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
+  fullName: Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
+  nameWithType: ProximityService.OnDisconnectedAsync(String)
+- uid: Warbler.Services.ProximityService.OnDisconnectedAsync*
+  name: OnDisconnectedAsync
+  href: api/Warbler.Services.ProximityService.html#Warbler_Services_ProximityService_OnDisconnectedAsync_
+  commentId: Overload:Warbler.Services.ProximityService.OnDisconnectedAsync
+  fullName: Warbler.Services.ProximityService.OnDisconnectedAsync
+  nameWithType: ProximityService.OnDisconnectedAsync
 - uid: Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)
   name: ProximitySearchAsync(User, String, Location)
   href: api/Warbler.Services.ProximityService.html#Warbler_Services_ProximityService_ProximitySearchAsync_Warbler_Models_User_System_String_Location_
@@ -3094,6 +3353,18 @@ references:
   commentId: Overload:Warbler.Services.UserService.#ctor
   fullName: Warbler.Services.UserService.UserService
   nameWithType: UserService.UserService
+- uid: Warbler.Services.UserService.FindByNameAsync(System.String)
+  name: FindByNameAsync(String)
+  href: api/Warbler.Services.UserService.html#Warbler_Services_UserService_FindByNameAsync_System_String_
+  commentId: M:Warbler.Services.UserService.FindByNameAsync(System.String)
+  fullName: Warbler.Services.UserService.FindByNameAsync(System.String)
+  nameWithType: UserService.FindByNameAsync(String)
+- uid: Warbler.Services.UserService.FindByNameAsync*
+  name: FindByNameAsync
+  href: api/Warbler.Services.UserService.html#Warbler_Services_UserService_FindByNameAsync_
+  commentId: Overload:Warbler.Services.UserService.FindByNameAsync
+  fullName: Warbler.Services.UserService.FindByNameAsync
+  nameWithType: UserService.FindByNameAsync
 - uid: Warbler.Services.UserService.IsNewAsync(Warbler.Models.User)
   name: IsNewAsync(User)
   href: api/Warbler.Services.UserService.html#Warbler_Services_UserService_IsNewAsync_Warbler_Models_User_
@@ -3106,6 +3377,18 @@ references:
   commentId: Overload:Warbler.Services.UserService.IsNewAsync
   fullName: Warbler.Services.UserService.IsNewAsync
   nameWithType: UserService.IsNewAsync
+- uid: Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  name: SetOnlineAsync(User, Boolean)
+  href: api/Warbler.Services.UserService.html#Warbler_Services_UserService_SetOnlineAsync_Warbler_Models_User_System_Boolean_
+  commentId: M:Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  fullName: Warbler.Services.UserService.SetOnlineAsync(Warbler.Models.User, System.Boolean)
+  nameWithType: UserService.SetOnlineAsync(User, Boolean)
+- uid: Warbler.Services.UserService.SetOnlineAsync*
+  name: SetOnlineAsync
+  href: api/Warbler.Services.UserService.html#Warbler_Services_UserService_SetOnlineAsync_
+  commentId: Overload:Warbler.Services.UserService.SetOnlineAsync
+  fullName: Warbler.Services.UserService.SetOnlineAsync
+  nameWithType: UserService.SetOnlineAsync
 - uid: Warbler.Startup
   name: Startup
   href: api/Warbler.Startup.html
@@ -3124,12 +3407,12 @@ references:
   commentId: Overload:Warbler.Startup.#ctor
   fullName: Warbler.Startup.Startup
   nameWithType: Startup.Startup
-- uid: Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory,System.IServiceProvider)
-  name: Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory, IServiceProvider)
-  href: api/Warbler.Startup.html#Warbler_Startup_Configure_IApplicationBuilder_IHostingEnvironment_ILoggerFactory_System_IServiceProvider_
-  commentId: M:Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory,System.IServiceProvider)
-  fullName: Warbler.Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory, System.IServiceProvider)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory, IServiceProvider)
+- uid: Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
+  name: Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
+  href: api/Warbler.Startup.html#Warbler_Startup_Configure_IApplicationBuilder_IHostingEnvironment_System_IServiceProvider_
+  commentId: M:Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
+  fullName: Warbler.Startup.Configure(IApplicationBuilder, IHostingEnvironment, System.IServiceProvider)
+  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
 - uid: Warbler.Startup.Configure*
   name: Configure
   href: api/Warbler.Startup.html#Warbler_Startup_Configure_
@@ -3148,12 +3431,6 @@ references:
   commentId: Overload:Warbler.Startup.ConfigureServices
   fullName: Warbler.Startup.ConfigureServices
   nameWithType: Startup.ConfigureServices
-- uid: Warbler.Startup.ConnectionManager
-  name: ConnectionManager
-  href: api/Warbler.Startup.html#Warbler_Startup_ConnectionManager
-  commentId: F:Warbler.Startup.ConnectionManager
-  fullName: Warbler.Startup.ConnectionManager
-  nameWithType: Startup.ConnectionManager
 - uid: Warbler.Startup.Main(System.String[])
   name: Main(String[])
   href: api/Warbler.Startup.html#Warbler_Startup_Main_System_String___
@@ -3181,6 +3458,66 @@ references:
   commentId: N:Warbler.Tests.Repositories
   fullName: Warbler.Tests.Repositories
   nameWithType: Warbler.Tests.Repositories
+- uid: Warbler.Tests.Repositories.TestSqlChannelRepository
+  name: TestSqlChannelRepository
+  href: api/Warbler.Tests.Repositories.TestSqlChannelRepository.html
+  commentId: T:Warbler.Tests.Repositories.TestSqlChannelRepository
+  fullName: Warbler.Tests.Repositories.TestSqlChannelRepository
+  nameWithType: TestSqlChannelRepository
+- uid: Warbler.Tests.Repositories.TestSqlChannelRepository.UpdateAsync_Should_Update_Channel
+  name: UpdateAsync_Should_Update_Channel()
+  href: api/Warbler.Tests.Repositories.TestSqlChannelRepository.html#Warbler_Tests_Repositories_TestSqlChannelRepository_UpdateAsync_Should_Update_Channel
+  commentId: M:Warbler.Tests.Repositories.TestSqlChannelRepository.UpdateAsync_Should_Update_Channel
+  fullName: Warbler.Tests.Repositories.TestSqlChannelRepository.UpdateAsync_Should_Update_Channel()
+  nameWithType: TestSqlChannelRepository.UpdateAsync_Should_Update_Channel()
+- uid: Warbler.Tests.Repositories.TestSqlChannelRepository.UpdateAsync_Should_Update_Channel*
+  name: UpdateAsync_Should_Update_Channel
+  href: api/Warbler.Tests.Repositories.TestSqlChannelRepository.html#Warbler_Tests_Repositories_TestSqlChannelRepository_UpdateAsync_Should_Update_Channel_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlChannelRepository.UpdateAsync_Should_Update_Channel
+  fullName: Warbler.Tests.Repositories.TestSqlChannelRepository.UpdateAsync_Should_Update_Channel
+  nameWithType: TestSqlChannelRepository.UpdateAsync_Should_Update_Channel
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  name: TestSqlMembershipRepository
+  href: api/Warbler.Tests.Repositories.TestSqlMembershipRepository.html
+  commentId: T:Warbler.Tests.Repositories.TestSqlMembershipRepository
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  nameWithType: TestSqlMembershipRepository
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  name: AllForChannel_Should_Return_Users_That_Are_Members()
+  href: api/Warbler.Tests.Repositories.TestSqlMembershipRepository.html#Warbler_Tests_Repositories_TestSqlMembershipRepository_AllForChannel_Should_Return_Users_That_Are_Members
+  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members()
+  nameWithType: TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members()
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members*
+  name: AllForChannel_Should_Return_Users_That_Are_Members
+  href: api/Warbler.Tests.Repositories.TestSqlMembershipRepository.html#Warbler_Tests_Repositories_TestSqlMembershipRepository_AllForChannel_Should_Return_Users_That_Are_Members_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  nameWithType: TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  name: AllForUser_Should_Return_Channels_Where_User_Is_Member()
+  href: api/Warbler.Tests.Repositories.TestSqlMembershipRepository.html#Warbler_Tests_Repositories_TestSqlMembershipRepository_AllForUser_Should_Return_Channels_Where_User_Is_Member
+  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member()
+  nameWithType: TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member()
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member*
+  name: AllForUser_Should_Return_Channels_Where_User_Is_Member
+  href: api/Warbler.Tests.Repositories.TestSqlMembershipRepository.html#Warbler_Tests_Repositories_TestSqlMembershipRepository_AllForUser_Should_Return_Channels_Where_User_Is_Member_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  nameWithType: TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  name: CreateUniversity()
+  href: api/Warbler.Tests.Repositories.TestSqlMembershipRepository.html#Warbler_Tests_Repositories_TestSqlMembershipRepository_CreateUniversity
+  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity()
+  nameWithType: TestSqlMembershipRepository.CreateUniversity()
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity*
+  name: CreateUniversity
+  href: api/Warbler.Tests.Repositories.TestSqlMembershipRepository.html#Warbler_Tests_Repositories_TestSqlMembershipRepository_CreateUniversity_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  nameWithType: TestSqlMembershipRepository.CreateUniversity
 - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository
   name: TestSqlUniversityRepository
   href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html
@@ -3223,6 +3560,48 @@ references:
   commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.SaveASync_Should_Save_Changes_On_Context
   fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.SaveASync_Should_Save_Changes_On_Context
   nameWithType: TestSqlUniversityRepository.SaveASync_Should_Save_Changes_On_Context
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository
+  name: TestSqlUserRepository
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html
+  commentId: T:Warbler.Tests.Repositories.TestSqlUserRepository
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository
+  nameWithType: TestSqlUserRepository
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
+  name: CreateUniversity()
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_CreateUniversity
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity()
+  nameWithType: TestSqlUserRepository.CreateUniversity()
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity*
+  name: CreateUniversity
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_CreateUniversity_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
+  nameWithType: TestSqlUserRepository.CreateUniversity
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  name: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
+  nameWithType: TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel*
+  name: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  nameWithType: TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  name: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
+  nameWithType: TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created*
+  name: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_IsNewAsync_Should_Be_True_If_User_Was_Recently_Created_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  nameWithType: TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
 - uid: Warbler.Tests.Test
   name: Test
   href: api/Warbler.Tests.Test.html

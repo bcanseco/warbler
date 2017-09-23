@@ -1,15 +1,12 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Warbler.Hubs;
@@ -34,10 +31,11 @@ namespace Warbler
 
         private IConfigurationRoot Configuration { get; }
 
-        public static void Main(string[] args) => BuildWebHost(args).Run();
+        public static void Main(string[] args)
+            => BuildWebHost(args).Run();
 
-        private static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        private static IWebHost BuildWebHost(string[] args)
+            => WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
 
@@ -93,8 +91,10 @@ namespace Warbler
 
             services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = "/Account/LogIn";
-                options.ExpireTimeSpan = TimeSpan.FromDays(150);
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Expiration = TimeSpan.FromDays(150);
+                options.SlidingExpiration = true;
             });
 
             services.AddAuthentication();
@@ -113,33 +113,23 @@ namespace Warbler
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
-                app.UseBrowserLink();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true,
+                    ReactHotModuleReplacement = true
+                });
+
+                serviceProvider.GetService<WarblerDbContext>().Database.EnsureCreated();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles(); // wwwroot (node_modules)
-
-            var folders = Directory.GetDirectories(".", "Scripts", SearchOption.AllDirectories)
-                .Concat(Directory.GetDirectories(".", "Styles", SearchOption.AllDirectories))
-                .Where(f => !f.Contains("node_modules"))
-                .Select(f => f.Substring(1, f.Length - 1).Replace(@"\", "/")).ToList();
-            
-            folders.Add("/Graphics"); // Winter's logos
-
-            foreach (var folder in folders)
-            {
-                app.UseStaticFiles(new StaticFileOptions
-                {
-                    FileProvider = new PhysicalFileProvider(
-                        $"{Directory.GetCurrentDirectory()}{folder}"),
-                    RequestPath = new PathString(folder)
-                });
-            }
+            app.UseStaticFiles();
 
             app.UseAuthentication();
+
             app.UseWebSockets();
             app.UseSignalR(routes =>
             {
@@ -157,12 +147,6 @@ namespace Warbler
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            
-            if (env.IsDevelopment())
-            {
-                var context = serviceProvider.GetService<WarblerDbContext>();
-                context.Database.EnsureCreated();
-            }
         }
     }
 }

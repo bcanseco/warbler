@@ -6,7 +6,9 @@ items:
   parent: Warbler.Repositories
   children:
   - Warbler.Repositories.SqlUserRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  - Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)
   - Warbler.Repositories.SqlUserRepository.IsNewAsync(Warbler.Models.User)
+  - Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
   langs:
   - csharp
   - vb
@@ -17,7 +19,7 @@ items:
   source:
     id: SqlUserRepository
     path: ''
-    startLine: 2347
+    startLine: 2576
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -60,7 +62,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2351
+    startLine: 2580
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -89,7 +91,7 @@ items:
   source:
     id: IsNewAsync
     path: ''
-    startLine: 2356
+    startLine: 2585
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -104,6 +106,74 @@ items:
   overload: Warbler.Repositories.SqlUserRepository.IsNewAsync*
   implements:
   - Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  commentId: M:Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  id: SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  parent: Warbler.Repositories.SqlUserRepository
+  langs:
+  - csharp
+  - vb
+  name: SetOnlineAsync(User, Boolean)
+  nameWithType: SqlUserRepository.SetOnlineAsync(User, Boolean)
+  fullName: Warbler.Repositories.SqlUserRepository.SetOnlineAsync(Warbler.Models.User, System.Boolean)
+  type: Method
+  source:
+    id: SetOnlineAsync
+    path: ''
+    startLine: 2594
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task SetOnlineAsync(User user, bool isOnline)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+    - id: isOnline
+      type: System.Boolean
+    return:
+      type: Task
+    content.vb: Public Function SetOnlineAsync(user As User, isOnline As Boolean) As Task
+  overload: Warbler.Repositories.SqlUserRepository.SetOnlineAsync*
+  implements:
+  - Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)
+  commentId: M:Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)
+  id: FindByNameAsync(System.String)
+  parent: Warbler.Repositories.SqlUserRepository
+  langs:
+  - csharp
+  - vb
+  name: FindByNameAsync(String)
+  nameWithType: SqlUserRepository.FindByNameAsync(String)
+  fullName: Warbler.Repositories.SqlUserRepository.FindByNameAsync(System.String)
+  type: Method
+  source:
+    id: FindByNameAsync
+    path: ''
+    startLine: 2600
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task<User> FindByNameAsync(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+    return:
+      type: Task{Warbler.Models.User}
+    content.vb: Public Function FindByNameAsync(userName As String) As Task(Of User)
+  overload: Warbler.Repositories.SqlUserRepository.FindByNameAsync*
+  implements:
+  - Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -573,6 +643,170 @@ references:
   - name: ''
     nameWithType: ''
     fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Repositories.SqlUserRepository.SetOnlineAsync*
+  commentId: Overload:Warbler.Repositories.SqlUserRepository.SetOnlineAsync
+  isExternal: false
+  name: SetOnlineAsync
+  nameWithType: SqlUserRepository.SetOnlineAsync
+  fullName: Warbler.Repositories.SqlUserRepository.SetOnlineAsync
+- uid: Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  commentId: M:Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+  parent: Warbler.Interfaces.IUserRepository
+  isExternal: true
+  name: SetOnlineAsync(User, Boolean)
+  nameWithType: IUserRepository.SetOnlineAsync(User, Boolean)
+  fullName: Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User, System.Boolean)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+    name: SetOnlineAsync
+    nameWithType: IUserRepository.SetOnlineAsync
+    fullName: Warbler.Interfaces.IUserRepository.SetOnlineAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)
+    name: SetOnlineAsync
+    nameWithType: IUserRepository.SetOnlineAsync
+    fullName: Warbler.Interfaces.IUserRepository.SetOnlineAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Repositories.SqlUserRepository.FindByNameAsync*
+  commentId: Overload:Warbler.Repositories.SqlUserRepository.FindByNameAsync
+  isExternal: false
+  name: FindByNameAsync
+  nameWithType: SqlUserRepository.FindByNameAsync
+  fullName: Warbler.Repositories.SqlUserRepository.FindByNameAsync
+- uid: Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+  commentId: M:Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+  parent: Warbler.Interfaces.IUserRepository
+  isExternal: true
+  name: FindByNameAsync(String)
+  nameWithType: IUserRepository.FindByNameAsync(String)
+  fullName: Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+    name: FindByNameAsync
+    nameWithType: IUserRepository.FindByNameAsync
+    fullName: Warbler.Interfaces.IUserRepository.FindByNameAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)
+    name: FindByNameAsync
+    nameWithType: IUserRepository.FindByNameAsync
+    fullName: Warbler.Interfaces.IUserRepository.FindByNameAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Task{Warbler.Models.User}
+  commentId: '!:Task{Warbler.Models.User}'
+  definition: Task`1
+  name: Task<User>
+  nameWithType: Task<User>
+  fullName: Task<Warbler.Models.User>
+  nameWithType.vb: Task(Of User)
+  fullName.vb: Task(Of Warbler.Models.User)
+  name.vb: Task(Of User)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
   - name: )
     nameWithType: )
     fullName: )

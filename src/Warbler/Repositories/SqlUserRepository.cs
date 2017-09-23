@@ -26,5 +26,15 @@ namespace Warbler.Repositories
 
             return membership == null;
         }
+
+
+        public async Task SetOnlineAsync(User user, bool isOnline)
+        {
+            user.IsOnline = isOnline;
+            await Context.SaveChangesAsync();
+        }
+
+        public async Task<User> FindByNameAsync(string userName)
+            => await Context.Users.SingleAsync(u => u.UserName == userName);
     }
 }

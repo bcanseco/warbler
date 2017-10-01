@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GoogleApi;
 using GoogleApi.Entities.Common;
-using GoogleApi.Entities.Places.Common.Enums;
+using GoogleApi.Entities.Common.Enums;
 using GoogleApi.Entities.Places.Search.NearBy.Request;
 using GoogleApi.Entities.Places.Search.NearBy.Response;
 using Microsoft.AspNetCore.SignalR;
@@ -16,7 +16,6 @@ using Warbler.Hubs;
 using Warbler.Models;
 using Warbler.Misc;
 using Warbler.Repositories;
-using static GoogleApi.Entities.Places.Common.Enums.PlaceLocationType;
 
 namespace Warbler.Services
 {
@@ -136,8 +135,8 @@ namespace Warbler.Services
 
             // Some results are mistagged; this filter hopefully reduces misses/false-positives
             return response.Results
-                .Where(u => (u.Is(PlaceLocationType.University) || u.Is(Library))
-                            && !(!u.Is(PlaceLocationType.University) && u.Is(School)))
+                .Where(u => (u.Is(PlaceLocationType.University) || u.Is(PlaceLocationType.Library))
+                            && !(!u.Is(PlaceLocationType.University) && u.Is(PlaceLocationType.School)))
                 .Where(u => !u.IsDepartment())
                 .Where(u => u.Rating > 0.0)
                 .OrderBy(u => u.Name)

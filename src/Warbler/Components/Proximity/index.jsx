@@ -14,6 +14,7 @@ export default class Proximity extends React.Component {
     this.onLocationSuccess = this.onLocationSuccess.bind(this);
     this.onLocationError = this.onLocationError.bind(this);
     this.receiveNearbyUniversities = this.receiveNearbyUniversities.bind(this);
+    this.onSuccessfulJoin = this.onSuccessfulJoin.bind(this);
     this.onConnectionClosed = this.onConnectionClosed.bind(this);
 
     this.state = {

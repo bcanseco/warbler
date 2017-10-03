@@ -14,6 +14,7 @@ namespace Warbler.Services
 {
     /// <summary>
     ///   Used by the <see cref="ChatHub"/> for business logic.
+    ///   TODO: Refactor and add tests for sanity
     /// </summary>
     public class ChatService : HubResource<ChatHub>
     {
@@ -46,9 +47,7 @@ namespace Warbler.Services
             var onFirstDevice = await base.OnConnectedAsync(user, connectionId);
             var userChannels = await MembershipService.AllChannelsForAsync(user);
 
-            /* This is what the client is sent on connection; will contain all
-             * info necessary for the UI to initially populate the chat view. */
-            var initialPayload = new List<University>();
+            var payloadBuilder = new Dictionary<Server, HashSet<Channel>>();
 
             // Iterate through channel objects (no Messages loaded on each.
             foreach (var channel in userChannels)
@@ -77,12 +76,24 @@ namespace Warbler.Services
 
                 // Regardless if the channel was previously watched or not, we need to update memberships
                 watchedChannel.Memberships = await MembershipService.AllMembershipsForAsync(watchedChannel);
-                
-                initialPayload.Add(watchedChannel.Server.University);
+
+                // Add this channel to the dictionary under the server it belongs to
+                if (!payloadBuilder.ContainsKey(watchedChannel.Server))
+                {
+                    payloadBuilder[watchedChannel.Server] = new HashSet<Channel>();
+                }
+                payloadBuilder[watchedChannel.Server].Add(watchedChannel);
             }
+            
+            // For each server, attach its corresponding channel collection and return its university
+            var initialPayload = payloadBuilder.Keys.Select(server =>
+            {
+                server.Channels = payloadBuilder[server];
+                return server.University;
+            }).ToList();
 
             await HubContext.Clients.Client(connectionId)
-                .InvokeAsync("receiveInitialPayload", initialPayload.Distinct());
+                .InvokeAsync("receiveInitialPayload", initialPayload);
         }
 
         /// <summary>

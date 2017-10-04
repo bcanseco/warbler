@@ -87,8 +87,13 @@
 
             </div>
         </div>
+        <div class="col-md-2 backButtonDiv">
+           <a href="http://localhost:59294/chat" class="button">Return</a>
+        </div>
     </div>
 </div>
+
+@Html.Hidden("RedirectTo", Url.Action("Chat"))
 
 @section scripts {
     <script src="~/lib/signalr/jquery.signalR.min.js"></script>

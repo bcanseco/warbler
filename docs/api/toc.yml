@@ -13,6 +13,8 @@
     name: ChatController
   - uid: Warbler.Controllers.DevController
     name: DevController
+  - uid: Warbler.Controllers.DocumentsController
+    name: DocumentsController
   - uid: Warbler.Controllers.HomeController
     name: HomeController
   - uid: Warbler.Controllers.ManageController
@@ -27,6 +29,8 @@
 - uid: Warbler.Extensions
   name: Warbler.Extensions
   items:
+  - uid: Warbler.Extensions.HtmlHelperExtensions
+    name: HtmlHelperExtensions
   - uid: Warbler.Extensions.NearbyResultExtensions
     name: NearbyResultExtensions
 - uid: Warbler.Hubs
@@ -56,11 +60,13 @@
 - uid: Warbler.Misc
   name: Warbler.Misc
   items:
+  - uid: Warbler.Misc.ApiKeys
+    name: ApiKeys
   - uid: Warbler.Misc.ConnectionMapping
     name: ConnectionMapping
-  - uid: Warbler.Misc.HubResource`2
-    name: HubResource<TService, THub>
-    name.vb: HubResource(Of TService, THub)
+  - uid: Warbler.Misc.HubResource`1
+    name: HubResource<THub>
+    name.vb: HubResource(Of THub)
   - uid: Warbler.Misc.WarblerDbContext
     name: WarblerDbContext
 - uid: Warbler.Models
@@ -138,8 +144,6 @@
     name: SqlMembershipRepository
   - uid: Warbler.Repositories.SqlMessageRepository
     name: SqlMessageRepository
-  - uid: Warbler.Repositories.SqlSampleRepository
-    name: SqlSampleRepository
   - uid: Warbler.Repositories.SqlUniversityRepository
     name: SqlUniversityRepository
   - uid: Warbler.Repositories.SqlUserRepository
@@ -166,5 +170,11 @@
 - uid: Warbler.Tests.Repositories
   name: Warbler.Tests.Repositories
   items:
+  - uid: Warbler.Tests.Repositories.TestSqlChannelRepository
+    name: TestSqlChannelRepository
+  - uid: Warbler.Tests.Repositories.TestSqlMembershipRepository
+    name: TestSqlMembershipRepository
   - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository
     name: TestSqlUniversityRepository
+  - uid: Warbler.Tests.Repositories.TestSqlUserRepository
+    name: TestSqlUserRepository

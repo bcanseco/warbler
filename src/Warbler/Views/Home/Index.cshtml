@@ -1,49 +1,43 @@
 ﻿@{
-    ViewData["Title"] = "Warbler";
+    ViewData["Title"] = "Home";
 }
 
-@section styles {
-    <link rel="stylesheet" href="~/Styles/site.css" />
-}
-
-<div class="jumbotron jumbotron-fluid titleCard" style="padding-top: 2rem; padding-bottom: 2rem;">
-    <div class="container" style="padding-left: 30px">
-        <img src="~/Graphics/logo.png" alt="Warbler" style="width: 400px; max-width: 100%;"/>
-        <p class="lead">Auto-generated, geolocation based chatrooms for universities.</p>
-    </div>
+<div class="jumbotron jumbotron-fluid title-card">
+  <div class="container text-center">
+    <img src="~/dist/logo.png" alt="Warbler" style="width: 400px; max-width: 100%; user-select: none; -webkit-user-drag: none;"/>
+    <p class="lead">Auto-generated, geolocation based chatrooms for universities.</p>
+  </div>
 </div>
 
-<div class="row" style="margin-bottom: 32px">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-block">
-                <h4 class="card-title">What is Warbler?</h4>
-                <h6 class="card-subtitle mb-2 text-muted">Software-as-a-service</h6>
-                <p class="card-text">
-                    Our goal is to develop a platform that allows any university student in any region
-                    to connect with other students. We will accomplish this with chatrooms specifically tied to his/her university
-                    -- all with absolutely no manual setup or maintenance required by the student nor the university.
-                </p>
-                <a class="card-link" asp-controller="Home" asp-action="Documents">Our documents</a>
-                <a href="https://github.com/bcanseco/warbler" class="card-link">Source code (private)</a>
-            </div>
-        </div>
+<div id="home-content" class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">What is Warbler?</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Software-as-a-service</h6>
+        <p class="card-text">
+            Our goal is to develop a platform that allows any university student in any region
+            to connect with other students. We will accomplish this with chatrooms specifically tied to his/her university
+            -- all with absolutely no manual setup or maintenance required by the student nor the university.
+        </p>
+        <a class="card-link" asp-controller="Documents" asp-action="Index">Our documents</a>
+        <a href="https://github.com/bcanseco/warbler" class="card-link">Source code (private for now)</a>
+      </div>
     </div>
-    <div class="col-md-6">
-        <div class="card" style="height: 100%">
-            <div class="card-block">
-                <h4 class="card-title">Who are you?</h4>
-                <h6 class="card-subtitle mb-2 text-muted">Team members:</h6>
-                <p class="card-text">
-                    <ul>
-                        <li>Borja Canseco <span class="badge badge-default">b@my.fit.edu</span></li>
-                        <li>Billy Harris <span class="badge badge-default">harrisw2014@my.fit.edu</span></li>
-                        <li>Waylon Hudson <span class="badge badge-default">whudson2014@my.fit.edu</span></li>
-                        <li>Winter Yang <span class="badge badge-default">xiaohan2014@my.fit.edu</span></li>
-                        <li><strong>Advisor:</strong> Walter P. Bond, PhD <span class="badge badge-default">pbond@fit.edu</span></li>
-                    </ul>
-                </p>
-            </div>
-        </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Who are you?</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Team members:</h6>
+        <ul>
+            <li>Borja Canseco <span class="badge badge-default">b@my.fit.edu</span></li>
+            <li>Billy Harris <span class="badge badge-default">harrisw2014@my.fit.edu</span></li>
+            <li>Waylon Hudson <span class="badge badge-default">whudson2014@my.fit.edu</span></li>
+            <li>Winter Yang <span class="badge badge-default">xiaohan2014@my.fit.edu</span></li>
+            <li><strong>Advisor:</strong> Walter P. Bond, PhD <span class="badge badge-default">pbond@fit.edu</span></li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>

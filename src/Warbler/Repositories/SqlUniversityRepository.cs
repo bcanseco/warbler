@@ -77,10 +77,10 @@ namespace Warbler.Repositories
             {
                 return await AtUserLevel().FirstAsync(u => u.PlaceId == placeId);
             }
-            catch (InvalidOperationException)
+            catch (InvalidOperationException ex)
             {
                 // Give the service layer a more accurate exception
-                throw new UniversityNotFoundException();
+                throw new UniversityNotFoundException($"University not found matching place ID {placeId}", ex);
             }
         }
 

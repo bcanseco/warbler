@@ -72,28 +72,25 @@
   
   <h1 id="Warbler_Services_ProximityService" data-uid="Warbler.Services.ProximityService">Class ProximityService
   </h1>
-  <div class="markdown level0 summary"><p>Used by the <see cref="!:ProximityHub"></see> for business logic.</p>
+  <div class="markdown level0 summary"><p>Used by the <a class="xref" href="Warbler.Hubs.ProximityHub.html">ProximityHub</a> for business logic.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
       <div class="level0"><span class="xref">System.Object</span></div>
-      <div class="level1"><a class="xref" href="Warbler.Misc.HubResource-2.html">HubResource</a>&lt;<a class="xref" href="Warbler.Services.ProximityService.html">ProximityService</a>, <span class="xref">ProximityHub</span>&gt;</div>
+      <div class="level1"><a class="xref" href="Warbler.Misc.HubResource-1.html">HubResource</a>&lt;<a class="xref" href="Warbler.Hubs.ProximityHub.html">ProximityHub</a>&gt;</div>
       <div class="level"><span class="xref"></span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_Instance">HubResource&lt;ProximityService, ProximityHub&gt;.Instance</a>
+      <a class="xref" href="Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_HubContext">HubResource&lt;ProximityHub&gt;.HubContext</a>
     </div>
     <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_HubContext">HubResource&lt;ProximityService, ProximityHub&gt;.HubContext</a>
+      <a class="xref" href="Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_OnConnectedAsync_Warbler_Models_User_System_String_">HubResource&lt;ProximityHub&gt;.OnConnectedAsync(User, String)</a>
     </div>
     <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_OnConnected_Warbler_Models_User_System_String_">HubResource&lt;ProximityService, ProximityHub&gt;.OnConnected(User, String)</a>
-    </div>
-    <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_OnDisconnected_Warbler_Models_User_System_String_">HubResource&lt;ProximityService, ProximityHub&gt;.OnDisconnected(User, String)</a>
+      <a class="xref" href="Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_OnDisconnectedAsync_Warbler_Models_User_System_String_">HubResource&lt;ProximityHub&gt;.OnDisconnectedAsync(User, String)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -121,21 +118,19 @@
   <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
   <h5 id="Warbler_Services_ProximityService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProximityService : HubResource&lt;ProximityService, ProximityHub&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProximityService : HubResource&lt;ProximityHub&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Warbler_Services_ProximityService_OnDisconnected_" data-uid="Warbler.Services.ProximityService.OnDisconnected*"></a>
-  <h4 id="Warbler_Services_ProximityService_OnDisconnected_Warbler_Models_User_" data-uid="Warbler.Services.ProximityService.OnDisconnected(Warbler.Models.User)">OnDisconnected(User)</h4>
-  <div class="markdown level1 summary"><p>Invoked from the hub on each disconnected client. Removes the
-client&#39;s choice list from <span class="xref">Warbler.Services.ProximityService.UserChoices</span> if it exists.</p>
-</div>
+  <a id="Warbler_Services_ProximityService__ctor_" data-uid="Warbler.Services.ProximityService.#ctor*"></a>
+  <h4 id="Warbler_Services_ProximityService__ctor_IHubContext_Warbler_Hubs_ProximityHub__IOptions_Warbler_Misc_ApiKeys__ILogger_Warbler_Services_ProximityService__" data-uid="Warbler.Services.ProximityService.#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})">ProximityService(IHubContext&lt;ProximityHub&gt;, IOptions&lt;ApiKeys&gt;, ILogger&lt;ProximityService&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OnDisconnected(User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProximityService(IHubContext&lt;ProximityHub&gt; hubContext, IOptions&lt;ApiKeys&gt; apiKeys, ILogger&lt;ProximityService&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,8 +143,49 @@ client&#39;s choice list from <span class="xref">Warbler.Services.ProximityServi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
+        <td><span class="xref">IHubContext</span>&lt;<a class="xref" href="Warbler.Hubs.ProximityHub.html">ProximityHub</a>&gt;</td>
+        <td><span class="parametername">hubContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IOptions</span>&lt;<a class="xref" href="Warbler.Misc.ApiKeys.html">ApiKeys</a>&gt;</td>
+        <td><span class="parametername">apiKeys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Warbler.Services.ProximityService.html">ProximityService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Warbler_Services_ProximityService_OnDisconnectedAsync_" data-uid="Warbler.Services.ProximityService.OnDisconnectedAsync*"></a>
+  <h4 id="Warbler_Services_ProximityService_OnDisconnectedAsync_System_String_" data-uid="Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)">OnDisconnectedAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Invoked from the hub on each disconnected client. Removes the
+client&#39;s choice list from <span class="xref">Warbler.Services.ProximityService.UserChoices</span> if it exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task OnDisconnectedAsync(string userName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userName</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -301,8 +337,7 @@ client&#39;s choice list from <span class="xref">Warbler.Services.ProximityServi
   
   <a id="Warbler_Services_ProximityService_With_" data-uid="Warbler.Services.ProximityService.With*"></a>
   <h4 id="Warbler_Services_ProximityService_With_Warbler_Misc_WarblerDbContext_" data-uid="Warbler.Services.ProximityService.With(Warbler.Misc.WarblerDbContext)">With(WarblerDbContext)</h4>
-  <div class="markdown level1 summary"><p>Allows the hub to attach a database context to this service instance.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

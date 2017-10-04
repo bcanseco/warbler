@@ -17,7 +17,7 @@ items:
   source:
     id: SqlMessageRepository
     path: ''
-    startLine: 2109
+    startLine: 2422
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -60,7 +60,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2113
+    startLine: 2426
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -89,7 +89,7 @@ items:
   source:
     id: LatestIn
     path: ''
-    startLine: 2118
+    startLine: 2431
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories

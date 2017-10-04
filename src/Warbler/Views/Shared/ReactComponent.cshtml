@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@if ((bool?)ViewData["Heading"] ?? false)
+{
+    @await Html.PartialAsync("_HeadingPartial", ViewData)
+}
+
+<div id="react-root"></div>
+
+@section scripts {
+    @if (ViewData["OtherScripts"] != null)
+    {
+        foreach (var script in (IEnumerable<string>) ViewData["OtherScripts"])
+        {
+            <script src="@(script)"></script>
+        }
+    }
+    
+    <script src="~/dist/@(ViewData["Component"]).js" asp-append-version="true"></script>
+}

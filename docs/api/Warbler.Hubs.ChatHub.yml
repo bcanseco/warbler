@@ -5,9 +5,9 @@ items:
   id: ChatHub
   parent: Warbler.Hubs
   children:
-  - Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  - Warbler.Hubs.ChatHub.OnConnected
-  - Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
+  - Warbler.Hubs.ChatHub.#ctor(Warbler.Misc.WarblerDbContext,Warbler.Services.ChatService)
+  - Warbler.Hubs.ChatHub.OnConnectedAsync
+  - Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   source:
     id: ChatHub
     path: ''
-    startLine: 1137
+    startLine: 1178
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -37,99 +37,96 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  commentId: M:Warbler.Hubs.ChatHub.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  id: '#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)'
+- uid: Warbler.Hubs.ChatHub.#ctor(Warbler.Misc.WarblerDbContext,Warbler.Services.ChatService)
+  commentId: M:Warbler.Hubs.ChatHub.#ctor(Warbler.Misc.WarblerDbContext,Warbler.Services.ChatService)
+  id: '#ctor(Warbler.Misc.WarblerDbContext,Warbler.Services.ChatService)'
   parent: Warbler.Hubs.ChatHub
   langs:
   - csharp
   - vb
-  name: ChatHub(UserManager<User>, WarblerDbContext)
-  nameWithType: ChatHub.ChatHub(UserManager<User>, WarblerDbContext)
-  fullName: Warbler.Hubs.ChatHub.ChatHub(UserManager<Warbler.Models.User>, Warbler.Misc.WarblerDbContext)
+  name: ChatHub(WarblerDbContext, ChatService)
+  nameWithType: ChatHub.ChatHub(WarblerDbContext, ChatService)
+  fullName: Warbler.Hubs.ChatHub.ChatHub(Warbler.Misc.WarblerDbContext, Warbler.Services.ChatService)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 1145
+    startLine: 1186
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
   summary: "\nAutomatically called each time SignalR receives a packet from a client.\n"
   example: []
   syntax:
-    content: public ChatHub(UserManager<User> userManager, WarblerDbContext dbContext)
+    content: public ChatHub(WarblerDbContext context, ChatService service)
     parameters:
-    - id: userManager
-      type: UserManager{Warbler.Models.User}
-    - id: dbContext
+    - id: context
       type: Warbler.Misc.WarblerDbContext
-    content.vb: Public Sub New(userManager As UserManager(Of User), dbContext As WarblerDbContext)
+    - id: service
+      type: Warbler.Services.ChatService
+    content.vb: Public Sub New(context As WarblerDbContext, service As ChatService)
   overload: Warbler.Hubs.ChatHub.#ctor*
-  nameWithType.vb: ChatHub.ChatHub(UserManager(Of User), WarblerDbContext)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Warbler.Hubs.ChatHub.ChatHub(UserManager(Of Warbler.Models.User), Warbler.Misc.WarblerDbContext)
-  name.vb: ChatHub(UserManager(Of User), WarblerDbContext)
-- uid: Warbler.Hubs.ChatHub.OnConnected
-  commentId: M:Warbler.Hubs.ChatHub.OnConnected
-  id: OnConnected
+- uid: Warbler.Hubs.ChatHub.OnConnectedAsync
+  commentId: M:Warbler.Hubs.ChatHub.OnConnectedAsync
+  id: OnConnectedAsync
   parent: Warbler.Hubs.ChatHub
   langs:
   - csharp
   - vb
-  name: OnConnected()
-  nameWithType: ChatHub.OnConnected()
-  fullName: Warbler.Hubs.ChatHub.OnConnected()
+  name: OnConnectedAsync()
+  nameWithType: ChatHub.OnConnectedAsync()
+  fullName: Warbler.Hubs.ChatHub.OnConnectedAsync()
   type: Method
   source:
-    id: OnConnected
+    id: OnConnectedAsync
     path: ''
-    startLine: 1151
+    startLine: 1192
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
   syntax:
-    content: public override Task OnConnected()
+    content: public override Task OnConnectedAsync()
     return:
       type: Task
-    content.vb: Public Overrides Function OnConnected As Task
-  overload: Warbler.Hubs.ChatHub.OnConnected*
+    content.vb: Public Overrides Function OnConnectedAsync As Task
+  overload: Warbler.Hubs.ChatHub.OnConnectedAsync*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
-  commentId: M:Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
-  id: OnDisconnected(System.Boolean)
+- uid: Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
+  commentId: M:Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
+  id: OnDisconnectedAsync(System.Exception)
   parent: Warbler.Hubs.ChatHub
   langs:
   - csharp
   - vb
-  name: OnDisconnected(Boolean)
-  nameWithType: ChatHub.OnDisconnected(Boolean)
-  fullName: Warbler.Hubs.ChatHub.OnDisconnected(System.Boolean)
+  name: OnDisconnectedAsync(Exception)
+  nameWithType: ChatHub.OnDisconnectedAsync(Exception)
+  fullName: Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
   type: Method
   source:
-    id: OnDisconnected
+    id: OnDisconnectedAsync
     path: ''
-    startLine: 1159
+    startLine: 1200
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
   syntax:
-    content: public override Task OnDisconnected(bool stopCalled)
+    content: public override Task OnDisconnectedAsync(Exception exception)
     parameters:
-    - id: stopCalled
-      type: System.Boolean
+    - id: exception
+      type: System.Exception
     return:
       type: Task
-    content.vb: Public Overrides Function OnDisconnected(stopCalled As Boolean) As Task
-  overload: Warbler.Hubs.ChatHub.OnDisconnected*
+    content.vb: Public Overrides Function OnDisconnectedAsync(exception As Exception) As Task
+  overload: Warbler.Hubs.ChatHub.OnDisconnectedAsync*
   modifiers.csharp:
   - public
   - override
@@ -162,47 +159,6 @@ references:
   name: ChatHub
   nameWithType: ChatHub.ChatHub
   fullName: Warbler.Hubs.ChatHub.ChatHub
-- uid: UserManager{Warbler.Models.User}
-  commentId: '!:UserManager{Warbler.Models.User}'
-  definition: UserManager`1
-  name: UserManager<User>
-  nameWithType: UserManager<User>
-  fullName: UserManager<Warbler.Models.User>
-  nameWithType.vb: UserManager(Of User)
-  fullName.vb: UserManager(Of Warbler.Models.User)
-  name.vb: UserManager(Of User)
-  spec.csharp:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: Warbler.Models.User
-    name: User
-    nameWithType: User
-    fullName: Warbler.Models.User
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: Warbler.Models.User
-    name: User
-    nameWithType: User
-    fullName: Warbler.Models.User
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Warbler.Misc.WarblerDbContext
   commentId: T:Warbler.Misc.WarblerDbContext
   parent: Warbler.Misc
@@ -210,71 +166,46 @@ references:
   name: WarblerDbContext
   nameWithType: WarblerDbContext
   fullName: Warbler.Misc.WarblerDbContext
-- uid: UserManager`1
-  isExternal: true
-  name: UserManager<>
-  nameWithType: UserManager<>
-  fullName: UserManager<>
-  nameWithType.vb: UserManager(Of )
-  fullName.vb: UserManager(Of )
-  name.vb: UserManager(Of )
-  spec.csharp:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: Warbler.Services.ChatService
+  commentId: T:Warbler.Services.ChatService
+  parent: Warbler.Services
+  isExternal: false
+  name: ChatService
+  nameWithType: ChatService
+  fullName: Warbler.Services.ChatService
 - uid: Warbler.Misc
   commentId: N:Warbler.Misc
   isExternal: false
   name: Warbler.Misc
   nameWithType: Warbler.Misc
   fullName: Warbler.Misc
-- uid: Warbler.Hubs.ChatHub.OnConnected*
-  commentId: Overload:Warbler.Hubs.ChatHub.OnConnected
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
   isExternal: false
-  name: OnConnected
-  nameWithType: ChatHub.OnConnected
-  fullName: Warbler.Hubs.ChatHub.OnConnected
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services
+- uid: Warbler.Hubs.ChatHub.OnConnectedAsync*
+  commentId: Overload:Warbler.Hubs.ChatHub.OnConnectedAsync
+  isExternal: false
+  name: OnConnectedAsync
+  nameWithType: ChatHub.OnConnectedAsync
+  fullName: Warbler.Hubs.ChatHub.OnConnectedAsync
 - uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
   fullName: Task
-- uid: Warbler.Hubs.ChatHub.OnDisconnected*
-  commentId: Overload:Warbler.Hubs.ChatHub.OnDisconnected
+- uid: Warbler.Hubs.ChatHub.OnDisconnectedAsync*
+  commentId: Overload:Warbler.Hubs.ChatHub.OnDisconnectedAsync
   isExternal: false
-  name: OnDisconnected
-  nameWithType: ChatHub.OnDisconnected
-  fullName: Warbler.Hubs.ChatHub.OnDisconnected
-- uid: System.Boolean
-  commentId: T:System.Boolean
+  name: OnDisconnectedAsync
+  nameWithType: ChatHub.OnDisconnectedAsync
+  fullName: Warbler.Hubs.ChatHub.OnDisconnectedAsync
+- uid: System.Exception
+  commentId: T:System.Exception
   parent: System
   isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

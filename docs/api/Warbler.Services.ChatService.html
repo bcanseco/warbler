@@ -72,28 +72,19 @@
   
   <h1 id="Warbler_Services_ChatService" data-uid="Warbler.Services.ChatService">Class ChatService
   </h1>
-  <div class="markdown level0 summary"><p>Used by the <see cref="!:ChatHub"></see> for business logic.</p>
+  <div class="markdown level0 summary"><p>Used by the <a class="xref" href="Warbler.Hubs.ChatHub.html">ChatHub</a> for business logic.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
       <div class="level0"><span class="xref">System.Object</span></div>
-      <div class="level1"><a class="xref" href="Warbler.Misc.HubResource-2.html">HubResource</a>&lt;<a class="xref" href="Warbler.Services.ChatService.html">ChatService</a>, <span class="xref">ChatHub</span>&gt;</div>
+      <div class="level1"><a class="xref" href="Warbler.Misc.HubResource-1.html">HubResource</a>&lt;<a class="xref" href="Warbler.Hubs.ChatHub.html">ChatHub</a>&gt;</div>
       <div class="level"><span class="xref"></span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_Instance">HubResource&lt;ChatService, ChatHub&gt;.Instance</a>
-    </div>
-    <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_HubContext">HubResource&lt;ChatService, ChatHub&gt;.HubContext</a>
-    </div>
-    <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_OnConnected_Warbler_Models_User_System_String_">HubResource&lt;ChatService, ChatHub&gt;.OnConnected(User, String)</a>
-    </div>
-    <div>
-      <a class="xref" href="Warbler.Misc.HubResource-2.html#Warbler_Misc_HubResource_2_OnDisconnected_Warbler_Models_User_System_String_">HubResource&lt;ChatService, ChatHub&gt;.OnDisconnected(User, String)</a>
+      <a class="xref" href="Warbler.Misc.HubResource-1.html#Warbler_Misc_HubResource_1_HubContext">HubResource&lt;ChatHub&gt;.HubContext</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -121,20 +112,54 @@
   <h6><strong>Assembly</strong>:cs.temp.dll.dll</h6>
   <h5 id="Warbler_Services_ChatService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ChatService : HubResource&lt;ChatService, ChatHub&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ChatService : HubResource&lt;ChatHub&gt;</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Warbler_Services_ChatService__ctor_" data-uid="Warbler.Services.ChatService.#ctor*"></a>
+  <h4 id="Warbler_Services_ChatService__ctor_IHubContext_Warbler_Hubs_ChatHub__ILogger_Warbler_Services_ChatService__" data-uid="Warbler.Services.ChatService.#ctor(IHubContext{Warbler.Hubs.ChatHub},ILogger{Warbler.Services.ChatService})">ChatService(IHubContext&lt;ChatHub&gt;, ILogger&lt;ChatService&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ChatService(IHubContext&lt;ChatHub&gt; hubContext, ILogger&lt;ChatService&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IHubContext</span>&lt;<a class="xref" href="Warbler.Hubs.ChatHub.html">ChatHub</a>&gt;</td>
+        <td><span class="parametername">hubContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Warbler.Services.ChatService.html">ChatService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Warbler_Services_ChatService_OnConnected_" data-uid="Warbler.Services.ChatService.OnConnected*"></a>
-  <h4 id="Warbler_Services_ChatService_OnConnected_Warbler_Models_User_System_String_" data-uid="Warbler.Services.ChatService.OnConnected(Warbler.Models.User,System.String)">OnConnected(User, String)</h4>
+  <a id="Warbler_Services_ChatService_OnConnectedAsync_" data-uid="Warbler.Services.ChatService.OnConnectedAsync*"></a>
+  <h4 id="Warbler_Services_ChatService_OnConnectedAsync_Warbler_Models_User_System_String_" data-uid="Warbler.Services.ChatService.OnConnectedAsync(Warbler.Models.User,System.String)">OnConnectedAsync(User, String)</h4>
   <div class="markdown level1 summary"><p>Invoked from the hub on each connected client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OnConnected(User user, string connectionId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task OnConnectedAsync(User user, string connectionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,14 +200,14 @@
   </table>
   
   
-  <a id="Warbler_Services_ChatService_OnDisconnected_" data-uid="Warbler.Services.ChatService.OnDisconnected*"></a>
-  <h4 id="Warbler_Services_ChatService_OnDisconnected_Warbler_Models_User_System_String_" data-uid="Warbler.Services.ChatService.OnDisconnected(Warbler.Models.User,System.String)">OnDisconnected(User, String)</h4>
+  <a id="Warbler_Services_ChatService_OnDisconnectedAsync_" data-uid="Warbler.Services.ChatService.OnDisconnectedAsync*"></a>
+  <h4 id="Warbler_Services_ChatService_OnDisconnectedAsync_Warbler_Models_User_System_String_" data-uid="Warbler.Services.ChatService.OnDisconnectedAsync(Warbler.Models.User,System.String)">OnDisconnectedAsync(User, String)</h4>
   <div class="markdown level1 summary"><p>Invoked from the hub on each disconnected client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OnDisconnected(User user, string connectionId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task OnDisconnectedAsync(User user, string connectionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,7 +246,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Warbler_Services_ChatService_OnDisconnected_Warbler_Models_User_System_String__remarks">Remarks</h5>
+  <h5 id="Warbler_Services_ChatService_OnDisconnectedAsync_Warbler_Models_User_System_String__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>We don&#39;t have to remove the connection ID from its 
 HubContext group because SignalR does this automatically.</p>
 </div>
@@ -229,8 +254,7 @@ HubContext group because SignalR does this automatically.</p>
   
   <a id="Warbler_Services_ChatService_With_" data-uid="Warbler.Services.ChatService.With*"></a>
   <h4 id="Warbler_Services_ChatService_With_Warbler_Misc_WarblerDbContext_" data-uid="Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)">With(WarblerDbContext)</h4>
-  <div class="markdown level1 summary"><p>Allows the hub to attach a database context to this service instance.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

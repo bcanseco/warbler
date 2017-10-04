@@ -16,6 +16,21 @@ namespace Warbler.Models
         public Server Server { get; set; }
 
         public bool Equals(University other)
-            => Id == other?.Id;
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Id == other.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj.GetType() == GetType() && Equals((University)obj);
+        }
+
+        public override int GetHashCode() => Id.GetHashCode() * 9;
+        public static bool operator ==(University left, University right) => Equals(left, right);
+        public static bool operator !=(University left, University right) => !Equals(left, right);
     }
 }

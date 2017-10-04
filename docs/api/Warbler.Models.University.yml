@@ -23,7 +23,7 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1653
+    startLine: 1713
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -64,7 +64,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1656
+    startLine: 1716
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -95,7 +95,7 @@ items:
   source:
     id: PlaceId
     path: ''
-    startLine: 1657
+    startLine: 1717
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -126,7 +126,7 @@ items:
   source:
     id: Address
     path: ''
-    startLine: 1658
+    startLine: 1718
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -157,7 +157,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1659
+    startLine: 1719
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -188,7 +188,7 @@ items:
   source:
     id: Lat
     path: ''
-    startLine: 1660
+    startLine: 1720
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -219,7 +219,7 @@ items:
   source:
     id: Lng
     path: ''
-    startLine: 1661
+    startLine: 1721
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -250,7 +250,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1663
+    startLine: 1723
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -281,7 +281,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1665
+    startLine: 1725
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models

@@ -17,7 +17,7 @@ items:
   source:
     id: VerifyPhoneNumberViewModel
     path: ''
-    startLine: 2014
+    startLine: 2327
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -54,7 +54,7 @@ items:
   source:
     id: Code
     path: ''
-    startLine: 2016
+    startLine: 2329
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -85,7 +85,7 @@ items:
   source:
     id: PhoneNumber
     path: ''
-    startLine: 2019
+    startLine: 2332
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels

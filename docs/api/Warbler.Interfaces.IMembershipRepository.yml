@@ -17,7 +17,7 @@ items:
   source:
     id: IMembershipRepository
     path: ''
-    startLine: 1269
+    startLine: 1307
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -46,7 +46,7 @@ items:
   source:
     id: AllFor
     path: ''
-    startLine: 1278
+    startLine: 1316
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -77,7 +77,7 @@ items:
   source:
     id: AllFor
     path: ''
-    startLine: 1287
+    startLine: 1325
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces

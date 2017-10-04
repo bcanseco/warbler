@@ -109,17 +109,46 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ConnectionMapping</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Warbler_Misc_ConnectionMapping_Add_" data-uid="Warbler.Misc.ConnectionMapping.Add*"></a>
-  <h4 id="Warbler_Misc_ConnectionMapping_Add_Warbler_Models_User_System_String_" data-uid="Warbler.Misc.ConnectionMapping.Add(Warbler.Models.User,System.String)">Add(User, String)</h4>
+  <a id="Warbler_Misc_ConnectionMapping__ctor_" data-uid="Warbler.Misc.ConnectionMapping.#ctor*"></a>
+  <h4 id="Warbler_Misc_ConnectionMapping__ctor_ILogger_" data-uid="Warbler.Misc.ConnectionMapping.#ctor(ILogger)">ConnectionMapping(ILogger)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Add(User user, string connectionId)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConnectionMapping(ILogger logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Warbler_Misc_ConnectionMapping_AddAsync_" data-uid="Warbler.Misc.ConnectionMapping.AddAsync*"></a>
+  <h4 id="Warbler_Misc_ConnectionMapping_AddAsync_Warbler_Models_User_System_String_" data-uid="Warbler.Misc.ConnectionMapping.AddAsync(Warbler.Models.User,System.String)">AddAsync(User, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; AddAsync(User user, string connectionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,13 +231,13 @@
   </table>
   
   
-  <a id="Warbler_Misc_ConnectionMapping_Remove_" data-uid="Warbler.Misc.ConnectionMapping.Remove*"></a>
-  <h4 id="Warbler_Misc_ConnectionMapping_Remove_Warbler_Models_User_System_String_" data-uid="Warbler.Misc.ConnectionMapping.Remove(Warbler.Models.User,System.String)">Remove(User, String)</h4>
+  <a id="Warbler_Misc_ConnectionMapping_RemoveAsync_" data-uid="Warbler.Misc.ConnectionMapping.RemoveAsync*"></a>
+  <h4 id="Warbler_Misc_ConnectionMapping_RemoveAsync_Warbler_Models_User_System_String_" data-uid="Warbler.Misc.ConnectionMapping.RemoveAsync(Warbler.Models.User,System.String)">RemoveAsync(User, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Remove(User user, string connectionId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; RemoveAsync(User user, string connectionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

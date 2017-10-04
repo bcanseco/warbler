@@ -21,7 +21,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1634
+    startLine: 1694
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -58,7 +58,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1637
+    startLine: 1697
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -89,7 +89,7 @@ items:
   source:
     id: IsAuthEnabled
     path: ''
-    startLine: 1638
+    startLine: 1698
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -120,7 +120,7 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 1639
+    startLine: 1699
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -151,7 +151,7 @@ items:
   source:
     id: UniversityId
     path: ''
-    startLine: 1640
+    startLine: 1700
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -182,7 +182,7 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1642
+    startLine: 1702
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -213,7 +213,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1644
+    startLine: 1704
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models

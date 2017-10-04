@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  commentId: T:Warbler.Tests.Repositories.TestSqlMembershipRepository
+  id: TestSqlMembershipRepository
+  parent: Warbler.Tests.Repositories
+  children:
+  - Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  - Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  - Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  langs:
+  - csharp
+  - vb
+  name: TestSqlMembershipRepository
+  nameWithType: TestSqlMembershipRepository
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  type: Class
+  source:
+    id: TestSqlMembershipRepository
+    path: ''
+    startLine: 3176
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public class TestSqlMembershipRepository
+    content.vb: Public Class TestSqlMembershipRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  id: CreateUniversity
+  parent: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateUniversity()
+  nameWithType: TestSqlMembershipRepository.CreateUniversity()
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity()
+  type: Method
+  source:
+    id: CreateUniversity
+    path: ''
+    startLine: 3187
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task CreateUniversity()
+    return:
+      type: Task
+    content.vb: Public Function CreateUniversity As Task
+  overload: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  id: AllForUser_Should_Return_Channels_Where_User_Is_Member
+  parent: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  langs:
+  - csharp
+  - vb
+  name: AllForUser_Should_Return_Channels_Where_User_Is_Member()
+  nameWithType: TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member()
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member()
+  type: Method
+  source:
+    id: AllForUser_Should_Return_Channels_Where_User_Is_Member
+    path: ''
+    startLine: 3214
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task AllForUser_Should_Return_Channels_Where_User_Is_Member()
+    return:
+      type: Task
+    content.vb: Public Function AllForUser_Should_Return_Channels_Where_User_Is_Member As Task
+  overload: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  id: AllForChannel_Should_Return_Users_That_Are_Members
+  parent: Warbler.Tests.Repositories.TestSqlMembershipRepository
+  langs:
+  - csharp
+  - vb
+  name: AllForChannel_Should_Return_Users_That_Are_Members()
+  nameWithType: TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members()
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members()
+  type: Method
+  source:
+    id: AllForChannel_Should_Return_Users_That_Are_Members
+    path: ''
+    startLine: 3228
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task AllForChannel_Should_Return_Users_That_Are_Members()
+    return:
+      type: Task
+    content.vb: Public Function AllForChannel_Should_Return_Users_That_Are_Members As Task
+  overload: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Tests.Repositories
+  commentId: N:Warbler.Tests.Repositories
+  isExternal: false
+  name: Warbler.Tests.Repositories
+  nameWithType: Warbler.Tests.Repositories
+  fullName: Warbler.Tests.Repositories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  isExternal: false
+  name: CreateUniversity
+  nameWithType: TestSqlMembershipRepository.CreateUniversity
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  isExternal: false
+  name: AllForUser_Should_Return_Channels_Where_User_Is_Member
+  nameWithType: TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  isExternal: false
+  name: AllForChannel_Should_Return_Users_That_Are_Members
+  nameWithType: TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members

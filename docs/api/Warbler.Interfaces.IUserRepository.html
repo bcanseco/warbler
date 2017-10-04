@@ -85,6 +85,51 @@
   </h3>
   
   
+  <a id="Warbler_Interfaces_IUserRepository_FindByNameAsync_" data-uid="Warbler.Interfaces.IUserRepository.FindByNameAsync*"></a>
+  <h4 id="Warbler_Interfaces_IUserRepository_FindByNameAsync_System_String_" data-uid="Warbler.Interfaces.IUserRepository.FindByNameAsync(System.String)">FindByNameAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="Warbler.Models.User.html">User</a> matching the given username.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;User&gt; FindByNameAsync(string username)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">username</span></td>
+        <td><p>The username to search with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.User.html">User</a>&gt;</td>
+        <td><p>A User object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Warbler_Interfaces_IUserRepository_IsNewAsync_" data-uid="Warbler.Interfaces.IUserRepository.IsNewAsync*"></a>
   <h4 id="Warbler_Interfaces_IUserRepository_IsNewAsync_Warbler_Models_User_" data-uid="Warbler.Interfaces.IUserRepository.IsNewAsync(Warbler.Models.User)">IsNewAsync(User)</h4>
   <div class="markdown level1 summary"><p>Returns <span class="xref">true</span> if no memberships exist with
@@ -124,6 +169,56 @@ the id of the given user, <span class="xref">false</span> otherwise.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Interfaces_IUserRepository_SetOnlineAsync_" data-uid="Warbler.Interfaces.IUserRepository.SetOnlineAsync*"></a>
+  <h4 id="Warbler_Interfaces_IUserRepository_SetOnlineAsync_Warbler_Models_User_System_Boolean_" data-uid="Warbler.Interfaces.IUserRepository.SetOnlineAsync(Warbler.Models.User,System.Boolean)">SetOnlineAsync(User, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets <a class="xref" href="Warbler.Models.User.html#Warbler_Models_User_IsOnline">IsOnline</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SetOnlineAsync(User user, bool isOnline)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The user to manipulate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isOnline</span></td>
+        <td><p>True to set as online, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>

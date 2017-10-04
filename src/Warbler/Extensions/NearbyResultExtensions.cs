@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using GoogleApi.Entities.Places.Common.Enums;
+using GoogleApi.Entities.Common.Enums;
 using GoogleApi.Entities.Places.Search.NearBy.Response;
 
 namespace Warbler.Extensions

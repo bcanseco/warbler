@@ -1,17 +1,15 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.SignalR.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Warbler.Hubs;
 using Warbler.Models;
 using Warbler.Misc;
 using Warbler.Interfaces;
@@ -21,8 +19,6 @@ namespace Warbler
 {
     public class Startup
     {
-        public static IConnectionManager ConnectionManager;
-
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -35,10 +31,11 @@ namespace Warbler
 
         private IConfigurationRoot Configuration { get; }
 
-        public static void Main(string[] args) => BuildWebHost(args).Run();
+        public static void Main(string[] args)
+            => BuildWebHost(args).Run();
 
-        private static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        private static IWebHost BuildWebHost(string[] args)
+            => WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
 
@@ -46,17 +43,29 @@ namespace Warbler
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddRouting(options => options.LowercaseUrls = true);
-
-            // Add framework services.
             services.AddMvc();
+
+            services.Configure<ApiKeys>(Configuration.GetSection(nameof(ApiKeys)));
+
+            services.AddSingleton<ProximityService>();
+            services.AddSingleton<ChatService>();
+
             services.AddSignalR(options =>
             {
-                options.Hubs.EnableDetailedErrors = true;
+                options.JsonSerializerSettings = new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                };
             });
 
+#if DEBUG
+            var dbConnection = Configuration.GetConnectionString("WarblerDevelopment");
+#else
+            var dbConnection = Configuration.GetConnectionString("WarblerProduction");
+#endif
+
             // Add Entity Framework databases.
-            services.AddDbContext<WarblerDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("WarblerProduction")));
+            services.AddDbContext<WarblerDbContext>(options => options.UseSqlServer(dbConnection));
 
             // Set up authentication.
             services.AddIdentity<User, IdentityRole>()
@@ -67,7 +76,7 @@ namespace Warbler
             {
                 // Password settings
                 options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 7;
+                options.Password.RequiredLength = 1;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
@@ -79,11 +88,13 @@ namespace Warbler
                 // User settings
                 options.User.RequireUniqueEmail = true;
             });
-            
+
             services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = "/Account/LogIn";
-                options.ExpireTimeSpan = TimeSpan.FromDays(150);
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Expiration = TimeSpan.FromDays(150);
+                options.SlidingExpiration = true;
             });
 
             services.AddAuthentication();
@@ -96,46 +107,35 @@ namespace Warbler
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
-                app.UseBrowserLink();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true,
+                    ReactHotModuleReplacement = true
+                });
+
+                serviceProvider.GetService<WarblerDbContext>().Database.EnsureCreated();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles(); // wwwroot (node_modules)
-
-            var folders = Directory.GetDirectories(".", "Scripts", SearchOption.AllDirectories)
-                .Concat(Directory.GetDirectories(".", "Styles", SearchOption.AllDirectories))
-                .Where(f => !f.Contains("node_modules"))
-                .Select(f => f.Substring(1, f.Length - 1).Replace(@"\", "/")).ToList();
-            
-            folders.Add("/Graphics"); // Winter's logos
-
-            foreach (var folder in folders)
-            {
-                app.UseStaticFiles(new StaticFileOptions
-                {
-                    FileProvider = new PhysicalFileProvider(
-                        $"{Directory.GetCurrentDirectory()}{folder}"),
-                    RequestPath = new PathString(folder)
-                });
-            }
+            app.UseStaticFiles();
 
             app.UseAuthentication();
-            app.UseWebSockets();
-            app.UseSignalR();
 
-            ConnectionManager = serviceProvider.GetService<IConnectionManager>();
+            app.UseWebSockets();
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ProximityHub>(nameof(ProximityHub));
+                routes.MapHub<ChatHub>(nameof(ChatHub));
+            });
 
             app.UseMvc(routes =>
             {
@@ -147,12 +147,6 @@ namespace Warbler
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            
-            if (env.IsDevelopment())
-            {
-                var context = serviceProvider.GetService<WarblerDbContext>();
-                context.Database.EnsureCreated();
-            }
         }
     }
 }

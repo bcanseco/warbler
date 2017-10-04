@@ -18,7 +18,7 @@ items:
   source:
     id: SqlMembershipRepository
     path: ''
-    startLine: 2068
+    startLine: 2381
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -61,7 +61,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2072
+    startLine: 2385
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -90,7 +90,7 @@ items:
   source:
     id: AllFor
     path: ''
-    startLine: 2077
+    startLine: 2390
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -123,7 +123,7 @@ items:
   source:
     id: AllFor
     path: ''
-    startLine: 2082
+    startLine: 2395
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories

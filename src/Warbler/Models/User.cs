@@ -29,15 +29,25 @@ namespace Warbler.Models
         public UserFlag Flag { get; set; }
         
         public ICollection<Membership> Memberships { get; set; }
-
-        [NotMapped]
+        
         [DataMember]
         public bool IsOnline { get; set; }
         
         [NotMapped]
         public IEnumerable<Channel> Channels => Memberships?.Select(m => m.Channel).ToList();
 
-        public bool Equals(User other)
-            => Id == other?.Id;
+        public bool Equals(User other) => Id == other?.Id;
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj.GetType() == GetType() && Equals((User) obj);
+        }
+
+        public override int GetHashCode() => Id.GetHashCode() * 9;
+
+        public static bool operator ==(User left, User right) => Equals(left, right);
+        public static bool operator !=(User left, User right) => !Equals(left, right);
     }
 }

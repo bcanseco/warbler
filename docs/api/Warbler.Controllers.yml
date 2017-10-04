@@ -7,6 +7,7 @@ items:
   - Warbler.Controllers.AccountController
   - Warbler.Controllers.ChatController
   - Warbler.Controllers.DevController
+  - Warbler.Controllers.DocumentsController
   - Warbler.Controllers.HomeController
   - Warbler.Controllers.ManageController
   - Warbler.Controllers.ManageController.ManageMessageId
@@ -38,6 +39,12 @@ references:
   name: DevController
   nameWithType: DevController
   fullName: Warbler.Controllers.DevController
+- uid: Warbler.Controllers.DocumentsController
+  commentId: T:Warbler.Controllers.DocumentsController
+  isExternal: false
+  name: DocumentsController
+  nameWithType: DocumentsController
+  fullName: Warbler.Controllers.DocumentsController
 - uid: Warbler.Controllers.HomeController
   commentId: T:Warbler.Controllers.HomeController
   isExternal: false

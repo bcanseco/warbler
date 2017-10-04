@@ -20,7 +20,7 @@ items:
   source:
     id: VerifyCodeViewModel
     path: ''
-    startLine: 1828
+    startLine: 2141
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -57,7 +57,7 @@ items:
   source:
     id: Provider
     path: ''
-    startLine: 1830
+    startLine: 2143
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -88,7 +88,7 @@ items:
   source:
     id: Code
     path: ''
-    startLine: 1833
+    startLine: 2146
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -119,7 +119,7 @@ items:
   source:
     id: ReturnUrl
     path: ''
-    startLine: 1836
+    startLine: 2149
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -150,7 +150,7 @@ items:
   source:
     id: RememberBrowser
     path: ''
-    startLine: 1838
+    startLine: 2151
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -181,7 +181,7 @@ items:
   source:
     id: RememberMe
     path: ''
-    startLine: 1841
+    startLine: 2154
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels

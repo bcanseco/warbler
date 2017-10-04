@@ -28,13 +28,13 @@ else
 }
 
 <script type="text/javascript">
-    // hack to allow using an <a> tag as an asp.net form button
-    // otherwise the button styling in the nav is ugly
-    var logout = document
-        .getElementById("logout-submit-link");
-    if (logout) {
-        logout.addEventListener("click", function() {
-            document.forms.item(0).submit();
-        });
-    }
+  // hack to allow using an <a> tag as an asp.net form button
+  // otherwise the button styling in the nav is ugly
+  var logout = document.getElementById("logout-submit-link");
+  if (logout) {
+    logout.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.forms.item(0).submit();
+    });
+  }
 </script>

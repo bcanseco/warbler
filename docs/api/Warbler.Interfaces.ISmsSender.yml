@@ -16,7 +16,7 @@ items:
   source:
     id: ISmsSender
     path: ''
-    startLine: 1315
+    startLine: 1353
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -43,7 +43,7 @@ items:
   source:
     id: SendSmsAsync
     path: ''
-    startLine: 1317
+    startLine: 1355
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces

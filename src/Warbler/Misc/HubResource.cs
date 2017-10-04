@@ -1,36 +1,25 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Logging;
 using Warbler.Models;
 
 namespace Warbler.Misc
 {
     /// <summary>
     ///   Parent class for services that directly interoperate with hubs.
-    ///   Provides lazy-loading support (convention-friendly singleton).
     /// </summary>
-    /// <typeparam name="TService">The service subclass.</typeparam>
     /// <typeparam name="THub">The hub being serviced.</typeparam>
-    public abstract class HubResource<TService, THub>
-        where TService : new()
+    public abstract class HubResource<THub>
         where THub : Hub
     {
-        private static readonly Lazy<TService> Resource =
-            new Lazy<TService>(() => new TService());
-
-        /// <summary> Gets the singleton instance of the service. </summary>
-        public static TService Instance => Resource.Value;
-
         /// <summary> Allows hub services to access the hub's clients/groups. </summary>
-        protected IHubContext HubContext { get; }
+        protected IHubContext<THub> HubContext { get; }
 
         /// <summary> Keeps track of all online users on all of their devices. </summary>
-        private ConnectionMapping UserConnections { get; } = new ConnectionMapping();
+        private ConnectionMapping UserConnections { get; }
 
-        protected HubResource()
-        {
-            HubContext = Startup.ConnectionManager.GetHubContext<THub>();
-        }
+        protected HubResource(IHubContext<THub> hubContext, ILogger logger)
+            => (HubContext, UserConnections) = (hubContext, new ConnectionMapping(logger));
 
         /// <summary>
         ///   Associates the user with the connection ID. Returns <see langword="true"/>
@@ -42,8 +31,8 @@ namespace Warbler.Misc
         ///   True if only one connection ID is now associated with the user, false otherwise.
         /// </returns>
         /// <remarks>Call this at the beginning of overriden child OnConnected().</remarks>
-        protected async Task<bool> OnConnected(User user, string connectionId)
-            => await UserConnections.Add(user, connectionId);
+        protected async Task<bool> OnConnectedAsync(User user, string connectionId)
+            => await UserConnections.AddAsync(user, connectionId);
 
         /// <summary>
         ///   Disassociates the user with the connection ID. Returns <see langword="true"/>
@@ -55,7 +44,7 @@ namespace Warbler.Misc
         ///   True if no other connection IDs are associated with the user, false otherwise.
         /// </returns>
         /// <remarks>Call this at the beginning of overriden child OnDisconnected().</remarks>
-        protected async Task<bool> OnDisconnected(User user, string connectionId)
-            => await UserConnections.Remove(user, connectionId);
+        protected async Task<bool> OnDisconnectedAsync(User user, string connectionId)
+            => await UserConnections.RemoveAsync(user, connectionId);
     }
 }

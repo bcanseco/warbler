@@ -16,7 +16,7 @@ items:
   source:
     id: ExternalLoginConfirmationViewModel
     path: ''
-    startLine: 1718
+    startLine: 1788
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -53,7 +53,7 @@ items:
   source:
     id: Email
     path: ''
-    startLine: 1720
+    startLine: 1790
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels

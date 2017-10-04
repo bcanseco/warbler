@@ -17,7 +17,7 @@ items:
   source:
     id: ChannelService
     path: ''
-    startLine: 2399
+    startLine: 2638
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -56,7 +56,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2403
+    startLine: 2642
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -85,7 +85,7 @@ items:
   source:
     id: UpdateAsync
     path: ''
-    startLine: 2412
+    startLine: 2651
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services

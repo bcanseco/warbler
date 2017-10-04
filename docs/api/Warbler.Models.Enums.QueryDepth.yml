@@ -20,7 +20,7 @@ items:
   source:
     id: QueryDepth
     path: ''
-    startLine: 1866
+    startLine: 2179
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -47,7 +47,7 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1868
+    startLine: 2181
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -75,7 +75,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1869
+    startLine: 2182
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -103,7 +103,7 @@ items:
   source:
     id: Channel
     path: ''
-    startLine: 1870
+    startLine: 2183
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -131,7 +131,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 1871
+    startLine: 2184
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -159,7 +159,7 @@ items:
   source:
     id: Message
     path: ''
-    startLine: 1872
+    startLine: 2185
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums

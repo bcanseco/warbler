@@ -21,26 +21,35 @@ namespace Warbler.Controllers
             UserService = new UserService(new SqlUserRepository(context));
         }
 
-        public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
             var user = await UserManager.GetUserAsync(User);
             if (user == null) return RedirectToAction("Login", "Account");
 
             if (await UserService.IsNewAsync(user))
             {
-                ViewData["Title"] = "Select a university";
-                ViewData["Heading"] = true;
-                ViewData["Component"] = "Proximity"; // Components/Proximity
+                await UniversitySelection();
             }
             else
             {
-                ViewData["Component"] = ViewData["Title"] = "Chatroom";
-                ViewData["Fluid"] = true;
+                await Chatroom();
             }
             
             return View("ReactComponent", ViewData);
+        }*/
+        public async Task<IActionResult> UniversitySelection()
+        {
+            ViewData["Title"] = "Select a university";
+            ViewData["Heading"] = true;
+            ViewData["Component"] = "Proximity"; // Components/Proximity
+            return View("ReactComponent", ViewData);
         }
-
+        public async Task<IActionResult> Chatroom()
+        {
+            ViewData["Component"] = ViewData["Title"] = "Chatroom";
+            ViewData["Fluid"] = true;
+            return View("ReactComponent", ViewData);
+        }
         public IActionResult Error()
         {
             return View();

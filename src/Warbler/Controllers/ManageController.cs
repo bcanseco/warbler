@@ -322,6 +322,12 @@ namespace Warbler.Controllers
             return RedirectToAction(nameof(ManageLogins), new { Message = message });
         }
 
+        // GET: /Manage/ClaimUniversity
+        [HttpGet]
+        public IActionResult ClaimUniversity()
+        {
+            return View();
+        }
         #region Helpers
 
         private void AddErrors(IdentityResult result)

@@ -10,6 +10,8 @@ using Moq;
 using Warbler.Exceptions;
 using Warbler.Misc;
 using Warbler.Repositories;
+using Warbler.Models.Enums;
+using System;
 
 namespace Warbler.Tests.Repositories
 {
@@ -72,6 +74,82 @@ namespace Warbler.Tests.Repositories
             {
                 var repo = new SqlUniversityRepository(context);
                 await repo.LookupAsync("Test");
+            }
+        }
+
+        [TestMethod]
+        public void AllQueryable_Should_Return_Root_When_0_Is_Queried()
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUniversityRepository(context);
+                IQueryable test = repo.AllQueryable(0);
+                Assert.IsFalse(test == null);
+            }
+        }
+
+        [TestMethod]
+        public void AllQueryable_Should_Return_Server_Level_When_1_Is_Queried()
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUniversityRepository(context);
+                var query = new QueryDepth();
+                query = (QueryDepth)1;
+                IQueryable test = repo.AllQueryable(query);
+                Assert.IsFalse(test == null);
+            }
+        }
+
+        [TestMethod]
+        public void AllQueryable_Should_Return_Channel_Level_When_2_Is_Queried()
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUniversityRepository(context);
+                var query = new QueryDepth();
+                query = (QueryDepth)2;
+                IQueryable test = repo.AllQueryable(query);
+                Assert.IsFalse(test == null);
+            }
+        }
+
+        [TestMethod]
+        public void AllQueryable_Should_Return_User_Level_When_3_Is_Queried()
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUniversityRepository(context);
+                var query = new QueryDepth();
+                query = (QueryDepth)3;
+                IQueryable test = repo.AllQueryable(query);
+                Assert.IsFalse(test == null);
+            }
+        }
+
+        [TestMethod]
+        public void AllQueryable_Should_Return_Message_Level_When_4_Is_Queried()
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUniversityRepository(context);
+                var query = new QueryDepth();
+                query = (QueryDepth)4;
+                IQueryable test = repo.AllQueryable(query);
+                Assert.IsFalse(test == null);
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public async Task AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUniversityRepository(context);
+                var query = new QueryDepth();
+                query = (QueryDepth)5;
+                IQueryable test = repo.AllQueryable(query);
             }
         }
     }

@@ -83,7 +83,7 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                IQueryable test = repo.AllQueryable(0);
+                IQueryable test = repo.AllQueryable(QueryDepth.University);
                 Assert.IsFalse(test == null);
             }
         }
@@ -94,9 +94,8 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                var query = new QueryDepth();
-                query = (QueryDepth)1;
-                IQueryable test = repo.AllQueryable(query);
+                IQueryable test = repo.AllQueryable(QueryDepth.Server);
+
                 Assert.IsFalse(test == null);
             }
         }
@@ -107,9 +106,8 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                var query = new QueryDepth();
-                query = (QueryDepth)2;
-                IQueryable test = repo.AllQueryable(query);
+                IQueryable test = repo.AllQueryable(QueryDepth.Channel);
+
                 Assert.IsFalse(test == null);
             }
         }
@@ -120,9 +118,8 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                var query = new QueryDepth();
-                query = (QueryDepth)3;
-                IQueryable test = repo.AllQueryable(query);
+                IQueryable test = repo.AllQueryable(QueryDepth.User);
+
                 Assert.IsFalse(test == null);
             }
         }
@@ -133,9 +130,8 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                var query = new QueryDepth();
-                query = (QueryDepth)4;
-                IQueryable test = repo.AllQueryable(query);
+                IQueryable test = repo.AllQueryable(QueryDepth.Message);
+
                 Assert.IsFalse(test == null);
             }
         }
@@ -147,9 +143,7 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                var query = new QueryDepth();
-                query = (QueryDepth)5;
-                IQueryable test = repo.AllQueryable(query);
+                IQueryable test = repo.AllQueryable((QueryDepth)5);
             }
         }
     }

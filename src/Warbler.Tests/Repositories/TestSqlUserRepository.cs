@@ -14,16 +14,16 @@ namespace Warbler.Tests.Repositories
     [TestClass]
     public class TestSqlUserRepository
     {
-        private DbContextOptions<WarblerDbContext> Options { get; }
+        private static DbContextOptions<WarblerDbContext> Options { get; }
             = new DbContextOptionsBuilder<WarblerDbContext>()
                 .UseInMemoryDatabase(nameof(TestSqlUserRepository))
                 .Options;
 
-        private User Bob { get; set; }
-        private Channel General { get; set; }
+        private static User Bob { get; set; }
+        private static Channel General { get; set; }
 
-        [TestInitialize]
-        public async Task CreateUniversity()
+        [ClassInitialize]
+        public static async Task CreateUniversity(TestContext _)
         {
             using (var context = new WarblerDbContext(Options))
             {
@@ -69,6 +69,31 @@ namespace Warbler.Tests.Repositories
                 var jimmy = new User { UserName = "Jimmy" };
                 Assert.IsTrue(await repo.IsNewAsync(jimmy));
             }
+        }
+
+        [TestMethod]
+        public async Task SetOnlineAsync_Should_Change_IsOnline()
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUserRepository(context);
+                await repo.SetOnlineAsync(Bob, true);
+            }
+
+            Assert.IsTrue(Bob.IsOnline);
+        }
+
+        [TestMethod]
+        public async Task FindByNameAsync_Should_Get_A_User_By_Username()
+        {
+            User foundUser;
+            using (var context = new WarblerDbContext(Options))
+            {
+                var repo = new SqlUserRepository(context);
+                foundUser = await repo.FindByNameAsync("Bob");
+            }
+
+            Assert.AreEqual(Bob, foundUser);
         }
     }
 }

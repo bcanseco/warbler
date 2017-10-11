@@ -18,13 +18,17 @@ namespace Warbler.Tests.Repositories
     [TestClass]
     public class TestSqlUniversityRepository
     {
-        private DbContextOptions<WarblerDbContext> Options { get; }
-            = new DbContextOptionsBuilder<WarblerDbContext>()
+        private DbContextOptions<WarblerDbContext> Options { get; set; }
+         
+        [TestInitialize]
+        public void SetUpDatabase()
+        {
+            Options = new DbContextOptionsBuilder<WarblerDbContext>()
                 .UseInMemoryDatabase(nameof(TestSqlUniversityRepository))
                 .Options;
+        }
 
-        [TestMethod]
-        public async Task CreateAsync_Should_Create_A_New_University()
+        private async Task SetUpSampleUniversity()
         {
             using (var context = new WarblerDbContext(Options))
             {
@@ -37,6 +41,12 @@ namespace Warbler.Tests.Repositories
 
                 await repo.CreateAsync(nearbyResult);
             }
+        }
+
+        [TestMethod]
+        public async Task CreateAsync_Should_Create_A_New_University()
+        {
+            await SetUpSampleUniversity();
 
             // Use separate context instance to verify correct data was saved to DB
             using (var context = new WarblerDbContext(Options))
@@ -78,72 +88,103 @@ namespace Warbler.Tests.Repositories
         }
 
         [TestMethod]
-        public void AllQueryable_Should_Return_Root_When_0_Is_Queried()
+        public async Task AllQueryable_University_Should_Not_Get_Servers()
         {
+            await SetUpSampleUniversity();
+
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                IQueryable test = repo.AllQueryable(QueryDepth.University);
-                Assert.IsFalse(test == null);
+                var universities = repo
+                    .AllQueryable(QueryDepth.University)
+                    .ToList();
+
+                Assert.IsNull(universities.First().Server);
             }
         }
 
         [TestMethod]
-        public void AllQueryable_Should_Return_Server_Level_When_1_Is_Queried()
+        public async Task AllQueryable_Server_Should_Not_Get_Channels()
         {
+            await SetUpSampleUniversity();
+
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                IQueryable test = repo.AllQueryable(QueryDepth.Server);
+                var universities = repo
+                    .AllQueryable(QueryDepth.Server)
+                    .ToList();
 
-                Assert.IsFalse(test == null);
+                Assert.IsNotNull(universities.First().Server);
+                Assert.IsNull(universities.First().Server.Channels);
             }
         }
 
         [TestMethod]
-        public void AllQueryable_Should_Return_Channel_Level_When_2_Is_Queried()
+        public async Task AllQueryable_Channel_Should_Not_Get_Users_Messages()
         {
+            await SetUpSampleUniversity();
+
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                IQueryable test = repo.AllQueryable(QueryDepth.Channel);
+                var universities = repo
+                    .AllQueryable(QueryDepth.Channel)
+                    .ToList();
+                var channel = universities.First().Server.Channels.First();
 
-                Assert.IsFalse(test == null);
+                Assert.IsNotNull(channel);
+                Assert.IsNull(channel.Users);
+                Assert.IsNull(channel.Messages);
             }
         }
 
         [TestMethod]
-        public void AllQueryable_Should_Return_User_Level_When_3_Is_Queried()
+        public async Task AllQueryable_User_Should_Not_Get_Messages()
         {
+            await SetUpSampleUniversity();
+
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                IQueryable test = repo.AllQueryable(QueryDepth.User);
+                var universities = repo
+                    .AllQueryable(QueryDepth.User)
+                    .ToList();
+                var channel = universities.First().Server.Channels.First();
 
-                Assert.IsFalse(test == null);
+                Assert.IsNotNull(channel.Users);
+                Assert.IsNull(channel.Messages);
             }
         }
 
         [TestMethod]
-        public void AllQueryable_Should_Return_Message_Level_When_4_Is_Queried()
+        public async Task AllQueryable_Message_Should_Get_Everything()
         {
+            await SetUpSampleUniversity();
+
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                IQueryable test = repo.AllQueryable(QueryDepth.Message);
+                var universities = repo
+                    .AllQueryable(QueryDepth.Message)
+                    .ToList();
 
-                Assert.IsFalse(test == null);
+                Assert.IsNotNull(universities.First());
+                Assert.IsNotNull(universities.First().Server);
+                Assert.IsNotNull(universities.First().Server.Channels);
+                Assert.IsNotNull(universities.First().Server.Channels.First().Users);
+                Assert.IsNotNull(universities.First().Server.Channels.First().Messages);
             }
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public async Task AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+        public void AllQueryable_Should_Fail_With_Unknown_QueryDepth()
         {
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlUniversityRepository(context);
-                IQueryable test = repo.AllQueryable((QueryDepth)5);
+                repo.AllQueryable((QueryDepth)5);
             }
         }
     }

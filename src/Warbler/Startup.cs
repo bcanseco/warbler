@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Warbler.Hubs;
@@ -46,6 +51,10 @@ namespace Warbler
             services.AddMvc();
 
             services.Configure<ApiKeys>(Configuration.GetSection(nameof(ApiKeys)));
+
+            services.AddIdentityServer()
+            .AddInMemoryApiResources(Config.GetApiResource())
+            .AddInMemoryClients(Config.GetClient());
 
             services.AddSingleton<ProximityService>();
             services.AddSingleton<ChatService>();

@@ -33,7 +33,7 @@ export default class Proximity extends React.Component {
     this.connection = new HubConnection("/ProximityHub");
     this.connection.on("receiveNearbyUniversities", this.receiveNearbyUniversities);
     this.connection.on("successfulJoin", this.onSuccessfulJoin);
-    this.connection.onConnectionClosed(this.onConnectionClosed);
+    this.connection.onClosed = this.onConnectionClosed;
   }
 
   receiveNearbyUniversities(universities) {

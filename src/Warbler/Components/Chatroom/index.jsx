@@ -26,7 +26,7 @@ export default class Chatroom extends React.Component {
     this.connection.on("messageReceived", this.onMessageReceived.bind(this));
     this.connection.on("onJoin", this.onJoin.bind(this));
     this.connection.on("onLeave", this.onLeave.bind(this));
-    this.connection.onConnectionClosed(this.onConnectionClosed.bind(this));
+    this.connection.onClosed = this.onConnectionClosed.bind(this);
 
     this.connection.start()
       .then(() => {

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Warbler.Misc;
+using Warbler.Models;
 using Warbler.Repositories;
 using Warbler.Services;
 
@@ -39,6 +40,12 @@ namespace Warbler.Hubs
             await ChatService.OnDisconnectedAsync(user, Context.ConnectionId);
 
             await base.OnDisconnectedAsync(exception);
+        }
+
+        public async Task SendMessageAsync(Channel channel, string message)
+        {
+            var user = await UserService.FindByNameAsync(Context.User.Identity.Name);
+            await ChatService.OnMessageAsync(user, channel, message);
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Warbler.Interfaces;
 using Warbler.Misc;
@@ -23,9 +25,24 @@ namespace Warbler.Repositories
         public IAsyncEnumerable<Message> LatestIn(Channel channel)
             => Context.Channels
                 .Include(ch => ch.Messages)
-                .Single(ch => ch.Equals(channel))
-                .Messages.OrderByDescending(m => m.SendDate)
+                .Single(ch => ch.Equals(channel)).Messages
+                .OrderBy(m => m.SendDate)
                 .Take(25)
                 .ToAsyncEnumerable();
+
+        public async Task<Message> CreateAsync(string text, User user, Channel channel)
+        {
+            var message = new Message
+            {
+                Text = text,
+                UserId = user.Id,
+                ChannelId = channel.Id,
+                SendDate = DateTime.Now
+            };
+
+            message = (await Context.Messages.AddAsync(message)).Entity;
+            await Context.SaveChangesAsync();
+            return message;
+        }
     }
 }

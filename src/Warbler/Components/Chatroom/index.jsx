@@ -23,7 +23,7 @@ export default class Chatroom extends React.Component {
 
     this.connection = new HubConnection("/ChatHub");
     this.connection.on("receiveInitialPayload", this.onInitialPayload.bind(this));
-    this.connection.on("messageReceived", this.onMessageReceived.bind(this));
+    this.connection.on("onMessageReceived", this.onMessageReceived.bind(this));
     this.connection.on("onJoin", this.onJoin.bind(this));
     this.connection.on("onLeave", this.onLeave.bind(this));
     this.connection.onClosed = this.onConnectionClosed.bind(this);
@@ -47,7 +47,17 @@ export default class Chatroom extends React.Component {
     });
   }
 
-  onMessageReceived(payload) { }
+  onMessageReceived(message, user, channel, server, university) {
+    this.log("onMessageReceived", message, user, channel, server, university);
+    const universities = this.state.universities;
+
+    universities
+      .find(u => u.id === university.id).server.channels
+      .find(c => c.id === channel.id).messages
+      .push(message);
+
+    this.setState({ universities: universities });
+  }
 
   onJoin(user, channel, server, university) {
     this.log("onJoin", user, channel, server, university);
@@ -91,7 +101,8 @@ export default class Chatroom extends React.Component {
 
   onSendMessage(message) {
     this.log("Sent message:", message);
-    // TODO: Wait for backend to catch up
+    const channel = this.state.selectedChannel;
+    this.connection.invoke("sendMessageAsync", channel, message);
   }
 
   onConnectionClosed(error) {

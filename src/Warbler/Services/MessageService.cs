@@ -25,5 +25,15 @@ namespace Warbler.Services
         /// <returns>A collection of saved messages.</returns>
         public async Task<List<Message>> LatestIn(Channel channel)
             => await Repository.LatestIn(channel).ToList();
+
+        /// <summary>
+        ///   Creates and returns a message.
+        /// </summary>
+        /// <param name="text">The content of the message.</param>
+        /// <param name="user">The sender.</param>
+        /// <param name="channel">The containing channel.</param>
+        /// <returns>The created message.</returns>
+        public async Task<Message> CreateAsync(string text, User user, Channel channel)
+            => await Repository.CreateAsync(text, user, channel);
     }
 }

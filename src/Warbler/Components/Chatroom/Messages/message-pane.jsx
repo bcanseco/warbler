@@ -11,7 +11,7 @@ export default class MessagePane extends React.Component {
       <div className="col-xs-6 col-sm-9 col-md-6 col-lg-8">
         <div className="col card">
           <div className="row h-100">
-            <ul className="col message-container">{messages}</ul>
+            <ul className="col message-container auto-scroll">{messages}</ul>
           </div>
           <div className="row pos-rel">
             <MessageBox onSubmit={this.props.onSend} />

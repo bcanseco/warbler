@@ -13,18 +13,17 @@ using Warbler.Repositories;
 namespace Warbler.Services
 {
     /// <summary>
-    ///   Used by the <see cref="ChatHub"/> for business logic.
+    ///   A singleton used by the <see cref="ChatHub"/> for business logic.
     ///   TODO: Refactor and add tests for sanity
     /// </summary>
     public class ChatService : HubResource<ChatHub>
     {
         public ChatService(IHubContext<ChatHub> hubContext, ILogger<ChatService> logger)
-            : base(hubContext, logger)
-        { }
+            : base(hubContext, logger) => Logger = logger;
 
         /// <summary> Watches all channels with online users. (int : Channel.Id) </summary>
         private ConcurrentDictionary<int, Channel> ChannelStatus { get; } = new ConcurrentDictionary<int, Channel>();
-
+        private ILogger<ChatService> Logger { get; }
         private ChannelService ChannelService { get; set; }
         private MessageService MessageService { get; set; }
         private UserService UserService { get; set; }
@@ -49,7 +48,7 @@ namespace Warbler.Services
 
             var payloadBuilder = new Dictionary<Server, HashSet<Channel>>();
 
-            // Iterate through channel objects (no Messages loaded on each.
+            // Iterate through channel objects (no Messages loaded on each).
             foreach (var channel in userChannels)
             {
                 if (onFirstDevice)
@@ -118,6 +117,9 @@ namespace Warbler.Services
                     if (!ChannelStatus.TryGetValue(channel.Id, out var watchedChannel))
                         throw new Exception($"{channel.Name} was not being watched!");
 
+                    // We need to update memberships to reflect the now offline user
+                    watchedChannel.Memberships = await MembershipService.AllMembershipsForAsync(watchedChannel);
+
                     if (watchedChannel.Users.Any(u => u.IsOnline))
                     {
                         // Notify other online channel users that a user left
@@ -126,12 +128,34 @@ namespace Warbler.Services
                     }
                     else
                     {
-                        // Nobody is online; save messages and stop watching
-                        // await ChannelService.UpdateAsync(watchedChannel);
+                        // Nobody is online; stop watching channel
                         ChannelStatus.TryRemove(watchedChannel.Id, out _);
+                        Logger.LogInformation($"No longer watching {watchedChannel.Name}.");
                     }
                 }
             }
+        }
+
+        /// <summary>
+        ///   Invoked from the hub when a user wants to send a message.
+        /// </summary>
+        /// <param name="user">The sender.</param>
+        /// <param name="channel">The channel it was sent in.</param>
+        /// <param name="text">The text to send.</param>
+        public async Task OnMessageAsync(User user, Channel channel, string text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return;
+            if (!ChannelStatus.TryGetValue(channel.Id, out channel))
+                throw new Exception("User is not a member of this channel."); // JS injection
+
+            var message = await MessageService.CreateAsync(text, user, channel);
+
+            if (!ChannelStatus.TryGetValue(channel.Id, out var watchedChannel))
+                throw new Exception($"{channel.Name} was not being watched!");
+
+            watchedChannel.Messages.Add(message);
+            await HubContext.Clients.Group($"{watchedChannel.Id}")
+                .InvokeAsync("onMessageReceived", message, user, channel, channel.Server, channel.Server.University);
         }
     }
 }

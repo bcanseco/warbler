@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿/*using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Warbler.Controllers
@@ -10,4 +10,4 @@ namespace Warbler.Controllers
         [HttpGet]
         public IActionResult Get() => new JsonResult(from c in User.Claims select new { c.Type, c.Value });
     }
-}
+}*/

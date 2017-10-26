@@ -324,8 +324,9 @@ namespace Warbler.Controllers
 
         // GET: /Manage/ClaimUniversity
         [HttpGet]
-        public IActionResult ClaimUniversity()
+        public async Task<IActionResult> ClaimUniversity()
         {
+            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
             return View();
         }
         #region Helpers

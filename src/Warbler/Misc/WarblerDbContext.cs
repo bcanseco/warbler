@@ -18,7 +18,7 @@ namespace Warbler.Misc
         public DbSet<Channel> Channels { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Membership> Memberships { get; set; }
-        //public DbSet<ClaimedUniversity> Claims { get; set; }
+        public DbSet<ClaimsRequest> ClaimsRequests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +34,7 @@ namespace Warbler.Misc
             modelBuilder.Entity<Channel>().ToTable(nameof(Channel));
             modelBuilder.Entity<Message>().ToTable(nameof(Message));
             modelBuilder.Entity<Membership>().ToTable(nameof(Membership));
+            modelBuilder.Entity<ClaimsRequest>.ToTable(nameof(ClaimsRequest));
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

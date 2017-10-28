@@ -27,12 +27,13 @@ module.exports = (env) => {
         "popper.js",
         "bootstrap",
         // Everything else
-        "daemonite-material",
+        //"daemonite-material",
         "@aspnet/signalr-client",
         "isomorphic-fetch",
         "react",
         "react-dom",
-        "react-google-maps"
+        "react-google-maps",
+        "react-simple-popover"
       ].concat([
         "bootstrap/dist/css/bootstrap.css",
         "daemonite-material/css/material.css"

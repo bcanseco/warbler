@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Claim submission successful";
+}
+
+@await Html.PartialAsync("_HeadingPartial", ViewData)
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="row" style="margin-bottom: 15px">
+      <div class="col">
+        <strong>Thanks for your claim!</strong>
+        <aside>We'll be in touch within three business days.</aside>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn waves-attach">
+          <a href="/manage">Return to settings</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

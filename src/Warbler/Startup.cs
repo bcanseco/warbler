@@ -54,9 +54,9 @@ namespace Warbler
 
             services.Configure<ApiKeys>(Configuration.GetSection(nameof(ApiKeys)));
 
-            services.AddIdentityServer()
-                .AddInMemoryApiResources(IdentityServerConfig.GetApiResource())
-                .AddInMemoryClients(IdentityServerConfig.GetClient());
+            //services.AddIdentityServer()
+            //    .AddInMemoryApiResources(IdentityServerConfig.GetApiResource())
+            //    .AddInMemoryClients(IdentityServerConfig.GetClient());
 
             services.AddSingleton<ProximityService>();
             services.AddSingleton<ChatService>();

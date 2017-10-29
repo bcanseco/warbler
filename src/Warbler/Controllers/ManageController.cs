@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Warbler.Interfaces;
+using Warbler.Misc;
 using Warbler.Models;
 using Warbler.Models.ManageViewModels;
+using Warbler.Repositories;
+using Warbler.Services;
 
 namespace Warbler.Controllers
 {
@@ -19,19 +22,22 @@ namespace Warbler.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private readonly MembershipService _membershipService;
 
         public ManageController(
           UserManager<User> userManager,
           SignInManager<User> signInManager,
           IEmailSender emailSender,
           ISmsSender smsSender,
-          ILoggerFactory loggerFactory)
+          ILoggerFactory loggerFactory,
+          WarblerDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<ManageController>();
+            _membershipService = new MembershipService(new SqlMembershipRepository(context));
         }
 
         // GET: /Manage/Index
@@ -59,7 +65,9 @@ namespace Warbler.Controllers
                 TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
                 Logins = await _userManager.GetLoginsAsync(user),
                 BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user)
+                
             };
+            
             return View(model);
         }
 
@@ -324,10 +332,32 @@ namespace Warbler.Controllers
 
         // GET: /Manage/ClaimUniversity
         [HttpGet]
-        public IActionResult ClaimUniversity()
+        public async Task<IActionResult> ClaimUniversity()
         {
+            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            ViewBag.Universities = (await _membershipService.AllMembershipsForAsync(user))
+                .Select(m => m.Channel.Server.University)
+                .Distinct()
+                .ToList();
             return View();
         }
+
+        // POST: /Manage/ClaimUniveresity
+        [HttpPost]
+        public async Task<IActionResult> ClaimUniversity(ClaimUniversityViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("ClaimFormSubmit");
+            }
+            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            ViewBag.Universities = (await _membershipService.AllMembershipsForAsync(user))
+                .Select(m => m.Channel.Server.University)
+                .Distinct()
+                .ToList();
+            return View(model);
+        }
+
         #region Helpers
 
         private void AddErrors(IdentityResult result)

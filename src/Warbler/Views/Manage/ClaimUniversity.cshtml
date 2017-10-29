@@ -1,63 +1,89 @@
 ﻿@model ClaimUniversityViewModel
 @{
-    ViewData["Title"] = "Claim University";
+    ViewData["Title"] = "Claim a university";
 }
 
 @await Html.PartialAsync("_HeadingPartial", ViewData)
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    textarea {
+      min-height: 39px
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
 <div class="row">
     <div class="col-sm-12 col-md-7">
-        <form asp-controller="Manage" asp-action="ClaimUniversity" method="post" class="form-horizontal">
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FirstName" class="col-md-6"></label>
-                <div class="col-md-12">
-                    <input asp-for="FirstName" class="form-control" />
-                    <span asp-validation-for="FirstName" class="text-danger"></span>
-                </div>
+      <form asp-controller="Manage" asp-action="ClaimUniversity" method="post" class="form-horizontal">
+        <aside>A user may "claim" a university on Warbler if that user is the highest ranking technical staff member belonging to that university or is acting on their behalf. A claimed university may have custom authentication applied to verify the authenticity of connected students and professors.</aside>
+        <hr/>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+          <label asp-for="FirstName" class="col-md-6"></label>
+          <div class="col-md-12">
+            <input asp-for="FirstName" class="form-control"/>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label asp-for="LastName" class="col-md-6"></label>
+          <div class="col-md-12">
+            <input asp-for="LastName" class="form-control"/>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label asp-for="UniversityName" class="col-md-6"></label>
+          <div class="col-md-12">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select a university
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                @foreach (var university in (List<University>) ViewBag.universities)
+                {
+                  <option class="dropdown-item" href="#">@university.Name</option>
+                }
+              </div>
             </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="col-md-6"></label>
-                <div class="col-md-12">
-                    <input asp-for="LastName" class="form-control" />
-                    <span asp-validation-for="LastName" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="EmailAddress" class="col-md-6"></label>
-                <div class="col-md-12">
-                    <input asp-for="EmailAddress" class="form-control" />
-                    <span asp-validation-for="EmailAddress" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="PositionTitle" class="col-md-6"></label>
-                <div class="col-md-12">
-                    <input asp-for="PositionTitle" class="form-control" />
-                    <span asp-validation-for="PositionTitle" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="UniversityName" class="col-md-6"></label>
-                <div class="col-md-12">
-                    <input asp-for="UniversityName" class="form-control" />
-                    <span asp-validation-for="UniversityName" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="UniversityWebsite" class="col-md-6"></label>
-                <div class="col-md-12">
-                    <input asp-for="UniversityWebsite" class="form-control" />
-                    <span asp-validation-for="UniversityWebsite" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-outline-primary">Submit claim</button>
-                </div>
-            </div>
-        </form>
+          </div>
+        </div>
+        <div class="form-group">
+          <label asp-for="PositionTitle" class="col-md-6"></label>
+          <div class="col-md-12">
+            <input asp-for="PositionTitle" class="form-control"/>
+            <span asp-validation-for="PositionTitle" class="text-danger"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label asp-for="Comments" class="col-md-6"></label>
+          <div class="col-md-12">
+            <textarea asp-for="Comments" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Comments" class="text-danger"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-12">
+            <button class="btn waves-attach" type="submit">Submit claim</button>
+          </div>
+        </div>
+      </form>
     </div>
 </div>
 

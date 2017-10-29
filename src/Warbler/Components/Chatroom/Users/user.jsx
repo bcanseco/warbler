@@ -3,16 +3,15 @@
 export default class User extends React.Component {
   render() {
     return (
-      <div className="list-group-item">
-        <div className="row mw-100">
-          <div className="col-3">
-            <img className="mw-100" src={"dist/ava.png"}/>
-          </div>
-          <div className="col-9 text-truncate align-self-center">
-            {this.props.data.userName}
-          </div>
-        </div>
-      </div>
+      <button
+        type="button"
+        className="user-button"
+        onClick={this.props.onClick}
+      >
+      <img className="ava-thumbnail" src={"dist/ava.png"} />
+      <span className="text-truncate">{this.props.data.userName}</span>
+      <img className="user-online" src={"dist/circle-filled.png"} />
+      </button>
     );
   }
 }

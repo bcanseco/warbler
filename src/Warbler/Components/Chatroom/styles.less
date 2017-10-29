@@ -2,6 +2,224 @@
 
 .chatroom-container {
   height: 85vh;
+  display: flex;
+}
+
+.channel-pane {
+    flex: 20%;
+    order: 1;
+}
+
+.server-box {
+    height: 5%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.server-button {
+    width: 90%;
+    margin-left: 5%;
+    outline: none;
+    background: whitesmoke;
+    border: 3px solid #9b27b0;
+    border-radius: 5px;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Segoe UI';
+    line-height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.server-popout {
+    z-index: 1000;
+    overflow: hidden;
+    position: absolute;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.server {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid grey !important;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: none;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Segoe UI';
+    line-height: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.server:last-child {
+    border-bottom: none !important;
+}
+
+.server:last-child {
+    border-bottom: none !important;
+}
+
+.server:hover {
+    background: whitesmoke;
+}
+
+.server:active {
+    background: lightgrey;
+}
+
+.server:focus {
+    outline: 0;
+}
+
+.divider-box {
+    height: 5%;
+}
+
+.channel-box {
+    height: 90%;
+}
+
+.channel-button {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid grey !important;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Segoe UI';
+    line-height: 3rem;
+    text-align: left;
+}
+
+.channel-button:last-child {
+    border-bottom: none !important;
+}
+
+.channel-button:hover {
+    background: whitesmoke;
+}
+
+.channel-button:active {
+    background: lightgrey;
+}
+
+.channel-button:focus {
+    outline: 0;
+}
+
+.message-pane {
+    flex: 55%;
+    order: 3;
+}
+
+.message-area {
+    height: 95%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.message-container {
+    list-style: none;
+    margin: 2%;
+    border-bottom: 1px solid gainsboro;
+    padding: 20px; 
+}
+
+.message-container:last-child {
+    border-bottom: none;
+}
+
+.user-pane {
+    flex: 20%;
+    order: 5;
+}
+
+.user-button {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Segoe UI';
+    line-height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.divider-horizontal {
+    width: 90%;
+    margin-left: 5%;
+    align-self: center;
+    border: 1px solid grey;
+}
+
+.divider-vertical {
+    flex: 5%;
+}
+
+.vertical-divider {
+    flex: 1px;
+}
+
+.vertical-divider-spacer {
+    height: 4%;
+    width: 100%;
+}
+
+.vertical-divider-line {
+    height: 92%;
+    width: 1px;
+    margin: auto;
+    border: 1px solid grey;
+}
+
+.chat-header {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Segoe UI';
+    line-height: 3rem;
+}
+
+.chat-current-channel {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Segoe UI';
+    line-height: 3rem;
+    text-align: center;
+    height: 5%;
+}
+
+.ava-thumbnail {
+    height: 30px;
+    margin-right: 5px;
+    align-self: center;
+}
+
+.user-online {
+    height: 20px;
+    margin-left: auto;
 }
 
 .card {
@@ -15,10 +233,6 @@
   margin-top: @page-margin;
 }
 
-.message-container {
-  margin-bottom: 48px;
-}
-
 .pos-rel {
   position: relative;
 }
@@ -28,7 +242,7 @@
 }
 
 .bottom {
-  bottom: 0;
+  align-self: flex-end;
 }
 
 .auto-scroll {
@@ -39,4 +253,37 @@
 img {
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.btn-secondary {
+    background: #9b27b0;
+}
+
+.btn-secondary:hover {
+    background: darkviolet;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9b27b0;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: darkviolet;
+}
+
+.h-90 {
+    height: 90%;
 }

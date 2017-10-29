@@ -5,6 +5,9 @@ import { HubConnection } from "@aspnet/signalr-client";
 import ChannelPane from "./Channels/channel-pane.jsx";
 import MessagePane from "./Messages/message-pane.jsx";
 import UserPane from "./Users/user-pane.jsx";
+import VerticalDivider from "./vertical-divider.jsx";
+import ServerButton from "./Server/server-button.jsx";
+import ServerPopout from "./Server/server-popout.jsx";
 import "./styles.less";
 
 export default class Chatroom extends React.Component {
@@ -14,12 +17,19 @@ export default class Chatroom extends React.Component {
       universities: null,
       selectedUniversity: null,
       selectedChannel: null,
-      error: null
+      error: null,
+      serverPopout: false,
+      buttonTop: 0,
+      buttonLeft: 0,
+      buttonWidth: 0
     };
 
     this.log = console.log.bind(console, `%c${this.constructor.name}`, "color: #1f82e4");
+    this.onSelectServer = this.onSelectServer.bind(this);
     this.onSelectChannel = this.onSelectChannel.bind(this);
     this.onSendMessage = this.onSendMessage.bind(this);
+
+    this.onServerPopoutOpen = this.onServerPopoutOpen.bind(this);
 
     this.connection = new HubConnection("/ChatHub");
     this.connection.on("receiveInitialPayload", this.onInitialPayload.bind(this));
@@ -92,6 +102,16 @@ export default class Chatroom extends React.Component {
     this.setState({ universities: universities });
   }
 
+  onSelectServer(server) {
+    this.log("Selected server:", server);
+    this.setState({
+      selectedServer: server
+    });
+    this.setState({
+      selectedChannel: this.state.selectedUniversity.server.channels[0]
+    });
+  }
+
   onSelectChannel(channel) {
     this.log("Selected channel:", channel);
     this.setState({
@@ -111,6 +131,16 @@ export default class Chatroom extends React.Component {
     this.setState({ error: "Lost connection to server. Please refresh the page." });
   }
 
+  onServerPopoutOpen(buttonTop, buttonLeft, buttonWidth) {
+    console.log(buttonTop, buttonLeft, buttonWidth);
+    this.setState({
+      buttonTop: buttonTop,
+      buttonLeft: buttonLeft,
+      buttonWidth: buttonWidth,
+      serverPopout: !this.state.serverPopout
+    });
+  }
+
   render() {
     let content;
     if (!!this.state.error) {
@@ -119,16 +149,34 @@ export default class Chatroom extends React.Component {
       content = <div>Loading...</div>;
     } else { // No errors and all data available
       content = (
-        <div className="row chatroom-container">
-          <ChannelPane
-            channels={this.state.selectedUniversity.server.channels}
-            onSelect={this.onSelectChannel}
-          />
-          <MessagePane
-            messages={this.state.selectedChannel.messages}
-            onSend={this.onSendMessage}
-          />
-          <UserPane users={this.state.selectedChannel.users}/>
+        <div>
+          <div className="chatroom-container">
+            <ChannelPane
+              server={this.state.selectedUniversity.name}
+              channels={this.state.selectedUniversity.server.channels}
+              onSelect={this.onSelectChannel}
+              popoutFunc={this.onServerPopoutOpen}
+            />
+            <VerticalDivider order={2}/>
+            <MessagePane
+              channelName={this.state.selectedChannel.name}
+              messages={this.state.selectedChannel.messages}
+              onSend={this.onSendMessage}
+            />
+            <VerticalDivider order={4} />
+            <UserPane users={this.state.selectedChannel.users} />
+          </div>
+          <div>
+            {this.state.serverPopout
+              ? <ServerPopout
+                  servers={this.state.universities}
+                  buttonWidth={this.state.buttonWidth}
+                  buttonTop={this.state.buttonTop}
+                  buttonLeft={this.state.buttonLeft}
+                  onSelect={this.onSelectServer}
+                />
+              : null}
+          </div>
         </div>
       );
     }

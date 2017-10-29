@@ -8,14 +8,15 @@ export default class MessagePane extends React.Component {
       <Message data={message} key={i}/>);
 
     return (
-      <div className="col-xs-6 col-sm-9 col-md-6 col-lg-8">
-        <div className="col card">
-          <div className="row h-100">
-            <ul className="col message-container auto-scroll">{messages}</ul>
-          </div>
-          <div className="row pos-rel">
-            <MessageBox onSubmit={this.props.onSend} />
-          </div>
+      <div className="message-pane">
+        <h4 className="chat-current-channel">
+          <i>#{this.props.channelName}</i>
+        </h4>
+        <div className="auto-scroll h-90">
+          <ul className="auto-scroll message-area">{messages}</ul>
+        </div>
+        <div className="pos-rel">
+          <MessageBox onSubmit={this.props.onSend} />
         </div>
       </div>
     );

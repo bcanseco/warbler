@@ -341,6 +341,23 @@ namespace Warbler.Controllers
                 .ToList();
             return View();
         }
+
+        // POST: /Manage/ClaimUniveresity
+        [HttpPost]
+        public async Task<IActionResult> ClaimUniversity(ClaimUniversityViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("ClaimFormSubmit");
+            }
+            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            ViewBag.Universities = (await _membershipService.AllMembershipsForAsync(user))
+                .Select(m => m.Channel.Server.University)
+                .Distinct()
+                .ToList();
+            return View(model);
+        }
+
         #region Helpers
 
         private void AddErrors(IdentityResult result)

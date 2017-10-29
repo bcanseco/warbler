@@ -18,7 +18,7 @@ namespace Warbler.Misc
         public DbSet<Channel> Channels { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Membership> Memberships { get; set; }
-        public DbSet<ClaimsRequest> ClaimsRequests { get; set; }
+        //public DbSet<ClaimsRequest> ClaimsRequests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -13,25 +13,20 @@ namespace Warbler.Models.ManageViewModels
         [DataType(DataType.Text)]
         [Display(Name = "Last Name", Prompt = "Enter your last name")]
         public string LastName { get; set; }
-
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email Address", Prompt = "Enter your email address")]
-        public string EmailAddress { get; set; }
-
-        [Required]
+        
+        //[Required]
         [DataType(DataType.Text)]
-        [Display(Name = "Position", Prompt = "Enter your position at the claimed university")]
-        public string PositionTitle { get; set; }
-
-        [Required]
-        [DataType(DataType.Text)]
-        [Display(Name = "Name of University", Prompt = "Enter the name of the claimed university")]
+        [Display(Name = "University", Prompt = "Which university are you claiming?")]
         public string UniversityName { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
-        [Display(Name = "University Website", Prompt = "Enter the claimed university's website")]
-        public string UniversityWebsite { get; set; }
+        [Display(Name = "Position", Prompt = "Enter your position title at this university")]
+        public string PositionTitle { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Comments", Prompt = "Any other comments or supporting documentation?")]
+        public string Comments { get; set; }
     }
 }

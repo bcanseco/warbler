@@ -61,7 +61,13 @@
                 <label asp-for="UniversityName" class="col-md-6"></label>
                 <div class="col-md-12">
                     <select id="Select University">
-                        <option value="option1">Florida Institute of Technology</option>
+                        @if (ViewBag != null)
+                        {
+                            @foreach (var university in (List<University>)ViewBag.universities)
+                            {
+                                <option>@university.Name</option>
+                            }
+                        }
                     </select>
                 </div>
             </div>

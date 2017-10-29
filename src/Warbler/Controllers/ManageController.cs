@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Warbler.Interfaces;
 using Warbler.Models;
 using Warbler.Models.ManageViewModels;
+using Warbler.Services;
 
 namespace Warbler.Controllers
 {
@@ -19,6 +20,7 @@ namespace Warbler.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private IMembershipRepository repository;
 
         public ManageController(
           UserManager<User> userManager,
@@ -59,7 +61,9 @@ namespace Warbler.Controllers
                 TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
                 Logins = await _userManager.GetLoginsAsync(user),
                 BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user)
+                
             };
+            
             return View(model);
         }
 
@@ -326,7 +330,9 @@ namespace Warbler.Controllers
         [HttpGet]
         public async Task<IActionResult> ClaimUniversity()
         {
+            var member = new MembershipService(repository);
             var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            ViewBag.Universities = await member.AllMembershipsForAsync(user);
             return View();
         }
         #region Helpers

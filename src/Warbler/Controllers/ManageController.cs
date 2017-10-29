@@ -335,7 +335,10 @@ namespace Warbler.Controllers
         public async Task<IActionResult> ClaimUniversity()
         {
             var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
-            ViewBag.Universities = await _membershipService.AllMembershipsForAsync(user);
+            ViewBag.Universities = (await _membershipService.AllMembershipsForAsync(user))
+                .Select(m => m.Channel.Server.University)
+                .Distinct()
+                .ToList();
             return View();
         }
         #region Helpers

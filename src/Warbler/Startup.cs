@@ -26,6 +26,12 @@ namespace Warbler
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+
+            if (env.IsDevelopment())
+            {
+                builder.AddUserSecrets<Startup>();
+            }
+
             Configuration = builder.Build();
         }
 
@@ -42,6 +48,7 @@ namespace Warbler
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddMvc();
 
@@ -75,6 +82,13 @@ namespace Warbler
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WarblerDbContext>()
                 .AddDefaultTokenProviders();
+
+            // Set up Google authentication.
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            });
 
             services.Configure<IdentityOptions>(options =>
             {

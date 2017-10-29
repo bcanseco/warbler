@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Warbler.Interfaces;
+using Warbler.Misc;
 using Warbler.Models;
 using Warbler.Models.ManageViewModels;
+using Warbler.Repositories;
 using Warbler.Services;
 
 namespace Warbler.Controllers
@@ -20,20 +22,22 @@ namespace Warbler.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
-        private IMembershipRepository repository;
+        private readonly MembershipService _membershipService;
 
         public ManageController(
           UserManager<User> userManager,
           SignInManager<User> signInManager,
           IEmailSender emailSender,
           ISmsSender smsSender,
-          ILoggerFactory loggerFactory)
+          ILoggerFactory loggerFactory,
+          WarblerDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<ManageController>();
+            _membershipService = new MembershipService(new SqlMembershipRepository(context));
         }
 
         // GET: /Manage/Index
@@ -330,9 +334,8 @@ namespace Warbler.Controllers
         [HttpGet]
         public async Task<IActionResult> ClaimUniversity()
         {
-            var member = new MembershipService(repository);
             var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
-            ViewBag.Universities = await member.AllMembershipsForAsync(user);
+            ViewBag.Universities = await _membershipService.AllMembershipsForAsync(user);
             return View();
         }
         #region Helpers

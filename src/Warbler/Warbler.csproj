@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>User-Secret-ID</UserSecretsId>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>Warbler</AssemblyName>
     <OutputType>Exe</OutputType>
@@ -9,6 +10,7 @@
     <AssetTargetFallback>dotnet5.6;portable-net45+win8</AssetTargetFallback>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <DebugType>Full</DebugType>
+    <UserSecretsId>4b2c6146-e04c-4d0a-9d0e-df2a8fd651d8</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,13 +19,16 @@
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.0.0" />
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.0-alpha1-final" />
     <PackageReference Include="Microsoft.CodeCoverage" Version="1.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.0" />
     <PackageReference Include="System.ValueTuple" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

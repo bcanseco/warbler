@@ -2,7 +2,6 @@
 const glob                 = require("glob-all");
 const webpack              = require("webpack");
 const ExtractTextPlugin    = require("extract-text-webpack-plugin");
-const CopyWebpackPlugin    = require("copy-webpack-plugin");
 const bundleOutputDir      = "./wwwroot/dist";
 
 module.exports = (env) => {
@@ -22,7 +21,10 @@ module.exports = (env) => {
       .reduce((accumulator, filePath) => {
         accumulator[filePath.replace(/^.*[\\\/]/, "")] = filePath;
         return accumulator;
-      }, {"shared-styles.dist": "./Components/site-shared.less"});
+      }, {
+        "shared-styles.dist": "./Components/site-shared.less",
+        "shared-scripts.dist": "./Components/site-shared.js"
+      });
 
     return Object.assign(jsx, other);
   }
@@ -50,7 +52,6 @@ module.exports = (env) => {
         context: __dirname,
         manifest: require("./wwwroot/dist/vendor-manifest.json")
       }),
-      new CopyWebpackPlugin([{ from: "./Components/site-shared.js", to: "shared-scripts.dist.js" }])
     ].concat(isDevBuild ? [
       // Plugins that apply in development builds only
       new webpack.SourceMapDevToolPlugin({

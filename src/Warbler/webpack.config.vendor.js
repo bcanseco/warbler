@@ -46,7 +46,14 @@ module.exports = (env) => {
     },
     plugins: [
       extractCSS,
-      new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" }), // Maps these identifiers to the jQuery package (because Bootstrap expects it to be a global variable)
+      new webpack.ProvidePlugin({
+        tether: 'tether',
+        Tether: 'tether',
+        'window.Tether': 'tether',
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery",
+      }),
       new webpack.DllPlugin({
         path: path.join(__dirname, "wwwroot", "dist", "[name]-manifest.json"),
         name: "[name]_[hash]"

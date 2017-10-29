@@ -25,6 +25,7 @@ export default class Chatroom extends React.Component {
     };
 
     this.log = console.log.bind(console, `%c${this.constructor.name}`, "color: #1f82e4");
+    this.onSelectServer = this.onSelectServer.bind(this);
     this.onSelectChannel = this.onSelectChannel.bind(this);
     this.onSendMessage = this.onSendMessage.bind(this);
 
@@ -101,6 +102,16 @@ export default class Chatroom extends React.Component {
     this.setState({ universities: universities });
   }
 
+  onSelectServer(server) {
+    this.log("Selected server:", server);
+    this.setState({
+      selectedServer: server
+    });
+    this.setState({
+      selectedChannel: this.state.selectedUniversity.server.channels[0]
+    });
+  }
+
   onSelectChannel(channel) {
     this.log("Selected channel:", channel);
     this.setState({
@@ -123,10 +134,10 @@ export default class Chatroom extends React.Component {
   onServerPopoutOpen(buttonTop, buttonLeft, buttonWidth) {
     console.log(buttonTop, buttonLeft, buttonWidth);
     this.setState({
-      serverPopout: !this.state.serverPopout,
       buttonTop: buttonTop,
       buttonLeft: buttonLeft,
-      buttonWidth: buttonWidth
+      buttonWidth: buttonWidth,
+      serverPopout: !this.state.serverPopout
     });
   }
 
@@ -157,7 +168,13 @@ export default class Chatroom extends React.Component {
           </div>
           <div>
             {this.state.serverPopout
-              ? <ServerPopout servers={this.state.universities} buttonWidth={this.state.buttonWidth} buttonTop = { this.state.buttonTop } buttonLeft={this.state.buttonLeft} />
+              ? <ServerPopout
+                  servers={this.state.universities}
+                  buttonWidth={this.state.buttonWidth}
+                  buttonTop={this.state.buttonTop}
+                  buttonLeft={this.state.buttonLeft}
+                  onSelect={this.onSelectServer}
+                />
               : null}
           </div>
         </div>

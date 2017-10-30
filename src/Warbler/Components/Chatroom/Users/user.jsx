@@ -10,7 +10,7 @@ export default class User extends React.Component {
       >
       <img className="ava-thumbnail" src={"dist/ava.png"} />
       <span className="text-truncate">{this.props.data.userName}</span>
-      <img className="user-online" src={"dist/circle-filled.png"} />
+      {this.props.data.isOnline && <img className="user-online" src={"dist/circle-filled.png"} />}
       </button>
     );
   }

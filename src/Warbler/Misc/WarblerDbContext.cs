@@ -19,6 +19,7 @@ namespace Warbler.Misc
         public DbSet<Message> Messages { get; set; }
         public DbSet<Membership> Memberships { get; set; }
         //public DbSet<ClaimsRequest> ClaimsRequests { get; set; }
+        //Public DbSet<BlockedUsers> BlockedUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

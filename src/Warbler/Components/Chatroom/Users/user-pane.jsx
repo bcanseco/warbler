@@ -4,7 +4,6 @@ import User from "./user.jsx";
 export default class UserPane extends React.Component {
   render() {
     const users = this.props.users
-      //.filter(u => u.isOnline)
       .map((user, i) => <User data={user} key={i}/>);
 
     return (

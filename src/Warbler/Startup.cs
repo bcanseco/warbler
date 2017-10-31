@@ -83,12 +83,12 @@ namespace Warbler
                 .AddEntityFrameworkStores<WarblerDbContext>()
                 .AddDefaultTokenProviders();
 
-            //// Set up Google authentication.
-            //services.AddAuthentication().AddGoogle(googleOptions =>
-            //{
-            //    googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
-            //    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-            //});
+            // Set up Google authentication.
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            });
 
             services.Configure<IdentityOptions>(options =>
             {

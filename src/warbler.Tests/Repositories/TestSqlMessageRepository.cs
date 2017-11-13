@@ -9,7 +9,6 @@ using Warbler.Misc;
 using Warbler.Repositories;
 using Warbler.Models;
 
-
 namespace Warbler.Tests.Repositories
 {
     [TestClass]
@@ -17,7 +16,7 @@ namespace Warbler.Tests.Repositories
     {
         private DbContextOptions<WarblerDbContext> Options { get; }
             = new DbContextOptionsBuilder<WarblerDbContext>()
-                .UseInMemoryDatabase(nameof(TestSqlChannelRepository))
+                .UseInMemoryDatabase(nameof(TestSqlMessageRepository))
                 .Options;
 
         private User Bob { get; set; }
@@ -50,7 +49,7 @@ namespace Warbler.Tests.Repositories
             }
         }
         [TestMethod]
-        public async Task CreateAsync_should_return_a_Message_With_A_NonNull_Value()
+        public async Task CreateAsync_Should_Create_A_New_Message()
         {
             using (var context = new WarblerDbContext(Options))
             {
@@ -67,16 +66,14 @@ namespace Warbler.Tests.Repositories
         }
 
         [TestMethod]
-        public async Task LatestIn_Should_Return_The_Last_25_Messages_Submitted_In_Reverse_Chronological_Order()
+        public async Task LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order()
         {
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlMessageRepository(context);
 
-                for (int i = 0; i < 25; i++)
-                {
-                    await repo.CreateAsync(i.ToString(), Bob, General);
-                }
+                await repo.CreateAsync("foo", Bob, General);
+                await repo.CreateAsync("bar", Bob, General);
             }
 
             using (var context = new WarblerDbContext(Options))
@@ -86,10 +83,9 @@ namespace Warbler.Tests.Repositories
                 var firstMessage = messages.First().Result;
                 var lastMessage = messages.Last().Result;
 
-                Assert.AreEqual("24", lastMessage.Text);
-                Assert.AreEqual("0", firstMessage.Text);
-                Assert.IsTrue(0 < System.DateTime.Compare(
-                              lastMessage.SendDate, firstMessage.SendDate));
+                Assert.AreEqual("bar", lastMessage.Text);
+                Assert.AreEqual("foo", firstMessage.Text);
+                Assert.IsTrue(lastMessage.SendDate > firstMessage.SendDate);
             }
         }
     }

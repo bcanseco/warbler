@@ -8,6 +8,7 @@ items:
   - Warbler.Services.ChatService.#ctor(IHubContext{Warbler.Hubs.ChatHub},ILogger{Warbler.Services.ChatService})
   - Warbler.Services.ChatService.OnConnectedAsync(Warbler.Models.User,System.String)
   - Warbler.Services.ChatService.OnDisconnectedAsync(Warbler.Models.User,System.String)
+  - Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User,Warbler.Models.Channel,System.String)
   - Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)
   langs:
   - csharp
@@ -19,11 +20,11 @@ items:
   source:
     id: ChatService
     path: ''
-    startLine: 2673
+    startLine: 2884
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
-  summary: "\nUsed by the <xref href=\"Warbler.Hubs.ChatHub\" data-throw-if-not-resolved=\"false\"></xref> for business logic.\n"
+  summary: "\nA singleton used by the <xref href=\"Warbler.Hubs.ChatHub\" data-throw-if-not-resolved=\"false\"></xref> for business logic.\nTODO: Refactor and add tests for sanity\n"
   example: []
   syntax:
     content: 'public class ChatService : HubResource<ChatHub>'
@@ -62,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2675
+    startLine: 2886
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -96,7 +97,7 @@ items:
   source:
     id: With
     path: ''
-    startLine: 2687
+    startLine: 2897
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -127,7 +128,7 @@ items:
   source:
     id: OnConnectedAsync
     path: ''
-    startLine: 2699
+    startLine: 2909
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -162,7 +163,7 @@ items:
   source:
     id: OnDisconnectedAsync
     path: ''
-    startLine: 2750
+    startLine: 2970
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -180,6 +181,46 @@ items:
       type: Task
     content.vb: Public Function OnDisconnectedAsync(user As User, connectionId As String) As Task
   overload: Warbler.Services.ChatService.OnDisconnectedAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User,Warbler.Models.Channel,System.String)
+  commentId: M:Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User,Warbler.Models.Channel,System.String)
+  id: OnMessageAsync(Warbler.Models.User,Warbler.Models.Channel,System.String)
+  parent: Warbler.Services.ChatService
+  langs:
+  - csharp
+  - vb
+  name: OnMessageAsync(User, Channel, String)
+  nameWithType: ChatService.OnMessageAsync(User, Channel, String)
+  fullName: Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User, Warbler.Models.Channel, System.String)
+  type: Method
+  source:
+    id: OnMessageAsync
+    path: ''
+    startLine: 3010
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nInvoked from the hub when a user wants to send a message.\n"
+  example: []
+  syntax:
+    content: public Task OnMessageAsync(User user, Channel channel, string text)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+      description: The sender.
+    - id: channel
+      type: Warbler.Models.Channel
+      description: The channel it was sent in.
+    - id: text
+      type: System.String
+      description: The text to send.
+    return:
+      type: Task
+    content.vb: Public Function OnMessageAsync(user As User, channel As Channel, text As String) As Task
+  overload: Warbler.Services.ChatService.OnMessageAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -810,3 +851,16 @@ references:
   name: OnDisconnectedAsync
   nameWithType: ChatService.OnDisconnectedAsync
   fullName: Warbler.Services.ChatService.OnDisconnectedAsync
+- uid: Warbler.Services.ChatService.OnMessageAsync*
+  commentId: Overload:Warbler.Services.ChatService.OnMessageAsync
+  isExternal: false
+  name: OnMessageAsync
+  nameWithType: ChatService.OnMessageAsync
+  fullName: Warbler.Services.ChatService.OnMessageAsync
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel

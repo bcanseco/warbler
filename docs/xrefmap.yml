@@ -403,15 +403,15 @@ references:
   commentId: T:Warbler.Controllers.ManageController
   fullName: Warbler.Controllers.ManageController
   nameWithType: ManageController
-- uid: Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)
-  name: ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory)
-  href: api/Warbler.Controllers.ManageController.html#Warbler_Controllers_ManageController__ctor_UserManager_Warbler_Models_User__SignInManager_Warbler_Models_User__Warbler_Interfaces_IEmailSender_Warbler_Interfaces_ISmsSender_ILoggerFactory_
-  commentId: M:Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)
-  name.vb: ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory)
-  fullName: Warbler.Controllers.ManageController.ManageController(UserManager<Warbler.Models.User>, SignInManager<Warbler.Models.User>, Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory)
-  fullName.vb: Warbler.Controllers.ManageController.ManageController(UserManager(Of Warbler.Models.User), SignInManager(Of Warbler.Models.User), Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory)
-  nameWithType: ManageController.ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory)
-  nameWithType.vb: ManageController.ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory)
+- uid: Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)
+  name: ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
+  href: api/Warbler.Controllers.ManageController.html#Warbler_Controllers_ManageController__ctor_UserManager_Warbler_Models_User__SignInManager_Warbler_Models_User__Warbler_Interfaces_IEmailSender_Warbler_Interfaces_ISmsSender_ILoggerFactory_Warbler_Misc_WarblerDbContext_
+  commentId: M:Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)
+  name.vb: ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
+  fullName: Warbler.Controllers.ManageController.ManageController(UserManager<Warbler.Models.User>, SignInManager<Warbler.Models.User>, Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory, Warbler.Misc.WarblerDbContext)
+  fullName.vb: Warbler.Controllers.ManageController.ManageController(UserManager(Of Warbler.Models.User), SignInManager(Of Warbler.Models.User), Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory, Warbler.Misc.WarblerDbContext)
+  nameWithType: ManageController.ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
+  nameWithType.vb: ManageController.ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
 - uid: Warbler.Controllers.ManageController.#ctor*
   name: ManageController
   href: api/Warbler.Controllers.ManageController.html#Warbler_Controllers_ManageController__ctor_
@@ -454,6 +454,24 @@ references:
   commentId: Overload:Warbler.Controllers.ManageController.ChangePassword
   fullName: Warbler.Controllers.ManageController.ChangePassword
   nameWithType: ManageController.ChangePassword
+- uid: Warbler.Controllers.ManageController.ClaimUniversity
+  name: ClaimUniversity()
+  href: api/Warbler.Controllers.ManageController.html#Warbler_Controllers_ManageController_ClaimUniversity
+  commentId: M:Warbler.Controllers.ManageController.ClaimUniversity
+  fullName: Warbler.Controllers.ManageController.ClaimUniversity()
+  nameWithType: ManageController.ClaimUniversity()
+- uid: Warbler.Controllers.ManageController.ClaimUniversity(ClaimUniversityViewModel)
+  name: ClaimUniversity(ClaimUniversityViewModel)
+  href: api/Warbler.Controllers.ManageController.html#Warbler_Controllers_ManageController_ClaimUniversity_ClaimUniversityViewModel_
+  commentId: M:Warbler.Controllers.ManageController.ClaimUniversity(ClaimUniversityViewModel)
+  fullName: Warbler.Controllers.ManageController.ClaimUniversity(ClaimUniversityViewModel)
+  nameWithType: ManageController.ClaimUniversity(ClaimUniversityViewModel)
+- uid: Warbler.Controllers.ManageController.ClaimUniversity*
+  name: ClaimUniversity
+  href: api/Warbler.Controllers.ManageController.html#Warbler_Controllers_ManageController_ClaimUniversity_
+  commentId: Overload:Warbler.Controllers.ManageController.ClaimUniversity
+  fullName: Warbler.Controllers.ManageController.ClaimUniversity
+  nameWithType: ManageController.ClaimUniversity
 - uid: Warbler.Controllers.ManageController.DisableTwoFactorAuthentication
   name: DisableTwoFactorAuthentication()
   href: api/Warbler.Controllers.ManageController.html#Warbler_Controllers_ManageController_DisableTwoFactorAuthentication
@@ -811,6 +829,18 @@ references:
   commentId: Overload:Warbler.Hubs.ChatHub.OnDisconnectedAsync
   fullName: Warbler.Hubs.ChatHub.OnDisconnectedAsync
   nameWithType: ChatHub.OnDisconnectedAsync
+- uid: Warbler.Hubs.ChatHub.SendMessageAsync(Warbler.Models.Channel,System.String)
+  name: SendMessageAsync(Channel, String)
+  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_SendMessageAsync_Warbler_Models_Channel_System_String_
+  commentId: M:Warbler.Hubs.ChatHub.SendMessageAsync(Warbler.Models.Channel,System.String)
+  fullName: Warbler.Hubs.ChatHub.SendMessageAsync(Warbler.Models.Channel, System.String)
+  nameWithType: ChatHub.SendMessageAsync(Channel, String)
+- uid: Warbler.Hubs.ChatHub.SendMessageAsync*
+  name: SendMessageAsync
+  href: api/Warbler.Hubs.ChatHub.html#Warbler_Hubs_ChatHub_SendMessageAsync_
+  commentId: Overload:Warbler.Hubs.ChatHub.SendMessageAsync
+  fullName: Warbler.Hubs.ChatHub.SendMessageAsync
+  nameWithType: ChatHub.SendMessageAsync
 - uid: Warbler.Hubs.ProximityHub
   name: ProximityHub
   href: api/Warbler.Hubs.ProximityHub.html
@@ -937,6 +967,18 @@ references:
   commentId: T:Warbler.Interfaces.IMessageRepository
   fullName: Warbler.Interfaces.IMessageRepository
   nameWithType: IMessageRepository
+- uid: Warbler.Interfaces.IMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  name: CreateAsync(String, User, Channel)
+  href: api/Warbler.Interfaces.IMessageRepository.html#Warbler_Interfaces_IMessageRepository_CreateAsync_System_String_Warbler_Models_User_Warbler_Models_Channel_
+  commentId: M:Warbler.Interfaces.IMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  fullName: Warbler.Interfaces.IMessageRepository.CreateAsync(System.String, Warbler.Models.User, Warbler.Models.Channel)
+  nameWithType: IMessageRepository.CreateAsync(String, User, Channel)
+- uid: Warbler.Interfaces.IMessageRepository.CreateAsync*
+  name: CreateAsync
+  href: api/Warbler.Interfaces.IMessageRepository.html#Warbler_Interfaces_IMessageRepository_CreateAsync_
+  commentId: Overload:Warbler.Interfaces.IMessageRepository.CreateAsync
+  fullName: Warbler.Interfaces.IMessageRepository.CreateAsync
+  nameWithType: IMessageRepository.CreateAsync
 - uid: Warbler.Interfaces.IMessageRepository.LatestIn(Warbler.Models.Channel)
   name: LatestIn(Channel)
   href: api/Warbler.Interfaces.IMessageRepository.html#Warbler_Interfaces_IMessageRepository_LatestIn_Warbler_Models_Channel_
@@ -1304,6 +1346,36 @@ references:
   fullName.vb: Warbler.Misc.HubResource(Of TService, THub).OnDisconnected
   nameWithType: HubResource<TService, THub>.OnDisconnected
   nameWithType.vb: HubResource(Of TService, THub).OnDisconnected
+- uid: Warbler.Misc.IdentityServerConfig
+  name: IdentityServerConfig
+  href: api/Warbler.Misc.IdentityServerConfig.html
+  commentId: T:Warbler.Misc.IdentityServerConfig
+  fullName: Warbler.Misc.IdentityServerConfig
+  nameWithType: IdentityServerConfig
+- uid: Warbler.Misc.IdentityServerConfig.GetApiResource
+  name: GetApiResource()
+  href: api/Warbler.Misc.IdentityServerConfig.html#Warbler_Misc_IdentityServerConfig_GetApiResource
+  commentId: M:Warbler.Misc.IdentityServerConfig.GetApiResource
+  fullName: Warbler.Misc.IdentityServerConfig.GetApiResource()
+  nameWithType: IdentityServerConfig.GetApiResource()
+- uid: Warbler.Misc.IdentityServerConfig.GetApiResource*
+  name: GetApiResource
+  href: api/Warbler.Misc.IdentityServerConfig.html#Warbler_Misc_IdentityServerConfig_GetApiResource_
+  commentId: Overload:Warbler.Misc.IdentityServerConfig.GetApiResource
+  fullName: Warbler.Misc.IdentityServerConfig.GetApiResource
+  nameWithType: IdentityServerConfig.GetApiResource
+- uid: Warbler.Misc.IdentityServerConfig.GetClient
+  name: GetClient()
+  href: api/Warbler.Misc.IdentityServerConfig.html#Warbler_Misc_IdentityServerConfig_GetClient
+  commentId: M:Warbler.Misc.IdentityServerConfig.GetClient
+  fullName: Warbler.Misc.IdentityServerConfig.GetClient()
+  nameWithType: IdentityServerConfig.GetClient()
+- uid: Warbler.Misc.IdentityServerConfig.GetClient*
+  name: GetClient
+  href: api/Warbler.Misc.IdentityServerConfig.html#Warbler_Misc_IdentityServerConfig_GetClient_
+  commentId: Overload:Warbler.Misc.IdentityServerConfig.GetClient
+  fullName: Warbler.Misc.IdentityServerConfig.GetClient
+  nameWithType: IdentityServerConfig.GetClient
 - uid: Warbler.Misc.WarblerDbContext
   name: WarblerDbContext
   href: api/Warbler.Misc.WarblerDbContext.html
@@ -1877,6 +1949,108 @@ references:
   commentId: Overload:Warbler.Models.Channel.Users
   fullName: Warbler.Models.Channel.Users
   nameWithType: Channel.Users
+- uid: Warbler.Models.ClaimsRequest
+  name: ClaimsRequest
+  href: api/Warbler.Models.ClaimsRequest.html
+  commentId: T:Warbler.Models.ClaimsRequest
+  fullName: Warbler.Models.ClaimsRequest
+  nameWithType: ClaimsRequest
+- uid: Warbler.Models.ClaimsRequest.EmailAddress
+  name: EmailAddress
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_EmailAddress
+  commentId: P:Warbler.Models.ClaimsRequest.EmailAddress
+  fullName: Warbler.Models.ClaimsRequest.EmailAddress
+  nameWithType: ClaimsRequest.EmailAddress
+- uid: Warbler.Models.ClaimsRequest.EmailAddress*
+  name: EmailAddress
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_EmailAddress_
+  commentId: Overload:Warbler.Models.ClaimsRequest.EmailAddress
+  fullName: Warbler.Models.ClaimsRequest.EmailAddress
+  nameWithType: ClaimsRequest.EmailAddress
+- uid: Warbler.Models.ClaimsRequest.Equals(Warbler.Models.ClaimsRequest)
+  name: Equals(ClaimsRequest)
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_Equals_Warbler_Models_ClaimsRequest_
+  commentId: M:Warbler.Models.ClaimsRequest.Equals(Warbler.Models.ClaimsRequest)
+  fullName: Warbler.Models.ClaimsRequest.Equals(Warbler.Models.ClaimsRequest)
+  nameWithType: ClaimsRequest.Equals(ClaimsRequest)
+- uid: Warbler.Models.ClaimsRequest.Equals*
+  name: Equals
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_Equals_
+  commentId: Overload:Warbler.Models.ClaimsRequest.Equals
+  fullName: Warbler.Models.ClaimsRequest.Equals
+  nameWithType: ClaimsRequest.Equals
+- uid: Warbler.Models.ClaimsRequest.FirstName
+  name: FirstName
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_FirstName
+  commentId: P:Warbler.Models.ClaimsRequest.FirstName
+  fullName: Warbler.Models.ClaimsRequest.FirstName
+  nameWithType: ClaimsRequest.FirstName
+- uid: Warbler.Models.ClaimsRequest.FirstName*
+  name: FirstName
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_FirstName_
+  commentId: Overload:Warbler.Models.ClaimsRequest.FirstName
+  fullName: Warbler.Models.ClaimsRequest.FirstName
+  nameWithType: ClaimsRequest.FirstName
+- uid: Warbler.Models.ClaimsRequest.Id
+  name: Id
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_Id
+  commentId: P:Warbler.Models.ClaimsRequest.Id
+  fullName: Warbler.Models.ClaimsRequest.Id
+  nameWithType: ClaimsRequest.Id
+- uid: Warbler.Models.ClaimsRequest.Id*
+  name: Id
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_Id_
+  commentId: Overload:Warbler.Models.ClaimsRequest.Id
+  fullName: Warbler.Models.ClaimsRequest.Id
+  nameWithType: ClaimsRequest.Id
+- uid: Warbler.Models.ClaimsRequest.LastName
+  name: LastName
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_LastName
+  commentId: P:Warbler.Models.ClaimsRequest.LastName
+  fullName: Warbler.Models.ClaimsRequest.LastName
+  nameWithType: ClaimsRequest.LastName
+- uid: Warbler.Models.ClaimsRequest.LastName*
+  name: LastName
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_LastName_
+  commentId: Overload:Warbler.Models.ClaimsRequest.LastName
+  fullName: Warbler.Models.ClaimsRequest.LastName
+  nameWithType: ClaimsRequest.LastName
+- uid: Warbler.Models.ClaimsRequest.PositionTitle
+  name: PositionTitle
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_PositionTitle
+  commentId: P:Warbler.Models.ClaimsRequest.PositionTitle
+  fullName: Warbler.Models.ClaimsRequest.PositionTitle
+  nameWithType: ClaimsRequest.PositionTitle
+- uid: Warbler.Models.ClaimsRequest.PositionTitle*
+  name: PositionTitle
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_PositionTitle_
+  commentId: Overload:Warbler.Models.ClaimsRequest.PositionTitle
+  fullName: Warbler.Models.ClaimsRequest.PositionTitle
+  nameWithType: ClaimsRequest.PositionTitle
+- uid: Warbler.Models.ClaimsRequest.UniversityName
+  name: UniversityName
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_UniversityName
+  commentId: P:Warbler.Models.ClaimsRequest.UniversityName
+  fullName: Warbler.Models.ClaimsRequest.UniversityName
+  nameWithType: ClaimsRequest.UniversityName
+- uid: Warbler.Models.ClaimsRequest.UniversityName*
+  name: UniversityName
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_UniversityName_
+  commentId: Overload:Warbler.Models.ClaimsRequest.UniversityName
+  fullName: Warbler.Models.ClaimsRequest.UniversityName
+  nameWithType: ClaimsRequest.UniversityName
+- uid: Warbler.Models.ClaimsRequest.UniversityWebsite
+  name: UniversityWebsite
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_UniversityWebsite
+  commentId: P:Warbler.Models.ClaimsRequest.UniversityWebsite
+  fullName: Warbler.Models.ClaimsRequest.UniversityWebsite
+  nameWithType: ClaimsRequest.UniversityWebsite
+- uid: Warbler.Models.ClaimsRequest.UniversityWebsite*
+  name: UniversityWebsite
+  href: api/Warbler.Models.ClaimsRequest.html#Warbler_Models_ClaimsRequest_UniversityWebsite_
+  commentId: Overload:Warbler.Models.ClaimsRequest.UniversityWebsite
+  fullName: Warbler.Models.ClaimsRequest.UniversityWebsite
+  nameWithType: ClaimsRequest.UniversityWebsite
 - uid: Warbler.Models.Enums
   name: Warbler.Models.Enums
   href: api/Warbler.Models.Enums.html
@@ -2045,6 +2219,72 @@ references:
   commentId: Overload:Warbler.Models.ManageViewModels.ChangePasswordViewModel.OldPassword
   fullName: Warbler.Models.ManageViewModels.ChangePasswordViewModel.OldPassword
   nameWithType: ChangePasswordViewModel.OldPassword
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  name: ClaimUniversityViewModel
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html
+  commentId: T:Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  nameWithType: ClaimUniversityViewModel
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  name: Comments
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_Comments
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  nameWithType: ClaimUniversityViewModel.Comments
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments*
+  name: Comments
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_Comments_
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  nameWithType: ClaimUniversityViewModel.Comments
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  name: FirstName
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_FirstName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  nameWithType: ClaimUniversityViewModel.FirstName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName*
+  name: FirstName
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_FirstName_
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  nameWithType: ClaimUniversityViewModel.FirstName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  name: LastName
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_LastName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  nameWithType: ClaimUniversityViewModel.LastName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName*
+  name: LastName
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_LastName_
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  nameWithType: ClaimUniversityViewModel.LastName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  name: PositionTitle
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_PositionTitle
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  nameWithType: ClaimUniversityViewModel.PositionTitle
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle*
+  name: PositionTitle
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_PositionTitle_
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  nameWithType: ClaimUniversityViewModel.PositionTitle
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  name: UniversityName
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_UniversityName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  nameWithType: ClaimUniversityViewModel.UniversityName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName*
+  name: UniversityName
+  href: api/Warbler.Models.ManageViewModels.ClaimUniversityViewModel.html#Warbler_Models_ManageViewModels_ClaimUniversityViewModel_UniversityName_
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  nameWithType: ClaimUniversityViewModel.UniversityName
 - uid: Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel
   name: ConfigureTwoFactorViewModel
   href: api/Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel.html
@@ -2453,6 +2693,36 @@ references:
   commentId: Overload:Warbler.Models.Server.Channels
   fullName: Warbler.Models.Server.Channels
   nameWithType: Server.Channels
+- uid: Warbler.Models.Server.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_Equals_System_Object_
+  commentId: M:Warbler.Models.Server.Equals(System.Object)
+  fullName: Warbler.Models.Server.Equals(System.Object)
+  nameWithType: Server.Equals(Object)
+- uid: Warbler.Models.Server.Equals(Warbler.Models.Server)
+  name: Equals(Server)
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_Equals_Warbler_Models_Server_
+  commentId: M:Warbler.Models.Server.Equals(Warbler.Models.Server)
+  fullName: Warbler.Models.Server.Equals(Warbler.Models.Server)
+  nameWithType: Server.Equals(Server)
+- uid: Warbler.Models.Server.Equals*
+  name: Equals
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_Equals_
+  commentId: Overload:Warbler.Models.Server.Equals
+  fullName: Warbler.Models.Server.Equals
+  nameWithType: Server.Equals
+- uid: Warbler.Models.Server.GetHashCode
+  name: GetHashCode()
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_GetHashCode
+  commentId: M:Warbler.Models.Server.GetHashCode
+  fullName: Warbler.Models.Server.GetHashCode()
+  nameWithType: Server.GetHashCode()
+- uid: Warbler.Models.Server.GetHashCode*
+  name: GetHashCode
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_GetHashCode_
+  commentId: Overload:Warbler.Models.Server.GetHashCode
+  fullName: Warbler.Models.Server.GetHashCode
+  nameWithType: Server.GetHashCode
 - uid: Warbler.Models.Server.Id
   name: Id
   href: api/Warbler.Models.Server.html#Warbler_Models_Server_Id
@@ -2477,6 +2747,30 @@ references:
   commentId: Overload:Warbler.Models.Server.IsAuthEnabled
   fullName: Warbler.Models.Server.IsAuthEnabled
   nameWithType: Server.IsAuthEnabled
+- uid: Warbler.Models.Server.op_Equality(Warbler.Models.Server,Warbler.Models.Server)
+  name: Equality(Server, Server)
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_op_Equality_Warbler_Models_Server_Warbler_Models_Server_
+  commentId: M:Warbler.Models.Server.op_Equality(Warbler.Models.Server,Warbler.Models.Server)
+  fullName: Warbler.Models.Server.Equality(Warbler.Models.Server, Warbler.Models.Server)
+  nameWithType: Server.Equality(Server, Server)
+- uid: Warbler.Models.Server.op_Equality*
+  name: Equality
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_op_Equality_
+  commentId: Overload:Warbler.Models.Server.op_Equality
+  fullName: Warbler.Models.Server.Equality
+  nameWithType: Server.Equality
+- uid: Warbler.Models.Server.op_Inequality(Warbler.Models.Server,Warbler.Models.Server)
+  name: Inequality(Server, Server)
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_op_Inequality_Warbler_Models_Server_Warbler_Models_Server_
+  commentId: M:Warbler.Models.Server.op_Inequality(Warbler.Models.Server,Warbler.Models.Server)
+  fullName: Warbler.Models.Server.Inequality(Warbler.Models.Server, Warbler.Models.Server)
+  nameWithType: Server.Inequality(Server, Server)
+- uid: Warbler.Models.Server.op_Inequality*
+  name: Inequality
+  href: api/Warbler.Models.Server.html#Warbler_Models_Server_op_Inequality_
+  commentId: Overload:Warbler.Models.Server.op_Inequality
+  fullName: Warbler.Models.Server.Inequality
+  nameWithType: Server.Inequality
 - uid: Warbler.Models.Server.Type
   name: Type
   href: api/Warbler.Models.Server.html#Warbler_Models_Server_Type
@@ -2531,6 +2825,12 @@ references:
   commentId: Overload:Warbler.Models.University.Address
   fullName: Warbler.Models.University.Address
   nameWithType: University.Address
+- uid: Warbler.Models.University.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Warbler.Models.University.html#Warbler_Models_University_Equals_System_Object_
+  commentId: M:Warbler.Models.University.Equals(System.Object)
+  fullName: Warbler.Models.University.Equals(System.Object)
+  nameWithType: University.Equals(Object)
 - uid: Warbler.Models.University.Equals(Warbler.Models.University)
   name: Equals(University)
   href: api/Warbler.Models.University.html#Warbler_Models_University_Equals_Warbler_Models_University_
@@ -2543,6 +2843,18 @@ references:
   commentId: Overload:Warbler.Models.University.Equals
   fullName: Warbler.Models.University.Equals
   nameWithType: University.Equals
+- uid: Warbler.Models.University.GetHashCode
+  name: GetHashCode()
+  href: api/Warbler.Models.University.html#Warbler_Models_University_GetHashCode
+  commentId: M:Warbler.Models.University.GetHashCode
+  fullName: Warbler.Models.University.GetHashCode()
+  nameWithType: University.GetHashCode()
+- uid: Warbler.Models.University.GetHashCode*
+  name: GetHashCode
+  href: api/Warbler.Models.University.html#Warbler_Models_University_GetHashCode_
+  commentId: Overload:Warbler.Models.University.GetHashCode
+  fullName: Warbler.Models.University.GetHashCode
+  nameWithType: University.GetHashCode
 - uid: Warbler.Models.University.Id
   name: Id
   href: api/Warbler.Models.University.html#Warbler_Models_University_Id
@@ -2591,6 +2903,30 @@ references:
   commentId: Overload:Warbler.Models.University.Name
   fullName: Warbler.Models.University.Name
   nameWithType: University.Name
+- uid: Warbler.Models.University.op_Equality(Warbler.Models.University,Warbler.Models.University)
+  name: Equality(University, University)
+  href: api/Warbler.Models.University.html#Warbler_Models_University_op_Equality_Warbler_Models_University_Warbler_Models_University_
+  commentId: M:Warbler.Models.University.op_Equality(Warbler.Models.University,Warbler.Models.University)
+  fullName: Warbler.Models.University.Equality(Warbler.Models.University, Warbler.Models.University)
+  nameWithType: University.Equality(University, University)
+- uid: Warbler.Models.University.op_Equality*
+  name: Equality
+  href: api/Warbler.Models.University.html#Warbler_Models_University_op_Equality_
+  commentId: Overload:Warbler.Models.University.op_Equality
+  fullName: Warbler.Models.University.Equality
+  nameWithType: University.Equality
+- uid: Warbler.Models.University.op_Inequality(Warbler.Models.University,Warbler.Models.University)
+  name: Inequality(University, University)
+  href: api/Warbler.Models.University.html#Warbler_Models_University_op_Inequality_Warbler_Models_University_Warbler_Models_University_
+  commentId: M:Warbler.Models.University.op_Inequality(Warbler.Models.University,Warbler.Models.University)
+  fullName: Warbler.Models.University.Inequality(Warbler.Models.University, Warbler.Models.University)
+  nameWithType: University.Inequality(University, University)
+- uid: Warbler.Models.University.op_Inequality*
+  name: Inequality
+  href: api/Warbler.Models.University.html#Warbler_Models_University_op_Inequality_
+  commentId: Overload:Warbler.Models.University.op_Inequality
+  fullName: Warbler.Models.University.Inequality
+  nameWithType: University.Inequality
 - uid: Warbler.Models.University.PlaceId
   name: PlaceId
   href: api/Warbler.Models.University.html#Warbler_Models_University_PlaceId
@@ -2855,6 +3191,18 @@ references:
   commentId: Overload:Warbler.Repositories.SqlMessageRepository.#ctor
   fullName: Warbler.Repositories.SqlMessageRepository.SqlMessageRepository
   nameWithType: SqlMessageRepository.SqlMessageRepository
+- uid: Warbler.Repositories.SqlMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  name: CreateAsync(String, User, Channel)
+  href: api/Warbler.Repositories.SqlMessageRepository.html#Warbler_Repositories_SqlMessageRepository_CreateAsync_System_String_Warbler_Models_User_Warbler_Models_Channel_
+  commentId: M:Warbler.Repositories.SqlMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  fullName: Warbler.Repositories.SqlMessageRepository.CreateAsync(System.String, Warbler.Models.User, Warbler.Models.Channel)
+  nameWithType: SqlMessageRepository.CreateAsync(String, User, Channel)
+- uid: Warbler.Repositories.SqlMessageRepository.CreateAsync*
+  name: CreateAsync
+  href: api/Warbler.Repositories.SqlMessageRepository.html#Warbler_Repositories_SqlMessageRepository_CreateAsync_
+  commentId: Overload:Warbler.Repositories.SqlMessageRepository.CreateAsync
+  fullName: Warbler.Repositories.SqlMessageRepository.CreateAsync
+  nameWithType: SqlMessageRepository.CreateAsync
 - uid: Warbler.Repositories.SqlMessageRepository.LatestIn(Warbler.Models.Channel)
   name: LatestIn(Channel)
   href: api/Warbler.Repositories.SqlMessageRepository.html#Warbler_Repositories_SqlMessageRepository_LatestIn_Warbler_Models_Channel_
@@ -3128,6 +3476,18 @@ references:
   commentId: Overload:Warbler.Services.ChatService.OnDisconnectedAsync
   fullName: Warbler.Services.ChatService.OnDisconnectedAsync
   nameWithType: ChatService.OnDisconnectedAsync
+- uid: Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User,Warbler.Models.Channel,System.String)
+  name: OnMessageAsync(User, Channel, String)
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnMessageAsync_Warbler_Models_User_Warbler_Models_Channel_System_String_
+  commentId: M:Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User,Warbler.Models.Channel,System.String)
+  fullName: Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User, Warbler.Models.Channel, System.String)
+  nameWithType: ChatService.OnMessageAsync(User, Channel, String)
+- uid: Warbler.Services.ChatService.OnMessageAsync*
+  name: OnMessageAsync
+  href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_OnMessageAsync_
+  commentId: Overload:Warbler.Services.ChatService.OnMessageAsync
+  fullName: Warbler.Services.ChatService.OnMessageAsync
+  nameWithType: ChatService.OnMessageAsync
 - uid: Warbler.Services.ChatService.With(Warbler.Misc.WarblerDbContext)
   name: With(WarblerDbContext)
   href: api/Warbler.Services.ChatService.html#Warbler_Services_ChatService_With_Warbler_Misc_WarblerDbContext_
@@ -3176,6 +3536,12 @@ references:
   commentId: M:Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.Channel)
   fullName: Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.Channel)
   nameWithType: MembershipService.AllMembershipsForAsync(Channel)
+- uid: Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
+  name: AllMembershipsForAsync(User)
+  href: api/Warbler.Services.MembershipService.html#Warbler_Services_MembershipService_AllMembershipsForAsync_Warbler_Models_User_
+  commentId: M:Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
+  fullName: Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
+  nameWithType: MembershipService.AllMembershipsForAsync(User)
 - uid: Warbler.Services.MembershipService.AllMembershipsForAsync*
   name: AllMembershipsForAsync
   href: api/Warbler.Services.MembershipService.html#Warbler_Services_MembershipService_AllMembershipsForAsync_
@@ -3200,6 +3566,18 @@ references:
   commentId: Overload:Warbler.Services.MessageService.#ctor
   fullName: Warbler.Services.MessageService.MessageService
   nameWithType: MessageService.MessageService
+- uid: Warbler.Services.MessageService.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  name: CreateAsync(String, User, Channel)
+  href: api/Warbler.Services.MessageService.html#Warbler_Services_MessageService_CreateAsync_System_String_Warbler_Models_User_Warbler_Models_Channel_
+  commentId: M:Warbler.Services.MessageService.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  fullName: Warbler.Services.MessageService.CreateAsync(System.String, Warbler.Models.User, Warbler.Models.Channel)
+  nameWithType: MessageService.CreateAsync(String, User, Channel)
+- uid: Warbler.Services.MessageService.CreateAsync*
+  name: CreateAsync
+  href: api/Warbler.Services.MessageService.html#Warbler_Services_MessageService_CreateAsync_
+  commentId: Overload:Warbler.Services.MessageService.CreateAsync
+  fullName: Warbler.Services.MessageService.CreateAsync
+  nameWithType: MessageService.CreateAsync
 - uid: Warbler.Services.MessageService.LatestIn(Warbler.Models.Channel)
   name: LatestIn(Channel)
   href: api/Warbler.Services.MessageService.html#Warbler_Services_MessageService_LatestIn_Warbler_Models_Channel_
@@ -3524,6 +3902,78 @@ references:
   commentId: T:Warbler.Tests.Repositories.TestSqlUniversityRepository
   fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository
   nameWithType: TestSqlUniversityRepository
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  name: AllQueryable_Channel_Should_Not_Get_Users_Messages()
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Channel_Should_Not_Get_Users_Messages
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages()
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages*
+  name: AllQueryable_Channel_Should_Not_Get_Users_Messages
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Channel_Should_Not_Get_Users_Messages_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  name: AllQueryable_Message_Should_Get_Everything()
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Message_Should_Get_Everything
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything()
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything*
+  name: AllQueryable_Message_Should_Get_Everything
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Message_Should_Get_Everything_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  name: AllQueryable_Server_Should_Not_Get_Channels()
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Server_Should_Not_Get_Channels
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels()
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels*
+  name: AllQueryable_Server_Should_Not_Get_Channels
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Server_Should_Not_Get_Channels_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  name: AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth*
+  name: AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_Should_Fail_With_Unknown_QueryDepth_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  name: AllQueryable_University_Should_Not_Get_Servers()
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_University_Should_Not_Get_Servers
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers()
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers*
+  name: AllQueryable_University_Should_Not_Get_Servers
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_University_Should_Not_Get_Servers_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  nameWithType: TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  name: AllQueryable_User_Should_Not_Get_Messages()
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_User_Should_Not_Get_Messages
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages()
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages*
+  name: AllQueryable_User_Should_Not_Get_Messages
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_AllQueryable_User_Should_Not_Get_Messages_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  nameWithType: TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
 - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.CreateAsync_Should_Create_A_New_University
   name: CreateAsync_Should_Create_A_New_University()
   href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_CreateAsync_Should_Create_A_New_University
@@ -3560,24 +4010,48 @@ references:
   commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.SaveASync_Should_Save_Changes_On_Context
   fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.SaveASync_Should_Save_Changes_On_Context
   nameWithType: TestSqlUniversityRepository.SaveASync_Should_Save_Changes_On_Context
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
+  name: SetUpDatabase()
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_SetUpDatabase
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase()
+  nameWithType: TestSqlUniversityRepository.SetUpDatabase()
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase*
+  name: SetUpDatabase
+  href: api/Warbler.Tests.Repositories.TestSqlUniversityRepository.html#Warbler_Tests_Repositories_TestSqlUniversityRepository_SetUpDatabase_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
+  nameWithType: TestSqlUniversityRepository.SetUpDatabase
 - uid: Warbler.Tests.Repositories.TestSqlUserRepository
   name: TestSqlUserRepository
   href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html
   commentId: T:Warbler.Tests.Repositories.TestSqlUserRepository
   fullName: Warbler.Tests.Repositories.TestSqlUserRepository
   nameWithType: TestSqlUserRepository
-- uid: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
-  name: CreateUniversity()
-  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_CreateUniversity
-  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
-  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity()
-  nameWithType: TestSqlUserRepository.CreateUniversity()
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity(TestContext)
+  name: CreateUniversity(TestContext)
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_CreateUniversity_TestContext_
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity(TestContext)
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity(TestContext)
+  nameWithType: TestSqlUserRepository.CreateUniversity(TestContext)
 - uid: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity*
   name: CreateUniversity
   href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_CreateUniversity_
   commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
   fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
   nameWithType: TestSqlUserRepository.CreateUniversity
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  name: FindByNameAsync_Should_Get_A_User_By_Username()
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_FindByNameAsync_Should_Get_A_User_By_Username
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username()
+  nameWithType: TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username()
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username*
+  name: FindByNameAsync_Should_Get_A_User_By_Username
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_FindByNameAsync_Should_Get_A_User_By_Username_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  nameWithType: TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
 - uid: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
   name: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
   href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
@@ -3602,6 +4076,18 @@ references:
   commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
   fullName: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
   nameWithType: TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  name: SetOnlineAsync_Should_Change_IsOnline()
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_SetOnlineAsync_Should_Change_IsOnline
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline()
+  nameWithType: TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline()
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline*
+  name: SetOnlineAsync_Should_Change_IsOnline
+  href: api/Warbler.Tests.Repositories.TestSqlUserRepository.html#Warbler_Tests_Repositories_TestSqlUserRepository_SetOnlineAsync_Should_Change_IsOnline_
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  nameWithType: TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
 - uid: Warbler.Tests.Test
   name: Test
   href: api/Warbler.Tests.Test.html

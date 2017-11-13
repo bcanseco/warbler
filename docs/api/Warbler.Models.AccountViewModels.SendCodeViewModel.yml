@@ -19,7 +19,7 @@ items:
   source:
     id: SendCodeViewModel
     path: ''
-    startLine: 2125
+    startLine: 2285
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -56,7 +56,7 @@ items:
   source:
     id: SelectedProvider
     path: ''
-    startLine: 2127
+    startLine: 2287
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -87,7 +87,7 @@ items:
   source:
     id: Providers
     path: ''
-    startLine: 2129
+    startLine: 2289
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -118,7 +118,7 @@ items:
   source:
     id: ReturnUrl
     path: ''
-    startLine: 2131
+    startLine: 2291
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -149,7 +149,7 @@ items:
   source:
     id: RememberMe
     path: ''
-    startLine: 2133
+    startLine: 2293
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels

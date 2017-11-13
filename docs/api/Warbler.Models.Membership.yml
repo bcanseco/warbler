@@ -20,7 +20,7 @@ items:
   source:
     id: Membership
     path: ''
-    startLine: 1651
+    startLine: 1777
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -63,7 +63,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1654
+    startLine: 1780
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -94,7 +94,7 @@ items:
   source:
     id: UserId
     path: ''
-    startLine: 1656
+    startLine: 1782
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -125,7 +125,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 1657
+    startLine: 1783
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -156,7 +156,7 @@ items:
   source:
     id: ChannelId
     path: ''
-    startLine: 1659
+    startLine: 1785
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -187,7 +187,7 @@ items:
   source:
     id: Channel
     path: ''
-    startLine: 1660
+    startLine: 1786
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models

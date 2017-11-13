@@ -18,7 +18,7 @@ items:
   source:
     id: TestSqlMembershipRepository
     path: ''
-    startLine: 3176
+    startLine: 3437
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -55,7 +55,7 @@ items:
   source:
     id: CreateUniversity
     path: ''
-    startLine: 3187
+    startLine: 3448
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -83,7 +83,7 @@ items:
   source:
     id: AllForUser_Should_Return_Channels_Where_User_Is_Member
     path: ''
-    startLine: 3214
+    startLine: 3475
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -111,7 +111,7 @@ items:
   source:
     id: AllForChannel_Should_Return_Users_That_Are_Members
     path: ''
-    startLine: 3228
+    startLine: 3489
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories

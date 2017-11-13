@@ -19,7 +19,7 @@ items:
   source:
     id: ConnectionMapping
     path: ''
-    startLine: 1459
+    startLine: 1524
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -56,7 +56,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1461
+    startLine: 1526
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -85,7 +85,7 @@ items:
   source:
     id: AddAsync
     path: ''
-    startLine: 1468
+    startLine: 1533
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -118,7 +118,7 @@ items:
   source:
     id: GetConnections
     path: ''
-    startLine: 1488
+    startLine: 1553
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -149,7 +149,7 @@ items:
   source:
     id: RemoveAsync
     path: ''
-    startLine: 1494
+    startLine: 1559
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc

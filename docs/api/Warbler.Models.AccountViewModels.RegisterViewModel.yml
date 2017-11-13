@@ -19,7 +19,7 @@ items:
   source:
     id: RegisterViewModel
     path: ''
-    startLine: 2073
+    startLine: 2233
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -56,7 +56,7 @@ items:
   source:
     id: Email
     path: ''
-    startLine: 2075
+    startLine: 2235
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -87,7 +87,7 @@ items:
   source:
     id: Username
     path: ''
-    startLine: 2080
+    startLine: 2240
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -118,7 +118,7 @@ items:
   source:
     id: Password
     path: ''
-    startLine: 2084
+    startLine: 2244
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels
@@ -149,7 +149,7 @@ items:
   source:
     id: ConfirmPassword
     path: ''
-    startLine: 2089
+    startLine: 2249
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.AccountViewModels

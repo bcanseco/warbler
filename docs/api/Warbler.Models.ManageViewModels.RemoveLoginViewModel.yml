@@ -17,7 +17,7 @@ items:
   source:
     id: RemoveLoginViewModel
     path: ''
-    startLine: 2297
+    startLine: 2490
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -54,7 +54,7 @@ items:
   source:
     id: LoginProvider
     path: ''
-    startLine: 2299
+    startLine: 2492
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -85,7 +85,7 @@ items:
   source:
     id: ProviderKey
     path: ''
-    startLine: 2300
+    startLine: 2493
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels

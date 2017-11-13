@@ -8,6 +8,7 @@ items:
   - Warbler.Hubs.ChatHub.#ctor(Warbler.Misc.WarblerDbContext,Warbler.Services.ChatService)
   - Warbler.Hubs.ChatHub.OnConnectedAsync
   - Warbler.Hubs.ChatHub.OnDisconnectedAsync(System.Exception)
+  - Warbler.Hubs.ChatHub.SendMessageAsync(Warbler.Models.Channel,System.String)
   langs:
   - csharp
   - vb
@@ -18,7 +19,7 @@ items:
   source:
     id: ChatHub
     path: ''
-    startLine: 1178
+    startLine: 1228
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -51,7 +52,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1186
+    startLine: 1236
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -84,7 +85,7 @@ items:
   source:
     id: OnConnectedAsync
     path: ''
-    startLine: 1192
+    startLine: 1242
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -114,7 +115,7 @@ items:
   source:
     id: OnDisconnectedAsync
     path: ''
-    startLine: 1200
+    startLine: 1250
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -133,6 +134,39 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: Warbler.Hubs.ChatHub.SendMessageAsync(Warbler.Models.Channel,System.String)
+  commentId: M:Warbler.Hubs.ChatHub.SendMessageAsync(Warbler.Models.Channel,System.String)
+  id: SendMessageAsync(Warbler.Models.Channel,System.String)
+  parent: Warbler.Hubs.ChatHub
+  langs:
+  - csharp
+  - vb
+  name: SendMessageAsync(Channel, String)
+  nameWithType: ChatHub.SendMessageAsync(Channel, String)
+  fullName: Warbler.Hubs.ChatHub.SendMessageAsync(Warbler.Models.Channel, System.String)
+  type: Method
+  source:
+    id: SendMessageAsync
+    path: ''
+    startLine: 1258
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Hubs
+  syntax:
+    content: public Task SendMessageAsync(Channel channel, string message)
+    parameters:
+    - id: channel
+      type: Warbler.Models.Channel
+    - id: message
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function SendMessageAsync(channel As Channel, message As String) As Task
+  overload: Warbler.Hubs.ChatHub.SendMessageAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: Warbler.Hubs
   commentId: N:Warbler.Hubs
@@ -209,3 +243,29 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: System.Exception
+- uid: Warbler.Hubs.ChatHub.SendMessageAsync*
+  commentId: Overload:Warbler.Hubs.ChatHub.SendMessageAsync
+  isExternal: false
+  name: SendMessageAsync
+  nameWithType: ChatHub.SendMessageAsync
+  fullName: Warbler.Hubs.ChatHub.SendMessageAsync
+- uid: Warbler.Models.Channel
+  commentId: T:Warbler.Models.Channel
+  parent: Warbler.Models
+  isExternal: false
+  name: Channel
+  nameWithType: Channel
+  fullName: Warbler.Models.Channel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models

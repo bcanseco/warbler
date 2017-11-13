@@ -1,0 +1,837 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.ClaimsRequest
+  commentId: T:Warbler.Models.ClaimsRequest
+  id: ClaimsRequest
+  parent: Warbler.Models
+  children:
+  - Warbler.Models.ClaimsRequest.EmailAddress
+  - Warbler.Models.ClaimsRequest.Equals(Warbler.Models.ClaimsRequest)
+  - Warbler.Models.ClaimsRequest.FirstName
+  - Warbler.Models.ClaimsRequest.Id
+  - Warbler.Models.ClaimsRequest.LastName
+  - Warbler.Models.ClaimsRequest.PositionTitle
+  - Warbler.Models.ClaimsRequest.UniversityName
+  - Warbler.Models.ClaimsRequest.UniversityWebsite
+  langs:
+  - csharp
+  - vb
+  name: ClaimsRequest
+  nameWithType: ClaimsRequest
+  fullName: Warbler.Models.ClaimsRequest
+  type: Class
+  source:
+    id: ClaimsRequest
+    path: ''
+    startLine: 1751
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: 'public class ClaimsRequest : IEquatable<ClaimsRequest>'
+    content.vb: >-
+      Public Class ClaimsRequest
+          Implements IEquatable(Of ClaimsRequest)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Warbler.Models.ClaimsRequest}
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.ClaimsRequest.Id
+  commentId: P:Warbler.Models.ClaimsRequest.Id
+  id: Id
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ClaimsRequest.Id
+  fullName: Warbler.Models.ClaimsRequest.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 1753
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Warbler.Models.ClaimsRequest.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ClaimsRequest.FirstName
+  commentId: P:Warbler.Models.ClaimsRequest.FirstName
+  id: FirstName
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: ClaimsRequest.FirstName
+  fullName: Warbler.Models.ClaimsRequest.FirstName
+  type: Property
+  source:
+    id: FirstName
+    path: ''
+    startLine: 1754
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string FirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: Warbler.Models.ClaimsRequest.FirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ClaimsRequest.LastName
+  commentId: P:Warbler.Models.ClaimsRequest.LastName
+  id: LastName
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: ClaimsRequest.LastName
+  fullName: Warbler.Models.ClaimsRequest.LastName
+  type: Property
+  source:
+    id: LastName
+    path: ''
+    startLine: 1755
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: Warbler.Models.ClaimsRequest.LastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ClaimsRequest.EmailAddress
+  commentId: P:Warbler.Models.ClaimsRequest.EmailAddress
+  id: EmailAddress
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: EmailAddress
+  nameWithType: ClaimsRequest.EmailAddress
+  fullName: Warbler.Models.ClaimsRequest.EmailAddress
+  type: Property
+  source:
+    id: EmailAddress
+    path: ''
+    startLine: 1756
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string EmailAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EmailAddress As String
+  overload: Warbler.Models.ClaimsRequest.EmailAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ClaimsRequest.PositionTitle
+  commentId: P:Warbler.Models.ClaimsRequest.PositionTitle
+  id: PositionTitle
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: PositionTitle
+  nameWithType: ClaimsRequest.PositionTitle
+  fullName: Warbler.Models.ClaimsRequest.PositionTitle
+  type: Property
+  source:
+    id: PositionTitle
+    path: ''
+    startLine: 1757
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string PositionTitle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PositionTitle As String
+  overload: Warbler.Models.ClaimsRequest.PositionTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ClaimsRequest.UniversityName
+  commentId: P:Warbler.Models.ClaimsRequest.UniversityName
+  id: UniversityName
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: UniversityName
+  nameWithType: ClaimsRequest.UniversityName
+  fullName: Warbler.Models.ClaimsRequest.UniversityName
+  type: Property
+  source:
+    id: UniversityName
+    path: ''
+    startLine: 1758
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string UniversityName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UniversityName As String
+  overload: Warbler.Models.ClaimsRequest.UniversityName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ClaimsRequest.UniversityWebsite
+  commentId: P:Warbler.Models.ClaimsRequest.UniversityWebsite
+  id: UniversityWebsite
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: UniversityWebsite
+  nameWithType: ClaimsRequest.UniversityWebsite
+  fullName: Warbler.Models.ClaimsRequest.UniversityWebsite
+  type: Property
+  source:
+    id: UniversityWebsite
+    path: ''
+    startLine: 1759
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string UniversityWebsite { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UniversityWebsite As String
+  overload: Warbler.Models.ClaimsRequest.UniversityWebsite*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ClaimsRequest.Equals(Warbler.Models.ClaimsRequest)
+  commentId: M:Warbler.Models.ClaimsRequest.Equals(Warbler.Models.ClaimsRequest)
+  id: Equals(Warbler.Models.ClaimsRequest)
+  parent: Warbler.Models.ClaimsRequest
+  langs:
+  - csharp
+  - vb
+  name: Equals(ClaimsRequest)
+  nameWithType: ClaimsRequest.Equals(ClaimsRequest)
+  fullName: Warbler.Models.ClaimsRequest.Equals(Warbler.Models.ClaimsRequest)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 1761
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public bool Equals(ClaimsRequest other)
+    parameters:
+    - id: other
+      type: Warbler.Models.ClaimsRequest
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As ClaimsRequest) As Boolean
+  overload: Warbler.Models.ClaimsRequest.Equals*
+  implements:
+  - System.IEquatable{Warbler.Models.ClaimsRequest}.Equals(Warbler.Models.ClaimsRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IEquatable{Warbler.Models.ClaimsRequest}
+  commentId: T:System.IEquatable{Warbler.Models.ClaimsRequest}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<ClaimsRequest>
+  nameWithType: IEquatable<ClaimsRequest>
+  fullName: System.IEquatable<Warbler.Models.ClaimsRequest>
+  nameWithType.vb: IEquatable(Of ClaimsRequest)
+  fullName.vb: System.IEquatable(Of Warbler.Models.ClaimsRequest)
+  name.vb: IEquatable(Of ClaimsRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ClaimsRequest
+    name: ClaimsRequest
+    nameWithType: ClaimsRequest
+    fullName: Warbler.Models.ClaimsRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ClaimsRequest
+    name: ClaimsRequest
+    nameWithType: ClaimsRequest
+    fullName: Warbler.Models.ClaimsRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.ClaimsRequest.Id*
+  commentId: Overload:Warbler.Models.ClaimsRequest.Id
+  isExternal: false
+  name: Id
+  nameWithType: ClaimsRequest.Id
+  fullName: Warbler.Models.ClaimsRequest.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Warbler.Models.ClaimsRequest.FirstName*
+  commentId: Overload:Warbler.Models.ClaimsRequest.FirstName
+  isExternal: false
+  name: FirstName
+  nameWithType: ClaimsRequest.FirstName
+  fullName: Warbler.Models.ClaimsRequest.FirstName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.ClaimsRequest.LastName*
+  commentId: Overload:Warbler.Models.ClaimsRequest.LastName
+  isExternal: false
+  name: LastName
+  nameWithType: ClaimsRequest.LastName
+  fullName: Warbler.Models.ClaimsRequest.LastName
+- uid: Warbler.Models.ClaimsRequest.EmailAddress*
+  commentId: Overload:Warbler.Models.ClaimsRequest.EmailAddress
+  isExternal: false
+  name: EmailAddress
+  nameWithType: ClaimsRequest.EmailAddress
+  fullName: Warbler.Models.ClaimsRequest.EmailAddress
+- uid: Warbler.Models.ClaimsRequest.PositionTitle*
+  commentId: Overload:Warbler.Models.ClaimsRequest.PositionTitle
+  isExternal: false
+  name: PositionTitle
+  nameWithType: ClaimsRequest.PositionTitle
+  fullName: Warbler.Models.ClaimsRequest.PositionTitle
+- uid: Warbler.Models.ClaimsRequest.UniversityName*
+  commentId: Overload:Warbler.Models.ClaimsRequest.UniversityName
+  isExternal: false
+  name: UniversityName
+  nameWithType: ClaimsRequest.UniversityName
+  fullName: Warbler.Models.ClaimsRequest.UniversityName
+- uid: Warbler.Models.ClaimsRequest.UniversityWebsite*
+  commentId: Overload:Warbler.Models.ClaimsRequest.UniversityWebsite
+  isExternal: false
+  name: UniversityWebsite
+  nameWithType: ClaimsRequest.UniversityWebsite
+  fullName: Warbler.Models.ClaimsRequest.UniversityWebsite
+- uid: Warbler.Models.ClaimsRequest.Equals*
+  commentId: Overload:Warbler.Models.ClaimsRequest.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: ClaimsRequest.Equals
+  fullName: Warbler.Models.ClaimsRequest.Equals
+- uid: System.IEquatable{Warbler.Models.ClaimsRequest}.Equals(Warbler.Models.ClaimsRequest)
+  commentId: M:System.IEquatable{Warbler.Models.ClaimsRequest}.Equals(Warbler.Models.ClaimsRequest)
+  parent: System.IEquatable{Warbler.Models.ClaimsRequest}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(ClaimsRequest)
+  nameWithType: IEquatable<ClaimsRequest>.Equals(ClaimsRequest)
+  fullName: System.IEquatable<Warbler.Models.ClaimsRequest>.Equals(Warbler.Models.ClaimsRequest)
+  nameWithType.vb: IEquatable(Of ClaimsRequest).Equals(ClaimsRequest)
+  fullName.vb: System.IEquatable(Of Warbler.Models.ClaimsRequest).Equals(Warbler.Models.ClaimsRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<ClaimsRequest>.Equals
+    fullName: System.IEquatable<Warbler.Models.ClaimsRequest>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.ClaimsRequest
+    name: ClaimsRequest
+    nameWithType: ClaimsRequest
+    fullName: Warbler.Models.ClaimsRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of ClaimsRequest).Equals
+    fullName: System.IEquatable(Of Warbler.Models.ClaimsRequest).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.ClaimsRequest
+    name: ClaimsRequest
+    nameWithType: ClaimsRequest
+    fullName: Warbler.Models.ClaimsRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.ClaimsRequest
+  commentId: T:Warbler.Models.ClaimsRequest
+  parent: Warbler.Models
+  isExternal: false
+  name: ClaimsRequest
+  nameWithType: ClaimsRequest
+  fullName: Warbler.Models.ClaimsRequest
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

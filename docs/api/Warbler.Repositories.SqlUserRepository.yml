@@ -19,7 +19,7 @@ items:
   source:
     id: SqlUserRepository
     path: ''
-    startLine: 2576
+    startLine: 2786
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -62,7 +62,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2580
+    startLine: 2790
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -91,7 +91,7 @@ items:
   source:
     id: IsNewAsync
     path: ''
-    startLine: 2585
+    startLine: 2795
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -124,7 +124,7 @@ items:
   source:
     id: SetOnlineAsync
     path: ''
-    startLine: 2594
+    startLine: 2804
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -159,7 +159,7 @@ items:
   source:
     id: FindByNameAsync
     path: ''
-    startLine: 2600
+    startLine: 2810
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories

@@ -5,6 +5,7 @@ items:
   id: Warbler.Models
   children:
   - Warbler.Models.Channel
+  - Warbler.Models.ClaimsRequest
   - Warbler.Models.Membership
   - Warbler.Models.Message
   - Warbler.Models.Server
@@ -27,6 +28,13 @@ references:
   name: Channel
   nameWithType: Channel
   fullName: Warbler.Models.Channel
+- uid: Warbler.Models.ClaimsRequest
+  commentId: T:Warbler.Models.ClaimsRequest
+  parent: Warbler.Models
+  isExternal: false
+  name: ClaimsRequest
+  nameWithType: ClaimsRequest
+  fullName: Warbler.Models.ClaimsRequest
 - uid: Warbler.Models.Membership
   commentId: T:Warbler.Models.Membership
   isExternal: false

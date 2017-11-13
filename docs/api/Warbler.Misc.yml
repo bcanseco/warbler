@@ -7,6 +7,7 @@ items:
   - Warbler.Misc.ApiKeys
   - Warbler.Misc.ConnectionMapping
   - Warbler.Misc.HubResource`1
+  - Warbler.Misc.IdentityServerConfig
   - Warbler.Misc.WarblerDbContext
   langs:
   - csharp
@@ -67,6 +68,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Misc.IdentityServerConfig
+  commentId: T:Warbler.Misc.IdentityServerConfig
+  isExternal: false
+  name: IdentityServerConfig
+  nameWithType: IdentityServerConfig
+  fullName: Warbler.Misc.IdentityServerConfig
 - uid: Warbler.Misc.WarblerDbContext
   commentId: T:Warbler.Misc.WarblerDbContext
   parent: Warbler.Misc

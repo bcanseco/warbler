@@ -144,6 +144,60 @@ Look at <a class="xref" href="Warbler.Interfaces.IMessageRepository.html">IMessa
   </h3>
   
   
+  <a id="Warbler_Repositories_SqlMessageRepository_CreateAsync_" data-uid="Warbler.Repositories.SqlMessageRepository.CreateAsync*"></a>
+  <h4 id="Warbler_Repositories_SqlMessageRepository_CreateAsync_System_String_Warbler_Models_User_Warbler_Models_Channel_" data-uid="Warbler.Repositories.SqlMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)">CreateAsync(String, User, Channel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Message&gt; CreateAsync(string text, User user, Channel channel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.Channel.html">Channel</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.Message.html">Message</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IMessageRepository.html#Warbler_Interfaces_IMessageRepository_CreateAsync_System_String_Warbler_Models_User_Warbler_Models_Channel_">IMessageRepository.CreateAsync(String, User, Channel)</a></div>
+  
+  
   <a id="Warbler_Repositories_SqlMessageRepository_LatestIn_" data-uid="Warbler.Repositories.SqlMessageRepository.LatestIn*"></a>
   <h4 id="Warbler_Repositories_SqlMessageRepository_LatestIn_Warbler_Models_Channel_" data-uid="Warbler.Repositories.SqlMessageRepository.LatestIn(Warbler.Models.Channel)">LatestIn(Channel)</h4>
   <div class="markdown level1 summary"></div>

@@ -1,31 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Warbler.Startup
-  commentId: T:Warbler.Startup
-  id: Startup
-  parent: Warbler
+- uid: Warbler.Misc.IdentityServerConfig
+  commentId: T:Warbler.Misc.IdentityServerConfig
+  id: IdentityServerConfig
+  parent: Warbler.Misc
   children:
-  - Warbler.Startup.#ctor(IHostingEnvironment)
-  - Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  - Warbler.Startup.ConfigureServices(IServiceCollection)
-  - Warbler.Startup.Main(System.String[])
+  - Warbler.Misc.IdentityServerConfig.GetApiResource
+  - Warbler.Misc.IdentityServerConfig.GetClient
   langs:
   - csharp
   - vb
-  name: Startup
-  nameWithType: Startup
-  fullName: Warbler.Startup
+  name: IdentityServerConfig
+  nameWithType: IdentityServerConfig
+  fullName: Warbler.Misc.IdentityServerConfig
   type: Class
   source:
-    id: Startup
+    id: IdentityServerConfig
     path: ''
-    startLine: 19
+    startLine: 1633
   assemblies:
   - cs.temp.dll
-  namespace: Warbler
+  namespace: Warbler.Misc
   syntax:
-    content: public class Startup
-    content.vb: Public Class Startup
+    content: >-
+      [Obsolete("Currently unused")]
+
+      public static class IdentityServerConfig
+    content.vb: >-
+      <Obsolete("Currently unused")>
+
+      Public Module IdentityServerConfig
   inheritance:
   - System.Object
   inheritedMembers:
@@ -36,146 +40,90 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Currently unused
   modifiers.csharp:
   - public
+  - static
   - class
   modifiers.vb:
   - Public
-  - Class
-- uid: Warbler.Startup.#ctor(IHostingEnvironment)
-  commentId: M:Warbler.Startup.#ctor(IHostingEnvironment)
-  id: '#ctor(IHostingEnvironment)'
-  parent: Warbler.Startup
+  - Module
+- uid: Warbler.Misc.IdentityServerConfig.GetApiResource
+  commentId: M:Warbler.Misc.IdentityServerConfig.GetApiResource
+  id: GetApiResource
+  parent: Warbler.Misc.IdentityServerConfig
   langs:
   - csharp
   - vb
-  name: Startup(IHostingEnvironment)
-  nameWithType: Startup.Startup(IHostingEnvironment)
-  fullName: Warbler.Startup.Startup(IHostingEnvironment)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 21
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler
-  syntax:
-    content: public Startup(IHostingEnvironment env)
-    parameters:
-    - id: env
-      type: IHostingEnvironment
-    content.vb: Public Sub New(env As IHostingEnvironment)
-  overload: Warbler.Startup.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Warbler.Startup.Main(System.String[])
-  commentId: M:Warbler.Startup.Main(System.String[])
-  id: Main(System.String[])
-  parent: Warbler.Startup
-  langs:
-  - csharp
-  - vb
-  name: Main(String[])
-  nameWithType: Startup.Main(String[])
-  fullName: Warbler.Startup.Main(System.String[])
+  name: GetApiResource()
+  nameWithType: IdentityServerConfig.GetApiResource()
+  fullName: Warbler.Misc.IdentityServerConfig.GetApiResource()
   type: Method
   source:
-    id: Main
+    id: GetApiResource
     path: ''
-    startLine: 34
+    startLine: 1639
   assemblies:
   - cs.temp.dll
-  namespace: Warbler
+  namespace: Warbler.Misc
+  summary: "\nDefine the scopes\n"
+  example: []
   syntax:
-    content: public static void Main(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
-    content.vb: Public Shared Sub Main(args As String())
-  overload: Warbler.Startup.Main*
-  nameWithType.vb: Startup.Main(String())
+    content: public static IEnumerable<ApiResource> GetApiResource()
+    return:
+      type: IEnumerable{ApiResource}
+    content.vb: Public Shared Function GetApiResource As IEnumerable(Of ApiResource)
+  overload: Warbler.Misc.IdentityServerConfig.GetApiResource*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Warbler.Startup.Main(System.String())
-  name.vb: Main(String())
-- uid: Warbler.Startup.ConfigureServices(IServiceCollection)
-  commentId: M:Warbler.Startup.ConfigureServices(IServiceCollection)
-  id: ConfigureServices(IServiceCollection)
-  parent: Warbler.Startup
+- uid: Warbler.Misc.IdentityServerConfig.GetClient
+  commentId: M:Warbler.Misc.IdentityServerConfig.GetClient
+  id: GetClient
+  parent: Warbler.Misc.IdentityServerConfig
   langs:
   - csharp
   - vb
-  name: ConfigureServices(IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-  fullName: Warbler.Startup.ConfigureServices(IServiceCollection)
+  name: GetClient()
+  nameWithType: IdentityServerConfig.GetClient()
+  fullName: Warbler.Misc.IdentityServerConfig.GetClient()
   type: Method
   source:
-    id: ConfigureServices
+    id: GetClient
     path: ''
-    startLine: 43
+    startLine: 1648
   assemblies:
   - cs.temp.dll
-  namespace: Warbler
+  namespace: Warbler.Misc
+  summary: "\nRegister in the Client\n"
+  example: []
   syntax:
-    content: public IServiceProvider ConfigureServices(IServiceCollection services)
-    parameters:
-    - id: services
-      type: IServiceCollection
+    content: public static IEnumerable<Client> GetClient()
     return:
-      type: System.IServiceProvider
-    content.vb: Public Function ConfigureServices(services As IServiceCollection) As IServiceProvider
-  overload: Warbler.Startup.ConfigureServices*
+      type: IEnumerable{Client}
+    content.vb: Public Shared Function GetClient As IEnumerable(Of Client)
+  overload: Warbler.Misc.IdentityServerConfig.GetClient*
   modifiers.csharp:
   - public
+  - static
   modifiers.vb:
   - Public
-- uid: Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  commentId: M:Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  id: Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  parent: Warbler.Startup
-  langs:
-  - csharp
-  - vb
-  name: Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
-  fullName: Warbler.Startup.Configure(IApplicationBuilder, IHostingEnvironment, System.IServiceProvider)
-  type: Method
-  source:
-    id: Configure
-    path: ''
-    startLine: 122
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler
-  syntax:
-    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
-    parameters:
-    - id: app
-      type: IApplicationBuilder
-    - id: env
-      type: IHostingEnvironment
-    - id: serviceProvider
-      type: System.IServiceProvider
-    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment, serviceProvider As IServiceProvider)
-  overload: Warbler.Startup.Configure*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
+  - Shared
 references:
-- uid: Warbler
-  commentId: N:Warbler
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
   isExternal: false
-  name: Warbler
-  nameWithType: Warbler
-  fullName: Warbler
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -468,76 +416,139 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Warbler.Startup.#ctor*
-  commentId: Overload:Warbler.Startup.#ctor
+- uid: Warbler.Misc.IdentityServerConfig.GetApiResource*
+  commentId: Overload:Warbler.Misc.IdentityServerConfig.GetApiResource
   isExternal: false
-  name: Startup
-  nameWithType: Startup.Startup
-  fullName: Warbler.Startup.Startup
-- uid: IHostingEnvironment
-  isExternal: true
-  name: IHostingEnvironment
-  nameWithType: IHostingEnvironment
-  fullName: IHostingEnvironment
-- uid: Warbler.Startup.Main*
-  commentId: Overload:Warbler.Startup.Main
-  isExternal: false
-  name: Main
-  nameWithType: Startup.Main
-  fullName: Warbler.Startup.Main
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
+  name: GetApiResource
+  nameWithType: IdentityServerConfig.GetApiResource
+  fullName: Warbler.Misc.IdentityServerConfig.GetApiResource
+- uid: IEnumerable{ApiResource}
+  commentId: '!:IEnumerable{ApiResource}'
+  definition: IEnumerable`1
+  name: IEnumerable<ApiResource>
+  nameWithType: IEnumerable<ApiResource>
+  fullName: IEnumerable<ApiResource>
+  nameWithType.vb: IEnumerable(Of ApiResource)
+  fullName.vb: IEnumerable(Of ApiResource)
+  name.vb: IEnumerable(Of ApiResource)
   spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
     isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ApiResource
+    name: ApiResource
+    nameWithType: ApiResource
+    fullName: ApiResource
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
     isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: Warbler.Startup.ConfigureServices*
-  commentId: Overload:Warbler.Startup.ConfigureServices
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ApiResource
+    name: ApiResource
+    nameWithType: ApiResource
+    fullName: ApiResource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.IdentityServerConfig.GetClient*
+  commentId: Overload:Warbler.Misc.IdentityServerConfig.GetClient
   isExternal: false
-  name: ConfigureServices
-  nameWithType: Startup.ConfigureServices
-  fullName: Warbler.Startup.ConfigureServices
-- uid: IServiceCollection
-  commentId: '!:IServiceCollection'
-  isExternal: true
-  name: IServiceCollection
-  nameWithType: IServiceCollection
-  fullName: IServiceCollection
-- uid: System.IServiceProvider
-  commentId: T:System.IServiceProvider
-  parent: System
-  isExternal: true
-  name: IServiceProvider
-  nameWithType: IServiceProvider
-  fullName: System.IServiceProvider
-- uid: Warbler.Startup.Configure*
-  commentId: Overload:Warbler.Startup.Configure
-  isExternal: false
-  name: Configure
-  nameWithType: Startup.Configure
-  fullName: Warbler.Startup.Configure
-- uid: IApplicationBuilder
-  commentId: '!:IApplicationBuilder'
-  isExternal: true
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: IApplicationBuilder
+  name: GetClient
+  nameWithType: IdentityServerConfig.GetClient
+  fullName: Warbler.Misc.IdentityServerConfig.GetClient
+- uid: IEnumerable{Client}
+  commentId: '!:IEnumerable{Client}'
+  definition: IEnumerable`1
+  name: IEnumerable<Client>
+  nameWithType: IEnumerable<Client>
+  fullName: IEnumerable<Client>
+  nameWithType.vb: IEnumerable(Of Client)
+  fullName.vb: IEnumerable(Of Client)
+  name.vb: IEnumerable(Of Client)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Client
+    name: Client
+    nameWithType: Client
+    fullName: Client
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Client
+    name: Client
+    nameWithType: Client
+    fullName: Client
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

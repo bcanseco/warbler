@@ -1,31 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Warbler.Startup
-  commentId: T:Warbler.Startup
-  id: Startup
-  parent: Warbler
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  commentId: T:Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  id: ClaimUniversityViewModel
+  parent: Warbler.Models.ManageViewModels
   children:
-  - Warbler.Startup.#ctor(IHostingEnvironment)
-  - Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  - Warbler.Startup.ConfigureServices(IServiceCollection)
-  - Warbler.Startup.Main(System.String[])
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
   langs:
   - csharp
   - vb
-  name: Startup
-  nameWithType: Startup
-  fullName: Warbler.Startup
+  name: ClaimUniversityViewModel
+  nameWithType: ClaimUniversityViewModel
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
   type: Class
   source:
-    id: Startup
+    id: ClaimUniversityViewModel
     path: ''
-    startLine: 19
+    startLine: 2405
   assemblies:
   - cs.temp.dll
-  namespace: Warbler
+  namespace: Warbler.Models.ManageViewModels
   syntax:
-    content: public class Startup
-    content.vb: Public Class Startup
+    content: public class ClaimUniversityViewModel
+    content.vb: Public Class ClaimUniversityViewModel
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,140 +43,168 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Startup.#ctor(IHostingEnvironment)
-  commentId: M:Warbler.Startup.#ctor(IHostingEnvironment)
-  id: '#ctor(IHostingEnvironment)'
-  parent: Warbler.Startup
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  id: FirstName
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
   langs:
   - csharp
   - vb
-  name: Startup(IHostingEnvironment)
-  nameWithType: Startup.Startup(IHostingEnvironment)
-  fullName: Warbler.Startup.Startup(IHostingEnvironment)
-  type: Constructor
+  name: FirstName
+  nameWithType: ClaimUniversityViewModel.FirstName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  type: Property
   source:
-    id: .ctor
+    id: FirstName
     path: ''
-    startLine: 21
+    startLine: 2407
   assemblies:
   - cs.temp.dll
-  namespace: Warbler
+  namespace: Warbler.Models.ManageViewModels
   syntax:
-    content: public Startup(IHostingEnvironment env)
-    parameters:
-    - id: env
-      type: IHostingEnvironment
-    content.vb: Public Sub New(env As IHostingEnvironment)
-  overload: Warbler.Startup.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Warbler.Startup.Main(System.String[])
-  commentId: M:Warbler.Startup.Main(System.String[])
-  id: Main(System.String[])
-  parent: Warbler.Startup
-  langs:
-  - csharp
-  - vb
-  name: Main(String[])
-  nameWithType: Startup.Main(String[])
-  fullName: Warbler.Startup.Main(System.String[])
-  type: Method
-  source:
-    id: Main
-    path: ''
-    startLine: 34
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler
-  syntax:
-    content: public static void Main(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
-    content.vb: Public Shared Sub Main(args As String())
-  overload: Warbler.Startup.Main*
-  nameWithType.vb: Startup.Main(String())
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: Warbler.Startup.Main(System.String())
-  name.vb: Main(String())
-- uid: Warbler.Startup.ConfigureServices(IServiceCollection)
-  commentId: M:Warbler.Startup.ConfigureServices(IServiceCollection)
-  id: ConfigureServices(IServiceCollection)
-  parent: Warbler.Startup
-  langs:
-  - csharp
-  - vb
-  name: ConfigureServices(IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-  fullName: Warbler.Startup.ConfigureServices(IServiceCollection)
-  type: Method
-  source:
-    id: ConfigureServices
-    path: ''
-    startLine: 43
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler
-  syntax:
-    content: public IServiceProvider ConfigureServices(IServiceCollection services)
-    parameters:
-    - id: services
-      type: IServiceCollection
+    content: public string FirstName { get; set; }
+    parameters: []
     return:
-      type: System.IServiceProvider
-    content.vb: Public Function ConfigureServices(services As IServiceCollection) As IServiceProvider
-  overload: Warbler.Startup.ConfigureServices*
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
-- uid: Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  commentId: M:Warbler.Startup.Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  id: Configure(IApplicationBuilder,IHostingEnvironment,System.IServiceProvider)
-  parent: Warbler.Startup
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  id: LastName
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
   langs:
   - csharp
   - vb
-  name: Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, IServiceProvider)
-  fullName: Warbler.Startup.Configure(IApplicationBuilder, IHostingEnvironment, System.IServiceProvider)
-  type: Method
+  name: LastName
+  nameWithType: ClaimUniversityViewModel.LastName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  type: Property
   source:
-    id: Configure
+    id: LastName
     path: ''
-    startLine: 122
+    startLine: 2412
   assemblies:
   - cs.temp.dll
-  namespace: Warbler
+  namespace: Warbler.Models.ManageViewModels
   syntax:
-    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
-    parameters:
-    - id: app
-      type: IApplicationBuilder
-    - id: env
-      type: IHostingEnvironment
-    - id: serviceProvider
-      type: System.IServiceProvider
-    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment, serviceProvider As IServiceProvider)
-  overload: Warbler.Startup.Configure*
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName*
   modifiers.csharp:
   - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  id: UniversityName
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: UniversityName
+  nameWithType: ClaimUniversityViewModel.UniversityName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  type: Property
+  source:
+    id: UniversityName
+    path: ''
+    startLine: 2418
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string UniversityName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UniversityName As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  id: PositionTitle
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: PositionTitle
+  nameWithType: ClaimUniversityViewModel.PositionTitle
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  type: Property
+  source:
+    id: PositionTitle
+    path: ''
+    startLine: 2422
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string PositionTitle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PositionTitle As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  id: Comments
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: Comments
+  nameWithType: ClaimUniversityViewModel.Comments
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  type: Property
+  source:
+    id: Comments
+    path: ''
+    startLine: 2427
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string Comments { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comments As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments*
+  modifiers.csharp:
+  - public
+  - get
+  - set
   modifiers.vb:
   - Public
 references:
-- uid: Warbler
-  commentId: N:Warbler
+- uid: Warbler.Models.ManageViewModels
+  commentId: N:Warbler.Models.ManageViewModels
   isExternal: false
-  name: Warbler
-  nameWithType: Warbler
-  fullName: Warbler
+  name: Warbler.Models.ManageViewModels
+  nameWithType: Warbler.Models.ManageViewModels
+  fullName: Warbler.Models.ManageViewModels
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -468,76 +497,40 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Warbler.Startup.#ctor*
-  commentId: Overload:Warbler.Startup.#ctor
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
   isExternal: false
-  name: Startup
-  nameWithType: Startup.Startup
-  fullName: Warbler.Startup.Startup
-- uid: IHostingEnvironment
-  isExternal: true
-  name: IHostingEnvironment
-  nameWithType: IHostingEnvironment
-  fullName: IHostingEnvironment
-- uid: Warbler.Startup.Main*
-  commentId: Overload:Warbler.Startup.Main
-  isExternal: false
-  name: Main
-  nameWithType: Startup.Main
-  fullName: Warbler.Startup.Main
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: Warbler.Startup.ConfigureServices*
-  commentId: Overload:Warbler.Startup.ConfigureServices
-  isExternal: false
-  name: ConfigureServices
-  nameWithType: Startup.ConfigureServices
-  fullName: Warbler.Startup.ConfigureServices
-- uid: IServiceCollection
-  commentId: '!:IServiceCollection'
-  isExternal: true
-  name: IServiceCollection
-  nameWithType: IServiceCollection
-  fullName: IServiceCollection
-- uid: System.IServiceProvider
-  commentId: T:System.IServiceProvider
+  name: FirstName
+  nameWithType: ClaimUniversityViewModel.FirstName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  name: IServiceProvider
-  nameWithType: IServiceProvider
-  fullName: System.IServiceProvider
-- uid: Warbler.Startup.Configure*
-  commentId: Overload:Warbler.Startup.Configure
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
   isExternal: false
-  name: Configure
-  nameWithType: Startup.Configure
-  fullName: Warbler.Startup.Configure
-- uid: IApplicationBuilder
-  commentId: '!:IApplicationBuilder'
-  isExternal: true
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: IApplicationBuilder
+  name: LastName
+  nameWithType: ClaimUniversityViewModel.LastName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  isExternal: false
+  name: UniversityName
+  nameWithType: ClaimUniversityViewModel.UniversityName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  isExternal: false
+  name: PositionTitle
+  nameWithType: ClaimUniversityViewModel.PositionTitle
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  isExternal: false
+  name: Comments
+  nameWithType: ClaimUniversityViewModel.Comments
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments

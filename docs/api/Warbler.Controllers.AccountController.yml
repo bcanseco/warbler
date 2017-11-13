@@ -36,7 +36,7 @@ items:
   source:
     id: AccountController
     path: ''
-    startLine: 168
+    startLine: 181
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -67,7 +67,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 177
+    startLine: 190
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -107,7 +107,7 @@ items:
   source:
     id: Login
     path: ''
-    startLine: 192
+    startLine: 205
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -138,7 +138,7 @@ items:
   source:
     id: Login
     path: ''
-    startLine: 204
+    startLine: 217
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -171,7 +171,7 @@ items:
   source:
     id: Register
     path: ''
-    startLine: 241
+    startLine: 254
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -202,7 +202,7 @@ items:
   source:
     id: Register
     path: ''
-    startLine: 250
+    startLine: 263
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -235,7 +235,7 @@ items:
   source:
     id: Logout
     path: ''
-    startLine: 280
+    startLine: 293
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -263,7 +263,7 @@ items:
   source:
     id: ExternalLogin
     path: ''
-    startLine: 290
+    startLine: 303
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -296,7 +296,7 @@ items:
   source:
     id: ExternalLoginCallback
     path: ''
-    startLine: 302
+    startLine: 315
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -329,7 +329,7 @@ items:
   source:
     id: ExternalLoginConfirmation
     path: ''
-    startLine: 343
+    startLine: 356
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -362,7 +362,7 @@ items:
   source:
     id: ConfirmEmail
     path: ''
-    startLine: 376
+    startLine: 389
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -395,7 +395,7 @@ items:
   source:
     id: ForgotPassword
     path: ''
-    startLine: 394
+    startLine: 407
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -423,7 +423,7 @@ items:
   source:
     id: ForgotPassword
     path: ''
-    startLine: 402
+    startLine: 415
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -454,7 +454,7 @@ items:
   source:
     id: ForgotPasswordConfirmation
     path: ''
-    startLine: 430
+    startLine: 443
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -482,7 +482,7 @@ items:
   source:
     id: ResetPassword
     path: ''
-    startLine: 438
+    startLine: 451
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -513,7 +513,7 @@ items:
   source:
     id: ResetPassword
     path: ''
-    startLine: 446
+    startLine: 459
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -544,7 +544,7 @@ items:
   source:
     id: ResetPasswordConfirmation
     path: ''
-    startLine: 471
+    startLine: 484
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -572,7 +572,7 @@ items:
   source:
     id: SendCode
     path: ''
-    startLine: 479
+    startLine: 492
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -605,7 +605,7 @@ items:
   source:
     id: SendCode
     path: ''
-    startLine: 494
+    startLine: 507
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -636,7 +636,7 @@ items:
   source:
     id: VerifyCode
     path: ''
-    startLine: 531
+    startLine: 544
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -671,7 +671,7 @@ items:
   source:
     id: VerifyCode
     path: ''
-    startLine: 545
+    startLine: 558
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -702,7 +702,7 @@ items:
   source:
     id: AccessDenied
     path: ''
-    startLine: 576
+    startLine: 589
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers

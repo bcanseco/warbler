@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -22,7 +24,7 @@ namespace Warbler.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
-        private readonly MembershipService _membershipService;
+        private readonly WarblerDbContext _dbContext;
 
         public ManageController(
           UserManager<User> userManager,
@@ -37,7 +39,7 @@ namespace Warbler.Controllers
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<ManageController>();
-            _membershipService = new MembershipService(new SqlMembershipRepository(context));
+            _dbContext = context;
         }
 
         // GET: /Manage/Index
@@ -333,32 +335,43 @@ namespace Warbler.Controllers
         // GET: /Manage/ClaimUniversity
         [HttpGet]
         public async Task<IActionResult> ClaimUniversity()
-        {
-            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
-            ViewBag.Universities = (await _membershipService.AllMembershipsForAsync(user))
-                .Select(m => m.Channel.Server.University)
-                .Distinct()
-                .ToList();
-            return View();
-        }
+            => View(new ClaimUniversityViewModel(await GetEligibleUniversities()));
 
         // POST: /Manage/ClaimUniveresity
         [HttpPost]
         public async Task<IActionResult> ClaimUniversity(ClaimUniversityViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid || model.ClaimRequest.UniversityId == -1)
             {
+                return View(new ClaimUniversityViewModel(await GetEligibleUniversities()));
+            }
+
+            var service = new ClaimRequestService(new SqlClaimRequestRepository(_dbContext));
+            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+
+            try
+            {
+                model.ClaimRequest.SubmitterId = user.Id;
+                await service.SubmitClaimAsync(model.ClaimRequest);
                 return View("ClaimFormSubmit");
             }
-            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
-            ViewBag.Universities = (await _membershipService.AllMembershipsForAsync(user))
-                .Select(m => m.Channel.Server.University)
-                .Distinct()
-                .ToList();
-            return View(model);
+            catch (Exception)
+            {
+                return View("Error");
+            }
         }
 
         #region Helpers
+
+        private async Task<List<University>> GetEligibleUniversities()
+        {
+            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            var service = new MembershipService(new SqlMembershipRepository(_dbContext));
+            return (await service.AllMembershipsForAsync(user))
+                .Select(m => m.Channel.Server.University)
+                .Distinct()
+                .ToList();
+        }
 
         private void AddErrors(IdentityResult result)
         {

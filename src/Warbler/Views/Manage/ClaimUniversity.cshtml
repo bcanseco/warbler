@@ -35,47 +35,38 @@
         <hr/>
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="form-group">
-          <label asp-for="FirstName" class="col-md-6"></label>
+          <label asp-for="ClaimRequest.FirstName" class="col-md-6"></label>
           <div class="col-md-12">
-            <input asp-for="FirstName" class="form-control"/>
-            <span asp-validation-for="FirstName" class="text-danger"></span>
+            <input asp-for="ClaimRequest.FirstName" class="form-control"/>
+            <span asp-validation-for="ClaimRequest.FirstName" class="text-danger"></span>
           </div>
         </div>
         <div class="form-group">
-          <label asp-for="LastName" class="col-md-6"></label>
+          <label asp-for="ClaimRequest.LastName" class="col-md-6"></label>
           <div class="col-md-12">
-            <input asp-for="LastName" class="form-control"/>
-            <span asp-validation-for="LastName" class="text-danger"></span>
+            <input asp-for="ClaimRequest.LastName" class="form-control"/>
+            <span asp-validation-for="ClaimRequest.LastName" class="text-danger"></span>
           </div>
         </div>
         <div class="form-group">
-          <label asp-for="UniversityName" class="col-md-6"></label>
+          <label asp-for="ClaimRequest.UniversityId" class="col-md-6"></label>
           <div class="col-md-12">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select a university
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                @foreach (var university in (List<University>) ViewBag.universities)
-                {
-                  <option class="dropdown-item" href="#">@university.Name</option>
-                }
-              </div>
-            </div>
+            @Html.DropDownListFor(m => m.ClaimRequest.UniversityId, new SelectList(Model.UniversityChoices, "Id", "Name"), "--Select a university--", new { @class = "form-control" })
+            <span asp-validation-for="ClaimRequest.UniversityId" class="text-danger"></span>
           </div>
         </div>
         <div class="form-group">
-          <label asp-for="PositionTitle" class="col-md-6"></label>
+          <label asp-for="ClaimRequest.PositionTitle" class="col-md-6"></label>
           <div class="col-md-12">
-            <input asp-for="PositionTitle" class="form-control"/>
-            <span asp-validation-for="PositionTitle" class="text-danger"></span>
+            <input asp-for="ClaimRequest.PositionTitle" class="form-control"/>
+            <span asp-validation-for="ClaimRequest.PositionTitle" class="text-danger"></span>
           </div>
         </div>
         <div class="form-group">
-          <label asp-for="Comments" class="col-md-6"></label>
+          <label asp-for="ClaimRequest.Comments" class="col-md-6"></label>
           <div class="col-md-12">
-            <textarea asp-for="Comments" class="form-control" rows="3"></textarea>
-            <span asp-validation-for="Comments" class="text-danger"></span>
+            <textarea asp-for="ClaimRequest.Comments" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="ClaimRequest.Comments" class="text-danger"></span>
           </div>
         </div>
         <div class="form-group">

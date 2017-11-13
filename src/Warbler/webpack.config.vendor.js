@@ -27,7 +27,7 @@ module.exports = (env) => {
         "popper.js",
         "bootstrap",
         // Everything else
-        //"daemonite-material",
+        "daemonite-material",
         "@aspnet/signalr-client",
         "isomorphic-fetch",
         "react",

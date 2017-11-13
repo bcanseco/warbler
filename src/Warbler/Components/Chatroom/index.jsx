@@ -6,7 +6,6 @@ import ChannelPane from "./Channels/channel-pane.jsx";
 import MessagePane from "./Messages/message-pane.jsx";
 import UserPane from "./Users/user-pane.jsx";
 import VerticalDivider from "./vertical-divider.jsx";
-import ServerButton from "./Server/server-button.jsx";
 import ServerPopout from "./Server/server-popout.jsx";
 import "./styles.less";
 
@@ -132,7 +131,6 @@ export default class Chatroom extends React.Component {
   }
 
   onServerPopoutOpen(buttonTop, buttonLeft, buttonWidth) {
-    console.log(buttonTop, buttonLeft, buttonWidth);
     this.setState({
       buttonTop: buttonTop,
       buttonLeft: buttonLeft,

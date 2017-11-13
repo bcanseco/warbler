@@ -2,7 +2,7 @@
 
 export default class VerticalDivider extends React.Component {
   render() {
-    var divStyle = {
+    const divStyle = {
       order: this.props.order
     };
 

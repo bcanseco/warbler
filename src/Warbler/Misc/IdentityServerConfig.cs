@@ -1,8 +1,10 @@
-﻿/*using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using IdentityServer4.Models;
 
 namespace Warbler.Misc
 {
+    [Obsolete("Currently unused")]
     public static class IdentityServerConfig
     {
         /// <summary>
@@ -29,4 +31,4 @@ namespace Warbler.Misc
                 }
             };
     }
-}*/
+}

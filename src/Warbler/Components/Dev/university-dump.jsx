@@ -9,10 +9,10 @@ export default class UniversityDump extends React.Component {
     const jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/mg;
 
     const replaceJson = (match, pIndent, pKey, pVal, pEnd) => {
-      var key = "<span class=json-key>";
-      var val = "<span class=json-value>";
-      var str = "<span class=json-string>";
-      var r = pIndent || "";
+      const key = "<span class=json-key>";
+      const val = "<span class=json-value>";
+      const str = "<span class=json-string>";
+      let r = pIndent || "";
       if (pKey)
         r = r + key + pKey.replace(/[": ]/g, "") + "</span>: ";
       if (pVal)

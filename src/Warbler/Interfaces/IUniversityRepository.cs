@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using GoogleApi.Entities.Places.Search.NearBy.Response;
 using Warbler.Models;
@@ -15,8 +16,9 @@ namespace Warbler.Interfaces
         ///   Adds a new university based on a Google Places Search result.
         /// </summary>
         /// <param name="uni">The result whose properties will be used for creation.</param>
+        /// <param name="templates">Templates to use for the university's channels.</param>
         /// <returns>The created university.</returns>
-        Task<University> CreateAsync(NearByResult uni);
+        Task<University> CreateAsync(NearByResult uni, IEnumerable<ChannelTemplate> templates);
 
         /// <summary>
         ///   Updates the properties of any universities in the database

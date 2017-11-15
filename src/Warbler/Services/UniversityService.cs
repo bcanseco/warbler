@@ -26,8 +26,11 @@ namespace Warbler.Services
         ///   Google Places result or creates it if nonexistent.
         /// </summary>
         /// <param name="uni">The Google Places search result to use.</param>
+        /// <param name="templates">
+        ///   The channel templates to use if the university needs to be created.
+        /// </param>
         /// <returns>The related University object.</returns>
-        public async Task<University> GetOrCreateAsync(NearByResult uni)
+        public async Task<University> GetOrCreateAsync(NearByResult uni, IEnumerable<ChannelTemplate> templates)
         {
             try
             {
@@ -35,7 +38,7 @@ namespace Warbler.Services
             }
             catch (UniversityNotFoundException)
             {
-                return await Repository.CreateAsync(uni);
+                return await Repository.CreateAsync(uni, templates);
             }
         }
 

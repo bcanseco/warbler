@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +14,7 @@ using Warbler.Hubs;
 using Warbler.Models;
 using Warbler.Misc;
 using Warbler.Interfaces;
+using Warbler.Repositories;
 using Warbler.Services;
 
 namespace Warbler
@@ -131,12 +133,18 @@ namespace Warbler
                     HotModuleReplacement = true,
                     ReactHotModuleReplacement = true
                 });
-
-                serviceProvider.GetService<WarblerDbContext>().Database.EnsureCreated();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+            }
+
+            var context = serviceProvider.GetService<WarblerDbContext>();
+            if (context.Database.EnsureCreated())
+            {
+                new ChannelTemplateService(new SqlChannelTemplateRepository(context))
+                    .CreateDefaultTemplatesAsync()
+                    .Wait();
             }
 
             app.UseStaticFiles();

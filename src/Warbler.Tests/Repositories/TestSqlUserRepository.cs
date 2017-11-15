@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Warbler.Misc;
 using Warbler.Repositories;
 using Warbler.Models;
+using Warbler.Services;
 
 namespace Warbler.Tests.Repositories
 {
@@ -34,8 +35,11 @@ namespace Warbler.Tests.Repositories
                     Geometry = new Geometry { Location = new Location(0.0, 0.0) }
                 };
 
+                var templateService = new ChannelTemplateService(new SqlChannelTemplateRepository(context));
+                await templateService.CreateDefaultTemplatesAsync();
+
                 // Create a test university with default channels
-                var testUniversity = await repo.CreateAsync(nearbyResult);
+                var testUniversity = await repo.CreateAsync(nearbyResult, await templateService.GetAsync());
 
                 // Save a reference to one of the default channels and a new user
                 General = testUniversity.Server.Channels.Single(ch => ch.Name == "general");

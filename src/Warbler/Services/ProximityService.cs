@@ -44,11 +44,13 @@ namespace Warbler.Services
             = new ConcurrentDictionary<string, List<NearByResult>>();
 
         private UniversityService UniversityService { get; set; }
+        private ChannelTemplateService ChannelTemplateService { get; set; }
         private ILogger Logger { get; }
 
         public ProximityService With(WarblerDbContext context)
         {
             UniversityService = new UniversityService(new SqlUniversityRepository(context));
+            ChannelTemplateService = new ChannelTemplateService(new SqlChannelTemplateRepository(context));
             return this;
         }
 
@@ -107,7 +109,7 @@ namespace Warbler.Services
                 validChoices?.SingleOrDefault(u => u.PlaceId == placeId)
                 ?? throw new InvalidDataException("Invalid choice; user may have injected JS.");
 
-            var university = await UniversityService.GetOrCreateAsync(userChoice);
+            var university = await UniversityService.GetOrCreateAsync(userChoice, await ChannelTemplateService.GetAsync());
             await UniversityService.JoinAsync(user, university);
 
             // Let client know they can request the chatroom view now

@@ -8,19 +8,30 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Warbler.Misc;
 using Warbler.Repositories;
 using Warbler.Models;
+using Warbler.Services;
 
 namespace Warbler.Tests.Repositories
 {
     [TestClass]
     public class TestSqlMessageRepository
     {
-        private DbContextOptions<WarblerDbContext> Options { get; }
+        private static DbContextOptions<WarblerDbContext> Options { get; }
             = new DbContextOptionsBuilder<WarblerDbContext>()
                 .UseInMemoryDatabase(nameof(TestSqlMessageRepository))
                 .Options;
 
         private User Bob { get; set; }
         private Channel General { get; set; }
+
+        [ClassInitialize]
+        public static async Task CreateTemplates(TestContext _)
+        {
+            using (var context = new WarblerDbContext(Options))
+            {
+                await new ChannelTemplateService(new SqlChannelTemplateRepository(context))
+                    .CreateDefaultTemplatesAsync();
+            }
+        }
 
         [TestInitialize]
         public async Task CreateUniversity()
@@ -34,8 +45,10 @@ namespace Warbler.Tests.Repositories
                     Geometry = new Geometry { Location = new Location(0.0, 0.0) }
                 };
 
+                var templateService = new ChannelTemplateService(new SqlChannelTemplateRepository(context));
+
                 // Create a test university with default channels
-                var testUniversity = await repo.CreateAsync(nearbyResult);
+                var testUniversity = await repo.CreateAsync(nearbyResult, await templateService.GetAsync());
 
                 // Save a reference to one of the default channels and a new user
                 General = testUniversity.Server.Channels.Single(ch => ch.Name == "general");

@@ -28,6 +28,20 @@ namespace Warbler.Repositories
 
         public async Task<University> CreateAsync(NearByResult uni)
         {
+            var channels = new List<Channel>();
+            var templates = Context.ChannelTemplates.ToList();
+            for (int i = 0; i < templates.Count; i++)
+            {
+                var newChannel = new Channel
+                {
+                    Name = templates.ElementAt(i).Name,
+                    Description = templates.ElementAt(i).Description,
+                    State = ChannelState.Active,
+                    Type = ChannelType.Normal,
+                    Memberships = new List<Membership>()
+                };
+                channels.Add(newChannel);
+            }
             var university = new University
             {
                 Name = uni.Name,
@@ -39,25 +53,7 @@ namespace Warbler.Repositories
                 {
                     IsAuthEnabled = false,
                     Type = ServerType.Public,
-                    Channels = new List<Channel>
-                    {
-                        new Channel
-                        {
-                            Name = "general",
-                            Description = "Talk about anything.",
-                            State = ChannelState.Active,
-                            Type = ChannelType.Normal,
-                            Memberships = new List<Membership>()
-                        },
-                        new Channel
-                        {
-                            Name = "biology",
-                            Description = "Talk about biological things.",
-                            State = ChannelState.Active,
-                            Type = ChannelType.Normal,
-                            Memberships = new List<Membership>()
-                        }
-                    },
+                    Channels = channels
                 }
             };
 

@@ -53,6 +53,7 @@ namespace Warbler.Tests.Repositories
             {
                 Assert.AreEqual(1, context.Universities.Count());
                 Assert.AreEqual("Test", context.Universities.Single().Name);
+                Assert.AreEqual(3, context.Universities.Single().Server.Channels.Count);
             }
         }
 

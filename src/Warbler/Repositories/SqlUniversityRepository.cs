@@ -26,34 +26,27 @@ namespace Warbler.Repositories
             Context = context;
         }
 
-        public async Task<University> CreateAsync(NearByResult uni)
+        public async Task<University> CreateAsync(NearByResult uni, IEnumerable<ChannelTemplate> templates)
         {
-            var channels = new List<Channel>();
-            var templates = Context.ChannelTemplates.ToList();
-            for (int i = 0; i < templates.Count; i++)
-            {
-                var newChannel = new Channel
-                {
-                    Name = templates.ElementAt(i).Name,
-                    Description = templates.ElementAt(i).Description,
-                    State = ChannelState.Active,
-                    Type = ChannelType.Normal,
-                    Memberships = new List<Membership>()
-                };
-                channels.Add(newChannel);
-            }
             var university = new University
             {
                 Name = uni.Name,
                 PlaceId = uni.PlaceId,
                 Address = uni.Vicinity,
-                Lat = (float)uni.Geometry.Location.Latitude,
-                Lng = (float)uni.Geometry.Location.Longitude,
+                Lat = (float) uni.Geometry.Location.Latitude,
+                Lng = (float) uni.Geometry.Location.Longitude,
                 Server = new Server
                 {
                     IsAuthEnabled = false,
                     Type = ServerType.Public,
-                    Channels = channels
+                    Channels = templates.Select(t => new Channel
+                    {
+                        Name = t.Name,
+                        Description = t.Description,
+                        State = ChannelState.Active,
+                        Type = ChannelType.Normal,
+                        Memberships = new List<Membership>()
+                    }).ToList()
                 }
             };
 

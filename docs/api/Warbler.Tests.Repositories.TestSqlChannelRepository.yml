@@ -16,7 +16,7 @@ items:
   source:
     id: TestSqlChannelRepository
     path: ''
-    startLine: 3125
+    startLine: 3386
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -53,7 +53,7 @@ items:
   source:
     id: UpdateAsync_Should_Update_Channel
     path: ''
-    startLine: 3133
+    startLine: 3394
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories

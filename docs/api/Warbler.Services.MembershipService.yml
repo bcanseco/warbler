@@ -8,6 +8,7 @@ items:
   - Warbler.Services.MembershipService.#ctor(Warbler.Interfaces.IMembershipRepository)
   - Warbler.Services.MembershipService.AllChannelsForAsync(Warbler.Models.User)
   - Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.Channel)
+  - Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
   langs:
   - csharp
   - vb
@@ -18,7 +19,7 @@ items:
   source:
     id: MembershipService
     path: ''
-    startLine: 2794
+    startLine: 3039
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -57,7 +58,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2798
+    startLine: 3043
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -86,7 +87,7 @@ items:
   source:
     id: AllChannelsForAsync
     path: ''
-    startLine: 2808
+    startLine: 3053
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -120,7 +121,7 @@ items:
   source:
     id: AllMembershipsForAsync
     path: ''
-    startLine: 2817
+    startLine: 3062
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -135,6 +136,40 @@ items:
     return:
       type: Task{ICollection{Warbler.Models.Membership}}
     content.vb: Public Function AllMembershipsForAsync(channel As Channel) As Task(Of ICollection(Of Membership))
+  overload: Warbler.Services.MembershipService.AllMembershipsForAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
+  commentId: M:Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
+  id: AllMembershipsForAsync(Warbler.Models.User)
+  parent: Warbler.Services.MembershipService
+  langs:
+  - csharp
+  - vb
+  name: AllMembershipsForAsync(User)
+  nameWithType: MembershipService.AllMembershipsForAsync(User)
+  fullName: Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
+  type: Method
+  source:
+    id: AllMembershipsForAsync
+    path: ''
+    startLine: 3069
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nReturns a collection of memberships belonging to a user.\n"
+  example: []
+  syntax:
+    content: public Task<ICollection<Membership>> AllMembershipsForAsync(User user)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+      description: The user to fetch memberships for.
+    return:
+      type: Task{ICollection{Warbler.Models.Membership}}
+    content.vb: Public Function AllMembershipsForAsync(user As User) As Task(Of ICollection(Of Membership))
   overload: Warbler.Services.MembershipService.AllMembershipsForAsync*
   modifiers.csharp:
   - public

@@ -5,9 +5,16 @@ items:
   id: TestSqlUniversityRepository
   parent: Warbler.Tests.Repositories
   children:
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
   - Warbler.Tests.Repositories.TestSqlUniversityRepository.CreateAsync_Should_Create_A_New_University
   - Warbler.Tests.Repositories.TestSqlUniversityRepository.LookupAsync_Should_Fail_With_Unknown_PlaceId
   - Warbler.Tests.Repositories.TestSqlUniversityRepository.SaveASync_Should_Save_Changes_On_Context
+  - Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
   langs:
   - csharp
   - vb
@@ -18,7 +25,7 @@ items:
   source:
     id: TestSqlUniversityRepository
     path: ''
-    startLine: 3259
+    startLine: 3522
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -41,6 +48,32 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
+  id: SetUpDatabase
+  parent: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: SetUpDatabase()
+  nameWithType: TestSqlUniversityRepository.SetUpDatabase()
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase()
+  type: Method
+  source:
+    id: SetUpDatabase
+    path: ''
+    startLine: 3527
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public void SetUpDatabase()
+    content.vb: Public Sub SetUpDatabase
+  overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.CreateAsync_Should_Create_A_New_University
   commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.CreateAsync_Should_Create_A_New_University
   id: CreateAsync_Should_Create_A_New_University
@@ -55,7 +88,7 @@ items:
   source:
     id: CreateAsync_Should_Create_A_New_University
     path: ''
-    startLine: 3267
+    startLine: 3550
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -83,7 +116,7 @@ items:
   source:
     id: SaveASync_Should_Save_Changes_On_Context
     path: ''
-    startLine: 3290
+    startLine: 3563
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -111,7 +144,7 @@ items:
   source:
     id: LookupAsync_Should_Fail_With_Unknown_PlaceId
     path: ''
-    startLine: 3310
+    startLine: 3583
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -121,6 +154,172 @@ items:
       type: Task
     content.vb: Public Function LookupAsync_Should_Fail_With_Unknown_PlaceId As Task
   overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.LookupAsync_Should_Fail_With_Unknown_PlaceId*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  id: AllQueryable_University_Should_Not_Get_Servers
+  parent: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: AllQueryable_University_Should_Not_Get_Servers()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers()
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers()
+  type: Method
+  source:
+    id: AllQueryable_University_Should_Not_Get_Servers
+    path: ''
+    startLine: 3594
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task AllQueryable_University_Should_Not_Get_Servers()
+    return:
+      type: Task
+    content.vb: Public Function AllQueryable_University_Should_Not_Get_Servers As Task
+  overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  id: AllQueryable_Server_Should_Not_Get_Channels
+  parent: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: AllQueryable_Server_Should_Not_Get_Channels()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels()
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels()
+  type: Method
+  source:
+    id: AllQueryable_Server_Should_Not_Get_Channels
+    path: ''
+    startLine: 3610
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task AllQueryable_Server_Should_Not_Get_Channels()
+    return:
+      type: Task
+    content.vb: Public Function AllQueryable_Server_Should_Not_Get_Channels As Task
+  overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  id: AllQueryable_Channel_Should_Not_Get_Users_Messages
+  parent: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: AllQueryable_Channel_Should_Not_Get_Users_Messages()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages()
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages()
+  type: Method
+  source:
+    id: AllQueryable_Channel_Should_Not_Get_Users_Messages
+    path: ''
+    startLine: 3627
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task AllQueryable_Channel_Should_Not_Get_Users_Messages()
+    return:
+      type: Task
+    content.vb: Public Function AllQueryable_Channel_Should_Not_Get_Users_Messages As Task
+  overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  id: AllQueryable_User_Should_Not_Get_Messages
+  parent: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: AllQueryable_User_Should_Not_Get_Messages()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages()
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages()
+  type: Method
+  source:
+    id: AllQueryable_User_Should_Not_Get_Messages
+    path: ''
+    startLine: 3646
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task AllQueryable_User_Should_Not_Get_Messages()
+    return:
+      type: Task
+    content.vb: Public Function AllQueryable_User_Should_Not_Get_Messages As Task
+  overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  id: AllQueryable_Message_Should_Get_Everything
+  parent: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: AllQueryable_Message_Should_Get_Everything()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything()
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything()
+  type: Method
+  source:
+    id: AllQueryable_Message_Should_Get_Everything
+    path: ''
+    startLine: 3664
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task AllQueryable_Message_Should_Get_Everything()
+    return:
+      type: Task
+    content.vb: Public Function AllQueryable_Message_Should_Get_Everything As Task
+  overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  commentId: M:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  id: AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  parent: Warbler.Tests.Repositories.TestSqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+  type: Method
+  source:
+    id: AllQueryable_Should_Fail_With_Unknown_QueryDepth
+    path: ''
+    startLine: 3684
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public void AllQueryable_Should_Fail_With_Unknown_QueryDepth()
+    content.vb: Public Sub AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  overload: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -424,6 +623,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
+  isExternal: false
+  name: SetUpDatabase
+  nameWithType: TestSqlUniversityRepository.SetUpDatabase
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.SetUpDatabase
 - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.CreateAsync_Should_Create_A_New_University*
   commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.CreateAsync_Should_Create_A_New_University
   isExternal: false
@@ -447,3 +652,39 @@ references:
   name: LookupAsync_Should_Fail_With_Unknown_PlaceId
   nameWithType: TestSqlUniversityRepository.LookupAsync_Should_Fail_With_Unknown_PlaceId
   fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.LookupAsync_Should_Fail_With_Unknown_PlaceId
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  isExternal: false
+  name: AllQueryable_University_Should_Not_Get_Servers
+  nameWithType: TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_University_Should_Not_Get_Servers
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  isExternal: false
+  name: AllQueryable_Server_Should_Not_Get_Channels
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Server_Should_Not_Get_Channels
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  isExternal: false
+  name: AllQueryable_Channel_Should_Not_Get_Users_Messages
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Channel_Should_Not_Get_Users_Messages
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  isExternal: false
+  name: AllQueryable_User_Should_Not_Get_Messages
+  nameWithType: TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_User_Should_Not_Get_Messages
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  isExternal: false
+  name: AllQueryable_Message_Should_Get_Everything
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Message_Should_Get_Everything
+- uid: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  isExternal: false
+  name: AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  nameWithType: TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth
+  fullName: Warbler.Tests.Repositories.TestSqlUniversityRepository.AllQueryable_Should_Fail_With_Unknown_QueryDepth

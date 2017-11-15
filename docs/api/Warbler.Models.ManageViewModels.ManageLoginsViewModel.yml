@@ -17,7 +17,7 @@ items:
   source:
     id: ManageLoginsViewModel
     path: ''
-    startLine: 2287
+    startLine: 2480
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -54,7 +54,7 @@ items:
   source:
     id: CurrentLogins
     path: ''
-    startLine: 2289
+    startLine: 2482
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -85,7 +85,7 @@ items:
   source:
     id: OtherLogins
     path: ''
-    startLine: 2291
+    startLine: 2484
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels

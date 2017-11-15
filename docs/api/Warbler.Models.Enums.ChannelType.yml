@@ -17,7 +17,7 @@ items:
   source:
     id: ChannelType
     path: ''
-    startLine: 2170
+    startLine: 2330
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -44,7 +44,7 @@ items:
   source:
     id: Normal
     path: ''
-    startLine: 2172
+    startLine: 2332
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -72,7 +72,7 @@ items:
   source:
     id: PrivateMessaging
     path: ''
-    startLine: 2173
+    startLine: 2333
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums

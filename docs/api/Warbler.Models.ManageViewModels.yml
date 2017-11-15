@@ -6,6 +6,7 @@ items:
   children:
   - Warbler.Models.ManageViewModels.AddPhoneNumberViewModel
   - Warbler.Models.ManageViewModels.ChangePasswordViewModel
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel
   - Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel
   - Warbler.Models.ManageViewModels.FactorViewModel
   - Warbler.Models.ManageViewModels.IndexViewModel
@@ -35,6 +36,12 @@ references:
   name: ChangePasswordViewModel
   nameWithType: ChangePasswordViewModel
   fullName: Warbler.Models.ManageViewModels.ChangePasswordViewModel
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  commentId: T:Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  isExternal: false
+  name: ClaimUniversityViewModel
+  nameWithType: ClaimUniversityViewModel
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
 - uid: Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel
   commentId: T:Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel
   isExternal: false

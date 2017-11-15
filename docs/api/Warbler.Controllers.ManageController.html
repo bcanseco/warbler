@@ -90,12 +90,12 @@
   
   
   <a id="Warbler_Controllers_ManageController__ctor_" data-uid="Warbler.Controllers.ManageController.#ctor*"></a>
-  <h4 id="Warbler_Controllers_ManageController__ctor_UserManager_Warbler_Models_User__SignInManager_Warbler_Models_User__Warbler_Interfaces_IEmailSender_Warbler_Interfaces_ISmsSender_ILoggerFactory_" data-uid="Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory)">ManageController(UserManager&lt;User&gt;, SignInManager&lt;User&gt;, IEmailSender, ISmsSender, ILoggerFactory)</h4>
+  <h4 id="Warbler_Controllers_ManageController__ctor_UserManager_Warbler_Models_User__SignInManager_Warbler_Models_User__Warbler_Interfaces_IEmailSender_Warbler_Interfaces_ISmsSender_ILoggerFactory_Warbler_Misc_WarblerDbContext_" data-uid="Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)">ManageController(UserManager&lt;User&gt;, SignInManager&lt;User&gt;, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManageController(UserManager&lt;User&gt; userManager, SignInManager&lt;User&gt; signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManageController(UserManager&lt;User&gt; userManager, SignInManager&lt;User&gt; signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory, WarblerDbContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,6 +130,11 @@
       <tr>
         <td><span class="xref">ILoggerFactory</span></td>
         <td><span class="parametername">loggerFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Warbler.Misc.WarblerDbContext.html">WarblerDbContext</a></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -250,6 +255,73 @@
     <tbody>
       <tr>
         <td><span class="xref">ChangePasswordViewModel</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Controllers_ManageController_ClaimUniversity_" data-uid="Warbler.Controllers.ManageController.ClaimUniversity*"></a>
+  <h4 id="Warbler_Controllers_ManageController_ClaimUniversity" data-uid="Warbler.Controllers.ManageController.ClaimUniversity">ClaimUniversity()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; ClaimUniversity()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Controllers_ManageController_ClaimUniversity_" data-uid="Warbler.Controllers.ManageController.ClaimUniversity*"></a>
+  <h4 id="Warbler_Controllers_ManageController_ClaimUniversity_ClaimUniversityViewModel_" data-uid="Warbler.Controllers.ManageController.ClaimUniversity(ClaimUniversityViewModel)">ClaimUniversity(ClaimUniversityViewModel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; ClaimUniversity(ClaimUniversityViewModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ClaimUniversityViewModel</span></td>
         <td><span class="parametername">model</span></td>
         <td></td>
       </tr>

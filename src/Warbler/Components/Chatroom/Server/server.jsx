@@ -8,7 +8,7 @@ export default class Server extends React.Component {
         className="server"
         onClick={this.props.onClick}
       >
-      <span className="text-truncate">#{this.props.data.name}</span>
+        <span className="text-truncate">#{this.props.data.name}</span>
       </button>
     );
   }

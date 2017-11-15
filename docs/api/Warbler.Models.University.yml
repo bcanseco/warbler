@@ -6,11 +6,15 @@ items:
   parent: Warbler.Models
   children:
   - Warbler.Models.University.Address
+  - Warbler.Models.University.Equals(System.Object)
   - Warbler.Models.University.Equals(Warbler.Models.University)
+  - Warbler.Models.University.GetHashCode
   - Warbler.Models.University.Id
   - Warbler.Models.University.Lat
   - Warbler.Models.University.Lng
   - Warbler.Models.University.Name
+  - Warbler.Models.University.op_Equality(Warbler.Models.University,Warbler.Models.University)
+  - Warbler.Models.University.op_Inequality(Warbler.Models.University,Warbler.Models.University)
   - Warbler.Models.University.PlaceId
   - Warbler.Models.University.Server
   langs:
@@ -23,7 +27,7 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1713
+    startLine: 1858
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -38,10 +42,8 @@ items:
   - System.IEquatable{Warbler.Models.University}
   inheritedMembers:
   - System.Object.ToString
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   modifiers.csharp:
@@ -64,7 +66,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1716
+    startLine: 1861
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -95,7 +97,7 @@ items:
   source:
     id: PlaceId
     path: ''
-    startLine: 1717
+    startLine: 1862
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -126,7 +128,7 @@ items:
   source:
     id: Address
     path: ''
-    startLine: 1718
+    startLine: 1863
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -157,7 +159,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1719
+    startLine: 1864
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -188,7 +190,7 @@ items:
   source:
     id: Lat
     path: ''
-    startLine: 1720
+    startLine: 1865
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -219,7 +221,7 @@ items:
   source:
     id: Lng
     path: ''
-    startLine: 1721
+    startLine: 1866
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -250,7 +252,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1723
+    startLine: 1868
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -281,7 +283,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1725
+    startLine: 1870
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -300,6 +302,141 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Warbler.Models.University.Equals(System.Object)
+  commentId: M:Warbler.Models.University.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Warbler.Models.University
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: University.Equals(Object)
+  fullName: Warbler.Models.University.Equals(System.Object)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 1877
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Warbler.Models.University.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.University.GetHashCode
+  commentId: M:Warbler.Models.University.GetHashCode
+  id: GetHashCode
+  parent: Warbler.Models.University
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: University.GetHashCode()
+  fullName: Warbler.Models.University.GetHashCode()
+  type: Method
+  source:
+    id: GetHashCode
+    path: ''
+    startLine: 1884
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: Warbler.Models.University.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.University.op_Equality(Warbler.Models.University,Warbler.Models.University)
+  commentId: M:Warbler.Models.University.op_Equality(Warbler.Models.University,Warbler.Models.University)
+  id: op_Equality(Warbler.Models.University,Warbler.Models.University)
+  parent: Warbler.Models.University
+  langs:
+  - csharp
+  - vb
+  name: Equality(University, University)
+  nameWithType: University.Equality(University, University)
+  fullName: Warbler.Models.University.Equality(Warbler.Models.University, Warbler.Models.University)
+  type: Operator
+  source:
+    id: op_Equality
+    path: ''
+    startLine: 1885
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator ==(University left, University right)
+    parameters:
+    - id: left
+      type: Warbler.Models.University
+    - id: right
+      type: Warbler.Models.University
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As University, right As University) As Boolean
+  overload: Warbler.Models.University.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Models.University.op_Inequality(Warbler.Models.University,Warbler.Models.University)
+  commentId: M:Warbler.Models.University.op_Inequality(Warbler.Models.University,Warbler.Models.University)
+  id: op_Inequality(Warbler.Models.University,Warbler.Models.University)
+  parent: Warbler.Models.University
+  langs:
+  - csharp
+  - vb
+  name: Inequality(University, University)
+  nameWithType: University.Inequality(University, University)
+  fullName: Warbler.Models.University.Inequality(Warbler.Models.University, Warbler.Models.University)
+  type: Operator
+  source:
+    id: op_Inequality
+    path: ''
+    startLine: 1886
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator !=(University left, University right)
+    parameters:
+    - id: left
+      type: Warbler.Models.University
+    - id: right
+      type: Warbler.Models.University
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As University, right As University) As Boolean
+  overload: Warbler.Models.University.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: Warbler.Models
   commentId: N:Warbler.Models
@@ -384,47 +521,6 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -539,37 +635,6 @@ references:
     nameWithType: Object
     fullName: System.Object
     isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -849,3 +914,93 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.University.GetHashCode*
+  commentId: Overload:Warbler.Models.University.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: University.GetHashCode
+  fullName: Warbler.Models.University.GetHashCode
+- uid: Warbler.Models.University.op_Equality*
+  commentId: Overload:Warbler.Models.University.op_Equality
+  isExternal: false
+  name: Equality
+  nameWithType: University.Equality
+  fullName: Warbler.Models.University.Equality
+- uid: Warbler.Models.University.op_Inequality*
+  commentId: Overload:Warbler.Models.University.op_Inequality
+  isExternal: false
+  name: Inequality
+  nameWithType: University.Inequality
+  fullName: Warbler.Models.University.Inequality

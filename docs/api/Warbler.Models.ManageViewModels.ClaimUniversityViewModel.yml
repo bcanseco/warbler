@@ -1,0 +1,536 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  commentId: T:Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  id: ClaimUniversityViewModel
+  parent: Warbler.Models.ManageViewModels
+  children:
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  - Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  langs:
+  - csharp
+  - vb
+  name: ClaimUniversityViewModel
+  nameWithType: ClaimUniversityViewModel
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  type: Class
+  source:
+    id: ClaimUniversityViewModel
+    path: ''
+    startLine: 2405
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public class ClaimUniversityViewModel
+    content.vb: Public Class ClaimUniversityViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  id: FirstName
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: ClaimUniversityViewModel.FirstName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  type: Property
+  source:
+    id: FirstName
+    path: ''
+    startLine: 2407
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string FirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  id: LastName
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: ClaimUniversityViewModel.LastName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  type: Property
+  source:
+    id: LastName
+    path: ''
+    startLine: 2412
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  id: UniversityName
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: UniversityName
+  nameWithType: ClaimUniversityViewModel.UniversityName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  type: Property
+  source:
+    id: UniversityName
+    path: ''
+    startLine: 2418
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string UniversityName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UniversityName As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  id: PositionTitle
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: PositionTitle
+  nameWithType: ClaimUniversityViewModel.PositionTitle
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  type: Property
+  source:
+    id: PositionTitle
+    path: ''
+    startLine: 2422
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string PositionTitle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PositionTitle As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  commentId: P:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  id: Comments
+  parent: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+  langs:
+  - csharp
+  - vb
+  name: Comments
+  nameWithType: ClaimUniversityViewModel.Comments
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  type: Property
+  source:
+    id: Comments
+    path: ''
+    startLine: 2427
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public string Comments { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comments As String
+  overload: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Models.ManageViewModels
+  commentId: N:Warbler.Models.ManageViewModels
+  isExternal: false
+  name: Warbler.Models.ManageViewModels
+  nameWithType: Warbler.Models.ManageViewModels
+  fullName: Warbler.Models.ManageViewModels
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+  isExternal: false
+  name: FirstName
+  nameWithType: ClaimUniversityViewModel.FirstName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.FirstName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+  isExternal: false
+  name: LastName
+  nameWithType: ClaimUniversityViewModel.LastName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.LastName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+  isExternal: false
+  name: UniversityName
+  nameWithType: ClaimUniversityViewModel.UniversityName
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.UniversityName
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+  isExternal: false
+  name: PositionTitle
+  nameWithType: ClaimUniversityViewModel.PositionTitle
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.PositionTitle
+- uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments*
+  commentId: Overload:Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments
+  isExternal: false
+  name: Comments
+  nameWithType: ClaimUniversityViewModel.Comments
+  fullName: Warbler.Models.ManageViewModels.ClaimUniversityViewModel.Comments

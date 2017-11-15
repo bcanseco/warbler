@@ -6,8 +6,13 @@ items:
   parent: Warbler.Models
   children:
   - Warbler.Models.Server.Channels
+  - Warbler.Models.Server.Equals(System.Object)
+  - Warbler.Models.Server.Equals(Warbler.Models.Server)
+  - Warbler.Models.Server.GetHashCode
   - Warbler.Models.Server.Id
   - Warbler.Models.Server.IsAuthEnabled
+  - Warbler.Models.Server.op_Equality(Warbler.Models.Server,Warbler.Models.Server)
+  - Warbler.Models.Server.op_Inequality(Warbler.Models.Server,Warbler.Models.Server)
   - Warbler.Models.Server.Type
   - Warbler.Models.Server.University
   - Warbler.Models.Server.UniversityId
@@ -21,21 +26,23 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1694
+    startLine: 1821
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
   syntax:
-    content: public class Server
-    content.vb: Public Class Server
+    content: 'public class Server : IEquatable<Server>'
+    content.vb: >-
+      Public Class Server
+          Implements IEquatable(Of Server)
   inheritance:
   - System.Object
+  implements:
+  - System.IEquatable{Warbler.Models.Server}
   inheritedMembers:
   - System.Object.ToString
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   modifiers.csharp:
@@ -58,7 +65,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1697
+    startLine: 1824
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -89,7 +96,7 @@ items:
   source:
     id: IsAuthEnabled
     path: ''
-    startLine: 1698
+    startLine: 1825
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -120,7 +127,7 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 1699
+    startLine: 1826
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -151,7 +158,7 @@ items:
   source:
     id: UniversityId
     path: ''
-    startLine: 1700
+    startLine: 1827
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -182,7 +189,7 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1702
+    startLine: 1829
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -213,7 +220,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1704
+    startLine: 1831
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -230,6 +237,174 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: Warbler.Models.Server.Equals(Warbler.Models.Server)
+  commentId: M:Warbler.Models.Server.Equals(Warbler.Models.Server)
+  id: Equals(Warbler.Models.Server)
+  parent: Warbler.Models.Server
+  langs:
+  - csharp
+  - vb
+  name: Equals(Server)
+  nameWithType: Server.Equals(Server)
+  fullName: Warbler.Models.Server.Equals(Warbler.Models.Server)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 1833
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public bool Equals(Server other)
+    parameters:
+    - id: other
+      type: Warbler.Models.Server
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Server) As Boolean
+  overload: Warbler.Models.Server.Equals*
+  implements:
+  - System.IEquatable{Warbler.Models.Server}.Equals(Warbler.Models.Server)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Server.Equals(System.Object)
+  commentId: M:Warbler.Models.Server.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Warbler.Models.Server
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Server.Equals(Object)
+  fullName: Warbler.Models.Server.Equals(System.Object)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 1840
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Warbler.Models.Server.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.Server.GetHashCode
+  commentId: M:Warbler.Models.Server.GetHashCode
+  id: GetHashCode
+  parent: Warbler.Models.Server
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Server.GetHashCode()
+  fullName: Warbler.Models.Server.GetHashCode()
+  type: Method
+  source:
+    id: GetHashCode
+    path: ''
+    startLine: 1847
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: Warbler.Models.Server.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.Server.op_Equality(Warbler.Models.Server,Warbler.Models.Server)
+  commentId: M:Warbler.Models.Server.op_Equality(Warbler.Models.Server,Warbler.Models.Server)
+  id: op_Equality(Warbler.Models.Server,Warbler.Models.Server)
+  parent: Warbler.Models.Server
+  langs:
+  - csharp
+  - vb
+  name: Equality(Server, Server)
+  nameWithType: Server.Equality(Server, Server)
+  fullName: Warbler.Models.Server.Equality(Warbler.Models.Server, Warbler.Models.Server)
+  type: Operator
+  source:
+    id: op_Equality
+    path: ''
+    startLine: 1848
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator ==(Server left, Server right)
+    parameters:
+    - id: left
+      type: Warbler.Models.Server
+    - id: right
+      type: Warbler.Models.Server
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Server, right As Server) As Boolean
+  overload: Warbler.Models.Server.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Models.Server.op_Inequality(Warbler.Models.Server,Warbler.Models.Server)
+  commentId: M:Warbler.Models.Server.op_Inequality(Warbler.Models.Server,Warbler.Models.Server)
+  id: op_Inequality(Warbler.Models.Server,Warbler.Models.Server)
+  parent: Warbler.Models.Server
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Server, Server)
+  nameWithType: Server.Inequality(Server, Server)
+  fullName: Warbler.Models.Server.Inequality(Warbler.Models.Server, Warbler.Models.Server)
+  type: Operator
+  source:
+    id: op_Inequality
+    path: ''
+    startLine: 1849
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator !=(Server left, Server right)
+    parameters:
+    - id: left
+      type: Warbler.Models.Server
+    - id: right
+      type: Warbler.Models.Server
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Server, right As Server) As Boolean
+  overload: Warbler.Models.Server.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: Warbler.Models
   commentId: N:Warbler.Models
@@ -244,6 +419,48 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.IEquatable{Warbler.Models.Server}
+  commentId: T:System.IEquatable{Warbler.Models.Server}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Server>
+  nameWithType: IEquatable<Server>
+  fullName: System.IEquatable<Warbler.Models.Server>
+  nameWithType.vb: IEquatable(Of Server)
+  fullName.vb: System.IEquatable(Of Warbler.Models.Server)
+  name.vb: IEquatable(Of Server)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.Server
+    name: Server
+    nameWithType: Server
+    fullName: Warbler.Models.Server
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.Server
+    name: Server
+    nameWithType: Server
+    fullName: Warbler.Models.Server
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -272,47 +489,6 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -430,37 +606,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -529,6 +674,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Warbler.Models.Server.Id*
   commentId: Overload:Warbler.Models.Server.Id
   isExternal: false
@@ -747,3 +931,192 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Models.Server.Equals*
+  commentId: Overload:Warbler.Models.Server.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: Server.Equals
+  fullName: Warbler.Models.Server.Equals
+- uid: System.IEquatable{Warbler.Models.Server}.Equals(Warbler.Models.Server)
+  commentId: M:System.IEquatable{Warbler.Models.Server}.Equals(Warbler.Models.Server)
+  parent: System.IEquatable{Warbler.Models.Server}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Server)
+  nameWithType: IEquatable<Server>.Equals(Server)
+  fullName: System.IEquatable<Warbler.Models.Server>.Equals(Warbler.Models.Server)
+  nameWithType.vb: IEquatable(Of Server).Equals(Server)
+  fullName.vb: System.IEquatable(Of Warbler.Models.Server).Equals(Warbler.Models.Server)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Server>.Equals
+    fullName: System.IEquatable<Warbler.Models.Server>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.Server
+    name: Server
+    nameWithType: Server
+    fullName: Warbler.Models.Server
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Server).Equals
+    fullName: System.IEquatable(Of Warbler.Models.Server).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.Server
+    name: Server
+    nameWithType: Server
+    fullName: Warbler.Models.Server
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.Server
+  commentId: T:Warbler.Models.Server
+  parent: Warbler.Models
+  isExternal: false
+  name: Server
+  nameWithType: Server
+  fullName: Warbler.Models.Server
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.Server.GetHashCode*
+  commentId: Overload:Warbler.Models.Server.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: Server.GetHashCode
+  fullName: Warbler.Models.Server.GetHashCode
+- uid: Warbler.Models.Server.op_Equality*
+  commentId: Overload:Warbler.Models.Server.op_Equality
+  isExternal: false
+  name: Equality
+  nameWithType: Server.Equality
+  fullName: Warbler.Models.Server.Equality
+- uid: Warbler.Models.Server.op_Inequality*
+  commentId: Overload:Warbler.Models.Server.op_Inequality
+  isExternal: false
+  name: Inequality
+  nameWithType: Server.Inequality
+  fullName: Warbler.Models.Server.Inequality

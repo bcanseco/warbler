@@ -5,6 +5,7 @@ items:
   id: IMessageRepository
   parent: Warbler.Interfaces
   children:
+  - Warbler.Interfaces.IMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
   - Warbler.Interfaces.IMessageRepository.LatestIn(Warbler.Models.Channel)
   langs:
   - csharp
@@ -16,7 +17,7 @@ items:
   source:
     id: IMessageRepository
     path: ''
-    startLine: 1338
+    startLine: 1394
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -45,7 +46,7 @@ items:
   source:
     id: LatestIn
     path: ''
-    startLine: 1345
+    startLine: 1401
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -62,6 +63,43 @@ items:
       description: Up to 25 stored Message objects.
     content.vb: Function LatestIn(channel As Channel) As IAsyncEnumerable(Of Message)
   overload: Warbler.Interfaces.IMessageRepository.LatestIn*
+- uid: Warbler.Interfaces.IMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  commentId: M:Warbler.Interfaces.IMessageRepository.CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  id: CreateAsync(System.String,Warbler.Models.User,Warbler.Models.Channel)
+  parent: Warbler.Interfaces.IMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(String, User, Channel)
+  nameWithType: IMessageRepository.CreateAsync(String, User, Channel)
+  fullName: Warbler.Interfaces.IMessageRepository.CreateAsync(System.String, Warbler.Models.User, Warbler.Models.Channel)
+  type: Method
+  source:
+    id: CreateAsync
+    path: ''
+    startLine: 1410
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nCreates and saves a message to the database.\n"
+  example: []
+  syntax:
+    content: Task<Message> CreateAsync(string text, User user, Channel channel)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to use for the message.
+    - id: user
+      type: Warbler.Models.User
+      description: The message sender.
+    - id: channel
+      type: Warbler.Models.Channel
+      description: The channel it was sent in.
+    return:
+      type: Task{Warbler.Models.Message}
+      description: The created message.
+    content.vb: Function CreateAsync(text As String, user As User, channel As Channel) As Task(Of Message)
+  overload: Warbler.Interfaces.IMessageRepository.CreateAsync*
 references:
 - uid: Warbler.Interfaces
   commentId: N:Warbler.Interfaces
@@ -157,6 +195,111 @@ references:
     name: IAsyncEnumerable
     nameWithType: IAsyncEnumerable
     fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Interfaces.IMessageRepository.CreateAsync*
+  commentId: Overload:Warbler.Interfaces.IMessageRepository.CreateAsync
+  isExternal: false
+  name: CreateAsync
+  nameWithType: IMessageRepository.CreateAsync
+  fullName: Warbler.Interfaces.IMessageRepository.CreateAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+- uid: Task{Warbler.Models.Message}
+  commentId: '!:Task{Warbler.Models.Message}'
+  definition: Task`1
+  name: Task<Message>
+  nameWithType: Task<Message>
+  fullName: Task<Warbler.Models.Message>
+  nameWithType.vb: Task(Of Message)
+  fullName.vb: Task(Of Warbler.Models.Message)
+  name.vb: Task(Of Message)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.Message
+    name: Message
+    nameWithType: Message
+    fullName: Warbler.Models.Message
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.Message
+    name: Message
+    nameWithType: Message
+    fullName: Warbler.Models.Message
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

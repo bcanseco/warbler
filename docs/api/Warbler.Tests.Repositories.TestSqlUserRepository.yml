@@ -5,9 +5,11 @@ items:
   id: TestSqlUserRepository
   parent: Warbler.Tests.Repositories
   children:
-  - Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
+  - Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity(TestContext)
+  - Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
   - Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
   - Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  - Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
   langs:
   - csharp
   - vb
@@ -18,7 +20,7 @@ items:
   source:
     id: TestSqlUserRepository
     path: ''
-    startLine: 3336
+    startLine: 3710
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -41,34 +43,39 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
-  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
-  id: CreateUniversity
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity(TestContext)
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity(TestContext)
+  id: CreateUniversity(TestContext)
   parent: Warbler.Tests.Repositories.TestSqlUserRepository
   langs:
   - csharp
   - vb
-  name: CreateUniversity()
-  nameWithType: TestSqlUserRepository.CreateUniversity()
-  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity()
+  name: CreateUniversity(TestContext)
+  nameWithType: TestSqlUserRepository.CreateUniversity(TestContext)
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity(TestContext)
   type: Method
   source:
     id: CreateUniversity
     path: ''
-    startLine: 3347
+    startLine: 3721
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
   syntax:
-    content: public Task CreateUniversity()
+    content: public static Task CreateUniversity(TestContext _)
+    parameters:
+    - id: _
+      type: TestContext
     return:
       type: Task
-    content.vb: Public Function CreateUniversity As Task
+    content.vb: Public Shared Function CreateUniversity(_ As TestContext) As Task
   overload: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity*
   modifiers.csharp:
   - public
+  - static
   modifiers.vb:
   - Public
+  - Shared
 - uid: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
   commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
   id: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
@@ -83,7 +90,7 @@ items:
   source:
     id: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
     path: ''
-    startLine: 3374
+    startLine: 3748
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -111,7 +118,7 @@ items:
   source:
     id: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
     path: ''
-    startLine: 3385
+    startLine: 3759
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -121,6 +128,62 @@ items:
       type: Task
     content.vb: Public Function IsNewAsync_Should_Be_True_If_User_Was_Recently_Created As Task
   overload: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  id: SetOnlineAsync_Should_Change_IsOnline
+  parent: Warbler.Tests.Repositories.TestSqlUserRepository
+  langs:
+  - csharp
+  - vb
+  name: SetOnlineAsync_Should_Change_IsOnline()
+  nameWithType: TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline()
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline()
+  type: Method
+  source:
+    id: SetOnlineAsync_Should_Change_IsOnline
+    path: ''
+    startLine: 3770
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task SetOnlineAsync_Should_Change_IsOnline()
+    return:
+      type: Task
+    content.vb: Public Function SetOnlineAsync_Should_Change_IsOnline As Task
+  overload: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  commentId: M:Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  id: FindByNameAsync_Should_Get_A_User_By_Username
+  parent: Warbler.Tests.Repositories.TestSqlUserRepository
+  langs:
+  - csharp
+  - vb
+  name: FindByNameAsync_Should_Get_A_User_By_Username()
+  nameWithType: TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username()
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username()
+  type: Method
+  source:
+    id: FindByNameAsync_Should_Get_A_User_By_Username
+    path: ''
+    startLine: 3782
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task FindByNameAsync_Should_Get_A_User_By_Username()
+    return:
+      type: Task
+    content.vb: Public Function FindByNameAsync_Should_Get_A_User_By_Username As Task
+  overload: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -430,6 +493,12 @@ references:
   name: CreateUniversity
   nameWithType: TestSqlUserRepository.CreateUniversity
   fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
+- uid: TestContext
+  commentId: '!:TestContext'
+  isExternal: true
+  name: TestContext
+  nameWithType: TestContext
+  fullName: TestContext
 - uid: Task
   isExternal: true
   name: Task
@@ -447,3 +516,15 @@ references:
   name: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
   nameWithType: TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
   fullName: Warbler.Tests.Repositories.TestSqlUserRepository.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  isExternal: false
+  name: SetOnlineAsync_Should_Change_IsOnline
+  nameWithType: TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.SetOnlineAsync_Should_Change_IsOnline
+- uid: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  isExternal: false
+  name: FindByNameAsync_Should_Get_A_User_By_Username
+  nameWithType: TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username
+  fullName: Warbler.Tests.Repositories.TestSqlUserRepository.FindByNameAsync_Should_Get_A_User_By_Username

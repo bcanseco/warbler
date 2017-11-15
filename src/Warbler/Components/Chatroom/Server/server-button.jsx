@@ -15,7 +15,7 @@ export default class ServerButton extends React.Component {
           ref={(button) => { this.button = button }}
           onClick={this.onButtonClick.bind(this)}
         >
-        <span className="text-truncate">#{this.props.server}</span>
+          <span className="text-truncate">#{this.props.server}</span>
         </button>
       </div>
     );

@@ -72,7 +72,8 @@
   
   <h1 id="Warbler_Services_ChatService" data-uid="Warbler.Services.ChatService">Class ChatService
   </h1>
-  <div class="markdown level0 summary"><p>Used by the <a class="xref" href="Warbler.Hubs.ChatHub.html">ChatHub</a> for business logic.</p>
+  <div class="markdown level0 summary"><p>A singleton used by the <a class="xref" href="Warbler.Hubs.ChatHub.html">ChatHub</a> for business logic.
+TODO: Refactor and add tests for sanity</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -250,6 +251,62 @@
   <div class="markdown level1 remarks"><p>We don&#39;t have to remove the connection ID from its 
 HubContext group because SignalR does this automatically.</p>
 </div>
+  
+  
+  <a id="Warbler_Services_ChatService_OnMessageAsync_" data-uid="Warbler.Services.ChatService.OnMessageAsync*"></a>
+  <h4 id="Warbler_Services_ChatService_OnMessageAsync_Warbler_Models_User_Warbler_Models_Channel_System_String_" data-uid="Warbler.Services.ChatService.OnMessageAsync(Warbler.Models.User,Warbler.Models.Channel,System.String)">OnMessageAsync(User, Channel, String)</h4>
+  <div class="markdown level1 summary"><p>Invoked from the hub when a user wants to send a message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task OnMessageAsync(User user, Channel channel, string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>The sender.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.Channel.html">Channel</a></td>
+        <td><span class="parametername">channel</span></td>
+        <td><p>The channel it was sent in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text to send.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Warbler_Services_ChatService_With_" data-uid="Warbler.Services.ChatService.With*"></a>

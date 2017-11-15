@@ -16,7 +16,7 @@ items:
   source:
     id: IEmailSender
     path: ''
-    startLine: 1293
+    startLine: 1349
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -43,7 +43,7 @@ items:
   source:
     id: SendEmailAsync
     path: ''
-    startLine: 1295
+    startLine: 1351
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces

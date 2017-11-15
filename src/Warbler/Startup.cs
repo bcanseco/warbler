@@ -27,11 +27,6 @@ namespace Warbler
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
-            //if (env.IsDevelopment())
-            //{
-            //    builder.AddUserSecrets<Startup>();
-            //}
-
             Configuration = builder.Build();
         }
 
@@ -48,12 +43,12 @@ namespace Warbler
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddMvc();
 
             services.Configure<ApiKeys>(Configuration.GetSection(nameof(ApiKeys)));
 
+            /* TODO: Currently using Google Authentication directly */
             //services.AddIdentityServer()
             //    .AddInMemoryApiResources(IdentityServerConfig.GetApiResource())
             //    .AddInMemoryClients(IdentityServerConfig.GetClient());
@@ -83,12 +78,12 @@ namespace Warbler
                 .AddEntityFrameworkStores<WarblerDbContext>()
                 .AddDefaultTokenProviders();
 
-            //// Set up Google authentication.
-            //services.AddAuthentication().AddGoogle(googleOptions =>
-            //{
-            //    googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
-            //    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-            //});
+            // Set up Google authentication.
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            });
 
             services.Configure<IdentityOptions>(options =>
             {

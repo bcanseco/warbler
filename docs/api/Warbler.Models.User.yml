@@ -26,7 +26,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 1741
+    startLine: 1901
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -60,7 +60,7 @@ items:
   source:
     id: UserName
     path: ''
-    startLine: 1748
+    startLine: 1908
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -95,7 +95,7 @@ items:
   source:
     id: AvatarId
     path: ''
-    startLine: 1755
+    startLine: 1915
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -126,7 +126,7 @@ items:
   source:
     id: Flag
     path: ''
-    startLine: 1757
+    startLine: 1917
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -157,7 +157,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1760
+    startLine: 1920
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -188,7 +188,7 @@ items:
   source:
     id: IsOnline
     path: ''
-    startLine: 1762
+    startLine: 1922
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -219,7 +219,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1765
+    startLine: 1925
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -250,7 +250,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1768
+    startLine: 1928
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -283,7 +283,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1770
+    startLine: 1930
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -316,7 +316,7 @@ items:
   source:
     id: GetHashCode
     path: ''
-    startLine: 1777
+    startLine: 1937
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -346,7 +346,7 @@ items:
   source:
     id: op_Equality
     path: ''
-    startLine: 1779
+    startLine: 1939
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -381,7 +381,7 @@ items:
   source:
     id: op_Inequality
     path: ''
-    startLine: 1780
+    startLine: 1940
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models

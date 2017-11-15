@@ -67,6 +67,8 @@
   - uid: Warbler.Misc.HubResource`1
     name: HubResource<THub>
     name.vb: HubResource(Of THub)
+  - uid: Warbler.Misc.IdentityServerConfig
+    name: IdentityServerConfig
   - uid: Warbler.Misc.WarblerDbContext
     name: WarblerDbContext
 - uid: Warbler.Models
@@ -74,6 +76,8 @@
   items:
   - uid: Warbler.Models.Channel
     name: Channel
+  - uid: Warbler.Models.ClaimsRequest
+    name: ClaimsRequest
   - uid: Warbler.Models.Membership
     name: Membership
   - uid: Warbler.Models.Message
@@ -121,6 +125,8 @@
     name: AddPhoneNumberViewModel
   - uid: Warbler.Models.ManageViewModels.ChangePasswordViewModel
     name: ChangePasswordViewModel
+  - uid: Warbler.Models.ManageViewModels.ClaimUniversityViewModel
+    name: ClaimUniversityViewModel
   - uid: Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel
     name: ConfigureTwoFactorViewModel
   - uid: Warbler.Models.ManageViewModels.FactorViewModel

@@ -19,7 +19,7 @@ items:
   source:
     id: UniversityNotFoundException
     path: ''
-    startLine: 1103
+    startLine: 1152
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Exceptions
@@ -76,7 +76,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1105
+    startLine: 1154
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Exceptions
@@ -102,7 +102,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1108
+    startLine: 1157
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Exceptions
@@ -131,7 +131,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1112
+    startLine: 1161
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Exceptions
@@ -162,7 +162,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1116
+    startLine: 1165
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Exceptions

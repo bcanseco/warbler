@@ -6,6 +6,7 @@ desktop.ini
 compilerconfig.json*
 src/**/*.css
 bundleconfig.json
+src/warbler.Tests/**/*.*
 
 # User-specific files
 *.suo

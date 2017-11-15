@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Warbler.Interfaces;
 using Warbler.Misc;
 using Warbler.Models;
@@ -18,32 +20,16 @@ namespace Warbler.Repositories
             Context = context;
         }
 
-        public async Task CreateDefaultChannel()
+        public async Task CreateAsync(ChannelTemplate channelTemplate, bool saveChanges = false)
         {
-            var channelTemplate = new ChannelTemplate
+            await Context.AddAsync(channelTemplate);
+            if (saveChanges)
             {
-                Name = "General",
-                Description = "Talk about anything."
-            };
-            Context.ChannelTemplates.Add(channelTemplate);
-            await Context.SaveChangesAsync();
+                await Context.SaveChangesAsync();
+            }
         }
 
-        public async Task CreateChannelTemplate(string name, string description)
-        {
-            var channelTemplate = new ChannelTemplate
-            {
-                Name = name,
-                Description = description
-            };
-            Context.ChannelTemplates.Add(channelTemplate);
-            await Context.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(ChannelTemplate channelTemplate)
-        {
-            Context.Update(channelTemplate);
-            await Context.SaveChangesAsync();
-        }
+        public async Task<List<ChannelTemplate>> GetAsync()
+            => await Context.ChannelTemplates.ToListAsync();
     }
 }

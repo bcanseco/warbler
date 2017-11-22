@@ -1,11 +1,13 @@
 ﻿using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using ComponentSpace.Saml2;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Warbler.Interfaces;
 using Warbler.Models;
@@ -21,19 +23,25 @@ namespace Warbler.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private readonly ISamlServiceProvider _samlServiceProvider;
+        private readonly IConfiguration _configuration;
 
         public AccountController(
             UserManager<User> userManager,
             SignInManager<User> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            ISamlServiceProvider samlServiceProvider,
+            IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+            _samlServiceProvider = samlServiceProvider;
+            _configuration = configuration;
         }
         
         // GET: /Account/Login
@@ -425,6 +433,18 @@ namespace Warbler.Controllers
         public IActionResult AccessDenied()
         {
             return View();
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<ActionResult> SingleSignOn()
+        {
+            // To login automatically at the service provider, initiate single sign-on to the identity provider (SP-initiated SSO).            
+            var partnerName = _configuration["PartnerName"];
+
+            await _samlServiceProvider.InitiateSsoAsync(partnerName);
+
+            return new EmptyResult();
         }
 
         #region Helpers

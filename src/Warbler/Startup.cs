@@ -1,4 +1,5 @@
 ﻿using System;
+using ComponentSpace.Saml2.Configuration;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -48,11 +49,6 @@ namespace Warbler
 
             services.Configure<ApiKeys>(Configuration.GetSection(nameof(ApiKeys)));
 
-            /* TODO: Currently using Google Authentication directly */
-            //services.AddIdentityServer()
-            //    .AddInMemoryApiResources(IdentityServerConfig.GetApiResource())
-            //    .AddInMemoryClients(IdentityServerConfig.GetClient());
-
             services.AddSingleton<ProximityService>();
             services.AddSingleton<ChatService>();
 
@@ -78,12 +74,12 @@ namespace Warbler
                 .AddEntityFrameworkStores<WarblerDbContext>()
                 .AddDefaultTokenProviders();
 
-            // Set up Google authentication.
-            services.AddAuthentication().AddGoogle(googleOptions =>
-            {
-                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
-                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-            });
+            // Set up Google authentication. (currently using SAML SSO)
+            //services.AddAuthentication().AddGoogle(googleOptions =>
+            //{
+            //    googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+            //    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            //});
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -105,12 +101,17 @@ namespace Warbler
             services.ConfigureApplicationCookie(options =>
             {
                 // Cookie settings
+                options.Cookie.Name = "Warbler.Identity";
                 options.Cookie.HttpOnly = true;
                 options.Cookie.Expiration = TimeSpan.FromDays(150);
                 options.SlidingExpiration = true;
             });
 
-            services.AddAuthentication();
+            // Register the SAML configuration.
+            services.Configure<SamlConfigurations>(Configuration.GetSection("SAML"));
+
+            // Add SAML SSO services.
+            services.AddSaml();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

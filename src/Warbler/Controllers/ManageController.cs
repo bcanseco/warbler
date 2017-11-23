@@ -352,7 +352,7 @@ namespace Warbler.Controllers
             try
             {
                 model.ClaimRequest.SubmitterId = user.Id;
-                await service.SubmitClaimAsync(model.ClaimRequest);
+                await service.SubmitAsync(model.ClaimRequest);
                 return View("ClaimFormSubmit");
             }
             catch (Exception)

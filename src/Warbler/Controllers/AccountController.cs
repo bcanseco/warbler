@@ -440,7 +440,7 @@ namespace Warbler.Controllers
         public async Task<ActionResult> SingleSignOn()
         {
             // To login automatically at the service provider, initiate single sign-on to the identity provider (SP-initiated SSO).            
-            var partnerName = _configuration["PartnerName"];
+            var partnerName = "https://ShoaffUniversity";
 
             await _samlServiceProvider.InitiateSsoAsync(partnerName);
 

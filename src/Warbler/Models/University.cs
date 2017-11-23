@@ -14,6 +14,9 @@ namespace Warbler.Models
         public float Lng { get; set; }
         
         public Server Server { get; set; }
+        
+        public User ClaimedBy { get; set; }
+        public string ClaimedById { get; set; }
 
         public bool Equals(University other)
         {

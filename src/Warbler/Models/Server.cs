@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using Newtonsoft.Json;
-using Warbler.Models.Enums;
 
 namespace Warbler.Models
 {
@@ -10,8 +9,7 @@ namespace Warbler.Models
     public class Server : IEquatable<Server>
     {
         public int Id { get; set; }
-        public bool? IsAuthEnabled { get; set; }
-        public ServerType Type { get; set; }
+        public bool IsAuthEnabled { get; set; }
         public int UniversityId { get; set; }
         
         [JsonIgnore]

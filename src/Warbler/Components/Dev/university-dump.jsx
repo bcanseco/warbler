@@ -1,10 +1,6 @@
 ﻿import React from "react";
 
 export default class UniversityDump extends React.Component {
-  componentWillReceiveProps(nextProps) {
-    this.setState({ data: nextProps.unviersities });
-  }
-
   createMarkup(data) {
     const jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/mg;
 
@@ -35,6 +31,7 @@ export default class UniversityDump extends React.Component {
       return (
         <div className="row">
           <div className="col-md-12">
+            <label>University dump:</label>
             <pre>
               <code dangerouslySetInnerHTML={this.createMarkup(data)}></code>
             </pre>
@@ -45,7 +42,7 @@ export default class UniversityDump extends React.Component {
       return (
         <div className="row">
           <div className="col-md-12">
-            <pre>Loading...</pre>
+            <pre>Loading university dump...</pre>
           </div>
         </div>
       );

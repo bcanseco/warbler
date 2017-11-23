@@ -5,16 +5,19 @@ using Newtonsoft.Json;
 using Warbler.Repositories;
 using Warbler.Services;
 using Warbler.Misc;
+using Warbler.Models;
 
 namespace Warbler.Controllers
 {
     public class DevController : Controller
     {
         private UniversityService UniversityService { get; }
+        private ClaimRequestService ClaimRequestService { get; }
 
         public DevController(WarblerDbContext context)
         {
             UniversityService = new UniversityService(new SqlUniversityRepository(context));
+            ClaimRequestService = new ClaimRequestService(new SqlClaimRequestRepository(context));
         }
 
         [Authorize]
@@ -40,6 +43,24 @@ namespace Warbler.Controllers
         {
             var universityList = await UniversityService.GetAllAsync();
             return JsonConvert.SerializeObject(universityList, Formatting.Indented);
+        }
+
+        [HttpGet]
+        public async Task<string> Claims()
+        {
+            var claimsList = await ClaimRequestService.GetAllUnresolvedAsync();
+            return JsonConvert.SerializeObject(claimsList);
+        }
+
+        [HttpPost]
+        public async Task ResolveClaim([FromBody] ClaimRequest claim)
+        {
+            if (claim.IsAccepted ?? false)
+            {
+                await UniversityService.ApplyClaimAsync(claim.University, claim.SubmitterId);
+            }
+            
+            await ClaimRequestService.UpdateAsync(claim);
         }
     }
 }

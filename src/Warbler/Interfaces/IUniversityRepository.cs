@@ -33,6 +33,13 @@ namespace Warbler.Interfaces
         Task<University> LookupAsync(string placeId);
 
         /// <summary>
+        ///   Associates a university with the user that just claimed it.
+        /// </summary>
+        /// <param name="university">The claimed university.</param>
+        /// <param name="claimeeId">The ID of the user claiming it.</param>
+        Task ApplyClaimAsync(University university, string claimeeId);
+
+        /// <summary>
         ///   Gets an executable query for all universities in the database.
         /// </summary>
         /// <param name="depth">At what level navigation properties should be retrieved.</param>

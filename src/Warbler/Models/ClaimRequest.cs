@@ -5,7 +5,7 @@ namespace Warbler.Models
     public class ClaimRequest
     {
         public int Id { get; set; }
-        public bool Resolved { get; set; }
+        public bool? IsAccepted { get; set; }
         public string SubmitterId { get; set; }
         public User Submitter { get; set; }
         public University University { get; set; }

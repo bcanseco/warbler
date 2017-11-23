@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ComponentSpace.Saml2.Configuration;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
@@ -108,7 +109,7 @@ namespace Warbler
             });
 
             // Register the SAML configuration.
-            services.Configure<SamlConfigurations>(Configuration.GetSection("SAML"));
+            services.Configure<SamlConfigurations>(ConfigureSaml);
 
             // Add SAML SSO services.
             services.AddSaml();
@@ -161,6 +162,34 @@ namespace Warbler
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private static void ConfigureSaml(SamlConfigurations samlConfigurations)
+        {
+            samlConfigurations.Configurations = new List<SamlConfiguration>
+            {
+                new SamlConfiguration
+                {
+                    ID = "Default",
+                    LocalServiceProviderConfiguration = new LocalServiceProviderConfiguration
+                    {
+                        Name = "https://WarblerDev",
+                        Description = "Warbler Development",
+                        AssertionConsumerServiceUrl = "https://localhost:44395/SAML/AssertionConsumerService"
+                    },
+                    PartnerIdentityProviderConfigurations = new List<PartnerIdentityProviderConfiguration>
+                    {
+                        new PartnerIdentityProviderConfiguration
+                        {
+                            Name = "https://ShoaffUniversity",
+                            Description = "Shoaff University",
+                            SingleSignOnServiceUrl = "https://shoaffuniversity.azurewebsites.net/SAML/SingleSignOnService",
+                            SingleLogoutServiceUrl = "https://shoaffuniversity.azurewebsites.net/SAML/SingleLogoutService",
+                            WantAssertionOrResponseSigned = false
+                        }
+                    }
+                }
+            };
         }
     }
 }

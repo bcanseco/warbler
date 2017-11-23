@@ -65,5 +65,8 @@ namespace Warbler.Services
             => await Repository.AllQueryable(QueryDepth.Message)
                 .AsNoTracking()
                 .ToListAsync();
+
+        public async Task ApplyClaimAsync(University university, string submitterId)
+            => await Repository.ApplyClaimAsync(university, submitterId);
     }
 }

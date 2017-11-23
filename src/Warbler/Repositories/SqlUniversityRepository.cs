@@ -38,7 +38,6 @@ namespace Warbler.Repositories
                 Server = new Server
                 {
                     IsAuthEnabled = false,
-                    Type = ServerType.Public,
                     Channels = new List<Channel>
                     {
                         new Channel
@@ -62,7 +61,7 @@ namespace Warbler.Repositories
             };
 
             await Context.Universities.AddAsync(university);
-            await Context.SaveChangesAsync();
+            await SaveAsync();
             return university;
         }
 
@@ -82,6 +81,13 @@ namespace Warbler.Repositories
                 // Give the service layer a more accurate exception
                 throw new UniversityNotFoundException($"University not found matching place ID {placeId}", ex);
             }
+        }
+
+        public async Task ApplyClaimAsync(University university, string claimeeId)
+        {
+            university.ClaimedById = claimeeId;
+            Context.Update(university);
+            await SaveAsync();
         }
 
         public IQueryable<University> AllQueryable(QueryDepth depth)

@@ -2,6 +2,7 @@
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import { HubConnection } from "@aspnet/signalr-client";
+import Loader from "../loader.jsx";
 import UniversitySelector from "./university-selector.jsx";
 import Map from "./map.jsx";
 import "./styles.less";
@@ -91,7 +92,7 @@ export default class Proximity extends React.Component {
     if (!!this.state.error) {
       content = <div>{this.state.error}</div>;
     } else if (!this.state.universities || !this.state.coordinates) {
-      content = <div>Loading...</div>;
+      content = <Loader />;
     } else { // No errors and all data available
       content = (
         <div className="row">

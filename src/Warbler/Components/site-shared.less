@@ -8,6 +8,7 @@
 
 @xs-max-width: 576px;
 @home-spacing: 5px;
+@content-height: 85vh;
 
 nav > .container {
   @media(max-width: @xs-max-width) {
@@ -29,6 +30,14 @@ nav > .container {
 
 .no-click-events {
   pointer-events: none;
+}
+
+.loader {
+  height: @content-height;
+}
+
+#react-root {
+  min-height: @content-height - 5vh;
 }
 
 #home-content {

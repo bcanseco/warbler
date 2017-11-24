@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
+import Loader from "../loader.jsx";
 import UniversityDump from "./university-dump.jsx";
 import ClaimRequests from "./claim-requests.jsx";
 import "isomorphic-fetch";
@@ -35,12 +36,19 @@ export default class Dev extends React.Component {
   }
 
   render() {
+    let content = <Loader/>;
+    if (!!this.state.claims && !!this.state.universities) {
+      content = (
+        <div>
+          <ClaimRequests data={this.state.claims}/>
+          <UniversityDump data={this.state.universities}/>
+        </div>
+      );
+    }
+
     return (
       <AppContainer>
-        <div>
-          <ClaimRequests data={this.state.claims} />
-          <UniversityDump data={this.state.universities} />
-        </div>
+        { content }
       </AppContainer>
     );
   }

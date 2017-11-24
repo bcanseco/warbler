@@ -22,7 +22,7 @@ export default class ClaimRequests extends React.Component {
   }
 
   render() {
-    const claims = this.props.data && this.props.data.map((claim, i) =>
+    const claims = this.props.data.map((claim, i) =>
       <tr key={i}>
         <td className="align-middle">{claim.University.Name}</td>
         <td className="align-middle">{`${claim.FirstName} ${claim.LastName}`}</td>
@@ -46,37 +46,27 @@ export default class ClaimRequests extends React.Component {
         </td>
       </tr>
     );
-
-    if (!!claims) {
-      return claims.length !== 0 && (
-        <div className="row">
-          <div className="col-md-12">
-            <label>Unresolved claim requests:</label>
-            <table className="table table-striped table-bordered claims-table">
-              <thead>
-                <tr>
-                  <th>University</th>
-                  <th>Requestor name</th>
-                  <th>Requestor position</th>
-                  <th>Comments</th>
-                  <th>Accept or deny</th>
-                </tr>
-              </thead>
-              <tbody>
-                {claims}
-              </tbody>
-            </table>
-          </div>
+    
+    return claims.length !== 0 && (
+      <div className="row">
+        <div className="col-md-12">
+          <label>Unresolved claim requests:</label>
+          <table className="table table-striped table-bordered claims-table">
+            <thead>
+              <tr>
+                <th>University</th>
+                <th>Requestor name</th>
+                <th>Requestor position</th>
+                <th>Comments</th>
+                <th>Accept or deny</th>
+              </tr>
+            </thead>
+            <tbody>
+              {claims}
+            </tbody>
+          </table>
         </div>
-      );
-    } else {
-      return (
-        <div className="row">
-          <div className="col-md-12">
-            <span>Loading claim requests...</span>
-          </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }

@@ -2,6 +2,7 @@
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import { HubConnection } from "@aspnet/signalr-client";
+import Loader from "../loader.jsx";
 import ChannelPane from "./Channels/channel-pane.jsx";
 import MessagePane from "./Messages/message-pane.jsx";
 import UserPane from "./Users/user-pane.jsx";
@@ -144,7 +145,7 @@ export default class Chatroom extends React.Component {
     if (!!this.state.error) {
       content = <div>{this.state.error}</div>;
     } else if (!this.state.selectedUniversity) {
-      content = <div>Loading...</div>;
+      content = <Loader />;
     } else { // No errors and all data available
       content = (
         <div>

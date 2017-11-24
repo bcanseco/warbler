@@ -25,27 +25,15 @@ export default class UniversityDump extends React.Component {
   }
 
   render() {
-    const data = this.props.data;
-
-    if (!!data) {
-      return (
-        <div className="row">
-          <div className="col-md-12">
-            <label>University dump:</label>
-            <pre>
-              <code dangerouslySetInnerHTML={this.createMarkup(data)}></code>
-            </pre>
-          </div>
+    return (
+      <div className="row">
+        <div className="col-md-12">
+          <label>University dump:</label>
+          <pre>
+            <code dangerouslySetInnerHTML={this.createMarkup(this.props.data)}></code>
+          </pre>
         </div>
-      );
-    } else {
-      return (
-        <div className="row">
-          <div className="col-md-12">
-            <pre>Loading university dump...</pre>
-          </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }

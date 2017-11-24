@@ -24,6 +24,18 @@ namespace Warbler.Services
                 .Where(r => r.IsAccepted == null)
                 .ToList();
 
+        /// <summary>
+        ///   Returns the first (and hopefully only) university a user
+        ///   has claimed, or null if none exist.
+        /// </summary>
+        /// <param name="user">The user to search with.</param>
+        /// <returns>A university or null.</returns>
+        public async Task<University> GetClaimedUniversityAsync(User user)
+            => (await Repository.AllFromUserAsync(user))
+                .Where(r => r.IsAccepted ?? false)
+                .Select(r => r.University)
+                .FirstOrDefault();
+
         public async Task UpdateAsync(ClaimRequest request)
             => await Repository.UpdateAsync(request);
     }

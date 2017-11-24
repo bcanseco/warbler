@@ -53,6 +53,7 @@ namespace Warbler.Controllers
                 : message == ManageMessageId.Error ? "An error has occurred."
                 : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                : message == ManageMessageId.ClaimRequestSuccess ? "Your claim was successfully submitted."
                 : "";
 
             var user = await GetCurrentUserAsync();
@@ -60,14 +61,17 @@ namespace Warbler.Controllers
             {
                 return View("Error");
             }
+
+            var claimRequestService = new ClaimRequestService(new SqlClaimRequestRepository(_dbContext));
+
             var model = new IndexViewModel
             {
                 HasPassword = await _userManager.HasPasswordAsync(user),
                 PhoneNumber = await _userManager.GetPhoneNumberAsync(user),
                 TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
                 Logins = await _userManager.GetLoginsAsync(user),
-                BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user)
-                
+                BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user),
+                ClaimedUniversity = await claimRequestService.GetClaimedUniversityAsync(user)
             };
             
             return View(model);
@@ -353,7 +357,7 @@ namespace Warbler.Controllers
             {
                 model.ClaimRequest.SubmitterId = user.Id;
                 await service.SubmitAsync(model.ClaimRequest);
-                return View("ClaimFormSubmit");
+                return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ClaimRequestSuccess });
             }
             catch (Exception)
             {
@@ -390,6 +394,7 @@ namespace Warbler.Controllers
             SetPasswordSuccess,
             RemoveLoginSuccess,
             RemovePhoneSuccess,
+            ClaimRequestSuccess,
             Error
         }
 

@@ -14,5 +14,7 @@ namespace Warbler.Models.ManageViewModels
         public bool TwoFactor { get; set; }
 
         public bool BrowserRemembered { get; set; }
+
+        public University ClaimedUniversity { get; set; }
     }
 }

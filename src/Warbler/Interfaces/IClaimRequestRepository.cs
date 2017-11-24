@@ -19,6 +19,13 @@ namespace Warbler.Interfaces
         Task<List<ClaimRequest>> GetAllAsync();
 
         /// <summary>
+        ///   Gets all claim requests submitted by a user.
+        /// </summary>
+        /// <param name="user">The user to search with.</param>
+        /// <returns>A list of claim requests.</returns>
+        Task<List<ClaimRequest>> AllFromUserAsync(User user);
+
+        /// <summary>
         ///   Saves changes to the claim request in the database.
         /// </summary>
         /// <param name="request">The changed claim request.</param>

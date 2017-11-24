@@ -34,6 +34,12 @@ namespace Warbler.Repositories
                 .AsNoTracking()
                 .ToListAsync();
 
+        public async Task<List<ClaimRequest>> AllFromUserAsync(User user)
+            => await Context.ClaimRequests
+                .Where(r => r.Submitter.Equals(user))
+                .Include(r => r.University)
+                .ToListAsync();
+
         public async Task UpdateAsync(ClaimRequest claimRequest)
         {
             Context.Update(claimRequest);

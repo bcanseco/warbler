@@ -6,76 +6,77 @@
 @await Html.PartialAsync("_HeadingPartial", ViewData)
 
 <div class="row">
-    <div class="col-sm-12">
-        <aside>Change your account settings</aside>
-        <hr/>
-        <div class="row" style="margin-bottom: 5px">
-            <div class="col-sm-12">
-                <div class="text-success">@ViewData["StatusMessage"]</div>
-            </div>
-        </div>
-        <dl>
-            <dt>Password:</dt>
-            <dd>
-                @if (Model.HasPassword)
-                {
-                    <a asp-controller="Manage" asp-action="ChangePassword">Change</a>
-                }
-                else
-                {
-                    <a asp-controller="Manage" asp-action="SetPassword">Create</a>
-                }
-            </dd>
-            <dt>External Logins:</dt>
-            <dd>
-
-                @Model.Logins.Count <a asp-controller="Manage" asp-action="ManageLogins">Manage</a>
-            </dd>
-            <dt>Phone Number:</dt>
-            <dd>
-                <p>
-                    Phone Numbers can be used as a second factor of verification in two-factor authentication.
-                    See <a href="https://go.microsoft.com/fwlink/?LinkID=532713">this article</a>
-                    for details on setting up this ASP.NET application to support two-factor authentication using SMS.
-                </p>
-                @*@(Model.PhoneNumber ?? "None")
-                @if (Model.PhoneNumber != null)
-                {
-                    <br />
-                    <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn-bracketed">Change</a>
-                    <form asp-controller="Manage" asp-action="RemovePhoneNumber" method="post">
-                        [<button type="submit" class="btn-link">Remove</button>]
-                    </form>
-                }
-                else
-                {
-                    <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn-bracketed">Add</a>
-                }*@
-            </dd>
-
-            <dt>Two-Factor Authentication:</dt>
-            <dd>
-                <p>
-                    There are no two-factor authentication providers configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532713">this article</a>
-                    for setting up this application to support two-factor authentication.
-                </p>
-                @*@if (Model.TwoFactor)
-                {
-                    <form asp-controller="Manage" asp-action="DisableTwoFactorAuthentication" method="post" class="form-horizontal">
-                        Enabled <button type="submit" class="btn-link btn-bracketed">Disable</button>
-                    </form>
-                }
-                else
-                {
-                    <form asp-controller="Manage" asp-action="EnableTwoFactorAuthentication" method="post" class="form-horizontal">
-                        <button type="submit" class="btn-link btn-bracketed">Enable</button> Disabled
-                    </form>
-                }*@
-            </dd>
-            <dt>Claim University:</dt>
-            <dd>
-                <a asp-controller="Manage" asp-action="ClaimUniversity">Click here if you are affiliated with a university on Warbler</a>
-            </dd>
-        </dl>
+  <div class="col-12">
+    <div class="row" style="margin-bottom: 5px">
+      <div class="col-12">
+        <div class="text-success">@ViewData["StatusMessage"]</div>
+      </div>
     </div>
+    <hr />
+    <div class="list-group col-md-6 col-lg-4 col-xl-3">
+      @if (Model.HasPassword)
+      {
+        <a asp-controller="Manage" asp-action="ChangePassword" class="list-group-item list-group-item-action">Change your password</a>
+      }
+      else
+      {
+        <a asp-controller="Manage" asp-action="SetPassword" class="list-group-item list-group-item-action">Create your password</a>
+      }
+      @if (Model.ClaimedUniversity == null)
+      {
+        <a asp-controller="Manage" asp-action="ClaimUniversity" class="list-group-item list-group-item-action">Claim a university</a>
+      }
+      else
+      {
+        <a asp-controller="Manage" asp-action="Index" class="list-group-item list-group-item-action">Manage @Model.ClaimedUniversity.Name</a>
+      }
+    </div>
+      @*<dl>
+      <dt>External Logins:</dt>
+      <dd>
+          @Model.Logins.Count <a asp-controller="Manage" asp-action="ManageLogins">Manage</a>
+      </dd>
+      <dt>Phone Number:</dt>
+      <dd>
+          <p>
+              Phone Numbers can be used as a second factor of verification in two-factor authentication.
+              See <a href="https://go.microsoft.com/fwlink/?LinkID=532713">this article</a>
+              for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+          </p>
+          @(Model.PhoneNumber ?? "None")
+          @if (Model.PhoneNumber != null)
+          {
+              <br />
+              <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn-bracketed">Change</a>
+              <form asp-controller="Manage" asp-action="RemovePhoneNumber" method="post">
+                  [<button type="submit" class="btn-link">Remove</button>]
+              </form>
+          }
+          else
+          {
+              <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn-bracketed">Add</a>
+          }
+      </dd>
+
+      <dt>Two-Factor Authentication:</dt>
+      <dd>
+        <p>
+            There are no two-factor authentication providers configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532713">this article</a>
+            for setting up this application to support two-factor authentication.
+        </p>
+        @if (Model.TwoFactor)
+        {
+            <form asp-controller="Manage" asp-action="DisableTwoFactorAuthentication" method="post" class="form-horizontal">
+                Enabled <button type="submit" class="btn-link btn-bracketed">Disable</button>
+            </form>
+        }
+        else
+        {
+            <form asp-controller="Manage" asp-action="EnableTwoFactorAuthentication" method="post" class="form-horizontal">
+                <button type="submit" class="btn-link btn-bracketed">Enable</button> Disabled
+            </form>
+        }
+      </dd>
+    </dl>*@
+  </div>
 </div>

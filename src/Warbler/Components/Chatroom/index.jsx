@@ -102,13 +102,11 @@ export default class Chatroom extends React.Component {
     this.setState({ universities: universities });
   }
 
-  onSelectServer(server) {
-    this.log("Selected server:", server);
+  onSelectServer(university) {
+    this.log("Selected university:", university);
     this.setState({
-      selectedServer: server
-    });
-    this.setState({
-      selectedChannel: this.state.selectedUniversity.server.channels[0]
+      selectedUniversity: university,
+      selectedChannel: university.server.channels[0]
     });
   }
 

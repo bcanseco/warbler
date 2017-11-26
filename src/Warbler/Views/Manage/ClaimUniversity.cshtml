@@ -31,6 +31,7 @@
 <div class="row">
     <div class="col-sm-12 col-md-7">
       <form asp-controller="Manage" asp-action="ClaimUniversity" method="post" class="form-horizontal">
+        @Html.AntiForgeryToken()
         <aside>A user may "claim" a university on Warbler if that user is the highest ranking technical staff member belonging to that university or is acting on their behalf. A claimed university may have custom authentication applied to verify the authenticity of connected students and professors.</aside>
         <hr/>
         <div asp-validation-summary="All" class="text-danger"></div>
@@ -51,7 +52,7 @@
         <div class="form-group">
           <label asp-for="ClaimRequest.UniversityId" class="col-md-6"></label>
           <div class="col-md-12">
-            @Html.DropDownListFor(m => m.ClaimRequest.UniversityId, new SelectList(Model.UniversityChoices, "Id", "Name"), "--Select a university--", new { @class = "form-control" })
+            @Html.DropDownListFor(m => m.ClaimRequest.UniversityId, new SelectList(Model.UniversityChoices, "Id", "Name"), "--Select a university--", new {@class = "form-control"})
             <span asp-validation-for="ClaimRequest.UniversityId" class="text-danger"></span>
           </div>
         </div>

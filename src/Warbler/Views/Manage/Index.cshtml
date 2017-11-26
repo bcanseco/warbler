@@ -28,7 +28,7 @@
       }
       else
       {
-        <a asp-controller="Manage" asp-action="Index" class="list-group-item list-group-item-action">Manage @Model.ClaimedUniversity.Name</a>
+        <a asp-controller="Manage" asp-action="University" asp-route-id="@Model.ClaimedUniversity.Id" class="list-group-item list-group-item-action">Manage @Model.ClaimedUniversity.Name</a>
       }
     </div>
       @*<dl>

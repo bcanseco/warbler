@@ -54,6 +54,7 @@ namespace Warbler.Controllers
                 : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : message == ManageMessageId.ClaimRequestSuccess ? "Your claim was successfully submitted."
+                : message == ManageMessageId.ManageUniversitySuccess ? "Custom authentication was successfully saved."
                 : "";
 
             var user = await GetCurrentUserAsync();
@@ -343,15 +344,16 @@ namespace Warbler.Controllers
 
         // POST: /Manage/ClaimUniveresity
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> ClaimUniversity(ClaimUniversityViewModel model)
         {
-            if (!ModelState.IsValid || model.ClaimRequest.UniversityId == -1)
+            if (!ModelState.IsValid)
             {
                 return View(new ClaimUniversityViewModel(await GetEligibleUniversities()));
             }
 
             var service = new ClaimRequestService(new SqlClaimRequestRepository(_dbContext));
-            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            var user = await GetCurrentUserAsync();
 
             try
             {
@@ -365,11 +367,54 @@ namespace Warbler.Controllers
             }
         }
 
+        // GET: /Manage/University/:id
+        [HttpGet]
+        public async Task<IActionResult> University(int id)
+        {
+            var user = await GetCurrentUserAsync();
+
+            var claimedUniversity = await GetClaimedUniversity(user, id);
+
+            if (claimedUniversity == null) return View("Error");
+
+            var authConfig = await new AuthConfigService(new SqlAuthConfigRepository(_dbContext))
+                .GetConfigAsync(claimedUniversity) ?? new AuthConfig
+            {
+                University = claimedUniversity,
+                UniversityId = claimedUniversity.Id
+            };
+
+            return View("ManageUniversity", authConfig);
+        }
+
+        // POST: /Manage/University/
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> University(AuthConfig config)
+        {
+            if (!ModelState.IsValid)
+            {
+                config.University = await GetClaimedUniversity(await GetCurrentUserAsync(), config.UniversityId);
+                return View("ManageUniversity", config);
+            }
+
+            var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(_dbContext));
+            await authConfigService.SaveAsync(config);
+
+            return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ManageUniversitySuccess });
+        }
+
         #region Helpers
+
+        private async Task<University> GetClaimedUniversity(User user, int id)
+            => (await new MembershipService(new SqlMembershipRepository(_dbContext))
+                    .AllMembershipsForAsync(user))
+                .Select(m => m.Channel.Server.University)
+                .FirstOrDefault(u => u.Id == id && u.ClaimedById == user.Id);
 
         private async Task<List<University>> GetEligibleUniversities()
         {
-            var user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+            var user = await GetCurrentUserAsync();
             var service = new MembershipService(new SqlMembershipRepository(_dbContext));
             return (await service.AllMembershipsForAsync(user))
                 .Select(m => m.Channel.Server.University)
@@ -395,6 +440,7 @@ namespace Warbler.Controllers
             RemoveLoginSuccess,
             RemovePhoneSuccess,
             ClaimRequestSuccess,
+            ManageUniversitySuccess,
             Error
         }
 

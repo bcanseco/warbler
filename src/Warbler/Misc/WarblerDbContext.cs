@@ -19,6 +19,7 @@ namespace Warbler.Misc
         public DbSet<Message> Messages { get; set; }
         public DbSet<Membership> Memberships { get; set; }
         public DbSet<ClaimRequest> ClaimRequests { get; set; }
+        public DbSet<AuthConfig> AuthConfigs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +36,7 @@ namespace Warbler.Misc
             modelBuilder.Entity<Message>().ToTable(nameof(Message));
             modelBuilder.Entity<Membership>().ToTable(nameof(Membership));
             modelBuilder.Entity<ClaimRequest>().ToTable(nameof(ClaimRequest));
+            modelBuilder.Entity<AuthConfig>().ToTable(nameof(AuthConfig));
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

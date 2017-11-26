@@ -4,6 +4,9 @@ using Warbler.Models;
 
 namespace Warbler.Interfaces
 {
+    /// <summary>
+    ///   Defines an API for claim requests.
+    /// </summary>
     public interface IClaimRequestRepository
     {
         /// <summary>

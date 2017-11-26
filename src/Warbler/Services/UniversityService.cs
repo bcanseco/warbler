@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using GoogleApi.Entities.Places.Search.NearBy.Response;
 using Microsoft.EntityFrameworkCore;
@@ -49,8 +50,10 @@ namespace Warbler.Services
         /// </remarks>
         public async Task JoinAsync(User user, University university)
         {
-            var channels = university.Server.Channels;
-
+            // Filter out any channels that a user is already a member of
+            var channels = university.Server.Channels
+                .Where(ch => !ch.Memberships.Any(m => m.User.Equals(user)));
+                
             foreach (var channel in channels)
                 channel.Memberships.Add(new Membership {User = user});
 

@@ -1,8 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Warbler.Models;
 using Warbler.Repositories;
 using Warbler.Services;
 using Warbler.Misc;
@@ -12,31 +10,34 @@ namespace Warbler.Controllers
     [Authorize]
     public class ChatController : Controller
     {
-        private UserManager<User> UserManager { get; }
         private UserService UserService { get; }
 
-        public ChatController(UserManager<User> userManager, WarblerDbContext context)
+        public ChatController(WarblerDbContext context)
         {
-            UserManager = userManager;
             UserService = new UserService(new SqlUserRepository(context));
         }
 
         public async Task<IActionResult> Index()
         {
-            var user = await UserManager.GetUserAsync(User);
+            var user = await UserService.FindByNameAsync(User.Identity.Name);
             if (user == null) return RedirectToAction("Login", "Account");
 
             if (await UserService.IsNewAsync(user))
             {
-                ViewData["Title"] = "Select a university";
-                ViewData["Heading"] = true;
-                ViewData["Component"] = "Proximity"; // Components/Proximity
+                return RedirectToAction(nameof(Nearby));
             }
-            else
-            {
-                ViewData["Component"] = ViewData["Title"] = "Chatroom";
-                ViewData["Fluid"] = true;
-            }
+
+            ViewData["Component"] = ViewData["Title"] = "Chatroom";
+            ViewData["Fluid"] = true;
+            
+            return View("ReactComponent", ViewData);
+        }
+
+        public IActionResult Nearby()
+        {
+            ViewData["Title"] = "Select a university";
+            ViewData["Heading"] = true;
+            ViewData["Component"] = "Proximity"; // Components/Proximity
 
             return View("ReactComponent", ViewData);
         }

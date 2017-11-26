@@ -26,7 +26,8 @@ export default class ServerPopout extends React.Component {
 
   render() {
     const servers = this.props.servers
-      .map((server) => <Server className="server" data={server} onClick={() => this.props.onSelect(server)} key={server.id} />);
+      .map((server) => <Server className="server" data={server} onClick={() => this.props.onSelect(server)} key={server.id} />)
+      .concat(<button key="proximity" className="server"><a href="/chat/nearby">Search for other universities</a></button>);
 
     if (this.state.divStyle === null || this.state.divStyle === undefined) {
       return (

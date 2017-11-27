@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Warbler.Models;
 
 namespace Warbler.Interfaces
@@ -14,6 +15,12 @@ namespace Warbler.Interfaces
         /// <param name="university">The claimed university to match.</param>
         /// <returns>The auth config, or null if none exists.</returns>
         Task<AuthConfig> GetConfigAsync(University university);
+
+        /// <summary>
+        ///   Gets all authentication configurations from the database.
+        /// </summary>
+        /// <returns>A list of auth configs.</returns>
+        Task<List<AuthConfig>> GetConfigsAsync();
 
         /// <summary>
         ///   Adds or updates an authentication configuration to the database.

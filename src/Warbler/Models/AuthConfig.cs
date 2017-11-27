@@ -15,11 +15,6 @@ namespace Warbler.Models
         public string Name { get; set; }
 
         [Required]
-        [DataType(DataType.Text)]
-        [Display(Prompt = "Enter your university's name")]
-        public string Description { get; set; }
-
-        [Required]
         [DataType(DataType.Url)]
         [Display(Name = "Single-Signon Service URL", Prompt = "Enter your SSO URL")]
         public string SingleSignOnServiceUrl { get; set; }
@@ -33,10 +28,9 @@ namespace Warbler.Models
             => new PartnerIdentityProviderConfiguration
             {
                 Name = config.Name,
-                Description = config.Description,
                 SingleSignOnServiceUrl = config.SingleSignOnServiceUrl,
                 SingleLogoutServiceUrl = config.SingleLogoutServiceUrl,
-                WantAssertionSigned = false
+                WantAssertionOrResponseSigned = false
             };
     }
 }

@@ -15,6 +15,7 @@ using Warbler.Hubs;
 using Warbler.Models;
 using Warbler.Misc;
 using Warbler.Interfaces;
+using Warbler.Repositories;
 using Warbler.Services;
 
 namespace Warbler
@@ -133,13 +134,18 @@ namespace Warbler
                     HotModuleReplacement = true,
                     ReactHotModuleReplacement = true
                 });
-
-                serviceProvider.GetService<WarblerDbContext>().Database.EnsureCreated();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            
+            var dbContext = serviceProvider.GetService<WarblerDbContext>();
+            dbContext.Database.EnsureCreated();
+
+            var samlConfigs = serviceProvider.GetService<SamlConfigurations>();
+            var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(dbContext), samlConfigs);
+            authConfigService.RefreshConfigsAsync().Wait();
 
             app.UseStaticFiles();
 
@@ -173,20 +179,15 @@ namespace Warbler
                     ID = "Default",
                     LocalServiceProviderConfiguration = new LocalServiceProviderConfiguration
                     {
-                        Name = "https://WarblerDev",
+#if DEBUG
+                        Name = "https://localhost:44395",
                         Description = "Warbler Development",
                         AssertionConsumerServiceUrl = "https://localhost:44395/SAML/AssertionConsumerService"
-                    },
-                    PartnerIdentityProviderConfigurations = new List<PartnerIdentityProviderConfiguration>
-                    {
-                        new PartnerIdentityProviderConfiguration
-                        {
-                            Name = "https://ShoaffUniversity",
-                            Description = "Shoaff University",
-                            SingleSignOnServiceUrl = "https://shoaffuniversity.azurewebsites.net/SAML/SingleSignOnService",
-                            SingleLogoutServiceUrl = "https://shoaffuniversity.azurewebsites.net/SAML/SingleLogoutService",
-                            WantAssertionOrResponseSigned = false
-                        }
+#else
+                        Name = "https://warblerapp.azurewebsites.net",
+                        Description = "Warbler Production",
+                        AssertionConsumerServiceUrl = "https://warblerapp.azurewebsites.net/SAML/AssertionConsumerService"
+#endif
                     }
                 }
             };

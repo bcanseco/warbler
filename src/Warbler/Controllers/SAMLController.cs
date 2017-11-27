@@ -3,7 +3,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using ComponentSpace.Saml2;
-using ComponentSpace.Saml2.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Warbler.Models;
@@ -19,8 +18,7 @@ namespace Warbler.Controllers
         public SamlController(
             UserManager<User> userManager,
             SignInManager<User> signInManager,
-            ISamlServiceProvider samlServiceProvider/*,
-            SamlConfigurations configs*/)
+            ISamlServiceProvider samlServiceProvider)
         {
             _userManager = userManager;
             _signInManager = signInManager;

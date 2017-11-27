@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ComponentSpace.Saml2.Configuration;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -25,6 +26,7 @@ namespace Warbler.Controllers
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
         private readonly WarblerDbContext _dbContext;
+        private SamlConfigurations _samlConfigurations;
 
         public ManageController(
           UserManager<User> userManager,
@@ -32,7 +34,8 @@ namespace Warbler.Controllers
           IEmailSender emailSender,
           ISmsSender smsSender,
           ILoggerFactory loggerFactory,
-          WarblerDbContext context)
+          WarblerDbContext context,
+          SamlConfigurations samlConfigurations)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -40,6 +43,7 @@ namespace Warbler.Controllers
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<ManageController>();
             _dbContext = context;
+            _samlConfigurations = samlConfigurations;
         }
 
         // GET: /Manage/Index
@@ -377,7 +381,7 @@ namespace Warbler.Controllers
 
             if (claimedUniversity == null) return View("Error");
 
-            var authConfig = await new AuthConfigService(new SqlAuthConfigRepository(_dbContext))
+            var authConfig = await new AuthConfigService(new SqlAuthConfigRepository(_dbContext), _samlConfigurations)
                 .GetConfigAsync(claimedUniversity) ?? new AuthConfig
             {
                 University = claimedUniversity,
@@ -398,7 +402,7 @@ namespace Warbler.Controllers
                 return View("ManageUniversity", config);
             }
 
-            var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(_dbContext));
+            var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(_dbContext), _samlConfigurations);
             await authConfigService.SaveAsync(config);
 
             return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ManageUniversitySuccess });

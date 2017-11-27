@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Warbler.Interfaces;
@@ -26,6 +27,9 @@ namespace Warbler.Repositories
                 .Where(c => c.University.Equals(university))
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
+
+        public async Task<List<AuthConfig>> GetConfigsAsync()
+            => await Context.AuthConfigs.ToListAsync();
 
         public async Task SaveAsync(AuthConfig config)
         {

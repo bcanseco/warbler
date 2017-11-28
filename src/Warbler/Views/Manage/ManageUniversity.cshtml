@@ -5,41 +5,77 @@
 
 @await Html.PartialAsync("_HeadingPartial")
 
+@section styles {
+  <style>
+    .custom-switch > .custom-control-indicator::before {
+      background: none !important;
+    }
+
+    
+  </style>
+}
+<hr/>
 <div class="row">
-  <div class="col-sm-12 col-md-7">
-    <form asp-controller="Manage" asp-action="University" method="post" class="form-horizontal">
+  <div class="col-sm-12 col-md-6">
+    <h4>SAML Configuration form</h4>
+    <form asp-controller="Manage" asp-action="University" method="post">
       @Html.AntiForgeryToken()
       <aside>Here is where you can enable mandatory authentication through SAML 2.0. In this case, Warbler is the service provider and your university (or whichever endpoint you use) is the identity provider.</aside>
-      <hr />
+      <hr/>
       <div asp-validation-summary="All" class="text-danger"></div>
       <div class="form-group">
         <label asp-for="Name" class="col-md-6"></label>
         <div class="col-md-12">
-          <input asp-for="Name" class="form-control" />
+          <input asp-for="Name" spellcheck="false" class="form-control"/>
           <span asp-validation-for="Name" class="text-danger"></span>
         </div>
       </div>
       <div class="form-group">
         <label asp-for="SingleSignOnServiceUrl" class="col-md-6"></label>
         <div class="col-md-12">
-          <input asp-for="SingleSignOnServiceUrl" class="form-control" />
+          <input asp-for="SingleSignOnServiceUrl" spellcheck="false" class="form-control"/>
           <span asp-validation-for="SingleSignOnServiceUrl" class="text-danger"></span>
         </div>
       </div>
       <div class="form-group">
         <label asp-for="SingleLogoutServiceUrl" class="col-md-6"></label>
         <div class="col-md-12">
-          <input asp-for="SingleLogoutServiceUrl" class="form-control" />
+          <input asp-for="SingleLogoutServiceUrl" spellcheck="false" class="form-control"/>
           <span asp-validation-for="SingleLogoutServiceUrl" class="text-danger"></span>
         </div>
       </div>
+      <div class="form-group" style="padding-left: 12px">
+        <label class="custom-control custom-switch">
+          <label asp-for="OverrideUsernames" class="custom-control-description"></label>
+          <input asp-for="OverrideUsernames" class="custom-control-input" tabindex="-1" type="checkbox" onchange="deselect()">
+          <span class="custom-control-indicator"></span>
+        </label>
+      </div>
       @Html.HiddenFor(m => m.UniversityId)
-      <input type="hidden" value="@Model.Id" name="Id" /> 
+      <input type="hidden" value="@Model.Id" name="Id"/>
       <div class="form-group">
         <div class="col-md-12">
-          <button class="btn waves-attach" type="submit">Save changes</button>
+          <button class="btn btn-primary" type="submit">Save changes</button>
+          <button class="btn btn-info" asp-action="TestSaml">Test saved config</button>
         </div>
       </div>
     </form>
   </div>
+  <div class="col-sm-12 col-md-6">
+    <h4>SAML information</h4>
+    <p>No claims are required by Warbler - a successful SAML response returned by your university's identity provider will provide authorization to the chatroom.</p>
+    <p>An optional <a href="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" target="_blank">Name claim</a> should be sent if you are opting to show your university's usernames in the chatroom rather than Warbler's account usernames.</p>
+    <figure class="figure">
+      <img src="~/dist/saml.png" class="figure-img img-fluid rounded img-thumbnail" alt="SAML SSO Handshake">
+      <figcaption class="figure-caption">Flowgraph for joining a claimed university chatroom.</figcaption>
+    </figure>
+  </div>
 </div>
+
+@section scripts {
+  <script>
+    function deselect() {
+      document.activeElement && document.activeElement.blur();
+    }
+  </script>
+}

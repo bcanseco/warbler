@@ -4,7 +4,10 @@ import User from "./user.jsx";
 export default class UserPane extends React.Component {
   render() {
     const users = this.props.users
-      .map((user, i) => <User data={user} key={i}/>);
+      .map((user, i) => {
+        user.userName = this.props.nicknames[user.userName] || user.userName; 
+        return <User data={user} key={i}/>;
+      });
 
     return (
       <div className="user-pane">

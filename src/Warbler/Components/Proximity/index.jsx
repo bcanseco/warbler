@@ -5,6 +5,7 @@ import { HubConnection } from "@aspnet/signalr-client";
 import Loader from "../loader.jsx";
 import UniversitySelector from "./university-selector.jsx";
 import Map from "./map.jsx";
+import "isomorphic-fetch";
 import "./styles.less";
 
 export default class Proximity extends React.Component {
@@ -15,7 +16,6 @@ export default class Proximity extends React.Component {
     this.onLocationSuccess = this.onLocationSuccess.bind(this);
     this.onLocationError = this.onLocationError.bind(this);
     this.receiveNearbyUniversities = this.receiveNearbyUniversities.bind(this);
-    this.onSuccessfulJoin = this.onSuccessfulJoin.bind(this);
     this.onConnectionClosed = this.onConnectionClosed.bind(this);
 
     this.state = {
@@ -79,12 +79,19 @@ export default class Proximity extends React.Component {
   onSelection(event, university) {
     event.preventDefault();
     this.log("onSelection", university);
-    this.connection.invoke("selectUniversityAsync", university.place_id);
-  }
 
-  onSuccessfulJoin() {
-    this.log("Successfully joined university. Redirecting...");
-    location.href = "/chat";
+    fetch("/Chat/Join",
+      {
+        method: "POST",
+        headers: {
+          'Accept': "application/json, text/plain, */*",
+          'Content-Type': "application/json"
+        },
+        credentials: "include",
+        body: JSON.stringify(university)
+      })
+      .then(response => response.text())
+      .then(route => (location.href = route));
   }
 
   render() {

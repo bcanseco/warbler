@@ -45,17 +45,18 @@ namespace Warbler.Services
         /// </summary>
         /// <param name="user">The user to add.</param>
         /// <param name="university">The university whose channels will be added to.</param>
+        /// <param name="samlName">Used for claimed universities.</param>
         /// <remarks>
         ///   This will create new rows in the Membership table (User x Channel).
         /// </remarks>
-        public async Task JoinAsync(User user, University university)
+        public async Task JoinAsync(User user, University university, string samlName = null)
         {
             // Filter out any channels that a user is already a member of
             var channels = university.Server.Channels
                 .Where(ch => !ch.Memberships.Any(m => m.User.Equals(user)));
                 
             foreach (var channel in channels)
-                channel.Memberships.Add(new Membership {User = user});
+                channel.Memberships.Add(new Membership {User = user, SamlName = samlName});
 
             await Repository.SaveAsync();
         }
@@ -71,5 +72,9 @@ namespace Warbler.Services
 
         public async Task ApplyClaimAsync(University university, string submitterId)
             => await Repository.ApplyClaimAsync(university, submitterId);
+
+        public async Task<University> FindByIdAsync(int id)
+            => await Repository.AllQueryable(QueryDepth.User)
+                .FirstAsync(u => u.Id == id);
     }
 }

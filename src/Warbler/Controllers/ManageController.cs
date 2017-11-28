@@ -59,6 +59,7 @@ namespace Warbler.Controllers
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : message == ManageMessageId.ClaimRequestSuccess ? "Your claim was successfully submitted."
                 : message == ManageMessageId.ManageUniversitySuccess ? "Custom authentication was successfully saved."
+                : message == ManageMessageId.TestSamlSuccess ? "SAML SSO flow was successful."
                 : "";
 
             var user = await GetCurrentUserAsync();
@@ -383,10 +384,10 @@ namespace Warbler.Controllers
 
             var authConfig = await new AuthConfigService(new SqlAuthConfigRepository(_dbContext), _samlConfigurations)
                 .GetConfigAsync(claimedUniversity) ?? new AuthConfig
-            {
-                University = claimedUniversity,
-                UniversityId = claimedUniversity.Id
-            };
+                {
+                    University = claimedUniversity,
+                    UniversityId = claimedUniversity.Id
+                };
 
             return View("ManageUniversity", authConfig);
         }
@@ -405,15 +406,29 @@ namespace Warbler.Controllers
             var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(_dbContext), _samlConfigurations);
             await authConfigService.SaveAsync(config);
 
+            var universityService = new UniversityService(new SqlUniversityRepository(_dbContext));
+            var claimedUniversity = await universityService.FindByIdAsync(config.UniversityId);
+
+            var serverService = new ServerService(new SqlServerRepository(_dbContext));
+            await serverService.EnableAuthAsync(claimedUniversity.Server);
+
+            var membershipService = new MembershipService(new SqlMembershipRepository(_dbContext));
+            foreach (var channel in claimedUniversity.Server.Channels)
+            {
+                await membershipService.DropMembershipsAsync(channel);
+            }
+
             return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ManageUniversitySuccess });
         }
+
+        public IActionResult TestSaml(AuthConfig config)
+            => RedirectToAction("SingleSignOn", "Account", new {partnerName = config.Name});
 
         #region Helpers
 
         private async Task<University> GetClaimedUniversity(User user, int id)
-            => (await new MembershipService(new SqlMembershipRepository(_dbContext))
-                    .AllMembershipsForAsync(user))
-                .Select(m => m.Channel.Server.University)
+            => (await new UniversityService(new SqlUniversityRepository(_dbContext))
+                    .GetAllAsync())
                 .FirstOrDefault(u => u.Id == id && u.ClaimedById == user.Id);
 
         private async Task<List<University>> GetEligibleUniversities()
@@ -445,6 +460,7 @@ namespace Warbler.Controllers
             RemovePhoneSuccess,
             ClaimRequestSuccess,
             ManageUniversitySuccess,
+            TestSamlSuccess,
             Error
         }
 

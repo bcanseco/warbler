@@ -158,10 +158,14 @@ export default class Chatroom extends React.Component {
             <MessagePane
               channelName={this.state.selectedChannel.name}
               messages={this.state.selectedChannel.messages}
+              nicknames={this.state.selectedChannel.samlNames}
               onSend={this.onSendMessage}
             />
             <VerticalDivider order={4} />
-            <UserPane users={this.state.selectedChannel.users} />
+            <UserPane
+              users={this.state.selectedChannel.users}
+              nicknames={this.state.selectedChannel.samlNames}
+            />
           </div>
           <div>
             {this.state.serverPopout

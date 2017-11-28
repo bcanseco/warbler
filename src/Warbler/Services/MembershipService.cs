@@ -41,5 +41,8 @@ namespace Warbler.Services
         /// <param name="user">The user to fetch memberships for.</param>
         public async Task<ICollection<Membership>> AllMembershipsForAsync(User user)
             => await Repository.AllFor(user).ToList();
+
+        public async Task DropMembershipsAsync(Channel channel)
+            => await Repository.DropMembershipsAsync(channel);
     }
 }

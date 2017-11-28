@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ComponentSpace.Saml2;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Warbler.Misc;
 using Warbler.Models;
+using Warbler.Repositories;
+using Warbler.Services;
 
 namespace Warbler.Controllers
 {
@@ -14,15 +14,18 @@ namespace Warbler.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly ISamlServiceProvider _samlServiceProvider;
+        private readonly WarblerDbContext _dbContext;
 
         public SamlController(
             UserManager<User> userManager,
             SignInManager<User> signInManager,
-            ISamlServiceProvider samlServiceProvider)
+            ISamlServiceProvider samlServiceProvider,
+            WarblerDbContext dbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _samlServiceProvider = samlServiceProvider;
+            _dbContext = dbContext;
         }
 
         public async Task<IActionResult> AssertionConsumerService()
@@ -30,52 +33,26 @@ namespace Warbler.Controllers
             // Receive and process the SAML assertion contained in the SAML response.
             // The SAML response is received either as part of IdP-initiated or SP-initiated SSO.
             var ssoResult = await _samlServiceProvider.ReceiveSsoAsync();
-
-            // Automatically provision the user.
-            // If the user doesn't exist locally then create the user.
-            // Automatic provisioning is an optional step.
-            var user = await _userManager.FindByNameAsync(ssoResult.UserID);
-
-            if (user == null)
+            
+            if (string.IsNullOrEmpty(ssoResult.RelayState))
             {
-                var email = ssoResult.Attributes.First(a => a.Name == ClaimTypes.Email).ToString();
-                user = new User { UserName = ssoResult.UserID, Email = email };
-                var result = await _userManager.CreateAsync(user);
-
-                if (!result.Succeeded)
-                {
-                    throw new Exception($"The user {ssoResult.UserID} couldn't be created - {result}");
-                }
-
-                // For demonstration purposes, create some additional claims.
-                if (ssoResult.Attributes != null)
-                {
-                    var samlAttribute = ssoResult.Attributes.SingleOrDefault(a => a.Name == ClaimTypes.GivenName);
-
-                    if (samlAttribute != null)
-                    {
-                        await _userManager.AddClaimAsync(user, new Claim(ClaimTypes.GivenName, samlAttribute.ToString()));
-                    }
-
-                    samlAttribute = ssoResult.Attributes.SingleOrDefault(a => a.Name == ClaimTypes.Surname);
-
-                    if (samlAttribute != null)
-                    {
-                        await _userManager.AddClaimAsync(user, new Claim(ClaimTypes.Surname, samlAttribute.ToString()));
-                    }
-                }
+                // This was a test initiated from the manage page
+                return RedirectToAction("Index", "Manage", new { Message = ManageController.ManageMessageId.TestSamlSuccess });
             }
 
-            // Automatically login using the asserted identity.
-            await _signInManager.SignInAsync(user, isPersistent: false);
+            // This is a mess, but there's no other way to find the current user because
+            // this controller hides the current identity for some reason
+            var user = await _userManager.FindByIdAsync(ssoResult.RelayState.Split(',')[0]);
 
-            // Redirect to the target URL if specified and this is IdP-initiated SSO.
-            if (!ssoResult.IsInResponseTo && !string.IsNullOrEmpty(ssoResult.RelayState))
-            {
-                return Redirect(ssoResult.RelayState);
-            }
+            var universityService = new UniversityService(new SqlUniversityRepository(_dbContext));
+            var university = await universityService.FindByIdAsync(int.Parse(ssoResult.RelayState.Split(',')[1]));
 
-            return RedirectToAction("Index", "Home");
+            var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(_dbContext), null);
+            var authConfig = await authConfigService.GetConfigAsync(university);
+
+            await universityService.JoinAsync(user, university, authConfig.OverrideUsernames ? ssoResult.UserID : null);
+
+            return RedirectToAction("Index", "Chat");
         }
 
         public async Task<ActionResult> SingleLogoutService()

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Warbler.Interfaces;
@@ -37,5 +38,15 @@ namespace Warbler.Repositories
                 .Include(m => m.Channel)
                     .ThenInclude(ch => ch.Server)
                         .ThenInclude(srv => srv.University);
+
+        public async Task DropMembershipsAsync(Channel channel)
+        {
+            var toDelete = Context.Memberships.Where(m => m.Channel.Equals(channel));
+            foreach (var membership in toDelete)
+            {
+                Context.Memberships.Remove(membership);
+            }
+            await Context.SaveChangesAsync();
+        }
     }
 }

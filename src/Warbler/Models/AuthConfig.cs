@@ -24,6 +24,10 @@ namespace Warbler.Models
         [Display(Name = "Single-Logout Service URL", Prompt = "Enter your SLO URL")]
         public string SingleLogoutServiceUrl { get; set; }
 
+        [Required]
+        [Display(Name = "Show your university's usernames in chat")]
+        public bool OverrideUsernames { get; set; }
+
         public static explicit operator PartnerIdentityProviderConfiguration(AuthConfig config)
             => new PartnerIdentityProviderConfiguration
             {

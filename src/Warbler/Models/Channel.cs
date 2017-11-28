@@ -28,7 +28,26 @@ namespace Warbler.Models
         [NotMapped]
         public IEnumerable<User> Users => Memberships?.Select(m => m.User).ToList();
 
+        [NotMapped]
+        public IDictionary<string, string> SamlNames => Memberships?
+            .ToDictionary(m => m.User.UserName, m => m.SamlName);
+
         public bool Equals(Channel other)
-            => Id == other?.Id;
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Id == other.Id;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj.GetType() == GetType() && Equals((Channel) obj);
+        }
+
+        public override int GetHashCode() => Id.GetHashCode() * 9;
+        public static bool operator ==(Channel left, Channel right) => Equals(left, right);
+        public static bool operator !=(Channel left, Channel right) => !Equals(left, right);
     }
 }

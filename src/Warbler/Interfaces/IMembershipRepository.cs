@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Warbler.Models;
 
 namespace Warbler.Interfaces
@@ -25,5 +26,11 @@ namespace Warbler.Interfaces
         ///   A list of Membership objects filled-in up to the university level.
         /// </returns>
         IAsyncEnumerable<Membership> AllFor(Channel channel);
+
+        /// <summary>
+        ///   Removes all members of a channel.
+        /// </summary>
+        /// <param name="channel">The channel whose members will be removed.</param>
+        Task DropMembershipsAsync(Channel channel);
     }
 }

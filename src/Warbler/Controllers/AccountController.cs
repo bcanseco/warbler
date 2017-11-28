@@ -437,13 +437,9 @@ namespace Warbler.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<ActionResult> SingleSignOn()
+        public async Task<ActionResult> SingleSignOn(string partnerName, string relayState = null)
         {
-            // To login automatically at the service provider, initiate single sign-on to the identity provider (SP-initiated SSO).            
-            const string partnerName = "https://shoaffuniversity.azurewebsites.net";
-
-            await _samlServiceProvider.InitiateSsoAsync(partnerName);
-
+            await _samlServiceProvider.InitiateSsoAsync(partnerName, relayState);
             return new EmptyResult();
         }
 

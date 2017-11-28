@@ -22,9 +22,7 @@ namespace Warbler.Repositories
         private WarblerDbContext Context { get; }
 
         public SqlUniversityRepository(WarblerDbContext context)
-        {
-            Context = context;
-        }
+            => Context = context;
 
         public async Task<University> CreateAsync(NearByResult uni)
         {
@@ -66,9 +64,7 @@ namespace Warbler.Repositories
         }
 
         public async Task SaveAsync()
-        {
-            await Context.SaveChangesAsync();
-        }
+            => await Context.SaveChangesAsync();
 
         public async Task<University> LookupAsync(string placeId)
         {

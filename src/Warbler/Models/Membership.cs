@@ -18,5 +18,7 @@ namespace Warbler.Models
         public int ChannelId { get; set; }
         [JsonIgnore]
         public Channel Channel { get; set; }
+
+        public string SamlName { get; set; }
     }
 }

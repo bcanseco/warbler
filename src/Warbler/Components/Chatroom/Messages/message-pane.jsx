@@ -12,7 +12,7 @@ export default class MessagePane extends React.Component {
         <h4 className="chat-current-channel">
           <i>#{this.props.channelName}</i>
         </h4>
-        <div className="auto-scroll h-90">
+        <div className="auto-scroll h-81">
           <ul className="auto-scroll message-area">{messages}</ul>
         </div>
         <div className="pos-rel">

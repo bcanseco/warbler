@@ -13,7 +13,11 @@ module.exports = (env) => {
     module: {
       rules: [
         { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: "url-loader?limit=100000" },
-        { test: /\.css(\?|$)/, use: extractCSS.extract([isDevBuild ? "css-loader" : "css-loader?minimize"]) }
+        { test: /\.css(\?|$)/, use: extractCSS.extract([isDevBuild ? "css-loader" : "css-loader?minimize"]) },
+        {
+          test: require.resolve("quill-emoji/dist/quill-emoji.js"),
+          use: "imports-loader?Quill=quill"
+        }
       ]
     },
     entry: {
@@ -33,11 +37,15 @@ module.exports = (env) => {
         "react",
         "react-dom",
         "react-google-maps",
-        "react-simple-popover"
+        "react-simple-popover",
+        "react-quill",
+        "quill-emoji/dist/quill-emoji.js"
       ].concat([
         "font-awesome/css/font-awesome.css",
         "bootstrap/dist/css/bootstrap.css",
-        "daemonite-material/css/material.css"
+        "daemonite-material/css/material.css",
+        "react-quill/dist/quill.bubble.css",
+        "quill-emoji/dist/quill-emoji.css"
       ])
     },
     output: {

@@ -1,44 +1,77 @@
 ﻿import React from "react";
+import ReactQuill from "react-quill";
+import "quill-emoji/dist/quill-emoji";
 
 export default class MessageBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: null
+    };
+    this.log = console.log.bind(console, `%c${this.constructor.name}`, "color: #1f82e4");
+    this.handleChange = this.handleChange.bind(this);
+
+    this.style = {
+      border: "1px solid grey",
+      height: "44px",
+      maxHeight: "44px"
+    };
+
+    this.modules = {
+      toolbar: [
+        ["bold", "italic", "underline", "strike"],
+        ["link", "blockquote", "code"],
+        ["clean"]
+      ],
+      keyboard: {
+        bindings: {
+          enter: {
+            key: "Enter",
+            handler: (range, context) => {
+              if (!context.empty) this.onSubmit();
+            }
+          }
+        }
+      },
+      toolbar_emoji: true,
+      short_name_emoji: true,
+      textarea_emoji: true
+    };
+
+    this.formats = this.modules.toolbar[0].concat(this.modules.toolbar[1]);
+  }
+
   componentDidMount() {
     this.input.focus();
   }
 
-  onSubmit(e) {
-    e.preventDefault();
-    this.props.onSubmit(this.input.value);
-    this.input.value = null;
-    this.input.focus();
+  onSubmit() {
+    this.log("onSubmit", this.state.text);
+    this.props.onSubmit(this.state.text);
+    this.setState({ text: null });
+  }
+
+  handleChange(value) {
+    this.setState({ text: value });
   }
 
   render() {
     return (
       <div className="col pos-abs bottom">
-        <form
-          className="row"
-          onSubmit={this.onSubmit.bind(this)}
-        >
-          <div className="col-sm-9 col-lg-10">
-            <input
-              type="text"
-              className="form-control"
+        <div className="row">
+          <div className="col-12">
+            <ReactQuill
+              theme="bubble"
+              modules={this.modules}
+              formats={this.formats}
+              value={this.state.text}
+              style={this.style}
               placeholder="Enter a message"
               ref={(input) => { this.input = input }}
+              onChange={this.handleChange}
             />
           </div>
-          <div className="col-sm-3 col-lg-2">
-            <span className="input-group-btn">
-              <button
-                className="btn btn-secondary"
-                type="button"
-                onClick={this.onSubmit.bind(this)}
-              >
-                Send
-              </button>
-            </span>
-          </div>
-        </form>
+        </div>
       </div>
     );
   }

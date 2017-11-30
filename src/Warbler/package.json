@@ -16,6 +16,8 @@
     "jquery-validation-unobtrusive": "^3.2.6",
     "popper.js": "^1.12.3",
     "react": "^15.6.1",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-avatar": "^2.5.1",
     "react-dom": "^15.6.1",
     "react-google-maps": "^8.3.0",
     "tether": "^1.4.0"

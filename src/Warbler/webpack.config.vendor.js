@@ -33,7 +33,8 @@ module.exports = (env) => {
         "react",
         "react-dom",
         "react-google-maps",
-        "react-simple-popover"
+        "react-simple-popover",
+        "react-avatar"
       ].concat([
         "bootstrap/dist/css/bootstrap.css",
         "daemonite-material/css/material.css"

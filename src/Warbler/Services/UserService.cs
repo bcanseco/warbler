@@ -31,6 +31,9 @@ namespace Warbler.Services
         public async Task<User> FindByNameAsync(string username)
             => await Repository.FindByNameAsync(username);
 
+        public async Task<User> AddBlockedUser(User user, string blockedUser)
+            => await Repository.AddBlockedUser(user, blockedUser);
+
         /// <summary>
         ///   Sets a user's isOnline property.
         /// </summary>

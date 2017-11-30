@@ -14,7 +14,7 @@ namespace Warbler.Interfaces
         /// </summary>
         /// <param name="channel">The channel to fetch messages from.</param>
         /// <returns>Up to 25 stored Message objects.</returns>
-        IAsyncEnumerable<Message> LatestIn(Channel channel);
+        IAsyncEnumerable<Message> LatestIn(Channel channel, List<User> blockedUsers);
 
         /// <summary>
         ///   Creates and saves a message to the database.

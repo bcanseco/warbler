@@ -92,7 +92,7 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlMessageRepository(context);
-                var messages = repo.LatestIn(General);
+                var messages = repo.LatestIn(General, Bob.blockedUsers.ToList());
                 var firstMessage = messages.First().Result;
                 var lastMessage = messages.Last().Result;
 

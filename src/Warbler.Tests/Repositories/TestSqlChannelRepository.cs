@@ -18,6 +18,7 @@ namespace Warbler.Tests.Repositories
                 .UseInMemoryDatabase(nameof(TestSqlChannelRepository))
                 .Options;
 
+
         [TestMethod]
         public async Task UpdateAsync_Should_Update_Channel()
         {

@@ -23,6 +23,12 @@ namespace Warbler.Interfaces
         Task<User> FindByNameAsync(string username);
 
         /// <summary>
+        ///   Adds the <see cref="User"/> matching the given username to block list.
+        /// </summary>
+        /// <param name="blockedUser">The username to search with.</param>
+        Task<User> AddBlockedUser(User user, string blockedUser);
+
+        /// <summary>
         ///   Sets <see cref="User.IsOnline"/>.
         /// </summary>
         /// <param name="user">The user to manipulate.</param>

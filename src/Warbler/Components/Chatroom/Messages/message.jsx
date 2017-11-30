@@ -1,4 +1,5 @@
 ﻿import React from "react";
+import Avatar from "react-avatar";
 
 export default class Message extends React.Component {
   formatDate(date) {
@@ -12,7 +13,7 @@ export default class Message extends React.Component {
     return (
       <li className="message-container">
         <div className="ava-thumbnail message-content-box">
-          <img className="ava-img" src={"dist/ava.png"} />
+          <Avatar name={this.props.data.sender.userName} className="ava-img" size={30} textSizeRatio={2}/>
         </div>
         <div className="message-text">{this.props.data.text}</div>
         <div className="message-details">

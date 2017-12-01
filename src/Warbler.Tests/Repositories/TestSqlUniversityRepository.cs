@@ -12,6 +12,7 @@ using Warbler.Misc;
 using Warbler.Repositories;
 using Warbler.Models.Enums;
 using System;
+using Warbler.Services;
 
 namespace Warbler.Tests.Repositories
 {
@@ -19,13 +20,19 @@ namespace Warbler.Tests.Repositories
     public class TestSqlUniversityRepository
     {
         private DbContextOptions<WarblerDbContext> Options { get; set; }
-         
+
         [TestInitialize]
         public void SetUpDatabase()
         {
             Options = new DbContextOptionsBuilder<WarblerDbContext>()
                 .UseInMemoryDatabase(nameof(TestSqlUniversityRepository))
                 .Options;
+
+            using (var context = new WarblerDbContext(Options))
+            {
+                new ChannelTemplateService(new SqlChannelTemplateRepository(context))
+                    .CreateDefaultTemplatesAsync().Wait();
+            }
         }
 
         private async Task SetUpSampleUniversity()
@@ -39,7 +46,11 @@ namespace Warbler.Tests.Repositories
                     Geometry = new Geometry { Location = new Location(0.0, 0.0) }
                 };
 
-                await repo.CreateAsync(nearbyResult);
+                var templateService = new ChannelTemplateService(new SqlChannelTemplateRepository(context));
+                await templateService.CreateDefaultTemplatesAsync();
+
+                // Create a test university with default channels
+                await repo.CreateAsync(nearbyResult, await templateService.GetAsync());
             }
         }
 

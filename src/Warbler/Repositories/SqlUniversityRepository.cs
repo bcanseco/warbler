@@ -24,37 +24,26 @@ namespace Warbler.Repositories
         public SqlUniversityRepository(WarblerDbContext context)
             => Context = context;
 
-        public async Task<University> CreateAsync(NearByResult uni)
+        public async Task<University> CreateAsync(NearByResult uni, IEnumerable<ChannelTemplate> templates)
         {
             var university = new University
             {
                 Name = uni.Name,
                 PlaceId = uni.PlaceId,
                 Address = uni.Vicinity,
-                Lat = (float)uni.Geometry.Location.Latitude,
-                Lng = (float)uni.Geometry.Location.Longitude,
+                Lat = (float) uni.Geometry.Location.Latitude,
+                Lng = (float) uni.Geometry.Location.Longitude,
                 Server = new Server
                 {
                     IsAuthEnabled = false,
-                    Channels = new List<Channel>
+                    Channels = templates.Select(t => new Channel
                     {
-                        new Channel
-                        {
-                            Name = "general",
-                            Description = "Talk about anything.",
-                            State = ChannelState.Active,
-                            Type = ChannelType.Normal,
-                            Memberships = new List<Membership>()
-                        },
-                        new Channel
-                        {
-                            Name = "biology",
-                            Description = "Talk about biological things.",
-                            State = ChannelState.Active,
-                            Type = ChannelType.Normal,
-                            Memberships = new List<Membership>()
-                        }
-                    },
+                        Name = t.Name,
+                        Description = t.Description,
+                        State = ChannelState.Active,
+                        Type = ChannelType.Normal,
+                        Memberships = new List<Membership>()
+                    }).ToList()
                 }
             };
 

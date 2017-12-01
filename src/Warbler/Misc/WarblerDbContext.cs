@@ -18,6 +18,7 @@ namespace Warbler.Misc
         public DbSet<Channel> Channels { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Membership> Memberships { get; set; }
+        public DbSet<ChannelTemplate> ChannelTemplates { get; set; }
         public DbSet<ClaimRequest> ClaimRequests { get; set; }
         public DbSet<AuthConfig> AuthConfigs { get; set; }
 
@@ -37,6 +38,7 @@ namespace Warbler.Misc
             modelBuilder.Entity<Membership>().ToTable(nameof(Membership));
             modelBuilder.Entity<ClaimRequest>().ToTable(nameof(ClaimRequest));
             modelBuilder.Entity<AuthConfig>().ToTable(nameof(AuthConfig));
+            modelBuilder.Entity<ChannelTemplate>().ToTable(nameof(ChannelTemplate));
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

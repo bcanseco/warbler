@@ -147,6 +147,10 @@ namespace Warbler
             var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(dbContext), samlConfigs);
             authConfigService.RefreshConfigsAsync().Wait();
 
+            new ChannelTemplateService(new SqlChannelTemplateRepository(dbContext))
+                .CreateDefaultTemplatesAsync()
+                .Wait();
+
             app.UseStaticFiles();
 
             app.UseAuthentication();

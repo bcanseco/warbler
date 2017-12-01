@@ -37,11 +37,13 @@ namespace Warbler.Services
         }
 
         private UniversityService UniversityService { get; set; }
+        private ChannelTemplateService ChannelTemplateService { get; set; }
         private ILogger Logger { get; }
 
         public ProximityService With(WarblerDbContext context)
         {
             UniversityService = new UniversityService(new SqlUniversityRepository(context));
+            ChannelTemplateService = new ChannelTemplateService(new SqlChannelTemplateRepository(context));
             return this;
         }
 

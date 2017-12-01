@@ -15,12 +15,14 @@ namespace Warbler.Controllers
         private UserService UserService { get; }
         private UniversityService UniversityService { get; }
         private AuthConfigService AuthConfigService { get; }
+        private ChannelTemplateService ChannelTemplateService { get; }
 
         public ChatController(WarblerDbContext context)
         {
             UserService = new UserService(new SqlUserRepository(context));
             UniversityService = new UniversityService(new SqlUniversityRepository(context));
             AuthConfigService = new AuthConfigService(new SqlAuthConfigRepository(context), null);
+            ChannelTemplateService = new ChannelTemplateService(new SqlChannelTemplateRepository(context));
         }
         
         public async Task<IActionResult> Index()
@@ -53,7 +55,7 @@ namespace Warbler.Controllers
         {
             var user = await UserService.FindByNameAsync(User.Identity.Name);
 
-            var university = await UniversityService.GetOrCreateAsync(userChoice);
+            var university = await UniversityService.GetOrCreateAsync(userChoice, await ChannelTemplateService.GetAsync());
 
             var isAlreadyMember = university.Server.Channels
                 .Any(ch => ch.Memberships.Any(m => m.User.Equals(user)));

@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Warbler.Models
 {
-    [DebuggerDisplay("Server #{Id}: {Type}")]
+    [DebuggerDisplay("Server #{Id}")]
     public class Server : IEquatable<Server>
     {
         public int Id { get; set; }

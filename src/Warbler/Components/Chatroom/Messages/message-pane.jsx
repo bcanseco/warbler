@@ -30,8 +30,11 @@ export default class MessagePane extends React.Component {
   }
 
   render() {
-    const messages = this.props.messages.map((message, i) =>
-      <Message data={message} key={i}/>);
+    const messages = this.props.messages.map((message, i) => {
+      const user = message.sender || (message.sender = { userName: "anonymous student" });
+      user.userName = this.props.nicknames[user.userName] || user.userName;
+      return <Message data={message} key={i}/>;
+    });
 
     return (
       <div className="message-pane">

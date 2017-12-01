@@ -65,7 +65,7 @@ namespace Warbler.Tests.Services
                     Submitter = Bob
                 };
 
-                await test.SubmitClaimAsync(request);
+                await test.SubmitAsync(request);
             }
 
             using (var context = new WarblerDbContext(Options))

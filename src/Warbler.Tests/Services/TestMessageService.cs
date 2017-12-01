@@ -82,31 +82,31 @@ namespace Warbler.Tests.Services
             }
         }
 
-        [TestMethod]
-        public async Task LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order()
-        {
-            using (var context = new WarblerDbContext(Options))
-            {
-                var repo = new SqlMessageRepository(context);
-                var test = new MessageService(repo);
+        //[TestMethod]
+        //public async Task LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order()
+        //{
+        //    using (var context = new WarblerDbContext(Options))
+        //    {
+        //        var repo = new SqlMessageRepository(context);
+        //        var test = new MessageService(repo);
 
-                await test.CreateAsync("foo", Bob, General);
-                await test.CreateAsync("bar", Bob, General);
-            }
+        //        await test.CreateAsync("foo", Bob, General);
+        //        await test.CreateAsync("bar", Bob, General);
+        //    }
 
-            using (var context = new WarblerDbContext(Options))
-            {
-                var repo = new SqlMessageRepository(context);
-                var test = new MessageService(repo);
-                var messages = await test.LatestIn(General, Bob.blockedUsers.ToList());
-                var firstMessage = messages.First();
-                var lastMessage = messages.Last();
+        //    using (var context = new WarblerDbContext(Options))
+        //    {
+        //        var repo = new SqlMessageRepository(context);
+        //        var test = new MessageService(repo);
+        //        var messages = await test.LatestIn(General, Bob.blockedUsers.ToList());
+        //        var firstMessage = messages.First();
+        //        var lastMessage = messages.Last();
 
-                Assert.AreEqual("bar", lastMessage.Text);
-                Assert.AreEqual("foo", firstMessage.Text);
-                Assert.IsTrue(lastMessage.SendDate > firstMessage.SendDate);
-            }
-        }
+        //        Assert.AreEqual("bar", lastMessage.Text);
+        //        Assert.AreEqual("foo", firstMessage.Text);
+        //        Assert.IsTrue(lastMessage.SendDate > firstMessage.SendDate);
+        //    }
+        //}
     }
 }
 

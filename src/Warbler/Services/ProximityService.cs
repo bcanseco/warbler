@@ -83,38 +83,25 @@ namespace Warbler.Services
 
             var response = await GooglePlaces.NearBySearch.QueryAsync(request);
 
+            // TODO: Make an actual, scalable filter
+            var temporaryWhitelist = new[]
+            {
+                "ChIJT1Ulp9wP3ogRj7ACb7ELBHw",
+                "ChIJt2TZracS3ogRI4a6fd9yUno",
+                "ChIJKVGWdeAO3ogRYhq3C1svUaw",
+                "ChIJUS-ncH4F3ogRV-sYIk2gdSs",
+                "ChIJGTgaAA4O3ogRs9HJBlZ55ak",
+                "ChIJMbAACOEP3ogRDQRK-ewjXAM",
+                "ChIJ4Upb_-cR3ogRChd3ibWIp8c",
+                "ChIJT8H66QQS3ogRG-eCXbWLfLI"
+            };
+
             // Some results are mistagged; this filter hopefully reduces misses/false-positives
             return response.Results
-                .Where(u => (u.Is(PlaceLocationType.University) || u.Is(PlaceLocationType.Library))
-                            && !(!u.Is(PlaceLocationType.University) && u.Is(PlaceLocationType.School)))
-                .Where(u => !u.IsDepartment())
-                .Where(u => !u.Name.Contains("Campus") && !u.Name.Contains("Laboratory"))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("School")))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("College")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("School")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("College")))
-                .Where(u => !(u.Name.Contains("College") && u.Name.Contains("School")))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("Center")))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("Office")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("Center")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("Office")))
-                .Where(u => !(u.Name.Contains("College") && u.Name.Contains("Center")))
-                .Where(u => !(u.Name.Contains("College") && u.Name.Contains("Office")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("Services")))
-                .Where(u => !(u.Name.Contains("College") && u.Name.Contains("Services")))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("Services")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("MBA")))
-                .Where(u => !(u.Name.Contains("College") && u.Name.Contains("MBA")))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("MBA")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("Graduate")))
-                .Where(u => !(u.Name.Contains("College") && u.Name.Contains("Masters")))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("Masters")))
-                .Where(u => !(u.Name.Contains("Institute") && u.Name.Contains("Masters")))
-                .Where(u => !(u.Name.Contains("College") && u.Name.Contains("Graduate")))
-                .Where(u => !(u.Name.Contains("University") && u.Name.Contains("Graduate")))
-                .GroupBy(u => u.Name)
-                .Select(u => u.First())
-                .OrderBy(u => u.Name)
+                .Where(r => temporaryWhitelist.Contains(r.PlaceId))
+                //.Where(u => (u.Is(PlaceLocationType.University) || u.Is(PlaceLocationType.Library))
+                //            && !(!u.Is(PlaceLocationType.University) && u.Is(PlaceLocationType.School)))
+                //.Where(u => !u.IsDepartment())
                 .ToList();
         }
     }

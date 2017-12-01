@@ -34,13 +34,6 @@ namespace Warbler.Repositories
             await Context.SaveChangesAsync();
         }
 
-        public async Task AddBlockedUser(User user, string blockedUser)
-        {
-            var block = await Context.Users.FirstOrDefaultAsync(u => u.UserName == blockedUser);
-            user.blockedUsers.Add(block);
-            await Context.SaveChangesAsync();
-        }
-
         public async Task<User> FindByNameAsync(string userName)
             => await Context.Users.SingleAsync(u => u.UserName == userName);
     }

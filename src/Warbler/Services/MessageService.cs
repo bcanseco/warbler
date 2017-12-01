@@ -23,8 +23,8 @@ namespace Warbler.Services
         /// </summary>
         /// <param name="channel">The channel to fetch messages from.</param>
         /// <returns>A collection of saved messages.</returns>
-        public async Task<List<Message>> LatestIn(Channel channel, List<User> blockedUser)
-            => await Repository.LatestIn(channel, blockedUser).ToList();
+        public async Task<List<Message>> LatestIn(Channel channel)
+            => await Repository.LatestIn(channel).ToList();
 
         /// <summary>
         ///   Creates and returns a message.

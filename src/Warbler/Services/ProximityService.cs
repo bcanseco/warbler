@@ -125,8 +125,6 @@ namespace Warbler.Services
         /// <param name="location">Contains lat/lng used for the location search.</param>
         private async Task<List<NearByResult>> SearchUniversitiesAsync(Location location)
         {
-            location.Latitude = 34.0522;
-            location.Longitude = -118.2437;
             var request = new PlacesNearBySearchRequest
             {
                 Keyword = "university",

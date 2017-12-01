@@ -29,7 +29,6 @@ namespace Warbler.Models
         public UserFlag Flag { get; set; }
         
         public ICollection<Membership> Memberships { get; set; }
-        public ICollection<User> blockedUsers { get; set; }
 
         [DataMember]
         public bool IsOnline { get; set; }

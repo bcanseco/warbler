@@ -22,12 +22,11 @@ namespace Warbler.Repositories
             Context = context;
         }
 
-        public IAsyncEnumerable<Message> LatestIn(Channel channel, List<User> blockedUsers)
+        public IAsyncEnumerable<Message> LatestIn(Channel channel)
             => Context.Channels
                 .Include(ch => ch.Messages)
                 .Single(ch => ch.Equals(channel)).Messages
                 .OrderBy(m => m.SendDate)
-                .Where(m => !blockedUsers.Contains(m.Sender))
                 .Take(25)
                 .ToAsyncEnumerable();
 

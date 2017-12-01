@@ -67,7 +67,7 @@ namespace Warbler.Services
                 {
                     // This channel is not being watched; we must fetch its messages
                     // TODO: Switch to Task => .Entry().Collection().LoadAsync()?
-                    channel.Messages = await MessageService.LatestIn(channel, user.blockedUsers.ToList());
+                    channel.Messages = await MessageService.LatestIn(channel);
                     
                     // Start watching the channel
                     ChannelStatus.TryAdd(channel.Id, watchedChannel = channel);

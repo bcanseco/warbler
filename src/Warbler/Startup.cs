@@ -141,15 +141,16 @@ namespace Warbler
             }
             
             var dbContext = serviceProvider.GetService<WarblerDbContext>();
-            dbContext.Database.EnsureCreated();
+            if (dbContext.Database.EnsureCreated())
+            {
+                new ChannelTemplateService(new SqlChannelTemplateRepository(dbContext))
+                    .CreateDefaultTemplatesAsync()
+                    .Wait();
+            }
 
             var samlConfigs = serviceProvider.GetService<SamlConfigurations>();
             var authConfigService = new AuthConfigService(new SqlAuthConfigRepository(dbContext), samlConfigs);
             authConfigService.RefreshConfigsAsync().Wait();
-
-            new ChannelTemplateService(new SqlChannelTemplateRepository(dbContext))
-                .CreateDefaultTemplatesAsync()
-                .Wait();
 
             app.UseStaticFiles();
 

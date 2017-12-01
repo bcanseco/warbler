@@ -39,7 +39,8 @@ module.exports = (env) => {
         "react-google-maps",
         "react-simple-popover",
         "react-quill",
-        "quill-emoji/dist/quill-emoji.js"
+        "quill-emoji/dist/quill-emoji.js",
+        "react-avatar"
       ].concat([
         "font-awesome/css/font-awesome.css",
         "bootstrap/dist/css/bootstrap.css",

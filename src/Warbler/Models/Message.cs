@@ -15,7 +15,7 @@ namespace Warbler.Models
 
         [JsonIgnore]
         public Channel Channel { get; set; }
-        [JsonIgnore]
+        //[JsonIgnore]
         public User Sender { get; set; }
     }
 }

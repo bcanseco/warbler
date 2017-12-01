@@ -20,13 +20,14 @@
     width: 90%;
     margin-left: 5%;
     outline: none;
-    background: whitesmoke;
+    background: #9b27b0;
+    color: white;
     border: 3px solid #9b27b0;
-    border-radius: 5px;
+    border-radius: 2px;
     align-self: center;
     font-size: 1rem;
     font-weight: 300;
-    font-family: 'Segoe UI';
+    font-family: sans-serif;
     line-height: 2rem;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -125,6 +126,7 @@
 .message-pane {
     flex: 55%;
     order: 3;
+    max-width: 55%;
 }
 
 .message-area {
@@ -135,13 +137,37 @@
 
 .message-container {
     list-style: none;
-    margin: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     border-bottom: 1px solid gainsboro;
-    padding: 20px; 
+    padding-top: 2%;
+    padding-bottom: 2%;
+    word-wrap: break-word;
+    width: 95%;
 }
 
 .message-container:last-child {
     border-bottom: none;
+}
+
+.message-content-box {
+    display: inline-block;
+}
+
+.message-text {
+    font-size: 1.5em;
+    display: inline-block;
+    width: 90%;
+
+    > p {
+      margin-bottom: 0;
+    }
+}
+
+.message-details {
+    font-size: 0.9em;
+    margin-left: 50px;
+    font-style: italic;
 }
 
 .user-pane {
@@ -212,9 +238,14 @@
 }
 
 .ava-thumbnail {
-    height: 30px;
     margin-right: 5px;
-    align-self: center;
+    position: relative;
+    top: 0;
+}
+
+.ava-img {
+    height: 30px;
+    margin-right: 10px;
 }
 
 .user-online {

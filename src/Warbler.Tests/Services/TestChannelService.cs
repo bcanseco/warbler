@@ -1,23 +1,26 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using GoogleApi.Entities.Common;
+using GoogleApi.Entities.Places.Common;
+using GoogleApi.Entities.Places.Search.NearBy.Response;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Warbler.Misc;
 using Warbler.Repositories;
 using Warbler.Models;
+using Warbler.Services;
 using Warbler.Models.Enums;
 using System.Collections.Generic;
 
-namespace Warbler.Tests.Repositories
+namespace Warbler.Tests.Services
 {
     [TestClass]
-    public class TestSqlChannelRepository
+    public class TestChannelService
     {
         private DbContextOptions<WarblerDbContext> Options { get; }
             = new DbContextOptionsBuilder<WarblerDbContext>()
-                .UseInMemoryDatabase(nameof(TestSqlChannelRepository))
+                .UseInMemoryDatabase(nameof(TestChannelService))
                 .Options;
-
 
         [TestMethod]
         public async Task UpdateAsync_Should_Update_Channel()
@@ -25,6 +28,7 @@ namespace Warbler.Tests.Repositories
             using (var context = new WarblerDbContext(Options))
             {
                 var repo = new SqlChannelRepository(context);
+                var test = new ChannelService(repo);
 
                 var testChannel = new Channel
                 {
@@ -35,7 +39,7 @@ namespace Warbler.Tests.Repositories
                     Memberships = new List<Membership>()
                 };
 
-                await repo.UpdateAsync(testChannel);
+                await test.UpdateAsync(testChannel);
             }
 
             // Use separate context instance to verify correct data was saved to DB

@@ -47,6 +47,7 @@ namespace Warbler.Tests.Services
         }
 
         [TestMethod]
+        [Ignore]
         public async Task SubmitClaimAsync_Should_Create_New_Claim_Request()
         {
             using (var context = new WarblerDbContext(Options))

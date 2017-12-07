@@ -9,6 +9,7 @@ using Warbler.Models;
 
 namespace Warbler.Controllers
 {
+    [Authorize(Roles = "Developer")]
     public class DevController : Controller
     {
         private UniversityService UniversityService { get; }
@@ -19,8 +20,7 @@ namespace Warbler.Controllers
             UniversityService = new UniversityService(new SqlUniversityRepository(context));
             ClaimRequestService = new ClaimRequestService(new SqlClaimRequestRepository(context));
         }
-
-        [Authorize]
+        
         public IActionResult Index()
         {
             ViewData["Title"] = "Developer Panel";

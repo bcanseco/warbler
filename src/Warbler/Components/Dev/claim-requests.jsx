@@ -16,6 +16,7 @@ export default class ClaimRequests extends React.Component {
           'Accept': "application/json, text/plain, */*",
           'Content-Type': "application/json"
         },
+        credentials: "include",
         body: JSON.stringify(claim)
       })
       .then(() => location.reload());

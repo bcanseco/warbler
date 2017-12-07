@@ -34,9 +34,12 @@
           <li class="nav-item">
             <a class="nav-link" asp-controller="Chat" asp-action="Index">Chat</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" asp-controller="Dev" asp-action="Index">Admin</a>
-          </li>
+          @if (User.IsInRole("Developer"))
+          {
+            <li class="nav-item">
+              <a class="nav-link" asp-controller="Dev" asp-action="Index">Dev</a>
+            </li>
+          }
         </ul>
         @await Html.PartialAsync("_LoginPartial")
       </div>

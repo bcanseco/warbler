@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using ComponentSpace.Saml2;
@@ -7,7 +8,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Warbler.Interfaces;
 using Warbler.Models;
@@ -19,29 +19,29 @@ namespace Warbler.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
         private readonly ISamlServiceProvider _samlServiceProvider;
-        private readonly IConfiguration _configuration;
 
         public AccountController(
             UserManager<User> userManager,
+            RoleManager<IdentityRole> roleManager,
             SignInManager<User> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
             ILoggerFactory loggerFactory,
-            ISamlServiceProvider samlServiceProvider,
-            IConfiguration configuration)
+            ISamlServiceProvider samlServiceProvider)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
             _samlServiceProvider = samlServiceProvider;
-            _configuration = configuration;
         }
         
         // GET: /Account/Login
@@ -115,6 +115,13 @@ namespace Warbler.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    if (user.UserName.Equals("Dev", StringComparison.OrdinalIgnoreCase))
+                    {
+                        const string roleName = "Developer";
+                        await _roleManager.CreateAsync(new IdentityRole(roleName));
+                        await _userManager.AddToRoleAsync(user, roleName);
+                    }
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=532713
                     // Send an email with this link
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

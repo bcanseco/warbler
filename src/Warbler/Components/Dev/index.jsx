@@ -20,14 +20,14 @@ export default class Dev extends React.Component {
   }
 
   getData() {
-    fetch("/Dev/Universities")
+    fetch("/Dev/Universities", { credentials: "include" })
       .then(response => response.json())
       .then(universities => {
         this.log("getUniversities()", universities);
         this.setState({ universities: universities });
       });
 
-    fetch("/Dev/Claims")
+    fetch("/Dev/Claims", { credentials: "include" })
       .then(response => response.json())
       .then(claims => {
         this.log("getClaims()", claims);

@@ -62,5 +62,15 @@ namespace Warbler.Controllers
             
             await ClaimRequestService.UpdateAsync(claim);
         }
+
+        /// <summary>
+        ///   TODO: For demo purposes only; remove this route.
+        /// </summary>
+        [Route("delete/{universityId:int}")]
+        public async Task<IActionResult> DeleteUniversityAsync(int universityId)
+        {
+            await UniversityService.DeleteAsync(await UniversityService.FindByIdAsync(universityId));
+            return RedirectToAction("Index");
+        }
     }
 }

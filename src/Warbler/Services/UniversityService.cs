@@ -79,5 +79,8 @@ namespace Warbler.Services
         public async Task<University> FindByIdAsync(int id)
             => await Repository.AllQueryable(QueryDepth.User)
                 .FirstAsync(u => u.Id == id);
+
+        public async Task DeleteAsync(University university)
+            => await Repository.DeleteAsync(university);
     }
 }

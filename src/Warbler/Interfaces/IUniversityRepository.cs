@@ -42,6 +42,13 @@ namespace Warbler.Interfaces
         Task ApplyClaimAsync(University university, string claimeeId);
 
         /// <summary>
+        ///   Removes a university from the database.
+        ///   Will also delete any navigation entities.
+        /// </summary>
+        /// <param name="university">The university to remove.</param>
+        Task DeleteAsync(University university);
+
+        /// <summary>
         ///   Gets an executable query for all universities in the database.
         /// </summary>
         /// <param name="depth">At what level navigation properties should be retrieved.</param>

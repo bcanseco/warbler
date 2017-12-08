@@ -75,6 +75,12 @@ namespace Warbler.Repositories
             await SaveAsync();
         }
 
+        public async Task DeleteAsync(University university)
+        {
+            Context.Remove(university);
+            await SaveAsync();
+        }
+
         public IQueryable<University> AllQueryable(QueryDepth depth)
         {
             switch (depth)

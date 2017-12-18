@@ -7,7 +7,9 @@ items:
   children:
   - Warbler.Repositories.SqlUniversityRepository.#ctor(Warbler.Misc.WarblerDbContext)
   - Warbler.Repositories.SqlUniversityRepository.AllQueryable(QueryDepth)
-  - Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
+  - Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+  - Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  - Warbler.Repositories.SqlUniversityRepository.DeleteAsync(Warbler.Models.University)
   - Warbler.Repositories.SqlUniversityRepository.LookupAsync(System.String)
   - Warbler.Repositories.SqlUniversityRepository.SaveAsync
   langs:
@@ -20,7 +22,7 @@ items:
   source:
     id: SqlUniversityRepository
     path: ''
-    startLine: 2670
+    startLine: 3337
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -63,7 +65,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2674
+    startLine: 3341
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -78,39 +80,44 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
-  commentId: M:Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
-  id: CreateAsync(NearByResult)
+- uid: Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  id: CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
   parent: Warbler.Repositories.SqlUniversityRepository
   langs:
   - csharp
   - vb
-  name: CreateAsync(NearByResult)
-  nameWithType: SqlUniversityRepository.CreateAsync(NearByResult)
-  fullName: Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)
+  name: CreateAsync(NearByResult, IEnumerable<ChannelTemplate>)
+  nameWithType: SqlUniversityRepository.CreateAsync(NearByResult, IEnumerable<ChannelTemplate>)
+  fullName: Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult, System.Collections.Generic.IEnumerable<Warbler.Models.ChannelTemplate>)
   type: Method
   source:
     id: CreateAsync
     path: ''
-    startLine: 2679
+    startLine: 3344
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
   syntax:
-    content: public Task<University> CreateAsync(NearByResult uni)
+    content: public Task<University> CreateAsync(NearByResult uni, IEnumerable<ChannelTemplate> templates)
     parameters:
     - id: uni
       type: NearByResult
+    - id: templates
+      type: System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate}
     return:
       type: Task{Warbler.Models.University}
-    content.vb: Public Function CreateAsync(uni As NearByResult) As Task(Of University)
+    content.vb: Public Function CreateAsync(uni As NearByResult, templates As IEnumerable(Of ChannelTemplate)) As Task(Of University)
   overload: Warbler.Repositories.SqlUniversityRepository.CreateAsync*
   implements:
-  - Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  - Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  nameWithType.vb: SqlUniversityRepository.CreateAsync(NearByResult, IEnumerable(Of ChannelTemplate))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+  fullName.vb: Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult, System.Collections.Generic.IEnumerable(Of Warbler.Models.ChannelTemplate))
+  name.vb: CreateAsync(NearByResult, IEnumerable(Of ChannelTemplate))
 - uid: Warbler.Repositories.SqlUniversityRepository.SaveAsync
   commentId: M:Warbler.Repositories.SqlUniversityRepository.SaveAsync
   id: SaveAsync
@@ -125,7 +132,7 @@ items:
   source:
     id: SaveAsync
     path: ''
-    startLine: 2719
+    startLine: 3372
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -155,7 +162,7 @@ items:
   source:
     id: LookupAsync
     path: ''
-    startLine: 2724
+    startLine: 3375
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -174,6 +181,74 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+  id: ApplyClaimAsync(Warbler.Models.University,System.String)
+  parent: Warbler.Repositories.SqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: ApplyClaimAsync(University, String)
+  nameWithType: SqlUniversityRepository.ApplyClaimAsync(University, String)
+  fullName: Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync(Warbler.Models.University, System.String)
+  type: Method
+  source:
+    id: ApplyClaimAsync
+    path: ''
+    startLine: 3388
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task ApplyClaimAsync(University university, string claimeeId)
+    parameters:
+    - id: university
+      type: Warbler.Models.University
+    - id: claimeeId
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function ApplyClaimAsync(university As University, claimeeId As String) As Task
+  overload: Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync*
+  implements:
+  - Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlUniversityRepository.DeleteAsync(Warbler.Models.University)
+  commentId: M:Warbler.Repositories.SqlUniversityRepository.DeleteAsync(Warbler.Models.University)
+  id: DeleteAsync(Warbler.Models.University)
+  parent: Warbler.Repositories.SqlUniversityRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(University)
+  nameWithType: SqlUniversityRepository.DeleteAsync(University)
+  fullName: Warbler.Repositories.SqlUniversityRepository.DeleteAsync(Warbler.Models.University)
+  type: Method
+  source:
+    id: DeleteAsync
+    path: ''
+    startLine: 3395
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task DeleteAsync(University university)
+    parameters:
+    - id: university
+      type: Warbler.Models.University
+    return:
+      type: Task
+    content.vb: Public Function DeleteAsync(university As University) As Task
+  overload: Warbler.Repositories.SqlUniversityRepository.DeleteAsync*
+  implements:
+  - Warbler.Interfaces.IUniversityRepository.DeleteAsync(Warbler.Models.University)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Warbler.Repositories.SqlUniversityRepository.AllQueryable(QueryDepth)
   commentId: M:Warbler.Repositories.SqlUniversityRepository.AllQueryable(QueryDepth)
   id: AllQueryable(QueryDepth)
@@ -188,7 +263,7 @@ items:
   source:
     id: AllQueryable
     path: ''
-    startLine: 2737
+    startLine: 3401
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -544,15 +619,18 @@ references:
   name: CreateAsync
   nameWithType: SqlUniversityRepository.CreateAsync
   fullName: Warbler.Repositories.SqlUniversityRepository.CreateAsync
-- uid: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
-  commentId: M:Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+- uid: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  commentId: M:Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
   parent: Warbler.Interfaces.IUniversityRepository
   isExternal: true
-  name: CreateAsync(NearByResult)
-  nameWithType: IUniversityRepository.CreateAsync(NearByResult)
-  fullName: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  name: CreateAsync(NearByResult, IEnumerable<ChannelTemplate>)
+  nameWithType: IUniversityRepository.CreateAsync(NearByResult, IEnumerable<ChannelTemplate>)
+  fullName: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult, System.Collections.Generic.IEnumerable<Warbler.Models.ChannelTemplate>)
+  nameWithType.vb: IUniversityRepository.CreateAsync(NearByResult, IEnumerable(Of ChannelTemplate))
+  fullName.vb: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult, System.Collections.Generic.IEnumerable(Of Warbler.Models.ChannelTemplate))
+  name.vb: CreateAsync(NearByResult, IEnumerable(Of ChannelTemplate))
   spec.csharp:
-  - uid: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  - uid: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
     name: CreateAsync
     nameWithType: IUniversityRepository.CreateAsync
     fullName: Warbler.Interfaces.IUniversityRepository.CreateAsync
@@ -564,11 +642,29 @@ references:
     nameWithType: NearByResult
     fullName: NearByResult
     isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)
+  - uid: Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
     name: CreateAsync
     nameWithType: IUniversityRepository.CreateAsync
     fullName: Warbler.Interfaces.IUniversityRepository.CreateAsync
@@ -580,6 +676,24 @@ references:
     nameWithType: NearByResult
     fullName: NearByResult
     isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: )
     nameWithType: )
     fullName: )
@@ -588,6 +702,48 @@ references:
   name: NearByResult
   nameWithType: NearByResult
   fullName: NearByResult
+- uid: System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate}
+  commentId: T:System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ChannelTemplate>
+  nameWithType: IEnumerable<ChannelTemplate>
+  fullName: System.Collections.Generic.IEnumerable<Warbler.Models.ChannelTemplate>
+  nameWithType.vb: IEnumerable(Of ChannelTemplate)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Warbler.Models.ChannelTemplate)
+  name.vb: IEnumerable(Of ChannelTemplate)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Task{Warbler.Models.University}
   commentId: '!:Task{Warbler.Models.University}'
   definition: Task`1
@@ -629,6 +785,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Task`1
   isExternal: true
   name: Task<>
@@ -759,6 +960,121 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync*
+  commentId: Overload:Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync
+  isExternal: false
+  name: ApplyClaimAsync
+  nameWithType: SqlUniversityRepository.ApplyClaimAsync
+  fullName: Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync
+- uid: Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+  commentId: M:Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+  parent: Warbler.Interfaces.IUniversityRepository
+  isExternal: true
+  name: ApplyClaimAsync(University, String)
+  nameWithType: IUniversityRepository.ApplyClaimAsync(University, String)
+  fullName: Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync(Warbler.Models.University, System.String)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+    name: ApplyClaimAsync
+    nameWithType: IUniversityRepository.ApplyClaimAsync
+    fullName: Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)
+    name: ApplyClaimAsync
+    nameWithType: IUniversityRepository.ApplyClaimAsync
+    fullName: Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Warbler.Repositories.SqlUniversityRepository.DeleteAsync*
+  commentId: Overload:Warbler.Repositories.SqlUniversityRepository.DeleteAsync
+  isExternal: false
+  name: DeleteAsync
+  nameWithType: SqlUniversityRepository.DeleteAsync
+  fullName: Warbler.Repositories.SqlUniversityRepository.DeleteAsync
+- uid: Warbler.Interfaces.IUniversityRepository.DeleteAsync(Warbler.Models.University)
+  commentId: M:Warbler.Interfaces.IUniversityRepository.DeleteAsync(Warbler.Models.University)
+  parent: Warbler.Interfaces.IUniversityRepository
+  isExternal: false
+  name: DeleteAsync(University)
+  nameWithType: IUniversityRepository.DeleteAsync(University)
+  fullName: Warbler.Interfaces.IUniversityRepository.DeleteAsync(Warbler.Models.University)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IUniversityRepository.DeleteAsync(Warbler.Models.University)
+    name: DeleteAsync
+    nameWithType: IUniversityRepository.DeleteAsync
+    fullName: Warbler.Interfaces.IUniversityRepository.DeleteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IUniversityRepository.DeleteAsync(Warbler.Models.University)
+    name: DeleteAsync
+    nameWithType: IUniversityRepository.DeleteAsync
+    fullName: Warbler.Interfaces.IUniversityRepository.DeleteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.University
+    name: University
+    nameWithType: University
+    fullName: Warbler.Models.University
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Warbler.Repositories.SqlUniversityRepository.AllQueryable*
   commentId: Overload:Warbler.Repositories.SqlUniversityRepository.AllQueryable
   isExternal: false

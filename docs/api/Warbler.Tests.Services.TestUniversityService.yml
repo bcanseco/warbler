@@ -1,0 +1,529 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Services.TestUniversityService
+  commentId: T:Warbler.Tests.Services.TestUniversityService
+  id: TestUniversityService
+  parent: Warbler.Tests.Services
+  children:
+  - Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything
+  - Warbler.Tests.Services.TestUniversityService.CreateUniversity(TestContext)
+  - Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University
+  - Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+  - Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+  langs:
+  - csharp
+  - vb
+  name: TestUniversityService
+  nameWithType: TestUniversityService
+  fullName: Warbler.Tests.Services.TestUniversityService
+  type: Class
+  source:
+    id: TestUniversityService
+    path: ''
+    startLine: 5069
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public class TestUniversityService
+    content.vb: Public Class TestUniversityService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Tests.Services.TestUniversityService.CreateUniversity(TestContext)
+  commentId: M:Warbler.Tests.Services.TestUniversityService.CreateUniversity(TestContext)
+  id: CreateUniversity(TestContext)
+  parent: Warbler.Tests.Services.TestUniversityService
+  langs:
+  - csharp
+  - vb
+  name: CreateUniversity(TestContext)
+  nameWithType: TestUniversityService.CreateUniversity(TestContext)
+  fullName: Warbler.Tests.Services.TestUniversityService.CreateUniversity(TestContext)
+  type: Method
+  source:
+    id: CreateUniversity
+    path: ''
+    startLine: 5080
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public static Task CreateUniversity(TestContext _)
+    parameters:
+    - id: _
+      type: TestContext
+    return:
+      type: Task
+    content.vb: Public Shared Function CreateUniversity(_ As TestContext) As Task
+  overload: Warbler.Tests.Services.TestUniversityService.CreateUniversity*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+  commentId: M:Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+  id: GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+  parent: Warbler.Tests.Services.TestUniversityService
+  langs:
+  - csharp
+  - vb
+  name: GetOrCreateAsync_Should_Return_A_Preexisting_Uni()
+  nameWithType: TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni()
+  fullName: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni()
+  type: Method
+  source:
+    id: GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+    path: ''
+    startLine: 5110
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task GetOrCreateAsync_Should_Return_A_Preexisting_Uni()
+    return:
+      type: Task
+    content.vb: Public Function GetOrCreateAsync_Should_Return_A_Preexisting_Uni As Task
+  overload: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University
+  commentId: M:Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University
+  id: GetOrCreateAsync_Should_Create_A_New_University
+  parent: Warbler.Tests.Services.TestUniversityService
+  langs:
+  - csharp
+  - vb
+  name: GetOrCreateAsync_Should_Create_A_New_University()
+  nameWithType: TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University()
+  fullName: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University()
+  type: Method
+  source:
+    id: GetOrCreateAsync_Should_Create_A_New_University
+    path: ''
+    startLine: 5133
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task GetOrCreateAsync_Should_Create_A_New_University()
+    return:
+      type: Task
+    content.vb: Public Function GetOrCreateAsync_Should_Create_A_New_University As Task
+  overload: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+  commentId: M:Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+  id: JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+  parent: Warbler.Tests.Services.TestUniversityService
+  langs:
+  - csharp
+  - vb
+  name: JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University()
+  nameWithType: TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University()
+  fullName: Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University()
+  type: Method
+  source:
+    id: JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+    path: ''
+    startLine: 5157
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University()
+    return:
+      type: Task
+    content.vb: Public Function JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University As Task
+  overload: Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything
+  commentId: M:Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything
+  id: AllQueryable_Message_Should_Get_Everything
+  parent: Warbler.Tests.Services.TestUniversityService
+  langs:
+  - csharp
+  - vb
+  name: AllQueryable_Message_Should_Get_Everything()
+  nameWithType: TestUniversityService.AllQueryable_Message_Should_Get_Everything()
+  fullName: Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything()
+  type: Method
+  source:
+    id: AllQueryable_Message_Should_Get_Everything
+    path: ''
+    startLine: 5175
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task AllQueryable_Message_Should_Get_Everything()
+    return:
+      type: Task
+    content.vb: Public Function AllQueryable_Message_Should_Get_Everything As Task
+  overload: Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Tests.Services
+  commentId: N:Warbler.Tests.Services
+  isExternal: false
+  name: Warbler.Tests.Services
+  nameWithType: Warbler.Tests.Services
+  fullName: Warbler.Tests.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Tests.Services.TestUniversityService.CreateUniversity*
+  commentId: Overload:Warbler.Tests.Services.TestUniversityService.CreateUniversity
+  isExternal: false
+  name: CreateUniversity
+  nameWithType: TestUniversityService.CreateUniversity
+  fullName: Warbler.Tests.Services.TestUniversityService.CreateUniversity
+- uid: TestContext
+  isExternal: true
+  name: TestContext
+  nameWithType: TestContext
+  fullName: TestContext
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni*
+  commentId: Overload:Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+  isExternal: false
+  name: GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+  nameWithType: TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+  fullName: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Return_A_Preexisting_Uni
+- uid: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University*
+  commentId: Overload:Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University
+  isExternal: false
+  name: GetOrCreateAsync_Should_Create_A_New_University
+  nameWithType: TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University
+  fullName: Warbler.Tests.Services.TestUniversityService.GetOrCreateAsync_Should_Create_A_New_University
+- uid: Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University*
+  commentId: Overload:Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+  isExternal: false
+  name: JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+  nameWithType: TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+  fullName: Warbler.Tests.Services.TestUniversityService.JoinAsync_Should_Have_Users_Join_All_Channels_In_A_University
+- uid: Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything*
+  commentId: Overload:Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything
+  isExternal: false
+  name: AllQueryable_Message_Should_Get_Everything
+  nameWithType: TestUniversityService.AllQueryable_Message_Should_Get_Everything
+  fullName: Warbler.Tests.Services.TestUniversityService.AllQueryable_Message_Should_Get_Everything

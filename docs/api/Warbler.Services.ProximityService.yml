@@ -6,9 +6,7 @@ items:
   parent: Warbler.Services
   children:
   - Warbler.Services.ProximityService.#ctor(IHubContext{Warbler.Hubs.ProximityHub},IOptions{Warbler.Misc.ApiKeys},ILogger{Warbler.Services.ProximityService})
-  - Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
   - Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)
-  - Warbler.Services.ProximityService.SelectUniversityAsync(Warbler.Models.User,System.String,System.String)
   - Warbler.Services.ProximityService.With(Warbler.Misc.WarblerDbContext)
   langs:
   - csharp
@@ -20,7 +18,7 @@ items:
   source:
     id: ProximityService
     path: ''
-    startLine: 3138
+    startLine: 3925
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -65,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3145
+    startLine: 3932
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -101,7 +99,7 @@ items:
   source:
     id: With
     path: ''
-    startLine: 3162
+    startLine: 3945
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -114,39 +112,6 @@ items:
       type: Warbler.Services.ProximityService
     content.vb: Public Function With(context As WarblerDbContext) As ProximityService
   overload: Warbler.Services.ProximityService.With*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
-  commentId: M:Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
-  id: OnDisconnectedAsync(System.String)
-  parent: Warbler.Services.ProximityService
-  langs:
-  - csharp
-  - vb
-  name: OnDisconnectedAsync(String)
-  nameWithType: ProximityService.OnDisconnectedAsync(String)
-  fullName: Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)
-  type: Method
-  source:
-    id: OnDisconnectedAsync
-    path: ''
-    startLine: 3172
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Services
-  summary: "\nInvoked from the hub on each disconnected client. Removes the\nclient's choice list from <xref href=\"Warbler.Services.ProximityService.UserChoices\" data-throw-if-not-resolved=\"false\"></xref> if it exists.\n"
-  example: []
-  syntax:
-    content: public Task OnDisconnectedAsync(string userName)
-    parameters:
-    - id: userName
-      type: System.String
-    return:
-      type: Task
-    content.vb: Public Function OnDisconnectedAsync(userName As String) As Task
-  overload: Warbler.Services.ProximityService.OnDisconnectedAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -165,7 +130,7 @@ items:
   source:
     id: ProximitySearchAsync
     path: ''
-    startLine: 3185
+    startLine: 3958
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -187,50 +152,6 @@ items:
       type: Task
     content.vb: Public Function ProximitySearchAsync(user As User, connectionId As String, coordinates As Location) As Task
   overload: Warbler.Services.ProximityService.ProximitySearchAsync*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Warbler.Services.ProximityService.SelectUniversityAsync(Warbler.Models.User,System.String,System.String)
-  commentId: M:Warbler.Services.ProximityService.SelectUniversityAsync(Warbler.Models.User,System.String,System.String)
-  id: SelectUniversityAsync(Warbler.Models.User,System.String,System.String)
-  parent: Warbler.Services.ProximityService
-  langs:
-  - csharp
-  - vb
-  name: SelectUniversityAsync(User, String, String)
-  nameWithType: ProximityService.SelectUniversityAsync(User, String, String)
-  fullName: Warbler.Services.ProximityService.SelectUniversityAsync(Warbler.Models.User, System.String, System.String)
-  type: Method
-  source:
-    id: SelectUniversityAsync
-    path: ''
-    startLine: 3213
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Services
-  summary: "\nValidates the user's university selection and lets them join if successful.\n"
-  example: []
-  syntax:
-    content: public Task SelectUniversityAsync(User user, string connectionId, string placeId)
-    parameters:
-    - id: user
-      type: Warbler.Models.User
-      description: The user selecting a university.
-    - id: connectionId
-      type: System.String
-      description: The user's connection ID.
-    - id: placeId
-      type: System.String
-      description: The Google Place ID of the selected university.
-    return:
-      type: Task
-    content.vb: Public Function SelectUniversityAsync(user As User, connectionId As String, placeId As String) As Task
-  overload: Warbler.Services.ProximityService.SelectUniversityAsync*
-  exceptions:
-  - type: System.NullReferenceException
-    commentId: T:System.NullReferenceException
-    description: "\nThrown if this method is called for a user before <xref href=\"Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User%2cSystem.String%2cLocation)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1122,26 +1043,6 @@ references:
   name: ProximityService
   nameWithType: ProximityService
   fullName: Warbler.Services.ProximityService
-- uid: Warbler.Services.ProximityService.UserChoices
-  commentId: P:Warbler.Services.ProximityService.UserChoices
-- uid: Warbler.Services.ProximityService.OnDisconnectedAsync*
-  commentId: Overload:Warbler.Services.ProximityService.OnDisconnectedAsync
-  isExternal: false
-  name: OnDisconnectedAsync
-  nameWithType: ProximityService.OnDisconnectedAsync
-  fullName: Warbler.Services.ProximityService.OnDisconnectedAsync
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: Task
-  isExternal: true
-  name: Task
-  nameWithType: Task
-  fullName: Task
 - uid: Warbler.Services.ProximityService.ProximitySearchAsync*
   commentId: Overload:Warbler.Services.ProximityService.ProximitySearchAsync
   isExternal: false
@@ -1155,25 +1056,27 @@ references:
   name: User
   nameWithType: User
   fullName: Warbler.Models.User
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Location
   commentId: '!:Location'
   isExternal: true
   name: Location
   nameWithType: Location
   fullName: Location
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
 - uid: Warbler.Models
   commentId: N:Warbler.Models
   isExternal: false
   name: Warbler.Models
   nameWithType: Warbler.Models
   fullName: Warbler.Models
-- uid: Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)
-  commentId: M:Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)
-- uid: Warbler.Services.ProximityService.SelectUniversityAsync*
-  commentId: Overload:Warbler.Services.ProximityService.SelectUniversityAsync
-  isExternal: false
-  name: SelectUniversityAsync
-  nameWithType: ProximityService.SelectUniversityAsync
-  fullName: Warbler.Services.ProximityService.SelectUniversityAsync
-- uid: System.NullReferenceException
-  commentId: T:System.NullReferenceException

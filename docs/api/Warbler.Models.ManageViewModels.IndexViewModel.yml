@@ -6,6 +6,7 @@ items:
   parent: Warbler.Models.ManageViewModels
   children:
   - Warbler.Models.ManageViewModels.IndexViewModel.BrowserRemembered
+  - Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity
   - Warbler.Models.ManageViewModels.IndexViewModel.HasPassword
   - Warbler.Models.ManageViewModels.IndexViewModel.Logins
   - Warbler.Models.ManageViewModels.IndexViewModel.PhoneNumber
@@ -20,7 +21,7 @@ items:
   source:
     id: IndexViewModel
     path: ''
-    startLine: 2460
+    startLine: 2961
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -57,7 +58,7 @@ items:
   source:
     id: HasPassword
     path: ''
-    startLine: 2462
+    startLine: 2963
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -88,7 +89,7 @@ items:
   source:
     id: Logins
     path: ''
-    startLine: 2464
+    startLine: 2965
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -96,7 +97,7 @@ items:
     content: public IList<UserLoginInfo> Logins { get; set; }
     parameters: []
     return:
-      type: IList{UserLoginInfo}
+      type: System.Collections.Generic.IList{UserLoginInfo}
     content.vb: Public Property Logins As IList(Of UserLoginInfo)
   overload: Warbler.Models.ManageViewModels.IndexViewModel.Logins*
   modifiers.csharp:
@@ -119,7 +120,7 @@ items:
   source:
     id: PhoneNumber
     path: ''
-    startLine: 2466
+    startLine: 2967
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -150,7 +151,7 @@ items:
   source:
     id: TwoFactor
     path: ''
-    startLine: 2468
+    startLine: 2969
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -181,7 +182,7 @@ items:
   source:
     id: BrowserRemembered
     path: ''
-    startLine: 2470
+    startLine: 2971
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -192,6 +193,37 @@ items:
       type: System.Boolean
     content.vb: Public Property BrowserRemembered As Boolean
   overload: Warbler.Models.ManageViewModels.IndexViewModel.BrowserRemembered*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity
+  commentId: P:Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity
+  id: ClaimedUniversity
+  parent: Warbler.Models.ManageViewModels.IndexViewModel
+  langs:
+  - csharp
+  - vb
+  name: ClaimedUniversity
+  nameWithType: IndexViewModel.ClaimedUniversity
+  fullName: Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity
+  type: Property
+  source:
+    id: ClaimedUniversity
+    path: ''
+    startLine: 2973
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models.ManageViewModels
+  syntax:
+    content: public University ClaimedUniversity { get; set; }
+    parameters: []
+    return:
+      type: Warbler.Models.University
+    content.vb: Public Property ClaimedUniversity As University
+  overload: Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity*
   modifiers.csharp:
   - public
   - get
@@ -516,20 +548,21 @@ references:
   name: Logins
   nameWithType: IndexViewModel.Logins
   fullName: Warbler.Models.ManageViewModels.IndexViewModel.Logins
-- uid: IList{UserLoginInfo}
-  commentId: '!:IList{UserLoginInfo}'
-  definition: IList`1
+- uid: System.Collections.Generic.IList{UserLoginInfo}
+  commentId: T:System.Collections.Generic.IList{UserLoginInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
   name: IList<UserLoginInfo>
   nameWithType: IList<UserLoginInfo>
-  fullName: IList<UserLoginInfo>
+  fullName: System.Collections.Generic.IList<UserLoginInfo>
   nameWithType.vb: IList(Of UserLoginInfo)
-  fullName.vb: IList(Of UserLoginInfo)
+  fullName.vb: System.Collections.Generic.IList(Of UserLoginInfo)
   name.vb: IList(Of UserLoginInfo)
   spec.csharp:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: <
     nameWithType: <
@@ -543,10 +576,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -559,44 +592,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IList`1
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
   isExternal: true
-  name: IList<>
-  nameWithType: IList<>
-  fullName: IList<>
-  nameWithType.vb: IList(Of )
-  fullName.vb: IList(Of )
-  name.vb: IList(Of )
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
   spec.csharp:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Warbler.Models.ManageViewModels.IndexViewModel.PhoneNumber*
   commentId: Overload:Warbler.Models.ManageViewModels.IndexViewModel.PhoneNumber
   isExternal: false
@@ -622,3 +662,22 @@ references:
   name: BrowserRemembered
   nameWithType: IndexViewModel.BrowserRemembered
   fullName: Warbler.Models.ManageViewModels.IndexViewModel.BrowserRemembered
+- uid: Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity*
+  commentId: Overload:Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity
+  isExternal: false
+  name: ClaimedUniversity
+  nameWithType: IndexViewModel.ClaimedUniversity
+  fullName: Warbler.Models.ManageViewModels.IndexViewModel.ClaimedUniversity
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models

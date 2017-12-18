@@ -1,0 +1,311 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IClaimRequestRepository
+  commentId: T:Warbler.Interfaces.IClaimRequestRepository
+  id: IClaimRequestRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  - Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  - Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  - Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  langs:
+  - csharp
+  - vb
+  name: IClaimRequestRepository
+  nameWithType: IClaimRequestRepository
+  fullName: Warbler.Interfaces.IClaimRequestRepository
+  type: Interface
+  source:
+    id: IClaimRequestRepository
+    path: ''
+    startLine: 1679
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for claim requests.\n"
+  example: []
+  syntax:
+    content: public interface IClaimRequestRepository
+    content.vb: Public Interface IClaimRequestRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  id: CreateAsync(Warbler.Models.ClaimRequest)
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(ClaimRequest)
+  nameWithType: IClaimRequestRepository.CreateAsync(ClaimRequest)
+  fullName: Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  type: Method
+  source:
+    id: CreateAsync
+    path: ''
+    startLine: 1685
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nSaves the provided claim request to the database.\n"
+  example: []
+  syntax:
+    content: Task CreateAsync(ClaimRequest claimRequest)
+    parameters:
+    - id: claimRequest
+      type: Warbler.Models.ClaimRequest
+      description: The claim request form model.
+    return:
+      type: Task
+    content.vb: Function CreateAsync(claimRequest As ClaimRequest) As Task
+  overload: Warbler.Interfaces.IClaimRequestRepository.CreateAsync*
+- uid: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  id: GetAllAsync
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IClaimRequestRepository.GetAllAsync()
+  fullName: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync()
+  type: Method
+  source:
+    id: GetAllAsync
+    path: ''
+    startLine: 1691
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nGets all claim requests in the database.\n"
+  example: []
+  syntax:
+    content: Task<List<ClaimRequest>> GetAllAsync()
+    return:
+      type: Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}
+      description: A list of claim requests.
+    content.vb: Function GetAllAsync As Task(Of List(Of ClaimRequest))
+  overload: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync*
+- uid: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  id: AllFromUserAsync(Warbler.Models.User)
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: AllFromUserAsync(User)
+  nameWithType: IClaimRequestRepository.AllFromUserAsync(User)
+  fullName: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  type: Method
+  source:
+    id: AllFromUserAsync
+    path: ''
+    startLine: 1698
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nGets all claim requests submitted by a user.\n"
+  example: []
+  syntax:
+    content: Task<List<ClaimRequest>> AllFromUserAsync(User user)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+      description: The user to search with.
+    return:
+      type: Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}
+      description: A list of claim requests.
+    content.vb: Function AllFromUserAsync(user As User) As Task(Of List(Of ClaimRequest))
+  overload: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync*
+- uid: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  id: UpdateAsync(Warbler.Models.ClaimRequest)
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(ClaimRequest)
+  nameWithType: IClaimRequestRepository.UpdateAsync(ClaimRequest)
+  fullName: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  type: Method
+  source:
+    id: UpdateAsync
+    path: ''
+    startLine: 1704
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nSaves changes to the claim request in the database.\n"
+  example: []
+  syntax:
+    content: Task UpdateAsync(ClaimRequest request)
+    parameters:
+    - id: request
+      type: Warbler.Models.ClaimRequest
+      description: The changed claim request.
+    return:
+      type: Task
+    content.vb: Function UpdateAsync(request As ClaimRequest) As Task
+  overload: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IClaimRequestRepository.CreateAsync*
+  commentId: Overload:Warbler.Interfaces.IClaimRequestRepository.CreateAsync
+  isExternal: false
+  name: CreateAsync
+  nameWithType: IClaimRequestRepository.CreateAsync
+  fullName: Warbler.Interfaces.IClaimRequestRepository.CreateAsync
+- uid: Warbler.Models.ClaimRequest
+  commentId: T:Warbler.Models.ClaimRequest
+  parent: Warbler.Models
+  isExternal: false
+  name: ClaimRequest
+  nameWithType: ClaimRequest
+  fullName: Warbler.Models.ClaimRequest
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync*
+  commentId: Overload:Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  isExternal: false
+  name: GetAllAsync
+  nameWithType: IClaimRequestRepository.GetAllAsync
+  fullName: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+- uid: Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}
+  commentId: '!:Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}'
+  definition: Task`1
+  name: Task<List<ClaimRequest>>
+  nameWithType: Task<List<ClaimRequest>>
+  fullName: Task<System.Collections.Generic.List<Warbler.Models.ClaimRequest>>
+  nameWithType.vb: Task(Of List(Of ClaimRequest))
+  fullName.vb: Task(Of System.Collections.Generic.List(Of Warbler.Models.ClaimRequest))
+  name.vb: Task(Of List(Of ClaimRequest))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync*
+  commentId: Overload:Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync
+  isExternal: false
+  name: AllFromUserAsync
+  nameWithType: IClaimRequestRepository.AllFromUserAsync
+  fullName: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+- uid: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync*
+  commentId: Overload:Warbler.Interfaces.IClaimRequestRepository.UpdateAsync
+  isExternal: false
+  name: UpdateAsync
+  nameWithType: IClaimRequestRepository.UpdateAsync
+  fullName: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync

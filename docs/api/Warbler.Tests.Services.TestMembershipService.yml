@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Services.TestMembershipService
+  commentId: T:Warbler.Tests.Services.TestMembershipService
+  id: TestMembershipService
+  parent: Warbler.Tests.Services
+  children:
+  - Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+  - Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+  - Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+  - Warbler.Tests.Services.TestMembershipService.CreateUniversity(TestContext)
+  langs:
+  - csharp
+  - vb
+  name: TestMembershipService
+  nameWithType: TestMembershipService
+  fullName: Warbler.Tests.Services.TestMembershipService
+  type: Class
+  source:
+    id: TestMembershipService
+    path: ''
+    startLine: 4853
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public class TestMembershipService
+    content.vb: Public Class TestMembershipService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Tests.Services.TestMembershipService.CreateUniversity(TestContext)
+  commentId: M:Warbler.Tests.Services.TestMembershipService.CreateUniversity(TestContext)
+  id: CreateUniversity(TestContext)
+  parent: Warbler.Tests.Services.TestMembershipService
+  langs:
+  - csharp
+  - vb
+  name: CreateUniversity(TestContext)
+  nameWithType: TestMembershipService.CreateUniversity(TestContext)
+  fullName: Warbler.Tests.Services.TestMembershipService.CreateUniversity(TestContext)
+  type: Method
+  source:
+    id: CreateUniversity
+    path: ''
+    startLine: 4864
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public static Task CreateUniversity(TestContext _)
+    parameters:
+    - id: _
+      type: TestContext
+    return:
+      type: Task
+    content.vb: Public Shared Function CreateUniversity(_ As TestContext) As Task
+  overload: Warbler.Tests.Services.TestMembershipService.CreateUniversity*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+  commentId: M:Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+  id: AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+  parent: Warbler.Tests.Services.TestMembershipService
+  langs:
+  - csharp
+  - vb
+  name: AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member()
+  nameWithType: TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member()
+  fullName: Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member()
+  type: Method
+  source:
+    id: AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+    path: ''
+    startLine: 4893
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member()
+    return:
+      type: Task
+    content.vb: Public Function AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member As Task
+  overload: Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+  commentId: M:Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+  id: AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+  parent: Warbler.Tests.Services.TestMembershipService
+  langs:
+  - csharp
+  - vb
+  name: AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members()
+  nameWithType: TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members()
+  fullName: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members()
+  type: Method
+  source:
+    id: AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+    path: ''
+    startLine: 4908
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members()
+    return:
+      type: Task
+    content.vb: Public Function AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members As Task
+  overload: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+  commentId: M:Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+  id: AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+  parent: Warbler.Tests.Services.TestMembershipService
+  langs:
+  - csharp
+  - vb
+  name: AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member()
+  nameWithType: TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member()
+  fullName: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member()
+  type: Method
+  source:
+    id: AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+    path: ''
+    startLine: 4922
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member()
+    return:
+      type: Task
+    content.vb: Public Function AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member As Task
+  overload: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Tests.Services
+  commentId: N:Warbler.Tests.Services
+  isExternal: false
+  name: Warbler.Tests.Services
+  nameWithType: Warbler.Tests.Services
+  fullName: Warbler.Tests.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Tests.Services.TestMembershipService.CreateUniversity*
+  commentId: Overload:Warbler.Tests.Services.TestMembershipService.CreateUniversity
+  isExternal: false
+  name: CreateUniversity
+  nameWithType: TestMembershipService.CreateUniversity
+  fullName: Warbler.Tests.Services.TestMembershipService.CreateUniversity
+- uid: TestContext
+  isExternal: true
+  name: TestContext
+  nameWithType: TestContext
+  fullName: TestContext
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member*
+  commentId: Overload:Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+  isExternal: false
+  name: AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+  nameWithType: TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+  fullName: Warbler.Tests.Services.TestMembershipService.AllChannelsForAsync_Should_Return_Channels_Where_User_Is_Member
+- uid: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members*
+  commentId: Overload:Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+  isExternal: false
+  name: AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+  nameWithType: TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+  fullName: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncChannel_Should_Return_Users_That_Are_Members
+- uid: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member*
+  commentId: Overload:Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+  isExternal: false
+  name: AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+  nameWithType: TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member
+  fullName: Warbler.Tests.Services.TestMembershipService.AllMembershipsForAsyncUser_Should_Return_Channels_Where_User_Is_Member

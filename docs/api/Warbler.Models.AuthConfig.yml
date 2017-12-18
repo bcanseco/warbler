@@ -1,0 +1,692 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.AuthConfig
+  commentId: T:Warbler.Models.AuthConfig
+  id: AuthConfig
+  parent: Warbler.Models
+  children:
+  - Warbler.Models.AuthConfig.Id
+  - Warbler.Models.AuthConfig.Name
+  - Warbler.Models.AuthConfig.op_Explicit(Warbler.Models.AuthConfig)~PartnerIdentityProviderConfiguration
+  - Warbler.Models.AuthConfig.OverrideUsernames
+  - Warbler.Models.AuthConfig.SingleLogoutServiceUrl
+  - Warbler.Models.AuthConfig.SingleSignOnServiceUrl
+  - Warbler.Models.AuthConfig.University
+  - Warbler.Models.AuthConfig.UniversityId
+  langs:
+  - csharp
+  - vb
+  name: AuthConfig
+  nameWithType: AuthConfig
+  fullName: Warbler.Models.AuthConfig
+  type: Class
+  source:
+    id: AuthConfig
+    path: ''
+    startLine: 2125
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public class AuthConfig
+    content.vb: Public Class AuthConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.AuthConfig.Id
+  commentId: P:Warbler.Models.AuthConfig.Id
+  id: Id
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: AuthConfig.Id
+  fullName: Warbler.Models.AuthConfig.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 2127
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Warbler.Models.AuthConfig.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AuthConfig.UniversityId
+  commentId: P:Warbler.Models.AuthConfig.UniversityId
+  id: UniversityId
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: UniversityId
+  nameWithType: AuthConfig.UniversityId
+  fullName: Warbler.Models.AuthConfig.UniversityId
+  type: Property
+  source:
+    id: UniversityId
+    path: ''
+    startLine: 2128
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public int UniversityId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property UniversityId As Integer
+  overload: Warbler.Models.AuthConfig.UniversityId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AuthConfig.University
+  commentId: P:Warbler.Models.AuthConfig.University
+  id: University
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: University
+  nameWithType: AuthConfig.University
+  fullName: Warbler.Models.AuthConfig.University
+  type: Property
+  source:
+    id: University
+    path: ''
+    startLine: 2129
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public University University { get; set; }
+    parameters: []
+    return:
+      type: Warbler.Models.University
+    content.vb: Public Property University As University
+  overload: Warbler.Models.AuthConfig.University*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AuthConfig.Name
+  commentId: P:Warbler.Models.AuthConfig.Name
+  id: Name
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: AuthConfig.Name
+  fullName: Warbler.Models.AuthConfig.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 2131
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Warbler.Models.AuthConfig.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AuthConfig.SingleSignOnServiceUrl
+  commentId: P:Warbler.Models.AuthConfig.SingleSignOnServiceUrl
+  id: SingleSignOnServiceUrl
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: SingleSignOnServiceUrl
+  nameWithType: AuthConfig.SingleSignOnServiceUrl
+  fullName: Warbler.Models.AuthConfig.SingleSignOnServiceUrl
+  type: Property
+  source:
+    id: SingleSignOnServiceUrl
+    path: ''
+    startLine: 2136
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string SingleSignOnServiceUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SingleSignOnServiceUrl As String
+  overload: Warbler.Models.AuthConfig.SingleSignOnServiceUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AuthConfig.SingleLogoutServiceUrl
+  commentId: P:Warbler.Models.AuthConfig.SingleLogoutServiceUrl
+  id: SingleLogoutServiceUrl
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: SingleLogoutServiceUrl
+  nameWithType: AuthConfig.SingleLogoutServiceUrl
+  fullName: Warbler.Models.AuthConfig.SingleLogoutServiceUrl
+  type: Property
+  source:
+    id: SingleLogoutServiceUrl
+    path: ''
+    startLine: 2141
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string SingleLogoutServiceUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SingleLogoutServiceUrl As String
+  overload: Warbler.Models.AuthConfig.SingleLogoutServiceUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AuthConfig.OverrideUsernames
+  commentId: P:Warbler.Models.AuthConfig.OverrideUsernames
+  id: OverrideUsernames
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: OverrideUsernames
+  nameWithType: AuthConfig.OverrideUsernames
+  fullName: Warbler.Models.AuthConfig.OverrideUsernames
+  type: Property
+  source:
+    id: OverrideUsernames
+    path: ''
+    startLine: 2146
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public bool OverrideUsernames { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property OverrideUsernames As Boolean
+  overload: Warbler.Models.AuthConfig.OverrideUsernames*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.AuthConfig.op_Explicit(Warbler.Models.AuthConfig)~PartnerIdentityProviderConfiguration
+  commentId: M:Warbler.Models.AuthConfig.op_Explicit(Warbler.Models.AuthConfig)~PartnerIdentityProviderConfiguration
+  id: op_Explicit(Warbler.Models.AuthConfig)~PartnerIdentityProviderConfiguration
+  parent: Warbler.Models.AuthConfig
+  langs:
+  - csharp
+  - vb
+  name: Explicit(AuthConfig to PartnerIdentityProviderConfiguration)
+  nameWithType: AuthConfig.Explicit(AuthConfig to PartnerIdentityProviderConfiguration)
+  fullName: Warbler.Models.AuthConfig.Explicit(Warbler.Models.AuthConfig to PartnerIdentityProviderConfiguration)
+  type: Operator
+  source:
+    id: op_Explicit
+    path: ''
+    startLine: 2150
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static explicit operator PartnerIdentityProviderConfiguration(AuthConfig config)
+    parameters:
+    - id: config
+      type: Warbler.Models.AuthConfig
+    return:
+      type: PartnerIdentityProviderConfiguration
+    content.vb: Public Shared Narrowing Operator CType(config As AuthConfig) As PartnerIdentityProviderConfiguration
+  overload: Warbler.Models.AuthConfig.op_Explicit*
+  nameWithType.vb: AuthConfig.Narrowing(AuthConfig to PartnerIdentityProviderConfiguration)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Warbler.Models.AuthConfig.Narrowing(Warbler.Models.AuthConfig to PartnerIdentityProviderConfiguration)
+  name.vb: Narrowing(AuthConfig to PartnerIdentityProviderConfiguration)
+references:
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.AuthConfig.Id*
+  commentId: Overload:Warbler.Models.AuthConfig.Id
+  isExternal: false
+  name: Id
+  nameWithType: AuthConfig.Id
+  fullName: Warbler.Models.AuthConfig.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Warbler.Models.AuthConfig.UniversityId*
+  commentId: Overload:Warbler.Models.AuthConfig.UniversityId
+  isExternal: false
+  name: UniversityId
+  nameWithType: AuthConfig.UniversityId
+  fullName: Warbler.Models.AuthConfig.UniversityId
+- uid: Warbler.Models.AuthConfig.University*
+  commentId: Overload:Warbler.Models.AuthConfig.University
+  isExternal: false
+  name: University
+  nameWithType: AuthConfig.University
+  fullName: Warbler.Models.AuthConfig.University
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Warbler.Models.AuthConfig.Name*
+  commentId: Overload:Warbler.Models.AuthConfig.Name
+  isExternal: false
+  name: Name
+  nameWithType: AuthConfig.Name
+  fullName: Warbler.Models.AuthConfig.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.AuthConfig.SingleSignOnServiceUrl*
+  commentId: Overload:Warbler.Models.AuthConfig.SingleSignOnServiceUrl
+  isExternal: false
+  name: SingleSignOnServiceUrl
+  nameWithType: AuthConfig.SingleSignOnServiceUrl
+  fullName: Warbler.Models.AuthConfig.SingleSignOnServiceUrl
+- uid: Warbler.Models.AuthConfig.SingleLogoutServiceUrl*
+  commentId: Overload:Warbler.Models.AuthConfig.SingleLogoutServiceUrl
+  isExternal: false
+  name: SingleLogoutServiceUrl
+  nameWithType: AuthConfig.SingleLogoutServiceUrl
+  fullName: Warbler.Models.AuthConfig.SingleLogoutServiceUrl
+- uid: Warbler.Models.AuthConfig.OverrideUsernames*
+  commentId: Overload:Warbler.Models.AuthConfig.OverrideUsernames
+  isExternal: false
+  name: OverrideUsernames
+  nameWithType: AuthConfig.OverrideUsernames
+  fullName: Warbler.Models.AuthConfig.OverrideUsernames
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Warbler.Models.AuthConfig.op_Explicit*
+  commentId: Overload:Warbler.Models.AuthConfig.op_Explicit
+  isExternal: false
+  name: Explicit
+  nameWithType: AuthConfig.Explicit
+  fullName: Warbler.Models.AuthConfig.Explicit
+  nameWithType.vb: AuthConfig.Narrowing
+  fullName.vb: Warbler.Models.AuthConfig.Narrowing
+  name.vb: Narrowing
+- uid: Warbler.Models.AuthConfig
+  commentId: T:Warbler.Models.AuthConfig
+  parent: Warbler.Models
+  isExternal: false
+  name: AuthConfig
+  nameWithType: AuthConfig
+  fullName: Warbler.Models.AuthConfig
+- uid: PartnerIdentityProviderConfiguration
+  commentId: '!:PartnerIdentityProviderConfiguration'
+  isExternal: true
+  name: PartnerIdentityProviderConfiguration
+  nameWithType: PartnerIdentityProviderConfiguration
+  fullName: PartnerIdentityProviderConfiguration

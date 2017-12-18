@@ -1,0 +1,315 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IAuthConfigRepository
+  commentId: T:Warbler.Interfaces.IAuthConfigRepository
+  id: IAuthConfigRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync(Warbler.Models.University)
+  - Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync
+  - Warbler.Interfaces.IAuthConfigRepository.SaveAsync(Warbler.Models.AuthConfig)
+  langs:
+  - csharp
+  - vb
+  name: IAuthConfigRepository
+  nameWithType: IAuthConfigRepository
+  fullName: Warbler.Interfaces.IAuthConfigRepository
+  type: Interface
+  source:
+    id: IAuthConfigRepository
+    path: ''
+    startLine: 1603
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for third-party authentication configurations.\n"
+  example: []
+  syntax:
+    content: public interface IAuthConfigRepository
+    content.vb: Public Interface IAuthConfigRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync(Warbler.Models.University)
+  commentId: M:Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync(Warbler.Models.University)
+  id: GetConfigAsync(Warbler.Models.University)
+  parent: Warbler.Interfaces.IAuthConfigRepository
+  langs:
+  - csharp
+  - vb
+  name: GetConfigAsync(University)
+  nameWithType: IAuthConfigRepository.GetConfigAsync(University)
+  fullName: Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync(Warbler.Models.University)
+  type: Method
+  source:
+    id: GetConfigAsync
+    path: ''
+    startLine: 1610
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nReturns a university's authentication configuration or null.\n"
+  example: []
+  syntax:
+    content: Task<AuthConfig> GetConfigAsync(University university)
+    parameters:
+    - id: university
+      type: Warbler.Models.University
+      description: The claimed university to match.
+    return:
+      type: Task{Warbler.Models.AuthConfig}
+      description: The auth config, or null if none exists.
+    content.vb: Function GetConfigAsync(university As University) As Task(Of AuthConfig)
+  overload: Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync*
+- uid: Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync
+  commentId: M:Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync
+  id: GetConfigsAsync
+  parent: Warbler.Interfaces.IAuthConfigRepository
+  langs:
+  - csharp
+  - vb
+  name: GetConfigsAsync()
+  nameWithType: IAuthConfigRepository.GetConfigsAsync()
+  fullName: Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync()
+  type: Method
+  source:
+    id: GetConfigsAsync
+    path: ''
+    startLine: 1616
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nGets all authentication configurations from the database.\n"
+  example: []
+  syntax:
+    content: Task<List<AuthConfig>> GetConfigsAsync()
+    return:
+      type: Task{System.Collections.Generic.List{Warbler.Models.AuthConfig}}
+      description: A list of auth configs.
+    content.vb: Function GetConfigsAsync As Task(Of List(Of AuthConfig))
+  overload: Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync*
+- uid: Warbler.Interfaces.IAuthConfigRepository.SaveAsync(Warbler.Models.AuthConfig)
+  commentId: M:Warbler.Interfaces.IAuthConfigRepository.SaveAsync(Warbler.Models.AuthConfig)
+  id: SaveAsync(Warbler.Models.AuthConfig)
+  parent: Warbler.Interfaces.IAuthConfigRepository
+  langs:
+  - csharp
+  - vb
+  name: SaveAsync(AuthConfig)
+  nameWithType: IAuthConfigRepository.SaveAsync(AuthConfig)
+  fullName: Warbler.Interfaces.IAuthConfigRepository.SaveAsync(Warbler.Models.AuthConfig)
+  type: Method
+  source:
+    id: SaveAsync
+    path: ''
+    startLine: 1622
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nAdds or updates an authentication configuration to the database.\n"
+  example: []
+  syntax:
+    content: Task SaveAsync(AuthConfig config)
+    parameters:
+    - id: config
+      type: Warbler.Models.AuthConfig
+      description: The configuration to save.
+    return:
+      type: Task
+    content.vb: Function SaveAsync(config As AuthConfig) As Task
+  overload: Warbler.Interfaces.IAuthConfigRepository.SaveAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync*
+  commentId: Overload:Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync
+  isExternal: false
+  name: GetConfigAsync
+  nameWithType: IAuthConfigRepository.GetConfigAsync
+  fullName: Warbler.Interfaces.IAuthConfigRepository.GetConfigAsync
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Task{Warbler.Models.AuthConfig}
+  commentId: '!:Task{Warbler.Models.AuthConfig}'
+  definition: Task`1
+  name: Task<AuthConfig>
+  nameWithType: Task<AuthConfig>
+  fullName: Task<Warbler.Models.AuthConfig>
+  nameWithType.vb: Task(Of AuthConfig)
+  fullName.vb: Task(Of Warbler.Models.AuthConfig)
+  name.vb: Task(Of AuthConfig)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync*
+  commentId: Overload:Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync
+  isExternal: false
+  name: GetConfigsAsync
+  nameWithType: IAuthConfigRepository.GetConfigsAsync
+  fullName: Warbler.Interfaces.IAuthConfigRepository.GetConfigsAsync
+- uid: Task{System.Collections.Generic.List{Warbler.Models.AuthConfig}}
+  commentId: '!:Task{System.Collections.Generic.List{Warbler.Models.AuthConfig}}'
+  definition: Task`1
+  name: Task<List<AuthConfig>>
+  nameWithType: Task<List<AuthConfig>>
+  fullName: Task<System.Collections.Generic.List<Warbler.Models.AuthConfig>>
+  nameWithType.vb: Task(Of List(Of AuthConfig))
+  fullName.vb: Task(Of System.Collections.Generic.List(Of Warbler.Models.AuthConfig))
+  name.vb: Task(Of List(Of AuthConfig))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Interfaces.IAuthConfigRepository.SaveAsync*
+  commentId: Overload:Warbler.Interfaces.IAuthConfigRepository.SaveAsync
+  isExternal: false
+  name: SaveAsync
+  nameWithType: IAuthConfigRepository.SaveAsync
+  fullName: Warbler.Interfaces.IAuthConfigRepository.SaveAsync
+- uid: Warbler.Models.AuthConfig
+  commentId: T:Warbler.Models.AuthConfig
+  parent: Warbler.Models
+  isExternal: false
+  name: AuthConfig
+  nameWithType: AuthConfig
+  fullName: Warbler.Models.AuthConfig
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

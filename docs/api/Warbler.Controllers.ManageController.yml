@@ -5,7 +5,7 @@ items:
   id: ManageController
   parent: Warbler.Controllers
   children:
-  - Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)
+  - Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext,SamlConfigurations)
   - Warbler.Controllers.ManageController.AddPhoneNumber
   - Warbler.Controllers.ManageController.AddPhoneNumber(AddPhoneNumberViewModel)
   - Warbler.Controllers.ManageController.ChangePassword
@@ -22,6 +22,9 @@ items:
   - Warbler.Controllers.ManageController.RemovePhoneNumber
   - Warbler.Controllers.ManageController.SetPassword
   - Warbler.Controllers.ManageController.SetPassword(SetPasswordViewModel)
+  - Warbler.Controllers.ManageController.TestSaml(Warbler.Models.AuthConfig)
+  - Warbler.Controllers.ManageController.University(System.Int32)
+  - Warbler.Controllers.ManageController.University(Warbler.Models.AuthConfig)
   - Warbler.Controllers.ManageController.VerifyPhoneNumber(System.String)
   - Warbler.Controllers.ManageController.VerifyPhoneNumber(VerifyPhoneNumberViewModel)
   langs:
@@ -34,7 +37,7 @@ items:
   source:
     id: ManageController
     path: ''
-    startLine: 769
+    startLine: 887
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -51,26 +54,26 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)
-  commentId: M:Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)
-  id: '#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)'
+- uid: Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext,SamlConfigurations)
+  commentId: M:Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext,SamlConfigurations)
+  id: '#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext,SamlConfigurations)'
   parent: Warbler.Controllers.ManageController
   langs:
   - csharp
   - vb
-  name: ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
-  nameWithType: ManageController.ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
-  fullName: Warbler.Controllers.ManageController.ManageController(UserManager<Warbler.Models.User>, SignInManager<Warbler.Models.User>, Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory, Warbler.Misc.WarblerDbContext)
+  name: ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext, SamlConfigurations)
+  nameWithType: ManageController.ManageController(UserManager<User>, SignInManager<User>, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext, SamlConfigurations)
+  fullName: Warbler.Controllers.ManageController.ManageController(UserManager<Warbler.Models.User>, SignInManager<Warbler.Models.User>, Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory, Warbler.Misc.WarblerDbContext, SamlConfigurations)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 779
+    startLine: 898
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
   syntax:
-    content: public ManageController(UserManager<User> userManager, SignInManager<User> signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory, WarblerDbContext context)
+    content: public ManageController(UserManager<User> userManager, SignInManager<User> signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory, WarblerDbContext context, SamlConfigurations samlConfigurations)
     parameters:
     - id: userManager
       type: UserManager{Warbler.Models.User}
@@ -84,15 +87,17 @@ items:
       type: ILoggerFactory
     - id: context
       type: Warbler.Misc.WarblerDbContext
-    content.vb: Public Sub New(userManager As UserManager(Of User), signInManager As SignInManager(Of User), emailSender As IEmailSender, smsSender As ISmsSender, loggerFactory As ILoggerFactory, context As WarblerDbContext)
+    - id: samlConfigurations
+      type: SamlConfigurations
+    content.vb: Public Sub New(userManager As UserManager(Of User), signInManager As SignInManager(Of User), emailSender As IEmailSender, smsSender As ISmsSender, loggerFactory As ILoggerFactory, context As WarblerDbContext, samlConfigurations As SamlConfigurations)
   overload: Warbler.Controllers.ManageController.#ctor*
-  nameWithType.vb: ManageController.ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
+  nameWithType.vb: ManageController.ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext, SamlConfigurations)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Warbler.Controllers.ManageController.ManageController(UserManager(Of Warbler.Models.User), SignInManager(Of Warbler.Models.User), Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory, Warbler.Misc.WarblerDbContext)
-  name.vb: ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)
+  fullName.vb: Warbler.Controllers.ManageController.ManageController(UserManager(Of Warbler.Models.User), SignInManager(Of Warbler.Models.User), Warbler.Interfaces.IEmailSender, Warbler.Interfaces.ISmsSender, ILoggerFactory, Warbler.Misc.WarblerDbContext, SamlConfigurations)
+  name.vb: ManageController(UserManager(Of User), SignInManager(Of User), IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext, SamlConfigurations)
 - uid: Warbler.Controllers.ManageController.Index(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
   commentId: M:Warbler.Controllers.ManageController.Index(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
   id: Index(System.Nullable{Warbler.Controllers.ManageController.ManageMessageId})
@@ -107,7 +112,7 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 796
+    startLine: 917
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -141,7 +146,7 @@ items:
   source:
     id: RemoveLogin
     path: ''
-    startLine: 827
+    startLine: 954
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -172,7 +177,7 @@ items:
   source:
     id: AddPhoneNumber
     path: ''
-    startLine: 846
+    startLine: 973
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -200,7 +205,7 @@ items:
   source:
     id: AddPhoneNumber
     path: ''
-    startLine: 852
+    startLine: 979
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -231,7 +236,7 @@ items:
   source:
     id: EnableTwoFactorAuthentication
     path: ''
-    startLine: 872
+    startLine: 999
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -259,7 +264,7 @@ items:
   source:
     id: DisableTwoFactorAuthentication
     path: ''
-    startLine: 887
+    startLine: 1014
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -287,7 +292,7 @@ items:
   source:
     id: VerifyPhoneNumber
     path: ''
-    startLine: 902
+    startLine: 1029
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -318,7 +323,7 @@ items:
   source:
     id: VerifyPhoneNumber
     path: ''
-    startLine: 916
+    startLine: 1043
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -349,7 +354,7 @@ items:
   source:
     id: RemovePhoneNumber
     path: ''
-    startLine: 940
+    startLine: 1067
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -377,7 +382,7 @@ items:
   source:
     id: ChangePassword
     path: ''
-    startLine: 958
+    startLine: 1085
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -405,7 +410,7 @@ items:
   source:
     id: ChangePassword
     path: ''
-    startLine: 965
+    startLine: 1092
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -436,7 +441,7 @@ items:
   source:
     id: SetPassword
     path: ''
-    startLine: 990
+    startLine: 1117
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -464,7 +469,7 @@ items:
   source:
     id: SetPassword
     path: ''
-    startLine: 997
+    startLine: 1124
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -495,7 +500,7 @@ items:
   source:
     id: ManageLogins
     path: ''
-    startLine: 1022
+    startLine: 1149
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -529,7 +534,7 @@ items:
   source:
     id: LinkLogin
     path: ''
-    startLine: 1047
+    startLine: 1174
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -560,7 +565,7 @@ items:
   source:
     id: LinkLoginCallback
     path: ''
-    startLine: 1061
+    startLine: 1188
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -588,7 +593,7 @@ items:
   source:
     id: ClaimUniversity
     path: ''
-    startLine: 1086
+    startLine: 1213
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -616,7 +621,7 @@ items:
   source:
     id: ClaimUniversity
     path: ''
-    startLine: 1098
+    startLine: 1218
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -629,6 +634,99 @@ items:
       type: Task{IActionResult}
     content.vb: Public Function ClaimUniversity(model As ClaimUniversityViewModel) As Task(Of IActionResult)
   overload: Warbler.Controllers.ManageController.ClaimUniversity*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.University(System.Int32)
+  commentId: M:Warbler.Controllers.ManageController.University(System.Int32)
+  id: University(System.Int32)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: University(Int32)
+  nameWithType: ManageController.University(Int32)
+  fullName: Warbler.Controllers.ManageController.University(System.Int32)
+  type: Method
+  source:
+    id: University
+    path: ''
+    startLine: 1243
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> University(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function University(id As Integer) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.University*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.University(Warbler.Models.AuthConfig)
+  commentId: M:Warbler.Controllers.ManageController.University(Warbler.Models.AuthConfig)
+  id: University(Warbler.Models.AuthConfig)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: University(AuthConfig)
+  nameWithType: ManageController.University(AuthConfig)
+  fullName: Warbler.Controllers.ManageController.University(Warbler.Models.AuthConfig)
+  type: Method
+  source:
+    id: University
+    path: ''
+    startLine: 1263
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> University(AuthConfig config)
+    parameters:
+    - id: config
+      type: Warbler.Models.AuthConfig
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function University(config As AuthConfig) As Task(Of IActionResult)
+  overload: Warbler.Controllers.ManageController.University*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ManageController.TestSaml(Warbler.Models.AuthConfig)
+  commentId: M:Warbler.Controllers.ManageController.TestSaml(Warbler.Models.AuthConfig)
+  id: TestSaml(Warbler.Models.AuthConfig)
+  parent: Warbler.Controllers.ManageController
+  langs:
+  - csharp
+  - vb
+  name: TestSaml(AuthConfig)
+  nameWithType: ManageController.TestSaml(AuthConfig)
+  fullName: Warbler.Controllers.ManageController.TestSaml(Warbler.Models.AuthConfig)
+  type: Method
+  source:
+    id: TestSaml
+    path: ''
+    startLine: 1291
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult TestSaml(AuthConfig config)
+    parameters:
+    - id: config
+      type: Warbler.Models.AuthConfig
+    return:
+      type: IActionResult
+    content.vb: Public Function TestSaml(config As AuthConfig) As IActionResult
+  overload: Warbler.Controllers.ManageController.TestSaml*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -767,6 +865,11 @@ references:
   name: WarblerDbContext
   nameWithType: WarblerDbContext
   fullName: Warbler.Misc.WarblerDbContext
+- uid: SamlConfigurations
+  isExternal: true
+  name: SamlConfigurations
+  nameWithType: SamlConfigurations
+  fullName: SamlConfigurations
 - uid: UserManager`1
   isExternal: true
   name: UserManager<>
@@ -1186,3 +1289,35 @@ references:
   name: ClaimUniversityViewModel
   nameWithType: ClaimUniversityViewModel
   fullName: ClaimUniversityViewModel
+- uid: Warbler.Controllers.ManageController.University*
+  commentId: Overload:Warbler.Controllers.ManageController.University
+  isExternal: false
+  name: University
+  nameWithType: ManageController.University
+  fullName: Warbler.Controllers.ManageController.University
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Warbler.Models.AuthConfig
+  commentId: T:Warbler.Models.AuthConfig
+  parent: Warbler.Models
+  isExternal: false
+  name: AuthConfig
+  nameWithType: AuthConfig
+  fullName: Warbler.Models.AuthConfig
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Warbler.Controllers.ManageController.TestSaml*
+  commentId: Overload:Warbler.Controllers.ManageController.TestSaml
+  isExternal: false
+  name: TestSaml
+  nameWithType: ManageController.TestSaml
+  fullName: Warbler.Controllers.ManageController.TestSaml

@@ -188,13 +188,62 @@ Look at <a class="xref" href="Warbler.Interfaces.IUniversityRepository.html">IUn
       <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_AllQueryable_QueryDepth_">IUniversityRepository.AllQueryable(QueryDepth)</a></div>
   
   
-  <a id="Warbler_Repositories_SqlUniversityRepository_CreateAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.CreateAsync*"></a>
-  <h4 id="Warbler_Repositories_SqlUniversityRepository_CreateAsync_NearByResult_" data-uid="Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult)">CreateAsync(NearByResult)</h4>
+  <a id="Warbler_Repositories_SqlUniversityRepository_ApplyClaimAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync*"></a>
+  <h4 id="Warbler_Repositories_SqlUniversityRepository_ApplyClaimAsync_Warbler_Models_University_System_String_" data-uid="Warbler.Repositories.SqlUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)">ApplyClaimAsync(University, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;University&gt; CreateAsync(NearByResult uni)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ApplyClaimAsync(University university, string claimeeId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.University.html">University</a></td>
+        <td><span class="parametername">university</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">claimeeId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_ApplyClaimAsync_Warbler_Models_University_System_String_">IUniversityRepository.ApplyClaimAsync(University, String)</a></div>
+  
+  
+  <a id="Warbler_Repositories_SqlUniversityRepository_CreateAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.CreateAsync*"></a>
+  <h4 id="Warbler_Repositories_SqlUniversityRepository_CreateAsync_NearByResult_System_Collections_Generic_IEnumerable_Warbler_Models_ChannelTemplate__" data-uid="Warbler.Repositories.SqlUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})">CreateAsync(NearByResult, IEnumerable&lt;ChannelTemplate&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;University&gt; CreateAsync(NearByResult uni, IEnumerable&lt;ChannelTemplate&gt; templates)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,6 +258,11 @@ Look at <a class="xref" href="Warbler.Interfaces.IUniversityRepository.html">IUn
       <tr>
         <td><span class="xref">NearByResult</span></td>
         <td><span class="parametername">uni</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Warbler.Models.ChannelTemplate.html">ChannelTemplate</a>&gt;</td>
+        <td><span class="parametername">templates</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -229,7 +283,51 @@ Look at <a class="xref" href="Warbler.Interfaces.IUniversityRepository.html">IUn
     </tbody>
   </table>
   <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_CreateAsync_NearByResult_">IUniversityRepository.CreateAsync(NearByResult)</a></div>
+      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_CreateAsync_NearByResult_System_Collections_Generic_IEnumerable_Warbler_Models_ChannelTemplate__">IUniversityRepository.CreateAsync(NearByResult, IEnumerable&lt;ChannelTemplate&gt;)</a></div>
+  
+  
+  <a id="Warbler_Repositories_SqlUniversityRepository_DeleteAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.DeleteAsync*"></a>
+  <h4 id="Warbler_Repositories_SqlUniversityRepository_DeleteAsync_Warbler_Models_University_" data-uid="Warbler.Repositories.SqlUniversityRepository.DeleteAsync(Warbler.Models.University)">DeleteAsync(University)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteAsync(University university)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.University.html">University</a></td>
+        <td><span class="parametername">university</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Warbler.Interfaces.IUniversityRepository.html#Warbler_Interfaces_IUniversityRepository_DeleteAsync_Warbler_Models_University_">IUniversityRepository.DeleteAsync(University)</a></div>
   
   
   <a id="Warbler_Repositories_SqlUniversityRepository_LookupAsync_" data-uid="Warbler.Repositories.SqlUniversityRepository.LookupAsync*"></a>

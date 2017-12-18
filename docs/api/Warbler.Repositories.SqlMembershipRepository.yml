@@ -8,6 +8,7 @@ items:
   - Warbler.Repositories.SqlMembershipRepository.#ctor(Warbler.Misc.WarblerDbContext)
   - Warbler.Repositories.SqlMembershipRepository.AllFor(Warbler.Models.Channel)
   - Warbler.Repositories.SqlMembershipRepository.AllFor(Warbler.Models.User)
+  - Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
   langs:
   - csharp
   - vb
@@ -18,7 +19,7 @@ items:
   source:
     id: SqlMembershipRepository
     path: ''
-    startLine: 2574
+    startLine: 3205
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -61,7 +62,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2578
+    startLine: 3209
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -90,7 +91,7 @@ items:
   source:
     id: AllFor
     path: ''
-    startLine: 2583
+    startLine: 3214
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -123,7 +124,7 @@ items:
   source:
     id: AllFor
     path: ''
-    startLine: 2588
+    startLine: 3219
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Repositories
@@ -138,6 +139,39 @@ items:
   overload: Warbler.Repositories.SqlMembershipRepository.AllFor*
   implements:
   - Warbler.Interfaces.IMembershipRepository.AllFor(Warbler.Models.Channel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+  commentId: M:Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+  id: DropMembershipsAsync(Warbler.Models.Channel)
+  parent: Warbler.Repositories.SqlMembershipRepository
+  langs:
+  - csharp
+  - vb
+  name: DropMembershipsAsync(Channel)
+  nameWithType: SqlMembershipRepository.DropMembershipsAsync(Channel)
+  fullName: Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+  type: Method
+  source:
+    id: DropMembershipsAsync
+    path: ''
+    startLine: 3231
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task DropMembershipsAsync(Channel channel)
+    parameters:
+    - id: channel
+      type: Warbler.Models.Channel
+    return:
+      type: Task
+    content.vb: Public Function DropMembershipsAsync(channel As Channel) As Task
+  overload: Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync*
+  implements:
+  - Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -652,3 +686,51 @@ references:
   name: Channel
   nameWithType: Channel
   fullName: Warbler.Models.Channel
+- uid: Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync*
+  commentId: Overload:Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync
+  isExternal: false
+  name: DropMembershipsAsync
+  nameWithType: SqlMembershipRepository.DropMembershipsAsync
+  fullName: Warbler.Repositories.SqlMembershipRepository.DropMembershipsAsync
+- uid: Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+  commentId: M:Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+  parent: Warbler.Interfaces.IMembershipRepository
+  isExternal: false
+  name: DropMembershipsAsync(Channel)
+  nameWithType: IMembershipRepository.DropMembershipsAsync(Channel)
+  fullName: Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+    name: DropMembershipsAsync
+    nameWithType: IMembershipRepository.DropMembershipsAsync
+    fullName: Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync(Warbler.Models.Channel)
+    name: DropMembershipsAsync
+    nameWithType: IMembershipRepository.DropMembershipsAsync
+    fullName: Warbler.Interfaces.IMembershipRepository.DropMembershipsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.Channel
+    name: Channel
+    nameWithType: Channel
+    fullName: Warbler.Models.Channel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

@@ -7,7 +7,6 @@ items:
   - Warbler.Models.Enums.ChannelState
   - Warbler.Models.Enums.ChannelType
   - Warbler.Models.Enums.QueryDepth
-  - Warbler.Models.Enums.ServerType
   - Warbler.Models.Enums.UserFlag
   langs:
   - csharp
@@ -40,13 +39,6 @@ references:
   name: QueryDepth
   nameWithType: QueryDepth
   fullName: Warbler.Models.Enums.QueryDepth
-- uid: Warbler.Models.Enums.ServerType
-  commentId: T:Warbler.Models.Enums.ServerType
-  parent: Warbler.Models.Enums
-  isExternal: false
-  name: ServerType
-  nameWithType: ServerType
-  fullName: Warbler.Models.Enums.ServerType
 - uid: Warbler.Models.Enums.UserFlag
   commentId: T:Warbler.Models.Enums.UserFlag
   isExternal: false

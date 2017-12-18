@@ -16,7 +16,7 @@ items:
   source:
     id: HtmlHelperExtensions
     path: ''
-    startLine: 1175
+    startLine: 1457
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Extensions
@@ -55,7 +55,7 @@ items:
   source:
     id: IsDebug
     path: ''
-    startLine: 1177
+    startLine: 1459
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Extensions

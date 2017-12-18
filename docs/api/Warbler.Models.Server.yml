@@ -13,7 +13,6 @@ items:
   - Warbler.Models.Server.IsAuthEnabled
   - Warbler.Models.Server.op_Equality(Warbler.Models.Server,Warbler.Models.Server)
   - Warbler.Models.Server.op_Inequality(Warbler.Models.Server,Warbler.Models.Server)
-  - Warbler.Models.Server.Type
   - Warbler.Models.Server.University
   - Warbler.Models.Server.UniversityId
   langs:
@@ -26,7 +25,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1821
+    startLine: 2343
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -65,7 +64,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1824
+    startLine: 2346
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -96,48 +95,17 @@ items:
   source:
     id: IsAuthEnabled
     path: ''
-    startLine: 1825
+    startLine: 2347
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
   syntax:
-    content: public bool ? IsAuthEnabled { get; set; }
+    content: public bool IsAuthEnabled { get; set; }
     parameters: []
     return:
-      type: System.Nullable{System.Boolean}
-    content.vb: Public Property IsAuthEnabled As Boolean?
+      type: System.Boolean
+    content.vb: Public Property IsAuthEnabled As Boolean
   overload: Warbler.Models.Server.IsAuthEnabled*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Warbler.Models.Server.Type
-  commentId: P:Warbler.Models.Server.Type
-  id: Type
-  parent: Warbler.Models.Server
-  langs:
-  - csharp
-  - vb
-  name: Type
-  nameWithType: Server.Type
-  fullName: Warbler.Models.Server.Type
-  type: Property
-  source:
-    id: Type
-    path: ''
-    startLine: 1826
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Models
-  syntax:
-    content: public ServerType Type { get; set; }
-    parameters: []
-    return:
-      type: ServerType
-    content.vb: Public Property Type As ServerType
-  overload: Warbler.Models.Server.Type*
   modifiers.csharp:
   - public
   - get
@@ -158,7 +126,7 @@ items:
   source:
     id: UniversityId
     path: ''
-    startLine: 1827
+    startLine: 2348
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -189,7 +157,7 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1829
+    startLine: 2350
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -220,7 +188,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1831
+    startLine: 2352
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -228,7 +196,7 @@ items:
     content: public ICollection<Channel> Channels { get; set; }
     parameters: []
     return:
-      type: ICollection{Warbler.Models.Channel}
+      type: System.Collections.Generic.ICollection{Warbler.Models.Channel}
     content.vb: Public Property Channels As ICollection(Of Channel)
   overload: Warbler.Models.Server.Channels*
   modifiers.csharp:
@@ -251,7 +219,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1833
+    startLine: 2354
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -284,7 +252,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1840
+    startLine: 2361
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -318,7 +286,7 @@ items:
   source:
     id: GetHashCode
     path: ''
-    startLine: 1847
+    startLine: 2368
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -349,7 +317,7 @@ items:
   source:
     id: op_Equality
     path: ''
-    startLine: 1848
+    startLine: 2369
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -384,7 +352,7 @@ items:
   source:
     id: op_Inequality
     path: ''
-    startLine: 1849
+    startLine: 2370
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -732,101 +700,13 @@ references:
   name: IsAuthEnabled
   nameWithType: Server.IsAuthEnabled
   fullName: Warbler.Models.Server.IsAuthEnabled
-- uid: System.Nullable{System.Boolean}
-  commentId: T:System.Nullable{System.Boolean}
+- uid: System.Boolean
+  commentId: T:System.Boolean
   parent: System
-  definition: System.Nullable`1
-  name: Nullable<Boolean>
-  nameWithType: Nullable<Boolean>
-  fullName: System.Nullable<System.Boolean>
-  nameWithType.vb: Nullable(Of Boolean)
-  fullName.vb: System.Nullable(Of System.Boolean)
-  name.vb: Nullable(Of Boolean)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Boolean
-    name: Boolean
-    nameWithType: Boolean
-    fullName: System.Boolean
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
   isExternal: true
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Warbler.Models.Server.Type*
-  commentId: Overload:Warbler.Models.Server.Type
-  isExternal: false
-  name: Type
-  nameWithType: Server.Type
-  fullName: Warbler.Models.Server.Type
-- uid: ServerType
-  commentId: '!:ServerType'
-  isExternal: true
-  name: ServerType
-  nameWithType: ServerType
-  fullName: ServerType
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: Warbler.Models.Server.UniversityId*
   commentId: Overload:Warbler.Models.Server.UniversityId
   isExternal: false
@@ -852,20 +732,21 @@ references:
   name: Channels
   nameWithType: Server.Channels
   fullName: Warbler.Models.Server.Channels
-- uid: ICollection{Warbler.Models.Channel}
-  commentId: '!:ICollection{Warbler.Models.Channel}'
-  definition: ICollection`1
+- uid: System.Collections.Generic.ICollection{Warbler.Models.Channel}
+  commentId: T:System.Collections.Generic.ICollection{Warbler.Models.Channel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
   name: ICollection<Channel>
   nameWithType: ICollection<Channel>
-  fullName: ICollection<Warbler.Models.Channel>
+  fullName: System.Collections.Generic.ICollection<Warbler.Models.Channel>
   nameWithType.vb: ICollection(Of Channel)
-  fullName.vb: ICollection(Of Warbler.Models.Channel)
+  fullName.vb: System.Collections.Generic.ICollection(Of Warbler.Models.Channel)
   name.vb: ICollection(Of Channel)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -878,10 +759,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -893,44 +774,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ICollection`1
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
   isExternal: true
-  name: ICollection<>
-  nameWithType: ICollection<>
-  fullName: ICollection<>
-  nameWithType.vb: ICollection(Of )
-  fullName.vb: ICollection(Of )
-  name.vb: ICollection(Of )
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Warbler.Models.Server.Equals*
   commentId: Overload:Warbler.Models.Server.Equals
   isExternal: false
@@ -985,13 +873,6 @@ references:
   name: Server
   nameWithType: Server
   fullName: Warbler.Models.Server
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: System.IEquatable`1.Equals(`0)
   commentId: M:System.IEquatable`1.Equals(`0)
   isExternal: true

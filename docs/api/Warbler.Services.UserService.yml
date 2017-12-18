@@ -19,7 +19,7 @@ items:
   source:
     id: UserService
     path: ''
-    startLine: 3340
+    startLine: 4117
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -58,7 +58,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3344
+    startLine: 4121
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -87,7 +87,7 @@ items:
   source:
     id: IsNewAsync
     path: ''
-    startLine: 3354
+    startLine: 4131
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -121,7 +121,7 @@ items:
   source:
     id: FindByNameAsync
     path: ''
-    startLine: 3361
+    startLine: 4138
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -154,7 +154,7 @@ items:
   source:
     id: SetOnlineAsync
     path: ''
-    startLine: 3369
+    startLine: 4146
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services

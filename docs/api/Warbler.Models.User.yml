@@ -26,7 +26,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 1901
+    startLine: 2425
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -60,7 +60,7 @@ items:
   source:
     id: UserName
     path: ''
-    startLine: 1908
+    startLine: 2432
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -95,7 +95,7 @@ items:
   source:
     id: AvatarId
     path: ''
-    startLine: 1915
+    startLine: 2439
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -126,7 +126,7 @@ items:
   source:
     id: Flag
     path: ''
-    startLine: 1917
+    startLine: 2441
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -157,7 +157,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1920
+    startLine: 2444
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -165,7 +165,7 @@ items:
     content: public ICollection<Membership> Memberships { get; set; }
     parameters: []
     return:
-      type: ICollection{Warbler.Models.Membership}
+      type: System.Collections.Generic.ICollection{Warbler.Models.Membership}
     content.vb: Public Property Memberships As ICollection(Of Membership)
   overload: Warbler.Models.User.Memberships*
   modifiers.csharp:
@@ -188,7 +188,7 @@ items:
   source:
     id: IsOnline
     path: ''
-    startLine: 1922
+    startLine: 2446
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -219,7 +219,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1925
+    startLine: 2449
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -227,7 +227,7 @@ items:
     content: public IEnumerable<Channel> Channels { get; }
     parameters: []
     return:
-      type: IEnumerable{Warbler.Models.Channel}
+      type: System.Collections.Generic.IEnumerable{Warbler.Models.Channel}
     content.vb: Public ReadOnly Property Channels As IEnumerable(Of Channel)
   overload: Warbler.Models.User.Channels*
   modifiers.csharp:
@@ -250,7 +250,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1928
+    startLine: 2452
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -283,7 +283,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1930
+    startLine: 2454
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -316,7 +316,7 @@ items:
   source:
     id: GetHashCode
     path: ''
-    startLine: 1937
+    startLine: 2461
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -346,7 +346,7 @@ items:
   source:
     id: op_Equality
     path: ''
-    startLine: 1939
+    startLine: 2463
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -381,7 +381,7 @@ items:
   source:
     id: op_Inequality
     path: ''
-    startLine: 1940
+    startLine: 2464
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -547,20 +547,21 @@ references:
   name: Memberships
   nameWithType: User.Memberships
   fullName: Warbler.Models.User.Memberships
-- uid: ICollection{Warbler.Models.Membership}
-  commentId: '!:ICollection{Warbler.Models.Membership}'
-  definition: ICollection`1
+- uid: System.Collections.Generic.ICollection{Warbler.Models.Membership}
+  commentId: T:System.Collections.Generic.ICollection{Warbler.Models.Membership}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
   name: ICollection<Membership>
   nameWithType: ICollection<Membership>
-  fullName: ICollection<Warbler.Models.Membership>
+  fullName: System.Collections.Generic.ICollection<Warbler.Models.Membership>
   nameWithType.vb: ICollection(Of Membership)
-  fullName.vb: ICollection(Of Warbler.Models.Membership)
+  fullName.vb: System.Collections.Generic.ICollection(Of Warbler.Models.Membership)
   name.vb: ICollection(Of Membership)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -573,10 +574,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -588,44 +589,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ICollection`1
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
   isExternal: true
-  name: ICollection<>
-  nameWithType: ICollection<>
-  fullName: ICollection<>
-  nameWithType.vb: ICollection(Of )
-  fullName.vb: ICollection(Of )
-  name.vb: ICollection(Of )
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Warbler.Models.User.IsOnline*
   commentId: Overload:Warbler.Models.User.IsOnline
   isExternal: false
@@ -645,20 +653,21 @@ references:
   name: Channels
   nameWithType: User.Channels
   fullName: Warbler.Models.User.Channels
-- uid: IEnumerable{Warbler.Models.Channel}
-  commentId: '!:IEnumerable{Warbler.Models.Channel}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{Warbler.Models.Channel}
+  commentId: T:System.Collections.Generic.IEnumerable{Warbler.Models.Channel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<Channel>
   nameWithType: IEnumerable<Channel>
-  fullName: IEnumerable<Warbler.Models.Channel>
+  fullName: System.Collections.Generic.IEnumerable<Warbler.Models.Channel>
   nameWithType.vb: IEnumerable(Of Channel)
-  fullName.vb: IEnumerable(Of Warbler.Models.Channel)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Warbler.Models.Channel)
   name.vb: IEnumerable(Of Channel)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -671,10 +680,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -686,41 +695,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullName.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )

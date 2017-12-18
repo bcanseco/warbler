@@ -19,7 +19,7 @@ items:
   source:
     id: Startup
     path: ''
-    startLine: 19
+    startLine: 22
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -56,7 +56,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 21
+    startLine: 24
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -85,7 +85,7 @@ items:
   source:
     id: Main
     path: ''
-    startLine: 34
+    startLine: 37
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -119,7 +119,7 @@ items:
   source:
     id: ConfigureServices
     path: ''
-    startLine: 43
+    startLine: 46
   assemblies:
   - cs.temp.dll
   namespace: Warbler
@@ -150,7 +150,7 @@ items:
   source:
     id: Configure
     path: ''
-    startLine: 122
+    startLine: 118
   assemblies:
   - cs.temp.dll
   namespace: Warbler

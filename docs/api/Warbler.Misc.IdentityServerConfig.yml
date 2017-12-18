@@ -17,7 +17,7 @@ items:
   source:
     id: IdentityServerConfig
     path: ''
-    startLine: 1633
+    startLine: 2040
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -67,7 +67,7 @@ items:
   source:
     id: GetApiResource
     path: ''
-    startLine: 1639
+    startLine: 2046
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -76,7 +76,7 @@ items:
   syntax:
     content: public static IEnumerable<ApiResource> GetApiResource()
     return:
-      type: IEnumerable{ApiResource}
+      type: System.Collections.Generic.IEnumerable{ApiResource}
     content.vb: Public Shared Function GetApiResource As IEnumerable(Of ApiResource)
   overload: Warbler.Misc.IdentityServerConfig.GetApiResource*
   modifiers.csharp:
@@ -99,7 +99,7 @@ items:
   source:
     id: GetClient
     path: ''
-    startLine: 1648
+    startLine: 2055
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -108,7 +108,7 @@ items:
   syntax:
     content: public static IEnumerable<Client> GetClient()
     return:
-      type: IEnumerable{Client}
+      type: System.Collections.Generic.IEnumerable{Client}
     content.vb: Public Shared Function GetClient As IEnumerable(Of Client)
   overload: Warbler.Misc.IdentityServerConfig.GetClient*
   modifiers.csharp:
@@ -422,20 +422,21 @@ references:
   name: GetApiResource
   nameWithType: IdentityServerConfig.GetApiResource
   fullName: Warbler.Misc.IdentityServerConfig.GetApiResource
-- uid: IEnumerable{ApiResource}
-  commentId: '!:IEnumerable{ApiResource}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{ApiResource}
+  commentId: T:System.Collections.Generic.IEnumerable{ApiResource}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<ApiResource>
   nameWithType: IEnumerable<ApiResource>
-  fullName: IEnumerable<ApiResource>
+  fullName: System.Collections.Generic.IEnumerable<ApiResource>
   nameWithType.vb: IEnumerable(Of ApiResource)
-  fullName.vb: IEnumerable(Of ApiResource)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ApiResource)
   name.vb: IEnumerable(Of ApiResource)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -449,10 +450,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -465,64 +466,72 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullName.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Warbler.Misc.IdentityServerConfig.GetClient*
   commentId: Overload:Warbler.Misc.IdentityServerConfig.GetClient
   isExternal: false
   name: GetClient
   nameWithType: IdentityServerConfig.GetClient
   fullName: Warbler.Misc.IdentityServerConfig.GetClient
-- uid: IEnumerable{Client}
-  commentId: '!:IEnumerable{Client}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{Client}
+  commentId: T:System.Collections.Generic.IEnumerable{Client}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<Client>
   nameWithType: IEnumerable<Client>
-  fullName: IEnumerable<Client>
+  fullName: System.Collections.Generic.IEnumerable<Client>
   nameWithType.vb: IEnumerable(Of Client)
-  fullName.vb: IEnumerable(Of Client)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Client)
   name.vb: IEnumerable(Of Client)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -536,10 +545,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

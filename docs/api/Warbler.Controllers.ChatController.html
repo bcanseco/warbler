@@ -90,12 +90,12 @@
   
   
   <a id="Warbler_Controllers_ChatController__ctor_" data-uid="Warbler.Controllers.ChatController.#ctor*"></a>
-  <h4 id="Warbler_Controllers_ChatController__ctor_UserManager_Warbler_Models_User__Warbler_Misc_WarblerDbContext_" data-uid="Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)">ChatController(UserManager&lt;User&gt;, WarblerDbContext)</h4>
+  <h4 id="Warbler_Controllers_ChatController__ctor_Warbler_Misc_WarblerDbContext_" data-uid="Warbler.Controllers.ChatController.#ctor(Warbler.Misc.WarblerDbContext)">ChatController(WarblerDbContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ChatController(UserManager&lt;User&gt; userManager, WarblerDbContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public ChatController(WarblerDbContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,11 +107,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">UserManager</span>&lt;<a class="xref" href="Warbler.Models.User.html">User</a>&gt;</td>
-        <td><span class="parametername">userManager</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><a class="xref" href="Warbler.Misc.WarblerDbContext.html">WarblerDbContext</a></td>
         <td><span class="parametername">context</span></td>
@@ -167,6 +162,73 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Controllers_ChatController_Join_" data-uid="Warbler.Controllers.ChatController.Join*"></a>
+  <h4 id="Warbler_Controllers_ChatController_Join_NearByResult_" data-uid="Warbler.Controllers.ChatController.Join(NearByResult)">Join(NearByResult)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; Join(NearByResult userChoice)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NearByResult</span></td>
+        <td><span class="parametername">userChoice</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Controllers_ChatController_Nearby_" data-uid="Warbler.Controllers.ChatController.Nearby*"></a>
+  <h4 id="Warbler_Controllers_ChatController_Nearby" data-uid="Warbler.Controllers.ChatController.Nearby">Nearby()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActionResult Nearby()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IActionResult</span></td>
         <td></td>
       </tr>
     </tbody>

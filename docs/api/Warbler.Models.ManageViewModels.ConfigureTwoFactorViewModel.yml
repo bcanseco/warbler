@@ -17,7 +17,7 @@ items:
   source:
     id: ConfigureTwoFactorViewModel
     path: ''
-    startLine: 2439
+    startLine: 2940
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -54,7 +54,7 @@ items:
   source:
     id: SelectedProvider
     path: ''
-    startLine: 2441
+    startLine: 2942
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -85,7 +85,7 @@ items:
   source:
     id: Providers
     path: ''
-    startLine: 2443
+    startLine: 2944
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -93,7 +93,7 @@ items:
     content: public ICollection<SelectListItem> Providers { get; set; }
     parameters: []
     return:
-      type: ICollection{SelectListItem}
+      type: System.Collections.Generic.ICollection{SelectListItem}
     content.vb: Public Property Providers As ICollection(Of SelectListItem)
   overload: Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel.Providers*
   modifiers.csharp:
@@ -420,20 +420,21 @@ references:
   name: Providers
   nameWithType: ConfigureTwoFactorViewModel.Providers
   fullName: Warbler.Models.ManageViewModels.ConfigureTwoFactorViewModel.Providers
-- uid: ICollection{SelectListItem}
-  commentId: '!:ICollection{SelectListItem}'
-  definition: ICollection`1
+- uid: System.Collections.Generic.ICollection{SelectListItem}
+  commentId: T:System.Collections.Generic.ICollection{SelectListItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
   name: ICollection<SelectListItem>
   nameWithType: ICollection<SelectListItem>
-  fullName: ICollection<SelectListItem>
+  fullName: System.Collections.Generic.ICollection<SelectListItem>
   nameWithType.vb: ICollection(Of SelectListItem)
-  fullName.vb: ICollection(Of SelectListItem)
+  fullName.vb: System.Collections.Generic.ICollection(Of SelectListItem)
   name.vb: ICollection(Of SelectListItem)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -447,10 +448,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -463,41 +464,48 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ICollection`1
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
   isExternal: true
-  name: ICollection<>
-  nameWithType: ICollection<>
-  fullName: ICollection<>
-  nameWithType.vb: ICollection(Of )
-  fullName.vb: ICollection(Of )
-  name.vb: ICollection(Of )
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

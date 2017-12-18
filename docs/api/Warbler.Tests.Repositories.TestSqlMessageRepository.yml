@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository
+  commentId: T:Warbler.Tests.Repositories.TestSqlMessageRepository
+  id: TestSqlMessageRepository
+  parent: Warbler.Tests.Repositories
+  children:
+  - Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message
+  - Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates(TestContext)
+  - Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity
+  - Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+  langs:
+  - csharp
+  - vb
+  name: TestSqlMessageRepository
+  nameWithType: TestSqlMessageRepository
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository
+  type: Class
+  source:
+    id: TestSqlMessageRepository
+    path: ''
+    startLine: 4300
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public class TestSqlMessageRepository
+    content.vb: Public Class TestSqlMessageRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates(TestContext)
+  commentId: M:Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates(TestContext)
+  id: CreateTemplates(TestContext)
+  parent: Warbler.Tests.Repositories.TestSqlMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateTemplates(TestContext)
+  nameWithType: TestSqlMessageRepository.CreateTemplates(TestContext)
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates(TestContext)
+  type: Method
+  source:
+    id: CreateTemplates
+    path: ''
+    startLine: 4311
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public static Task CreateTemplates(TestContext _)
+    parameters:
+    - id: _
+      type: TestContext
+    return:
+      type: Task
+    content.vb: Public Shared Function CreateTemplates(_ As TestContext) As Task
+  overload: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity
+  commentId: M:Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity
+  id: CreateUniversity
+  parent: Warbler.Tests.Repositories.TestSqlMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateUniversity()
+  nameWithType: TestSqlMessageRepository.CreateUniversity()
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity()
+  type: Method
+  source:
+    id: CreateUniversity
+    path: ''
+    startLine: 4321
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task CreateUniversity()
+    return:
+      type: Task
+    content.vb: Public Function CreateUniversity As Task
+  overload: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message
+  commentId: M:Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message
+  id: CreateAsync_Should_Create_A_New_Message
+  parent: Warbler.Tests.Repositories.TestSqlMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync_Should_Create_A_New_Message()
+  nameWithType: TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message()
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message()
+  type: Method
+  source:
+    id: CreateAsync_Should_Create_A_New_Message
+    path: ''
+    startLine: 4349
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task CreateAsync_Should_Create_A_New_Message()
+    return:
+      type: Task
+    content.vb: Public Function CreateAsync_Should_Create_A_New_Message As Task
+  overload: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+  commentId: M:Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+  id: LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+  parent: Warbler.Tests.Repositories.TestSqlMessageRepository
+  langs:
+  - csharp
+  - vb
+  name: LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order()
+  nameWithType: TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order()
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order()
+  type: Method
+  source:
+    id: LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+    path: ''
+    startLine: 4366
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Repositories
+  syntax:
+    content: public Task LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order()
+    return:
+      type: Task
+    content.vb: Public Function LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order As Task
+  overload: Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Tests.Repositories
+  commentId: N:Warbler.Tests.Repositories
+  isExternal: false
+  name: Warbler.Tests.Repositories
+  nameWithType: Warbler.Tests.Repositories
+  fullName: Warbler.Tests.Repositories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates
+  isExternal: false
+  name: CreateTemplates
+  nameWithType: TestSqlMessageRepository.CreateTemplates
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateTemplates
+- uid: TestContext
+  isExternal: true
+  name: TestContext
+  nameWithType: TestContext
+  fullName: TestContext
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity
+  isExternal: false
+  name: CreateUniversity
+  nameWithType: TestSqlMessageRepository.CreateUniversity
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateUniversity
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message
+  isExternal: false
+  name: CreateAsync_Should_Create_A_New_Message
+  nameWithType: TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.CreateAsync_Should_Create_A_New_Message
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order*
+  commentId: Overload:Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+  isExternal: false
+  name: LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+  nameWithType: TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository.LatestIn_Should_Return_Messages_In_Reverse_Chronological_Order

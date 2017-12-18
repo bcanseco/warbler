@@ -1,0 +1,529 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Services.TestUserService
+  commentId: T:Warbler.Tests.Services.TestUserService
+  id: TestUserService
+  parent: Warbler.Tests.Services
+  children:
+  - Warbler.Tests.Services.TestUserService.CreateUniversity(TestContext)
+  - Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username
+  - Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  - Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  - Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline
+  langs:
+  - csharp
+  - vb
+  name: TestUserService
+  nameWithType: TestUserService
+  fullName: Warbler.Tests.Services.TestUserService
+  type: Class
+  source:
+    id: TestUserService
+    path: ''
+    startLine: 5211
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public class TestUserService
+    content.vb: Public Class TestUserService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Tests.Services.TestUserService.CreateUniversity(TestContext)
+  commentId: M:Warbler.Tests.Services.TestUserService.CreateUniversity(TestContext)
+  id: CreateUniversity(TestContext)
+  parent: Warbler.Tests.Services.TestUserService
+  langs:
+  - csharp
+  - vb
+  name: CreateUniversity(TestContext)
+  nameWithType: TestUserService.CreateUniversity(TestContext)
+  fullName: Warbler.Tests.Services.TestUserService.CreateUniversity(TestContext)
+  type: Method
+  source:
+    id: CreateUniversity
+    path: ''
+    startLine: 5222
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public static Task CreateUniversity(TestContext _)
+    parameters:
+    - id: _
+      type: TestContext
+    return:
+      type: Task
+    content.vb: Public Shared Function CreateUniversity(_ As TestContext) As Task
+  overload: Warbler.Tests.Services.TestUserService.CreateUniversity*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  commentId: M:Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  id: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  parent: Warbler.Tests.Services.TestUserService
+  langs:
+  - csharp
+  - vb
+  name: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
+  nameWithType: TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
+  fullName: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
+  type: Method
+  source:
+    id: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+    path: ''
+    startLine: 5252
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel()
+    return:
+      type: Task
+    content.vb: Public Function IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel As Task
+  overload: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  commentId: M:Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  id: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  parent: Warbler.Tests.Services.TestUserService
+  langs:
+  - csharp
+  - vb
+  name: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
+  nameWithType: TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
+  fullName: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
+  type: Method
+  source:
+    id: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+    path: ''
+    startLine: 5264
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task IsNewAsync_Should_Be_True_If_User_Was_Recently_Created()
+    return:
+      type: Task
+    content.vb: Public Function IsNewAsync_Should_Be_True_If_User_Was_Recently_Created As Task
+  overload: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline
+  commentId: M:Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline
+  id: SetOnlineAsync_Should_Change_IsOnline
+  parent: Warbler.Tests.Services.TestUserService
+  langs:
+  - csharp
+  - vb
+  name: SetOnlineAsync_Should_Change_IsOnline()
+  nameWithType: TestUserService.SetOnlineAsync_Should_Change_IsOnline()
+  fullName: Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline()
+  type: Method
+  source:
+    id: SetOnlineAsync_Should_Change_IsOnline
+    path: ''
+    startLine: 5276
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task SetOnlineAsync_Should_Change_IsOnline()
+    return:
+      type: Task
+    content.vb: Public Function SetOnlineAsync_Should_Change_IsOnline As Task
+  overload: Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username
+  commentId: M:Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username
+  id: FindByNameAsync_Should_Get_A_User_By_Username
+  parent: Warbler.Tests.Services.TestUserService
+  langs:
+  - csharp
+  - vb
+  name: FindByNameAsync_Should_Get_A_User_By_Username()
+  nameWithType: TestUserService.FindByNameAsync_Should_Get_A_User_By_Username()
+  fullName: Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username()
+  type: Method
+  source:
+    id: FindByNameAsync_Should_Get_A_User_By_Username
+    path: ''
+    startLine: 5289
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task FindByNameAsync_Should_Get_A_User_By_Username()
+    return:
+      type: Task
+    content.vb: Public Function FindByNameAsync_Should_Get_A_User_By_Username As Task
+  overload: Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Tests.Services
+  commentId: N:Warbler.Tests.Services
+  isExternal: false
+  name: Warbler.Tests.Services
+  nameWithType: Warbler.Tests.Services
+  fullName: Warbler.Tests.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Tests.Services.TestUserService.CreateUniversity*
+  commentId: Overload:Warbler.Tests.Services.TestUserService.CreateUniversity
+  isExternal: false
+  name: CreateUniversity
+  nameWithType: TestUserService.CreateUniversity
+  fullName: Warbler.Tests.Services.TestUserService.CreateUniversity
+- uid: TestContext
+  isExternal: true
+  name: TestContext
+  nameWithType: TestContext
+  fullName: TestContext
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel*
+  commentId: Overload:Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  isExternal: false
+  name: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  nameWithType: TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+  fullName: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
+- uid: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created*
+  commentId: Overload:Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  isExternal: false
+  name: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  nameWithType: TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+  fullName: Warbler.Tests.Services.TestUserService.IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
+- uid: Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline*
+  commentId: Overload:Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline
+  isExternal: false
+  name: SetOnlineAsync_Should_Change_IsOnline
+  nameWithType: TestUserService.SetOnlineAsync_Should_Change_IsOnline
+  fullName: Warbler.Tests.Services.TestUserService.SetOnlineAsync_Should_Change_IsOnline
+- uid: Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username*
+  commentId: Overload:Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username
+  isExternal: false
+  name: FindByNameAsync_Should_Get_A_User_By_Username
+  nameWithType: TestUserService.FindByNameAsync_Should_Get_A_User_By_Username
+  fullName: Warbler.Tests.Services.TestUserService.FindByNameAsync_Should_Get_A_User_By_Username

@@ -1,0 +1,534 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Models.ChannelTemplate
+  commentId: T:Warbler.Models.ChannelTemplate
+  id: ChannelTemplate
+  parent: Warbler.Models
+  children:
+  - Warbler.Models.ChannelTemplate.#ctor
+  - Warbler.Models.ChannelTemplate.#ctor(System.String,System.String)
+  - Warbler.Models.ChannelTemplate.Description
+  - Warbler.Models.ChannelTemplate.Id
+  - Warbler.Models.ChannelTemplate.Name
+  langs:
+  - csharp
+  - vb
+  name: ChannelTemplate
+  nameWithType: ChannelTemplate
+  fullName: Warbler.Models.ChannelTemplate
+  type: Class
+  source:
+    id: ChannelTemplate
+    path: ''
+    startLine: 2217
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public class ChannelTemplate
+    content.vb: Public Class ChannelTemplate
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Models.ChannelTemplate.#ctor
+  commentId: M:Warbler.Models.ChannelTemplate.#ctor
+  id: '#ctor'
+  parent: Warbler.Models.ChannelTemplate
+  langs:
+  - csharp
+  - vb
+  name: ChannelTemplate()
+  nameWithType: ChannelTemplate.ChannelTemplate()
+  fullName: Warbler.Models.ChannelTemplate.ChannelTemplate()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2222
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  summary: "\nParameterless ctor required by EF.\n"
+  example: []
+  syntax:
+    content: public ChannelTemplate()
+    content.vb: Public Sub New
+  overload: Warbler.Models.ChannelTemplate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ChannelTemplate.#ctor(System.String,System.String)
+  commentId: M:Warbler.Models.ChannelTemplate.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Warbler.Models.ChannelTemplate
+  langs:
+  - csharp
+  - vb
+  name: ChannelTemplate(String, String)
+  nameWithType: ChannelTemplate.ChannelTemplate(String, String)
+  fullName: Warbler.Models.ChannelTemplate.ChannelTemplate(System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2224
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public ChannelTemplate(string name, string description)
+    parameters:
+    - id: name
+      type: System.String
+    - id: description
+      type: System.String
+    content.vb: Public Sub New(name As String, description As String)
+  overload: Warbler.Models.ChannelTemplate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ChannelTemplate.Id
+  commentId: P:Warbler.Models.ChannelTemplate.Id
+  id: Id
+  parent: Warbler.Models.ChannelTemplate
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ChannelTemplate.Id
+  fullName: Warbler.Models.ChannelTemplate.Id
+  type: Property
+  source:
+    id: Id
+    path: ''
+    startLine: 2227
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Warbler.Models.ChannelTemplate.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ChannelTemplate.Name
+  commentId: P:Warbler.Models.ChannelTemplate.Name
+  id: Name
+  parent: Warbler.Models.ChannelTemplate
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ChannelTemplate.Name
+  fullName: Warbler.Models.ChannelTemplate.Name
+  type: Property
+  source:
+    id: Name
+    path: ''
+    startLine: 2228
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Warbler.Models.ChannelTemplate.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.ChannelTemplate.Description
+  commentId: P:Warbler.Models.ChannelTemplate.Description
+  id: Description
+  parent: Warbler.Models.ChannelTemplate
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ChannelTemplate.Description
+  fullName: Warbler.Models.ChannelTemplate.Description
+  type: Property
+  source:
+    id: Description
+    path: ''
+    startLine: 2229
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Warbler.Models.ChannelTemplate.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Models.ChannelTemplate.#ctor*
+  commentId: Overload:Warbler.Models.ChannelTemplate.#ctor
+  isExternal: false
+  name: ChannelTemplate
+  nameWithType: ChannelTemplate.ChannelTemplate
+  fullName: Warbler.Models.ChannelTemplate.ChannelTemplate
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Warbler.Models.ChannelTemplate.Id*
+  commentId: Overload:Warbler.Models.ChannelTemplate.Id
+  isExternal: false
+  name: Id
+  nameWithType: ChannelTemplate.Id
+  fullName: Warbler.Models.ChannelTemplate.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Warbler.Models.ChannelTemplate.Name*
+  commentId: Overload:Warbler.Models.ChannelTemplate.Name
+  isExternal: false
+  name: Name
+  nameWithType: ChannelTemplate.Name
+  fullName: Warbler.Models.ChannelTemplate.Name
+- uid: Warbler.Models.ChannelTemplate.Description*
+  commentId: Overload:Warbler.Models.ChannelTemplate.Description
+  isExternal: false
+  name: Description
+  nameWithType: ChannelTemplate.Description
+  fullName: Warbler.Models.ChannelTemplate.Description

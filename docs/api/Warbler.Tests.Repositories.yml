@@ -6,6 +6,7 @@ items:
   children:
   - Warbler.Tests.Repositories.TestSqlChannelRepository
   - Warbler.Tests.Repositories.TestSqlMembershipRepository
+  - Warbler.Tests.Repositories.TestSqlMessageRepository
   - Warbler.Tests.Repositories.TestSqlUniversityRepository
   - Warbler.Tests.Repositories.TestSqlUserRepository
   langs:
@@ -30,6 +31,12 @@ references:
   name: TestSqlMembershipRepository
   nameWithType: TestSqlMembershipRepository
   fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository
+- uid: Warbler.Tests.Repositories.TestSqlMessageRepository
+  commentId: T:Warbler.Tests.Repositories.TestSqlMessageRepository
+  isExternal: false
+  name: TestSqlMessageRepository
+  nameWithType: TestSqlMessageRepository
+  fullName: Warbler.Tests.Repositories.TestSqlMessageRepository
 - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository
   commentId: T:Warbler.Tests.Repositories.TestSqlUniversityRepository
   isExternal: false

@@ -7,8 +7,6 @@ items:
   children:
   - Warbler.Hubs.ProximityHub.#ctor(Warbler.Services.ProximityService,Warbler.Misc.WarblerDbContext)
   - Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
-  - Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)
-  - Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
   langs:
   - csharp
   - vb
@@ -19,11 +17,11 @@ items:
   source:
     id: ProximityHub
     path: ''
-    startLine: 1281
+    startLine: 1564
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
-  summary: "\nCoordinates websocket communication between\nclients and server on the chat index view.\n"
+  summary: "\nCoordinates websocket communication between\nclients and server on the proximity component view.\n"
   example: []
   syntax:
     content: 'public class ProximityHub : Hub'
@@ -52,7 +50,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1290
+    startLine: 1573
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -71,39 +69,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)
-  commentId: M:Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)
-  id: OnDisconnectedAsync(System.Exception)
-  parent: Warbler.Hubs.ProximityHub
-  langs:
-  - csharp
-  - vb
-  name: OnDisconnectedAsync(Exception)
-  nameWithType: ProximityHub.OnDisconnectedAsync(Exception)
-  fullName: Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)
-  type: Method
-  source:
-    id: OnDisconnectedAsync
-    path: ''
-    startLine: 1296
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Hubs
-  syntax:
-    content: public override Task OnDisconnectedAsync(Exception exception)
-    parameters:
-    - id: exception
-      type: System.Exception
-    return:
-      type: Task
-    content.vb: Public Overrides Function OnDisconnectedAsync(exception As Exception) As Task
-  overload: Warbler.Hubs.ProximityHub.OnDisconnectedAsync*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 - uid: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
   commentId: M:Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync(System.String)
   id: GetNearbyUniversitiesAsync(System.String)
@@ -118,7 +83,7 @@ items:
   source:
     id: GetNearbyUniversitiesAsync
     path: ''
-    startLine: 1307
+    startLine: 1584
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -134,40 +99,6 @@ items:
       type: Task
     content.vb: Public Function GetNearbyUniversitiesAsync(locationSer As String) As Task
   overload: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
-  commentId: M:Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
-  id: SelectUniversityAsync(System.String)
-  parent: Warbler.Hubs.ProximityHub
-  langs:
-  - csharp
-  - vb
-  name: SelectUniversityAsync(String)
-  nameWithType: ProximityHub.SelectUniversityAsync(String)
-  fullName: Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)
-  type: Method
-  source:
-    id: SelectUniversityAsync
-    path: ''
-    startLine: 1319
-  assemblies:
-  - cs.temp.dll
-  namespace: Warbler.Hubs
-  summary: "\nCalled via SignalR when the user clicks on a university to connect to.\n"
-  example: []
-  syntax:
-    content: public Task SelectUniversityAsync(string placeId)
-    parameters:
-    - id: placeId
-      type: System.String
-      description: The Google Place ID of the clicked university.
-    return:
-      type: Task
-    content.vb: Public Function SelectUniversityAsync(placeId As String) As Task
-  overload: Warbler.Hubs.ProximityHub.SelectUniversityAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -224,24 +155,6 @@ references:
   name: Warbler.Misc
   nameWithType: Warbler.Misc
   fullName: Warbler.Misc
-- uid: Warbler.Hubs.ProximityHub.OnDisconnectedAsync*
-  commentId: Overload:Warbler.Hubs.ProximityHub.OnDisconnectedAsync
-  isExternal: false
-  name: OnDisconnectedAsync
-  nameWithType: ProximityHub.OnDisconnectedAsync
-  fullName: Warbler.Hubs.ProximityHub.OnDisconnectedAsync
-- uid: System.Exception
-  commentId: T:System.Exception
-  parent: System
-  isExternal: true
-  name: Exception
-  nameWithType: Exception
-  fullName: System.Exception
-- uid: Task
-  isExternal: true
-  name: Task
-  nameWithType: Task
-  fullName: Task
 - uid: Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync*
   commentId: Overload:Warbler.Hubs.ProximityHub.GetNearbyUniversitiesAsync
   isExternal: false
@@ -255,9 +168,8 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Warbler.Hubs.ProximityHub.SelectUniversityAsync*
-  commentId: Overload:Warbler.Hubs.ProximityHub.SelectUniversityAsync
-  isExternal: false
-  name: SelectUniversityAsync
-  nameWithType: ProximityHub.SelectUniversityAsync
-  fullName: Warbler.Hubs.ProximityHub.SelectUniversityAsync
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

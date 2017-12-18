@@ -11,6 +11,7 @@ items:
   - Warbler.Controllers.HomeController
   - Warbler.Controllers.ManageController
   - Warbler.Controllers.ManageController.ManageMessageId
+  - Warbler.Controllers.SamlController
   langs:
   - csharp
   - vb
@@ -64,6 +65,12 @@ references:
   name: ManageController.ManageMessageId
   nameWithType: ManageController.ManageMessageId
   fullName: Warbler.Controllers.ManageController.ManageMessageId
+- uid: Warbler.Controllers.SamlController
+  commentId: T:Warbler.Controllers.SamlController
+  isExternal: false
+  name: SamlController
+  nameWithType: SamlController
+  fullName: Warbler.Controllers.SamlController
 - uid: Warbler.Controllers
   commentId: N:Warbler.Controllers
   isExternal: false

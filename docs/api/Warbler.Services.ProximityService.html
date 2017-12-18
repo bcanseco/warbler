@@ -163,50 +163,6 @@
   </h3>
   
   
-  <a id="Warbler_Services_ProximityService_OnDisconnectedAsync_" data-uid="Warbler.Services.ProximityService.OnDisconnectedAsync*"></a>
-  <h4 id="Warbler_Services_ProximityService_OnDisconnectedAsync_System_String_" data-uid="Warbler.Services.ProximityService.OnDisconnectedAsync(System.String)">OnDisconnectedAsync(String)</h4>
-  <div class="markdown level1 summary"><p>Invoked from the hub on each disconnected client. Removes the
-client&#39;s choice list from <span class="xref">Warbler.Services.ProximityService.UserChoices</span> if it exists.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OnDisconnectedAsync(string userName)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">userName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Warbler_Services_ProximityService_ProximitySearchAsync_" data-uid="Warbler.Services.ProximityService.ProximitySearchAsync*"></a>
   <h4 id="Warbler_Services_ProximityService_ProximitySearchAsync_Warbler_Models_User_System_String_Location_" data-uid="Warbler.Services.ProximityService.ProximitySearchAsync(Warbler.Models.User,System.String,Location)">ProximitySearchAsync(User, String, Location)</h4>
   <div class="markdown level1 summary"><p>Conducts a proximity search and returns the filtered results.</p>
@@ -258,78 +214,6 @@ client&#39;s choice list from <span class="xref">Warbler.Services.ProximityServi
       <tr>
         <td><span class="xref">Task</span></td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Warbler_Services_ProximityService_SelectUniversityAsync_" data-uid="Warbler.Services.ProximityService.SelectUniversityAsync*"></a>
-  <h4 id="Warbler_Services_ProximityService_SelectUniversityAsync_Warbler_Models_User_System_String_System_String_" data-uid="Warbler.Services.ProximityService.SelectUniversityAsync(Warbler.Models.User,System.String,System.String)">SelectUniversityAsync(User, String, String)</h4>
-  <div class="markdown level1 summary"><p>Validates the user&#39;s university selection and lets them join if successful.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task SelectUniversityAsync(User user, string connectionId, string placeId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Warbler.Models.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user selecting a university.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">connectionId</span></td>
-        <td><p>The user&#39;s connection ID.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">placeId</span></td>
-        <td><p>The Google Place ID of the selected university.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.NullReferenceException</span></td>
-        <td><p>Thrown if this method is called for a user before <a class="xref" href="Warbler.Services.ProximityService.html#Warbler_Services_ProximityService_ProximitySearchAsync_Warbler_Models_User_System_String_Location_">ProximitySearchAsync(User, String, Location)</a>.</p>
-</td>
       </tr>
     </tbody>
   </table>

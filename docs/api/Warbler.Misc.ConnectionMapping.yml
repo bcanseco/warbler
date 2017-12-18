@@ -19,7 +19,7 @@ items:
   source:
     id: ConnectionMapping
     path: ''
-    startLine: 1524
+    startLine: 1931
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -56,7 +56,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1526
+    startLine: 1933
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -85,7 +85,7 @@ items:
   source:
     id: AddAsync
     path: ''
-    startLine: 1533
+    startLine: 1940
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -118,7 +118,7 @@ items:
   source:
     id: GetConnections
     path: ''
-    startLine: 1553
+    startLine: 1960
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -128,7 +128,7 @@ items:
     - id: user
       type: Warbler.Models.User
     return:
-      type: IEnumerable{System.String}
+      type: System.Collections.Generic.IEnumerable{System.String}
     content.vb: Public Function GetConnections(user As User) As IEnumerable(Of String)
   overload: Warbler.Misc.ConnectionMapping.GetConnections*
   modifiers.csharp:
@@ -149,7 +149,7 @@ items:
   source:
     id: RemoveAsync
     path: ''
-    startLine: 1559
+    startLine: 1966
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -591,20 +591,21 @@ references:
   name: GetConnections
   nameWithType: ConnectionMapping.GetConnections
   fullName: Warbler.Misc.ConnectionMapping.GetConnections
-- uid: IEnumerable{System.String}
-  commentId: '!:IEnumerable{System.String}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<String>
   nameWithType: IEnumerable<String>
-  fullName: IEnumerable<System.String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
   nameWithType.vb: IEnumerable(Of String)
-  fullName.vb: IEnumerable(Of System.String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
   name.vb: IEnumerable(Of String)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -618,10 +619,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -634,44 +635,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullName.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Warbler.Misc.ConnectionMapping.RemoveAsync*
   commentId: Overload:Warbler.Misc.ConnectionMapping.RemoveAsync
   isExternal: false

@@ -8,11 +8,14 @@ items:
   - Warbler.Controllers.ManageController.ManageMessageId.AddLoginSuccess
   - Warbler.Controllers.ManageController.ManageMessageId.AddPhoneSuccess
   - Warbler.Controllers.ManageController.ManageMessageId.ChangePasswordSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.ClaimRequestSuccess
   - Warbler.Controllers.ManageController.ManageMessageId.Error
+  - Warbler.Controllers.ManageController.ManageMessageId.ManageUniversitySuccess
   - Warbler.Controllers.ManageController.ManageMessageId.RemoveLoginSuccess
   - Warbler.Controllers.ManageController.ManageMessageId.RemovePhoneSuccess
   - Warbler.Controllers.ManageController.ManageMessageId.SetPasswordSuccess
   - Warbler.Controllers.ManageController.ManageMessageId.SetTwoFactorSuccess
+  - Warbler.Controllers.ManageController.ManageMessageId.TestSamlSuccess
   langs:
   - csharp
   - vb
@@ -23,7 +26,7 @@ items:
   source:
     id: ManageMessageId
     path: ''
-    startLine: 1123
+    startLine: 1319
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -50,7 +53,7 @@ items:
   source:
     id: AddPhoneSuccess
     path: ''
-    startLine: 1125
+    startLine: 1321
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -78,7 +81,7 @@ items:
   source:
     id: AddLoginSuccess
     path: ''
-    startLine: 1126
+    startLine: 1322
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -106,7 +109,7 @@ items:
   source:
     id: ChangePasswordSuccess
     path: ''
-    startLine: 1127
+    startLine: 1323
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -134,7 +137,7 @@ items:
   source:
     id: SetTwoFactorSuccess
     path: ''
-    startLine: 1128
+    startLine: 1324
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -162,7 +165,7 @@ items:
   source:
     id: SetPasswordSuccess
     path: ''
-    startLine: 1129
+    startLine: 1325
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -190,7 +193,7 @@ items:
   source:
     id: RemoveLoginSuccess
     path: ''
-    startLine: 1130
+    startLine: 1326
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -218,12 +221,96 @@ items:
   source:
     id: RemovePhoneSuccess
     path: ''
-    startLine: 1131
+    startLine: 1327
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
   syntax:
     content: RemovePhoneSuccess = 6
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.ClaimRequestSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.ClaimRequestSuccess
+  id: ClaimRequestSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: ClaimRequestSuccess
+  nameWithType: ManageController.ManageMessageId.ClaimRequestSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.ClaimRequestSuccess
+  type: Field
+  source:
+    id: ClaimRequestSuccess
+    path: ''
+    startLine: 1328
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: ClaimRequestSuccess = 7
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.ManageUniversitySuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.ManageUniversitySuccess
+  id: ManageUniversitySuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: ManageUniversitySuccess
+  nameWithType: ManageController.ManageMessageId.ManageUniversitySuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.ManageUniversitySuccess
+  type: Field
+  source:
+    id: ManageUniversitySuccess
+    path: ''
+    startLine: 1329
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: ManageUniversitySuccess = 8
+    return:
+      type: Warbler.Controllers.ManageController.ManageMessageId
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Warbler.Controllers.ManageController.ManageMessageId.TestSamlSuccess
+  commentId: F:Warbler.Controllers.ManageController.ManageMessageId.TestSamlSuccess
+  id: TestSamlSuccess
+  parent: Warbler.Controllers.ManageController.ManageMessageId
+  langs:
+  - csharp
+  - vb
+  name: TestSamlSuccess
+  nameWithType: ManageController.ManageMessageId.TestSamlSuccess
+  fullName: Warbler.Controllers.ManageController.ManageMessageId.TestSamlSuccess
+  type: Field
+  source:
+    id: TestSamlSuccess
+    path: ''
+    startLine: 1330
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: TestSamlSuccess = 9
     return:
       type: Warbler.Controllers.ManageController.ManageMessageId
   modifiers.csharp:
@@ -246,12 +333,12 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 1132
+    startLine: 1331
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
   syntax:
-    content: Error = 7
+    content: Error = 10
     return:
       type: Warbler.Controllers.ManageController.ManageMessageId
   modifiers.csharp:

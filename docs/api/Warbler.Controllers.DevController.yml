@@ -6,8 +6,11 @@ items:
   parent: Warbler.Controllers
   children:
   - Warbler.Controllers.DevController.#ctor(Warbler.Misc.WarblerDbContext)
+  - Warbler.Controllers.DevController.Claims
+  - Warbler.Controllers.DevController.DeleteUniversityAsync(System.Int32)
   - Warbler.Controllers.DevController.Error
   - Warbler.Controllers.DevController.Index
+  - Warbler.Controllers.DevController.ResolveClaim(Warbler.Models.ClaimRequest)
   - Warbler.Controllers.DevController.Universities
   langs:
   - csharp
@@ -19,7 +22,7 @@ items:
   source:
     id: DevController
     path: ''
-    startLine: 681
+    startLine: 766
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -50,7 +53,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 685
+    startLine: 772
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -79,7 +82,7 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 690
+    startLine: 778
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -107,7 +110,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 700
+    startLine: 787
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -135,7 +138,7 @@ items:
   source:
     id: Universities
     path: ''
-    startLine: 708
+    startLine: 795
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -147,6 +150,98 @@ items:
       type: Task{System.String}
     content.vb: Public Function Universities As Task(Of String)
   overload: Warbler.Controllers.DevController.Universities*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.DevController.Claims
+  commentId: M:Warbler.Controllers.DevController.Claims
+  id: Claims
+  parent: Warbler.Controllers.DevController
+  langs:
+  - csharp
+  - vb
+  name: Claims()
+  nameWithType: DevController.Claims()
+  fullName: Warbler.Controllers.DevController.Claims()
+  type: Method
+  source:
+    id: Claims
+    path: ''
+    startLine: 802
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<string> Claims()
+    return:
+      type: Task{System.String}
+    content.vb: Public Function Claims As Task(Of String)
+  overload: Warbler.Controllers.DevController.Claims*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.DevController.ResolveClaim(Warbler.Models.ClaimRequest)
+  commentId: M:Warbler.Controllers.DevController.ResolveClaim(Warbler.Models.ClaimRequest)
+  id: ResolveClaim(Warbler.Models.ClaimRequest)
+  parent: Warbler.Controllers.DevController
+  langs:
+  - csharp
+  - vb
+  name: ResolveClaim(ClaimRequest)
+  nameWithType: DevController.ResolveClaim(ClaimRequest)
+  fullName: Warbler.Controllers.DevController.ResolveClaim(Warbler.Models.ClaimRequest)
+  type: Method
+  source:
+    id: ResolveClaim
+    path: ''
+    startLine: 809
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task ResolveClaim(ClaimRequest claim)
+    parameters:
+    - id: claim
+      type: Warbler.Models.ClaimRequest
+    return:
+      type: Task
+    content.vb: Public Function ResolveClaim(claim As ClaimRequest) As Task
+  overload: Warbler.Controllers.DevController.ResolveClaim*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.DevController.DeleteUniversityAsync(System.Int32)
+  commentId: M:Warbler.Controllers.DevController.DeleteUniversityAsync(System.Int32)
+  id: DeleteUniversityAsync(System.Int32)
+  parent: Warbler.Controllers.DevController
+  langs:
+  - csharp
+  - vb
+  name: DeleteUniversityAsync(Int32)
+  nameWithType: DevController.DeleteUniversityAsync(Int32)
+  fullName: Warbler.Controllers.DevController.DeleteUniversityAsync(System.Int32)
+  type: Method
+  source:
+    id: DeleteUniversityAsync
+    path: ''
+    startLine: 823
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  summary: "\nTODO: For demo purposes only; remove this route.\n"
+  example: []
+  syntax:
+    content: public Task<IActionResult> DeleteUniversityAsync(int universityId)
+    parameters:
+    - id: universityId
+      type: System.Int32
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function DeleteUniversityAsync(universityId As Integer) As Task(Of IActionResult)
+  overload: Warbler.Controllers.DevController.DeleteUniversityAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -291,6 +386,92 @@ references:
   - name: ''
     nameWithType: ''
     fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Controllers.DevController.Claims*
+  commentId: Overload:Warbler.Controllers.DevController.Claims
+  isExternal: false
+  name: Claims
+  nameWithType: DevController.Claims
+  fullName: Warbler.Controllers.DevController.Claims
+- uid: Warbler.Controllers.DevController.ResolveClaim*
+  commentId: Overload:Warbler.Controllers.DevController.ResolveClaim
+  isExternal: false
+  name: ResolveClaim
+  nameWithType: DevController.ResolveClaim
+  fullName: Warbler.Controllers.DevController.ResolveClaim
+- uid: Warbler.Models.ClaimRequest
+  commentId: T:Warbler.Models.ClaimRequest
+  parent: Warbler.Models
+  isExternal: false
+  name: ClaimRequest
+  nameWithType: ClaimRequest
+  fullName: Warbler.Models.ClaimRequest
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Warbler.Controllers.DevController.DeleteUniversityAsync*
+  commentId: Overload:Warbler.Controllers.DevController.DeleteUniversityAsync
+  isExternal: false
+  name: DeleteUniversityAsync
+  nameWithType: DevController.DeleteUniversityAsync
+  fullName: Warbler.Controllers.DevController.DeleteUniversityAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )

@@ -6,12 +6,17 @@ items:
   parent: Warbler.Models
   children:
   - Warbler.Models.Channel.Description
+  - Warbler.Models.Channel.Equals(System.Object)
   - Warbler.Models.Channel.Equals(Warbler.Models.Channel)
+  - Warbler.Models.Channel.GetHashCode
   - Warbler.Models.Channel.Id
   - Warbler.Models.Channel.LastUsed
   - Warbler.Models.Channel.Memberships
   - Warbler.Models.Channel.Messages
   - Warbler.Models.Channel.Name
+  - Warbler.Models.Channel.op_Equality(Warbler.Models.Channel,Warbler.Models.Channel)
+  - Warbler.Models.Channel.op_Inequality(Warbler.Models.Channel,Warbler.Models.Channel)
+  - Warbler.Models.Channel.SamlNames
   - Warbler.Models.Channel.Server
   - Warbler.Models.Channel.ServerId
   - Warbler.Models.Channel.State
@@ -27,7 +32,7 @@ items:
   source:
     id: Channel
     path: ''
-    startLine: 1719
+    startLine: 2171
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -42,10 +47,8 @@ items:
   - System.IEquatable{Warbler.Models.Channel}
   inheritedMembers:
   - System.Object.ToString
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   modifiers.csharp:
@@ -68,7 +71,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1722
+    startLine: 2174
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -99,7 +102,7 @@ items:
   source:
     id: ServerId
     path: ''
-    startLine: 1723
+    startLine: 2175
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -130,7 +133,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1724
+    startLine: 2176
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -161,7 +164,7 @@ items:
   source:
     id: Description
     path: ''
-    startLine: 1725
+    startLine: 2177
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -192,7 +195,7 @@ items:
   source:
     id: State
     path: ''
-    startLine: 1726
+    startLine: 2178
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -223,7 +226,7 @@ items:
   source:
     id: Type
     path: ''
-    startLine: 1727
+    startLine: 2179
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -254,7 +257,7 @@ items:
   source:
     id: LastUsed
     path: ''
-    startLine: 1728
+    startLine: 2180
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -285,7 +288,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1730
+    startLine: 2182
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -316,7 +319,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1732
+    startLine: 2184
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -324,7 +327,7 @@ items:
     content: public ICollection<Membership> Memberships { get; set; }
     parameters: []
     return:
-      type: ICollection{Warbler.Models.Membership}
+      type: System.Collections.Generic.ICollection{Warbler.Models.Membership}
     content.vb: Public Property Memberships As ICollection(Of Membership)
   overload: Warbler.Models.Channel.Memberships*
   modifiers.csharp:
@@ -347,7 +350,7 @@ items:
   source:
     id: Messages
     path: ''
-    startLine: 1734
+    startLine: 2186
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -355,7 +358,7 @@ items:
     content: public ICollection<Message> Messages { get; set; }
     parameters: []
     return:
-      type: ICollection{Warbler.Models.Message}
+      type: System.Collections.Generic.ICollection{Warbler.Models.Message}
     content.vb: Public Property Messages As ICollection(Of Message)
   overload: Warbler.Models.Channel.Messages*
   modifiers.csharp:
@@ -378,7 +381,7 @@ items:
   source:
     id: Users
     path: ''
-    startLine: 1736
+    startLine: 2188
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -386,9 +389,40 @@ items:
     content: public IEnumerable<User> Users { get; }
     parameters: []
     return:
-      type: IEnumerable{Warbler.Models.User}
+      type: System.Collections.Generic.IEnumerable{Warbler.Models.User}
     content.vb: Public ReadOnly Property Users As IEnumerable(Of User)
   overload: Warbler.Models.Channel.Users*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Warbler.Models.Channel.SamlNames
+  commentId: P:Warbler.Models.Channel.SamlNames
+  id: SamlNames
+  parent: Warbler.Models.Channel
+  langs:
+  - csharp
+  - vb
+  name: SamlNames
+  nameWithType: Channel.SamlNames
+  fullName: Warbler.Models.Channel.SamlNames
+  type: Property
+  source:
+    id: SamlNames
+    path: ''
+    startLine: 2191
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public IDictionary<string, string> SamlNames { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
+    content.vb: Public ReadOnly Property SamlNames As IDictionary(Of String, String)
+  overload: Warbler.Models.Channel.SamlNames*
   modifiers.csharp:
   - public
   - get
@@ -409,7 +443,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1739
+    startLine: 2195
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -428,6 +462,141 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Warbler.Models.Channel.Equals(System.Object)
+  commentId: M:Warbler.Models.Channel.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Warbler.Models.Channel
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Channel.Equals(Object)
+  fullName: Warbler.Models.Channel.Equals(System.Object)
+  type: Method
+  source:
+    id: Equals
+    path: ''
+    startLine: 2202
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Warbler.Models.Channel.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.Channel.GetHashCode
+  commentId: M:Warbler.Models.Channel.GetHashCode
+  id: GetHashCode
+  parent: Warbler.Models.Channel
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Channel.GetHashCode()
+  fullName: Warbler.Models.Channel.GetHashCode()
+  type: Method
+  source:
+    id: GetHashCode
+    path: ''
+    startLine: 2209
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: Warbler.Models.Channel.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Warbler.Models.Channel.op_Equality(Warbler.Models.Channel,Warbler.Models.Channel)
+  commentId: M:Warbler.Models.Channel.op_Equality(Warbler.Models.Channel,Warbler.Models.Channel)
+  id: op_Equality(Warbler.Models.Channel,Warbler.Models.Channel)
+  parent: Warbler.Models.Channel
+  langs:
+  - csharp
+  - vb
+  name: Equality(Channel, Channel)
+  nameWithType: Channel.Equality(Channel, Channel)
+  fullName: Warbler.Models.Channel.Equality(Warbler.Models.Channel, Warbler.Models.Channel)
+  type: Operator
+  source:
+    id: op_Equality
+    path: ''
+    startLine: 2210
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator ==(Channel left, Channel right)
+    parameters:
+    - id: left
+      type: Warbler.Models.Channel
+    - id: right
+      type: Warbler.Models.Channel
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Channel, right As Channel) As Boolean
+  overload: Warbler.Models.Channel.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Models.Channel.op_Inequality(Warbler.Models.Channel,Warbler.Models.Channel)
+  commentId: M:Warbler.Models.Channel.op_Inequality(Warbler.Models.Channel,Warbler.Models.Channel)
+  id: op_Inequality(Warbler.Models.Channel,Warbler.Models.Channel)
+  parent: Warbler.Models.Channel
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Channel, Channel)
+  nameWithType: Channel.Inequality(Channel, Channel)
+  fullName: Warbler.Models.Channel.Inequality(Warbler.Models.Channel, Warbler.Models.Channel)
+  type: Operator
+  source:
+    id: op_Inequality
+    path: ''
+    startLine: 2211
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public static bool operator !=(Channel left, Channel right)
+    parameters:
+    - id: left
+      type: Warbler.Models.Channel
+    - id: right
+      type: Warbler.Models.Channel
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Channel, right As Channel) As Boolean
+  overload: Warbler.Models.Channel.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: Warbler.Models
   commentId: N:Warbler.Models
@@ -512,47 +681,6 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -667,37 +795,6 @@ references:
     nameWithType: Object
     fullName: System.Object
     isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -902,20 +999,21 @@ references:
   name: Memberships
   nameWithType: Channel.Memberships
   fullName: Warbler.Models.Channel.Memberships
-- uid: ICollection{Warbler.Models.Membership}
-  commentId: '!:ICollection{Warbler.Models.Membership}'
-  definition: ICollection`1
+- uid: System.Collections.Generic.ICollection{Warbler.Models.Membership}
+  commentId: T:System.Collections.Generic.ICollection{Warbler.Models.Membership}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
   name: ICollection<Membership>
   nameWithType: ICollection<Membership>
-  fullName: ICollection<Warbler.Models.Membership>
+  fullName: System.Collections.Generic.ICollection<Warbler.Models.Membership>
   nameWithType.vb: ICollection(Of Membership)
-  fullName.vb: ICollection(Of Warbler.Models.Membership)
+  fullName.vb: System.Collections.Generic.ICollection(Of Warbler.Models.Membership)
   name.vb: ICollection(Of Membership)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -928,10 +1026,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -943,64 +1041,72 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ICollection`1
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
   isExternal: true
-  name: ICollection<>
-  nameWithType: ICollection<>
-  fullName: ICollection<>
-  nameWithType.vb: ICollection(Of )
-  fullName.vb: ICollection(Of )
-  name.vb: ICollection(Of )
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Warbler.Models.Channel.Messages*
   commentId: Overload:Warbler.Models.Channel.Messages
   isExternal: false
   name: Messages
   nameWithType: Channel.Messages
   fullName: Warbler.Models.Channel.Messages
-- uid: ICollection{Warbler.Models.Message}
-  commentId: '!:ICollection{Warbler.Models.Message}'
-  definition: ICollection`1
+- uid: System.Collections.Generic.ICollection{Warbler.Models.Message}
+  commentId: T:System.Collections.Generic.ICollection{Warbler.Models.Message}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
   name: ICollection<Message>
   nameWithType: ICollection<Message>
-  fullName: ICollection<Warbler.Models.Message>
+  fullName: System.Collections.Generic.ICollection<Warbler.Models.Message>
   nameWithType.vb: ICollection(Of Message)
-  fullName.vb: ICollection(Of Warbler.Models.Message)
+  fullName.vb: System.Collections.Generic.ICollection(Of Warbler.Models.Message)
   name.vb: ICollection(Of Message)
   spec.csharp:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -1013,10 +1119,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1034,20 +1140,21 @@ references:
   name: Users
   nameWithType: Channel.Users
   fullName: Warbler.Models.Channel.Users
-- uid: IEnumerable{Warbler.Models.User}
-  commentId: '!:IEnumerable{Warbler.Models.User}'
-  definition: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable{Warbler.Models.User}
+  commentId: T:System.Collections.Generic.IEnumerable{Warbler.Models.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<User>
   nameWithType: IEnumerable<User>
-  fullName: IEnumerable<Warbler.Models.User>
+  fullName: System.Collections.Generic.IEnumerable<Warbler.Models.User>
   nameWithType.vb: IEnumerable(Of User)
-  fullName.vb: IEnumerable(Of Warbler.Models.User)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Warbler.Models.User)
   name.vb: IEnumerable(Of User)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
@@ -1060,10 +1167,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1075,41 +1182,159 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IEnumerable`1
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IEnumerable<>
-  nameWithType: IEnumerable<>
-  fullName: IEnumerable<>
-  nameWithType.vb: IEnumerable(Of )
-  fullName.vb: IEnumerable(Of )
-  name.vb: IEnumerable(Of )
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
   spec.csharp:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IEnumerable`1
+  - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
     nameWithType: IEnumerable
-    fullName: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.Channel.SamlNames*
+  commentId: Overload:Warbler.Models.Channel.SamlNames
+  isExternal: false
+  name: SamlNames
+  nameWithType: Channel.SamlNames
+  fullName: Warbler.Models.Channel.SamlNames
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  name: IDictionary<String, String>
+  nameWithType: IDictionary<String, String>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
+  nameWithType.vb: IDictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
+  name.vb: IDictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
   - name: )
     nameWithType: )
     fullName: )
@@ -1212,3 +1437,93 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.Channel.GetHashCode*
+  commentId: Overload:Warbler.Models.Channel.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: Channel.GetHashCode
+  fullName: Warbler.Models.Channel.GetHashCode
+- uid: Warbler.Models.Channel.op_Equality*
+  commentId: Overload:Warbler.Models.Channel.op_Equality
+  isExternal: false
+  name: Equality
+  nameWithType: Channel.Equality
+  fullName: Warbler.Models.Channel.Equality
+- uid: Warbler.Models.Channel.op_Inequality*
+  commentId: Overload:Warbler.Models.Channel.op_Inequality
+  isExternal: false
+  name: Inequality
+  nameWithType: Channel.Inequality
+  fullName: Warbler.Models.Channel.Inequality

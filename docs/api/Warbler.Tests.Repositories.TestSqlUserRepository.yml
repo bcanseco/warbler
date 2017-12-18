@@ -20,7 +20,7 @@ items:
   source:
     id: TestSqlUserRepository
     path: ''
-    startLine: 3710
+    startLine: 4609
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -57,7 +57,7 @@ items:
   source:
     id: CreateUniversity
     path: ''
-    startLine: 3721
+    startLine: 4620
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -90,7 +90,7 @@ items:
   source:
     id: IsNewAsync_Should_Be_False_If_User_Is_In_Any_Channel
     path: ''
-    startLine: 3748
+    startLine: 4650
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -118,7 +118,7 @@ items:
   source:
     id: IsNewAsync_Should_Be_True_If_User_Was_Recently_Created
     path: ''
-    startLine: 3759
+    startLine: 4661
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -146,7 +146,7 @@ items:
   source:
     id: SetOnlineAsync_Should_Change_IsOnline
     path: ''
-    startLine: 3770
+    startLine: 4672
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -174,7 +174,7 @@ items:
   source:
     id: FindByNameAsync_Should_Get_A_User_By_Username
     path: ''
-    startLine: 3782
+    startLine: 4684
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -494,7 +494,6 @@ references:
   nameWithType: TestSqlUserRepository.CreateUniversity
   fullName: Warbler.Tests.Repositories.TestSqlUserRepository.CreateUniversity
 - uid: TestContext
-  commentId: '!:TestContext'
   isExternal: true
   name: TestContext
   nameWithType: TestContext

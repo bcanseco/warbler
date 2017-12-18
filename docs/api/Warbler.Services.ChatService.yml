@@ -20,7 +20,7 @@ items:
   source:
     id: ChatService
     path: ''
-    startLine: 2884
+    startLine: 3626
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -63,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2886
+    startLine: 3628
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -97,7 +97,7 @@ items:
   source:
     id: With
     path: ''
-    startLine: 2897
+    startLine: 3639
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -128,7 +128,7 @@ items:
   source:
     id: OnConnectedAsync
     path: ''
-    startLine: 2909
+    startLine: 3651
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -163,7 +163,7 @@ items:
   source:
     id: OnDisconnectedAsync
     path: ''
-    startLine: 2970
+    startLine: 3712
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -199,7 +199,7 @@ items:
   source:
     id: OnMessageAsync
     path: ''
-    startLine: 3010
+    startLine: 3752
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services

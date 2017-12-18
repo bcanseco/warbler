@@ -16,7 +16,7 @@ items:
   source:
     id: IChannelRepository
     path: ''
-    startLine: 1335
+    startLine: 1634
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces
@@ -45,7 +45,7 @@ items:
   source:
     id: UpdateAsync
     path: ''
-    startLine: 1341
+    startLine: 1640
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Interfaces

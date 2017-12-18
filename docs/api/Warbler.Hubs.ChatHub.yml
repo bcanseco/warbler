@@ -19,7 +19,7 @@ items:
   source:
     id: ChatHub
     path: ''
-    startLine: 1228
+    startLine: 1510
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -52,7 +52,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1236
+    startLine: 1518
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -85,7 +85,7 @@ items:
   source:
     id: OnConnectedAsync
     path: ''
-    startLine: 1242
+    startLine: 1524
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -115,7 +115,7 @@ items:
   source:
     id: OnDisconnectedAsync
     path: ''
-    startLine: 1250
+    startLine: 1532
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs
@@ -148,7 +148,7 @@ items:
   source:
     id: SendMessageAsync
     path: ''
-    startLine: 1258
+    startLine: 1540
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Hubs

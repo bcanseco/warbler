@@ -7,7 +7,7 @@ items:
   children:
   - Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForChannel_Should_Return_Users_That_Are_Members
   - Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
-  - Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+  - Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity(TestContext)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   source:
     id: TestSqlMembershipRepository
     path: ''
-    startLine: 3437
+    startLine: 4216
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -41,34 +41,39 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
-  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
-  id: CreateUniversity
+- uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity(TestContext)
+  commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity(TestContext)
+  id: CreateUniversity(TestContext)
   parent: Warbler.Tests.Repositories.TestSqlMembershipRepository
   langs:
   - csharp
   - vb
-  name: CreateUniversity()
-  nameWithType: TestSqlMembershipRepository.CreateUniversity()
-  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity()
+  name: CreateUniversity(TestContext)
+  nameWithType: TestSqlMembershipRepository.CreateUniversity(TestContext)
+  fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity(TestContext)
   type: Method
   source:
     id: CreateUniversity
     path: ''
-    startLine: 3448
+    startLine: 4227
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
   syntax:
-    content: public Task CreateUniversity()
+    content: public static Task CreateUniversity(TestContext _)
+    parameters:
+    - id: _
+      type: TestContext
     return:
       type: Task
-    content.vb: Public Function CreateUniversity As Task
+    content.vb: Public Shared Function CreateUniversity(_ As TestContext) As Task
   overload: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity*
   modifiers.csharp:
   - public
+  - static
   modifiers.vb:
   - Public
+  - Shared
 - uid: Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
   commentId: M:Warbler.Tests.Repositories.TestSqlMembershipRepository.AllForUser_Should_Return_Channels_Where_User_Is_Member
   id: AllForUser_Should_Return_Channels_Where_User_Is_Member
@@ -83,7 +88,7 @@ items:
   source:
     id: AllForUser_Should_Return_Channels_Where_User_Is_Member
     path: ''
-    startLine: 3475
+    startLine: 4256
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -111,7 +116,7 @@ items:
   source:
     id: AllForChannel_Should_Return_Users_That_Are_Members
     path: ''
-    startLine: 3489
+    startLine: 4270
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Tests.Repositories
@@ -430,6 +435,11 @@ references:
   name: CreateUniversity
   nameWithType: TestSqlMembershipRepository.CreateUniversity
   fullName: Warbler.Tests.Repositories.TestSqlMembershipRepository.CreateUniversity
+- uid: TestContext
+  isExternal: true
+  name: TestContext
+  nameWithType: TestContext
+  fullName: TestContext
 - uid: Task
   isExternal: true
   name: Task

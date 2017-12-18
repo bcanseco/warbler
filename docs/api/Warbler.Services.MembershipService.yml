@@ -9,6 +9,7 @@ items:
   - Warbler.Services.MembershipService.AllChannelsForAsync(Warbler.Models.User)
   - Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.Channel)
   - Warbler.Services.MembershipService.AllMembershipsForAsync(Warbler.Models.User)
+  - Warbler.Services.MembershipService.DropMembershipsAsync(Warbler.Models.Channel)
   langs:
   - csharp
   - vb
@@ -19,7 +20,7 @@ items:
   source:
     id: MembershipService
     path: ''
-    startLine: 3039
+    startLine: 3824
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -58,7 +59,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3043
+    startLine: 3828
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -87,7 +88,7 @@ items:
   source:
     id: AllChannelsForAsync
     path: ''
-    startLine: 3053
+    startLine: 3838
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -100,7 +101,7 @@ items:
       type: Warbler.Models.User
       description: The user to match against.
     return:
-      type: Task{ICollection{Warbler.Models.Channel}}
+      type: Task{System.Collections.Generic.ICollection{Warbler.Models.Channel}}
     content.vb: Public Function AllChannelsForAsync(user As User) As Task(Of ICollection(Of Channel))
   overload: Warbler.Services.MembershipService.AllChannelsForAsync*
   modifiers.csharp:
@@ -121,7 +122,7 @@ items:
   source:
     id: AllMembershipsForAsync
     path: ''
-    startLine: 3062
+    startLine: 3847
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -134,7 +135,7 @@ items:
       type: Warbler.Models.Channel
       description: The channel to fetch memberships for.
     return:
-      type: Task{ICollection{Warbler.Models.Membership}}
+      type: Task{System.Collections.Generic.ICollection{Warbler.Models.Membership}}
     content.vb: Public Function AllMembershipsForAsync(channel As Channel) As Task(Of ICollection(Of Membership))
   overload: Warbler.Services.MembershipService.AllMembershipsForAsync*
   modifiers.csharp:
@@ -155,7 +156,7 @@ items:
   source:
     id: AllMembershipsForAsync
     path: ''
-    startLine: 3069
+    startLine: 3854
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -168,9 +169,40 @@ items:
       type: Warbler.Models.User
       description: The user to fetch memberships for.
     return:
-      type: Task{ICollection{Warbler.Models.Membership}}
+      type: Task{System.Collections.Generic.ICollection{Warbler.Models.Membership}}
     content.vb: Public Function AllMembershipsForAsync(user As User) As Task(Of ICollection(Of Membership))
   overload: Warbler.Services.MembershipService.AllMembershipsForAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.MembershipService.DropMembershipsAsync(Warbler.Models.Channel)
+  commentId: M:Warbler.Services.MembershipService.DropMembershipsAsync(Warbler.Models.Channel)
+  id: DropMembershipsAsync(Warbler.Models.Channel)
+  parent: Warbler.Services.MembershipService
+  langs:
+  - csharp
+  - vb
+  name: DropMembershipsAsync(Channel)
+  nameWithType: MembershipService.DropMembershipsAsync(Channel)
+  fullName: Warbler.Services.MembershipService.DropMembershipsAsync(Warbler.Models.Channel)
+  type: Method
+  source:
+    id: DropMembershipsAsync
+    path: ''
+    startLine: 3857
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task DropMembershipsAsync(Channel channel)
+    parameters:
+    - id: channel
+      type: Warbler.Models.Channel
+    return:
+      type: Task
+    content.vb: Public Function DropMembershipsAsync(channel As Channel) As Task
+  overload: Warbler.Services.MembershipService.DropMembershipsAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -506,14 +538,14 @@ references:
   name: User
   nameWithType: User
   fullName: Warbler.Models.User
-- uid: Task{ICollection{Warbler.Models.Channel}}
-  commentId: '!:Task{ICollection{Warbler.Models.Channel}}'
+- uid: Task{System.Collections.Generic.ICollection{Warbler.Models.Channel}}
+  commentId: '!:Task{System.Collections.Generic.ICollection{Warbler.Models.Channel}}'
   definition: Task`1
   name: Task<ICollection<Channel>>
   nameWithType: Task<ICollection<Channel>>
-  fullName: Task<ICollection<Warbler.Models.Channel>>
+  fullName: Task<System.Collections.Generic.ICollection<Warbler.Models.Channel>>
   nameWithType.vb: Task(Of ICollection(Of Channel))
-  fullName.vb: Task(Of ICollection(Of Warbler.Models.Channel))
+  fullName.vb: Task(Of System.Collections.Generic.ICollection(Of Warbler.Models.Channel))
   name.vb: Task(Of ICollection(Of Channel))
   spec.csharp:
   - uid: Task`1
@@ -524,10 +556,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -551,10 +583,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -626,14 +658,14 @@ references:
   name: Channel
   nameWithType: Channel
   fullName: Warbler.Models.Channel
-- uid: Task{ICollection{Warbler.Models.Membership}}
-  commentId: '!:Task{ICollection{Warbler.Models.Membership}}'
+- uid: Task{System.Collections.Generic.ICollection{Warbler.Models.Membership}}
+  commentId: '!:Task{System.Collections.Generic.ICollection{Warbler.Models.Membership}}'
   definition: Task`1
   name: Task<ICollection<Membership>>
   nameWithType: Task<ICollection<Membership>>
-  fullName: Task<ICollection<Warbler.Models.Membership>>
+  fullName: Task<System.Collections.Generic.ICollection<Warbler.Models.Membership>>
   nameWithType.vb: Task(Of ICollection(Of Membership))
-  fullName.vb: Task(Of ICollection(Of Warbler.Models.Membership))
+  fullName.vb: Task(Of System.Collections.Generic.ICollection(Of Warbler.Models.Membership))
   name.vb: Task(Of ICollection(Of Membership))
   spec.csharp:
   - uid: Task`1
@@ -644,10 +676,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: <
     nameWithType: <
@@ -671,10 +703,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: ICollection`1
+  - uid: System.Collections.Generic.ICollection`1
     name: ICollection
     nameWithType: ICollection
-    fullName: ICollection
+    fullName: System.Collections.Generic.ICollection
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -689,3 +721,14 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Services.MembershipService.DropMembershipsAsync*
+  commentId: Overload:Warbler.Services.MembershipService.DropMembershipsAsync
+  isExternal: false
+  name: DropMembershipsAsync
+  nameWithType: MembershipService.DropMembershipsAsync
+  fullName: Warbler.Services.MembershipService.DropMembershipsAsync
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task

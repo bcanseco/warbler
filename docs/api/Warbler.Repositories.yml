@@ -4,9 +4,13 @@ items:
   commentId: N:Warbler.Repositories
   id: Warbler.Repositories
   children:
+  - Warbler.Repositories.SqlAuthConfigRepository
   - Warbler.Repositories.SqlChannelRepository
+  - Warbler.Repositories.SqlChannelTemplateRepository
+  - Warbler.Repositories.SqlClaimRequestRepository
   - Warbler.Repositories.SqlMembershipRepository
   - Warbler.Repositories.SqlMessageRepository
+  - Warbler.Repositories.SqlServerRepository
   - Warbler.Repositories.SqlUniversityRepository
   - Warbler.Repositories.SqlUserRepository
   langs:
@@ -19,12 +23,30 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Repositories.SqlAuthConfigRepository
+  commentId: T:Warbler.Repositories.SqlAuthConfigRepository
+  isExternal: false
+  name: SqlAuthConfigRepository
+  nameWithType: SqlAuthConfigRepository
+  fullName: Warbler.Repositories.SqlAuthConfigRepository
 - uid: Warbler.Repositories.SqlChannelRepository
   commentId: T:Warbler.Repositories.SqlChannelRepository
   isExternal: false
   name: SqlChannelRepository
   nameWithType: SqlChannelRepository
   fullName: Warbler.Repositories.SqlChannelRepository
+- uid: Warbler.Repositories.SqlChannelTemplateRepository
+  commentId: T:Warbler.Repositories.SqlChannelTemplateRepository
+  isExternal: false
+  name: SqlChannelTemplateRepository
+  nameWithType: SqlChannelTemplateRepository
+  fullName: Warbler.Repositories.SqlChannelTemplateRepository
+- uid: Warbler.Repositories.SqlClaimRequestRepository
+  commentId: T:Warbler.Repositories.SqlClaimRequestRepository
+  isExternal: false
+  name: SqlClaimRequestRepository
+  nameWithType: SqlClaimRequestRepository
+  fullName: Warbler.Repositories.SqlClaimRequestRepository
 - uid: Warbler.Repositories.SqlMembershipRepository
   commentId: T:Warbler.Repositories.SqlMembershipRepository
   isExternal: false
@@ -37,6 +59,12 @@ references:
   name: SqlMessageRepository
   nameWithType: SqlMessageRepository
   fullName: Warbler.Repositories.SqlMessageRepository
+- uid: Warbler.Repositories.SqlServerRepository
+  commentId: T:Warbler.Repositories.SqlServerRepository
+  isExternal: false
+  name: SqlServerRepository
+  nameWithType: SqlServerRepository
+  fullName: Warbler.Repositories.SqlServerRepository
 - uid: Warbler.Repositories.SqlUniversityRepository
   commentId: T:Warbler.Repositories.SqlUniversityRepository
   isExternal: false

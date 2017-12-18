@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Interfaces.IServerRepository
+  commentId: T:Warbler.Interfaces.IServerRepository
+  id: IServerRepository
+  parent: Warbler.Interfaces
+  children:
+  - Warbler.Interfaces.IServerRepository.EnableAuthAsync(Warbler.Models.Server)
+  langs:
+  - csharp
+  - vb
+  name: IServerRepository
+  nameWithType: IServerRepository
+  fullName: Warbler.Interfaces.IServerRepository
+  type: Interface
+  source:
+    id: IServerRepository
+    path: ''
+    startLine: 1792
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nDefines an API for working with servers.\n"
+  example: []
+  syntax:
+    content: public interface IServerRepository
+    content.vb: Public Interface IServerRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Warbler.Interfaces.IServerRepository.EnableAuthAsync(Warbler.Models.Server)
+  commentId: M:Warbler.Interfaces.IServerRepository.EnableAuthAsync(Warbler.Models.Server)
+  id: EnableAuthAsync(Warbler.Models.Server)
+  parent: Warbler.Interfaces.IServerRepository
+  langs:
+  - csharp
+  - vb
+  name: EnableAuthAsync(Server)
+  nameWithType: IServerRepository.EnableAuthAsync(Server)
+  fullName: Warbler.Interfaces.IServerRepository.EnableAuthAsync(Warbler.Models.Server)
+  type: Method
+  source:
+    id: EnableAuthAsync
+    path: ''
+    startLine: 1801
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Interfaces
+  summary: "\nForces new users to authenticate through a third-party\nidentity provider before joining as defined via an\n<xref href=\"Warbler.Models.AuthConfig\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Task EnableAuthAsync(Server server)
+    parameters:
+    - id: server
+      type: Warbler.Models.Server
+      description: ''
+    return:
+      type: Task
+      description: ''
+    content.vb: Function EnableAuthAsync(server As Server) As Task
+  overload: Warbler.Interfaces.IServerRepository.EnableAuthAsync*
+references:
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Models.AuthConfig
+  commentId: T:Warbler.Models.AuthConfig
+  parent: Warbler.Models
+  isExternal: false
+  name: AuthConfig
+  nameWithType: AuthConfig
+  fullName: Warbler.Models.AuthConfig
+- uid: Warbler.Interfaces.IServerRepository.EnableAuthAsync*
+  commentId: Overload:Warbler.Interfaces.IServerRepository.EnableAuthAsync
+  isExternal: false
+  name: EnableAuthAsync
+  nameWithType: IServerRepository.EnableAuthAsync
+  fullName: Warbler.Interfaces.IServerRepository.EnableAuthAsync
+- uid: Warbler.Models.Server
+  commentId: T:Warbler.Models.Server
+  parent: Warbler.Models
+  isExternal: false
+  name: Server
+  nameWithType: Server
+  fullName: Warbler.Models.Server
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models

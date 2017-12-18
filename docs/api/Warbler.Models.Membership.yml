@@ -8,6 +8,7 @@ items:
   - Warbler.Models.Membership.Channel
   - Warbler.Models.Membership.ChannelId
   - Warbler.Models.Membership.Id
+  - Warbler.Models.Membership.SamlName
   - Warbler.Models.Membership.User
   - Warbler.Models.Membership.UserId
   langs:
@@ -20,7 +21,7 @@ items:
   source:
     id: Membership
     path: ''
-    startLine: 1777
+    startLine: 2281
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -63,7 +64,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1780
+    startLine: 2284
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -94,7 +95,7 @@ items:
   source:
     id: UserId
     path: ''
-    startLine: 1782
+    startLine: 2286
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -125,7 +126,7 @@ items:
   source:
     id: User
     path: ''
-    startLine: 1783
+    startLine: 2287
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -156,7 +157,7 @@ items:
   source:
     id: ChannelId
     path: ''
-    startLine: 1785
+    startLine: 2289
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -187,7 +188,7 @@ items:
   source:
     id: Channel
     path: ''
-    startLine: 1786
+    startLine: 2290
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -198,6 +199,37 @@ items:
       type: Warbler.Models.Channel
     content.vb: Public Property Channel As Channel
   overload: Warbler.Models.Membership.Channel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.Membership.SamlName
+  commentId: P:Warbler.Models.Membership.SamlName
+  id: SamlName
+  parent: Warbler.Models.Membership
+  langs:
+  - csharp
+  - vb
+  name: SamlName
+  nameWithType: Membership.SamlName
+  fullName: Warbler.Models.Membership.SamlName
+  type: Property
+  source:
+    id: SamlName
+    path: ''
+    startLine: 2293
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string SamlName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SamlName As String
+  overload: Warbler.Models.Membership.SamlName*
   modifiers.csharp:
   - public
   - get
@@ -561,3 +593,9 @@ references:
   name: Channel
   nameWithType: Channel
   fullName: Warbler.Models.Channel
+- uid: Warbler.Models.Membership.SamlName*
+  commentId: Overload:Warbler.Models.Membership.SamlName
+  isExternal: false
+  name: SamlName
+  nameWithType: Membership.SamlName
+  fullName: Warbler.Models.Membership.SamlName

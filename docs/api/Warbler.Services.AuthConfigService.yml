@@ -1,0 +1,612 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Services.AuthConfigService
+  commentId: T:Warbler.Services.AuthConfigService
+  id: AuthConfigService
+  parent: Warbler.Services
+  children:
+  - Warbler.Services.AuthConfigService.#ctor(Warbler.Interfaces.IAuthConfigRepository,SamlConfigurations)
+  - Warbler.Services.AuthConfigService.GetConfigAsync(Warbler.Models.University)
+  - Warbler.Services.AuthConfigService.RefreshConfigsAsync
+  - Warbler.Services.AuthConfigService.SaveAsync(Warbler.Models.AuthConfig)
+  langs:
+  - csharp
+  - vb
+  name: AuthConfigService
+  nameWithType: AuthConfigService
+  fullName: Warbler.Services.AuthConfigService
+  type: Class
+  source:
+    id: AuthConfigService
+    path: ''
+    startLine: 3490
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  summary: "\nThe business logic layer for manipulation of auth configs.\n"
+  example: []
+  syntax:
+    content: public class AuthConfigService
+    content.vb: Public Class AuthConfigService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Services.AuthConfigService.#ctor(Warbler.Interfaces.IAuthConfigRepository,SamlConfigurations)
+  commentId: M:Warbler.Services.AuthConfigService.#ctor(Warbler.Interfaces.IAuthConfigRepository,SamlConfigurations)
+  id: '#ctor(Warbler.Interfaces.IAuthConfigRepository,SamlConfigurations)'
+  parent: Warbler.Services.AuthConfigService
+  langs:
+  - csharp
+  - vb
+  name: AuthConfigService(IAuthConfigRepository, SamlConfigurations)
+  nameWithType: AuthConfigService.AuthConfigService(IAuthConfigRepository, SamlConfigurations)
+  fullName: Warbler.Services.AuthConfigService.AuthConfigService(Warbler.Interfaces.IAuthConfigRepository, SamlConfigurations)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 3495
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public AuthConfigService(IAuthConfigRepository repository, SamlConfigurations configs)
+    parameters:
+    - id: repository
+      type: Warbler.Interfaces.IAuthConfigRepository
+    - id: configs
+      type: SamlConfigurations
+    content.vb: Public Sub New(repository As IAuthConfigRepository, configs As SamlConfigurations)
+  overload: Warbler.Services.AuthConfigService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.AuthConfigService.GetConfigAsync(Warbler.Models.University)
+  commentId: M:Warbler.Services.AuthConfigService.GetConfigAsync(Warbler.Models.University)
+  id: GetConfigAsync(Warbler.Models.University)
+  parent: Warbler.Services.AuthConfigService
+  langs:
+  - csharp
+  - vb
+  name: GetConfigAsync(University)
+  nameWithType: AuthConfigService.GetConfigAsync(University)
+  fullName: Warbler.Services.AuthConfigService.GetConfigAsync(Warbler.Models.University)
+  type: Method
+  source:
+    id: GetConfigAsync
+    path: ''
+    startLine: 3501
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task<AuthConfig> GetConfigAsync(University university)
+    parameters:
+    - id: university
+      type: Warbler.Models.University
+    return:
+      type: Task{Warbler.Models.AuthConfig}
+    content.vb: Public Function GetConfigAsync(university As University) As Task(Of AuthConfig)
+  overload: Warbler.Services.AuthConfigService.GetConfigAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.AuthConfigService.SaveAsync(Warbler.Models.AuthConfig)
+  commentId: M:Warbler.Services.AuthConfigService.SaveAsync(Warbler.Models.AuthConfig)
+  id: SaveAsync(Warbler.Models.AuthConfig)
+  parent: Warbler.Services.AuthConfigService
+  langs:
+  - csharp
+  - vb
+  name: SaveAsync(AuthConfig)
+  nameWithType: AuthConfigService.SaveAsync(AuthConfig)
+  fullName: Warbler.Services.AuthConfigService.SaveAsync(Warbler.Models.AuthConfig)
+  type: Method
+  source:
+    id: SaveAsync
+    path: ''
+    startLine: 3504
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task SaveAsync(AuthConfig config)
+    parameters:
+    - id: config
+      type: Warbler.Models.AuthConfig
+    return:
+      type: Task
+    content.vb: Public Function SaveAsync(config As AuthConfig) As Task
+  overload: Warbler.Services.AuthConfigService.SaveAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.AuthConfigService.RefreshConfigsAsync
+  commentId: M:Warbler.Services.AuthConfigService.RefreshConfigsAsync
+  id: RefreshConfigsAsync
+  parent: Warbler.Services.AuthConfigService
+  langs:
+  - csharp
+  - vb
+  name: RefreshConfigsAsync()
+  nameWithType: AuthConfigService.RefreshConfigsAsync()
+  fullName: Warbler.Services.AuthConfigService.RefreshConfigsAsync()
+  type: Method
+  source:
+    id: RefreshConfigsAsync
+    path: ''
+    startLine: 3510
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task RefreshConfigsAsync()
+    return:
+      type: Task
+    content.vb: Public Function RefreshConfigsAsync As Task
+  overload: Warbler.Services.AuthConfigService.RefreshConfigsAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Services
+  commentId: N:Warbler.Services
+  isExternal: false
+  name: Warbler.Services
+  nameWithType: Warbler.Services
+  fullName: Warbler.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Services.AuthConfigService.#ctor*
+  commentId: Overload:Warbler.Services.AuthConfigService.#ctor
+  isExternal: false
+  name: AuthConfigService
+  nameWithType: AuthConfigService.AuthConfigService
+  fullName: Warbler.Services.AuthConfigService.AuthConfigService
+- uid: Warbler.Interfaces.IAuthConfigRepository
+  commentId: T:Warbler.Interfaces.IAuthConfigRepository
+  parent: Warbler.Interfaces
+  isExternal: false
+  name: IAuthConfigRepository
+  nameWithType: IAuthConfigRepository
+  fullName: Warbler.Interfaces.IAuthConfigRepository
+- uid: SamlConfigurations
+  isExternal: true
+  name: SamlConfigurations
+  nameWithType: SamlConfigurations
+  fullName: SamlConfigurations
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: Warbler.Services.AuthConfigService.GetConfigAsync*
+  commentId: Overload:Warbler.Services.AuthConfigService.GetConfigAsync
+  isExternal: false
+  name: GetConfigAsync
+  nameWithType: AuthConfigService.GetConfigAsync
+  fullName: Warbler.Services.AuthConfigService.GetConfigAsync
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Task{Warbler.Models.AuthConfig}
+  commentId: '!:Task{Warbler.Models.AuthConfig}'
+  definition: Task`1
+  name: Task<AuthConfig>
+  nameWithType: Task<AuthConfig>
+  fullName: Task<Warbler.Models.AuthConfig>
+  nameWithType.vb: Task(Of AuthConfig)
+  fullName.vb: Task(Of Warbler.Models.AuthConfig)
+  name.vb: Task(Of AuthConfig)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Services.AuthConfigService.SaveAsync*
+  commentId: Overload:Warbler.Services.AuthConfigService.SaveAsync
+  isExternal: false
+  name: SaveAsync
+  nameWithType: AuthConfigService.SaveAsync
+  fullName: Warbler.Services.AuthConfigService.SaveAsync
+- uid: Warbler.Models.AuthConfig
+  commentId: T:Warbler.Models.AuthConfig
+  parent: Warbler.Models
+  isExternal: false
+  name: AuthConfig
+  nameWithType: AuthConfig
+  fullName: Warbler.Models.AuthConfig
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Services.AuthConfigService.RefreshConfigsAsync*
+  commentId: Overload:Warbler.Services.AuthConfigService.RefreshConfigsAsync
+  isExternal: false
+  name: RefreshConfigsAsync
+  nameWithType: AuthConfigService.RefreshConfigsAsync
+  fullName: Warbler.Services.AuthConfigService.RefreshConfigsAsync

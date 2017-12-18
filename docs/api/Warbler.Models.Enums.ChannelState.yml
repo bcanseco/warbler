@@ -17,7 +17,7 @@ items:
   source:
     id: ChannelState
     path: ''
-    startLine: 2321
+    startLine: 2845
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -44,7 +44,7 @@ items:
   source:
     id: Active
     path: ''
-    startLine: 2323
+    startLine: 2847
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums
@@ -72,7 +72,7 @@ items:
   source:
     id: Archive
     path: ''
-    startLine: 2324
+    startLine: 2848
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.Enums

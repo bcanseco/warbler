@@ -6,9 +6,12 @@ items:
   parent: Warbler.Services
   children:
   - Warbler.Services.UniversityService.#ctor(Warbler.Interfaces.IUniversityRepository)
+  - Warbler.Services.UniversityService.ApplyClaimAsync(Warbler.Models.University,System.String)
+  - Warbler.Services.UniversityService.DeleteAsync(Warbler.Models.University)
+  - Warbler.Services.UniversityService.FindByIdAsync(System.Int32)
   - Warbler.Services.UniversityService.GetAllAsync
-  - Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
-  - Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University)
+  - Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  - Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University,System.String)
   langs:
   - csharp
   - vb
@@ -19,7 +22,7 @@ items:
   source:
     id: UniversityService
     path: ''
-    startLine: 3275
+    startLine: 4036
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -58,7 +61,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3279
+    startLine: 4040
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -73,56 +76,62 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
-  commentId: M:Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
-  id: GetOrCreateAsync(NearByResult)
+- uid: Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  commentId: M:Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
+  id: GetOrCreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})
   parent: Warbler.Services.UniversityService
   langs:
   - csharp
   - vb
-  name: GetOrCreateAsync(NearByResult)
-  nameWithType: UniversityService.GetOrCreateAsync(NearByResult)
-  fullName: Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult)
+  name: GetOrCreateAsync(NearByResult, IEnumerable<ChannelTemplate>)
+  nameWithType: UniversityService.GetOrCreateAsync(NearByResult, IEnumerable<ChannelTemplate>)
+  fullName: Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult, System.Collections.Generic.IEnumerable<Warbler.Models.ChannelTemplate>)
   type: Method
   source:
     id: GetOrCreateAsync
     path: ''
-    startLine: 3290
+    startLine: 4054
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
   summary: "\nGets the university associated with the given\nGoogle Places result or creates it if nonexistent.\n"
   example: []
   syntax:
-    content: public Task<University> GetOrCreateAsync(NearByResult uni)
+    content: public Task<University> GetOrCreateAsync(NearByResult uni, IEnumerable<ChannelTemplate> templates)
     parameters:
     - id: uni
       type: NearByResult
       description: The Google Places search result to use.
+    - id: templates
+      type: System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate}
+      description: "\nThe channel templates to use if the university needs to be created.\n"
     return:
       type: Task{Warbler.Models.University}
       description: The related University object.
-    content.vb: Public Function GetOrCreateAsync(uni As NearByResult) As Task(Of University)
+    content.vb: Public Function GetOrCreateAsync(uni As NearByResult, templates As IEnumerable(Of ChannelTemplate)) As Task(Of University)
   overload: Warbler.Services.UniversityService.GetOrCreateAsync*
+  nameWithType.vb: UniversityService.GetOrCreateAsync(NearByResult, IEnumerable(Of ChannelTemplate))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University)
-  commentId: M:Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University)
-  id: JoinAsync(Warbler.Models.User,Warbler.Models.University)
+  fullName.vb: Warbler.Services.UniversityService.GetOrCreateAsync(NearByResult, System.Collections.Generic.IEnumerable(Of Warbler.Models.ChannelTemplate))
+  name.vb: GetOrCreateAsync(NearByResult, IEnumerable(Of ChannelTemplate))
+- uid: Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University,System.String)
+  commentId: M:Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User,Warbler.Models.University,System.String)
+  id: JoinAsync(Warbler.Models.User,Warbler.Models.University,System.String)
   parent: Warbler.Services.UniversityService
   langs:
   - csharp
   - vb
-  name: JoinAsync(User, University)
-  nameWithType: UniversityService.JoinAsync(User, University)
-  fullName: Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User, Warbler.Models.University)
+  name: JoinAsync(User, University, String)
+  nameWithType: UniversityService.JoinAsync(User, University, String)
+  fullName: Warbler.Services.UniversityService.JoinAsync(Warbler.Models.User, Warbler.Models.University, System.String)
   type: Method
   source:
     id: JoinAsync
     path: ''
-    startLine: 3310
+    startLine: 4075
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -130,7 +139,7 @@ items:
   remarks: "\nThis will create new rows in the Membership table (User x Channel).\n"
   example: []
   syntax:
-    content: public Task JoinAsync(User user, University university)
+    content: public Task JoinAsync(User user, University university, string samlName = null)
     parameters:
     - id: user
       type: Warbler.Models.User
@@ -138,9 +147,12 @@ items:
     - id: university
       type: Warbler.Models.University
       description: The university whose channels will be added to.
+    - id: samlName
+      type: System.String
+      description: Used for claimed universities.
     return:
       type: Task
-    content.vb: Public Function JoinAsync(user As User, university As University) As Task
+    content.vb: Public Function JoinAsync(user As User, university As University, samlName As String = Nothing) As Task
   overload: Warbler.Services.UniversityService.JoinAsync*
   modifiers.csharp:
   - public
@@ -160,7 +172,7 @@ items:
   source:
     id: GetAllAsync
     path: ''
-    startLine: 3324
+    startLine: 4091
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -169,9 +181,104 @@ items:
   syntax:
     content: public Task<List<University>> GetAllAsync()
     return:
-      type: Task{List{Warbler.Models.University}}
+      type: Task{System.Collections.Generic.List{Warbler.Models.University}}
     content.vb: Public Function GetAllAsync As Task(Of List(Of University))
   overload: Warbler.Services.UniversityService.GetAllAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UniversityService.ApplyClaimAsync(Warbler.Models.University,System.String)
+  commentId: M:Warbler.Services.UniversityService.ApplyClaimAsync(Warbler.Models.University,System.String)
+  id: ApplyClaimAsync(Warbler.Models.University,System.String)
+  parent: Warbler.Services.UniversityService
+  langs:
+  - csharp
+  - vb
+  name: ApplyClaimAsync(University, String)
+  nameWithType: UniversityService.ApplyClaimAsync(University, String)
+  fullName: Warbler.Services.UniversityService.ApplyClaimAsync(Warbler.Models.University, System.String)
+  type: Method
+  source:
+    id: ApplyClaimAsync
+    path: ''
+    startLine: 4096
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task ApplyClaimAsync(University university, string submitterId)
+    parameters:
+    - id: university
+      type: Warbler.Models.University
+    - id: submitterId
+      type: System.String
+    return:
+      type: Task
+    content.vb: Public Function ApplyClaimAsync(university As University, submitterId As String) As Task
+  overload: Warbler.Services.UniversityService.ApplyClaimAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UniversityService.FindByIdAsync(System.Int32)
+  commentId: M:Warbler.Services.UniversityService.FindByIdAsync(System.Int32)
+  id: FindByIdAsync(System.Int32)
+  parent: Warbler.Services.UniversityService
+  langs:
+  - csharp
+  - vb
+  name: FindByIdAsync(Int32)
+  nameWithType: UniversityService.FindByIdAsync(Int32)
+  fullName: Warbler.Services.UniversityService.FindByIdAsync(System.Int32)
+  type: Method
+  source:
+    id: FindByIdAsync
+    path: ''
+    startLine: 4099
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task<University> FindByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: Task{Warbler.Models.University}
+    content.vb: Public Function FindByIdAsync(id As Integer) As Task(Of University)
+  overload: Warbler.Services.UniversityService.FindByIdAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Services.UniversityService.DeleteAsync(Warbler.Models.University)
+  commentId: M:Warbler.Services.UniversityService.DeleteAsync(Warbler.Models.University)
+  id: DeleteAsync(Warbler.Models.University)
+  parent: Warbler.Services.UniversityService
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(University)
+  nameWithType: UniversityService.DeleteAsync(University)
+  fullName: Warbler.Services.UniversityService.DeleteAsync(Warbler.Models.University)
+  type: Method
+  source:
+    id: DeleteAsync
+    path: ''
+    startLine: 4103
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Services
+  syntax:
+    content: public Task DeleteAsync(University university)
+    parameters:
+    - id: university
+      type: Warbler.Models.University
+    return:
+      type: Task
+    content.vb: Public Function DeleteAsync(university As University) As Task
+  overload: Warbler.Services.UniversityService.DeleteAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -505,6 +612,48 @@ references:
   name: NearByResult
   nameWithType: NearByResult
   fullName: NearByResult
+- uid: System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate}
+  commentId: T:System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ChannelTemplate>
+  nameWithType: IEnumerable<ChannelTemplate>
+  fullName: System.Collections.Generic.IEnumerable<Warbler.Models.ChannelTemplate>
+  nameWithType.vb: IEnumerable(Of ChannelTemplate)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Warbler.Models.ChannelTemplate)
+  name.vb: IEnumerable(Of ChannelTemplate)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Task{Warbler.Models.University}
   commentId: '!:Task{Warbler.Models.University}'
   definition: Task`1
@@ -546,6 +695,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Task`1
   isExternal: true
   name: Task<>
@@ -604,6 +798,13 @@ references:
   name: University
   nameWithType: University
   fullName: Warbler.Models.University
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: Task
   isExternal: true
   name: Task
@@ -621,14 +822,14 @@ references:
   name: GetAllAsync
   nameWithType: UniversityService.GetAllAsync
   fullName: Warbler.Services.UniversityService.GetAllAsync
-- uid: Task{List{Warbler.Models.University}}
-  commentId: '!:Task{List{Warbler.Models.University}}'
+- uid: Task{System.Collections.Generic.List{Warbler.Models.University}}
+  commentId: '!:Task{System.Collections.Generic.List{Warbler.Models.University}}'
   definition: Task`1
   name: Task<List<University>>
   nameWithType: Task<List<University>>
-  fullName: Task<List<Warbler.Models.University>>
+  fullName: Task<System.Collections.Generic.List<Warbler.Models.University>>
   nameWithType.vb: Task(Of List(Of University))
-  fullName.vb: Task(Of List(Of Warbler.Models.University))
+  fullName.vb: Task(Of System.Collections.Generic.List(Of Warbler.Models.University))
   name.vb: Task(Of List(Of University))
   spec.csharp:
   - uid: Task`1
@@ -639,10 +840,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
@@ -666,10 +867,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -684,3 +885,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Services.UniversityService.ApplyClaimAsync*
+  commentId: Overload:Warbler.Services.UniversityService.ApplyClaimAsync
+  isExternal: false
+  name: ApplyClaimAsync
+  nameWithType: UniversityService.ApplyClaimAsync
+  fullName: Warbler.Services.UniversityService.ApplyClaimAsync
+- uid: Warbler.Services.UniversityService.FindByIdAsync*
+  commentId: Overload:Warbler.Services.UniversityService.FindByIdAsync
+  isExternal: false
+  name: FindByIdAsync
+  nameWithType: UniversityService.FindByIdAsync
+  fullName: Warbler.Services.UniversityService.FindByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Warbler.Services.UniversityService.DeleteAsync*
+  commentId: Overload:Warbler.Services.UniversityService.DeleteAsync
+  isExternal: false
+  name: DeleteAsync
+  nameWithType: UniversityService.DeleteAsync
+  fullName: Warbler.Services.UniversityService.DeleteAsync

@@ -6,7 +6,10 @@ items:
   parent: Warbler.Misc
   children:
   - Warbler.Misc.WarblerDbContext.#ctor(DbContextOptions{Warbler.Misc.WarblerDbContext})
+  - Warbler.Misc.WarblerDbContext.AuthConfigs
   - Warbler.Misc.WarblerDbContext.Channels
+  - Warbler.Misc.WarblerDbContext.ChannelTemplates
+  - Warbler.Misc.WarblerDbContext.ClaimRequests
   - Warbler.Misc.WarblerDbContext.Memberships
   - Warbler.Misc.WarblerDbContext.Messages
   - Warbler.Misc.WarblerDbContext.OnConfiguring(DbContextOptionsBuilder)
@@ -23,7 +26,7 @@ items:
   source:
     id: WarblerDbContext
     path: ''
-    startLine: 1669
+    startLine: 2076
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -54,7 +57,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1671
+    startLine: 2078
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -86,7 +89,7 @@ items:
   source:
     id: Universities
     path: ''
-    startLine: 1677
+    startLine: 2084
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -117,7 +120,7 @@ items:
   source:
     id: Servers
     path: ''
-    startLine: 1678
+    startLine: 2085
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -148,7 +151,7 @@ items:
   source:
     id: Channels
     path: ''
-    startLine: 1679
+    startLine: 2086
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -179,7 +182,7 @@ items:
   source:
     id: Messages
     path: ''
-    startLine: 1680
+    startLine: 2087
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -210,7 +213,7 @@ items:
   source:
     id: Memberships
     path: ''
-    startLine: 1681
+    startLine: 2088
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -221,6 +224,99 @@ items:
       type: DbSet{Warbler.Models.Membership}
     content.vb: Public Property Memberships As DbSet(Of Membership)
   overload: Warbler.Misc.WarblerDbContext.Memberships*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Misc.WarblerDbContext.ChannelTemplates
+  commentId: P:Warbler.Misc.WarblerDbContext.ChannelTemplates
+  id: ChannelTemplates
+  parent: Warbler.Misc.WarblerDbContext
+  langs:
+  - csharp
+  - vb
+  name: ChannelTemplates
+  nameWithType: WarblerDbContext.ChannelTemplates
+  fullName: Warbler.Misc.WarblerDbContext.ChannelTemplates
+  type: Property
+  source:
+    id: ChannelTemplates
+    path: ''
+    startLine: 2089
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  syntax:
+    content: public DbSet<ChannelTemplate> ChannelTemplates { get; set; }
+    parameters: []
+    return:
+      type: DbSet{Warbler.Models.ChannelTemplate}
+    content.vb: Public Property ChannelTemplates As DbSet(Of ChannelTemplate)
+  overload: Warbler.Misc.WarblerDbContext.ChannelTemplates*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Misc.WarblerDbContext.ClaimRequests
+  commentId: P:Warbler.Misc.WarblerDbContext.ClaimRequests
+  id: ClaimRequests
+  parent: Warbler.Misc.WarblerDbContext
+  langs:
+  - csharp
+  - vb
+  name: ClaimRequests
+  nameWithType: WarblerDbContext.ClaimRequests
+  fullName: Warbler.Misc.WarblerDbContext.ClaimRequests
+  type: Property
+  source:
+    id: ClaimRequests
+    path: ''
+    startLine: 2090
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  syntax:
+    content: public DbSet<ClaimRequest> ClaimRequests { get; set; }
+    parameters: []
+    return:
+      type: DbSet{Warbler.Models.ClaimRequest}
+    content.vb: Public Property ClaimRequests As DbSet(Of ClaimRequest)
+  overload: Warbler.Misc.WarblerDbContext.ClaimRequests*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Misc.WarblerDbContext.AuthConfigs
+  commentId: P:Warbler.Misc.WarblerDbContext.AuthConfigs
+  id: AuthConfigs
+  parent: Warbler.Misc.WarblerDbContext
+  langs:
+  - csharp
+  - vb
+  name: AuthConfigs
+  nameWithType: WarblerDbContext.AuthConfigs
+  fullName: Warbler.Misc.WarblerDbContext.AuthConfigs
+  type: Property
+  source:
+    id: AuthConfigs
+    path: ''
+    startLine: 2091
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Misc
+  syntax:
+    content: public DbSet<AuthConfig> AuthConfigs { get; set; }
+    parameters: []
+    return:
+      type: DbSet{Warbler.Models.AuthConfig}
+    content.vb: Public Property AuthConfigs As DbSet(Of AuthConfig)
+  overload: Warbler.Misc.WarblerDbContext.AuthConfigs*
   modifiers.csharp:
   - public
   - get
@@ -241,7 +337,7 @@ items:
   source:
     id: OnModelCreating
     path: ''
-    startLine: 1684
+    startLine: 2093
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -272,7 +368,7 @@ items:
   source:
     id: OnConfiguring
     path: ''
-    startLine: 1701
+    startLine: 2112
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -665,6 +761,147 @@ references:
     name: Membership
     nameWithType: Membership
     fullName: Warbler.Models.Membership
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.WarblerDbContext.ChannelTemplates*
+  commentId: Overload:Warbler.Misc.WarblerDbContext.ChannelTemplates
+  isExternal: false
+  name: ChannelTemplates
+  nameWithType: WarblerDbContext.ChannelTemplates
+  fullName: Warbler.Misc.WarblerDbContext.ChannelTemplates
+- uid: DbSet{Warbler.Models.ChannelTemplate}
+  commentId: '!:DbSet{Warbler.Models.ChannelTemplate}'
+  definition: DbSet`1
+  name: DbSet<ChannelTemplate>
+  nameWithType: DbSet<ChannelTemplate>
+  fullName: DbSet<Warbler.Models.ChannelTemplate>
+  nameWithType.vb: DbSet(Of ChannelTemplate)
+  fullName.vb: DbSet(Of Warbler.Models.ChannelTemplate)
+  name.vb: DbSet(Of ChannelTemplate)
+  spec.csharp:
+  - uid: DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+    nameWithType: ChannelTemplate
+    fullName: Warbler.Models.ChannelTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.WarblerDbContext.ClaimRequests*
+  commentId: Overload:Warbler.Misc.WarblerDbContext.ClaimRequests
+  isExternal: false
+  name: ClaimRequests
+  nameWithType: WarblerDbContext.ClaimRequests
+  fullName: Warbler.Misc.WarblerDbContext.ClaimRequests
+- uid: DbSet{Warbler.Models.ClaimRequest}
+  commentId: '!:DbSet{Warbler.Models.ClaimRequest}'
+  definition: DbSet`1
+  name: DbSet<ClaimRequest>
+  nameWithType: DbSet<ClaimRequest>
+  fullName: DbSet<Warbler.Models.ClaimRequest>
+  nameWithType.vb: DbSet(Of ClaimRequest)
+  fullName.vb: DbSet(Of Warbler.Models.ClaimRequest)
+  name.vb: DbSet(Of ClaimRequest)
+  spec.csharp:
+  - uid: DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc.WarblerDbContext.AuthConfigs*
+  commentId: Overload:Warbler.Misc.WarblerDbContext.AuthConfigs
+  isExternal: false
+  name: AuthConfigs
+  nameWithType: WarblerDbContext.AuthConfigs
+  fullName: Warbler.Misc.WarblerDbContext.AuthConfigs
+- uid: DbSet{Warbler.Models.AuthConfig}
+  commentId: '!:DbSet{Warbler.Models.AuthConfig}'
+  definition: DbSet`1
+  name: DbSet<AuthConfig>
+  nameWithType: DbSet<AuthConfig>
+  fullName: DbSet<Warbler.Models.AuthConfig>
+  nameWithType.vb: DbSet(Of AuthConfig)
+  fullName.vb: DbSet(Of Warbler.Models.AuthConfig)
+  name.vb: DbSet(Of AuthConfig)
+  spec.csharp:
+  - uid: DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
+    nameWithType: AuthConfig
+    fullName: Warbler.Models.AuthConfig
   - name: )
     nameWithType: )
     fullName: )

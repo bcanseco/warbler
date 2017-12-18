@@ -21,6 +21,8 @@
     name: ManageController
   - uid: Warbler.Controllers.ManageController.ManageMessageId
     name: ManageController.ManageMessageId
+  - uid: Warbler.Controllers.SamlController
+    name: SamlController
 - uid: Warbler.Exceptions
   name: Warbler.Exceptions
   items:
@@ -43,14 +45,22 @@
 - uid: Warbler.Interfaces
   name: Warbler.Interfaces
   items:
+  - uid: Warbler.Interfaces.IAuthConfigRepository
+    name: IAuthConfigRepository
   - uid: Warbler.Interfaces.IChannelRepository
     name: IChannelRepository
+  - uid: Warbler.Interfaces.IChannelTemplateRepository
+    name: IChannelTemplateRepository
+  - uid: Warbler.Interfaces.IClaimRequestRepository
+    name: IClaimRequestRepository
   - uid: Warbler.Interfaces.IEmailSender
     name: IEmailSender
   - uid: Warbler.Interfaces.IMembershipRepository
     name: IMembershipRepository
   - uid: Warbler.Interfaces.IMessageRepository
     name: IMessageRepository
+  - uid: Warbler.Interfaces.IServerRepository
+    name: IServerRepository
   - uid: Warbler.Interfaces.ISmsSender
     name: ISmsSender
   - uid: Warbler.Interfaces.IUniversityRepository
@@ -74,14 +84,20 @@
 - uid: Warbler.Models
   name: Warbler.Models
   items:
+  - uid: Warbler.Models.AuthConfig
+    name: AuthConfig
   - uid: Warbler.Models.Channel
     name: Channel
-  - uid: Warbler.Models.ClaimsRequest
-    name: ClaimsRequest
+  - uid: Warbler.Models.ChannelTemplate
+    name: ChannelTemplate
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
   - uid: Warbler.Models.Membership
     name: Membership
   - uid: Warbler.Models.Message
     name: Message
+  - uid: Warbler.Models.Relationship
+    name: Relationship
   - uid: Warbler.Models.Server
     name: Server
   - uid: Warbler.Models.University
@@ -114,8 +130,6 @@
     name: ChannelType
   - uid: Warbler.Models.Enums.QueryDepth
     name: QueryDepth
-  - uid: Warbler.Models.Enums.ServerType
-    name: ServerType
   - uid: Warbler.Models.Enums.UserFlag
     name: UserFlag
 - uid: Warbler.Models.ManageViewModels
@@ -144,12 +158,20 @@
 - uid: Warbler.Repositories
   name: Warbler.Repositories
   items:
+  - uid: Warbler.Repositories.SqlAuthConfigRepository
+    name: SqlAuthConfigRepository
   - uid: Warbler.Repositories.SqlChannelRepository
     name: SqlChannelRepository
+  - uid: Warbler.Repositories.SqlChannelTemplateRepository
+    name: SqlChannelTemplateRepository
+  - uid: Warbler.Repositories.SqlClaimRequestRepository
+    name: SqlClaimRequestRepository
   - uid: Warbler.Repositories.SqlMembershipRepository
     name: SqlMembershipRepository
   - uid: Warbler.Repositories.SqlMessageRepository
     name: SqlMessageRepository
+  - uid: Warbler.Repositories.SqlServerRepository
+    name: SqlServerRepository
   - uid: Warbler.Repositories.SqlUniversityRepository
     name: SqlUniversityRepository
   - uid: Warbler.Repositories.SqlUserRepository
@@ -157,18 +179,26 @@
 - uid: Warbler.Services
   name: Warbler.Services
   items:
+  - uid: Warbler.Services.AuthConfigService
+    name: AuthConfigService
   - uid: Warbler.Services.AuthMessageSender
     name: AuthMessageSender
   - uid: Warbler.Services.ChannelService
     name: ChannelService
+  - uid: Warbler.Services.ChannelTemplateService
+    name: ChannelTemplateService
   - uid: Warbler.Services.ChatService
     name: ChatService
+  - uid: Warbler.Services.ClaimRequestService
+    name: ClaimRequestService
   - uid: Warbler.Services.MembershipService
     name: MembershipService
   - uid: Warbler.Services.MessageService
     name: MessageService
   - uid: Warbler.Services.ProximityService
     name: ProximityService
+  - uid: Warbler.Services.ServerService
+    name: ServerService
   - uid: Warbler.Services.UniversityService
     name: UniversityService
   - uid: Warbler.Services.UserService
@@ -180,7 +210,24 @@
     name: TestSqlChannelRepository
   - uid: Warbler.Tests.Repositories.TestSqlMembershipRepository
     name: TestSqlMembershipRepository
+  - uid: Warbler.Tests.Repositories.TestSqlMessageRepository
+    name: TestSqlMessageRepository
   - uid: Warbler.Tests.Repositories.TestSqlUniversityRepository
     name: TestSqlUniversityRepository
   - uid: Warbler.Tests.Repositories.TestSqlUserRepository
     name: TestSqlUserRepository
+- uid: Warbler.Tests.Services
+  name: Warbler.Tests.Services
+  items:
+  - uid: Warbler.Tests.Services.TestChannelService
+    name: TestChannelService
+  - uid: Warbler.Tests.Services.TestClaimRequestService
+    name: TestClaimRequestService
+  - uid: Warbler.Tests.Services.TestMembershipService
+    name: TestMembershipService
+  - uid: Warbler.Tests.Services.TestMessageService
+    name: TestMessageService
+  - uid: Warbler.Tests.Services.TestUniversityService
+    name: TestUniversityService
+  - uid: Warbler.Tests.Services.TestUserService
+    name: TestUserService

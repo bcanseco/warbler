@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Services.TestClaimRequestService
+  commentId: T:Warbler.Tests.Services.TestClaimRequestService
+  id: TestClaimRequestService
+  parent: Warbler.Tests.Services
+  children:
+  - Warbler.Tests.Services.TestClaimRequestService.CreateUniversity(TestContext)
+  - Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request
+  - Warbler.Tests.Services.TestClaimRequestService.Test
+  langs:
+  - csharp
+  - vb
+  name: TestClaimRequestService
+  nameWithType: TestClaimRequestService
+  fullName: Warbler.Tests.Services.TestClaimRequestService
+  type: Class
+  source:
+    id: TestClaimRequestService
+    path: ''
+    startLine: 4768
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public class TestClaimRequestService
+    content.vb: Public Class TestClaimRequestService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Tests.Services.TestClaimRequestService.Test
+  commentId: P:Warbler.Tests.Services.TestClaimRequestService.Test
+  id: Test
+  parent: Warbler.Tests.Services.TestClaimRequestService
+  langs:
+  - csharp
+  - vb
+  name: Test
+  nameWithType: TestClaimRequestService.Test
+  fullName: Warbler.Tests.Services.TestClaimRequestService.Test
+  type: Property
+  source:
+    id: Test
+    path: ''
+    startLine: 4776
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public static University Test { get; set; }
+    parameters: []
+    return:
+      type: Warbler.Models.University
+    content.vb: Public Shared Property Test As University
+  overload: Warbler.Tests.Services.TestClaimRequestService.Test*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Tests.Services.TestClaimRequestService.CreateUniversity(TestContext)
+  commentId: M:Warbler.Tests.Services.TestClaimRequestService.CreateUniversity(TestContext)
+  id: CreateUniversity(TestContext)
+  parent: Warbler.Tests.Services.TestClaimRequestService
+  langs:
+  - csharp
+  - vb
+  name: CreateUniversity(TestContext)
+  nameWithType: TestClaimRequestService.CreateUniversity(TestContext)
+  fullName: Warbler.Tests.Services.TestClaimRequestService.CreateUniversity(TestContext)
+  type: Method
+  source:
+    id: CreateUniversity
+    path: ''
+    startLine: 4779
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public static Task CreateUniversity(TestContext _)
+    parameters:
+    - id: _
+      type: TestContext
+    return:
+      type: Task
+    content.vb: Public Shared Function CreateUniversity(_ As TestContext) As Task
+  overload: Warbler.Tests.Services.TestClaimRequestService.CreateUniversity*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request
+  commentId: M:Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request
+  id: SubmitClaimAsync_Should_Create_New_Claim_Request
+  parent: Warbler.Tests.Services.TestClaimRequestService
+  langs:
+  - csharp
+  - vb
+  name: SubmitClaimAsync_Should_Create_New_Claim_Request()
+  nameWithType: TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request()
+  fullName: Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request()
+  type: Method
+  source:
+    id: SubmitClaimAsync_Should_Create_New_Claim_Request
+    path: ''
+    startLine: 4802
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Tests.Services
+  syntax:
+    content: public Task SubmitClaimAsync_Should_Create_New_Claim_Request()
+    return:
+      type: Task
+    content.vb: Public Function SubmitClaimAsync_Should_Create_New_Claim_Request As Task
+  overload: Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Tests.Services
+  commentId: N:Warbler.Tests.Services
+  isExternal: false
+  name: Warbler.Tests.Services
+  nameWithType: Warbler.Tests.Services
+  fullName: Warbler.Tests.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Tests.Services.TestClaimRequestService.Test*
+  commentId: Overload:Warbler.Tests.Services.TestClaimRequestService.Test
+  isExternal: false
+  name: Test
+  nameWithType: TestClaimRequestService.Test
+  fullName: Warbler.Tests.Services.TestClaimRequestService.Test
+- uid: Warbler.Models.University
+  commentId: T:Warbler.Models.University
+  parent: Warbler.Models
+  isExternal: false
+  name: University
+  nameWithType: University
+  fullName: Warbler.Models.University
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Warbler.Tests.Services.TestClaimRequestService.CreateUniversity*
+  commentId: Overload:Warbler.Tests.Services.TestClaimRequestService.CreateUniversity
+  isExternal: false
+  name: CreateUniversity
+  nameWithType: TestClaimRequestService.CreateUniversity
+  fullName: Warbler.Tests.Services.TestClaimRequestService.CreateUniversity
+- uid: TestContext
+  isExternal: true
+  name: TestContext
+  nameWithType: TestContext
+  fullName: TestContext
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request*
+  commentId: Overload:Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request
+  isExternal: false
+  name: SubmitClaimAsync_Should_Create_New_Claim_Request
+  nameWithType: TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request
+  fullName: Warbler.Tests.Services.TestClaimRequestService.SubmitClaimAsync_Should_Create_New_Claim_Request

@@ -73,7 +73,7 @@
   <h1 id="Warbler_Hubs_ProximityHub" data-uid="Warbler.Hubs.ProximityHub">Class ProximityHub
   </h1>
   <div class="markdown level0 summary"><p>Coordinates websocket communication between
-clients and server on the chat index view.</p>
+clients and server on the proximity component view.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -151,92 +151,6 @@ without being a member of any universities.</p>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">locationSer</span></td>
         <td><p>The serialized location (lat/lng).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Warbler_Hubs_ProximityHub_OnDisconnectedAsync_" data-uid="Warbler.Hubs.ProximityHub.OnDisconnectedAsync*"></a>
-  <h4 id="Warbler_Hubs_ProximityHub_OnDisconnectedAsync_System_Exception_" data-uid="Warbler.Hubs.ProximityHub.OnDisconnectedAsync(System.Exception)">OnDisconnectedAsync(Exception)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task OnDisconnectedAsync(Exception exception)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Exception</span></td>
-        <td><span class="parametername">exception</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Warbler_Hubs_ProximityHub_SelectUniversityAsync_" data-uid="Warbler.Hubs.ProximityHub.SelectUniversityAsync*"></a>
-  <h4 id="Warbler_Hubs_ProximityHub_SelectUniversityAsync_System_String_" data-uid="Warbler.Hubs.ProximityHub.SelectUniversityAsync(System.String)">SelectUniversityAsync(String)</h4>
-  <div class="markdown level1 summary"><p>Called via SignalR when the user clicks on a university to connect to.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task SelectUniversityAsync(string placeId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">placeId</span></td>
-        <td><p>The Google Place ID of the clicked university.</p>
 </td>
       </tr>
     </tbody>

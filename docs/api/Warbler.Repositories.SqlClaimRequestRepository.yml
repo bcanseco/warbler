@@ -1,0 +1,830 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Repositories.SqlClaimRequestRepository
+  commentId: T:Warbler.Repositories.SqlClaimRequestRepository
+  id: SqlClaimRequestRepository
+  parent: Warbler.Repositories
+  children:
+  - Warbler.Repositories.SqlClaimRequestRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  - Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  - Warbler.Repositories.SqlClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  - Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync
+  - Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  langs:
+  - csharp
+  - vb
+  name: SqlClaimRequestRepository
+  nameWithType: SqlClaimRequestRepository
+  fullName: Warbler.Repositories.SqlClaimRequestRepository
+  type: Class
+  source:
+    id: SqlClaimRequestRepository
+    path: ''
+    startLine: 3154
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  summary: "\nRuns queries against the SQL database using Entity Framework.\nLook at <xref href=\"Warbler.Interfaces.IClaimRequestRepository\" data-throw-if-not-resolved=\"false\"></xref> for docs.\n"
+  example: []
+  syntax:
+    content: 'public class SqlClaimRequestRepository : IClaimRequestRepository'
+    content.vb: >-
+      Public Class SqlClaimRequestRepository
+          Implements IClaimRequestRepository
+  inheritance:
+  - System.Object
+  implements:
+  - Warbler.Interfaces.IClaimRequestRepository
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Repositories.SqlClaimRequestRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Repositories.SqlClaimRequestRepository.#ctor(Warbler.Misc.WarblerDbContext)
+  id: '#ctor(Warbler.Misc.WarblerDbContext)'
+  parent: Warbler.Repositories.SqlClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: SqlClaimRequestRepository(WarblerDbContext)
+  nameWithType: SqlClaimRequestRepository.SqlClaimRequestRepository(WarblerDbContext)
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.SqlClaimRequestRepository(Warbler.Misc.WarblerDbContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 3158
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public SqlClaimRequestRepository(WarblerDbContext context)
+    parameters:
+    - id: context
+      type: Warbler.Misc.WarblerDbContext
+    content.vb: Public Sub New(context As WarblerDbContext)
+  overload: Warbler.Repositories.SqlClaimRequestRepository.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  commentId: M:Warbler.Repositories.SqlClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  id: CreateAsync(Warbler.Models.ClaimRequest)
+  parent: Warbler.Repositories.SqlClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(ClaimRequest)
+  nameWithType: SqlClaimRequestRepository.CreateAsync(ClaimRequest)
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  type: Method
+  source:
+    id: CreateAsync
+    path: ''
+    startLine: 3163
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task CreateAsync(ClaimRequest claimRequest)
+    parameters:
+    - id: claimRequest
+      type: Warbler.Models.ClaimRequest
+    return:
+      type: Task
+    content.vb: Public Function CreateAsync(claimRequest As ClaimRequest) As Task
+  overload: Warbler.Repositories.SqlClaimRequestRepository.CreateAsync*
+  implements:
+  - Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync
+  commentId: M:Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync
+  id: GetAllAsync
+  parent: Warbler.Repositories.SqlClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: SqlClaimRequestRepository.GetAllAsync()
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync()
+  type: Method
+  source:
+    id: GetAllAsync
+    path: ''
+    startLine: 3169
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task<List<ClaimRequest>> GetAllAsync()
+    return:
+      type: Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}
+    content.vb: Public Function GetAllAsync As Task(Of List(Of ClaimRequest))
+  overload: Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync*
+  implements:
+  - Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  commentId: M:Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  id: AllFromUserAsync(Warbler.Models.User)
+  parent: Warbler.Repositories.SqlClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: AllFromUserAsync(User)
+  nameWithType: SqlClaimRequestRepository.AllFromUserAsync(User)
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  type: Method
+  source:
+    id: AllFromUserAsync
+    path: ''
+    startLine: 3176
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task<List<ClaimRequest>> AllFromUserAsync(User user)
+    parameters:
+    - id: user
+      type: Warbler.Models.User
+    return:
+      type: Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}
+    content.vb: Public Function AllFromUserAsync(user As User) As Task(Of List(Of ClaimRequest))
+  overload: Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync*
+  implements:
+  - Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  commentId: M:Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  id: UpdateAsync(Warbler.Models.ClaimRequest)
+  parent: Warbler.Repositories.SqlClaimRequestRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(ClaimRequest)
+  nameWithType: SqlClaimRequestRepository.UpdateAsync(ClaimRequest)
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  type: Method
+  source:
+    id: UpdateAsync
+    path: ''
+    startLine: 3182
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Repositories
+  syntax:
+    content: public Task UpdateAsync(ClaimRequest claimRequest)
+    parameters:
+    - id: claimRequest
+      type: Warbler.Models.ClaimRequest
+    return:
+      type: Task
+    content.vb: Public Function UpdateAsync(claimRequest As ClaimRequest) As Task
+  overload: Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync*
+  implements:
+  - Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Interfaces.IClaimRequestRepository
+  commentId: T:Warbler.Interfaces.IClaimRequestRepository
+  parent: Warbler.Interfaces
+  isExternal: false
+  name: IClaimRequestRepository
+  nameWithType: IClaimRequestRepository
+  fullName: Warbler.Interfaces.IClaimRequestRepository
+- uid: Warbler.Repositories
+  commentId: N:Warbler.Repositories
+  isExternal: false
+  name: Warbler.Repositories
+  nameWithType: Warbler.Repositories
+  fullName: Warbler.Repositories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Interfaces
+  commentId: N:Warbler.Interfaces
+  isExternal: false
+  name: Warbler.Interfaces
+  nameWithType: Warbler.Interfaces
+  fullName: Warbler.Interfaces
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Repositories.SqlClaimRequestRepository.#ctor*
+  commentId: Overload:Warbler.Repositories.SqlClaimRequestRepository.#ctor
+  isExternal: false
+  name: SqlClaimRequestRepository
+  nameWithType: SqlClaimRequestRepository.SqlClaimRequestRepository
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.SqlClaimRequestRepository
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
+- uid: Warbler.Repositories.SqlClaimRequestRepository.CreateAsync*
+  commentId: Overload:Warbler.Repositories.SqlClaimRequestRepository.CreateAsync
+  isExternal: false
+  name: CreateAsync
+  nameWithType: SqlClaimRequestRepository.CreateAsync
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.CreateAsync
+- uid: Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  isExternal: false
+  name: CreateAsync(ClaimRequest)
+  nameWithType: IClaimRequestRepository.CreateAsync(ClaimRequest)
+  fullName: Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+    name: CreateAsync
+    nameWithType: IClaimRequestRepository.CreateAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.CreateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.CreateAsync(Warbler.Models.ClaimRequest)
+    name: CreateAsync
+    nameWithType: IClaimRequestRepository.CreateAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.CreateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.ClaimRequest
+  commentId: T:Warbler.Models.ClaimRequest
+  parent: Warbler.Models
+  isExternal: false
+  name: ClaimRequest
+  nameWithType: ClaimRequest
+  fullName: Warbler.Models.ClaimRequest
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Warbler.Models
+  commentId: N:Warbler.Models
+  isExternal: false
+  name: Warbler.Models
+  nameWithType: Warbler.Models
+  fullName: Warbler.Models
+- uid: Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync*
+  commentId: Overload:Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync
+  isExternal: false
+  name: GetAllAsync
+  nameWithType: SqlClaimRequestRepository.GetAllAsync
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.GetAllAsync
+- uid: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  isExternal: false
+  name: GetAllAsync()
+  nameWithType: IClaimRequestRepository.GetAllAsync()
+  fullName: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync()
+  spec.csharp:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+    name: GetAllAsync
+    nameWithType: IClaimRequestRepository.GetAllAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+    name: GetAllAsync
+    nameWithType: IClaimRequestRepository.GetAllAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.GetAllAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}
+  commentId: '!:Task{System.Collections.Generic.List{Warbler.Models.ClaimRequest}}'
+  definition: Task`1
+  name: Task<List<ClaimRequest>>
+  nameWithType: Task<List<ClaimRequest>>
+  fullName: Task<System.Collections.Generic.List<Warbler.Models.ClaimRequest>>
+  nameWithType.vb: Task(Of List(Of ClaimRequest))
+  fullName.vb: Task(Of System.Collections.Generic.List(Of Warbler.Models.ClaimRequest))
+  name.vb: Task(Of List(Of ClaimRequest))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync*
+  commentId: Overload:Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync
+  isExternal: false
+  name: AllFromUserAsync
+  nameWithType: SqlClaimRequestRepository.AllFromUserAsync
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.AllFromUserAsync
+- uid: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  isExternal: false
+  name: AllFromUserAsync(User)
+  nameWithType: IClaimRequestRepository.AllFromUserAsync(User)
+  fullName: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+    name: AllFromUserAsync
+    nameWithType: IClaimRequestRepository.AllFromUserAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync(Warbler.Models.User)
+    name: AllFromUserAsync
+    nameWithType: IClaimRequestRepository.AllFromUserAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.AllFromUserAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+- uid: Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync*
+  commentId: Overload:Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync
+  isExternal: false
+  name: UpdateAsync
+  nameWithType: SqlClaimRequestRepository.UpdateAsync
+  fullName: Warbler.Repositories.SqlClaimRequestRepository.UpdateAsync
+- uid: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  commentId: M:Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  parent: Warbler.Interfaces.IClaimRequestRepository
+  isExternal: false
+  name: UpdateAsync(ClaimRequest)
+  nameWithType: IClaimRequestRepository.UpdateAsync(ClaimRequest)
+  fullName: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+  spec.csharp:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+    name: UpdateAsync
+    nameWithType: IClaimRequestRepository.UpdateAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync(Warbler.Models.ClaimRequest)
+    name: UpdateAsync
+    nameWithType: IClaimRequestRepository.UpdateAsync
+    fullName: Warbler.Interfaces.IClaimRequestRepository.UpdateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Warbler.Models.ClaimRequest
+    name: ClaimRequest
+    nameWithType: ClaimRequest
+    fullName: Warbler.Models.ClaimRequest
+  - name: )
+    nameWithType: )
+    fullName: )

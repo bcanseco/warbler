@@ -5,9 +5,11 @@ items:
   id: ChatController
   parent: Warbler.Controllers
   children:
-  - Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
+  - Warbler.Controllers.ChatController.#ctor(Warbler.Misc.WarblerDbContext)
   - Warbler.Controllers.ChatController.Error
   - Warbler.Controllers.ChatController.Index
+  - Warbler.Controllers.ChatController.Join(NearByResult)
+  - Warbler.Controllers.ChatController.Nearby
   langs:
   - csharp
   - vb
@@ -18,7 +20,7 @@ items:
   source:
     id: ChatController
     path: ''
-    startLine: 632
+    startLine: 684
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -35,40 +37,35 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  commentId: M:Warbler.Controllers.ChatController.#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)
-  id: '#ctor(UserManager{Warbler.Models.User},Warbler.Misc.WarblerDbContext)'
+- uid: Warbler.Controllers.ChatController.#ctor(Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Controllers.ChatController.#ctor(Warbler.Misc.WarblerDbContext)
+  id: '#ctor(Warbler.Misc.WarblerDbContext)'
   parent: Warbler.Controllers.ChatController
   langs:
   - csharp
   - vb
-  name: ChatController(UserManager<User>, WarblerDbContext)
-  nameWithType: ChatController.ChatController(UserManager<User>, WarblerDbContext)
-  fullName: Warbler.Controllers.ChatController.ChatController(UserManager<Warbler.Models.User>, Warbler.Misc.WarblerDbContext)
+  name: ChatController(WarblerDbContext)
+  nameWithType: ChatController.ChatController(WarblerDbContext)
+  fullName: Warbler.Controllers.ChatController.ChatController(Warbler.Misc.WarblerDbContext)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 638
+    startLine: 692
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
   syntax:
-    content: public ChatController(UserManager<User> userManager, WarblerDbContext context)
+    content: public ChatController(WarblerDbContext context)
     parameters:
-    - id: userManager
-      type: UserManager{Warbler.Models.User}
     - id: context
       type: Warbler.Misc.WarblerDbContext
-    content.vb: Public Sub New(userManager As UserManager(Of User), context As WarblerDbContext)
+    content.vb: Public Sub New(context As WarblerDbContext)
   overload: Warbler.Controllers.ChatController.#ctor*
-  nameWithType.vb: ChatController.ChatController(UserManager(Of User), WarblerDbContext)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Warbler.Controllers.ChatController.ChatController(UserManager(Of Warbler.Models.User), Warbler.Misc.WarblerDbContext)
-  name.vb: ChatController(UserManager(Of User), WarblerDbContext)
 - uid: Warbler.Controllers.ChatController.Index
   commentId: M:Warbler.Controllers.ChatController.Index
   id: Index
@@ -83,7 +80,7 @@ items:
   source:
     id: Index
     path: ''
-    startLine: 644
+    startLine: 700
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -93,6 +90,65 @@ items:
       type: Task{IActionResult}
     content.vb: Public Function Index As Task(Of IActionResult)
   overload: Warbler.Controllers.ChatController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ChatController.Nearby
+  commentId: M:Warbler.Controllers.ChatController.Nearby
+  id: Nearby
+  parent: Warbler.Controllers.ChatController
+  langs:
+  - csharp
+  - vb
+  name: Nearby()
+  nameWithType: ChatController.Nearby()
+  fullName: Warbler.Controllers.ChatController.Nearby()
+  type: Method
+  source:
+    id: Nearby
+    path: ''
+    startLine: 716
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public IActionResult Nearby()
+    return:
+      type: IActionResult
+    content.vb: Public Function Nearby As IActionResult
+  overload: Warbler.Controllers.ChatController.Nearby*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.ChatController.Join(NearByResult)
+  commentId: M:Warbler.Controllers.ChatController.Join(NearByResult)
+  id: Join(NearByResult)
+  parent: Warbler.Controllers.ChatController
+  langs:
+  - csharp
+  - vb
+  name: Join(NearByResult)
+  nameWithType: ChatController.Join(NearByResult)
+  fullName: Warbler.Controllers.ChatController.Join(NearByResult)
+  type: Method
+  source:
+    id: Join
+    path: ''
+    startLine: 725
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<string> Join(NearByResult userChoice)
+    parameters:
+    - id: userChoice
+      type: NearByResult
+    return:
+      type: Task{System.String}
+    content.vb: Public Function Join(userChoice As NearByResult) As Task(Of String)
+  overload: Warbler.Controllers.ChatController.Join*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -111,7 +167,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 664
+    startLine: 748
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Controllers
@@ -151,47 +207,6 @@ references:
   name: ChatController
   nameWithType: ChatController.ChatController
   fullName: Warbler.Controllers.ChatController.ChatController
-- uid: UserManager{Warbler.Models.User}
-  commentId: '!:UserManager{Warbler.Models.User}'
-  definition: UserManager`1
-  name: UserManager<User>
-  nameWithType: UserManager<User>
-  fullName: UserManager<Warbler.Models.User>
-  nameWithType.vb: UserManager(Of User)
-  fullName.vb: UserManager(Of Warbler.Models.User)
-  name.vb: UserManager(Of User)
-  spec.csharp:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: Warbler.Models.User
-    name: User
-    nameWithType: User
-    fullName: Warbler.Models.User
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: Warbler.Models.User
-    name: User
-    nameWithType: User
-    fullName: Warbler.Models.User
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Warbler.Misc.WarblerDbContext
   commentId: T:Warbler.Misc.WarblerDbContext
   parent: Warbler.Misc
@@ -199,44 +214,6 @@ references:
   name: WarblerDbContext
   nameWithType: WarblerDbContext
   fullName: Warbler.Misc.WarblerDbContext
-- uid: UserManager`1
-  isExternal: true
-  name: UserManager<>
-  nameWithType: UserManager<>
-  fullName: UserManager<>
-  nameWithType.vb: UserManager(Of )
-  fullName.vb: UserManager(Of )
-  name.vb: UserManager(Of )
-  spec.csharp:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: UserManager`1
-    name: UserManager
-    nameWithType: UserManager
-    fullName: UserManager
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: Warbler.Misc
   commentId: N:Warbler.Misc
   isExternal: false
@@ -330,14 +307,74 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Warbler.Controllers.ChatController.Nearby*
+  commentId: Overload:Warbler.Controllers.ChatController.Nearby
+  isExternal: false
+  name: Nearby
+  nameWithType: ChatController.Nearby
+  fullName: Warbler.Controllers.ChatController.Nearby
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult
+- uid: Warbler.Controllers.ChatController.Join*
+  commentId: Overload:Warbler.Controllers.ChatController.Join
+  isExternal: false
+  name: Join
+  nameWithType: ChatController.Join
+  fullName: Warbler.Controllers.ChatController.Join
+- uid: NearByResult
+  isExternal: true
+  name: NearByResult
+  nameWithType: NearByResult
+  fullName: NearByResult
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
+  definition: Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Warbler.Controllers.ChatController.Error*
   commentId: Overload:Warbler.Controllers.ChatController.Error
   isExternal: false
   name: Error
   nameWithType: ChatController.Error
   fullName: Warbler.Controllers.ChatController.Error
-- uid: IActionResult
-  isExternal: true
-  name: IActionResult
-  nameWithType: IActionResult
-  fullName: IActionResult

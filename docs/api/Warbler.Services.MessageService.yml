@@ -18,7 +18,7 @@ items:
   source:
     id: MessageService
     path: ''
-    startLine: 3085
+    startLine: 3873
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -57,7 +57,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3089
+    startLine: 3877
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -86,7 +86,7 @@ items:
   source:
     id: LatestIn
     path: ''
-    startLine: 3099
+    startLine: 3887
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -99,7 +99,7 @@ items:
       type: Warbler.Models.Channel
       description: The channel to fetch messages from.
     return:
-      type: Task{List{Warbler.Models.Message}}
+      type: Task{System.Collections.Generic.List{Warbler.Models.Message}}
       description: A collection of saved messages.
     content.vb: Public Function LatestIn(channel As Channel) As Task(Of List(Of Message))
   overload: Warbler.Services.MessageService.LatestIn*
@@ -121,7 +121,7 @@ items:
   source:
     id: CreateAsync
     path: ''
-    startLine: 3109
+    startLine: 3897
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -479,14 +479,14 @@ references:
   name: Channel
   nameWithType: Channel
   fullName: Warbler.Models.Channel
-- uid: Task{List{Warbler.Models.Message}}
-  commentId: '!:Task{List{Warbler.Models.Message}}'
+- uid: Task{System.Collections.Generic.List{Warbler.Models.Message}}
+  commentId: '!:Task{System.Collections.Generic.List{Warbler.Models.Message}}'
   definition: Task`1
   name: Task<List<Message>>
   nameWithType: Task<List<Message>>
-  fullName: Task<List<Warbler.Models.Message>>
+  fullName: Task<System.Collections.Generic.List<Warbler.Models.Message>>
   nameWithType.vb: Task(Of List(Of Message))
-  fullName.vb: Task(Of List(Of Warbler.Models.Message))
+  fullName.vb: Task(Of System.Collections.Generic.List(Of Warbler.Models.Message))
   name.vb: Task(Of List(Of Message))
   spec.csharp:
   - uid: Task`1
@@ -497,10 +497,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
@@ -524,10 +524,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

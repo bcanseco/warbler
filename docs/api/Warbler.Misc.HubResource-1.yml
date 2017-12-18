@@ -19,7 +19,7 @@ items:
   source:
     id: HubResource
     path: ''
-    startLine: 1587
+    startLine: 1994
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -71,7 +71,7 @@ items:
   source:
     id: HubContext
     path: ''
-    startLine: 1591
+    startLine: 1998
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -106,7 +106,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1596
+    startLine: 2003
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -140,7 +140,7 @@ items:
   source:
     id: OnConnectedAsync
     path: ''
-    startLine: 1609
+    startLine: 2016
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -181,7 +181,7 @@ items:
   source:
     id: OnDisconnectedAsync
     path: ''
-    startLine: 1622
+    startLine: 2029
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc

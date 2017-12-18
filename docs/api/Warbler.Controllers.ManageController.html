@@ -90,12 +90,12 @@
   
   
   <a id="Warbler_Controllers_ManageController__ctor_" data-uid="Warbler.Controllers.ManageController.#ctor*"></a>
-  <h4 id="Warbler_Controllers_ManageController__ctor_UserManager_Warbler_Models_User__SignInManager_Warbler_Models_User__Warbler_Interfaces_IEmailSender_Warbler_Interfaces_ISmsSender_ILoggerFactory_Warbler_Misc_WarblerDbContext_" data-uid="Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext)">ManageController(UserManager&lt;User&gt;, SignInManager&lt;User&gt;, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext)</h4>
+  <h4 id="Warbler_Controllers_ManageController__ctor_UserManager_Warbler_Models_User__SignInManager_Warbler_Models_User__Warbler_Interfaces_IEmailSender_Warbler_Interfaces_ISmsSender_ILoggerFactory_Warbler_Misc_WarblerDbContext_SamlConfigurations_" data-uid="Warbler.Controllers.ManageController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},Warbler.Interfaces.IEmailSender,Warbler.Interfaces.ISmsSender,ILoggerFactory,Warbler.Misc.WarblerDbContext,SamlConfigurations)">ManageController(UserManager&lt;User&gt;, SignInManager&lt;User&gt;, IEmailSender, ISmsSender, ILoggerFactory, WarblerDbContext, SamlConfigurations)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManageController(UserManager&lt;User&gt; userManager, SignInManager&lt;User&gt; signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory, WarblerDbContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManageController(UserManager&lt;User&gt; userManager, SignInManager&lt;User&gt; signInManager, IEmailSender emailSender, ISmsSender smsSender, ILoggerFactory loggerFactory, WarblerDbContext context, SamlConfigurations samlConfigurations)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,6 +135,11 @@
       <tr>
         <td><a class="xref" href="Warbler.Misc.WarblerDbContext.html">WarblerDbContext</a></td>
         <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SamlConfigurations</span></td>
+        <td><span class="parametername">samlConfigurations</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -658,6 +663,132 @@
       <tr>
         <td><span class="xref">SetPasswordViewModel</span></td>
         <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Controllers_ManageController_TestSaml_" data-uid="Warbler.Controllers.ManageController.TestSaml*"></a>
+  <h4 id="Warbler_Controllers_ManageController_TestSaml_Warbler_Models_AuthConfig_" data-uid="Warbler.Controllers.ManageController.TestSaml(Warbler.Models.AuthConfig)">TestSaml(AuthConfig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IActionResult TestSaml(AuthConfig config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.AuthConfig.html">AuthConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IActionResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Controllers_ManageController_University_" data-uid="Warbler.Controllers.ManageController.University*"></a>
+  <h4 id="Warbler_Controllers_ManageController_University_System_Int32_" data-uid="Warbler.Controllers.ManageController.University(System.Int32)">University(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; University(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Controllers_ManageController_University_" data-uid="Warbler.Controllers.ManageController.University*"></a>
+  <h4 id="Warbler_Controllers_ManageController_University_Warbler_Models_AuthConfig_" data-uid="Warbler.Controllers.ManageController.University(Warbler.Models.AuthConfig)">University(AuthConfig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; University(AuthConfig config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.AuthConfig.html">AuthConfig</a></td>
+        <td><span class="parametername">config</span></td>
         <td></td>
       </tr>
     </tbody>

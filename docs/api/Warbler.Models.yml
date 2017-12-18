@@ -4,10 +4,13 @@ items:
   commentId: N:Warbler.Models
   id: Warbler.Models
   children:
+  - Warbler.Models.AuthConfig
   - Warbler.Models.Channel
-  - Warbler.Models.ClaimsRequest
+  - Warbler.Models.ChannelTemplate
+  - Warbler.Models.ClaimRequest
   - Warbler.Models.Membership
   - Warbler.Models.Message
+  - Warbler.Models.Relationship
   - Warbler.Models.Server
   - Warbler.Models.University
   - Warbler.Models.User
@@ -21,6 +24,13 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Models.AuthConfig
+  commentId: T:Warbler.Models.AuthConfig
+  parent: Warbler.Models
+  isExternal: false
+  name: AuthConfig
+  nameWithType: AuthConfig
+  fullName: Warbler.Models.AuthConfig
 - uid: Warbler.Models.Channel
   commentId: T:Warbler.Models.Channel
   parent: Warbler.Models
@@ -28,13 +38,20 @@ references:
   name: Channel
   nameWithType: Channel
   fullName: Warbler.Models.Channel
-- uid: Warbler.Models.ClaimsRequest
-  commentId: T:Warbler.Models.ClaimsRequest
+- uid: Warbler.Models.ChannelTemplate
+  commentId: T:Warbler.Models.ChannelTemplate
   parent: Warbler.Models
   isExternal: false
-  name: ClaimsRequest
-  nameWithType: ClaimsRequest
-  fullName: Warbler.Models.ClaimsRequest
+  name: ChannelTemplate
+  nameWithType: ChannelTemplate
+  fullName: Warbler.Models.ChannelTemplate
+- uid: Warbler.Models.ClaimRequest
+  commentId: T:Warbler.Models.ClaimRequest
+  parent: Warbler.Models
+  isExternal: false
+  name: ClaimRequest
+  nameWithType: ClaimRequest
+  fullName: Warbler.Models.ClaimRequest
 - uid: Warbler.Models.Membership
   commentId: T:Warbler.Models.Membership
   isExternal: false
@@ -47,6 +64,12 @@ references:
   name: Message
   nameWithType: Message
   fullName: Warbler.Models.Message
+- uid: Warbler.Models.Relationship
+  commentId: T:Warbler.Models.Relationship
+  isExternal: false
+  name: Relationship
+  nameWithType: Relationship
+  fullName: Warbler.Models.Relationship
 - uid: Warbler.Models.Server
   commentId: T:Warbler.Models.Server
   parent: Warbler.Models

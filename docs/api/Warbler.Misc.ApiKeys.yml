@@ -16,7 +16,7 @@ items:
   source:
     id: ApiKeys
     path: ''
-    startLine: 1509
+    startLine: 1916
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc
@@ -53,7 +53,7 @@ items:
   source:
     id: GooglePlaces
     path: ''
-    startLine: 1511
+    startLine: 1918
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Misc

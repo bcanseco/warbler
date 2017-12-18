@@ -6,6 +6,8 @@ items:
   parent: Warbler.Models
   children:
   - Warbler.Models.University.Address
+  - Warbler.Models.University.ClaimedBy
+  - Warbler.Models.University.ClaimedById
   - Warbler.Models.University.Equals(System.Object)
   - Warbler.Models.University.Equals(Warbler.Models.University)
   - Warbler.Models.University.GetHashCode
@@ -27,7 +29,7 @@ items:
   source:
     id: University
     path: ''
-    startLine: 1858
+    startLine: 2379
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -66,7 +68,7 @@ items:
   source:
     id: Id
     path: ''
-    startLine: 1861
+    startLine: 2382
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -97,7 +99,7 @@ items:
   source:
     id: PlaceId
     path: ''
-    startLine: 1862
+    startLine: 2383
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -128,7 +130,7 @@ items:
   source:
     id: Address
     path: ''
-    startLine: 1863
+    startLine: 2384
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -159,7 +161,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1864
+    startLine: 2385
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -190,7 +192,7 @@ items:
   source:
     id: Lat
     path: ''
-    startLine: 1865
+    startLine: 2386
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -221,7 +223,7 @@ items:
   source:
     id: Lng
     path: ''
-    startLine: 1866
+    startLine: 2387
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -252,7 +254,7 @@ items:
   source:
     id: Server
     path: ''
-    startLine: 1868
+    startLine: 2389
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -263,6 +265,68 @@ items:
       type: Warbler.Models.Server
     content.vb: Public Property Server As Server
   overload: Warbler.Models.University.Server*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.University.ClaimedBy
+  commentId: P:Warbler.Models.University.ClaimedBy
+  id: ClaimedBy
+  parent: Warbler.Models.University
+  langs:
+  - csharp
+  - vb
+  name: ClaimedBy
+  nameWithType: University.ClaimedBy
+  fullName: Warbler.Models.University.ClaimedBy
+  type: Property
+  source:
+    id: ClaimedBy
+    path: ''
+    startLine: 2391
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public User ClaimedBy { get; set; }
+    parameters: []
+    return:
+      type: Warbler.Models.User
+    content.vb: Public Property ClaimedBy As User
+  overload: Warbler.Models.University.ClaimedBy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Warbler.Models.University.ClaimedById
+  commentId: P:Warbler.Models.University.ClaimedById
+  id: ClaimedById
+  parent: Warbler.Models.University
+  langs:
+  - csharp
+  - vb
+  name: ClaimedById
+  nameWithType: University.ClaimedById
+  fullName: Warbler.Models.University.ClaimedById
+  type: Property
+  source:
+    id: ClaimedById
+    path: ''
+    startLine: 2392
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Models
+  syntax:
+    content: public string ClaimedById { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClaimedById As String
+  overload: Warbler.Models.University.ClaimedById*
   modifiers.csharp:
   - public
   - get
@@ -283,7 +347,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1870
+    startLine: 2394
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -316,7 +380,7 @@ items:
   source:
     id: Equals
     path: ''
-    startLine: 1877
+    startLine: 2401
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -350,7 +414,7 @@ items:
   source:
     id: GetHashCode
     path: ''
-    startLine: 1884
+    startLine: 2408
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -381,7 +445,7 @@ items:
   source:
     id: op_Equality
     path: ''
-    startLine: 1885
+    startLine: 2409
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -416,7 +480,7 @@ items:
   source:
     id: op_Inequality
     path: ''
-    startLine: 1886
+    startLine: 2410
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models
@@ -815,6 +879,25 @@ references:
   name: Server
   nameWithType: Server
   fullName: Warbler.Models.Server
+- uid: Warbler.Models.University.ClaimedBy*
+  commentId: Overload:Warbler.Models.University.ClaimedBy
+  isExternal: false
+  name: ClaimedBy
+  nameWithType: University.ClaimedBy
+  fullName: Warbler.Models.University.ClaimedBy
+- uid: Warbler.Models.User
+  commentId: T:Warbler.Models.User
+  parent: Warbler.Models
+  isExternal: false
+  name: User
+  nameWithType: User
+  fullName: Warbler.Models.User
+- uid: Warbler.Models.University.ClaimedById*
+  commentId: Overload:Warbler.Models.University.ClaimedById
+  isExternal: false
+  name: ClaimedById
+  nameWithType: University.ClaimedById
+  fullName: Warbler.Models.University.ClaimedById
 - uid: Warbler.Models.University.Equals*
   commentId: Overload:Warbler.Models.University.Equals
   isExternal: false

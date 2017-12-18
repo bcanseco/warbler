@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Controllers.SamlController
+  commentId: T:Warbler.Controllers.SamlController
+  id: SamlController
+  parent: Warbler.Controllers
+  children:
+  - Warbler.Controllers.SamlController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},ISamlServiceProvider,Warbler.Misc.WarblerDbContext)
+  - Warbler.Controllers.SamlController.AssertionConsumerService
+  - Warbler.Controllers.SamlController.SingleLogoutService
+  langs:
+  - csharp
+  - vb
+  name: SamlController
+  nameWithType: SamlController
+  fullName: Warbler.Controllers.SamlController
+  type: Class
+  source:
+    id: SamlController
+    path: ''
+    startLine: 1354
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: 'public class SamlController : Controller'
+    content.vb: >-
+      Public Class SamlController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Warbler.Controllers.SamlController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},ISamlServiceProvider,Warbler.Misc.WarblerDbContext)
+  commentId: M:Warbler.Controllers.SamlController.#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},ISamlServiceProvider,Warbler.Misc.WarblerDbContext)
+  id: '#ctor(UserManager{Warbler.Models.User},SignInManager{Warbler.Models.User},ISamlServiceProvider,Warbler.Misc.WarblerDbContext)'
+  parent: Warbler.Controllers.SamlController
+  langs:
+  - csharp
+  - vb
+  name: SamlController(UserManager<User>, SignInManager<User>, ISamlServiceProvider, WarblerDbContext)
+  nameWithType: SamlController.SamlController(UserManager<User>, SignInManager<User>, ISamlServiceProvider, WarblerDbContext)
+  fullName: Warbler.Controllers.SamlController.SamlController(UserManager<Warbler.Models.User>, SignInManager<Warbler.Models.User>, ISamlServiceProvider, Warbler.Misc.WarblerDbContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1361
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public SamlController(UserManager<User> userManager, SignInManager<User> signInManager, ISamlServiceProvider samlServiceProvider, WarblerDbContext dbContext)
+    parameters:
+    - id: userManager
+      type: UserManager{Warbler.Models.User}
+    - id: signInManager
+      type: SignInManager{Warbler.Models.User}
+    - id: samlServiceProvider
+      type: ISamlServiceProvider
+    - id: dbContext
+      type: Warbler.Misc.WarblerDbContext
+    content.vb: Public Sub New(userManager As UserManager(Of User), signInManager As SignInManager(Of User), samlServiceProvider As ISamlServiceProvider, dbContext As WarblerDbContext)
+  overload: Warbler.Controllers.SamlController.#ctor*
+  nameWithType.vb: SamlController.SamlController(UserManager(Of User), SignInManager(Of User), ISamlServiceProvider, WarblerDbContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Warbler.Controllers.SamlController.SamlController(UserManager(Of Warbler.Models.User), SignInManager(Of Warbler.Models.User), ISamlServiceProvider, Warbler.Misc.WarblerDbContext)
+  name.vb: SamlController(UserManager(Of User), SignInManager(Of User), ISamlServiceProvider, WarblerDbContext)
+- uid: Warbler.Controllers.SamlController.AssertionConsumerService
+  commentId: M:Warbler.Controllers.SamlController.AssertionConsumerService
+  id: AssertionConsumerService
+  parent: Warbler.Controllers.SamlController
+  langs:
+  - csharp
+  - vb
+  name: AssertionConsumerService()
+  nameWithType: SamlController.AssertionConsumerService()
+  fullName: Warbler.Controllers.SamlController.AssertionConsumerService()
+  type: Method
+  source:
+    id: AssertionConsumerService
+    path: ''
+    startLine: 1373
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<IActionResult> AssertionConsumerService()
+    return:
+      type: Task{IActionResult}
+    content.vb: Public Function AssertionConsumerService As Task(Of IActionResult)
+  overload: Warbler.Controllers.SamlController.AssertionConsumerService*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Warbler.Controllers.SamlController.SingleLogoutService
+  commentId: M:Warbler.Controllers.SamlController.SingleLogoutService
+  id: SingleLogoutService
+  parent: Warbler.Controllers.SamlController
+  langs:
+  - csharp
+  - vb
+  name: SingleLogoutService()
+  nameWithType: SamlController.SingleLogoutService()
+  fullName: Warbler.Controllers.SamlController.SingleLogoutService()
+  type: Method
+  source:
+    id: SingleLogoutService
+    path: ''
+    startLine: 1400
+  assemblies:
+  - cs.temp.dll
+  namespace: Warbler.Controllers
+  syntax:
+    content: public Task<ActionResult> SingleLogoutService()
+    return:
+      type: Task{ActionResult}
+    content.vb: Public Function SingleLogoutService As Task(Of ActionResult)
+  overload: Warbler.Controllers.SamlController.SingleLogoutService*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Warbler.Controllers
+  commentId: N:Warbler.Controllers
+  isExternal: false
+  name: Warbler.Controllers
+  nameWithType: Warbler.Controllers
+  fullName: Warbler.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Warbler.Controllers.SamlController.#ctor*
+  commentId: Overload:Warbler.Controllers.SamlController.#ctor
+  isExternal: false
+  name: SamlController
+  nameWithType: SamlController.SamlController
+  fullName: Warbler.Controllers.SamlController.SamlController
+- uid: UserManager{Warbler.Models.User}
+  commentId: '!:UserManager{Warbler.Models.User}'
+  definition: UserManager`1
+  name: UserManager<User>
+  nameWithType: UserManager<User>
+  fullName: UserManager<Warbler.Models.User>
+  nameWithType.vb: UserManager(Of User)
+  fullName.vb: UserManager(Of Warbler.Models.User)
+  name.vb: UserManager(Of User)
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SignInManager{Warbler.Models.User}
+  commentId: '!:SignInManager{Warbler.Models.User}'
+  definition: SignInManager`1
+  name: SignInManager<User>
+  nameWithType: SignInManager<User>
+  fullName: SignInManager<Warbler.Models.User>
+  nameWithType.vb: SignInManager(Of User)
+  fullName.vb: SignInManager(Of Warbler.Models.User)
+  name.vb: SignInManager(Of User)
+  spec.csharp:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Warbler.Models.User
+    name: User
+    nameWithType: User
+    fullName: Warbler.Models.User
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ISamlServiceProvider
+  isExternal: true
+  name: ISamlServiceProvider
+  nameWithType: ISamlServiceProvider
+  fullName: ISamlServiceProvider
+- uid: Warbler.Misc.WarblerDbContext
+  commentId: T:Warbler.Misc.WarblerDbContext
+  parent: Warbler.Misc
+  isExternal: false
+  name: WarblerDbContext
+  nameWithType: WarblerDbContext
+  fullName: Warbler.Misc.WarblerDbContext
+- uid: UserManager`1
+  isExternal: true
+  name: UserManager<>
+  nameWithType: UserManager<>
+  fullName: UserManager<>
+  nameWithType.vb: UserManager(Of )
+  fullName.vb: UserManager(Of )
+  name.vb: UserManager(Of )
+  spec.csharp:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UserManager`1
+    name: UserManager
+    nameWithType: UserManager
+    fullName: UserManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SignInManager`1
+  isExternal: true
+  name: SignInManager<>
+  nameWithType: SignInManager<>
+  fullName: SignInManager<>
+  nameWithType.vb: SignInManager(Of )
+  fullName.vb: SignInManager(Of )
+  name.vb: SignInManager(Of )
+  spec.csharp:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: SignInManager`1
+    name: SignInManager
+    nameWithType: SignInManager
+    fullName: SignInManager
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Misc
+  commentId: N:Warbler.Misc
+  isExternal: false
+  name: Warbler.Misc
+  nameWithType: Warbler.Misc
+  fullName: Warbler.Misc
+- uid: Warbler.Controllers.SamlController.AssertionConsumerService*
+  commentId: Overload:Warbler.Controllers.SamlController.AssertionConsumerService
+  isExternal: false
+  name: AssertionConsumerService
+  nameWithType: SamlController.AssertionConsumerService
+  fullName: Warbler.Controllers.SamlController.AssertionConsumerService
+- uid: Task{IActionResult}
+  commentId: '!:Task{IActionResult}'
+  definition: Task`1
+  name: Task<IActionResult>
+  nameWithType: Task<IActionResult>
+  fullName: Task<IActionResult>
+  nameWithType.vb: Task(Of IActionResult)
+  fullName.vb: Task(Of IActionResult)
+  name.vb: Task(Of IActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IActionResult
+    name: IActionResult
+    nameWithType: IActionResult
+    fullName: IActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Warbler.Controllers.SamlController.SingleLogoutService*
+  commentId: Overload:Warbler.Controllers.SamlController.SingleLogoutService
+  isExternal: false
+  name: SingleLogoutService
+  nameWithType: SamlController.SingleLogoutService
+  fullName: Warbler.Controllers.SamlController.SingleLogoutService
+- uid: Task{ActionResult}
+  commentId: '!:Task{ActionResult}'
+  definition: Task`1
+  name: Task<ActionResult>
+  nameWithType: Task<ActionResult>
+  fullName: Task<ActionResult>
+  nameWithType.vb: Task(Of ActionResult)
+  fullName.vb: Task(Of ActionResult)
+  name.vb: Task(Of ActionResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: ActionResult
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: ActionResult
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -4,12 +4,16 @@ items:
   commentId: N:Warbler.Services
   id: Warbler.Services
   children:
+  - Warbler.Services.AuthConfigService
   - Warbler.Services.AuthMessageSender
   - Warbler.Services.ChannelService
+  - Warbler.Services.ChannelTemplateService
   - Warbler.Services.ChatService
+  - Warbler.Services.ClaimRequestService
   - Warbler.Services.MembershipService
   - Warbler.Services.MessageService
   - Warbler.Services.ProximityService
+  - Warbler.Services.ServerService
   - Warbler.Services.UniversityService
   - Warbler.Services.UserService
   langs:
@@ -22,6 +26,12 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Warbler.Services.AuthConfigService
+  commentId: T:Warbler.Services.AuthConfigService
+  isExternal: false
+  name: AuthConfigService
+  nameWithType: AuthConfigService
+  fullName: Warbler.Services.AuthConfigService
 - uid: Warbler.Services.AuthMessageSender
   commentId: T:Warbler.Services.AuthMessageSender
   isExternal: false
@@ -34,6 +44,12 @@ references:
   name: ChannelService
   nameWithType: ChannelService
   fullName: Warbler.Services.ChannelService
+- uid: Warbler.Services.ChannelTemplateService
+  commentId: T:Warbler.Services.ChannelTemplateService
+  isExternal: false
+  name: ChannelTemplateService
+  nameWithType: ChannelTemplateService
+  fullName: Warbler.Services.ChannelTemplateService
 - uid: Warbler.Services.ChatService
   commentId: T:Warbler.Services.ChatService
   parent: Warbler.Services
@@ -41,6 +57,12 @@ references:
   name: ChatService
   nameWithType: ChatService
   fullName: Warbler.Services.ChatService
+- uid: Warbler.Services.ClaimRequestService
+  commentId: T:Warbler.Services.ClaimRequestService
+  isExternal: false
+  name: ClaimRequestService
+  nameWithType: ClaimRequestService
+  fullName: Warbler.Services.ClaimRequestService
 - uid: Warbler.Services.MembershipService
   commentId: T:Warbler.Services.MembershipService
   isExternal: false
@@ -60,6 +82,12 @@ references:
   name: ProximityService
   nameWithType: ProximityService
   fullName: Warbler.Services.ProximityService
+- uid: Warbler.Services.ServerService
+  commentId: T:Warbler.Services.ServerService
+  isExternal: false
+  name: ServerService
+  nameWithType: ServerService
+  fullName: Warbler.Services.ServerService
 - uid: Warbler.Services.UniversityService
   commentId: T:Warbler.Services.UniversityService
   isExternal: false

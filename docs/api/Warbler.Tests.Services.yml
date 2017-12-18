@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Warbler.Tests.Services
+  commentId: N:Warbler.Tests.Services
+  id: Warbler.Tests.Services
+  children:
+  - Warbler.Tests.Services.TestChannelService
+  - Warbler.Tests.Services.TestClaimRequestService
+  - Warbler.Tests.Services.TestMembershipService
+  - Warbler.Tests.Services.TestMessageService
+  - Warbler.Tests.Services.TestUniversityService
+  - Warbler.Tests.Services.TestUserService
+  langs:
+  - csharp
+  - vb
+  name: Warbler.Tests.Services
+  nameWithType: Warbler.Tests.Services
+  fullName: Warbler.Tests.Services
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Warbler.Tests.Services.TestChannelService
+  commentId: T:Warbler.Tests.Services.TestChannelService
+  isExternal: false
+  name: TestChannelService
+  nameWithType: TestChannelService
+  fullName: Warbler.Tests.Services.TestChannelService
+- uid: Warbler.Tests.Services.TestClaimRequestService
+  commentId: T:Warbler.Tests.Services.TestClaimRequestService
+  isExternal: false
+  name: TestClaimRequestService
+  nameWithType: TestClaimRequestService
+  fullName: Warbler.Tests.Services.TestClaimRequestService
+- uid: Warbler.Tests.Services.TestMembershipService
+  commentId: T:Warbler.Tests.Services.TestMembershipService
+  isExternal: false
+  name: TestMembershipService
+  nameWithType: TestMembershipService
+  fullName: Warbler.Tests.Services.TestMembershipService
+- uid: Warbler.Tests.Services.TestMessageService
+  commentId: T:Warbler.Tests.Services.TestMessageService
+  isExternal: false
+  name: TestMessageService
+  nameWithType: TestMessageService
+  fullName: Warbler.Tests.Services.TestMessageService
+- uid: Warbler.Tests.Services.TestUniversityService
+  commentId: T:Warbler.Tests.Services.TestUniversityService
+  isExternal: false
+  name: TestUniversityService
+  nameWithType: TestUniversityService
+  fullName: Warbler.Tests.Services.TestUniversityService
+- uid: Warbler.Tests.Services.TestUserService
+  commentId: T:Warbler.Tests.Services.TestUserService
+  isExternal: false
+  name: TestUserService
+  nameWithType: TestUserService
+  fullName: Warbler.Tests.Services.TestUserService

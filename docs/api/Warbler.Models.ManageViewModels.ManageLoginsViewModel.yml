@@ -17,7 +17,7 @@ items:
   source:
     id: ManageLoginsViewModel
     path: ''
-    startLine: 2480
+    startLine: 2983
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -54,7 +54,7 @@ items:
   source:
     id: CurrentLogins
     path: ''
-    startLine: 2482
+    startLine: 2985
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -62,7 +62,7 @@ items:
     content: public IList<UserLoginInfo> CurrentLogins { get; set; }
     parameters: []
     return:
-      type: IList{UserLoginInfo}
+      type: System.Collections.Generic.IList{UserLoginInfo}
     content.vb: Public Property CurrentLogins As IList(Of UserLoginInfo)
   overload: Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins*
   modifiers.csharp:
@@ -85,7 +85,7 @@ items:
   source:
     id: OtherLogins
     path: ''
-    startLine: 2484
+    startLine: 2987
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Models.ManageViewModels
@@ -93,7 +93,7 @@ items:
     content: public IList<AuthenticationScheme> OtherLogins { get; set; }
     parameters: []
     return:
-      type: IList{AuthenticationScheme}
+      type: System.Collections.Generic.IList{AuthenticationScheme}
     content.vb: Public Property OtherLogins As IList(Of AuthenticationScheme)
   overload: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins*
   modifiers.csharp:
@@ -407,20 +407,21 @@ references:
   name: CurrentLogins
   nameWithType: ManageLoginsViewModel.CurrentLogins
   fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel.CurrentLogins
-- uid: IList{UserLoginInfo}
-  commentId: '!:IList{UserLoginInfo}'
-  definition: IList`1
+- uid: System.Collections.Generic.IList{UserLoginInfo}
+  commentId: T:System.Collections.Generic.IList{UserLoginInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
   name: IList<UserLoginInfo>
   nameWithType: IList<UserLoginInfo>
-  fullName: IList<UserLoginInfo>
+  fullName: System.Collections.Generic.IList<UserLoginInfo>
   nameWithType.vb: IList(Of UserLoginInfo)
-  fullName.vb: IList(Of UserLoginInfo)
+  fullName.vb: System.Collections.Generic.IList(Of UserLoginInfo)
   name.vb: IList(Of UserLoginInfo)
   spec.csharp:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: <
     nameWithType: <
@@ -434,10 +435,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -450,64 +451,72 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IList`1
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
   isExternal: true
-  name: IList<>
-  nameWithType: IList<>
-  fullName: IList<>
-  nameWithType.vb: IList(Of )
-  fullName.vb: IList(Of )
-  name.vb: IList(Of )
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
   spec.csharp:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins*
   commentId: Overload:Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
   isExternal: false
   name: OtherLogins
   nameWithType: ManageLoginsViewModel.OtherLogins
   fullName: Warbler.Models.ManageViewModels.ManageLoginsViewModel.OtherLogins
-- uid: IList{AuthenticationScheme}
-  commentId: '!:IList{AuthenticationScheme}'
-  definition: IList`1
+- uid: System.Collections.Generic.IList{AuthenticationScheme}
+  commentId: T:System.Collections.Generic.IList{AuthenticationScheme}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
   name: IList<AuthenticationScheme>
   nameWithType: IList<AuthenticationScheme>
-  fullName: IList<AuthenticationScheme>
+  fullName: System.Collections.Generic.IList<AuthenticationScheme>
   nameWithType.vb: IList(Of AuthenticationScheme)
-  fullName.vb: IList(Of AuthenticationScheme)
+  fullName.vb: System.Collections.Generic.IList(Of AuthenticationScheme)
   name.vb: IList(Of AuthenticationScheme)
   spec.csharp:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: <
     nameWithType: <
@@ -521,10 +530,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: IList`1
+  - uid: System.Collections.Generic.IList`1
     name: IList
     nameWithType: IList
-    fullName: IList
+    fullName: System.Collections.Generic.IList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

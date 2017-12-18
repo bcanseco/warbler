@@ -17,7 +17,7 @@ items:
   source:
     id: AuthMessageSender
     path: ''
-    startLine: 2823
+    startLine: 3528
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -59,7 +59,7 @@ items:
   source:
     id: SendEmailAsync
     path: ''
-    startLine: 2825
+    startLine: 3530
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services
@@ -96,7 +96,7 @@ items:
   source:
     id: SendSmsAsync
     path: ''
-    startLine: 2831
+    startLine: 3536
   assemblies:
   - cs.temp.dll
   namespace: Warbler.Services

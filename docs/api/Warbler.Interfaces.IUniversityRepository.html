@@ -150,14 +150,64 @@ Server objects will each have a null <a class="xref" href="Warbler.Models.Channe
   </table>
   
   
+  <a id="Warbler_Interfaces_IUniversityRepository_ApplyClaimAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync*"></a>
+  <h4 id="Warbler_Interfaces_IUniversityRepository_ApplyClaimAsync_Warbler_Models_University_System_String_" data-uid="Warbler.Interfaces.IUniversityRepository.ApplyClaimAsync(Warbler.Models.University,System.String)">ApplyClaimAsync(University, String)</h4>
+  <div class="markdown level1 summary"><p>Associates a university with the user that just claimed it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ApplyClaimAsync(University university, string claimeeId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.University.html">University</a></td>
+        <td><span class="parametername">university</span></td>
+        <td><p>The claimed university.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">claimeeId</span></td>
+        <td><p>The ID of the user claiming it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Warbler_Interfaces_IUniversityRepository_CreateAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.CreateAsync*"></a>
-  <h4 id="Warbler_Interfaces_IUniversityRepository_CreateAsync_NearByResult_" data-uid="Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult)">CreateAsync(NearByResult)</h4>
+  <h4 id="Warbler_Interfaces_IUniversityRepository_CreateAsync_NearByResult_System_Collections_Generic_IEnumerable_Warbler_Models_ChannelTemplate__" data-uid="Warbler.Interfaces.IUniversityRepository.CreateAsync(NearByResult,System.Collections.Generic.IEnumerable{Warbler.Models.ChannelTemplate})">CreateAsync(NearByResult, IEnumerable&lt;ChannelTemplate&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds a new university based on a Google Places Search result.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;University&gt; CreateAsync(NearByResult uni)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;University&gt; CreateAsync(NearByResult uni, IEnumerable&lt;ChannelTemplate&gt; templates)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,6 +225,12 @@ Server objects will each have a null <a class="xref" href="Warbler.Models.Channe
         <td><p>The result whose properties will be used for creation.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Warbler.Models.ChannelTemplate.html">ChannelTemplate</a>&gt;</td>
+        <td><span class="parametername">templates</span></td>
+        <td><p>Templates to use for the university&#39;s channels.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -190,6 +246,51 @@ Server objects will each have a null <a class="xref" href="Warbler.Models.Channe
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Warbler.Models.University.html">University</a>&gt;</td>
         <td><p>The created university.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Warbler_Interfaces_IUniversityRepository_DeleteAsync_" data-uid="Warbler.Interfaces.IUniversityRepository.DeleteAsync*"></a>
+  <h4 id="Warbler_Interfaces_IUniversityRepository_DeleteAsync_Warbler_Models_University_" data-uid="Warbler.Interfaces.IUniversityRepository.DeleteAsync(Warbler.Models.University)">DeleteAsync(University)</h4>
+  <div class="markdown level1 summary"><p>Removes a university from the database.
+Will also delete any navigation entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task DeleteAsync(University university)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Warbler.Models.University.html">University</a></td>
+        <td><span class="parametername">university</span></td>
+        <td><p>The university to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

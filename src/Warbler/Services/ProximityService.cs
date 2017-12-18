@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using GoogleApi;
@@ -83,25 +84,13 @@ namespace Warbler.Services
 
             var response = await GooglePlaces.NearBySearch.QueryAsync(request);
 
-            // TODO: Make an actual, scalable filter
-            var temporaryWhitelist = new[]
-            {
-                "ChIJT1Ulp9wP3ogRj7ACb7ELBHw",
-                "ChIJt2TZracS3ogRI4a6fd9yUno",
-                "ChIJKVGWdeAO3ogRYhq3C1svUaw",
-                "ChIJUS-ncH4F3ogRV-sYIk2gdSs",
-                "ChIJGTgaAA4O3ogRs9HJBlZ55ak",
-                "ChIJMbAACOEP3ogRDQRK-ewjXAM",
-                "ChIJ4Upb_-cR3ogRChd3ibWIp8c",
-                "ChIJT8H66QQS3ogRG-eCXbWLfLI"
-            };
-
             // Some results are mistagged; this filter hopefully reduces misses/false-positives
             return response.Results
-                .Where(r => temporaryWhitelist.Contains(r.PlaceId))
-                //.Where(u => (u.Is(PlaceLocationType.University) || u.Is(PlaceLocationType.Library))
-                //            && !(!u.Is(PlaceLocationType.University) && u.Is(PlaceLocationType.School)))
-                //.Where(u => !u.IsDepartment())
+                .Where(u => (u.Is(PlaceLocationType.University) || u.Is(PlaceLocationType.Library))
+                            && !(!u.Is(PlaceLocationType.University) && u.Is(PlaceLocationType.School)))
+                .Where(u => !u.IsDepartment())
+                .Where(u => u.Rating > 0.0)
+                .OrderBy(u => u.Name)
                 .ToList();
         }
     }

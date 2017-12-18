@@ -3,7 +3,7 @@
   <img height="200" alt="Warbler" src="https://github.com/bcanseco/warbler/blob/master/src/Warbler/Graphics/logo.png?raw=true"/>
  </a>
  <br/>
- <span>Auto-generated, geo-location based chatrooms for universities.</span>
+ <span>Auto-generated, geolocation based chatrooms for universities.</span>
 </p>
 
 ## Table of Contents

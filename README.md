@@ -52,6 +52,20 @@ To build, hit <kbd>F5</kbd> in Visual Studio.
 
 You can set breakpoints in the backend code to debug as needed. Use `Debug` mode to use a local DB, or `Release` to use the Azure DB.
 
+### API key configuration
+You will need to make an `appsettings.devkeys.json` file in the same directory as the [appsettings.json](src/Warbler/appsettings.json) file when running Warbler in development mode locally. This file contains our API keys and is ignored by git. The JSON object should look like this:
+```json
+{
+  "ConnectionStrings": {
+    "WarblerProduction": "database connection string here"
+  },
+  "ApiKeys": {
+    "GooglePlaces": "google places key here"
+  }
+}
+```
+Ask [@bcanseco](https://github.com/bcanseco) if you need these. These keys are set via Azure environment variables on the [live site](https://borja.io/warbler).
+
 ## Webdev
 All new pages should be made using [React](https://reactjs.org/) components. For examples, see the [Components](https://github.com/bcanseco/warbler/blob/master/src/Warbler/Components) folder.
 

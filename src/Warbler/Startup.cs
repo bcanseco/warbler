@@ -27,7 +27,7 @@ namespace Warbler
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("appsettings.devkeys.json", optional: true)
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
@@ -75,13 +75,6 @@ namespace Warbler
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WarblerDbContext>()
                 .AddDefaultTokenProviders();
-
-            // Set up Google authentication. (currently using SAML SSO)
-            //services.AddAuthentication().AddGoogle(googleOptions =>
-            //{
-            //    googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
-            //    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-            //});
 
             services.Configure<IdentityOptions>(options =>
             {

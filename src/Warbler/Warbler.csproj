@@ -36,6 +36,10 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
+  <Target Name="CheckDevKeys" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('appsettings.devkeys.json') ">
+    <Error Text="You're missing an appsettings.devkeys.json file. See the README's Running section." />
+  </Target>
+
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <Exec Command="node --version" ContinueOnError="true">
       <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
